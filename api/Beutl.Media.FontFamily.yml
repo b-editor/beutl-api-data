@@ -1,0 +1,893 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.FontFamily
+  commentId: T:Beutl.Media.FontFamily
+  id: FontFamily
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.FontFamily.#ctor(System.String)
+  - Beutl.Media.FontFamily.Default
+  - Beutl.Media.FontFamily.Equals(Beutl.Media.FontFamily)
+  - Beutl.Media.FontFamily.Equals(System.Object)
+  - Beutl.Media.FontFamily.GetHashCode
+  - Beutl.Media.FontFamily.Name
+  - Beutl.Media.FontFamily.Typefaces
+  - Beutl.Media.FontFamily.op_Equality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  - Beutl.Media.FontFamily.op_Inequality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  langs:
+  - csharp
+  - vb
+  name: FontFamily
+  nameWithType: FontFamily
+  fullName: Beutl.Media.FontFamily
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(FontFamilyJsonConverter))]
+
+      [TypeConverter(typeof(FontFamilyConverter))]
+
+      public class FontFamily : IEquatable<FontFamily?>
+    content.vb: >-
+      <JsonConverter(GetType(FontFamilyJsonConverter))>
+
+      <TypeConverter(GetType(FontFamilyConverter))>
+
+      Public Class FontFamily Implements IEquatable(Of FontFamily)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Beutl.Media.FontFamily}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.FontFamilyConverter
+- uid: Beutl.Media.FontFamily.Default
+  commentId: F:Beutl.Media.FontFamily.Default
+  id: Default
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: FontFamily.Default
+  fullName: Beutl.Media.FontFamily.Default
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static readonly FontFamily Default
+    return:
+      type: Beutl.Media.FontFamily
+    content.vb: Public Shared ReadOnly [Default] As FontFamily
+- uid: Beutl.Media.FontFamily.#ctor(System.String)
+  commentId: M:Beutl.Media.FontFamily.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: FontFamily(string)
+  nameWithType: FontFamily.FontFamily(string)
+  fullName: Beutl.Media.FontFamily.FontFamily(string)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public FontFamily(string familyname)
+    parameters:
+    - id: familyname
+      type: System.String
+    content.vb: Public Sub New(familyname As String)
+  overload: Beutl.Media.FontFamily.#ctor*
+  nameWithType.vb: FontFamily.New(String)
+  fullName.vb: Beutl.Media.FontFamily.New(String)
+  name.vb: New(String)
+- uid: Beutl.Media.FontFamily.Equals(System.Object)
+  commentId: M:Beutl.Media.FontFamily.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: FontFamily.Equals(object?)
+  fullName: Beutl.Media.FontFamily.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Beutl.Media.FontFamily.Equals*
+  nameWithType.vb: FontFamily.Equals(Object)
+  fullName.vb: Beutl.Media.FontFamily.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.FontFamily.Equals(Beutl.Media.FontFamily)
+  commentId: M:Beutl.Media.FontFamily.Equals(Beutl.Media.FontFamily)
+  id: Equals(Beutl.Media.FontFamily)
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: Equals(FontFamily?)
+  nameWithType: FontFamily.Equals(FontFamily?)
+  fullName: Beutl.Media.FontFamily.Equals(Beutl.Media.FontFamily?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(FontFamily? other)
+    parameters:
+    - id: other
+      type: Beutl.Media.FontFamily
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As FontFamily) As Boolean
+  overload: Beutl.Media.FontFamily.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.FontFamily}.Equals(Beutl.Media.FontFamily)
+  nameWithType.vb: FontFamily.Equals(FontFamily)
+  fullName.vb: Beutl.Media.FontFamily.Equals(Beutl.Media.FontFamily)
+  name.vb: Equals(FontFamily)
+- uid: Beutl.Media.FontFamily.GetHashCode
+  commentId: M:Beutl.Media.FontFamily.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: FontFamily.GetHashCode()
+  fullName: Beutl.Media.FontFamily.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Beutl.Media.FontFamily.GetHashCode*
+- uid: Beutl.Media.FontFamily.op_Equality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  commentId: M:Beutl.Media.FontFamily.op_Equality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  id: op_Equality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: operator ==(FontFamily?, FontFamily?)
+  nameWithType: FontFamily.operator ==(FontFamily?, FontFamily?)
+  fullName: Beutl.Media.FontFamily.operator ==(Beutl.Media.FontFamily?, Beutl.Media.FontFamily?)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator ==(FontFamily? left, FontFamily? right)
+    parameters:
+    - id: left
+      type: Beutl.Media.FontFamily
+    - id: right
+      type: Beutl.Media.FontFamily
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As FontFamily, right As FontFamily) As Boolean
+  overload: Beutl.Media.FontFamily.op_Equality*
+  nameWithType.vb: FontFamily.=(FontFamily, FontFamily)
+  fullName.vb: Beutl.Media.FontFamily.=(Beutl.Media.FontFamily, Beutl.Media.FontFamily)
+  name.vb: =(FontFamily, FontFamily)
+- uid: Beutl.Media.FontFamily.op_Inequality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  commentId: M:Beutl.Media.FontFamily.op_Inequality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  id: op_Inequality(Beutl.Media.FontFamily,Beutl.Media.FontFamily)
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: operator !=(FontFamily?, FontFamily?)
+  nameWithType: FontFamily.operator !=(FontFamily?, FontFamily?)
+  fullName: Beutl.Media.FontFamily.operator !=(Beutl.Media.FontFamily?, Beutl.Media.FontFamily?)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator !=(FontFamily? left, FontFamily? right)
+    parameters:
+    - id: left
+      type: Beutl.Media.FontFamily
+    - id: right
+      type: Beutl.Media.FontFamily
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As FontFamily, right As FontFamily) As Boolean
+  overload: Beutl.Media.FontFamily.op_Inequality*
+  nameWithType.vb: FontFamily.<>(FontFamily, FontFamily)
+  fullName.vb: Beutl.Media.FontFamily.<>(Beutl.Media.FontFamily, Beutl.Media.FontFamily)
+  name.vb: <>(FontFamily, FontFamily)
+- uid: Beutl.Media.FontFamily.Name
+  commentId: P:Beutl.Media.FontFamily.Name
+  id: Name
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: FontFamily.Name
+  fullName: Beutl.Media.FontFamily.Name
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Beutl.Media.FontFamily.Name*
+- uid: Beutl.Media.FontFamily.Typefaces
+  commentId: P:Beutl.Media.FontFamily.Typefaces
+  id: Typefaces
+  parent: Beutl.Media.FontFamily
+  langs:
+  - csharp
+  - vb
+  name: Typefaces
+  nameWithType: FontFamily.Typefaces
+  fullName: Beutl.Media.FontFamily.Typefaces
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/FontFamily.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public IEnumerable<Typeface> Typefaces { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Beutl.Media.Typeface}
+    content.vb: Public ReadOnly Property Typefaces As IEnumerable(Of Typeface)
+  overload: Beutl.Media.FontFamily.Typefaces*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Beutl.Media.FontFamily}
+  commentId: T:System.IEquatable{Beutl.Media.FontFamily}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<FontFamily>
+  nameWithType: IEquatable<FontFamily>
+  fullName: System.IEquatable<Beutl.Media.FontFamily>
+  nameWithType.vb: IEquatable(Of FontFamily)
+  fullName.vb: System.IEquatable(Of Beutl.Media.FontFamily)
+  name.vb: IEquatable(Of FontFamily)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.FontFamily
+    name: FontFamily
+    isExternal: true
+    href: Beutl.Media.FontFamily.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.FontFamily
+    name: FontFamily
+    isExternal: true
+    href: Beutl.Media.FontFamily.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.FontFamily
+  commentId: T:Beutl.Media.FontFamily
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.FontFamily.html
+  name: FontFamily
+  nameWithType: FontFamily
+  fullName: Beutl.Media.FontFamily
+- uid: Beutl.Media.FontFamily.#ctor*
+  commentId: Overload:Beutl.Media.FontFamily.#ctor
+  isExternal: true
+  href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily__ctor_System_String_
+  name: FontFamily
+  nameWithType: FontFamily.FontFamily
+  fullName: Beutl.Media.FontFamily.FontFamily
+  nameWithType.vb: FontFamily.New
+  fullName.vb: Beutl.Media.FontFamily.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Media.FontFamily.Equals*
+  commentId: Overload:Beutl.Media.FontFamily.Equals
+  isExternal: true
+  href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_Equals_System_Object_
+  name: Equals
+  nameWithType: FontFamily.Equals
+  fullName: Beutl.Media.FontFamily.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable{Beutl.Media.FontFamily}.Equals(Beutl.Media.FontFamily)
+  commentId: M:System.IEquatable{Beutl.Media.FontFamily}.Equals(Beutl.Media.FontFamily)
+  parent: System.IEquatable{Beutl.Media.FontFamily}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(FontFamily)
+  nameWithType: IEquatable<FontFamily>.Equals(FontFamily)
+  fullName: System.IEquatable<Beutl.Media.FontFamily>.Equals(Beutl.Media.FontFamily)
+  nameWithType.vb: IEquatable(Of FontFamily).Equals(FontFamily)
+  fullName.vb: System.IEquatable(Of Beutl.Media.FontFamily).Equals(Beutl.Media.FontFamily)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.FontFamily}.Equals(Beutl.Media.FontFamily)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.FontFamily
+    name: FontFamily
+    isExternal: true
+    href: Beutl.Media.FontFamily.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.FontFamily}.Equals(Beutl.Media.FontFamily)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.FontFamily
+    name: FontFamily
+    isExternal: true
+    href: Beutl.Media.FontFamily.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.FontFamily.GetHashCode*
+  commentId: Overload:Beutl.Media.FontFamily.GetHashCode
+  isExternal: true
+  href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_GetHashCode
+  name: GetHashCode
+  nameWithType: FontFamily.GetHashCode
+  fullName: Beutl.Media.FontFamily.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.FontFamily.op_Equality*
+  commentId: Overload:Beutl.Media.FontFamily.op_Equality
+  isExternal: true
+  href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_op_Equality_Beutl_Media_FontFamily_Beutl_Media_FontFamily_
+  name: operator ==
+  nameWithType: FontFamily.operator ==
+  fullName: Beutl.Media.FontFamily.operator ==
+  nameWithType.vb: FontFamily.=
+  fullName.vb: Beutl.Media.FontFamily.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.FontFamily.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_op_Equality_Beutl_Media_FontFamily_Beutl_Media_FontFamily_
+- uid: Beutl.Media.FontFamily.op_Inequality*
+  commentId: Overload:Beutl.Media.FontFamily.op_Inequality
+  isExternal: true
+  href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_op_Inequality_Beutl_Media_FontFamily_Beutl_Media_FontFamily_
+  name: operator !=
+  nameWithType: FontFamily.operator !=
+  fullName: Beutl.Media.FontFamily.operator !=
+  nameWithType.vb: FontFamily.<>
+  fullName.vb: Beutl.Media.FontFamily.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.FontFamily.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_op_Inequality_Beutl_Media_FontFamily_Beutl_Media_FontFamily_
+- uid: Beutl.Media.FontFamily.Name*
+  commentId: Overload:Beutl.Media.FontFamily.Name
+  isExternal: true
+  href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_Name
+  name: Name
+  nameWithType: FontFamily.Name
+  fullName: Beutl.Media.FontFamily.Name
+- uid: Beutl.Media.FontFamily.Typefaces*
+  commentId: Overload:Beutl.Media.FontFamily.Typefaces
+  isExternal: true
+  href: Beutl.Media.FontFamily.html#Beutl_Media_FontFamily_Typefaces
+  name: Typefaces
+  nameWithType: FontFamily.Typefaces
+  fullName: Beutl.Media.FontFamily.Typefaces
+- uid: System.Collections.Generic.IEnumerable{Beutl.Media.Typeface}
+  commentId: T:System.Collections.Generic.IEnumerable{Beutl.Media.Typeface}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Typeface>
+  nameWithType: IEnumerable<Typeface>
+  fullName: System.Collections.Generic.IEnumerable<Beutl.Media.Typeface>
+  nameWithType.vb: IEnumerable(Of Typeface)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Beutl.Media.Typeface)
+  name.vb: IEnumerable(Of Typeface)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Beutl.Media.Typeface
+    name: Typeface
+    isExternal: true
+    href: Beutl.Media.Typeface.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Typeface
+    name: Typeface
+    isExternal: true
+    href: Beutl.Media.Typeface.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

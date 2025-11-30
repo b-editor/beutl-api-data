@@ -1,0 +1,817 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Music.IPcm
+  commentId: T:Beutl.Media.Music.IPcm
+  id: IPcm
+  parent: Beutl.Media.Music
+  children:
+  - Beutl.Media.Music.IPcm.Amplifier(Beutl.Media.Music.Sample)
+  - Beutl.Media.Music.IPcm.ConvertTo``1(Beutl.Media.Music.Pcm{``0})
+  - Beutl.Media.Music.IPcm.Convert``1
+  - Beutl.Media.Music.IPcm.Data
+  - Beutl.Media.Music.IPcm.Duration
+  - Beutl.Media.Music.IPcm.DurationRational
+  - Beutl.Media.Music.IPcm.GetChannelData(System.Int32,System.Span{System.Byte},System.Int32@)
+  - Beutl.Media.Music.IPcm.IsDisposed
+  - Beutl.Media.Music.IPcm.NumChannels
+  - Beutl.Media.Music.IPcm.NumSamples
+  - Beutl.Media.Music.IPcm.SampleRate
+  - Beutl.Media.Music.IPcm.SampleSize
+  - Beutl.Media.Music.IPcm.SampleType
+  - Beutl.Media.Music.IPcm.Slice(System.Int32)
+  - Beutl.Media.Music.IPcm.Slice(System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IPcm
+  nameWithType: IPcm
+  fullName: Beutl.Media.Music.IPcm
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: 'public interface IPcm : IDisposable, ICloneable'
+    content.vb: Public Interface IPcm Inherits IDisposable, ICloneable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  - System.ICloneable.Clone
+- uid: Beutl.Media.Music.IPcm.Slice(System.Int32)
+  commentId: M:Beutl.Media.Music.IPcm.Slice(System.Int32)
+  id: Slice(System.Int32)
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: Slice(int)
+  nameWithType: IPcm.Slice(int)
+  fullName: Beutl.Media.Music.IPcm.Slice(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: IPcm Slice(int start)
+    parameters:
+    - id: start
+      type: System.Int32
+    return:
+      type: Beutl.Media.Music.IPcm
+    content.vb: Function Slice(start As Integer) As IPcm
+  overload: Beutl.Media.Music.IPcm.Slice*
+  nameWithType.vb: IPcm.Slice(Integer)
+  fullName.vb: Beutl.Media.Music.IPcm.Slice(Integer)
+  name.vb: Slice(Integer)
+- uid: Beutl.Media.Music.IPcm.Slice(System.Int32,System.Int32)
+  commentId: M:Beutl.Media.Music.IPcm.Slice(System.Int32,System.Int32)
+  id: Slice(System.Int32,System.Int32)
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: Slice(int, int)
+  nameWithType: IPcm.Slice(int, int)
+  fullName: Beutl.Media.Music.IPcm.Slice(int, int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: IPcm Slice(int start, int length)
+    parameters:
+    - id: start
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    return:
+      type: Beutl.Media.Music.IPcm
+    content.vb: Function Slice(start As Integer, length As Integer) As IPcm
+  overload: Beutl.Media.Music.IPcm.Slice*
+  nameWithType.vb: IPcm.Slice(Integer, Integer)
+  fullName.vb: Beutl.Media.Music.IPcm.Slice(Integer, Integer)
+  name.vb: Slice(Integer, Integer)
+- uid: Beutl.Media.Music.IPcm.Convert``1
+  commentId: M:Beutl.Media.Music.IPcm.Convert``1
+  id: Convert``1
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: Convert<TConvert>()
+  nameWithType: IPcm.Convert<TConvert>()
+  fullName: Beutl.Media.Music.IPcm.Convert<TConvert>()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: 'Pcm<TConvert> Convert<TConvert>() where TConvert : unmanaged, ISample<TConvert>'
+    typeParameters:
+    - id: TConvert
+    return:
+      type: Beutl.Media.Music.Pcm{{TConvert}}
+    content.vb: Function Convert(Of TConvert As {Structure, ISample(Of TConvert)})() As Pcm(Of TConvert)
+  overload: Beutl.Media.Music.IPcm.Convert*
+  nameWithType.vb: IPcm.Convert(Of TConvert)()
+  fullName.vb: Beutl.Media.Music.IPcm.Convert(Of TConvert)()
+  name.vb: Convert(Of TConvert)()
+- uid: Beutl.Media.Music.IPcm.ConvertTo``1(Beutl.Media.Music.Pcm{``0})
+  commentId: M:Beutl.Media.Music.IPcm.ConvertTo``1(Beutl.Media.Music.Pcm{``0})
+  id: ConvertTo``1(Beutl.Media.Music.Pcm{``0})
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: ConvertTo<TConvert>(Pcm<TConvert>)
+  nameWithType: IPcm.ConvertTo<TConvert>(Pcm<TConvert>)
+  fullName: Beutl.Media.Music.IPcm.ConvertTo<TConvert>(Beutl.Media.Music.Pcm<TConvert>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: 'void ConvertTo<TConvert>(Pcm<TConvert> dst) where TConvert : unmanaged, ISample<TConvert>'
+    parameters:
+    - id: dst
+      type: Beutl.Media.Music.Pcm{{TConvert}}
+    typeParameters:
+    - id: TConvert
+    content.vb: Sub ConvertTo(Of TConvert As {Structure, ISample(Of TConvert)})(dst As Pcm(Of TConvert))
+  overload: Beutl.Media.Music.IPcm.ConvertTo*
+  nameWithType.vb: IPcm.ConvertTo(Of TConvert)(Pcm(Of TConvert))
+  fullName.vb: Beutl.Media.Music.IPcm.ConvertTo(Of TConvert)(Beutl.Media.Music.Pcm(Of TConvert))
+  name.vb: ConvertTo(Of TConvert)(Pcm(Of TConvert))
+- uid: Beutl.Media.Music.IPcm.Amplifier(Beutl.Media.Music.Sample)
+  commentId: M:Beutl.Media.Music.IPcm.Amplifier(Beutl.Media.Music.Sample)
+  id: Amplifier(Beutl.Media.Music.Sample)
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: Amplifier(Sample)
+  nameWithType: IPcm.Amplifier(Sample)
+  fullName: Beutl.Media.Music.IPcm.Amplifier(Beutl.Media.Music.Sample)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: void Amplifier(Sample level)
+    parameters:
+    - id: level
+      type: Beutl.Media.Music.Sample
+    content.vb: Sub Amplifier(level As Sample)
+  overload: Beutl.Media.Music.IPcm.Amplifier*
+- uid: Beutl.Media.Music.IPcm.GetChannelData(System.Int32,System.Span{System.Byte},System.Int32@)
+  commentId: M:Beutl.Media.Music.IPcm.GetChannelData(System.Int32,System.Span{System.Byte},System.Int32@)
+  id: GetChannelData(System.Int32,System.Span{System.Byte},System.Int32@)
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: GetChannelData(int, Span<byte>, out int)
+  nameWithType: IPcm.GetChannelData(int, Span<byte>, out int)
+  fullName: Beutl.Media.Music.IPcm.GetChannelData(int, System.Span<byte>, out int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: void GetChannelData(int channel, Span<byte> destination, out int bytesWritten)
+    parameters:
+    - id: channel
+      type: System.Int32
+    - id: destination
+      type: System.Span{System.Byte}
+    - id: bytesWritten
+      type: System.Int32
+    content.vb: Sub GetChannelData(channel As Integer, destination As Span(Of Byte), bytesWritten As Integer)
+  overload: Beutl.Media.Music.IPcm.GetChannelData*
+  nameWithType.vb: IPcm.GetChannelData(Integer, Span(Of Byte), Integer)
+  fullName.vb: Beutl.Media.Music.IPcm.GetChannelData(Integer, System.Span(Of Byte), Integer)
+  name.vb: GetChannelData(Integer, Span(Of Byte), Integer)
+- uid: Beutl.Media.Music.IPcm.SampleRate
+  commentId: P:Beutl.Media.Music.IPcm.SampleRate
+  id: SampleRate
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: SampleRate
+  nameWithType: IPcm.SampleRate
+  fullName: Beutl.Media.Music.IPcm.SampleRate
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: int SampleRate { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property SampleRate As Integer
+  overload: Beutl.Media.Music.IPcm.SampleRate*
+- uid: Beutl.Media.Music.IPcm.NumSamples
+  commentId: P:Beutl.Media.Music.IPcm.NumSamples
+  id: NumSamples
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: NumSamples
+  nameWithType: IPcm.NumSamples
+  fullName: Beutl.Media.Music.IPcm.NumSamples
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: int NumSamples { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property NumSamples As Integer
+  overload: Beutl.Media.Music.IPcm.NumSamples*
+- uid: Beutl.Media.Music.IPcm.NumChannels
+  commentId: P:Beutl.Media.Music.IPcm.NumChannels
+  id: NumChannels
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: NumChannels
+  nameWithType: IPcm.NumChannels
+  fullName: Beutl.Media.Music.IPcm.NumChannels
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: int NumChannels { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property NumChannels As Integer
+  overload: Beutl.Media.Music.IPcm.NumChannels*
+- uid: Beutl.Media.Music.IPcm.SampleSize
+  commentId: P:Beutl.Media.Music.IPcm.SampleSize
+  id: SampleSize
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: SampleSize
+  nameWithType: IPcm.SampleSize
+  fullName: Beutl.Media.Music.IPcm.SampleSize
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: nint SampleSize { get; }
+    parameters: []
+    return:
+      type: System.IntPtr
+    content.vb: ReadOnly Property SampleSize As IntPtr
+  overload: Beutl.Media.Music.IPcm.SampleSize*
+- uid: Beutl.Media.Music.IPcm.Duration
+  commentId: P:Beutl.Media.Music.IPcm.Duration
+  id: Duration
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: IPcm.Duration
+  fullName: Beutl.Media.Music.IPcm.Duration
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: TimeSpan Duration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: ReadOnly Property Duration As TimeSpan
+  overload: Beutl.Media.Music.IPcm.Duration*
+- uid: Beutl.Media.Music.IPcm.DurationRational
+  commentId: P:Beutl.Media.Music.IPcm.DurationRational
+  id: DurationRational
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: DurationRational
+  nameWithType: IPcm.DurationRational
+  fullName: Beutl.Media.Music.IPcm.DurationRational
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: Rational DurationRational { get; }
+    parameters: []
+    return:
+      type: Beutl.Rational
+    content.vb: ReadOnly Property DurationRational As Rational
+  overload: Beutl.Media.Music.IPcm.DurationRational*
+- uid: Beutl.Media.Music.IPcm.Data
+  commentId: P:Beutl.Media.Music.IPcm.Data
+  id: Data
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: IPcm.Data
+  fullName: Beutl.Media.Music.IPcm.Data
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: nint Data { get; }
+    parameters: []
+    return:
+      type: System.IntPtr
+    content.vb: ReadOnly Property Data As IntPtr
+  overload: Beutl.Media.Music.IPcm.Data*
+- uid: Beutl.Media.Music.IPcm.IsDisposed
+  commentId: P:Beutl.Media.Music.IPcm.IsDisposed
+  id: IsDisposed
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: IPcm.IsDisposed
+  fullName: Beutl.Media.Music.IPcm.IsDisposed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsDisposed As Boolean
+  overload: Beutl.Media.Music.IPcm.IsDisposed*
+- uid: Beutl.Media.Music.IPcm.SampleType
+  commentId: P:Beutl.Media.Music.IPcm.SampleType
+  id: SampleType
+  parent: Beutl.Media.Music.IPcm
+  langs:
+  - csharp
+  - vb
+  name: SampleType
+  nameWithType: IPcm.SampleType
+  fullName: Beutl.Media.Music.IPcm.SampleType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/IPcm.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music
+  syntax:
+    content: Type SampleType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property SampleType As Type
+  overload: Beutl.Media.Music.IPcm.SampleType*
+references:
+- uid: Beutl.Media.Music
+  commentId: N:Beutl.Media.Music
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Music
+  nameWithType: Beutl.Media.Music
+  fullName: Beutl.Media.Music
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.ICloneable.Clone
+  commentId: M:System.ICloneable.Clone
+  parent: System.ICloneable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable.clone
+  name: Clone()
+  nameWithType: ICloneable.Clone()
+  fullName: System.ICloneable.Clone()
+  spec.csharp:
+  - uid: System.ICloneable.Clone
+    name: Clone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icloneable.clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ICloneable.Clone
+    name: Clone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icloneable.clone
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.ICloneable
+  commentId: T:System.ICloneable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  name: ICloneable
+  nameWithType: ICloneable
+  fullName: System.ICloneable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Media.Music.IPcm.Slice*
+  commentId: Overload:Beutl.Media.Music.IPcm.Slice
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_Slice_System_Int32_
+  name: Slice
+  nameWithType: IPcm.Slice
+  fullName: Beutl.Media.Music.IPcm.Slice
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.Music.IPcm
+  commentId: T:Beutl.Media.Music.IPcm
+  parent: Beutl.Media.Music
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html
+  name: IPcm
+  nameWithType: IPcm
+  fullName: Beutl.Media.Music.IPcm
+- uid: Beutl.Media.Music.IPcm.Convert*
+  commentId: Overload:Beutl.Media.Music.IPcm.Convert
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_Convert__1
+  name: Convert
+  nameWithType: IPcm.Convert
+  fullName: Beutl.Media.Music.IPcm.Convert
+- uid: Beutl.Media.Music.Pcm{{TConvert}}
+  commentId: T:Beutl.Media.Music.Pcm{``0}
+  parent: Beutl.Media.Music
+  definition: Beutl.Media.Music.Pcm`1
+  href: Beutl.Media.Music.Pcm-1.html
+  name: Pcm<TConvert>
+  nameWithType: Pcm<TConvert>
+  fullName: Beutl.Media.Music.Pcm<TConvert>
+  nameWithType.vb: Pcm(Of TConvert)
+  fullName.vb: Beutl.Media.Music.Pcm(Of TConvert)
+  name.vb: Pcm(Of TConvert)
+  spec.csharp:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: <
+  - name: TConvert
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TConvert
+  - name: )
+- uid: Beutl.Media.Music.Pcm`1
+  commentId: T:Beutl.Media.Music.Pcm`1
+  parent: Beutl.Media.Music
+  isExternal: true
+  href: Beutl.Media.Music.Pcm-1.html
+  name: Pcm<T>
+  nameWithType: Pcm<T>
+  fullName: Beutl.Media.Music.Pcm<T>
+  nameWithType.vb: Pcm(Of T)
+  fullName.vb: Beutl.Media.Music.Pcm(Of T)
+  name.vb: Pcm(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.Music.IPcm.ConvertTo*
+  commentId: Overload:Beutl.Media.Music.IPcm.ConvertTo
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_ConvertTo__1_Beutl_Media_Music_Pcm___0__
+  name: ConvertTo
+  nameWithType: IPcm.ConvertTo
+  fullName: Beutl.Media.Music.IPcm.ConvertTo
+- uid: Beutl.Media.Music.IPcm.Amplifier*
+  commentId: Overload:Beutl.Media.Music.IPcm.Amplifier
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_Amplifier_Beutl_Media_Music_Sample_
+  name: Amplifier
+  nameWithType: IPcm.Amplifier
+  fullName: Beutl.Media.Music.IPcm.Amplifier
+- uid: Beutl.Media.Music.Sample
+  commentId: T:Beutl.Media.Music.Sample
+  parent: Beutl.Media.Music
+  isExternal: true
+  href: Beutl.Media.Music.Sample.html
+  name: Sample
+  nameWithType: Sample
+  fullName: Beutl.Media.Music.Sample
+- uid: Beutl.Media.Music.IPcm.GetChannelData*
+  commentId: Overload:Beutl.Media.Music.IPcm.GetChannelData
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_GetChannelData_System_Int32_System_Span_System_Byte__System_Int32__
+  name: GetChannelData
+  nameWithType: IPcm.GetChannelData
+  fullName: Beutl.Media.Music.IPcm.GetChannelData
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.Music.IPcm.SampleRate*
+  commentId: Overload:Beutl.Media.Music.IPcm.SampleRate
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_SampleRate
+  name: SampleRate
+  nameWithType: IPcm.SampleRate
+  fullName: Beutl.Media.Music.IPcm.SampleRate
+- uid: Beutl.Media.Music.IPcm.NumSamples*
+  commentId: Overload:Beutl.Media.Music.IPcm.NumSamples
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_NumSamples
+  name: NumSamples
+  nameWithType: IPcm.NumSamples
+  fullName: Beutl.Media.Music.IPcm.NumSamples
+- uid: Beutl.Media.Music.IPcm.NumChannels*
+  commentId: Overload:Beutl.Media.Music.IPcm.NumChannels
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_NumChannels
+  name: NumChannels
+  nameWithType: IPcm.NumChannels
+  fullName: Beutl.Media.Music.IPcm.NumChannels
+- uid: Beutl.Media.Music.IPcm.SampleSize*
+  commentId: Overload:Beutl.Media.Music.IPcm.SampleSize
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_SampleSize
+  name: SampleSize
+  nameWithType: IPcm.SampleSize
+  fullName: Beutl.Media.Music.IPcm.SampleSize
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: Beutl.Media.Music.IPcm.Duration*
+  commentId: Overload:Beutl.Media.Music.IPcm.Duration
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_Duration
+  name: Duration
+  nameWithType: IPcm.Duration
+  fullName: Beutl.Media.Music.IPcm.Duration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Media.Music.IPcm.DurationRational*
+  commentId: Overload:Beutl.Media.Music.IPcm.DurationRational
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_DurationRational
+  name: DurationRational
+  nameWithType: IPcm.DurationRational
+  fullName: Beutl.Media.Music.IPcm.DurationRational
+- uid: Beutl.Rational
+  commentId: T:Beutl.Rational
+  parent: Beutl
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Rational.Number.cs
+  name: Rational
+  nameWithType: Rational
+  fullName: Beutl.Rational
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.Media.Music.IPcm.Data*
+  commentId: Overload:Beutl.Media.Music.IPcm.Data
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_Data
+  name: Data
+  nameWithType: IPcm.Data
+  fullName: Beutl.Media.Music.IPcm.Data
+- uid: Beutl.Media.Music.IPcm.IsDisposed*
+  commentId: Overload:Beutl.Media.Music.IPcm.IsDisposed
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_IsDisposed
+  name: IsDisposed
+  nameWithType: IPcm.IsDisposed
+  fullName: Beutl.Media.Music.IPcm.IsDisposed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media.Music.IPcm.SampleType*
+  commentId: Overload:Beutl.Media.Music.IPcm.SampleType
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html#Beutl_Media_Music_IPcm_SampleType
+  name: SampleType
+  nameWithType: IPcm.SampleType
+  fullName: Beutl.Media.Music.IPcm.SampleType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type

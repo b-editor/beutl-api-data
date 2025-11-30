@@ -1,0 +1,893 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Encoding.MediaWriter
+  commentId: T:Beutl.Media.Encoding.MediaWriter
+  id: MediaWriter
+  parent: Beutl.Media.Encoding
+  children:
+  - Beutl.Media.Encoding.MediaWriter.#ctor(Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)
+  - Beutl.Media.Encoding.MediaWriter.AddAudio(Beutl.Media.Music.IPcm)
+  - Beutl.Media.Encoding.MediaWriter.AddVideo(Beutl.Media.IBitmap)
+  - Beutl.Media.Encoding.MediaWriter.AudioConfig
+  - Beutl.Media.Encoding.MediaWriter.CreateMediaWriter(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings,Beutl.Media.Encoding.IEncoderInfo)
+  - Beutl.Media.Encoding.MediaWriter.Dispose
+  - Beutl.Media.Encoding.MediaWriter.Dispose(System.Boolean)
+  - Beutl.Media.Encoding.MediaWriter.Finalize
+  - Beutl.Media.Encoding.MediaWriter.IsDisposed
+  - Beutl.Media.Encoding.MediaWriter.NumberOfFrames
+  - Beutl.Media.Encoding.MediaWriter.NumberOfSamples
+  - Beutl.Media.Encoding.MediaWriter.VideoConfig
+  langs:
+  - csharp
+  - vb
+  name: MediaWriter
+  nameWithType: MediaWriter
+  fullName: Beutl.Media.Encoding.MediaWriter
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: >-
+      [Obsolete("Use EncodingController instead.")]
+
+      public abstract class MediaWriter : IDisposable
+    content.vb: >-
+      <Obsolete("Use EncodingController instead.")>
+
+      Public MustInherit Class MediaWriter Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use EncodingController instead.
+- uid: Beutl.Media.Encoding.MediaWriter.#ctor(Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)
+  commentId: M:Beutl.Media.Encoding.MediaWriter.#ctor(Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)
+  id: '#ctor(Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)'
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: MediaWriter(VideoEncoderSettings, AudioEncoderSettings)
+  nameWithType: MediaWriter.MediaWriter(VideoEncoderSettings, AudioEncoderSettings)
+  fullName: Beutl.Media.Encoding.MediaWriter.MediaWriter(Beutl.Media.Encoding.VideoEncoderSettings, Beutl.Media.Encoding.AudioEncoderSettings)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: protected MediaWriter(VideoEncoderSettings videoConfig, AudioEncoderSettings audioConfig)
+    parameters:
+    - id: videoConfig
+      type: Beutl.Media.Encoding.VideoEncoderSettings
+    - id: audioConfig
+      type: Beutl.Media.Encoding.AudioEncoderSettings
+    content.vb: Protected Sub New(videoConfig As VideoEncoderSettings, audioConfig As AudioEncoderSettings)
+  overload: Beutl.Media.Encoding.MediaWriter.#ctor*
+  nameWithType.vb: MediaWriter.New(VideoEncoderSettings, AudioEncoderSettings)
+  fullName.vb: Beutl.Media.Encoding.MediaWriter.New(Beutl.Media.Encoding.VideoEncoderSettings, Beutl.Media.Encoding.AudioEncoderSettings)
+  name.vb: New(VideoEncoderSettings, AudioEncoderSettings)
+- uid: Beutl.Media.Encoding.MediaWriter.Finalize
+  commentId: M:Beutl.Media.Encoding.MediaWriter.Finalize
+  id: Finalize
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: ~MediaWriter()
+  nameWithType: MediaWriter.~MediaWriter()
+  fullName: Beutl.Media.Encoding.MediaWriter.~MediaWriter()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: protected ~MediaWriter()
+    content.vb: 'Protected '
+  overload: Beutl.Media.Encoding.MediaWriter.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Beutl.Media.Encoding.MediaWriter.CreateMediaWriter(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings,Beutl.Media.Encoding.IEncoderInfo)
+  commentId: M:Beutl.Media.Encoding.MediaWriter.CreateMediaWriter(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings,Beutl.Media.Encoding.IEncoderInfo)
+  id: CreateMediaWriter(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings,Beutl.Media.Encoding.IEncoderInfo)
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: CreateMediaWriter(string, VideoEncoderSettings?, AudioEncoderSettings?, IEncoderInfo?)
+  nameWithType: MediaWriter.CreateMediaWriter(string, VideoEncoderSettings?, AudioEncoderSettings?, IEncoderInfo?)
+  fullName: Beutl.Media.Encoding.MediaWriter.CreateMediaWriter(string, Beutl.Media.Encoding.VideoEncoderSettings?, Beutl.Media.Encoding.AudioEncoderSettings?, Beutl.Media.Encoding.IEncoderInfo?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public static MediaWriter CreateMediaWriter(string file, VideoEncoderSettings? videoConfig = null, AudioEncoderSettings? audioConfig = null, IEncoderInfo? encoder = null)
+    parameters:
+    - id: file
+      type: System.String
+    - id: videoConfig
+      type: Beutl.Media.Encoding.VideoEncoderSettings
+    - id: audioConfig
+      type: Beutl.Media.Encoding.AudioEncoderSettings
+    - id: encoder
+      type: Beutl.Media.Encoding.IEncoderInfo
+    return:
+      type: Beutl.Media.Encoding.MediaWriter
+    content.vb: Public Shared Function CreateMediaWriter(file As String, videoConfig As VideoEncoderSettings = Nothing, audioConfig As AudioEncoderSettings = Nothing, encoder As IEncoderInfo = Nothing) As MediaWriter
+  overload: Beutl.Media.Encoding.MediaWriter.CreateMediaWriter*
+  nameWithType.vb: MediaWriter.CreateMediaWriter(String, VideoEncoderSettings, AudioEncoderSettings, IEncoderInfo)
+  fullName.vb: Beutl.Media.Encoding.MediaWriter.CreateMediaWriter(String, Beutl.Media.Encoding.VideoEncoderSettings, Beutl.Media.Encoding.AudioEncoderSettings, Beutl.Media.Encoding.IEncoderInfo)
+  name.vb: CreateMediaWriter(String, VideoEncoderSettings, AudioEncoderSettings, IEncoderInfo)
+- uid: Beutl.Media.Encoding.MediaWriter.AddVideo(Beutl.Media.IBitmap)
+  commentId: M:Beutl.Media.Encoding.MediaWriter.AddVideo(Beutl.Media.IBitmap)
+  id: AddVideo(Beutl.Media.IBitmap)
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: AddVideo(IBitmap)
+  nameWithType: MediaWriter.AddVideo(IBitmap)
+  fullName: Beutl.Media.Encoding.MediaWriter.AddVideo(Beutl.Media.IBitmap)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public abstract bool AddVideo(IBitmap image)
+    parameters:
+    - id: image
+      type: Beutl.Media.IBitmap
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride Function AddVideo(image As IBitmap) As Boolean
+  overload: Beutl.Media.Encoding.MediaWriter.AddVideo*
+- uid: Beutl.Media.Encoding.MediaWriter.AddAudio(Beutl.Media.Music.IPcm)
+  commentId: M:Beutl.Media.Encoding.MediaWriter.AddAudio(Beutl.Media.Music.IPcm)
+  id: AddAudio(Beutl.Media.Music.IPcm)
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: AddAudio(IPcm)
+  nameWithType: MediaWriter.AddAudio(IPcm)
+  fullName: Beutl.Media.Encoding.MediaWriter.AddAudio(Beutl.Media.Music.IPcm)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public abstract bool AddAudio(IPcm sound)
+    parameters:
+    - id: sound
+      type: Beutl.Media.Music.IPcm
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride Function AddAudio(sound As IPcm) As Boolean
+  overload: Beutl.Media.Encoding.MediaWriter.AddAudio*
+- uid: Beutl.Media.Encoding.MediaWriter.Dispose
+  commentId: M:Beutl.Media.Encoding.MediaWriter.Dispose
+  id: Dispose
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: MediaWriter.Dispose()
+  fullName: Beutl.Media.Encoding.MediaWriter.Dispose()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Beutl.Media.Encoding.MediaWriter.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Beutl.Media.Encoding.MediaWriter.Dispose(System.Boolean)
+  commentId: M:Beutl.Media.Encoding.MediaWriter.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: MediaWriter.Dispose(bool)
+  fullName: Beutl.Media.Encoding.MediaWriter.Dispose(bool)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: Beutl.Media.Encoding.MediaWriter.Dispose*
+  nameWithType.vb: MediaWriter.Dispose(Boolean)
+  fullName.vb: Beutl.Media.Encoding.MediaWriter.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+- uid: Beutl.Media.Encoding.MediaWriter.IsDisposed
+  commentId: P:Beutl.Media.Encoding.MediaWriter.IsDisposed
+  id: IsDisposed
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: MediaWriter.IsDisposed
+  fullName: Beutl.Media.Encoding.MediaWriter.IsDisposed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisposed As Boolean
+  overload: Beutl.Media.Encoding.MediaWriter.IsDisposed*
+- uid: Beutl.Media.Encoding.MediaWriter.VideoConfig
+  commentId: P:Beutl.Media.Encoding.MediaWriter.VideoConfig
+  id: VideoConfig
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: VideoConfig
+  nameWithType: MediaWriter.VideoConfig
+  fullName: Beutl.Media.Encoding.MediaWriter.VideoConfig
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public VideoEncoderSettings VideoConfig { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.Encoding.VideoEncoderSettings
+    content.vb: Public ReadOnly Property VideoConfig As VideoEncoderSettings
+  overload: Beutl.Media.Encoding.MediaWriter.VideoConfig*
+- uid: Beutl.Media.Encoding.MediaWriter.AudioConfig
+  commentId: P:Beutl.Media.Encoding.MediaWriter.AudioConfig
+  id: AudioConfig
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: AudioConfig
+  nameWithType: MediaWriter.AudioConfig
+  fullName: Beutl.Media.Encoding.MediaWriter.AudioConfig
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public AudioEncoderSettings AudioConfig { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.Encoding.AudioEncoderSettings
+    content.vb: Public ReadOnly Property AudioConfig As AudioEncoderSettings
+  overload: Beutl.Media.Encoding.MediaWriter.AudioConfig*
+- uid: Beutl.Media.Encoding.MediaWriter.NumberOfFrames
+  commentId: P:Beutl.Media.Encoding.MediaWriter.NumberOfFrames
+  id: NumberOfFrames
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: NumberOfFrames
+  nameWithType: MediaWriter.NumberOfFrames
+  fullName: Beutl.Media.Encoding.MediaWriter.NumberOfFrames
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public abstract long NumberOfFrames { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public MustOverride ReadOnly Property NumberOfFrames As Long
+  overload: Beutl.Media.Encoding.MediaWriter.NumberOfFrames*
+- uid: Beutl.Media.Encoding.MediaWriter.NumberOfSamples
+  commentId: P:Beutl.Media.Encoding.MediaWriter.NumberOfSamples
+  id: NumberOfSamples
+  parent: Beutl.Media.Encoding.MediaWriter
+  langs:
+  - csharp
+  - vb
+  name: NumberOfSamples
+  nameWithType: MediaWriter.NumberOfSamples
+  fullName: Beutl.Media.Encoding.MediaWriter.NumberOfSamples
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/MediaWriter.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: public abstract long NumberOfSamples { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public MustOverride ReadOnly Property NumberOfSamples As Long
+  overload: Beutl.Media.Encoding.MediaWriter.NumberOfSamples*
+references:
+- uid: Beutl.Media.Encoding
+  commentId: N:Beutl.Media.Encoding
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Encoding
+  nameWithType: Beutl.Media.Encoding
+  fullName: Beutl.Media.Encoding
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Encoding
+    name: Encoding
+    isExternal: true
+    href: Beutl.Media.Encoding.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Encoding
+    name: Encoding
+    isExternal: true
+    href: Beutl.Media.Encoding.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Media.Encoding.MediaWriter.#ctor*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.#ctor
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter__ctor_Beutl_Media_Encoding_VideoEncoderSettings_Beutl_Media_Encoding_AudioEncoderSettings_
+  name: MediaWriter
+  nameWithType: MediaWriter.MediaWriter
+  fullName: Beutl.Media.Encoding.MediaWriter.MediaWriter
+  nameWithType.vb: MediaWriter.New
+  fullName.vb: Beutl.Media.Encoding.MediaWriter.New
+  name.vb: New
+- uid: Beutl.Media.Encoding.VideoEncoderSettings
+  commentId: T:Beutl.Media.Encoding.VideoEncoderSettings
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/VideoEncoderSettings.cs
+  name: VideoEncoderSettings
+  nameWithType: VideoEncoderSettings
+  fullName: Beutl.Media.Encoding.VideoEncoderSettings
+- uid: Beutl.Media.Encoding.AudioEncoderSettings
+  commentId: T:Beutl.Media.Encoding.AudioEncoderSettings
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/AudioEncoderSettings.cs
+  name: AudioEncoderSettings
+  nameWithType: AudioEncoderSettings
+  fullName: Beutl.Media.Encoding.AudioEncoderSettings
+- uid: Beutl.Media.Encoding.MediaWriter.Finalize*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.Finalize
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_Finalize
+  name: ~MediaWriter
+  nameWithType: MediaWriter.~MediaWriter
+  fullName: Beutl.Media.Encoding.MediaWriter.~MediaWriter
+  spec.csharp:
+  - name: "~"
+  - uid: Beutl.Media.Encoding.MediaWriter.Finalize*
+    name: MediaWriter
+    isExternal: true
+    href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_Finalize
+- uid: Beutl.Media.Encoding.MediaWriter.CreateMediaWriter*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.CreateMediaWriter
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_CreateMediaWriter_System_String_Beutl_Media_Encoding_VideoEncoderSettings_Beutl_Media_Encoding_AudioEncoderSettings_Beutl_Media_Encoding_IEncoderInfo_
+  name: CreateMediaWriter
+  nameWithType: MediaWriter.CreateMediaWriter
+  fullName: Beutl.Media.Encoding.MediaWriter.CreateMediaWriter
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Media.Encoding.IEncoderInfo
+  commentId: T:Beutl.Media.Encoding.IEncoderInfo
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  name: IEncoderInfo
+  nameWithType: IEncoderInfo
+  fullName: Beutl.Media.Encoding.IEncoderInfo
+- uid: Beutl.Media.Encoding.MediaWriter
+  commentId: T:Beutl.Media.Encoding.MediaWriter
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html
+  name: MediaWriter
+  nameWithType: MediaWriter
+  fullName: Beutl.Media.Encoding.MediaWriter
+- uid: Beutl.Media.Encoding.MediaWriter.AddVideo*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.AddVideo
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_AddVideo_Beutl_Media_IBitmap_
+  name: AddVideo
+  nameWithType: MediaWriter.AddVideo
+  fullName: Beutl.Media.Encoding.MediaWriter.AddVideo
+- uid: Beutl.Media.IBitmap
+  commentId: T:Beutl.Media.IBitmap
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.IBitmap.html
+  name: IBitmap
+  nameWithType: IBitmap
+  fullName: Beutl.Media.IBitmap
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.Media.Encoding.MediaWriter.AddAudio*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.AddAudio
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_AddAudio_Beutl_Media_Music_IPcm_
+  name: AddAudio
+  nameWithType: MediaWriter.AddAudio
+  fullName: Beutl.Media.Encoding.MediaWriter.AddAudio
+- uid: Beutl.Media.Music.IPcm
+  commentId: T:Beutl.Media.Music.IPcm
+  parent: Beutl.Media.Music
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html
+  name: IPcm
+  nameWithType: IPcm
+  fullName: Beutl.Media.Music.IPcm
+- uid: Beutl.Media.Music
+  commentId: N:Beutl.Media.Music
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Music
+  nameWithType: Beutl.Media.Music
+  fullName: Beutl.Media.Music
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+- uid: Beutl.Media.Encoding.MediaWriter.Dispose*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.Dispose
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_Dispose
+  name: Dispose
+  nameWithType: MediaWriter.Dispose
+  fullName: Beutl.Media.Encoding.MediaWriter.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.Media.Encoding.MediaWriter.IsDisposed*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.IsDisposed
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_IsDisposed
+  name: IsDisposed
+  nameWithType: MediaWriter.IsDisposed
+  fullName: Beutl.Media.Encoding.MediaWriter.IsDisposed
+- uid: Beutl.Media.Encoding.MediaWriter.VideoConfig*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.VideoConfig
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_VideoConfig
+  name: VideoConfig
+  nameWithType: MediaWriter.VideoConfig
+  fullName: Beutl.Media.Encoding.MediaWriter.VideoConfig
+- uid: Beutl.Media.Encoding.MediaWriter.AudioConfig*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.AudioConfig
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_AudioConfig
+  name: AudioConfig
+  nameWithType: MediaWriter.AudioConfig
+  fullName: Beutl.Media.Encoding.MediaWriter.AudioConfig
+- uid: Beutl.Media.Encoding.MediaWriter.NumberOfFrames*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.NumberOfFrames
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_NumberOfFrames
+  name: NumberOfFrames
+  nameWithType: MediaWriter.NumberOfFrames
+  fullName: Beutl.Media.Encoding.MediaWriter.NumberOfFrames
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Beutl.Media.Encoding.MediaWriter.NumberOfSamples*
+  commentId: Overload:Beutl.Media.Encoding.MediaWriter.NumberOfSamples
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html#Beutl_Media_Encoding_MediaWriter_NumberOfSamples
+  name: NumberOfSamples
+  nameWithType: MediaWriter.NumberOfSamples
+  fullName: Beutl.Media.Encoding.MediaWriter.NumberOfSamples

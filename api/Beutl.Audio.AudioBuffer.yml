@@ -1,0 +1,905 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Audio.AudioBuffer
+  commentId: T:Beutl.Audio.AudioBuffer
+  id: AudioBuffer
+  parent: Beutl.Audio
+  children:
+  - Beutl.Audio.AudioBuffer.#ctor(System.Int32,System.Int32,System.Int32)
+  - Beutl.Audio.AudioBuffer.ChannelCount
+  - Beutl.Audio.AudioBuffer.Clear
+  - Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer)
+  - Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer,System.Int32)
+  - Beutl.Audio.AudioBuffer.Dispose
+  - Beutl.Audio.AudioBuffer.GetChannelData(System.Int32)
+  - Beutl.Audio.AudioBuffer.GetChannelMemory(System.Int32)
+  - Beutl.Audio.AudioBuffer.SampleCount
+  - Beutl.Audio.AudioBuffer.SampleRate
+  - Beutl.Audio.AudioBuffer.ToPcm
+  langs:
+  - csharp
+  - vb
+  name: AudioBuffer
+  nameWithType: AudioBuffer
+  fullName: Beutl.Audio.AudioBuffer
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: 'public sealed class AudioBuffer : IDisposable'
+    content.vb: Public NotInheritable Class AudioBuffer Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Audio.AudioBuffer.#ctor(System.Int32,System.Int32,System.Int32)
+  commentId: M:Beutl.Audio.AudioBuffer.#ctor(System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32)'
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: AudioBuffer(int, int, int)
+  nameWithType: AudioBuffer.AudioBuffer(int, int, int)
+  fullName: Beutl.Audio.AudioBuffer.AudioBuffer(int, int, int)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public AudioBuffer(int sampleRate, int channelCount, int sampleCount)
+    parameters:
+    - id: sampleRate
+      type: System.Int32
+    - id: channelCount
+      type: System.Int32
+    - id: sampleCount
+      type: System.Int32
+    content.vb: Public Sub New(sampleRate As Integer, channelCount As Integer, sampleCount As Integer)
+  overload: Beutl.Audio.AudioBuffer.#ctor*
+  nameWithType.vb: AudioBuffer.New(Integer, Integer, Integer)
+  fullName.vb: Beutl.Audio.AudioBuffer.New(Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer)
+- uid: Beutl.Audio.AudioBuffer.GetChannelData(System.Int32)
+  commentId: M:Beutl.Audio.AudioBuffer.GetChannelData(System.Int32)
+  id: GetChannelData(System.Int32)
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: GetChannelData(int)
+  nameWithType: AudioBuffer.GetChannelData(int)
+  fullName: Beutl.Audio.AudioBuffer.GetChannelData(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public Span<float> GetChannelData(int channel)
+    parameters:
+    - id: channel
+      type: System.Int32
+    return:
+      type: System.Span{System.Single}
+    content.vb: Public Function GetChannelData(channel As Integer) As Span(Of Single)
+  overload: Beutl.Audio.AudioBuffer.GetChannelData*
+  nameWithType.vb: AudioBuffer.GetChannelData(Integer)
+  fullName.vb: Beutl.Audio.AudioBuffer.GetChannelData(Integer)
+  name.vb: GetChannelData(Integer)
+- uid: Beutl.Audio.AudioBuffer.GetChannelMemory(System.Int32)
+  commentId: M:Beutl.Audio.AudioBuffer.GetChannelMemory(System.Int32)
+  id: GetChannelMemory(System.Int32)
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: GetChannelMemory(int)
+  nameWithType: AudioBuffer.GetChannelMemory(int)
+  fullName: Beutl.Audio.AudioBuffer.GetChannelMemory(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public Memory<float> GetChannelMemory(int channel)
+    parameters:
+    - id: channel
+      type: System.Int32
+    return:
+      type: System.Memory{System.Single}
+    content.vb: Public Function GetChannelMemory(channel As Integer) As Memory(Of Single)
+  overload: Beutl.Audio.AudioBuffer.GetChannelMemory*
+  nameWithType.vb: AudioBuffer.GetChannelMemory(Integer)
+  fullName.vb: Beutl.Audio.AudioBuffer.GetChannelMemory(Integer)
+  name.vb: GetChannelMemory(Integer)
+- uid: Beutl.Audio.AudioBuffer.ToPcm
+  commentId: M:Beutl.Audio.AudioBuffer.ToPcm
+  id: ToPcm
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: ToPcm()
+  nameWithType: AudioBuffer.ToPcm()
+  fullName: Beutl.Audio.AudioBuffer.ToPcm()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public Pcm<Stereo32BitFloat> ToPcm()
+    return:
+      type: Beutl.Media.Music.Pcm{Beutl.Media.Music.Samples.Stereo32BitFloat}
+    content.vb: Public Function ToPcm() As Pcm(Of Stereo32BitFloat)
+  overload: Beutl.Audio.AudioBuffer.ToPcm*
+- uid: Beutl.Audio.AudioBuffer.Clear
+  commentId: M:Beutl.Audio.AudioBuffer.Clear
+  id: Clear
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: AudioBuffer.Clear()
+  fullName: Beutl.Audio.AudioBuffer.Clear()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Beutl.Audio.AudioBuffer.Clear*
+- uid: Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer)
+  commentId: M:Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer)
+  id: CopyTo(Beutl.Audio.AudioBuffer)
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(AudioBuffer)
+  nameWithType: AudioBuffer.CopyTo(AudioBuffer)
+  fullName: Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public void CopyTo(AudioBuffer destination)
+    parameters:
+    - id: destination
+      type: Beutl.Audio.AudioBuffer
+    content.vb: Public Sub CopyTo(destination As AudioBuffer)
+  overload: Beutl.Audio.AudioBuffer.CopyTo*
+- uid: Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer,System.Int32)
+  commentId: M:Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer,System.Int32)
+  id: CopyTo(Beutl.Audio.AudioBuffer,System.Int32)
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(AudioBuffer, int)
+  nameWithType: AudioBuffer.CopyTo(AudioBuffer, int)
+  fullName: Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer, int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public void CopyTo(AudioBuffer destination, int offset)
+    parameters:
+    - id: destination
+      type: Beutl.Audio.AudioBuffer
+    - id: offset
+      type: System.Int32
+    content.vb: Public Sub CopyTo(destination As AudioBuffer, offset As Integer)
+  overload: Beutl.Audio.AudioBuffer.CopyTo*
+  nameWithType.vb: AudioBuffer.CopyTo(AudioBuffer, Integer)
+  fullName.vb: Beutl.Audio.AudioBuffer.CopyTo(Beutl.Audio.AudioBuffer, Integer)
+  name.vb: CopyTo(AudioBuffer, Integer)
+- uid: Beutl.Audio.AudioBuffer.Dispose
+  commentId: M:Beutl.Audio.AudioBuffer.Dispose
+  id: Dispose
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: AudioBuffer.Dispose()
+  fullName: Beutl.Audio.AudioBuffer.Dispose()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Beutl.Audio.AudioBuffer.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Beutl.Audio.AudioBuffer.SampleRate
+  commentId: P:Beutl.Audio.AudioBuffer.SampleRate
+  id: SampleRate
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: SampleRate
+  nameWithType: AudioBuffer.SampleRate
+  fullName: Beutl.Audio.AudioBuffer.SampleRate
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public int SampleRate { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SampleRate As Integer
+  overload: Beutl.Audio.AudioBuffer.SampleRate*
+- uid: Beutl.Audio.AudioBuffer.ChannelCount
+  commentId: P:Beutl.Audio.AudioBuffer.ChannelCount
+  id: ChannelCount
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: ChannelCount
+  nameWithType: AudioBuffer.ChannelCount
+  fullName: Beutl.Audio.AudioBuffer.ChannelCount
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public int ChannelCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ChannelCount As Integer
+  overload: Beutl.Audio.AudioBuffer.ChannelCount*
+- uid: Beutl.Audio.AudioBuffer.SampleCount
+  commentId: P:Beutl.Audio.AudioBuffer.SampleCount
+  id: SampleCount
+  parent: Beutl.Audio.AudioBuffer
+  langs:
+  - csharp
+  - vb
+  name: SampleCount
+  nameWithType: AudioBuffer.SampleCount
+  fullName: Beutl.Audio.AudioBuffer.SampleCount
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/AudioBuffer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio
+  syntax:
+    content: public int SampleCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SampleCount As Integer
+  overload: Beutl.Audio.AudioBuffer.SampleCount*
+references:
+- uid: Beutl.Audio
+  commentId: N:Beutl.Audio
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Audio
+  nameWithType: Beutl.Audio
+  fullName: Beutl.Audio
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Audio
+    name: Audio
+    isExternal: true
+    href: Beutl.Audio.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Audio
+    name: Audio
+    isExternal: true
+    href: Beutl.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Audio.AudioBuffer.#ctor*
+  commentId: Overload:Beutl.Audio.AudioBuffer.#ctor
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer__ctor_System_Int32_System_Int32_System_Int32_
+  name: AudioBuffer
+  nameWithType: AudioBuffer.AudioBuffer
+  fullName: Beutl.Audio.AudioBuffer.AudioBuffer
+  nameWithType.vb: AudioBuffer.New
+  fullName.vb: Beutl.Audio.AudioBuffer.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Audio.AudioBuffer.GetChannelData*
+  commentId: Overload:Beutl.Audio.AudioBuffer.GetChannelData
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_GetChannelData_System_Int32_
+  name: GetChannelData
+  nameWithType: AudioBuffer.GetChannelData
+  fullName: Beutl.Audio.AudioBuffer.GetChannelData
+- uid: System.Span{System.Single}
+  commentId: T:System.Span{System.Single}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<float>
+  nameWithType: Span<float>
+  fullName: System.Span<float>
+  nameWithType.vb: Span(Of Single)
+  fullName.vb: System.Span(Of Single)
+  name.vb: Span(Of Single)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Audio.AudioBuffer.GetChannelMemory*
+  commentId: Overload:Beutl.Audio.AudioBuffer.GetChannelMemory
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_GetChannelMemory_System_Int32_
+  name: GetChannelMemory
+  nameWithType: AudioBuffer.GetChannelMemory
+  fullName: Beutl.Audio.AudioBuffer.GetChannelMemory
+- uid: System.Memory{System.Single}
+  commentId: T:System.Memory{System.Single}
+  parent: System
+  definition: System.Memory`1
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<float>
+  nameWithType: Memory<float>
+  fullName: System.Memory<float>
+  nameWithType.vb: Memory(Of Single)
+  fullName.vb: System.Memory(Of Single)
+  name.vb: Memory(Of Single)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Memory`1
+  commentId: T:System.Memory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Audio.AudioBuffer.ToPcm*
+  commentId: Overload:Beutl.Audio.AudioBuffer.ToPcm
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_ToPcm
+  name: ToPcm
+  nameWithType: AudioBuffer.ToPcm
+  fullName: Beutl.Audio.AudioBuffer.ToPcm
+- uid: Beutl.Media.Music.Pcm{Beutl.Media.Music.Samples.Stereo32BitFloat}
+  commentId: T:Beutl.Media.Music.Pcm{Beutl.Media.Music.Samples.Stereo32BitFloat}
+  parent: Beutl.Media.Music
+  definition: Beutl.Media.Music.Pcm`1
+  href: Beutl.Media.Music.Pcm-1.html
+  name: Pcm<Stereo32BitFloat>
+  nameWithType: Pcm<Stereo32BitFloat>
+  fullName: Beutl.Media.Music.Pcm<Beutl.Media.Music.Samples.Stereo32BitFloat>
+  nameWithType.vb: Pcm(Of Stereo32BitFloat)
+  fullName.vb: Beutl.Media.Music.Pcm(Of Beutl.Media.Music.Samples.Stereo32BitFloat)
+  name.vb: Pcm(Of Stereo32BitFloat)
+  spec.csharp:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: <
+  - uid: Beutl.Media.Music.Samples.Stereo32BitFloat
+    name: Stereo32BitFloat
+    isExternal: true
+    href: Beutl.Media.Music.Samples.Stereo32BitFloat.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Music.Samples.Stereo32BitFloat
+    name: Stereo32BitFloat
+    isExternal: true
+    href: Beutl.Media.Music.Samples.Stereo32BitFloat.html
+  - name: )
+- uid: Beutl.Media.Music.Pcm`1
+  commentId: T:Beutl.Media.Music.Pcm`1
+  parent: Beutl.Media.Music
+  isExternal: true
+  href: Beutl.Media.Music.Pcm-1.html
+  name: Pcm<T>
+  nameWithType: Pcm<T>
+  fullName: Beutl.Media.Music.Pcm<T>
+  nameWithType.vb: Pcm(Of T)
+  fullName.vb: Beutl.Media.Music.Pcm(Of T)
+  name.vb: Pcm(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Music.Pcm`1
+    name: Pcm
+    isExternal: true
+    href: Beutl.Media.Music.Pcm-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.Music
+  commentId: N:Beutl.Media.Music
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Music
+  nameWithType: Beutl.Media.Music
+  fullName: Beutl.Media.Music
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+- uid: Beutl.Audio.AudioBuffer.Clear*
+  commentId: Overload:Beutl.Audio.AudioBuffer.Clear
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_Clear
+  name: Clear
+  nameWithType: AudioBuffer.Clear
+  fullName: Beutl.Audio.AudioBuffer.Clear
+- uid: Beutl.Audio.AudioBuffer.CopyTo*
+  commentId: Overload:Beutl.Audio.AudioBuffer.CopyTo
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_CopyTo_Beutl_Audio_AudioBuffer_
+  name: CopyTo
+  nameWithType: AudioBuffer.CopyTo
+  fullName: Beutl.Audio.AudioBuffer.CopyTo
+- uid: Beutl.Audio.AudioBuffer
+  commentId: T:Beutl.Audio.AudioBuffer
+  parent: Beutl.Audio
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html
+  name: AudioBuffer
+  nameWithType: AudioBuffer
+  fullName: Beutl.Audio.AudioBuffer
+- uid: Beutl.Audio.AudioBuffer.Dispose*
+  commentId: Overload:Beutl.Audio.AudioBuffer.Dispose
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_Dispose
+  name: Dispose
+  nameWithType: AudioBuffer.Dispose
+  fullName: Beutl.Audio.AudioBuffer.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.Audio.AudioBuffer.SampleRate*
+  commentId: Overload:Beutl.Audio.AudioBuffer.SampleRate
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_SampleRate
+  name: SampleRate
+  nameWithType: AudioBuffer.SampleRate
+  fullName: Beutl.Audio.AudioBuffer.SampleRate
+- uid: Beutl.Audio.AudioBuffer.ChannelCount*
+  commentId: Overload:Beutl.Audio.AudioBuffer.ChannelCount
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_ChannelCount
+  name: ChannelCount
+  nameWithType: AudioBuffer.ChannelCount
+  fullName: Beutl.Audio.AudioBuffer.ChannelCount
+- uid: Beutl.Audio.AudioBuffer.SampleCount*
+  commentId: Overload:Beutl.Audio.AudioBuffer.SampleCount
+  isExternal: true
+  href: Beutl.Audio.AudioBuffer.html#Beutl_Audio_AudioBuffer_SampleCount
+  name: SampleCount
+  nameWithType: AudioBuffer.SampleCount
+  fullName: Beutl.Audio.AudioBuffer.SampleCount

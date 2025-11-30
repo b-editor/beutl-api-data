@@ -1,0 +1,1348 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Collections.CircularBuffer`1
+  commentId: T:Beutl.Collections.CircularBuffer`1
+  id: CircularBuffer`1
+  parent: Beutl.Collections
+  children:
+  - Beutl.Collections.CircularBuffer`1.#ctor(System.Int32)
+  - Beutl.Collections.CircularBuffer`1.#ctor(System.Int32,`0[])
+  - Beutl.Collections.CircularBuffer`1.Back
+  - Beutl.Collections.CircularBuffer`1.Capacity
+  - Beutl.Collections.CircularBuffer`1.Clear
+  - Beutl.Collections.CircularBuffer`1.Front
+  - Beutl.Collections.CircularBuffer`1.GetEnumerator
+  - Beutl.Collections.CircularBuffer`1.IsEmpty
+  - Beutl.Collections.CircularBuffer`1.IsFull
+  - Beutl.Collections.CircularBuffer`1.Item(System.Int32)
+  - Beutl.Collections.CircularBuffer`1.PopBack
+  - Beutl.Collections.CircularBuffer`1.PopFront
+  - Beutl.Collections.CircularBuffer`1.PushBack(`0)
+  - Beutl.Collections.CircularBuffer`1.PushFront(`0)
+  - Beutl.Collections.CircularBuffer`1.Size
+  - Beutl.Collections.CircularBuffer`1.ToArray
+  - Beutl.Collections.CircularBuffer`1.ToArraySegments
+  langs:
+  - csharp
+  - vb
+  name: CircularBuffer<T>
+  nameWithType: CircularBuffer<T>
+  fullName: Beutl.Collections.CircularBuffer<T>
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: 'public class CircularBuffer<T> : IEnumerable<T>, IEnumerable'
+    typeParameters:
+    - id: T
+    content.vb: Public Class CircularBuffer(Of T) Implements IEnumerable(Of T), IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.Generic.IEnumerable{{T}}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - System.Collections.Generic.IEnumerable{`0}.Beutl.Collections.PooledArrayExtensions.ToPooledArray``1
+  nameWithType.vb: CircularBuffer(Of T)
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T)
+  name.vb: CircularBuffer(Of T)
+- uid: Beutl.Collections.CircularBuffer`1.#ctor(System.Int32)
+  commentId: M:Beutl.Collections.CircularBuffer`1.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: CircularBuffer(int)
+  nameWithType: CircularBuffer<T>.CircularBuffer(int)
+  fullName: Beutl.Collections.CircularBuffer<T>.CircularBuffer(int)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public CircularBuffer(int capacity)
+    parameters:
+    - id: capacity
+      type: System.Int32
+    content.vb: Public Sub New(capacity As Integer)
+  overload: Beutl.Collections.CircularBuffer`1.#ctor*
+  nameWithType.vb: CircularBuffer(Of T).New(Integer)
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).New(Integer)
+  name.vb: New(Integer)
+- uid: Beutl.Collections.CircularBuffer`1.#ctor(System.Int32,`0[])
+  commentId: M:Beutl.Collections.CircularBuffer`1.#ctor(System.Int32,`0[])
+  id: '#ctor(System.Int32,`0[])'
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: CircularBuffer(int, T[])
+  nameWithType: CircularBuffer<T>.CircularBuffer(int, T[])
+  fullName: Beutl.Collections.CircularBuffer<T>.CircularBuffer(int, T[])
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public CircularBuffer(int capacity, T[] items)
+    parameters:
+    - id: capacity
+      type: System.Int32
+    - id: items
+      type: '{T}[]'
+    content.vb: Public Sub New(capacity As Integer, items As T())
+  overload: Beutl.Collections.CircularBuffer`1.#ctor*
+  nameWithType.vb: CircularBuffer(Of T).New(Integer, T())
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).New(Integer, T())
+  name.vb: New(Integer, T())
+- uid: Beutl.Collections.CircularBuffer`1.Front
+  commentId: M:Beutl.Collections.CircularBuffer`1.Front
+  id: Front
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: Front()
+  nameWithType: CircularBuffer<T>.Front()
+  fullName: Beutl.Collections.CircularBuffer<T>.Front()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public T Front()
+    return:
+      type: '{T}'
+    content.vb: Public Function Front() As T
+  overload: Beutl.Collections.CircularBuffer`1.Front*
+  nameWithType.vb: CircularBuffer(Of T).Front()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Front()
+- uid: Beutl.Collections.CircularBuffer`1.Back
+  commentId: M:Beutl.Collections.CircularBuffer`1.Back
+  id: Back
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: Back()
+  nameWithType: CircularBuffer<T>.Back()
+  fullName: Beutl.Collections.CircularBuffer<T>.Back()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public T Back()
+    return:
+      type: '{T}'
+    content.vb: Public Function Back() As T
+  overload: Beutl.Collections.CircularBuffer`1.Back*
+  nameWithType.vb: CircularBuffer(Of T).Back()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Back()
+- uid: Beutl.Collections.CircularBuffer`1.PushBack(`0)
+  commentId: M:Beutl.Collections.CircularBuffer`1.PushBack(`0)
+  id: PushBack(`0)
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: PushBack(T)
+  nameWithType: CircularBuffer<T>.PushBack(T)
+  fullName: Beutl.Collections.CircularBuffer<T>.PushBack(T)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public void PushBack(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+    content.vb: Public Sub PushBack(item As T)
+  overload: Beutl.Collections.CircularBuffer`1.PushBack*
+  nameWithType.vb: CircularBuffer(Of T).PushBack(T)
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PushBack(T)
+- uid: Beutl.Collections.CircularBuffer`1.PushFront(`0)
+  commentId: M:Beutl.Collections.CircularBuffer`1.PushFront(`0)
+  id: PushFront(`0)
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: PushFront(T)
+  nameWithType: CircularBuffer<T>.PushFront(T)
+  fullName: Beutl.Collections.CircularBuffer<T>.PushFront(T)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public void PushFront(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+    content.vb: Public Sub PushFront(item As T)
+  overload: Beutl.Collections.CircularBuffer`1.PushFront*
+  nameWithType.vb: CircularBuffer(Of T).PushFront(T)
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PushFront(T)
+- uid: Beutl.Collections.CircularBuffer`1.PopBack
+  commentId: M:Beutl.Collections.CircularBuffer`1.PopBack
+  id: PopBack
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: PopBack()
+  nameWithType: CircularBuffer<T>.PopBack()
+  fullName: Beutl.Collections.CircularBuffer<T>.PopBack()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public void PopBack()
+    content.vb: Public Sub PopBack()
+  overload: Beutl.Collections.CircularBuffer`1.PopBack*
+  nameWithType.vb: CircularBuffer(Of T).PopBack()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PopBack()
+- uid: Beutl.Collections.CircularBuffer`1.PopFront
+  commentId: M:Beutl.Collections.CircularBuffer`1.PopFront
+  id: PopFront
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: PopFront()
+  nameWithType: CircularBuffer<T>.PopFront()
+  fullName: Beutl.Collections.CircularBuffer<T>.PopFront()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public void PopFront()
+    content.vb: Public Sub PopFront()
+  overload: Beutl.Collections.CircularBuffer`1.PopFront*
+  nameWithType.vb: CircularBuffer(Of T).PopFront()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PopFront()
+- uid: Beutl.Collections.CircularBuffer`1.Clear
+  commentId: M:Beutl.Collections.CircularBuffer`1.Clear
+  id: Clear
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: CircularBuffer<T>.Clear()
+  fullName: Beutl.Collections.CircularBuffer<T>.Clear()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Beutl.Collections.CircularBuffer`1.Clear*
+  nameWithType.vb: CircularBuffer(Of T).Clear()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Clear()
+- uid: Beutl.Collections.CircularBuffer`1.ToArray
+  commentId: M:Beutl.Collections.CircularBuffer`1.ToArray
+  id: ToArray
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: ToArray()
+  nameWithType: CircularBuffer<T>.ToArray()
+  fullName: Beutl.Collections.CircularBuffer<T>.ToArray()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public T[] ToArray()
+    return:
+      type: '{T}[]'
+    content.vb: Public Function ToArray() As T()
+  overload: Beutl.Collections.CircularBuffer`1.ToArray*
+  nameWithType.vb: CircularBuffer(Of T).ToArray()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).ToArray()
+- uid: Beutl.Collections.CircularBuffer`1.ToArraySegments
+  commentId: M:Beutl.Collections.CircularBuffer`1.ToArraySegments
+  id: ToArraySegments
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: ToArraySegments()
+  nameWithType: CircularBuffer<T>.ToArraySegments()
+  fullName: Beutl.Collections.CircularBuffer<T>.ToArraySegments()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public IList<ArraySegment<T>> ToArraySegments()
+    return:
+      type: System.Collections.Generic.IList{System.ArraySegment{{T}}}
+    content.vb: Public Function ToArraySegments() As IList(Of ArraySegment(Of T))
+  overload: Beutl.Collections.CircularBuffer`1.ToArraySegments*
+  nameWithType.vb: CircularBuffer(Of T).ToArraySegments()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).ToArraySegments()
+- uid: Beutl.Collections.CircularBuffer`1.GetEnumerator
+  commentId: M:Beutl.Collections.CircularBuffer`1.GetEnumerator
+  id: GetEnumerator
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: CircularBuffer<T>.GetEnumerator()
+  fullName: Beutl.Collections.CircularBuffer<T>.GetEnumerator()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  example: []
+  syntax:
+    content: public IEnumerator<T> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{{T}}
+    content.vb: Public Function GetEnumerator() As IEnumerator(Of T)
+  overload: Beutl.Collections.CircularBuffer`1.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{{T}}.GetEnumerator
+  nameWithType.vb: CircularBuffer(Of T).GetEnumerator()
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).GetEnumerator()
+- uid: Beutl.Collections.CircularBuffer`1.Capacity
+  commentId: P:Beutl.Collections.CircularBuffer`1.Capacity
+  id: Capacity
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: Capacity
+  nameWithType: CircularBuffer<T>.Capacity
+  fullName: Beutl.Collections.CircularBuffer<T>.Capacity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public int Capacity { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Capacity As Integer
+  overload: Beutl.Collections.CircularBuffer`1.Capacity*
+  nameWithType.vb: CircularBuffer(Of T).Capacity
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Capacity
+- uid: Beutl.Collections.CircularBuffer`1.IsFull
+  commentId: P:Beutl.Collections.CircularBuffer`1.IsFull
+  id: IsFull
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: IsFull
+  nameWithType: CircularBuffer<T>.IsFull
+  fullName: Beutl.Collections.CircularBuffer<T>.IsFull
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public bool IsFull { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFull As Boolean
+  overload: Beutl.Collections.CircularBuffer`1.IsFull*
+  nameWithType.vb: CircularBuffer(Of T).IsFull
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).IsFull
+- uid: Beutl.Collections.CircularBuffer`1.IsEmpty
+  commentId: P:Beutl.Collections.CircularBuffer`1.IsEmpty
+  id: IsEmpty
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: CircularBuffer<T>.IsEmpty
+  fullName: Beutl.Collections.CircularBuffer<T>.IsEmpty
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: Beutl.Collections.CircularBuffer`1.IsEmpty*
+  nameWithType.vb: CircularBuffer(Of T).IsEmpty
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).IsEmpty
+- uid: Beutl.Collections.CircularBuffer`1.Size
+  commentId: P:Beutl.Collections.CircularBuffer`1.Size
+  id: Size
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: CircularBuffer<T>.Size
+  fullName: Beutl.Collections.CircularBuffer<T>.Size
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public int Size { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Size As Integer
+  overload: Beutl.Collections.CircularBuffer`1.Size*
+  nameWithType.vb: CircularBuffer(Of T).Size
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Size
+- uid: Beutl.Collections.CircularBuffer`1.Item(System.Int32)
+  commentId: P:Beutl.Collections.CircularBuffer`1.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: Beutl.Collections.CircularBuffer`1
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: CircularBuffer<T>.this[int]
+  fullName: Beutl.Collections.CircularBuffer<T>.this[int]
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/CircularBuffer.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public T this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: '{T}'
+    content.vb: Public Default Property this[](index As Integer) As T
+  overload: Beutl.Collections.CircularBuffer`1.Item*
+  nameWithType.vb: CircularBuffer(Of T).this[](Integer)
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).this[](Integer)
+  name.vb: this[](Integer)
+references:
+- uid: Beutl.Collections
+  commentId: N:Beutl.Collections
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Collections
+  nameWithType: Beutl.Collections
+  fullName: Beutl.Collections
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Collections
+    name: Collections
+    isExternal: true
+    href: Beutl.Collections.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Collections
+    name: Collections
+    isExternal: true
+    href: Beutl.Collections.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{`0}.Beutl.Collections.PooledArrayExtensions.ToPooledArray``1
+  commentId: M:Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  parent: Beutl.Collections.PooledArrayExtensions
+  definition: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  name: ToPooledArray<T>(IEnumerable<T>)
+  nameWithType: PooledArrayExtensions.ToPooledArray<T>(IEnumerable<T>)
+  fullName: Beutl.Collections.PooledArrayExtensions.ToPooledArray<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: PooledArrayExtensions.ToPooledArray(Of T)(IEnumerable(Of T))
+  fullName.vb: Beutl.Collections.PooledArrayExtensions.ToPooledArray(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToPooledArray(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{`0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{`0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  name: ToPooledArray<T>(IEnumerable<T>)
+  nameWithType: PooledArrayExtensions.ToPooledArray<T>(IEnumerable<T>)
+  fullName: Beutl.Collections.PooledArrayExtensions.ToPooledArray<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: PooledArrayExtensions.ToPooledArray(Of T)(IEnumerable(Of T))
+  fullName.vb: Beutl.Collections.PooledArrayExtensions.ToPooledArray(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToPooledArray(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.Collections.PooledArrayExtensions
+  commentId: T:Beutl.Collections.PooledArrayExtensions
+  parent: Beutl.Collections
+  isExternal: true
+  href: Beutl.Collections.PooledArrayExtensions.html
+  name: PooledArrayExtensions
+  nameWithType: PooledArrayExtensions
+  fullName: Beutl.Collections.PooledArrayExtensions
+- uid: Beutl.Collections.CircularBuffer`1.#ctor*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.#ctor
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1__ctor_System_Int32_
+  name: CircularBuffer
+  nameWithType: CircularBuffer<T>.CircularBuffer
+  fullName: Beutl.Collections.CircularBuffer<T>.CircularBuffer
+  nameWithType.vb: CircularBuffer(Of T).New
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: Beutl.Collections.CircularBuffer`1.Front*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.Front
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_Front
+  name: Front
+  nameWithType: CircularBuffer<T>.Front
+  fullName: Beutl.Collections.CircularBuffer<T>.Front
+  nameWithType.vb: CircularBuffer(Of T).Front
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Front
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.Collections.CircularBuffer`1.Back*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.Back
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_Back
+  name: Back
+  nameWithType: CircularBuffer<T>.Back
+  fullName: Beutl.Collections.CircularBuffer<T>.Back
+  nameWithType.vb: CircularBuffer(Of T).Back
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Back
+- uid: Beutl.Collections.CircularBuffer`1.PushBack*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.PushBack
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_PushBack__0_
+  name: PushBack
+  nameWithType: CircularBuffer<T>.PushBack
+  fullName: Beutl.Collections.CircularBuffer<T>.PushBack
+  nameWithType.vb: CircularBuffer(Of T).PushBack
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PushBack
+- uid: Beutl.Collections.CircularBuffer`1.PushFront*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.PushFront
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_PushFront__0_
+  name: PushFront
+  nameWithType: CircularBuffer<T>.PushFront
+  fullName: Beutl.Collections.CircularBuffer<T>.PushFront
+  nameWithType.vb: CircularBuffer(Of T).PushFront
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PushFront
+- uid: Beutl.Collections.CircularBuffer`1.PopBack*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.PopBack
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_PopBack
+  name: PopBack
+  nameWithType: CircularBuffer<T>.PopBack
+  fullName: Beutl.Collections.CircularBuffer<T>.PopBack
+  nameWithType.vb: CircularBuffer(Of T).PopBack
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PopBack
+- uid: Beutl.Collections.CircularBuffer`1.PopFront*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.PopFront
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_PopFront
+  name: PopFront
+  nameWithType: CircularBuffer<T>.PopFront
+  fullName: Beutl.Collections.CircularBuffer<T>.PopFront
+  nameWithType.vb: CircularBuffer(Of T).PopFront
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).PopFront
+- uid: Beutl.Collections.CircularBuffer`1.Clear*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.Clear
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_Clear
+  name: Clear
+  nameWithType: CircularBuffer<T>.Clear
+  fullName: Beutl.Collections.CircularBuffer<T>.Clear
+  nameWithType.vb: CircularBuffer(Of T).Clear
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Clear
+- uid: Beutl.Collections.CircularBuffer`1.ToArray*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.ToArray
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_ToArray
+  name: ToArray
+  nameWithType: CircularBuffer<T>.ToArray
+  fullName: Beutl.Collections.CircularBuffer<T>.ToArray
+  nameWithType.vb: CircularBuffer(Of T).ToArray
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).ToArray
+- uid: Beutl.Collections.CircularBuffer`1.ToArraySegments*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.ToArraySegments
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_ToArraySegments
+  name: ToArraySegments
+  nameWithType: CircularBuffer<T>.ToArraySegments
+  fullName: Beutl.Collections.CircularBuffer<T>.ToArraySegments
+  nameWithType.vb: CircularBuffer(Of T).ToArraySegments
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).ToArraySegments
+- uid: System.Collections.Generic.IList{System.ArraySegment{{T}}}
+  commentId: T:System.Collections.Generic.IList{System.ArraySegment{`0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<ArraySegment<T>>
+  nameWithType: IList<ArraySegment<T>>
+  fullName: System.Collections.Generic.IList<System.ArraySegment<T>>
+  nameWithType.vb: IList(Of ArraySegment(Of T))
+  fullName.vb: System.Collections.Generic.IList(Of System.ArraySegment(Of T))
+  name.vb: IList(Of ArraySegment(Of T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Collections.CircularBuffer`1.GetEnumerator*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.GetEnumerator
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_GetEnumerator
+  name: GetEnumerator
+  nameWithType: CircularBuffer<T>.GetEnumerator
+  fullName: Beutl.Collections.CircularBuffer<T>.GetEnumerator
+  nameWithType.vb: CircularBuffer(Of T).GetEnumerator
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{{T}}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{{T}}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator{{T}}
+  commentId: T:System.Collections.Generic.IEnumerator{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Collections.CircularBuffer`1.Capacity*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.Capacity
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_Capacity
+  name: Capacity
+  nameWithType: CircularBuffer<T>.Capacity
+  fullName: Beutl.Collections.CircularBuffer<T>.Capacity
+  nameWithType.vb: CircularBuffer(Of T).Capacity
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Capacity
+- uid: Beutl.Collections.CircularBuffer`1.IsFull*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.IsFull
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_IsFull
+  name: IsFull
+  nameWithType: CircularBuffer<T>.IsFull
+  fullName: Beutl.Collections.CircularBuffer<T>.IsFull
+  nameWithType.vb: CircularBuffer(Of T).IsFull
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).IsFull
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Collections.CircularBuffer`1.IsEmpty*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.IsEmpty
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_IsEmpty
+  name: IsEmpty
+  nameWithType: CircularBuffer<T>.IsEmpty
+  fullName: Beutl.Collections.CircularBuffer<T>.IsEmpty
+  nameWithType.vb: CircularBuffer(Of T).IsEmpty
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).IsEmpty
+- uid: Beutl.Collections.CircularBuffer`1.Size*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.Size
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_Size
+  name: Size
+  nameWithType: CircularBuffer<T>.Size
+  fullName: Beutl.Collections.CircularBuffer<T>.Size
+  nameWithType.vb: CircularBuffer(Of T).Size
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).Size
+- uid: Beutl.Collections.CircularBuffer`1.Item*
+  commentId: Overload:Beutl.Collections.CircularBuffer`1.Item
+  isExternal: true
+  href: Beutl.Collections.CircularBuffer-1.html#Beutl_Collections_CircularBuffer_1_Item_System_Int32_
+  name: this
+  nameWithType: CircularBuffer<T>.this
+  fullName: Beutl.Collections.CircularBuffer<T>.this
+  nameWithType.vb: CircularBuffer(Of T).this[]
+  fullName.vb: Beutl.Collections.CircularBuffer(Of T).this[]
+  name.vb: this[]

@@ -1,0 +1,1851 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Serialization.JsonSerializationContext
+  commentId: T:Beutl.Serialization.JsonSerializationContext
+  id: JsonSerializationContext
+  parent: Beutl.Serialization
+  children:
+  - Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)
+  - Beutl.Serialization.JsonSerializationContext.AfterDeserialized(Beutl.Serialization.ICoreSerializable)
+  - Beutl.Serialization.JsonSerializationContext.BaseUri
+  - Beutl.Serialization.JsonSerializationContext.Contains(System.String)
+  - Beutl.Serialization.JsonSerializationContext.GetJsonObject
+  - Beutl.Serialization.JsonSerializationContext.GetNode(System.String)
+  - Beutl.Serialization.JsonSerializationContext.GetValue(System.String,System.Type)
+  - Beutl.Serialization.JsonSerializationContext.GetValue``1(System.String)
+  - Beutl.Serialization.JsonSerializationContext.IsRoot
+  - Beutl.Serialization.JsonSerializationContext.Mode
+  - Beutl.Serialization.JsonSerializationContext.OwnerType
+  - Beutl.Serialization.JsonSerializationContext.Parent
+  - Beutl.Serialization.JsonSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+  - Beutl.Serialization.JsonSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+  - Beutl.Serialization.JsonSerializationContext.Root
+  - Beutl.Serialization.JsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  - Beutl.Serialization.JsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+  - Beutl.Serialization.JsonSerializationContext.SetValue(System.String,System.Object,System.Type)
+  - Beutl.Serialization.JsonSerializationContext.SetValue``1(System.String,``0)
+  - Beutl.Serialization.JsonSerializationContext._knownTypes
+  langs:
+  - csharp
+  - vb
+  name: JsonSerializationContext
+  nameWithType: JsonSerializationContext
+  fullName: Beutl.Serialization.JsonSerializationContext
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: 'public class JsonSerializationContext : IJsonSerializationContext, ICoreSerializationContext'
+    content.vb: Public Class JsonSerializationContext Implements IJsonSerializationContext, ICoreSerializationContext
+  inheritance:
+  - System.Object
+  implements:
+  - Beutl.Serialization.IJsonSerializationContext
+  - Beutl.Serialization.ICoreSerializationContext
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Serialization.JsonSerializationContext._knownTypes
+  commentId: F:Beutl.Serialization.JsonSerializationContext._knownTypes
+  id: _knownTypes
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: _knownTypes
+  nameWithType: JsonSerializationContext._knownTypes
+  fullName: Beutl.Serialization.JsonSerializationContext._knownTypes
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: public readonly Dictionary<string, (Type DefinedType, Type ActualType)> _knownTypes
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Type,System.Type}}
+    content.vb: Public ReadOnly _knownTypes As Dictionary(Of String, (DefinedType As Type, ActualType As Type))
+- uid: Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)
+  id: '#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)'
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: JsonSerializationContext(Type, ICoreSerializationContext?, JsonObject?, CoreSerializerOptions?)
+  nameWithType: JsonSerializationContext.JsonSerializationContext(Type, ICoreSerializationContext?, JsonObject?, CoreSerializerOptions?)
+  fullName: Beutl.Serialization.JsonSerializationContext.JsonSerializationContext(System.Type, Beutl.Serialization.ICoreSerializationContext?, System.Text.Json.Nodes.JsonObject?, Beutl.Serialization.CoreSerializerOptions?)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: public JsonSerializationContext(Type ownerType, ICoreSerializationContext? parent = null, JsonObject? json = null, CoreSerializerOptions? options = null)
+    parameters:
+    - id: ownerType
+      type: System.Type
+    - id: parent
+      type: Beutl.Serialization.ICoreSerializationContext
+    - id: json
+      type: System.Text.Json.Nodes.JsonObject
+    - id: options
+      type: Beutl.Serialization.CoreSerializerOptions
+    content.vb: Public Sub New(ownerType As Type, parent As ICoreSerializationContext = Nothing, json As JsonObject = Nothing, options As CoreSerializerOptions = Nothing)
+  overload: Beutl.Serialization.JsonSerializationContext.#ctor*
+  nameWithType.vb: JsonSerializationContext.New(Type, ICoreSerializationContext, JsonObject, CoreSerializerOptions)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.New(System.Type, Beutl.Serialization.ICoreSerializationContext, System.Text.Json.Nodes.JsonObject, Beutl.Serialization.CoreSerializerOptions)
+  name.vb: New(Type, ICoreSerializationContext, JsonObject, CoreSerializerOptions)
+- uid: Beutl.Serialization.JsonSerializationContext.GetJsonObject
+  commentId: M:Beutl.Serialization.JsonSerializationContext.GetJsonObject
+  id: GetJsonObject
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: GetJsonObject()
+  nameWithType: JsonSerializationContext.GetJsonObject()
+  fullName: Beutl.Serialization.JsonSerializationContext.GetJsonObject()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public JsonObject GetJsonObject()
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Function GetJsonObject() As JsonObject
+  overload: Beutl.Serialization.JsonSerializationContext.GetJsonObject*
+  implements:
+  - Beutl.Serialization.IJsonSerializationContext.GetJsonObject
+- uid: Beutl.Serialization.JsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  id: SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: SetJsonObject(JsonObject)
+  nameWithType: JsonSerializationContext.SetJsonObject(JsonObject)
+  fullName: Beutl.Serialization.JsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public void SetJsonObject(JsonObject obj)
+    parameters:
+    - id: obj
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Sub SetJsonObject(obj As JsonObject)
+  overload: Beutl.Serialization.JsonSerializationContext.SetJsonObject*
+  implements:
+  - Beutl.Serialization.IJsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+- uid: Beutl.Serialization.JsonSerializationContext.GetNode(System.String)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.GetNode(System.String)
+  id: GetNode(System.String)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: GetNode(string)
+  nameWithType: JsonSerializationContext.GetNode(string)
+  fullName: Beutl.Serialization.JsonSerializationContext.GetNode(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public JsonNode? GetNode(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Text.Json.Nodes.JsonNode
+    content.vb: Public Function GetNode(name As String) As JsonNode
+  overload: Beutl.Serialization.JsonSerializationContext.GetNode*
+  implements:
+  - Beutl.Serialization.IJsonSerializationContext.GetNode(System.String)
+  nameWithType.vb: JsonSerializationContext.GetNode(String)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.GetNode(String)
+  name.vb: GetNode(String)
+- uid: Beutl.Serialization.JsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+  id: SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: SetNode(string, Type, Type, JsonNode?)
+  nameWithType: JsonSerializationContext.SetNode(string, Type, Type, JsonNode?)
+  fullName: Beutl.Serialization.JsonSerializationContext.SetNode(string, System.Type, System.Type, System.Text.Json.Nodes.JsonNode?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public void SetNode(string name, Type definedType, Type actualType, JsonNode? node)
+    parameters:
+    - id: name
+      type: System.String
+    - id: definedType
+      type: System.Type
+    - id: actualType
+      type: System.Type
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+    content.vb: Public Sub SetNode(name As String, definedType As Type, actualType As Type, node As JsonNode)
+  overload: Beutl.Serialization.JsonSerializationContext.SetNode*
+  implements:
+  - Beutl.Serialization.IJsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+  nameWithType.vb: JsonSerializationContext.SetNode(String, Type, Type, JsonNode)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.SetNode(String, System.Type, System.Type, System.Text.Json.Nodes.JsonNode)
+  name.vb: SetNode(String, Type, Type, JsonNode)
+- uid: Beutl.Serialization.JsonSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+  id: Populate(System.String,Beutl.Serialization.ICoreSerializable)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: Populate(string, ICoreSerializable)
+  nameWithType: JsonSerializationContext.Populate(string, ICoreSerializable)
+  fullName: Beutl.Serialization.JsonSerializationContext.Populate(string, Beutl.Serialization.ICoreSerializable)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public void Populate(string name, ICoreSerializable obj)
+    parameters:
+    - id: name
+      type: System.String
+    - id: obj
+      type: Beutl.Serialization.ICoreSerializable
+    content.vb: Public Sub Populate(name As String, obj As ICoreSerializable)
+  overload: Beutl.Serialization.JsonSerializationContext.Populate*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+  nameWithType.vb: JsonSerializationContext.Populate(String, ICoreSerializable)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.Populate(String, Beutl.Serialization.ICoreSerializable)
+  name.vb: Populate(String, ICoreSerializable)
+- uid: Beutl.Serialization.JsonSerializationContext.AfterDeserialized(Beutl.Serialization.ICoreSerializable)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.AfterDeserialized(Beutl.Serialization.ICoreSerializable)
+  id: AfterDeserialized(Beutl.Serialization.ICoreSerializable)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: AfterDeserialized(ICoreSerializable)
+  nameWithType: JsonSerializationContext.AfterDeserialized(ICoreSerializable)
+  fullName: Beutl.Serialization.JsonSerializationContext.AfterDeserialized(Beutl.Serialization.ICoreSerializable)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: public void AfterDeserialized(ICoreSerializable obj)
+    parameters:
+    - id: obj
+      type: Beutl.Serialization.ICoreSerializable
+    content.vb: Public Sub AfterDeserialized(obj As ICoreSerializable)
+  overload: Beutl.Serialization.JsonSerializationContext.AfterDeserialized*
+- uid: Beutl.Serialization.JsonSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+  commentId: M:Beutl.Serialization.JsonSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+  id: Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: Resolve(Guid, Action<ICoreSerializable>)
+  nameWithType: JsonSerializationContext.Resolve(Guid, Action<ICoreSerializable>)
+  fullName: Beutl.Serialization.JsonSerializationContext.Resolve(System.Guid, System.Action<Beutl.Serialization.ICoreSerializable>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public void Resolve(Guid id, Action<ICoreSerializable> callback)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: callback
+      type: System.Action{Beutl.Serialization.ICoreSerializable}
+    content.vb: Public Sub Resolve(id As Guid, callback As Action(Of ICoreSerializable))
+  overload: Beutl.Serialization.JsonSerializationContext.Resolve*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+  nameWithType.vb: JsonSerializationContext.Resolve(Guid, Action(Of ICoreSerializable))
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.Resolve(System.Guid, System.Action(Of Beutl.Serialization.ICoreSerializable))
+  name.vb: Resolve(Guid, Action(Of ICoreSerializable))
+- uid: Beutl.Serialization.JsonSerializationContext.Contains(System.String)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.Contains(System.String)
+  id: Contains(System.String)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: Contains(string)
+  nameWithType: JsonSerializationContext.Contains(string)
+  fullName: Beutl.Serialization.JsonSerializationContext.Contains(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public bool Contains(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(name As String) As Boolean
+  overload: Beutl.Serialization.JsonSerializationContext.Contains*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.Contains(System.String)
+  nameWithType.vb: JsonSerializationContext.Contains(String)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.Contains(String)
+  name.vb: Contains(String)
+- uid: Beutl.Serialization.JsonSerializationContext.GetValue``1(System.String)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.GetValue``1(System.String)
+  id: GetValue``1(System.String)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: GetValue<T>(string)
+  nameWithType: JsonSerializationContext.GetValue<T>(string)
+  fullName: Beutl.Serialization.JsonSerializationContext.GetValue<T>(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public T? GetValue<T>(string name)
+    parameters:
+    - id: name
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetValue(Of T)(name As String) As T
+  overload: Beutl.Serialization.JsonSerializationContext.GetValue*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.GetValue``1(System.String)
+  nameWithType.vb: JsonSerializationContext.GetValue(Of T)(String)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.GetValue(Of T)(String)
+  name.vb: GetValue(Of T)(String)
+- uid: Beutl.Serialization.JsonSerializationContext.GetValue(System.String,System.Type)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.GetValue(System.String,System.Type)
+  id: GetValue(System.String,System.Type)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: GetValue(string, Type)
+  nameWithType: JsonSerializationContext.GetValue(string, Type)
+  fullName: Beutl.Serialization.JsonSerializationContext.GetValue(string, System.Type)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: public object? GetValue(string name, Type type)
+    parameters:
+    - id: name
+      type: System.String
+    - id: type
+      type: System.Type
+    return:
+      type: System.Object
+    content.vb: Public Function GetValue(name As String, type As Type) As Object
+  overload: Beutl.Serialization.JsonSerializationContext.GetValue*
+  nameWithType.vb: JsonSerializationContext.GetValue(String, Type)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.GetValue(String, System.Type)
+  name.vb: GetValue(String, Type)
+- uid: Beutl.Serialization.JsonSerializationContext.SetValue``1(System.String,``0)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.SetValue``1(System.String,``0)
+  id: SetValue``1(System.String,``0)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: SetValue<T>(string, T?)
+  nameWithType: JsonSerializationContext.SetValue<T>(string, T?)
+  fullName: Beutl.Serialization.JsonSerializationContext.SetValue<T>(string, T?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Serialize.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public void SetValue<T>(string name, T? value)
+    parameters:
+    - id: name
+      type: System.String
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Sub SetValue(Of T)(name As String, value As T)
+  overload: Beutl.Serialization.JsonSerializationContext.SetValue*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,{T})
+  nameWithType.vb: JsonSerializationContext.SetValue(Of T)(String, T)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.SetValue(Of T)(String, T)
+  name.vb: SetValue(Of T)(String, T)
+- uid: Beutl.Serialization.JsonSerializationContext.SetValue(System.String,System.Object,System.Type)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.SetValue(System.String,System.Object,System.Type)
+  id: SetValue(System.String,System.Object,System.Type)
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: SetValue(string, object?, Type)
+  nameWithType: JsonSerializationContext.SetValue(string, object?, Type)
+  fullName: Beutl.Serialization.JsonSerializationContext.SetValue(string, object?, System.Type)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Serialize.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: public void SetValue(string name, object? value, Type type)
+    parameters:
+    - id: name
+      type: System.String
+    - id: value
+      type: System.Object
+    - id: type
+      type: System.Type
+    content.vb: Public Sub SetValue(name As String, value As Object, type As Type)
+  overload: Beutl.Serialization.JsonSerializationContext.SetValue*
+  nameWithType.vb: JsonSerializationContext.SetValue(String, Object, Type)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.SetValue(String, Object, System.Type)
+  name.vb: SetValue(String, Object, Type)
+- uid: Beutl.Serialization.JsonSerializationContext.Parent
+  commentId: P:Beutl.Serialization.JsonSerializationContext.Parent
+  id: Parent
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: JsonSerializationContext.Parent
+  fullName: Beutl.Serialization.JsonSerializationContext.Parent
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: public ICoreSerializationContext? Parent { get; }
+    parameters: []
+    return:
+      type: Beutl.Serialization.ICoreSerializationContext
+    content.vb: Public ReadOnly Property Parent As ICoreSerializationContext
+  overload: Beutl.Serialization.JsonSerializationContext.Parent*
+- uid: Beutl.Serialization.JsonSerializationContext.Root
+  commentId: P:Beutl.Serialization.JsonSerializationContext.Root
+  id: Root
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: Root
+  nameWithType: JsonSerializationContext.Root
+  fullName: Beutl.Serialization.JsonSerializationContext.Root
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: public JsonSerializationContext Root { get; }
+    parameters: []
+    return:
+      type: Beutl.Serialization.JsonSerializationContext
+    content.vb: Public ReadOnly Property Root As JsonSerializationContext
+  overload: Beutl.Serialization.JsonSerializationContext.Root*
+- uid: Beutl.Serialization.JsonSerializationContext.Mode
+  commentId: P:Beutl.Serialization.JsonSerializationContext.Mode
+  id: Mode
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: JsonSerializationContext.Mode
+  fullName: Beutl.Serialization.JsonSerializationContext.Mode
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public CoreSerializationMode Mode { get; }
+    parameters: []
+    return:
+      type: Beutl.Serialization.CoreSerializationMode
+    content.vb: Public ReadOnly Property Mode As CoreSerializationMode
+  overload: Beutl.Serialization.JsonSerializationContext.Mode*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.Mode
+- uid: Beutl.Serialization.JsonSerializationContext.BaseUri
+  commentId: P:Beutl.Serialization.JsonSerializationContext.BaseUri
+  id: BaseUri
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: BaseUri
+  nameWithType: JsonSerializationContext.BaseUri
+  fullName: Beutl.Serialization.JsonSerializationContext.BaseUri
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public Uri? BaseUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property BaseUri As Uri
+  overload: Beutl.Serialization.JsonSerializationContext.BaseUri*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.BaseUri
+- uid: Beutl.Serialization.JsonSerializationContext.OwnerType
+  commentId: P:Beutl.Serialization.JsonSerializationContext.OwnerType
+  id: OwnerType
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: OwnerType
+  nameWithType: JsonSerializationContext.OwnerType
+  fullName: Beutl.Serialization.JsonSerializationContext.OwnerType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public Type OwnerType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property OwnerType As Type
+  overload: Beutl.Serialization.JsonSerializationContext.OwnerType*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.OwnerType
+- uid: Beutl.Serialization.JsonSerializationContext.IsRoot
+  commentId: P:Beutl.Serialization.JsonSerializationContext.IsRoot
+  id: IsRoot
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: IsRoot
+  nameWithType: JsonSerializationContext.IsRoot
+  fullName: Beutl.Serialization.JsonSerializationContext.IsRoot
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  syntax:
+    content: >-
+      [MemberNotNullWhen(false, "Parent")]
+
+      public bool IsRoot { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <MemberNotNullWhen(False, "Parent")>
+
+      Public ReadOnly Property IsRoot As Boolean
+  overload: Beutl.Serialization.JsonSerializationContext.IsRoot*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+    ctor: System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+    arguments:
+    - type: System.Boolean
+      value: false
+    - type: System.String
+      value: Parent
+references:
+- uid: Beutl.Serialization
+  commentId: N:Beutl.Serialization
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Serialization
+  nameWithType: Beutl.Serialization
+  fullName: Beutl.Serialization
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Serialization.IJsonSerializationContext
+  commentId: T:Beutl.Serialization.IJsonSerializationContext
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.IJsonSerializationContext.html
+  name: IJsonSerializationContext
+  nameWithType: IJsonSerializationContext
+  fullName: Beutl.Serialization.IJsonSerializationContext
+- uid: Beutl.Serialization.ICoreSerializationContext
+  commentId: T:Beutl.Serialization.ICoreSerializationContext
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html
+  name: ICoreSerializationContext
+  nameWithType: ICoreSerializationContext
+  fullName: Beutl.Serialization.ICoreSerializationContext
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Type,System.Type}}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Type,System.Type}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, (Type DefinedType, Type ActualType)>
+  nameWithType: Dictionary<string, (Type DefinedType, Type ActualType)>
+  fullName: System.Collections.Generic.Dictionary<string, (System.Type DefinedType, System.Type ActualType)>
+  nameWithType.vb: Dictionary(Of String, (DefinedType As Type, ActualType As Type))
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, (DefinedType As System.Type, ActualType As System.Type))
+  name.vb: Dictionary(Of String, (DefinedType As Type, ActualType As Type))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: " "
+  - uid: System.ValueTuple{System.Type,System.Type}.DefinedType
+    name: DefinedType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,system.type-.definedtype
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: " "
+  - uid: System.ValueTuple{System.Type,System.Type}.ActualType
+    name: ActualType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,system.type-.actualtype
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Type,System.Type}.DefinedType
+    name: DefinedType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,system.type-.definedtype
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Type,System.Type}.ActualType
+    name: ActualType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,system.type-.actualtype
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Beutl.Serialization.JsonSerializationContext.#ctor*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.#ctor
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext__ctor_System_Type_Beutl_Serialization_ICoreSerializationContext_System_Text_Json_Nodes_JsonObject_Beutl_Serialization_CoreSerializerOptions_
+  name: JsonSerializationContext
+  nameWithType: JsonSerializationContext.JsonSerializationContext
+  fullName: Beutl.Serialization.JsonSerializationContext.JsonSerializationContext
+  nameWithType.vb: JsonSerializationContext.New
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.New
+  name.vb: New
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Text.Json.Nodes.JsonObject
+  commentId: T:System.Text.Json.Nodes.JsonObject
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: JsonObject
+  nameWithType: JsonObject
+  fullName: System.Text.Json.Nodes.JsonObject
+- uid: Beutl.Serialization.CoreSerializerOptions
+  commentId: T:Beutl.Serialization.CoreSerializerOptions
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.CoreSerializerOptions.html
+  name: CoreSerializerOptions
+  nameWithType: CoreSerializerOptions
+  fullName: Beutl.Serialization.CoreSerializerOptions
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+- uid: Beutl.Serialization.JsonSerializationContext.GetJsonObject*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.GetJsonObject
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_GetJsonObject
+  name: GetJsonObject
+  nameWithType: JsonSerializationContext.GetJsonObject
+  fullName: Beutl.Serialization.JsonSerializationContext.GetJsonObject
+- uid: Beutl.Serialization.IJsonSerializationContext.GetJsonObject
+  commentId: M:Beutl.Serialization.IJsonSerializationContext.GetJsonObject
+  parent: Beutl.Serialization.IJsonSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_GetJsonObject
+  name: GetJsonObject()
+  nameWithType: IJsonSerializationContext.GetJsonObject()
+  fullName: Beutl.Serialization.IJsonSerializationContext.GetJsonObject()
+  spec.csharp:
+  - uid: Beutl.Serialization.IJsonSerializationContext.GetJsonObject
+    name: GetJsonObject
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_GetJsonObject
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.IJsonSerializationContext.GetJsonObject
+    name: GetJsonObject
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_GetJsonObject
+  - name: (
+  - name: )
+- uid: Beutl.Serialization.JsonSerializationContext.SetJsonObject*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.SetJsonObject
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_SetJsonObject_System_Text_Json_Nodes_JsonObject_
+  name: SetJsonObject
+  nameWithType: JsonSerializationContext.SetJsonObject
+  fullName: Beutl.Serialization.JsonSerializationContext.SetJsonObject
+- uid: Beutl.Serialization.IJsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Beutl.Serialization.IJsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  parent: Beutl.Serialization.IJsonSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_SetJsonObject_System_Text_Json_Nodes_JsonObject_
+  name: SetJsonObject(JsonObject)
+  nameWithType: IJsonSerializationContext.SetJsonObject(JsonObject)
+  fullName: Beutl.Serialization.IJsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+  spec.csharp:
+  - uid: Beutl.Serialization.IJsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+    name: SetJsonObject
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_SetJsonObject_System_Text_Json_Nodes_JsonObject_
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.IJsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
+    name: SetJsonObject
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_SetJsonObject_System_Text_Json_Nodes_JsonObject_
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+- uid: Beutl.Serialization.JsonSerializationContext.GetNode*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.GetNode
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_GetNode_System_String_
+  name: GetNode
+  nameWithType: JsonSerializationContext.GetNode
+  fullName: Beutl.Serialization.JsonSerializationContext.GetNode
+- uid: Beutl.Serialization.IJsonSerializationContext.GetNode(System.String)
+  commentId: M:Beutl.Serialization.IJsonSerializationContext.GetNode(System.String)
+  parent: Beutl.Serialization.IJsonSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_GetNode_System_String_
+  name: GetNode(string)
+  nameWithType: IJsonSerializationContext.GetNode(string)
+  fullName: Beutl.Serialization.IJsonSerializationContext.GetNode(string)
+  nameWithType.vb: IJsonSerializationContext.GetNode(String)
+  fullName.vb: Beutl.Serialization.IJsonSerializationContext.GetNode(String)
+  name.vb: GetNode(String)
+  spec.csharp:
+  - uid: Beutl.Serialization.IJsonSerializationContext.GetNode(System.String)
+    name: GetNode
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_GetNode_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.IJsonSerializationContext.GetNode(System.String)
+    name: GetNode
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_GetNode_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Text.Json.Nodes.JsonNode
+  commentId: T:System.Text.Json.Nodes.JsonNode
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode
+  name: JsonNode
+  nameWithType: JsonNode
+  fullName: System.Text.Json.Nodes.JsonNode
+- uid: Beutl.Serialization.JsonSerializationContext.SetNode*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.SetNode
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_SetNode_System_String_System_Type_System_Type_System_Text_Json_Nodes_JsonNode_
+  name: SetNode
+  nameWithType: JsonSerializationContext.SetNode
+  fullName: Beutl.Serialization.JsonSerializationContext.SetNode
+- uid: Beutl.Serialization.IJsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+  commentId: M:Beutl.Serialization.IJsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+  parent: Beutl.Serialization.IJsonSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_SetNode_System_String_System_Type_System_Type_System_Text_Json_Nodes_JsonNode_
+  name: SetNode(string, Type, Type, JsonNode)
+  nameWithType: IJsonSerializationContext.SetNode(string, Type, Type, JsonNode)
+  fullName: Beutl.Serialization.IJsonSerializationContext.SetNode(string, System.Type, System.Type, System.Text.Json.Nodes.JsonNode)
+  nameWithType.vb: IJsonSerializationContext.SetNode(String, Type, Type, JsonNode)
+  fullName.vb: Beutl.Serialization.IJsonSerializationContext.SetNode(String, System.Type, System.Type, System.Text.Json.Nodes.JsonNode)
+  name.vb: SetNode(String, Type, Type, JsonNode)
+  spec.csharp:
+  - uid: Beutl.Serialization.IJsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+    name: SetNode
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_SetNode_System_String_System_Type_System_Type_System_Text_Json_Nodes_JsonNode_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Nodes.JsonNode
+    name: JsonNode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.IJsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
+    name: SetNode
+    isExternal: true
+    href: Beutl.Serialization.IJsonSerializationContext.html#Beutl_Serialization_IJsonSerializationContext_SetNode_System_String_System_Type_System_Type_System_Text_Json_Nodes_JsonNode_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Nodes.JsonNode
+    name: JsonNode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode
+  - name: )
+- uid: Beutl.Serialization.JsonSerializationContext.Populate*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.Populate
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_Populate_System_String_Beutl_Serialization_ICoreSerializable_
+  name: Populate
+  nameWithType: JsonSerializationContext.Populate
+  fullName: Beutl.Serialization.JsonSerializationContext.Populate
+- uid: Beutl.Serialization.ICoreSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+  commentId: M:Beutl.Serialization.ICoreSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Populate_System_String_Beutl_Serialization_ICoreSerializable_
+  name: Populate(string, ICoreSerializable)
+  nameWithType: ICoreSerializationContext.Populate(string, ICoreSerializable)
+  fullName: Beutl.Serialization.ICoreSerializationContext.Populate(string, Beutl.Serialization.ICoreSerializable)
+  nameWithType.vb: ICoreSerializationContext.Populate(String, ICoreSerializable)
+  fullName.vb: Beutl.Serialization.ICoreSerializationContext.Populate(String, Beutl.Serialization.ICoreSerializable)
+  name.vb: Populate(String, ICoreSerializable)
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+    name: Populate
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Populate_System_String_Beutl_Serialization_ICoreSerializable_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
+    name: Populate
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Populate_System_String_Beutl_Serialization_ICoreSerializable_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: )
+- uid: Beutl.Serialization.ICoreSerializable
+  commentId: T:Beutl.Serialization.ICoreSerializable
+  parent: Beutl.Serialization
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  name: ICoreSerializable
+  nameWithType: ICoreSerializable
+  fullName: Beutl.Serialization.ICoreSerializable
+- uid: Beutl.Serialization.JsonSerializationContext.AfterDeserialized*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.AfterDeserialized
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_AfterDeserialized_Beutl_Serialization_ICoreSerializable_
+  name: AfterDeserialized
+  nameWithType: JsonSerializationContext.AfterDeserialized
+  fullName: Beutl.Serialization.JsonSerializationContext.AfterDeserialized
+- uid: Beutl.Serialization.JsonSerializationContext.Resolve*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.Resolve
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_Resolve_System_Guid_System_Action_Beutl_Serialization_ICoreSerializable__
+  name: Resolve
+  nameWithType: JsonSerializationContext.Resolve
+  fullName: Beutl.Serialization.JsonSerializationContext.Resolve
+- uid: Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+  commentId: M:Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Resolve_System_Guid_System_Action_Beutl_Serialization_ICoreSerializable__
+  name: Resolve(Guid, Action<ICoreSerializable>)
+  nameWithType: ICoreSerializationContext.Resolve(Guid, Action<ICoreSerializable>)
+  fullName: Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid, System.Action<Beutl.Serialization.ICoreSerializable>)
+  nameWithType.vb: ICoreSerializationContext.Resolve(Guid, Action(Of ICoreSerializable))
+  fullName.vb: Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid, System.Action(Of Beutl.Serialization.ICoreSerializable))
+  name.vb: Resolve(Guid, Action(Of ICoreSerializable))
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+    name: Resolve
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Resolve_System_Guid_System_Action_Beutl_Serialization_ICoreSerializable__
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
+    name: Resolve
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Resolve_System_Guid_System_Action_Beutl_Serialization_ICoreSerializable__
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: )
+  - name: )
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Action{Beutl.Serialization.ICoreSerializable}
+  commentId: T:System.Action{Beutl.Serialization.ICoreSerializable}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<ICoreSerializable>
+  nameWithType: Action<ICoreSerializable>
+  fullName: System.Action<Beutl.Serialization.ICoreSerializable>
+  nameWithType.vb: Action(Of ICoreSerializable)
+  fullName.vb: System.Action(Of Beutl.Serialization.ICoreSerializable)
+  name.vb: Action(Of ICoreSerializable)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Serialization.JsonSerializationContext.Contains*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.Contains
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_Contains_System_String_
+  name: Contains
+  nameWithType: JsonSerializationContext.Contains
+  fullName: Beutl.Serialization.JsonSerializationContext.Contains
+- uid: Beutl.Serialization.ICoreSerializationContext.Contains(System.String)
+  commentId: M:Beutl.Serialization.ICoreSerializationContext.Contains(System.String)
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Contains_System_String_
+  name: Contains(string)
+  nameWithType: ICoreSerializationContext.Contains(string)
+  fullName: Beutl.Serialization.ICoreSerializationContext.Contains(string)
+  nameWithType.vb: ICoreSerializationContext.Contains(String)
+  fullName.vb: Beutl.Serialization.ICoreSerializationContext.Contains(String)
+  name.vb: Contains(String)
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializationContext.Contains(System.String)
+    name: Contains
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Contains_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializationContext.Contains(System.String)
+    name: Contains
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Contains_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Serialization.JsonSerializationContext.GetValue*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.GetValue
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_GetValue__1_System_String_
+  name: GetValue
+  nameWithType: JsonSerializationContext.GetValue
+  fullName: Beutl.Serialization.JsonSerializationContext.GetValue
+- uid: Beutl.Serialization.ICoreSerializationContext.GetValue``1(System.String)
+  commentId: M:Beutl.Serialization.ICoreSerializationContext.GetValue``1(System.String)
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_GetValue__1_System_String_
+  name: GetValue<T>(string)
+  nameWithType: ICoreSerializationContext.GetValue<T>(string)
+  fullName: Beutl.Serialization.ICoreSerializationContext.GetValue<T>(string)
+  nameWithType.vb: ICoreSerializationContext.GetValue(Of T)(String)
+  fullName.vb: Beutl.Serialization.ICoreSerializationContext.GetValue(Of T)(String)
+  name.vb: GetValue(Of T)(String)
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializationContext.GetValue``1(System.String)
+    name: GetValue
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_GetValue__1_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializationContext.GetValue``1(System.String)
+    name: GetValue
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_GetValue__1_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.Serialization.JsonSerializationContext.SetValue*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.SetValue
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_SetValue__1_System_String___0_
+  name: SetValue
+  nameWithType: JsonSerializationContext.SetValue
+  fullName: Beutl.Serialization.JsonSerializationContext.SetValue
+- uid: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,{T})
+  commentId: M:Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+  parent: Beutl.Serialization.ICoreSerializationContext
+  definition: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_SetValue__1_System_String___0_
+  name: SetValue<T>(string, T)
+  nameWithType: ICoreSerializationContext.SetValue<T>(string, T)
+  fullName: Beutl.Serialization.ICoreSerializationContext.SetValue<T>(string, T)
+  nameWithType.vb: ICoreSerializationContext.SetValue(Of T)(String, T)
+  fullName.vb: Beutl.Serialization.ICoreSerializationContext.SetValue(Of T)(String, T)
+  name.vb: SetValue(Of T)(String, T)
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_SetValue__1_System_String___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_SetValue__1_System_String___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+  commentId: M:Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_SetValue__1_System_String___0_
+  name: SetValue<T>(string, T)
+  nameWithType: ICoreSerializationContext.SetValue<T>(string, T)
+  fullName: Beutl.Serialization.ICoreSerializationContext.SetValue<T>(string, T)
+  nameWithType.vb: ICoreSerializationContext.SetValue(Of T)(String, T)
+  fullName.vb: Beutl.Serialization.ICoreSerializationContext.SetValue(Of T)(String, T)
+  name.vb: SetValue(Of T)(String, T)
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_SetValue__1_System_String___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_SetValue__1_System_String___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Serialization.JsonSerializationContext.Parent*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.Parent
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_Parent
+  name: Parent
+  nameWithType: JsonSerializationContext.Parent
+  fullName: Beutl.Serialization.JsonSerializationContext.Parent
+- uid: Beutl.Serialization.JsonSerializationContext.Root*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.Root
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_Root
+  name: Root
+  nameWithType: JsonSerializationContext.Root
+  fullName: Beutl.Serialization.JsonSerializationContext.Root
+- uid: Beutl.Serialization.JsonSerializationContext
+  commentId: T:Beutl.Serialization.JsonSerializationContext
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html
+  name: JsonSerializationContext
+  nameWithType: JsonSerializationContext
+  fullName: Beutl.Serialization.JsonSerializationContext
+- uid: Beutl.Serialization.JsonSerializationContext.Mode*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.Mode
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_Mode
+  name: Mode
+  nameWithType: JsonSerializationContext.Mode
+  fullName: Beutl.Serialization.JsonSerializationContext.Mode
+- uid: Beutl.Serialization.ICoreSerializationContext.Mode
+  commentId: P:Beutl.Serialization.ICoreSerializationContext.Mode
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_Mode
+  name: Mode
+  nameWithType: ICoreSerializationContext.Mode
+  fullName: Beutl.Serialization.ICoreSerializationContext.Mode
+- uid: Beutl.Serialization.CoreSerializationMode
+  commentId: T:Beutl.Serialization.CoreSerializationMode
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.CoreSerializationMode.html
+  name: CoreSerializationMode
+  nameWithType: CoreSerializationMode
+  fullName: Beutl.Serialization.CoreSerializationMode
+- uid: Beutl.Serialization.JsonSerializationContext.BaseUri*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.BaseUri
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_BaseUri
+  name: BaseUri
+  nameWithType: JsonSerializationContext.BaseUri
+  fullName: Beutl.Serialization.JsonSerializationContext.BaseUri
+- uid: Beutl.Serialization.ICoreSerializationContext.BaseUri
+  commentId: P:Beutl.Serialization.ICoreSerializationContext.BaseUri
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_BaseUri
+  name: BaseUri
+  nameWithType: ICoreSerializationContext.BaseUri
+  fullName: Beutl.Serialization.ICoreSerializationContext.BaseUri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: Beutl.Serialization.JsonSerializationContext.OwnerType*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.OwnerType
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_OwnerType
+  name: OwnerType
+  nameWithType: JsonSerializationContext.OwnerType
+  fullName: Beutl.Serialization.JsonSerializationContext.OwnerType
+- uid: Beutl.Serialization.ICoreSerializationContext.OwnerType
+  commentId: P:Beutl.Serialization.ICoreSerializationContext.OwnerType
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_OwnerType
+  name: OwnerType
+  nameWithType: ICoreSerializationContext.OwnerType
+  fullName: Beutl.Serialization.ICoreSerializationContext.OwnerType
+- uid: Beutl.Serialization.JsonSerializationContext.IsRoot*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.IsRoot
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_IsRoot
+  name: IsRoot
+  nameWithType: JsonSerializationContext.IsRoot
+  fullName: Beutl.Serialization.JsonSerializationContext.IsRoot

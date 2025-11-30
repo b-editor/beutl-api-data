@@ -1,0 +1,3168 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.RelativePoint
+  commentId: T:Beutl.Graphics.RelativePoint
+  id: RelativePoint
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.RelativePoint.#ctor(Beutl.Graphics.Point,Beutl.Graphics.RelativeUnit)
+  - Beutl.Graphics.RelativePoint.#ctor(System.Single,System.Single,Beutl.Graphics.RelativeUnit)
+  - Beutl.Graphics.RelativePoint.BottomRight
+  - Beutl.Graphics.RelativePoint.Center
+  - Beutl.Graphics.RelativePoint.Equals(Beutl.Graphics.RelativePoint)
+  - Beutl.Graphics.RelativePoint.Equals(System.Object)
+  - Beutl.Graphics.RelativePoint.GetHashCode
+  - Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Byte})
+  - Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  - Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.RelativePoint.Parse(System.String)
+  - Beutl.Graphics.RelativePoint.Parse(System.String,System.IFormatProvider)
+  - Beutl.Graphics.RelativePoint.Point
+  - Beutl.Graphics.RelativePoint.ToPixels(Beutl.Graphics.Size)
+  - Beutl.Graphics.RelativePoint.ToString
+  - Beutl.Graphics.RelativePoint.ToString(System.IFormatProvider)
+  - Beutl.Graphics.RelativePoint.ToString(System.String,System.IFormatProvider)
+  - Beutl.Graphics.RelativePoint.TopLeft
+  - Beutl.Graphics.RelativePoint.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.RelativePoint.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.RelativePoint@)
+  - Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  - Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.RelativePoint@)
+  - Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  - Beutl.Graphics.RelativePoint.TryParse(System.String,Beutl.Graphics.RelativePoint@)
+  - Beutl.Graphics.RelativePoint.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  - Beutl.Graphics.RelativePoint.Unit
+  - Beutl.Graphics.RelativePoint.op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  - Beutl.Graphics.RelativePoint.op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  langs:
+  - csharp
+  - vb
+  name: RelativePoint
+  nameWithType: RelativePoint
+  fullName: Beutl.Graphics.RelativePoint
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: >-
+      [JsonConverter(typeof(RelativePointJsonConverter))]
+
+      [TypeConverter(typeof(RelativePointConverter))]
+
+      public readonly struct RelativePoint : IEquatable<RelativePoint>, ISpanParsable<RelativePoint>, IParsable<RelativePoint>, ISpanFormattable, IFormattable, IUtf8SpanParsable<RelativePoint>, IUtf8SpanFormattable, IEqualityOperators<RelativePoint, RelativePoint, bool>
+    content.vb: >-
+      <JsonConverter(GetType(RelativePointJsonConverter))>
+
+      <TypeConverter(GetType(RelativePointConverter))>
+
+      Public Structure RelativePoint Implements IEquatable(Of RelativePoint), ISpanParsable(Of RelativePoint), IParsable(Of RelativePoint), ISpanFormattable, IFormattable, IUtf8SpanParsable(Of RelativePoint), IUtf8SpanFormattable, IEqualityOperators(Of RelativePoint, RelativePoint, Boolean)
+  implements:
+  - System.IEquatable{Beutl.Graphics.RelativePoint}
+  - System.ISpanParsable{Beutl.Graphics.RelativePoint}
+  - System.IParsable{Beutl.Graphics.RelativePoint}
+  - System.ISpanFormattable
+  - System.IFormattable
+  - System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}
+  - System.IUtf8SpanFormattable
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.RelativePointConverter
+- uid: Beutl.Graphics.RelativePoint.TopLeft
+  commentId: F:Beutl.Graphics.RelativePoint.TopLeft
+  id: TopLeft
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TopLeft
+  nameWithType: RelativePoint.TopLeft
+  fullName: Beutl.Graphics.RelativePoint.TopLeft
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static readonly RelativePoint TopLeft
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Public Shared ReadOnly TopLeft As RelativePoint
+- uid: Beutl.Graphics.RelativePoint.Center
+  commentId: F:Beutl.Graphics.RelativePoint.Center
+  id: Center
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: RelativePoint.Center
+  fullName: Beutl.Graphics.RelativePoint.Center
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static readonly RelativePoint Center
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Public Shared ReadOnly Center As RelativePoint
+- uid: Beutl.Graphics.RelativePoint.BottomRight
+  commentId: F:Beutl.Graphics.RelativePoint.BottomRight
+  id: BottomRight
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: BottomRight
+  nameWithType: RelativePoint.BottomRight
+  fullName: Beutl.Graphics.RelativePoint.BottomRight
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static readonly RelativePoint BottomRight
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Public Shared ReadOnly BottomRight As RelativePoint
+- uid: Beutl.Graphics.RelativePoint.#ctor(Beutl.Graphics.Point,Beutl.Graphics.RelativeUnit)
+  commentId: M:Beutl.Graphics.RelativePoint.#ctor(Beutl.Graphics.Point,Beutl.Graphics.RelativeUnit)
+  id: '#ctor(Beutl.Graphics.Point,Beutl.Graphics.RelativeUnit)'
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: RelativePoint(Point, RelativeUnit)
+  nameWithType: RelativePoint.RelativePoint(Point, RelativeUnit)
+  fullName: Beutl.Graphics.RelativePoint.RelativePoint(Beutl.Graphics.Point, Beutl.Graphics.RelativeUnit)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public RelativePoint(Point point, RelativeUnit unit)
+    parameters:
+    - id: point
+      type: Beutl.Graphics.Point
+    - id: unit
+      type: Beutl.Graphics.RelativeUnit
+    content.vb: Public Sub New(point As Point, unit As RelativeUnit)
+  overload: Beutl.Graphics.RelativePoint.#ctor*
+  nameWithType.vb: RelativePoint.New(Point, RelativeUnit)
+  fullName.vb: Beutl.Graphics.RelativePoint.New(Beutl.Graphics.Point, Beutl.Graphics.RelativeUnit)
+  name.vb: New(Point, RelativeUnit)
+- uid: Beutl.Graphics.RelativePoint.#ctor(System.Single,System.Single,Beutl.Graphics.RelativeUnit)
+  commentId: M:Beutl.Graphics.RelativePoint.#ctor(System.Single,System.Single,Beutl.Graphics.RelativeUnit)
+  id: '#ctor(System.Single,System.Single,Beutl.Graphics.RelativeUnit)'
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: RelativePoint(float, float, RelativeUnit)
+  nameWithType: RelativePoint.RelativePoint(float, float, RelativeUnit)
+  fullName: Beutl.Graphics.RelativePoint.RelativePoint(float, float, Beutl.Graphics.RelativeUnit)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public RelativePoint(float x, float y, RelativeUnit unit)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    - id: unit
+      type: Beutl.Graphics.RelativeUnit
+    content.vb: Public Sub New(x As Single, y As Single, unit As RelativeUnit)
+  overload: Beutl.Graphics.RelativePoint.#ctor*
+  nameWithType.vb: RelativePoint.New(Single, Single, RelativeUnit)
+  fullName.vb: Beutl.Graphics.RelativePoint.New(Single, Single, Beutl.Graphics.RelativeUnit)
+  name.vb: New(Single, Single, RelativeUnit)
+- uid: Beutl.Graphics.RelativePoint.op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  commentId: M:Beutl.Graphics.RelativePoint.op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  id: op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: operator ==(RelativePoint, RelativePoint)
+  nameWithType: RelativePoint.operator ==(RelativePoint, RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.operator ==(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool operator ==(RelativePoint left, RelativePoint right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.RelativePoint
+    - id: right
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator =(left As RelativePoint, right As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.op_Equality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  nameWithType.vb: RelativePoint.=(RelativePoint, RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.=(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  name.vb: =(RelativePoint, RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  commentId: M:Beutl.Graphics.RelativePoint.op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  id: op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: operator !=(RelativePoint, RelativePoint)
+  nameWithType: RelativePoint.operator !=(RelativePoint, RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.operator !=(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool operator !=(RelativePoint left, RelativePoint right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.RelativePoint
+    - id: right
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator <>(left As RelativePoint, right As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.op_Inequality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  nameWithType.vb: RelativePoint.<>(RelativePoint, RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.<>(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  name.vb: <>(RelativePoint, RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.Equals(System.Object)
+  commentId: M:Beutl.Graphics.RelativePoint.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: RelativePoint.Equals(object?)
+  fullName: Beutl.Graphics.RelativePoint.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Graphics.RelativePoint.Equals*
+  nameWithType.vb: RelativePoint.Equals(Object)
+  fullName.vb: Beutl.Graphics.RelativePoint.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Graphics.RelativePoint.Equals(Beutl.Graphics.RelativePoint)
+  commentId: M:Beutl.Graphics.RelativePoint.Equals(Beutl.Graphics.RelativePoint)
+  id: Equals(Beutl.Graphics.RelativePoint)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Equals(RelativePoint)
+  nameWithType: RelativePoint.Equals(RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.Equals(Beutl.Graphics.RelativePoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool Equals(RelativePoint p)
+    parameters:
+    - id: p
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(p As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.Equals*
+  implements:
+  - System.IEquatable{Beutl.Graphics.RelativePoint}.Equals(Beutl.Graphics.RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.GetHashCode
+  commentId: M:Beutl.Graphics.RelativePoint.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: RelativePoint.GetHashCode()
+  fullName: Beutl.Graphics.RelativePoint.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Graphics.RelativePoint.GetHashCode*
+- uid: Beutl.Graphics.RelativePoint.ToPixels(Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.RelativePoint.ToPixels(Beutl.Graphics.Size)
+  id: ToPixels(Beutl.Graphics.Size)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: ToPixels(Size)
+  nameWithType: RelativePoint.ToPixels(Size)
+  fullName: Beutl.Graphics.RelativePoint.ToPixels(Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point ToPixels(Size size)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public Function ToPixels(size As Size) As Point
+  overload: Beutl.Graphics.RelativePoint.ToPixels*
+- uid: Beutl.Graphics.RelativePoint.TryParse(System.String,Beutl.Graphics.RelativePoint@)
+  commentId: M:Beutl.Graphics.RelativePoint.TryParse(System.String,Beutl.Graphics.RelativePoint@)
+  id: TryParse(System.String,Beutl.Graphics.RelativePoint@)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out RelativePoint)
+  nameWithType: RelativePoint.TryParse(string, out RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.TryParse(string, out Beutl.Graphics.RelativePoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(string s, out RelativePoint point)
+    parameters:
+    - id: s
+      type: System.String
+    - id: point
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, point As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryParse*
+  nameWithType.vb: RelativePoint.TryParse(String, RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryParse(String, Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(String, RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.RelativePoint@)
+  commentId: M:Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.RelativePoint@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.RelativePoint@)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out RelativePoint)
+  nameWithType: RelativePoint.TryParse(ReadOnlySpan<char>, out RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan<char>, out Beutl.Graphics.RelativePoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out RelativePoint point)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: point
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), point As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryParse*
+  nameWithType.vb: RelativePoint.TryParse(ReadOnlySpan(Of Char), RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan(Of Char), Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(ReadOnlySpan(Of Char), RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.Parse(System.String)
+  commentId: M:Beutl.Graphics.RelativePoint.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: RelativePoint.Parse(string)
+  fullName: Beutl.Graphics.RelativePoint.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static RelativePoint Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Public Shared Function Parse(s As String) As RelativePoint
+  overload: Beutl.Graphics.RelativePoint.Parse*
+  nameWithType.vb: RelativePoint.Parse(String)
+  fullName.vb: Beutl.Graphics.RelativePoint.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: RelativePoint.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static RelativePoint Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As RelativePoint
+  overload: Beutl.Graphics.RelativePoint.Parse*
+  nameWithType.vb: RelativePoint.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Graphics.RelativePoint.ToString
+  commentId: M:Beutl.Graphics.RelativePoint.ToString
+  id: ToString
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: RelativePoint.ToString()
+  fullName: Beutl.Graphics.RelativePoint.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Graphics.RelativePoint.ToString*
+- uid: Beutl.Graphics.RelativePoint.Parse(System.String,System.IFormatProvider)
+  commentId: M:Beutl.Graphics.RelativePoint.Parse(System.String,System.IFormatProvider)
+  id: Parse(System.String,System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(string, IFormatProvider?)
+  nameWithType: RelativePoint.Parse(string, IFormatProvider?)
+  fullName: Beutl.Graphics.RelativePoint.Parse(string, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static RelativePoint Parse(string s, IFormatProvider? provider)
+    parameters:
+    - id: s
+      type: System.String
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Shared Function Parse(s As String, provider As IFormatProvider) As RelativePoint
+  overload: Beutl.Graphics.RelativePoint.Parse*
+  implements:
+  - System.IParsable{Beutl.Graphics.RelativePoint}.Parse(System.String,System.IFormatProvider)
+  nameWithType.vb: RelativePoint.Parse(String, IFormatProvider)
+  fullName.vb: Beutl.Graphics.RelativePoint.Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+- uid: Beutl.Graphics.RelativePoint.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  commentId: M:Beutl.Graphics.RelativePoint.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  id: TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string?, IFormatProvider?, out RelativePoint)
+  nameWithType: RelativePoint.TryParse(string?, IFormatProvider?, out RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.TryParse(string?, System.IFormatProvider?, out Beutl.Graphics.RelativePoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(string? s, IFormatProvider? provider, out RelativePoint result)
+    parameters:
+    - id: s
+      type: System.String
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(s As String, provider As IFormatProvider, result As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryParse*
+  implements:
+  - System.IParsable{Beutl.Graphics.RelativePoint}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  nameWithType.vb: RelativePoint.TryParse(String, IFormatProvider, RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryParse(String, System.IFormatProvider, Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(String, IFormatProvider, RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: RelativePoint.Parse(ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static RelativePoint Parse(ReadOnlySpan<char> s, IFormatProvider? provider)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Shared Function Parse(s As ReadOnlySpan(Of Char), provider As IFormatProvider) As RelativePoint
+  overload: Beutl.Graphics.RelativePoint.Parse*
+  implements:
+  - System.ISpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: RelativePoint.Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  commentId: M:Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  id: TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider?, out RelativePoint)
+  nameWithType: RelativePoint.TryParse(ReadOnlySpan<char>, IFormatProvider?, out RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider?, out Beutl.Graphics.RelativePoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(ReadOnlySpan<char> s, IFormatProvider? provider, out RelativePoint result)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(s As ReadOnlySpan(Of Char), provider As IFormatProvider, result As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryParse*
+  implements:
+  - System.ISpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  nameWithType.vb: RelativePoint.TryParse(ReadOnlySpan(Of Char), IFormatProvider, RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.RelativePoint.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: RelativePoint.TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.RelativePoint.TryFormat(System.Span<char>, out int, System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool TryFormat(Span<char> destination, out int charsWritten, ReadOnlySpan<char> format = default, IFormatProvider? provider = null)
+    parameters:
+    - id: destination
+      type: System.Span{System.Char}
+    - id: charsWritten
+      type: System.Int32
+    - id: format
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryFormat(destination As Span(Of Char), charsWritten As Integer, format As ReadOnlySpan(Of Char) = Nothing, provider As IFormatProvider = Nothing) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryFormat*
+  implements:
+  - System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: RelativePoint.TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryFormat(System.Span(Of Char), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.RelativePoint.ToString(System.IFormatProvider)
+  commentId: M:Beutl.Graphics.RelativePoint.ToString(System.IFormatProvider)
+  id: ToString(System.IFormatProvider)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: ToString(IFormatProvider?)
+  nameWithType: RelativePoint.ToString(IFormatProvider?)
+  fullName: Beutl.Graphics.RelativePoint.ToString(System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public string ToString(IFormatProvider? formatProvider)
+    parameters:
+    - id: formatProvider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+    content.vb: Public Function ToString(formatProvider As IFormatProvider) As String
+  overload: Beutl.Graphics.RelativePoint.ToString*
+  nameWithType.vb: RelativePoint.ToString(IFormatProvider)
+  fullName.vb: Beutl.Graphics.RelativePoint.ToString(System.IFormatProvider)
+  name.vb: ToString(IFormatProvider)
+- uid: Beutl.Graphics.RelativePoint.ToString(System.String,System.IFormatProvider)
+  commentId: M:Beutl.Graphics.RelativePoint.ToString(System.String,System.IFormatProvider)
+  id: ToString(System.String,System.IFormatProvider)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: ToString(string?, IFormatProvider?)
+  nameWithType: RelativePoint.ToString(string?, IFormatProvider?)
+  fullName: Beutl.Graphics.RelativePoint.ToString(string?, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public string ToString(string? format, IFormatProvider? formatProvider)
+    parameters:
+    - id: format
+      type: System.String
+    - id: formatProvider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+    content.vb: Public Function ToString(format As String, formatProvider As IFormatProvider) As String
+  overload: Beutl.Graphics.RelativePoint.ToString*
+  implements:
+  - System.IFormattable.ToString(System.String,System.IFormatProvider)
+  nameWithType.vb: RelativePoint.ToString(String, IFormatProvider)
+  fullName.vb: Beutl.Graphics.RelativePoint.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+- uid: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Byte})
+  commentId: M:Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Byte})
+  id: Parse(System.ReadOnlySpan{System.Byte})
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<byte>)
+  nameWithType: RelativePoint.Parse(ReadOnlySpan<byte>)
+  fullName: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static RelativePoint Parse(ReadOnlySpan<byte> utf8Text)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Public Shared Function Parse(utf8Text As ReadOnlySpan(Of Byte)) As RelativePoint
+  overload: Beutl.Graphics.RelativePoint.Parse*
+  nameWithType.vb: RelativePoint.Parse(ReadOnlySpan(Of Byte))
+  fullName.vb: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan(Of Byte))
+  name.vb: Parse(ReadOnlySpan(Of Byte))
+- uid: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  id: Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider?)
+  nameWithType: RelativePoint.Parse(ReadOnlySpan<byte>, IFormatProvider?)
+  fullName: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static RelativePoint Parse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: Shared Function Parse(utf8Text As ReadOnlySpan(Of Byte), provider As IFormatProvider) As RelativePoint
+  overload: Beutl.Graphics.RelativePoint.Parse*
+  implements:
+  - System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  nameWithType.vb: RelativePoint.Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: Beutl.Graphics.RelativePoint.Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+- uid: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.RelativePoint@)
+  commentId: M:Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.RelativePoint@)
+  id: TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.RelativePoint@)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<byte>, out RelativePoint)
+  nameWithType: RelativePoint.TryParse(ReadOnlySpan<byte>, out RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan<byte>, out Beutl.Graphics.RelativePoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<byte> utf8Text, out RelativePoint result)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: result
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(utf8Text As ReadOnlySpan(Of Byte), result As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryParse*
+  nameWithType.vb: RelativePoint.TryParse(ReadOnlySpan(Of Byte), RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan(Of Byte), Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  commentId: M:Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  id: TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  isEii: true
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider?, out RelativePoint)
+  nameWithType: RelativePoint.TryParse(ReadOnlySpan<byte>, IFormatProvider?, out RelativePoint)
+  fullName: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider?, out Beutl.Graphics.RelativePoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider, out RelativePoint result)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.RelativePoint
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(utf8Text As ReadOnlySpan(Of Byte), provider As IFormatProvider, result As RelativePoint) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryParse*
+  implements:
+  - System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  nameWithType.vb: RelativePoint.TryParse(ReadOnlySpan(Of Byte), IFormatProvider, RelativePoint)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, RelativePoint)
+- uid: Beutl.Graphics.RelativePoint.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.RelativePoint.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: RelativePoint.TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.RelativePoint.TryFormat(System.Span<byte>, out int, System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool TryFormat(Span<byte> utf8Destination, out int bytesWritten, ReadOnlySpan<char> format = default, IFormatProvider? provider = null)
+    parameters:
+    - id: utf8Destination
+      type: System.Span{System.Byte}
+    - id: bytesWritten
+      type: System.Int32
+    - id: format
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryFormat(utf8Destination As Span(Of Byte), bytesWritten As Integer, format As ReadOnlySpan(Of Char) = Nothing, provider As IFormatProvider = Nothing) As Boolean
+  overload: Beutl.Graphics.RelativePoint.TryFormat*
+  implements:
+  - System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: RelativePoint.TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.RelativePoint.TryFormat(System.Span(Of Byte), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.RelativePoint.Point
+  commentId: P:Beutl.Graphics.RelativePoint.Point
+  id: Point
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Point
+  nameWithType: RelativePoint.Point
+  fullName: Beutl.Graphics.RelativePoint.Point
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point Point { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public ReadOnly Property Point As Point
+  overload: Beutl.Graphics.RelativePoint.Point*
+- uid: Beutl.Graphics.RelativePoint.Unit
+  commentId: P:Beutl.Graphics.RelativePoint.Unit
+  id: Unit
+  parent: Beutl.Graphics.RelativePoint
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: RelativePoint.Unit
+  fullName: Beutl.Graphics.RelativePoint.Unit
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/RelativePoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public RelativeUnit Unit { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.RelativeUnit
+    content.vb: Public ReadOnly Property Unit As RelativeUnit
+  overload: Beutl.Graphics.RelativePoint.Unit*
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.IEquatable{Beutl.Graphics.RelativePoint}
+  commentId: T:System.IEquatable{Beutl.Graphics.RelativePoint}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<RelativePoint>
+  nameWithType: IEquatable<RelativePoint>
+  fullName: System.IEquatable<Beutl.Graphics.RelativePoint>
+  nameWithType.vb: IEquatable(Of RelativePoint)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.RelativePoint)
+  name.vb: IEquatable(Of RelativePoint)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.RelativePoint}
+  commentId: T:System.ISpanParsable{Beutl.Graphics.RelativePoint}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<RelativePoint>
+  nameWithType: ISpanParsable<RelativePoint>
+  fullName: System.ISpanParsable<Beutl.Graphics.RelativePoint>
+  nameWithType.vb: ISpanParsable(Of RelativePoint)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.RelativePoint)
+  name.vb: ISpanParsable(Of RelativePoint)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.IParsable{Beutl.Graphics.RelativePoint}
+  commentId: T:System.IParsable{Beutl.Graphics.RelativePoint}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<RelativePoint>
+  nameWithType: IParsable<RelativePoint>
+  fullName: System.IParsable<Beutl.Graphics.RelativePoint>
+  nameWithType.vb: IParsable(Of RelativePoint)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.RelativePoint)
+  name.vb: IParsable(Of RelativePoint)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.ISpanFormattable
+  commentId: T:System.ISpanFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanformattable
+  name: ISpanFormattable
+  nameWithType: ISpanFormattable
+  fullName: System.ISpanFormattable
+- uid: System.IFormattable
+  commentId: T:System.IFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  name: IFormattable
+  nameWithType: IFormattable
+  fullName: System.IFormattable
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}
+  commentId: T:System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}
+  parent: System
+  definition: System.IUtf8SpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  name: IUtf8SpanParsable<RelativePoint>
+  nameWithType: IUtf8SpanParsable<RelativePoint>
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.RelativePoint>
+  nameWithType.vb: IUtf8SpanParsable(Of RelativePoint)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.RelativePoint)
+  name.vb: IUtf8SpanParsable(Of RelativePoint)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: <
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.IUtf8SpanFormattable
+  commentId: T:System.IUtf8SpanFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable
+  name: IUtf8SpanFormattable
+  nameWithType: IUtf8SpanFormattable
+  fullName: System.IUtf8SpanFormattable
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}
+  commentId: T:System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}
+  parent: System.Numerics
+  definition: System.Numerics.IEqualityOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<RelativePoint, RelativePoint, bool>
+  nameWithType: IEqualityOperators<RelativePoint, RelativePoint, bool>
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint, bool>
+  nameWithType.vb: IEqualityOperators(Of RelativePoint, RelativePoint, Boolean)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint, Boolean)
+  name.vb: IEqualityOperators(Of RelativePoint, RelativePoint, Boolean)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IUtf8SpanParsable`1
+  commentId: T:System.IUtf8SpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  name: IUtf8SpanParsable<TSelf>
+  nameWithType: IUtf8SpanParsable<TSelf>
+  fullName: System.IUtf8SpanParsable<TSelf>
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf)
+  name.vb: IUtf8SpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3
+  commentId: T:System.Numerics.IEqualityOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult)
+  name.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Graphics.RelativePoint
+  commentId: T:Beutl.Graphics.RelativePoint
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html
+  name: RelativePoint
+  nameWithType: RelativePoint
+  fullName: Beutl.Graphics.RelativePoint
+- uid: Beutl.Graphics.RelativePoint.#ctor*
+  commentId: Overload:Beutl.Graphics.RelativePoint.#ctor
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint__ctor_Beutl_Graphics_Point_Beutl_Graphics_RelativeUnit_
+  name: RelativePoint
+  nameWithType: RelativePoint.RelativePoint
+  fullName: Beutl.Graphics.RelativePoint.RelativePoint
+  nameWithType.vb: RelativePoint.New
+  fullName.vb: Beutl.Graphics.RelativePoint.New
+  name.vb: New
+- uid: Beutl.Graphics.Point
+  commentId: T:Beutl.Graphics.Point
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Point.html
+  name: Point
+  nameWithType: Point
+  fullName: Beutl.Graphics.Point
+- uid: Beutl.Graphics.RelativeUnit
+  commentId: T:Beutl.Graphics.RelativeUnit
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.RelativeUnit.html
+  name: RelativeUnit
+  nameWithType: RelativeUnit
+  fullName: Beutl.Graphics.RelativeUnit
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.RelativePoint.op_Equality*
+  commentId: Overload:Beutl.Graphics.RelativePoint.op_Equality
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_op_Equality_Beutl_Graphics_RelativePoint_Beutl_Graphics_RelativePoint_
+  name: operator ==
+  nameWithType: RelativePoint.operator ==
+  fullName: Beutl.Graphics.RelativePoint.operator ==
+  nameWithType.vb: RelativePoint.=
+  fullName.vb: Beutl.Graphics.RelativePoint.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_op_Equality_Beutl_Graphics_RelativePoint_Beutl_Graphics_RelativePoint_
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  parent: System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(RelativePoint, RelativePoint)
+  nameWithType: IEqualityOperators<RelativePoint, RelativePoint, bool>.operator ==(RelativePoint, RelativePoint)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint, bool>.operator ==(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  nameWithType.vb: IEqualityOperators(Of RelativePoint, RelativePoint, Boolean).=(RelativePoint, RelativePoint)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint, Boolean).=(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  name.vb: =(RelativePoint, RelativePoint)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Equality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  name.vb: =(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.RelativePoint.op_Inequality*
+  commentId: Overload:Beutl.Graphics.RelativePoint.op_Inequality
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_op_Inequality_Beutl_Graphics_RelativePoint_Beutl_Graphics_RelativePoint_
+  name: operator !=
+  nameWithType: RelativePoint.operator !=
+  fullName: Beutl.Graphics.RelativePoint.operator !=
+  nameWithType.vb: RelativePoint.<>
+  fullName.vb: Beutl.Graphics.RelativePoint.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_op_Inequality_Beutl_Graphics_RelativePoint_Beutl_Graphics_RelativePoint_
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+  parent: System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(RelativePoint, RelativePoint)
+  nameWithType: IEqualityOperators<RelativePoint, RelativePoint, bool>.operator !=(RelativePoint, RelativePoint)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint, bool>.operator !=(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  nameWithType.vb: IEqualityOperators(Of RelativePoint, RelativePoint, Boolean).<>(RelativePoint, RelativePoint)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint, Boolean).<>(Beutl.Graphics.RelativePoint, Beutl.Graphics.RelativePoint)
+  name.vb: <>(RelativePoint, RelativePoint)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint,System.Boolean}.op_Inequality(Beutl.Graphics.RelativePoint,Beutl.Graphics.RelativePoint)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  name.vb: <>(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Graphics.RelativePoint.Equals*
+  commentId: Overload:Beutl.Graphics.RelativePoint.Equals
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_Equals_System_Object_
+  name: Equals
+  nameWithType: RelativePoint.Equals
+  fullName: Beutl.Graphics.RelativePoint.Equals
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.IEquatable{Beutl.Graphics.RelativePoint}.Equals(Beutl.Graphics.RelativePoint)
+  commentId: M:System.IEquatable{Beutl.Graphics.RelativePoint}.Equals(Beutl.Graphics.RelativePoint)
+  parent: System.IEquatable{Beutl.Graphics.RelativePoint}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(RelativePoint)
+  nameWithType: IEquatable<RelativePoint>.Equals(RelativePoint)
+  fullName: System.IEquatable<Beutl.Graphics.RelativePoint>.Equals(Beutl.Graphics.RelativePoint)
+  nameWithType.vb: IEquatable(Of RelativePoint).Equals(RelativePoint)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.RelativePoint).Equals(Beutl.Graphics.RelativePoint)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Graphics.RelativePoint}.Equals(Beutl.Graphics.RelativePoint)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Graphics.RelativePoint}.Equals(Beutl.Graphics.RelativePoint)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.RelativePoint.GetHashCode*
+  commentId: Overload:Beutl.Graphics.RelativePoint.GetHashCode
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_GetHashCode
+  name: GetHashCode
+  nameWithType: RelativePoint.GetHashCode
+  fullName: Beutl.Graphics.RelativePoint.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Graphics.RelativePoint.ToPixels*
+  commentId: Overload:Beutl.Graphics.RelativePoint.ToPixels
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_ToPixels_Beutl_Graphics_Size_
+  name: ToPixels
+  nameWithType: RelativePoint.ToPixels
+  fullName: Beutl.Graphics.RelativePoint.ToPixels
+- uid: Beutl.Graphics.Size
+  commentId: T:Beutl.Graphics.Size
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Size.html
+  name: Size
+  nameWithType: Size
+  fullName: Beutl.Graphics.Size
+- uid: Beutl.Graphics.RelativePoint.TryParse*
+  commentId: Overload:Beutl.Graphics.RelativePoint.TryParse
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_TryParse_System_String_Beutl_Graphics_RelativePoint__
+  name: TryParse
+  nameWithType: RelativePoint.TryParse
+  fullName: Beutl.Graphics.RelativePoint.TryParse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.RelativePoint.Parse*
+  commentId: Overload:Beutl.Graphics.RelativePoint.Parse
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_Parse_System_String_
+  name: Parse
+  nameWithType: RelativePoint.Parse
+  fullName: Beutl.Graphics.RelativePoint.Parse
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.RelativePoint.ToString*
+  commentId: Overload:Beutl.Graphics.RelativePoint.ToString
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_ToString
+  name: ToString
+  nameWithType: RelativePoint.ToString
+  fullName: Beutl.Graphics.RelativePoint.ToString
+- uid: System.IParsable{Beutl.Graphics.RelativePoint}.Parse(System.String,System.IFormatProvider)
+  commentId: M:System.IParsable{Beutl.Graphics.RelativePoint}.Parse(System.String,System.IFormatProvider)
+  parent: System.IParsable{Beutl.Graphics.RelativePoint}
+  definition: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  name: Parse(string, IFormatProvider)
+  nameWithType: IParsable<RelativePoint>.Parse(string, IFormatProvider)
+  fullName: System.IParsable<Beutl.Graphics.RelativePoint>.Parse(string, System.IFormatProvider)
+  nameWithType.vb: IParsable(Of RelativePoint).Parse(String, IFormatProvider)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.RelativePoint).Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IParsable{Beutl.Graphics.RelativePoint}.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IParsable{Beutl.Graphics.RelativePoint}.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  commentId: M:System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  name: Parse(string, IFormatProvider)
+  nameWithType: IParsable<TSelf>.Parse(string, IFormatProvider)
+  fullName: System.IParsable<TSelf>.Parse(string, System.IFormatProvider)
+  nameWithType.vb: IParsable(Of TSelf).Parse(String, IFormatProvider)
+  fullName.vb: System.IParsable(Of TSelf).Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IParsable{Beutl.Graphics.RelativePoint}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  commentId: M:System.IParsable{Beutl.Graphics.RelativePoint}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  parent: System.IParsable{Beutl.Graphics.RelativePoint}
+  definition: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  name: TryParse(string, IFormatProvider, out RelativePoint)
+  nameWithType: IParsable<RelativePoint>.TryParse(string, IFormatProvider, out RelativePoint)
+  fullName: System.IParsable<Beutl.Graphics.RelativePoint>.TryParse(string, System.IFormatProvider, out Beutl.Graphics.RelativePoint)
+  nameWithType.vb: IParsable(Of RelativePoint).TryParse(String, IFormatProvider, RelativePoint)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.RelativePoint).TryParse(String, System.IFormatProvider, Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(String, IFormatProvider, RelativePoint)
+  spec.csharp:
+  - uid: System.IParsable{Beutl.Graphics.RelativePoint}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+  spec.vb:
+  - uid: System.IParsable{Beutl.Graphics.RelativePoint}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  commentId: M:System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  name: TryParse(string, IFormatProvider, out TSelf)
+  nameWithType: IParsable<TSelf>.TryParse(string, IFormatProvider, out TSelf)
+  fullName: System.IParsable<TSelf>.TryParse(string, System.IFormatProvider, out TSelf)
+  nameWithType.vb: IParsable(Of TSelf).TryParse(String, IFormatProvider, TSelf)
+  fullName.vb: System.IParsable(Of TSelf).TryParse(String, System.IFormatProvider, TSelf)
+  name.vb: TryParse(String, IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.ISpanParsable{Beutl.Graphics.RelativePoint}
+  definition: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  name: Parse(ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanParsable<RelativePoint>.Parse(ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanParsable<Beutl.Graphics.RelativePoint>.Parse(System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanParsable(Of RelativePoint).Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.RelativePoint).Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  name: Parse(ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanParsable<TSelf>.Parse(ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanParsable<TSelf>.Parse(System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanParsable(Of TSelf).Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanParsable(Of TSelf).Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  commentId: M:System.ISpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  parent: System.ISpanParsable{Beutl.Graphics.RelativePoint}
+  definition: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider, out RelativePoint)
+  nameWithType: ISpanParsable<RelativePoint>.TryParse(ReadOnlySpan<char>, IFormatProvider, out RelativePoint)
+  fullName: System.ISpanParsable<Beutl.Graphics.RelativePoint>.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider, out Beutl.Graphics.RelativePoint)
+  nameWithType.vb: ISpanParsable(Of RelativePoint).TryParse(ReadOnlySpan(Of Char), IFormatProvider, RelativePoint)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.RelativePoint).TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, RelativePoint)
+  spec.csharp:
+  - uid: System.ISpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  commentId: M:System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider, out TSelf)
+  nameWithType: ISpanParsable<TSelf>.TryParse(ReadOnlySpan<char>, IFormatProvider, out TSelf)
+  fullName: System.ISpanParsable<TSelf>.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider, out TSelf)
+  nameWithType.vb: ISpanParsable(Of TSelf).TryParse(ReadOnlySpan(Of Char), IFormatProvider, TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf).TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, TSelf)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: Beutl.Graphics.RelativePoint.TryFormat*
+  commentId: Overload:Beutl.Graphics.RelativePoint.TryFormat
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__System_IFormatProvider_
+  name: TryFormat
+  nameWithType: RelativePoint.TryFormat
+  fullName: Beutl.Graphics.RelativePoint.TryFormat
+- uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.ISpanFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  name: TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanFormattable.TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanFormattable.TryFormat(System.Span<char>, out int, System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanFormattable.TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanFormattable.TryFormat(System.Span(Of Char), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.Span{System.Char}
+  commentId: T:System.Span{System.Char}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<char>
+  nameWithType: Span<char>
+  fullName: System.Span<char>
+  nameWithType.vb: Span(Of Char)
+  fullName.vb: System.Span(Of Char)
+  name.vb: Span(Of Char)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+  commentId: M:System.IFormattable.ToString(System.String,System.IFormatProvider)
+  parent: System.IFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  name: ToString(string, IFormatProvider)
+  nameWithType: IFormattable.ToString(string, IFormatProvider)
+  fullName: System.IFormattable.ToString(string, System.IFormatProvider)
+  nameWithType.vb: IFormattable.ToString(String, IFormatProvider)
+  fullName.vb: System.IFormattable.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  parent: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}
+  definition: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider)
+  nameWithType: IUtf8SpanParsable<RelativePoint>.Parse(ReadOnlySpan<byte>, IFormatProvider)
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.RelativePoint>.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanParsable(Of RelativePoint).Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.RelativePoint).Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider)
+  nameWithType: IUtf8SpanParsable<TSelf>.Parse(ReadOnlySpan<byte>, IFormatProvider)
+  fullName: System.IUtf8SpanParsable<TSelf>.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf).Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf).Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  commentId: M:System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+  parent: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}
+  definition: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider, out RelativePoint)
+  nameWithType: IUtf8SpanParsable<RelativePoint>.TryParse(ReadOnlySpan<byte>, IFormatProvider, out RelativePoint)
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.RelativePoint>.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider, out Beutl.Graphics.RelativePoint)
+  nameWithType.vb: IUtf8SpanParsable(Of RelativePoint).TryParse(ReadOnlySpan(Of Byte), IFormatProvider, RelativePoint)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.RelativePoint).TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, Beutl.Graphics.RelativePoint)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, RelativePoint)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.RelativePoint}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.RelativePoint@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.RelativePoint
+    name: RelativePoint
+    isExternal: true
+    href: Beutl.Graphics.RelativePoint.html
+  - name: )
+- uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  commentId: M:System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider, out TSelf)
+  nameWithType: IUtf8SpanParsable<TSelf>.TryParse(ReadOnlySpan<byte>, IFormatProvider, out TSelf)
+  fullName: System.IUtf8SpanParsable<TSelf>.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider, out TSelf)
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf).TryParse(ReadOnlySpan(Of Byte), IFormatProvider, TSelf)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf).TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, TSelf)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.IUtf8SpanFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  name: TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: IUtf8SpanFormattable.TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.IUtf8SpanFormattable.TryFormat(System.Span<byte>, out int, System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanFormattable.TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.IUtf8SpanFormattable.TryFormat(System.Span(Of Byte), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: Beutl.Graphics.RelativePoint.Point*
+  commentId: Overload:Beutl.Graphics.RelativePoint.Point
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_Point
+  name: Point
+  nameWithType: RelativePoint.Point
+  fullName: Beutl.Graphics.RelativePoint.Point
+- uid: Beutl.Graphics.RelativePoint.Unit*
+  commentId: Overload:Beutl.Graphics.RelativePoint.Unit
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html#Beutl_Graphics_RelativePoint_Unit
+  name: Unit
+  nameWithType: RelativePoint.Unit
+  fullName: Beutl.Graphics.RelativePoint.Unit

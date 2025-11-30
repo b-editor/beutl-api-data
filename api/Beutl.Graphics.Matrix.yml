@@ -1,0 +1,2504 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.Matrix
+  commentId: T:Beutl.Graphics.Matrix
+  id: Matrix
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  - Beutl.Graphics.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  - Beutl.Graphics.Matrix.Append(Beutl.Graphics.Matrix)
+  - Beutl.Graphics.Matrix.ComposeTransform(Beutl.Graphics.Vector,Beutl.Graphics.Vector,Beutl.Graphics.Vector,System.Single)
+  - Beutl.Graphics.Matrix.CreateRotation(System.Single)
+  - Beutl.Graphics.Matrix.CreateScale(Beutl.Graphics.Vector)
+  - Beutl.Graphics.Matrix.CreateScale(System.Single,System.Single)
+  - Beutl.Graphics.Matrix.CreateSkew(System.Single,System.Single)
+  - Beutl.Graphics.Matrix.CreateTranslation(Beutl.Graphics.Vector)
+  - Beutl.Graphics.Matrix.CreateTranslation(System.Single,System.Single)
+  - Beutl.Graphics.Matrix.Equals(Beutl.Graphics.Matrix)
+  - Beutl.Graphics.Matrix.Equals(System.Object)
+  - Beutl.Graphics.Matrix.GetDeterminant
+  - Beutl.Graphics.Matrix.GetHashCode
+  - Beutl.Graphics.Matrix.HasInverse
+  - Beutl.Graphics.Matrix.Identity
+  - Beutl.Graphics.Matrix.Invert
+  - Beutl.Graphics.Matrix.IsIdentity
+  - Beutl.Graphics.Matrix.M11
+  - Beutl.Graphics.Matrix.M12
+  - Beutl.Graphics.Matrix.M13
+  - Beutl.Graphics.Matrix.M21
+  - Beutl.Graphics.Matrix.M22
+  - Beutl.Graphics.Matrix.M23
+  - Beutl.Graphics.Matrix.M31
+  - Beutl.Graphics.Matrix.M32
+  - Beutl.Graphics.Matrix.M33
+  - Beutl.Graphics.Matrix.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Graphics.Matrix.Parse(System.String)
+  - Beutl.Graphics.Matrix.Prepend(Beutl.Graphics.Matrix)
+  - Beutl.Graphics.Matrix.ToString
+  - Beutl.Graphics.Matrix.Transform(Beutl.Graphics.Point)
+  - Beutl.Graphics.Matrix.TryDecomposeTransform(Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,System.Single@)
+  - Beutl.Graphics.Matrix.TryInvert(Beutl.Graphics.Matrix@)
+  - Beutl.Graphics.Matrix.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Matrix@)
+  - Beutl.Graphics.Matrix.TryParse(System.String,Beutl.Graphics.Matrix@)
+  - Beutl.Graphics.Matrix.op_Equality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  - Beutl.Graphics.Matrix.op_Inequality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  - Beutl.Graphics.Matrix.op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  - Beutl.Graphics.Matrix.op_UnaryNegation(Beutl.Graphics.Matrix)
+  langs:
+  - csharp
+  - vb
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Beutl.Graphics.Matrix
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: >-
+      [JsonConverter(typeof(MatrixJsonConverter))]
+
+      [TypeConverter(typeof(MatrixConverter))]
+
+      public readonly struct Matrix : IEquatable<Matrix>, ISpanParsable<Matrix>, IParsable<Matrix>, IMultiplyOperators<Matrix, Matrix, Matrix>, IUnaryNegationOperators<Matrix, Matrix>, ITupleConvertible<Matrix, float>
+    content.vb: >-
+      <JsonConverter(GetType(MatrixJsonConverter))>
+
+      <TypeConverter(GetType(MatrixConverter))>
+
+      Public Structure Matrix Implements IEquatable(Of Matrix), ISpanParsable(Of Matrix), IParsable(Of Matrix), IMultiplyOperators(Of Matrix, Matrix, Matrix), IUnaryNegationOperators(Of Matrix, Matrix), ITupleConvertible(Of Matrix, Single)
+  implements:
+  - System.IEquatable{Beutl.Graphics.Matrix}
+  - System.ISpanParsable{Beutl.Graphics.Matrix}
+  - System.IParsable{Beutl.Graphics.Matrix}
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  - System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  - Beutl.ITupleConvertible{Beutl.Graphics.Matrix,System.Single}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.MatrixConverter
+- uid: Beutl.Graphics.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Beutl.Graphics.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)'
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Matrix(float, float, float, float, float, float, float, float, float)
+  nameWithType: Matrix.Matrix(float, float, float, float, float, float, float, float, float)
+  fullName: Beutl.Graphics.Matrix.Matrix(float, float, float, float, float, float, float, float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Matrix(float scaleX, float skewY, float persX, float skewX, float scaleY, float persY, float offsetX, float offsetY, float persZ)
+    parameters:
+    - id: scaleX
+      type: System.Single
+    - id: skewY
+      type: System.Single
+    - id: persX
+      type: System.Single
+    - id: skewX
+      type: System.Single
+    - id: scaleY
+      type: System.Single
+    - id: persY
+      type: System.Single
+    - id: offsetX
+      type: System.Single
+    - id: offsetY
+      type: System.Single
+    - id: persZ
+      type: System.Single
+    content.vb: Public Sub New(scaleX As Single, skewY As Single, persX As Single, skewX As Single, scaleY As Single, persY As Single, offsetX As Single, offsetY As Single, persZ As Single)
+  overload: Beutl.Graphics.Matrix.#ctor*
+  nameWithType.vb: Matrix.New(Single, Single, Single, Single, Single, Single, Single, Single, Single)
+  fullName.vb: Beutl.Graphics.Matrix.New(Single, Single, Single, Single, Single, Single, Single, Single, Single)
+  name.vb: New(Single, Single, Single, Single, Single, Single, Single, Single, Single)
+- uid: Beutl.Graphics.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Beutl.Graphics.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)'
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Matrix(float, float, float, float, float, float)
+  nameWithType: Matrix.Matrix(float, float, float, float, float, float)
+  fullName: Beutl.Graphics.Matrix.Matrix(float, float, float, float, float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Matrix(float scaleX, float skewY, float skewX, float scaleY, float offsetX, float offsetY)
+    parameters:
+    - id: scaleX
+      type: System.Single
+    - id: skewY
+      type: System.Single
+    - id: skewX
+      type: System.Single
+    - id: scaleY
+      type: System.Single
+    - id: offsetX
+      type: System.Single
+    - id: offsetY
+      type: System.Single
+    content.vb: Public Sub New(scaleX As Single, skewY As Single, skewX As Single, scaleY As Single, offsetX As Single, offsetY As Single)
+  overload: Beutl.Graphics.Matrix.#ctor*
+  nameWithType.vb: Matrix.New(Single, Single, Single, Single, Single, Single)
+  fullName.vb: Beutl.Graphics.Matrix.New(Single, Single, Single, Single, Single, Single)
+  name.vb: New(Single, Single, Single, Single, Single, Single)
+- uid: Beutl.Graphics.Matrix.op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Matrix.op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  id: op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  isEii: true
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: operator *(Matrix, Matrix)
+  nameWithType: Matrix.operator *(Matrix, Matrix)
+  fullName: Beutl.Graphics.Matrix.operator *(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Matrix operator *(Matrix value1, Matrix value2)
+    parameters:
+    - id: value1
+      type: Beutl.Graphics.Matrix
+    - id: value2
+      type: Beutl.Graphics.Matrix
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Shared Operator *(value1 As Matrix, value2 As Matrix) As Matrix
+  overload: Beutl.Graphics.Matrix.op_Multiply*
+  implements:
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  nameWithType.vb: Matrix.*(Matrix, Matrix)
+  fullName.vb: Beutl.Graphics.Matrix.*(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  name.vb: '*(Matrix, Matrix)'
+- uid: Beutl.Graphics.Matrix.op_UnaryNegation(Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Matrix.op_UnaryNegation(Beutl.Graphics.Matrix)
+  id: op_UnaryNegation(Beutl.Graphics.Matrix)
+  isEii: true
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: operator -(Matrix)
+  nameWithType: Matrix.operator -(Matrix)
+  fullName: Beutl.Graphics.Matrix.operator -(Beutl.Graphics.Matrix)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Matrix operator -(Matrix value)
+    parameters:
+    - id: value
+      type: Beutl.Graphics.Matrix
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Shared Operator -(value As Matrix) As Matrix
+  overload: Beutl.Graphics.Matrix.op_UnaryNegation*
+  implements:
+  - System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_UnaryNegation(Beutl.Graphics.Matrix)
+  nameWithType.vb: Matrix.-(Matrix)
+  fullName.vb: Beutl.Graphics.Matrix.-(Beutl.Graphics.Matrix)
+  name.vb: -(Matrix)
+- uid: Beutl.Graphics.Matrix.op_Equality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Matrix.op_Equality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  id: op_Equality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Matrix, Matrix)
+  nameWithType: Matrix.operator ==(Matrix, Matrix)
+  fullName: Beutl.Graphics.Matrix.operator ==(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool operator ==(Matrix value1, Matrix value2)
+    parameters:
+    - id: value1
+      type: Beutl.Graphics.Matrix
+    - id: value2
+      type: Beutl.Graphics.Matrix
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(value1 As Matrix, value2 As Matrix) As Boolean
+  overload: Beutl.Graphics.Matrix.op_Equality*
+  nameWithType.vb: Matrix.=(Matrix, Matrix)
+  fullName.vb: Beutl.Graphics.Matrix.=(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  name.vb: =(Matrix, Matrix)
+- uid: Beutl.Graphics.Matrix.op_Inequality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Matrix.op_Inequality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  id: op_Inequality(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Matrix, Matrix)
+  nameWithType: Matrix.operator !=(Matrix, Matrix)
+  fullName: Beutl.Graphics.Matrix.operator !=(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool operator !=(Matrix value1, Matrix value2)
+    parameters:
+    - id: value1
+      type: Beutl.Graphics.Matrix
+    - id: value2
+      type: Beutl.Graphics.Matrix
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(value1 As Matrix, value2 As Matrix) As Boolean
+  overload: Beutl.Graphics.Matrix.op_Inequality*
+  nameWithType.vb: Matrix.<>(Matrix, Matrix)
+  fullName.vb: Beutl.Graphics.Matrix.<>(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  name.vb: <>(Matrix, Matrix)
+- uid: Beutl.Graphics.Matrix.CreateRotation(System.Single)
+  commentId: M:Beutl.Graphics.Matrix.CreateRotation(System.Single)
+  id: CreateRotation(System.Single)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: CreateRotation(float)
+  nameWithType: Matrix.CreateRotation(float)
+  fullName: Beutl.Graphics.Matrix.CreateRotation(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix CreateRotation(float radians)
+    parameters:
+    - id: radians
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function CreateRotation(radians As Single) As Matrix
+  overload: Beutl.Graphics.Matrix.CreateRotation*
+  nameWithType.vb: Matrix.CreateRotation(Single)
+  fullName.vb: Beutl.Graphics.Matrix.CreateRotation(Single)
+  name.vb: CreateRotation(Single)
+- uid: Beutl.Graphics.Matrix.CreateSkew(System.Single,System.Single)
+  commentId: M:Beutl.Graphics.Matrix.CreateSkew(System.Single,System.Single)
+  id: CreateSkew(System.Single,System.Single)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: CreateSkew(float, float)
+  nameWithType: Matrix.CreateSkew(float, float)
+  fullName: Beutl.Graphics.Matrix.CreateSkew(float, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix CreateSkew(float xAngle, float yAngle)
+    parameters:
+    - id: xAngle
+      type: System.Single
+    - id: yAngle
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function CreateSkew(xAngle As Single, yAngle As Single) As Matrix
+  overload: Beutl.Graphics.Matrix.CreateSkew*
+  nameWithType.vb: Matrix.CreateSkew(Single, Single)
+  fullName.vb: Beutl.Graphics.Matrix.CreateSkew(Single, Single)
+  name.vb: CreateSkew(Single, Single)
+- uid: Beutl.Graphics.Matrix.CreateScale(System.Single,System.Single)
+  commentId: M:Beutl.Graphics.Matrix.CreateScale(System.Single,System.Single)
+  id: CreateScale(System.Single,System.Single)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: CreateScale(float, float)
+  nameWithType: Matrix.CreateScale(float, float)
+  fullName: Beutl.Graphics.Matrix.CreateScale(float, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix CreateScale(float xScale, float yScale)
+    parameters:
+    - id: xScale
+      type: System.Single
+    - id: yScale
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function CreateScale(xScale As Single, yScale As Single) As Matrix
+  overload: Beutl.Graphics.Matrix.CreateScale*
+  nameWithType.vb: Matrix.CreateScale(Single, Single)
+  fullName.vb: Beutl.Graphics.Matrix.CreateScale(Single, Single)
+  name.vb: CreateScale(Single, Single)
+- uid: Beutl.Graphics.Matrix.CreateScale(Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Matrix.CreateScale(Beutl.Graphics.Vector)
+  id: CreateScale(Beutl.Graphics.Vector)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: CreateScale(Vector)
+  nameWithType: Matrix.CreateScale(Vector)
+  fullName: Beutl.Graphics.Matrix.CreateScale(Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix CreateScale(Vector scales)
+    parameters:
+    - id: scales
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function CreateScale(scales As Vector) As Matrix
+  overload: Beutl.Graphics.Matrix.CreateScale*
+- uid: Beutl.Graphics.Matrix.CreateTranslation(Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Matrix.CreateTranslation(Beutl.Graphics.Vector)
+  id: CreateTranslation(Beutl.Graphics.Vector)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: CreateTranslation(Vector)
+  nameWithType: Matrix.CreateTranslation(Vector)
+  fullName: Beutl.Graphics.Matrix.CreateTranslation(Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix CreateTranslation(Vector position)
+    parameters:
+    - id: position
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function CreateTranslation(position As Vector) As Matrix
+  overload: Beutl.Graphics.Matrix.CreateTranslation*
+- uid: Beutl.Graphics.Matrix.CreateTranslation(System.Single,System.Single)
+  commentId: M:Beutl.Graphics.Matrix.CreateTranslation(System.Single,System.Single)
+  id: CreateTranslation(System.Single,System.Single)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: CreateTranslation(float, float)
+  nameWithType: Matrix.CreateTranslation(float, float)
+  fullName: Beutl.Graphics.Matrix.CreateTranslation(float, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix CreateTranslation(float xPosition, float yPosition)
+    parameters:
+    - id: xPosition
+      type: System.Single
+    - id: yPosition
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function CreateTranslation(xPosition As Single, yPosition As Single) As Matrix
+  overload: Beutl.Graphics.Matrix.CreateTranslation*
+  nameWithType.vb: Matrix.CreateTranslation(Single, Single)
+  fullName.vb: Beutl.Graphics.Matrix.CreateTranslation(Single, Single)
+  name.vb: CreateTranslation(Single, Single)
+- uid: Beutl.Graphics.Matrix.Append(Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Matrix.Append(Beutl.Graphics.Matrix)
+  id: Append(Beutl.Graphics.Matrix)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Append(Matrix)
+  nameWithType: Matrix.Append(Matrix)
+  fullName: Beutl.Graphics.Matrix.Append(Beutl.Graphics.Matrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Matrix Append(Matrix value)
+    parameters:
+    - id: value
+      type: Beutl.Graphics.Matrix
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Function Append(value As Matrix) As Matrix
+  overload: Beutl.Graphics.Matrix.Append*
+- uid: Beutl.Graphics.Matrix.Prepend(Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Matrix.Prepend(Beutl.Graphics.Matrix)
+  id: Prepend(Beutl.Graphics.Matrix)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Prepend(Matrix)
+  nameWithType: Matrix.Prepend(Matrix)
+  fullName: Beutl.Graphics.Matrix.Prepend(Beutl.Graphics.Matrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Matrix Prepend(Matrix value)
+    parameters:
+    - id: value
+      type: Beutl.Graphics.Matrix
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Function Prepend(value As Matrix) As Matrix
+  overload: Beutl.Graphics.Matrix.Prepend*
+- uid: Beutl.Graphics.Matrix.GetDeterminant
+  commentId: M:Beutl.Graphics.Matrix.GetDeterminant
+  id: GetDeterminant
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: GetDeterminant()
+  nameWithType: Matrix.GetDeterminant()
+  fullName: Beutl.Graphics.Matrix.GetDeterminant()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float GetDeterminant()
+    return:
+      type: System.Single
+    content.vb: Public Function GetDeterminant() As Single
+  overload: Beutl.Graphics.Matrix.GetDeterminant*
+- uid: Beutl.Graphics.Matrix.Transform(Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.Matrix.Transform(Beutl.Graphics.Point)
+  id: Transform(Beutl.Graphics.Point)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Transform(Point)
+  nameWithType: Matrix.Transform(Point)
+  fullName: Beutl.Graphics.Matrix.Transform(Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point Transform(Point p)
+    parameters:
+    - id: p
+      type: Beutl.Graphics.Point
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public Function Transform(p As Point) As Point
+  overload: Beutl.Graphics.Matrix.Transform*
+- uid: Beutl.Graphics.Matrix.Equals(Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Matrix.Equals(Beutl.Graphics.Matrix)
+  id: Equals(Beutl.Graphics.Matrix)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Equals(Matrix)
+  nameWithType: Matrix.Equals(Matrix)
+  fullName: Beutl.Graphics.Matrix.Equals(Beutl.Graphics.Matrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool Equals(Matrix other)
+    parameters:
+    - id: other
+      type: Beutl.Graphics.Matrix
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Matrix) As Boolean
+  overload: Beutl.Graphics.Matrix.Equals*
+  implements:
+  - System.IEquatable{Beutl.Graphics.Matrix}.Equals(Beutl.Graphics.Matrix)
+- uid: Beutl.Graphics.Matrix.Equals(System.Object)
+  commentId: M:Beutl.Graphics.Matrix.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Matrix.Equals(object?)
+  fullName: Beutl.Graphics.Matrix.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Graphics.Matrix.Equals*
+  nameWithType.vb: Matrix.Equals(Object)
+  fullName.vb: Beutl.Graphics.Matrix.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Graphics.Matrix.GetHashCode
+  commentId: M:Beutl.Graphics.Matrix.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Matrix.GetHashCode()
+  fullName: Beutl.Graphics.Matrix.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Graphics.Matrix.GetHashCode*
+- uid: Beutl.Graphics.Matrix.ToString
+  commentId: M:Beutl.Graphics.Matrix.ToString
+  id: ToString
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Matrix.ToString()
+  fullName: Beutl.Graphics.Matrix.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Graphics.Matrix.ToString*
+- uid: Beutl.Graphics.Matrix.TryInvert(Beutl.Graphics.Matrix@)
+  commentId: M:Beutl.Graphics.Matrix.TryInvert(Beutl.Graphics.Matrix@)
+  id: TryInvert(Beutl.Graphics.Matrix@)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: TryInvert(out Matrix)
+  nameWithType: Matrix.TryInvert(out Matrix)
+  fullName: Beutl.Graphics.Matrix.TryInvert(out Beutl.Graphics.Matrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool TryInvert(out Matrix inverted)
+    parameters:
+    - id: inverted
+      type: Beutl.Graphics.Matrix
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryInvert(inverted As Matrix) As Boolean
+  overload: Beutl.Graphics.Matrix.TryInvert*
+  nameWithType.vb: Matrix.TryInvert(Matrix)
+  fullName.vb: Beutl.Graphics.Matrix.TryInvert(Beutl.Graphics.Matrix)
+  name.vb: TryInvert(Matrix)
+- uid: Beutl.Graphics.Matrix.Invert
+  commentId: M:Beutl.Graphics.Matrix.Invert
+  id: Invert
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Invert()
+  nameWithType: Matrix.Invert()
+  fullName: Beutl.Graphics.Matrix.Invert()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Matrix Invert()
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Function Invert() As Matrix
+  overload: Beutl.Graphics.Matrix.Invert*
+- uid: Beutl.Graphics.Matrix.TryParse(System.String,Beutl.Graphics.Matrix@)
+  commentId: M:Beutl.Graphics.Matrix.TryParse(System.String,Beutl.Graphics.Matrix@)
+  id: TryParse(System.String,Beutl.Graphics.Matrix@)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out Matrix)
+  nameWithType: Matrix.TryParse(string, out Matrix)
+  fullName: Beutl.Graphics.Matrix.TryParse(string, out Beutl.Graphics.Matrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(string s, out Matrix result)
+    parameters:
+    - id: s
+      type: System.String
+    - id: result
+      type: Beutl.Graphics.Matrix
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, result As Matrix) As Boolean
+  overload: Beutl.Graphics.Matrix.TryParse*
+  nameWithType.vb: Matrix.TryParse(String, Matrix)
+  fullName.vb: Beutl.Graphics.Matrix.TryParse(String, Beutl.Graphics.Matrix)
+  name.vb: TryParse(String, Matrix)
+- uid: Beutl.Graphics.Matrix.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Matrix@)
+  commentId: M:Beutl.Graphics.Matrix.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Matrix@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Matrix@)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out Matrix)
+  nameWithType: Matrix.TryParse(ReadOnlySpan<char>, out Matrix)
+  fullName: Beutl.Graphics.Matrix.TryParse(System.ReadOnlySpan<char>, out Beutl.Graphics.Matrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out Matrix result)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: result
+      type: Beutl.Graphics.Matrix
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), result As Matrix) As Boolean
+  overload: Beutl.Graphics.Matrix.TryParse*
+  nameWithType.vb: Matrix.TryParse(ReadOnlySpan(Of Char), Matrix)
+  fullName.vb: Beutl.Graphics.Matrix.TryParse(System.ReadOnlySpan(Of Char), Beutl.Graphics.Matrix)
+  name.vb: TryParse(ReadOnlySpan(Of Char), Matrix)
+- uid: Beutl.Graphics.Matrix.Parse(System.String)
+  commentId: M:Beutl.Graphics.Matrix.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: Matrix.Parse(string)
+  fullName: Beutl.Graphics.Matrix.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function Parse(s As String) As Matrix
+  overload: Beutl.Graphics.Matrix.Parse*
+  nameWithType.vb: Matrix.Parse(String)
+  fullName.vb: Beutl.Graphics.Matrix.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Graphics.Matrix.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Graphics.Matrix.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: Matrix.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Graphics.Matrix.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As Matrix
+  overload: Beutl.Graphics.Matrix.Parse*
+  nameWithType.vb: Matrix.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Graphics.Matrix.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Graphics.Matrix.TryDecomposeTransform(Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,System.Single@)
+  commentId: M:Beutl.Graphics.Matrix.TryDecomposeTransform(Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,System.Single@)
+  id: TryDecomposeTransform(Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,Beutl.Graphics.Vector@,System.Single@)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: TryDecomposeTransform(out Vector, out Vector, out Vector, out float)
+  nameWithType: Matrix.TryDecomposeTransform(out Vector, out Vector, out Vector, out float)
+  fullName: Beutl.Graphics.Matrix.TryDecomposeTransform(out Beutl.Graphics.Vector, out Beutl.Graphics.Vector, out Beutl.Graphics.Vector, out float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool TryDecomposeTransform(out Vector translate, out Vector scale, out Vector skew, out float angle)
+    parameters:
+    - id: translate
+      type: Beutl.Graphics.Vector
+    - id: scale
+      type: Beutl.Graphics.Vector
+    - id: skew
+      type: Beutl.Graphics.Vector
+    - id: angle
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryDecomposeTransform(translate As Vector, scale As Vector, skew As Vector, angle As Single) As Boolean
+  overload: Beutl.Graphics.Matrix.TryDecomposeTransform*
+  nameWithType.vb: Matrix.TryDecomposeTransform(Vector, Vector, Vector, Single)
+  fullName.vb: Beutl.Graphics.Matrix.TryDecomposeTransform(Beutl.Graphics.Vector, Beutl.Graphics.Vector, Beutl.Graphics.Vector, Single)
+  name.vb: TryDecomposeTransform(Vector, Vector, Vector, Single)
+- uid: Beutl.Graphics.Matrix.ComposeTransform(Beutl.Graphics.Vector,Beutl.Graphics.Vector,Beutl.Graphics.Vector,System.Single)
+  commentId: M:Beutl.Graphics.Matrix.ComposeTransform(Beutl.Graphics.Vector,Beutl.Graphics.Vector,Beutl.Graphics.Vector,System.Single)
+  id: ComposeTransform(Beutl.Graphics.Vector,Beutl.Graphics.Vector,Beutl.Graphics.Vector,System.Single)
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: ComposeTransform(Vector, Vector, Vector, float)
+  nameWithType: Matrix.ComposeTransform(Vector, Vector, Vector, float)
+  fullName: Beutl.Graphics.Matrix.ComposeTransform(Beutl.Graphics.Vector, Beutl.Graphics.Vector, Beutl.Graphics.Vector, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix ComposeTransform(Vector translate, Vector scale, Vector skew, float angle)
+    parameters:
+    - id: translate
+      type: Beutl.Graphics.Vector
+    - id: scale
+      type: Beutl.Graphics.Vector
+    - id: skew
+      type: Beutl.Graphics.Vector
+    - id: angle
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared Function ComposeTransform(translate As Vector, scale As Vector, skew As Vector, angle As Single) As Matrix
+  overload: Beutl.Graphics.Matrix.ComposeTransform*
+  nameWithType.vb: Matrix.ComposeTransform(Vector, Vector, Vector, Single)
+  fullName.vb: Beutl.Graphics.Matrix.ComposeTransform(Beutl.Graphics.Vector, Beutl.Graphics.Vector, Beutl.Graphics.Vector, Single)
+  name.vb: ComposeTransform(Vector, Vector, Vector, Single)
+- uid: Beutl.Graphics.Matrix.Identity
+  commentId: P:Beutl.Graphics.Matrix.Identity
+  id: Identity
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: Identity
+  nameWithType: Matrix.Identity
+  fullName: Beutl.Graphics.Matrix.Identity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Matrix Identity { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Shared ReadOnly Property Identity As Matrix
+  overload: Beutl.Graphics.Matrix.Identity*
+- uid: Beutl.Graphics.Matrix.IsIdentity
+  commentId: P:Beutl.Graphics.Matrix.IsIdentity
+  id: IsIdentity
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: IsIdentity
+  nameWithType: Matrix.IsIdentity
+  fullName: Beutl.Graphics.Matrix.IsIdentity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool IsIdentity { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIdentity As Boolean
+  overload: Beutl.Graphics.Matrix.IsIdentity*
+- uid: Beutl.Graphics.Matrix.HasInverse
+  commentId: P:Beutl.Graphics.Matrix.HasInverse
+  id: HasInverse
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: HasInverse
+  nameWithType: Matrix.HasInverse
+  fullName: Beutl.Graphics.Matrix.HasInverse
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool HasInverse { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasInverse As Boolean
+  overload: Beutl.Graphics.Matrix.HasInverse*
+- uid: Beutl.Graphics.Matrix.M11
+  commentId: P:Beutl.Graphics.Matrix.M11
+  id: M11
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M11
+  nameWithType: Matrix.M11
+  fullName: Beutl.Graphics.Matrix.M11
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M11 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M11 As Single
+  overload: Beutl.Graphics.Matrix.M11*
+- uid: Beutl.Graphics.Matrix.M12
+  commentId: P:Beutl.Graphics.Matrix.M12
+  id: M12
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M12
+  nameWithType: Matrix.M12
+  fullName: Beutl.Graphics.Matrix.M12
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M12 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M12 As Single
+  overload: Beutl.Graphics.Matrix.M12*
+- uid: Beutl.Graphics.Matrix.M13
+  commentId: P:Beutl.Graphics.Matrix.M13
+  id: M13
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M13
+  nameWithType: Matrix.M13
+  fullName: Beutl.Graphics.Matrix.M13
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M13 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M13 As Single
+  overload: Beutl.Graphics.Matrix.M13*
+- uid: Beutl.Graphics.Matrix.M21
+  commentId: P:Beutl.Graphics.Matrix.M21
+  id: M21
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M21
+  nameWithType: Matrix.M21
+  fullName: Beutl.Graphics.Matrix.M21
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M21 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M21 As Single
+  overload: Beutl.Graphics.Matrix.M21*
+- uid: Beutl.Graphics.Matrix.M22
+  commentId: P:Beutl.Graphics.Matrix.M22
+  id: M22
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M22
+  nameWithType: Matrix.M22
+  fullName: Beutl.Graphics.Matrix.M22
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M22 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M22 As Single
+  overload: Beutl.Graphics.Matrix.M22*
+- uid: Beutl.Graphics.Matrix.M23
+  commentId: P:Beutl.Graphics.Matrix.M23
+  id: M23
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M23
+  nameWithType: Matrix.M23
+  fullName: Beutl.Graphics.Matrix.M23
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M23 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M23 As Single
+  overload: Beutl.Graphics.Matrix.M23*
+- uid: Beutl.Graphics.Matrix.M31
+  commentId: P:Beutl.Graphics.Matrix.M31
+  id: M31
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M31
+  nameWithType: Matrix.M31
+  fullName: Beutl.Graphics.Matrix.M31
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M31 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M31 As Single
+  overload: Beutl.Graphics.Matrix.M31*
+- uid: Beutl.Graphics.Matrix.M32
+  commentId: P:Beutl.Graphics.Matrix.M32
+  id: M32
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M32
+  nameWithType: Matrix.M32
+  fullName: Beutl.Graphics.Matrix.M32
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M32 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M32 As Single
+  overload: Beutl.Graphics.Matrix.M32*
+- uid: Beutl.Graphics.Matrix.M33
+  commentId: P:Beutl.Graphics.Matrix.M33
+  id: M33
+  parent: Beutl.Graphics.Matrix
+  langs:
+  - csharp
+  - vb
+  name: M33
+  nameWithType: Matrix.M33
+  fullName: Beutl.Graphics.Matrix.M33
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Matrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M33 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M33 As Single
+  overload: Beutl.Graphics.Matrix.M33*
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.IEquatable{Beutl.Graphics.Matrix}
+  commentId: T:System.IEquatable{Beutl.Graphics.Matrix}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Matrix>
+  nameWithType: IEquatable<Matrix>
+  fullName: System.IEquatable<Beutl.Graphics.Matrix>
+  nameWithType.vb: IEquatable(Of Matrix)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.Matrix)
+  name.vb: IEquatable(Of Matrix)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.Matrix}
+  commentId: T:System.ISpanParsable{Beutl.Graphics.Matrix}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<Matrix>
+  nameWithType: ISpanParsable<Matrix>
+  fullName: System.ISpanParsable<Beutl.Graphics.Matrix>
+  nameWithType.vb: ISpanParsable(Of Matrix)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.Matrix)
+  name.vb: ISpanParsable(Of Matrix)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: System.IParsable{Beutl.Graphics.Matrix}
+  commentId: T:System.IParsable{Beutl.Graphics.Matrix}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<Matrix>
+  nameWithType: IParsable<Matrix>
+  fullName: System.IParsable<Beutl.Graphics.Matrix>
+  nameWithType.vb: IParsable(Of Matrix)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.Matrix)
+  name.vb: IParsable(Of Matrix)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  commentId: T:System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  parent: System.Numerics
+  definition: System.Numerics.IMultiplyOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<Matrix, Matrix, Matrix>
+  nameWithType: IMultiplyOperators<Matrix, Matrix, Matrix>
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Matrix, Beutl.Graphics.Matrix, Beutl.Graphics.Matrix>
+  nameWithType.vb: IMultiplyOperators(Of Matrix, Matrix, Matrix)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Matrix, Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  name.vb: IMultiplyOperators(Of Matrix, Matrix, Matrix)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  commentId: T:System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  parent: System.Numerics
+  definition: System.Numerics.IUnaryNegationOperators`2
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2
+  name: IUnaryNegationOperators<Matrix, Matrix>
+  nameWithType: IUnaryNegationOperators<Matrix, Matrix>
+  fullName: System.Numerics.IUnaryNegationOperators<Beutl.Graphics.Matrix, Beutl.Graphics.Matrix>
+  nameWithType.vb: IUnaryNegationOperators(Of Matrix, Matrix)
+  fullName.vb: System.Numerics.IUnaryNegationOperators(Of Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  name.vb: IUnaryNegationOperators(Of Matrix, Matrix)
+  spec.csharp:
+  - uid: System.Numerics.IUnaryNegationOperators`2
+    name: IUnaryNegationOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2
+  - name: <
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IUnaryNegationOperators`2
+    name: IUnaryNegationOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: Beutl.ITupleConvertible{Beutl.Graphics.Matrix,System.Single}
+  commentId: T:Beutl.ITupleConvertible{Beutl.Graphics.Matrix,System.Single}
+  parent: Beutl
+  definition: Beutl.ITupleConvertible`2
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  name: ITupleConvertible<Matrix, float>
+  nameWithType: ITupleConvertible<Matrix, float>
+  fullName: Beutl.ITupleConvertible<Beutl.Graphics.Matrix, float>
+  nameWithType.vb: ITupleConvertible(Of Matrix, Single)
+  fullName.vb: Beutl.ITupleConvertible(Of Beutl.Graphics.Matrix, Single)
+  name.vb: ITupleConvertible(Of Matrix, Single)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: <
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics.IMultiplyOperators`3
+  commentId: T:System.Numerics.IMultiplyOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<TSelf, TOther, TResult>
+  nameWithType: IMultiplyOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IMultiplyOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IMultiplyOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of TSelf, TOther, TResult)
+  name.vb: IMultiplyOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Numerics.IUnaryNegationOperators`2
+  commentId: T:System.Numerics.IUnaryNegationOperators`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2
+  name: IUnaryNegationOperators<TSelf, TResult>
+  nameWithType: IUnaryNegationOperators<TSelf, TResult>
+  fullName: System.Numerics.IUnaryNegationOperators<TSelf, TResult>
+  nameWithType.vb: IUnaryNegationOperators(Of TSelf, TResult)
+  fullName.vb: System.Numerics.IUnaryNegationOperators(Of TSelf, TResult)
+  name.vb: IUnaryNegationOperators(Of TSelf, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IUnaryNegationOperators`2
+    name: IUnaryNegationOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IUnaryNegationOperators`2
+    name: IUnaryNegationOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Graphics.Matrix.#ctor*
+  commentId: Overload:Beutl.Graphics.Matrix.#ctor
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: Matrix
+  nameWithType: Matrix.Matrix
+  fullName: Beutl.Graphics.Matrix.Matrix
+  nameWithType.vb: Matrix.New
+  fullName.vb: Beutl.Graphics.Matrix.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.Matrix.op_Multiply*
+  commentId: Overload:Beutl.Graphics.Matrix.op_Multiply
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_Multiply_Beutl_Graphics_Matrix_Beutl_Graphics_Matrix_
+  name: operator *
+  nameWithType: Matrix.operator *
+  fullName: Beutl.Graphics.Matrix.operator *
+  nameWithType.vb: Matrix.*
+  fullName.vb: Beutl.Graphics.Matrix.*
+  name.vb: '*'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Matrix.op_Multiply*
+    name: '*'
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_Multiply_Beutl_Graphics_Matrix_Beutl_Graphics_Matrix_
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  commentId: M:System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+  parent: System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  definition: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(Matrix, Matrix)
+  nameWithType: IMultiplyOperators<Matrix, Matrix, Matrix>.operator *(Matrix, Matrix)
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Matrix, Beutl.Graphics.Matrix, Beutl.Graphics.Matrix>.operator *(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  nameWithType.vb: IMultiplyOperators(Of Matrix, Matrix, Matrix).*(Matrix, Matrix)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Matrix, Beutl.Graphics.Matrix, Beutl.Graphics.Matrix).*(Beutl.Graphics.Matrix, Beutl.Graphics.Matrix)
+  name.vb: '*(Matrix, Matrix)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_Multiply(Beutl.Graphics.Matrix,Beutl.Graphics.Matrix)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: Beutl.Graphics.Matrix
+  commentId: T:Beutl.Graphics.Matrix
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Beutl.Graphics.Matrix
+- uid: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  commentId: M:System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(TSelf, TOther)
+  nameWithType: IMultiplyOperators<TSelf, TOther, TResult>.operator *(TSelf, TOther)
+  fullName: System.Numerics.IMultiplyOperators<TSelf, TOther, TResult>.operator *(TSelf, TOther)
+  nameWithType.vb: IMultiplyOperators(Of TSelf, TOther, TResult).*(TSelf, TOther)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of TSelf, TOther, TResult).*(TSelf, TOther)
+  name.vb: '*(TSelf, TOther)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Matrix.op_UnaryNegation*
+  commentId: Overload:Beutl.Graphics.Matrix.op_UnaryNegation
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_UnaryNegation_Beutl_Graphics_Matrix_
+  name: operator -
+  nameWithType: Matrix.operator -
+  fullName: Beutl.Graphics.Matrix.operator -
+  nameWithType.vb: Matrix.-
+  fullName.vb: Beutl.Graphics.Matrix.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Matrix.op_UnaryNegation*
+    name: '-'
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_UnaryNegation_Beutl_Graphics_Matrix_
+- uid: System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_UnaryNegation(Beutl.Graphics.Matrix)
+  commentId: M:System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_UnaryNegation(Beutl.Graphics.Matrix)
+  parent: System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}
+  definition: System.Numerics.IUnaryNegationOperators`2.op_UnaryNegation(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2.op_unarynegation
+  name: operator -(Matrix)
+  nameWithType: IUnaryNegationOperators<Matrix, Matrix>.operator -(Matrix)
+  fullName: System.Numerics.IUnaryNegationOperators<Beutl.Graphics.Matrix, Beutl.Graphics.Matrix>.operator -(Beutl.Graphics.Matrix)
+  nameWithType.vb: IUnaryNegationOperators(Of Matrix, Matrix).-(Matrix)
+  fullName.vb: System.Numerics.IUnaryNegationOperators(Of Beutl.Graphics.Matrix, Beutl.Graphics.Matrix).-(Beutl.Graphics.Matrix)
+  name.vb: -(Matrix)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IUnaryNegationOperators{Beutl.Graphics.Matrix,Beutl.Graphics.Matrix}.op_UnaryNegation(Beutl.Graphics.Matrix)
+    name: '-'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2.op_unarynegation
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+  spec.vb:
+  - name: '-'
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: System.Numerics.IUnaryNegationOperators`2.op_UnaryNegation(`0)
+  commentId: M:System.Numerics.IUnaryNegationOperators`2.op_UnaryNegation(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2.op_unarynegation
+  name: operator -(TSelf)
+  nameWithType: IUnaryNegationOperators<TSelf, TResult>.operator -(TSelf)
+  fullName: System.Numerics.IUnaryNegationOperators<TSelf, TResult>.operator -(TSelf)
+  nameWithType.vb: IUnaryNegationOperators(Of TSelf, TResult).-(TSelf)
+  fullName.vb: System.Numerics.IUnaryNegationOperators(Of TSelf, TResult).-(TSelf)
+  name.vb: -(TSelf)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IUnaryNegationOperators`2.op_UnaryNegation(`0)
+    name: '-'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2.op_unarynegation
+  - name: (
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - name: '-'
+  - name: (
+  - name: TSelf
+  - name: )
+- uid: Beutl.Graphics.Matrix.op_Equality*
+  commentId: Overload:Beutl.Graphics.Matrix.op_Equality
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_Equality_Beutl_Graphics_Matrix_Beutl_Graphics_Matrix_
+  name: operator ==
+  nameWithType: Matrix.operator ==
+  fullName: Beutl.Graphics.Matrix.operator ==
+  nameWithType.vb: Matrix.=
+  fullName.vb: Beutl.Graphics.Matrix.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Matrix.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_Equality_Beutl_Graphics_Matrix_Beutl_Graphics_Matrix_
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Graphics.Matrix.op_Inequality*
+  commentId: Overload:Beutl.Graphics.Matrix.op_Inequality
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_Inequality_Beutl_Graphics_Matrix_Beutl_Graphics_Matrix_
+  name: operator !=
+  nameWithType: Matrix.operator !=
+  fullName: Beutl.Graphics.Matrix.operator !=
+  nameWithType.vb: Matrix.<>
+  fullName.vb: Beutl.Graphics.Matrix.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Matrix.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_op_Inequality_Beutl_Graphics_Matrix_Beutl_Graphics_Matrix_
+- uid: Beutl.Graphics.Matrix.CreateRotation*
+  commentId: Overload:Beutl.Graphics.Matrix.CreateRotation
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_CreateRotation_System_Single_
+  name: CreateRotation
+  nameWithType: Matrix.CreateRotation
+  fullName: Beutl.Graphics.Matrix.CreateRotation
+- uid: Beutl.Graphics.Matrix.CreateSkew*
+  commentId: Overload:Beutl.Graphics.Matrix.CreateSkew
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_CreateSkew_System_Single_System_Single_
+  name: CreateSkew
+  nameWithType: Matrix.CreateSkew
+  fullName: Beutl.Graphics.Matrix.CreateSkew
+- uid: Beutl.Graphics.Matrix.CreateScale*
+  commentId: Overload:Beutl.Graphics.Matrix.CreateScale
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_CreateScale_System_Single_System_Single_
+  name: CreateScale
+  nameWithType: Matrix.CreateScale
+  fullName: Beutl.Graphics.Matrix.CreateScale
+- uid: Beutl.Graphics.Vector
+  commentId: T:Beutl.Graphics.Vector
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: Beutl.Graphics.Vector
+- uid: Beutl.Graphics.Matrix.CreateTranslation*
+  commentId: Overload:Beutl.Graphics.Matrix.CreateTranslation
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_CreateTranslation_Beutl_Graphics_Vector_
+  name: CreateTranslation
+  nameWithType: Matrix.CreateTranslation
+  fullName: Beutl.Graphics.Matrix.CreateTranslation
+- uid: Beutl.Graphics.Matrix.Append*
+  commentId: Overload:Beutl.Graphics.Matrix.Append
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_Append_Beutl_Graphics_Matrix_
+  name: Append
+  nameWithType: Matrix.Append
+  fullName: Beutl.Graphics.Matrix.Append
+- uid: Beutl.Graphics.Matrix.Prepend*
+  commentId: Overload:Beutl.Graphics.Matrix.Prepend
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_Prepend_Beutl_Graphics_Matrix_
+  name: Prepend
+  nameWithType: Matrix.Prepend
+  fullName: Beutl.Graphics.Matrix.Prepend
+- uid: Beutl.Graphics.Matrix.GetDeterminant*
+  commentId: Overload:Beutl.Graphics.Matrix.GetDeterminant
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_GetDeterminant
+  name: GetDeterminant
+  nameWithType: Matrix.GetDeterminant
+  fullName: Beutl.Graphics.Matrix.GetDeterminant
+- uid: Beutl.Graphics.Matrix.Transform*
+  commentId: Overload:Beutl.Graphics.Matrix.Transform
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_Transform_Beutl_Graphics_Point_
+  name: Transform
+  nameWithType: Matrix.Transform
+  fullName: Beutl.Graphics.Matrix.Transform
+- uid: Beutl.Graphics.Point
+  commentId: T:Beutl.Graphics.Point
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Point.html
+  name: Point
+  nameWithType: Point
+  fullName: Beutl.Graphics.Point
+- uid: Beutl.Graphics.Matrix.Equals*
+  commentId: Overload:Beutl.Graphics.Matrix.Equals
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_Equals_Beutl_Graphics_Matrix_
+  name: Equals
+  nameWithType: Matrix.Equals
+  fullName: Beutl.Graphics.Matrix.Equals
+- uid: System.IEquatable{Beutl.Graphics.Matrix}.Equals(Beutl.Graphics.Matrix)
+  commentId: M:System.IEquatable{Beutl.Graphics.Matrix}.Equals(Beutl.Graphics.Matrix)
+  parent: System.IEquatable{Beutl.Graphics.Matrix}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Matrix)
+  nameWithType: IEquatable<Matrix>.Equals(Matrix)
+  fullName: System.IEquatable<Beutl.Graphics.Matrix>.Equals(Beutl.Graphics.Matrix)
+  nameWithType.vb: IEquatable(Of Matrix).Equals(Matrix)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.Matrix).Equals(Beutl.Graphics.Matrix)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Graphics.Matrix}.Equals(Beutl.Graphics.Matrix)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Graphics.Matrix}.Equals(Beutl.Graphics.Matrix)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.Matrix.GetHashCode*
+  commentId: Overload:Beutl.Graphics.Matrix.GetHashCode
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_GetHashCode
+  name: GetHashCode
+  nameWithType: Matrix.GetHashCode
+  fullName: Beutl.Graphics.Matrix.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.Matrix.ToString*
+  commentId: Overload:Beutl.Graphics.Matrix.ToString
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_ToString
+  name: ToString
+  nameWithType: Matrix.ToString
+  fullName: Beutl.Graphics.Matrix.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Graphics.Matrix.TryInvert*
+  commentId: Overload:Beutl.Graphics.Matrix.TryInvert
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_TryInvert_Beutl_Graphics_Matrix__
+  name: TryInvert
+  nameWithType: Matrix.TryInvert
+  fullName: Beutl.Graphics.Matrix.TryInvert
+- uid: Beutl.Graphics.Matrix.Invert*
+  commentId: Overload:Beutl.Graphics.Matrix.Invert
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_Invert
+  name: Invert
+  nameWithType: Matrix.Invert
+  fullName: Beutl.Graphics.Matrix.Invert
+- uid: Beutl.Graphics.Matrix.TryParse*
+  commentId: Overload:Beutl.Graphics.Matrix.TryParse
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_TryParse_System_String_Beutl_Graphics_Matrix__
+  name: TryParse
+  nameWithType: Matrix.TryParse
+  fullName: Beutl.Graphics.Matrix.TryParse
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.Matrix.Parse*
+  commentId: Overload:Beutl.Graphics.Matrix.Parse
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_Parse_System_String_
+  name: Parse
+  nameWithType: Matrix.Parse
+  fullName: Beutl.Graphics.Matrix.Parse
+- uid: Beutl.Graphics.Matrix.TryDecomposeTransform*
+  commentId: Overload:Beutl.Graphics.Matrix.TryDecomposeTransform
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_TryDecomposeTransform_Beutl_Graphics_Vector__Beutl_Graphics_Vector__Beutl_Graphics_Vector__System_Single__
+  name: TryDecomposeTransform
+  nameWithType: Matrix.TryDecomposeTransform
+  fullName: Beutl.Graphics.Matrix.TryDecomposeTransform
+- uid: Beutl.Graphics.Matrix.ComposeTransform*
+  commentId: Overload:Beutl.Graphics.Matrix.ComposeTransform
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_ComposeTransform_Beutl_Graphics_Vector_Beutl_Graphics_Vector_Beutl_Graphics_Vector_System_Single_
+  name: ComposeTransform
+  nameWithType: Matrix.ComposeTransform
+  fullName: Beutl.Graphics.Matrix.ComposeTransform
+- uid: Beutl.Graphics.Matrix.Identity*
+  commentId: Overload:Beutl.Graphics.Matrix.Identity
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_Identity
+  name: Identity
+  nameWithType: Matrix.Identity
+  fullName: Beutl.Graphics.Matrix.Identity
+- uid: Beutl.Graphics.Matrix.IsIdentity*
+  commentId: Overload:Beutl.Graphics.Matrix.IsIdentity
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_IsIdentity
+  name: IsIdentity
+  nameWithType: Matrix.IsIdentity
+  fullName: Beutl.Graphics.Matrix.IsIdentity
+- uid: Beutl.Graphics.Matrix.HasInverse*
+  commentId: Overload:Beutl.Graphics.Matrix.HasInverse
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_HasInverse
+  name: HasInverse
+  nameWithType: Matrix.HasInverse
+  fullName: Beutl.Graphics.Matrix.HasInverse
+- uid: Beutl.Graphics.Matrix.M11*
+  commentId: Overload:Beutl.Graphics.Matrix.M11
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M11
+  name: M11
+  nameWithType: Matrix.M11
+  fullName: Beutl.Graphics.Matrix.M11
+- uid: Beutl.Graphics.Matrix.M12*
+  commentId: Overload:Beutl.Graphics.Matrix.M12
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M12
+  name: M12
+  nameWithType: Matrix.M12
+  fullName: Beutl.Graphics.Matrix.M12
+- uid: Beutl.Graphics.Matrix.M13*
+  commentId: Overload:Beutl.Graphics.Matrix.M13
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M13
+  name: M13
+  nameWithType: Matrix.M13
+  fullName: Beutl.Graphics.Matrix.M13
+- uid: Beutl.Graphics.Matrix.M21*
+  commentId: Overload:Beutl.Graphics.Matrix.M21
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M21
+  name: M21
+  nameWithType: Matrix.M21
+  fullName: Beutl.Graphics.Matrix.M21
+- uid: Beutl.Graphics.Matrix.M22*
+  commentId: Overload:Beutl.Graphics.Matrix.M22
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M22
+  name: M22
+  nameWithType: Matrix.M22
+  fullName: Beutl.Graphics.Matrix.M22
+- uid: Beutl.Graphics.Matrix.M23*
+  commentId: Overload:Beutl.Graphics.Matrix.M23
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M23
+  name: M23
+  nameWithType: Matrix.M23
+  fullName: Beutl.Graphics.Matrix.M23
+- uid: Beutl.Graphics.Matrix.M31*
+  commentId: Overload:Beutl.Graphics.Matrix.M31
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M31
+  name: M31
+  nameWithType: Matrix.M31
+  fullName: Beutl.Graphics.Matrix.M31
+- uid: Beutl.Graphics.Matrix.M32*
+  commentId: Overload:Beutl.Graphics.Matrix.M32
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M32
+  name: M32
+  nameWithType: Matrix.M32
+  fullName: Beutl.Graphics.Matrix.M32
+- uid: Beutl.Graphics.Matrix.M33*
+  commentId: Overload:Beutl.Graphics.Matrix.M33
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html#Beutl_Graphics_Matrix_M33
+  name: M33
+  nameWithType: Matrix.M33
+  fullName: Beutl.Graphics.Matrix.M33

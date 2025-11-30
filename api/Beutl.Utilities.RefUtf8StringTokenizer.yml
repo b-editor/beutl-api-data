@@ -1,0 +1,889 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Utilities.RefUtf8StringTokenizer
+  commentId: T:Beutl.Utilities.RefUtf8StringTokenizer
+  id: RefUtf8StringTokenizer
+  parent: Beutl.Utilities
+  children:
+  - Beutl.Utilities.RefUtf8StringTokenizer.#ctor(System.ReadOnlySpan{System.Byte},System.Char,System.String)
+  - Beutl.Utilities.RefUtf8StringTokenizer.#ctor(System.ReadOnlySpan{System.Byte},System.IFormatProvider,System.String)
+  - Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken
+  - Beutl.Utilities.RefUtf8StringTokenizer.Dispose
+  - Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble(System.Nullable{System.Char})
+  - Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32(System.Nullable{System.Char})
+  - Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle(System.Nullable{System.Char})
+  - Beutl.Utilities.RefUtf8StringTokenizer.ReadString(System.Nullable{System.Char})
+  - Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble(System.Double@,System.Nullable{System.Char})
+  - Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32(System.Int32@,System.Nullable{System.Char})
+  - Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle(System.Single@,System.Nullable{System.Char})
+  - Beutl.Utilities.RefUtf8StringTokenizer.TryReadString(System.ReadOnlySpan{System.Byte}@,System.Nullable{System.Char})
+  langs:
+  - csharp
+  - vb
+  name: RefUtf8StringTokenizer
+  nameWithType: RefUtf8StringTokenizer
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public ref struct RefUtf8StringTokenizer
+    content.vb: Public Structure RefUtf8StringTokenizer
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.#ctor(System.ReadOnlySpan{System.Byte},System.IFormatProvider,System.String)
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.#ctor(System.ReadOnlySpan{System.Byte},System.IFormatProvider,System.String)
+  id: '#ctor(System.ReadOnlySpan{System.Byte},System.IFormatProvider,System.String)'
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: RefUtf8StringTokenizer(ReadOnlySpan<byte>, IFormatProvider, string)
+  nameWithType: RefUtf8StringTokenizer.RefUtf8StringTokenizer(ReadOnlySpan<byte>, IFormatProvider, string)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.RefUtf8StringTokenizer(System.ReadOnlySpan<byte>, System.IFormatProvider, string)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public RefUtf8StringTokenizer(ReadOnlySpan<byte> s, IFormatProvider formatProvider, string exceptionMessage = "")
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Byte}
+    - id: formatProvider
+      type: System.IFormatProvider
+    - id: exceptionMessage
+      type: System.String
+    content.vb: Public Sub New(s As ReadOnlySpan(Of Byte), formatProvider As IFormatProvider, exceptionMessage As String = "")
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.#ctor*
+  nameWithType.vb: RefUtf8StringTokenizer.New(ReadOnlySpan(Of Byte), IFormatProvider, String)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.New(System.ReadOnlySpan(Of Byte), System.IFormatProvider, String)
+  name.vb: New(ReadOnlySpan(Of Byte), IFormatProvider, String)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.#ctor(System.ReadOnlySpan{System.Byte},System.Char,System.String)
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.#ctor(System.ReadOnlySpan{System.Byte},System.Char,System.String)
+  id: '#ctor(System.ReadOnlySpan{System.Byte},System.Char,System.String)'
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: RefUtf8StringTokenizer(ReadOnlySpan<byte>, char, string)
+  nameWithType: RefUtf8StringTokenizer.RefUtf8StringTokenizer(ReadOnlySpan<byte>, char, string)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.RefUtf8StringTokenizer(System.ReadOnlySpan<byte>, char, string)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public RefUtf8StringTokenizer(ReadOnlySpan<byte> s, char separator = ',', string exceptionMessage = "")
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Byte}
+    - id: separator
+      type: System.Char
+    - id: exceptionMessage
+      type: System.String
+    content.vb: Public Sub New(s As ReadOnlySpan(Of Byte), separator As Char = ","c, exceptionMessage As String = "")
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.#ctor*
+  nameWithType.vb: RefUtf8StringTokenizer.New(ReadOnlySpan(Of Byte), Char, String)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.New(System.ReadOnlySpan(Of Byte), Char, String)
+  name.vb: New(ReadOnlySpan(Of Byte), Char, String)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.Dispose
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.Dispose
+  id: Dispose
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: RefUtf8StringTokenizer.Dispose()
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.Dispose()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.Dispose*
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32(System.Int32@,System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32(System.Int32@,System.Nullable{System.Char})
+  id: TryReadInt32(System.Int32@,System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: TryReadInt32(out int, char?)
+  nameWithType: RefUtf8StringTokenizer.TryReadInt32(out int, char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32(out int, char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public bool TryReadInt32(out int result, char? separator = null)
+    parameters:
+    - id: result
+      type: System.Int32
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryReadInt32(result As Integer, separator As Char? = Nothing) As Boolean
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32*
+  nameWithType.vb: RefUtf8StringTokenizer.TryReadInt32(Integer, Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32(Integer, Char?)
+  name.vb: TryReadInt32(Integer, Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32(System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32(System.Nullable{System.Char})
+  id: ReadInt32(System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: ReadInt32(char?)
+  nameWithType: RefUtf8StringTokenizer.ReadInt32(char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32(char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public int ReadInt32(char? separator = null)
+    parameters:
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.Int32
+    content.vb: Public Function ReadInt32(separator As Char? = Nothing) As Integer
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32*
+  nameWithType.vb: RefUtf8StringTokenizer.ReadInt32(Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32(Char?)
+  name.vb: ReadInt32(Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble(System.Double@,System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble(System.Double@,System.Nullable{System.Char})
+  id: TryReadDouble(System.Double@,System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: TryReadDouble(out double, char?)
+  nameWithType: RefUtf8StringTokenizer.TryReadDouble(out double, char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble(out double, char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public bool TryReadDouble(out double result, char? separator = null)
+    parameters:
+    - id: result
+      type: System.Double
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryReadDouble(result As Double, separator As Char? = Nothing) As Boolean
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble*
+  nameWithType.vb: RefUtf8StringTokenizer.TryReadDouble(Double, Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble(Double, Char?)
+  name.vb: TryReadDouble(Double, Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble(System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble(System.Nullable{System.Char})
+  id: ReadDouble(System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: ReadDouble(char?)
+  nameWithType: RefUtf8StringTokenizer.ReadDouble(char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble(char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public double ReadDouble(char? separator = null)
+    parameters:
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.Double
+    content.vb: Public Function ReadDouble(separator As Char? = Nothing) As Double
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble*
+  nameWithType.vb: RefUtf8StringTokenizer.ReadDouble(Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble(Char?)
+  name.vb: ReadDouble(Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle(System.Single@,System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle(System.Single@,System.Nullable{System.Char})
+  id: TryReadSingle(System.Single@,System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: TryReadSingle(out float, char?)
+  nameWithType: RefUtf8StringTokenizer.TryReadSingle(out float, char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle(out float, char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public bool TryReadSingle(out float result, char? separator = null)
+    parameters:
+    - id: result
+      type: System.Single
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryReadSingle(result As Single, separator As Char? = Nothing) As Boolean
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle*
+  nameWithType.vb: RefUtf8StringTokenizer.TryReadSingle(Single, Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle(Single, Char?)
+  name.vb: TryReadSingle(Single, Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle(System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle(System.Nullable{System.Char})
+  id: ReadSingle(System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: ReadSingle(char?)
+  nameWithType: RefUtf8StringTokenizer.ReadSingle(char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle(char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public float ReadSingle(char? separator = null)
+    parameters:
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.Single
+    content.vb: Public Function ReadSingle(separator As Char? = Nothing) As Single
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle*
+  nameWithType.vb: RefUtf8StringTokenizer.ReadSingle(Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle(Char?)
+  name.vb: ReadSingle(Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadString(System.ReadOnlySpan{System.Byte}@,System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.TryReadString(System.ReadOnlySpan{System.Byte}@,System.Nullable{System.Char})
+  id: TryReadString(System.ReadOnlySpan{System.Byte}@,System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: TryReadString(out ReadOnlySpan<byte>, char?)
+  nameWithType: RefUtf8StringTokenizer.TryReadString(out ReadOnlySpan<byte>, char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadString(out System.ReadOnlySpan<byte>, char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public bool TryReadString(out ReadOnlySpan<byte> result, char? separator = null)
+    parameters:
+    - id: result
+      type: System.ReadOnlySpan{System.Byte}
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryReadString(result As ReadOnlySpan(Of Byte), separator As Char? = Nothing) As Boolean
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.TryReadString*
+  nameWithType.vb: RefUtf8StringTokenizer.TryReadString(ReadOnlySpan(Of Byte), Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.TryReadString(System.ReadOnlySpan(Of Byte), Char?)
+  name.vb: TryReadString(ReadOnlySpan(Of Byte), Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadString(System.Nullable{System.Char})
+  commentId: M:Beutl.Utilities.RefUtf8StringTokenizer.ReadString(System.Nullable{System.Char})
+  id: ReadString(System.Nullable{System.Char})
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: ReadString(char?)
+  nameWithType: RefUtf8StringTokenizer.ReadString(char?)
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadString(char?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public ReadOnlySpan<byte> ReadString(char? separator = null)
+    parameters:
+    - id: separator
+      type: System.Nullable{System.Char}
+    return:
+      type: System.ReadOnlySpan{System.Byte}
+    content.vb: Public Function ReadString(separator As Char? = Nothing) As ReadOnlySpan(Of Byte)
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.ReadString*
+  nameWithType.vb: RefUtf8StringTokenizer.ReadString(Char?)
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.ReadString(Char?)
+  name.vb: ReadString(Char?)
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken
+  commentId: P:Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken
+  id: CurrentToken
+  parent: Beutl.Utilities.RefUtf8StringTokenizer
+  langs:
+  - csharp
+  - vb
+  name: CurrentToken
+  nameWithType: RefUtf8StringTokenizer.CurrentToken
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/RefUtf8StringTokenizer.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public ReadOnlySpan<byte> CurrentToken { get; }
+    parameters: []
+    return:
+      type: System.ReadOnlySpan{System.Byte}
+    content.vb: Public ReadOnly Property CurrentToken As ReadOnlySpan(Of Byte)
+  overload: Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken*
+references:
+- uid: Beutl.Utilities
+  commentId: N:Beutl.Utilities
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Utilities
+  nameWithType: Beutl.Utilities
+  fullName: Beutl.Utilities
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Utilities
+    name: Utilities
+    isExternal: true
+    href: Beutl.Utilities.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Utilities
+    name: Utilities
+    isExternal: true
+    href: Beutl.Utilities.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.#ctor*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.#ctor
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer__ctor_System_ReadOnlySpan_System_Byte__System_IFormatProvider_System_String_
+  name: RefUtf8StringTokenizer
+  nameWithType: RefUtf8StringTokenizer.RefUtf8StringTokenizer
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.RefUtf8StringTokenizer
+  nameWithType.vb: RefUtf8StringTokenizer.New
+  fullName.vb: Beutl.Utilities.RefUtf8StringTokenizer.New
+  name.vb: New
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.Dispose*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.Dispose
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_Dispose
+  name: Dispose
+  nameWithType: RefUtf8StringTokenizer.Dispose
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.Dispose
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_TryReadInt32_System_Int32__System_Nullable_System_Char__
+  name: TryReadInt32
+  nameWithType: RefUtf8StringTokenizer.TryReadInt32
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadInt32
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Nullable{System.Char}
+  commentId: T:System.Nullable{System.Char}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char?
+  nameWithType: char?
+  fullName: char?
+  nameWithType.vb: Char?
+  fullName.vb: Char?
+  name.vb: Char?
+  spec.csharp:
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '?'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_ReadInt32_System_Nullable_System_Char__
+  name: ReadInt32
+  nameWithType: RefUtf8StringTokenizer.ReadInt32
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadInt32
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_TryReadDouble_System_Double__System_Nullable_System_Char__
+  name: TryReadDouble
+  nameWithType: RefUtf8StringTokenizer.TryReadDouble
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadDouble
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_ReadDouble_System_Nullable_System_Char__
+  name: ReadDouble
+  nameWithType: RefUtf8StringTokenizer.ReadDouble
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadDouble
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_TryReadSingle_System_Single__System_Nullable_System_Char__
+  name: TryReadSingle
+  nameWithType: RefUtf8StringTokenizer.TryReadSingle
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadSingle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_ReadSingle_System_Nullable_System_Char__
+  name: ReadSingle
+  nameWithType: RefUtf8StringTokenizer.ReadSingle
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadSingle
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.TryReadString*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.TryReadString
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_TryReadString_System_ReadOnlySpan_System_Byte___System_Nullable_System_Char__
+  name: TryReadString
+  nameWithType: RefUtf8StringTokenizer.TryReadString
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.TryReadString
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.ReadString*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.ReadString
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_ReadString_System_Nullable_System_Char__
+  name: ReadString
+  nameWithType: RefUtf8StringTokenizer.ReadString
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.ReadString
+- uid: Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken*
+  commentId: Overload:Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken
+  isExternal: true
+  href: Beutl.Utilities.RefUtf8StringTokenizer.html#Beutl_Utilities_RefUtf8StringTokenizer_CurrentToken
+  name: CurrentToken
+  nameWithType: RefUtf8StringTokenizer.CurrentToken
+  fullName: Beutl.Utilities.RefUtf8StringTokenizer.CurrentToken

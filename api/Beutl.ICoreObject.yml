@@ -1,0 +1,1488 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.ICoreObject
+  commentId: T:Beutl.ICoreObject
+  id: ICoreObject
+  parent: Beutl
+  children:
+  - Beutl.ICoreObject.ClearValue(Beutl.CoreProperty)
+  - Beutl.ICoreObject.ClearValue``1(Beutl.CoreProperty{``0})
+  - Beutl.ICoreObject.GetValue(Beutl.CoreProperty)
+  - Beutl.ICoreObject.GetValue``1(Beutl.CoreProperty{``0})
+  - Beutl.ICoreObject.Id
+  - Beutl.ICoreObject.Name
+  - Beutl.ICoreObject.SetValue(Beutl.CoreProperty,System.Object)
+  - Beutl.ICoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
+  langs:
+  - csharp
+  - vb
+  name: ICoreObject
+  nameWithType: ICoreObject
+  fullName: Beutl.ICoreObject
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: 'public interface ICoreObject : INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable'
+    content.vb: Public Interface ICoreObject Inherits INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable
+  inheritedMembers:
+  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  - System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
+  - System.ComponentModel.INotifyDataErrorInfo.HasErrors
+  - System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
+  - Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  - Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  extensionMethods:
+  - Beutl.ICoreObject.Beutl.CoreObjectExtensions.Find(System.Predicate{System.Object},System.Boolean)
+  - Beutl.ICoreObject.Beutl.CoreObjectExtensions.Find(System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+  - Beutl.ICoreObject.Beutl.CoreObjectExtensions.FindById(System.Guid,System.Boolean)
+  - Beutl.ICoreObject.Beutl.CoreObjectExtensions.GetObservable``1(Beutl.CoreProperty{{T}})
+  - Beutl.ICoreObject.Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.CoreProperty{{T}})
+  - Beutl.Serialization.ICoreSerializable.Beutl.JsonHelper.JsonRestore2(System.String)
+  - Beutl.Serialization.ICoreSerializable.Beutl.JsonHelper.JsonSave2(System.String)
+- uid: Beutl.ICoreObject.ClearValue``1(Beutl.CoreProperty{``0})
+  commentId: M:Beutl.ICoreObject.ClearValue``1(Beutl.CoreProperty{``0})
+  id: ClearValue``1(Beutl.CoreProperty{``0})
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: ClearValue<TValue>(CoreProperty<TValue>)
+  nameWithType: ICoreObject.ClearValue<TValue>(CoreProperty<TValue>)
+  fullName: Beutl.ICoreObject.ClearValue<TValue>(Beutl.CoreProperty<TValue>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void ClearValue<TValue>(CoreProperty<TValue> property)
+    parameters:
+    - id: property
+      type: Beutl.CoreProperty{{TValue}}
+    typeParameters:
+    - id: TValue
+    content.vb: Sub ClearValue(Of TValue)([property] As CoreProperty(Of TValue))
+  overload: Beutl.ICoreObject.ClearValue*
+  nameWithType.vb: ICoreObject.ClearValue(Of TValue)(CoreProperty(Of TValue))
+  fullName.vb: Beutl.ICoreObject.ClearValue(Of TValue)(Beutl.CoreProperty(Of TValue))
+  name.vb: ClearValue(Of TValue)(CoreProperty(Of TValue))
+- uid: Beutl.ICoreObject.ClearValue(Beutl.CoreProperty)
+  commentId: M:Beutl.ICoreObject.ClearValue(Beutl.CoreProperty)
+  id: ClearValue(Beutl.CoreProperty)
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: ClearValue(CoreProperty)
+  nameWithType: ICoreObject.ClearValue(CoreProperty)
+  fullName: Beutl.ICoreObject.ClearValue(Beutl.CoreProperty)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void ClearValue(CoreProperty property)
+    parameters:
+    - id: property
+      type: Beutl.CoreProperty
+    content.vb: Sub ClearValue([property] As CoreProperty)
+  overload: Beutl.ICoreObject.ClearValue*
+- uid: Beutl.ICoreObject.GetValue``1(Beutl.CoreProperty{``0})
+  commentId: M:Beutl.ICoreObject.GetValue``1(Beutl.CoreProperty{``0})
+  id: GetValue``1(Beutl.CoreProperty{``0})
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: GetValue<TValue>(CoreProperty<TValue>)
+  nameWithType: ICoreObject.GetValue<TValue>(CoreProperty<TValue>)
+  fullName: Beutl.ICoreObject.GetValue<TValue>(Beutl.CoreProperty<TValue>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: TValue GetValue<TValue>(CoreProperty<TValue> property)
+    parameters:
+    - id: property
+      type: Beutl.CoreProperty{{TValue}}
+    typeParameters:
+    - id: TValue
+    return:
+      type: '{TValue}'
+    content.vb: Function GetValue(Of TValue)([property] As CoreProperty(Of TValue)) As TValue
+  overload: Beutl.ICoreObject.GetValue*
+  nameWithType.vb: ICoreObject.GetValue(Of TValue)(CoreProperty(Of TValue))
+  fullName.vb: Beutl.ICoreObject.GetValue(Of TValue)(Beutl.CoreProperty(Of TValue))
+  name.vb: GetValue(Of TValue)(CoreProperty(Of TValue))
+- uid: Beutl.ICoreObject.GetValue(Beutl.CoreProperty)
+  commentId: M:Beutl.ICoreObject.GetValue(Beutl.CoreProperty)
+  id: GetValue(Beutl.CoreProperty)
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: GetValue(CoreProperty)
+  nameWithType: ICoreObject.GetValue(CoreProperty)
+  fullName: Beutl.ICoreObject.GetValue(Beutl.CoreProperty)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: object? GetValue(CoreProperty property)
+    parameters:
+    - id: property
+      type: Beutl.CoreProperty
+    return:
+      type: System.Object
+    content.vb: Function GetValue([property] As CoreProperty) As Object
+  overload: Beutl.ICoreObject.GetValue*
+- uid: Beutl.ICoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
+  commentId: M:Beutl.ICoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
+  id: SetValue``1(Beutl.CoreProperty{``0},``0)
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: SetValue<TValue>(CoreProperty<TValue>, TValue?)
+  nameWithType: ICoreObject.SetValue<TValue>(CoreProperty<TValue>, TValue?)
+  fullName: Beutl.ICoreObject.SetValue<TValue>(Beutl.CoreProperty<TValue>, TValue?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void SetValue<TValue>(CoreProperty<TValue> property, TValue? value)
+    parameters:
+    - id: property
+      type: Beutl.CoreProperty{{TValue}}
+    - id: value
+      type: '{TValue}'
+    typeParameters:
+    - id: TValue
+    content.vb: Sub SetValue(Of TValue)([property] As CoreProperty(Of TValue), value As TValue)
+  overload: Beutl.ICoreObject.SetValue*
+  nameWithType.vb: ICoreObject.SetValue(Of TValue)(CoreProperty(Of TValue), TValue)
+  fullName.vb: Beutl.ICoreObject.SetValue(Of TValue)(Beutl.CoreProperty(Of TValue), TValue)
+  name.vb: SetValue(Of TValue)(CoreProperty(Of TValue), TValue)
+- uid: Beutl.ICoreObject.SetValue(Beutl.CoreProperty,System.Object)
+  commentId: M:Beutl.ICoreObject.SetValue(Beutl.CoreProperty,System.Object)
+  id: SetValue(Beutl.CoreProperty,System.Object)
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: SetValue(CoreProperty, object?)
+  nameWithType: ICoreObject.SetValue(CoreProperty, object?)
+  fullName: Beutl.ICoreObject.SetValue(Beutl.CoreProperty, object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void SetValue(CoreProperty property, object? value)
+    parameters:
+    - id: property
+      type: Beutl.CoreProperty
+    - id: value
+      type: System.Object
+    content.vb: Sub SetValue([property] As CoreProperty, value As Object)
+  overload: Beutl.ICoreObject.SetValue*
+  nameWithType.vb: ICoreObject.SetValue(CoreProperty, Object)
+  fullName.vb: Beutl.ICoreObject.SetValue(Beutl.CoreProperty, Object)
+  name.vb: SetValue(CoreProperty, Object)
+- uid: Beutl.ICoreObject.Id
+  commentId: P:Beutl.ICoreObject.Id
+  id: Id
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ICoreObject.Id
+  fullName: Beutl.ICoreObject.Id
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Property Id As Guid
+  overload: Beutl.ICoreObject.Id*
+- uid: Beutl.ICoreObject.Name
+  commentId: P:Beutl.ICoreObject.Name
+  id: Name
+  parent: Beutl.ICoreObject
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ICoreObject.Name
+  fullName: Beutl.ICoreObject.Name
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property Name As String
+  overload: Beutl.ICoreObject.Name*
+references:
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  parent: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged
+  name: PropertyChanged
+  nameWithType: INotifyPropertyChanged.PropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
+  commentId: M:System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
+  parent: System.ComponentModel.INotifyDataErrorInfo
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo.geterrors
+  name: GetErrors(string)
+  nameWithType: INotifyDataErrorInfo.GetErrors(string)
+  fullName: System.ComponentModel.INotifyDataErrorInfo.GetErrors(string)
+  nameWithType.vb: INotifyDataErrorInfo.GetErrors(String)
+  fullName.vb: System.ComponentModel.INotifyDataErrorInfo.GetErrors(String)
+  name.vb: GetErrors(String)
+  spec.csharp:
+  - uid: System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
+    name: GetErrors
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo.geterrors
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
+    name: GetErrors
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo.geterrors
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ComponentModel.INotifyDataErrorInfo.HasErrors
+  commentId: P:System.ComponentModel.INotifyDataErrorInfo.HasErrors
+  parent: System.ComponentModel.INotifyDataErrorInfo
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo.haserrors
+  name: HasErrors
+  nameWithType: INotifyDataErrorInfo.HasErrors
+  fullName: System.ComponentModel.INotifyDataErrorInfo.HasErrors
+- uid: System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
+  commentId: E:System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
+  parent: System.ComponentModel.INotifyDataErrorInfo
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo.errorschanged
+  name: ErrorsChanged
+  nameWithType: INotifyDataErrorInfo.ErrorsChanged
+  fullName: System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
+- uid: Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.Serialization.ICoreSerializable
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializable.html#Beutl_Serialization_ICoreSerializable_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  name: Serialize(ICoreSerializationContext)
+  nameWithType: ICoreSerializable.Serialize(ICoreSerializationContext)
+  fullName: Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Serialize
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html#Beutl_Serialization_ICoreSerializable_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Serialize
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html#Beutl_Serialization_ICoreSerializable_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html
+  - name: )
+- uid: Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.Serialization.ICoreSerializable
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializable.html#Beutl_Serialization_ICoreSerializable_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  name: Deserialize(ICoreSerializationContext)
+  nameWithType: ICoreSerializable.Deserialize(ICoreSerializationContext)
+  fullName: Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  spec.csharp:
+  - uid: Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Deserialize
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html#Beutl_Serialization_ICoreSerializable_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Deserialize
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html#Beutl_Serialization_ICoreSerializable_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializationContext.html
+  - name: )
+- uid: Beutl.ICoreObject.Beutl.CoreObjectExtensions.Find(System.Predicate{System.Object},System.Boolean)
+  commentId: M:Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+  parent: Beutl.CoreObjectExtensions
+  definition: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_
+  name: Find(ICoreObject, Predicate<object>, bool)
+  nameWithType: CoreObjectExtensions.Find(ICoreObject, Predicate<object>, bool)
+  fullName: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate<object>, bool)
+  nameWithType.vb: CoreObjectExtensions.Find(ICoreObject, Predicate(Of Object), Boolean)
+  fullName.vb: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate(Of Object), Boolean)
+  name.vb: Find(ICoreObject, Predicate(Of Object), Boolean)
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.ICoreObject.Beutl.CoreObjectExtensions.Find(System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+  commentId: M:Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+  parent: Beutl.CoreObjectExtensions
+  definition: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_System_Collections_Generic_HashSet_System_Object__
+  name: Find(ICoreObject, Predicate<object>, bool, HashSet<object>)
+  nameWithType: CoreObjectExtensions.Find(ICoreObject, Predicate<object>, bool, HashSet<object>)
+  fullName: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate<object>, bool, System.Collections.Generic.HashSet<object>)
+  nameWithType.vb: CoreObjectExtensions.Find(ICoreObject, Predicate(Of Object), Boolean, HashSet(Of Object))
+  fullName.vb: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate(Of Object), Boolean, System.Collections.Generic.HashSet(Of Object))
+  name.vb: Find(ICoreObject, Predicate(Of Object), Boolean, HashSet(Of Object))
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_System_Collections_Generic_HashSet_System_Object__
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_System_Collections_Generic_HashSet_System_Object__
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Beutl.ICoreObject.Beutl.CoreObjectExtensions.FindById(System.Guid,System.Boolean)
+  commentId: M:Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+  parent: Beutl.CoreObjectExtensions
+  definition: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_FindById_Beutl_ICoreObject_System_Guid_System_Boolean_
+  name: FindById(ICoreObject, Guid, bool)
+  nameWithType: CoreObjectExtensions.FindById(ICoreObject, Guid, bool)
+  fullName: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject, System.Guid, bool)
+  nameWithType.vb: CoreObjectExtensions.FindById(ICoreObject, Guid, Boolean)
+  fullName.vb: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject, System.Guid, Boolean)
+  name.vb: FindById(ICoreObject, Guid, Boolean)
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+    name: FindById
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_FindById_Beutl_ICoreObject_System_Guid_System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+    name: FindById
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_FindById_Beutl_ICoreObject_System_Guid_System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.ICoreObject.Beutl.CoreObjectExtensions.GetObservable``1(Beutl.CoreProperty{{T}})
+  commentId: M:Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  parent: Beutl.CoreObjectExtensions
+  definition: Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  name: GetObservable<T>(ICoreObject, CoreProperty<T>)
+  nameWithType: CoreObjectExtensions.GetObservable<T>(ICoreObject, CoreProperty<T>)
+  fullName: Beutl.CoreObjectExtensions.GetObservable<T>(Beutl.ICoreObject, Beutl.CoreProperty<T>)
+  nameWithType.vb: CoreObjectExtensions.GetObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  fullName.vb: Beutl.CoreObjectExtensions.GetObservable(Of T)(Beutl.ICoreObject, Beutl.CoreProperty(Of T))
+  name.vb: GetObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.ICoreObject.Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.CoreProperty{{T}})
+  commentId: M:Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  parent: Beutl.CoreObjectExtensions
+  definition: Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetPropertyChangedObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  name: GetPropertyChangedObservable<T>(ICoreObject, CoreProperty<T>)
+  nameWithType: CoreObjectExtensions.GetPropertyChangedObservable<T>(ICoreObject, CoreProperty<T>)
+  fullName: Beutl.CoreObjectExtensions.GetPropertyChangedObservable<T>(Beutl.ICoreObject, Beutl.CoreProperty<T>)
+  nameWithType.vb: CoreObjectExtensions.GetPropertyChangedObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  fullName.vb: Beutl.CoreObjectExtensions.GetPropertyChangedObservable(Of T)(Beutl.ICoreObject, Beutl.CoreProperty(Of T))
+  name.vb: GetPropertyChangedObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetPropertyChangedObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetPropertyChangedObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetPropertyChangedObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetPropertyChangedObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.Serialization.ICoreSerializable.Beutl.JsonHelper.JsonRestore2(System.String)
+  commentId: M:Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+  parent: Beutl.JsonHelper
+  definition: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+  href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonRestore2_Beutl_Serialization_ICoreSerializable_System_String_
+  name: JsonRestore2(ICoreSerializable, string)
+  nameWithType: JsonHelper.JsonRestore2(ICoreSerializable, string)
+  fullName: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable, string)
+  nameWithType.vb: JsonHelper.JsonRestore2(ICoreSerializable, String)
+  fullName.vb: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable, String)
+  name.vb: JsonRestore2(ICoreSerializable, String)
+  spec.csharp:
+  - uid: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonRestore2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonRestore2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonRestore2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonRestore2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Beutl.Serialization.ICoreSerializable.Beutl.JsonHelper.JsonSave2(System.String)
+  commentId: M:Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+  parent: Beutl.JsonHelper
+  definition: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+  href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonSave2_Beutl_Serialization_ICoreSerializable_System_String_
+  name: JsonSave2(ICoreSerializable, string)
+  nameWithType: JsonHelper.JsonSave2(ICoreSerializable, string)
+  fullName: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable, string)
+  nameWithType.vb: JsonHelper.JsonSave2(ICoreSerializable, String)
+  fullName.vb: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable, String)
+  name.vb: JsonSave2(ICoreSerializable, String)
+  spec.csharp:
+  - uid: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonSave2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonSave2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonSave2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonSave2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: System.ComponentModel.INotifyDataErrorInfo
+  commentId: T:System.ComponentModel.INotifyDataErrorInfo
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo
+  name: INotifyDataErrorInfo
+  nameWithType: INotifyDataErrorInfo
+  fullName: System.ComponentModel.INotifyDataErrorInfo
+- uid: Beutl.Serialization.ICoreSerializable
+  commentId: T:Beutl.Serialization.ICoreSerializable
+  parent: Beutl.Serialization
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  name: ICoreSerializable
+  nameWithType: ICoreSerializable
+  fullName: Beutl.Serialization.ICoreSerializable
+- uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+  commentId: M:Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+  isExternal: true
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_
+  name: Find(ICoreObject, Predicate<object>, bool)
+  nameWithType: CoreObjectExtensions.Find(ICoreObject, Predicate<object>, bool)
+  fullName: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate<object>, bool)
+  nameWithType.vb: CoreObjectExtensions.Find(ICoreObject, Predicate(Of Object), Boolean)
+  fullName.vb: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate(Of Object), Boolean)
+  name.vb: Find(ICoreObject, Predicate(Of Object), Boolean)
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean)
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.CoreObjectExtensions
+  commentId: T:Beutl.CoreObjectExtensions
+  parent: Beutl
+  isExternal: true
+  href: Beutl.CoreObjectExtensions.html
+  name: CoreObjectExtensions
+  nameWithType: CoreObjectExtensions
+  fullName: Beutl.CoreObjectExtensions
+- uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+  commentId: M:Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+  isExternal: true
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_System_Collections_Generic_HashSet_System_Object__
+  name: Find(ICoreObject, Predicate<object>, bool, HashSet<object>)
+  nameWithType: CoreObjectExtensions.Find(ICoreObject, Predicate<object>, bool, HashSet<object>)
+  fullName: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate<object>, bool, System.Collections.Generic.HashSet<object>)
+  nameWithType.vb: CoreObjectExtensions.Find(ICoreObject, Predicate(Of Object), Boolean, HashSet(Of Object))
+  fullName.vb: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject, System.Predicate(Of Object), Boolean, System.Collections.Generic.HashSet(Of Object))
+  name.vb: Find(ICoreObject, Predicate(Of Object), Boolean, HashSet(Of Object))
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_System_Collections_Generic_HashSet_System_Object__
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.Find(Beutl.ICoreObject,System.Predicate{System.Object},System.Boolean,System.Collections.Generic.HashSet{System.Object})
+    name: Find
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_Find_Beutl_ICoreObject_System_Predicate_System_Object__System_Boolean_System_Collections_Generic_HashSet_System_Object__
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+  commentId: M:Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+  isExternal: true
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_FindById_Beutl_ICoreObject_System_Guid_System_Boolean_
+  name: FindById(ICoreObject, Guid, bool)
+  nameWithType: CoreObjectExtensions.FindById(ICoreObject, Guid, bool)
+  fullName: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject, System.Guid, bool)
+  nameWithType.vb: CoreObjectExtensions.FindById(ICoreObject, Guid, Boolean)
+  fullName.vb: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject, System.Guid, Boolean)
+  name.vb: FindById(ICoreObject, Guid, Boolean)
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+    name: FindById
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_FindById_Beutl_ICoreObject_System_Guid_System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.FindById(Beutl.ICoreObject,System.Guid,System.Boolean)
+    name: FindById
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_FindById_Beutl_ICoreObject_System_Guid_System_Boolean_
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  commentId: M:Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  isExternal: true
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  name: GetObservable<T>(ICoreObject, CoreProperty<T>)
+  nameWithType: CoreObjectExtensions.GetObservable<T>(ICoreObject, CoreProperty<T>)
+  fullName: Beutl.CoreObjectExtensions.GetObservable<T>(Beutl.ICoreObject, Beutl.CoreProperty<T>)
+  nameWithType.vb: CoreObjectExtensions.GetObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  fullName.vb: Beutl.CoreObjectExtensions.GetObservable(Of T)(Beutl.ICoreObject, Beutl.CoreProperty(Of T))
+  name.vb: GetObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.GetObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  commentId: M:Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+  isExternal: true
+  href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetPropertyChangedObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  name: GetPropertyChangedObservable<T>(ICoreObject, CoreProperty<T>)
+  nameWithType: CoreObjectExtensions.GetPropertyChangedObservable<T>(ICoreObject, CoreProperty<T>)
+  fullName: Beutl.CoreObjectExtensions.GetPropertyChangedObservable<T>(Beutl.ICoreObject, Beutl.CoreProperty<T>)
+  nameWithType.vb: CoreObjectExtensions.GetPropertyChangedObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  fullName.vb: Beutl.CoreObjectExtensions.GetPropertyChangedObservable(Of T)(Beutl.ICoreObject, Beutl.CoreProperty(Of T))
+  name.vb: GetPropertyChangedObservable(Of T)(ICoreObject, CoreProperty(Of T))
+  spec.csharp:
+  - uid: Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetPropertyChangedObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetPropertyChangedObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.CoreObjectExtensions.GetPropertyChangedObservable``1(Beutl.ICoreObject,Beutl.CoreProperty{``0})
+    name: GetPropertyChangedObservable
+    isExternal: true
+    href: Beutl.CoreObjectExtensions.html#Beutl_CoreObjectExtensions_GetPropertyChangedObservable__1_Beutl_ICoreObject_Beutl_CoreProperty___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.ICoreObject
+    name: ICoreObject
+    isExternal: true
+    href: Beutl.ICoreObject.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+  commentId: M:Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+  isExternal: true
+  href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonRestore2_Beutl_Serialization_ICoreSerializable_System_String_
+  name: JsonRestore2(ICoreSerializable, string)
+  nameWithType: JsonHelper.JsonRestore2(ICoreSerializable, string)
+  fullName: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable, string)
+  nameWithType.vb: JsonHelper.JsonRestore2(ICoreSerializable, String)
+  fullName.vb: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable, String)
+  name.vb: JsonRestore2(ICoreSerializable, String)
+  spec.csharp:
+  - uid: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonRestore2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonRestore2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Beutl.JsonHelper.JsonRestore2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonRestore2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonRestore2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Beutl.JsonHelper
+  commentId: T:Beutl.JsonHelper
+  parent: Beutl
+  isExternal: true
+  href: Beutl.JsonHelper.html
+  name: JsonHelper
+  nameWithType: JsonHelper
+  fullName: Beutl.JsonHelper
+- uid: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+  commentId: M:Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+  isExternal: true
+  href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonSave2_Beutl_Serialization_ICoreSerializable_System_String_
+  name: JsonSave2(ICoreSerializable, string)
+  nameWithType: JsonHelper.JsonSave2(ICoreSerializable, string)
+  fullName: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable, string)
+  nameWithType.vb: JsonHelper.JsonSave2(ICoreSerializable, String)
+  fullName.vb: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable, String)
+  name.vb: JsonSave2(ICoreSerializable, String)
+  spec.csharp:
+  - uid: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonSave2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonSave2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Beutl.JsonHelper.JsonSave2(Beutl.Serialization.ICoreSerializable,System.String)
+    name: JsonSave2
+    isExternal: true
+    href: Beutl.JsonHelper.html#Beutl_JsonHelper_JsonSave2_Beutl_Serialization_ICoreSerializable_System_String_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializable
+    name: ICoreSerializable
+    isExternal: true
+    href: Beutl.Serialization.ICoreSerializable.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: Beutl.Serialization
+  commentId: N:Beutl.Serialization
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Serialization
+  nameWithType: Beutl.Serialization
+  fullName: Beutl.Serialization
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+- uid: Beutl.ICoreObject.ClearValue*
+  commentId: Overload:Beutl.ICoreObject.ClearValue
+  isExternal: true
+  href: Beutl.ICoreObject.html#Beutl_ICoreObject_ClearValue__1_Beutl_CoreProperty___0__
+  name: ClearValue
+  nameWithType: ICoreObject.ClearValue
+  fullName: Beutl.ICoreObject.ClearValue
+- uid: Beutl.CoreProperty{{TValue}}
+  commentId: T:Beutl.CoreProperty{``0}
+  parent: Beutl
+  definition: Beutl.CoreProperty`1
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<TValue>
+  nameWithType: CoreProperty<TValue>
+  fullName: Beutl.CoreProperty<TValue>
+  nameWithType.vb: CoreProperty(Of TValue)
+  fullName.vb: Beutl.CoreProperty(Of TValue)
+  name.vb: CoreProperty(Of TValue)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Beutl.CoreProperty`1
+  commentId: T:Beutl.CoreProperty`1
+  isExternal: true
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.CoreProperty
+  commentId: T:Beutl.CoreProperty
+  parent: Beutl
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+  name: CoreProperty
+  nameWithType: CoreProperty
+  fullName: Beutl.CoreProperty
+- uid: Beutl.ICoreObject.GetValue*
+  commentId: Overload:Beutl.ICoreObject.GetValue
+  isExternal: true
+  href: Beutl.ICoreObject.html#Beutl_ICoreObject_GetValue__1_Beutl_CoreProperty___0__
+  name: GetValue
+  nameWithType: ICoreObject.GetValue
+  fullName: Beutl.ICoreObject.GetValue
+- uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.ICoreObject.SetValue*
+  commentId: Overload:Beutl.ICoreObject.SetValue
+  isExternal: true
+  href: Beutl.ICoreObject.html#Beutl_ICoreObject_SetValue__1_Beutl_CoreProperty___0____0_
+  name: SetValue
+  nameWithType: ICoreObject.SetValue
+  fullName: Beutl.ICoreObject.SetValue
+- uid: Beutl.ICoreObject.Id*
+  commentId: Overload:Beutl.ICoreObject.Id
+  isExternal: true
+  href: Beutl.ICoreObject.html#Beutl_ICoreObject_Id
+  name: Id
+  nameWithType: ICoreObject.Id
+  fullName: Beutl.ICoreObject.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Beutl.ICoreObject.Name*
+  commentId: Overload:Beutl.ICoreObject.Name
+  isExternal: true
+  href: Beutl.ICoreObject.html#Beutl_ICoreObject_Name
+  name: Name
+  nameWithType: ICoreObject.Name
+  fullName: Beutl.ICoreObject.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,579 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Source.ISoundSource
+  commentId: T:Beutl.Media.Source.ISoundSource
+  id: ISoundSource
+  parent: Beutl.Media.Source
+  children:
+  - Beutl.Media.Source.ISoundSource.Clone
+  - Beutl.Media.Source.ISoundSource.Duration
+  - Beutl.Media.Source.ISoundSource.NumChannels
+  - Beutl.Media.Source.ISoundSource.Read(System.Int32,System.Int32,Beutl.Media.Music.IPcm@)
+  - Beutl.Media.Source.ISoundSource.Read(System.Int32,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  - Beutl.Media.Source.ISoundSource.Read(System.TimeSpan,System.Int32,Beutl.Media.Music.IPcm@)
+  - Beutl.Media.Source.ISoundSource.Read(System.TimeSpan,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  - Beutl.Media.Source.ISoundSource.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: ISoundSource
+  nameWithType: ISoundSource
+  fullName: Beutl.Media.Source.ISoundSource
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: >-
+      [JsonConverter(typeof(SoundSourceJsonConverter))]
+
+      public interface ISoundSource : IMediaSource, IDisposable, IFileSource
+    content.vb: >-
+      <JsonConverter(GetType(SoundSourceJsonConverter))>
+
+      Public Interface ISoundSource Inherits IMediaSource, IDisposable, IFileSource
+  inheritedMembers:
+  - Beutl.Media.Source.IMediaSource.IsDisposed
+  - Beutl.Media.Source.IMediaSource.Name
+  - System.IDisposable.Dispose
+  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  - Beutl.IO.IFileSource.Uri
+  attributes:
+  - type: System.Text.Json.Serialization.JsonConverterAttribute
+    ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Media.Source.SoundSourceJsonConverter
+- uid: Beutl.Media.Source.ISoundSource.Read(System.Int32,System.Int32,Beutl.Media.Music.IPcm@)
+  commentId: M:Beutl.Media.Source.ISoundSource.Read(System.Int32,System.Int32,Beutl.Media.Music.IPcm@)
+  id: Read(System.Int32,System.Int32,Beutl.Media.Music.IPcm@)
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: Read(int, int, out IPcm?)
+  nameWithType: ISoundSource.Read(int, int, out IPcm?)
+  fullName: Beutl.Media.Source.ISoundSource.Read(int, int, out Beutl.Media.Music.IPcm?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: bool Read(int start, int length, out IPcm? sound)
+    parameters:
+    - id: start
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    - id: sound
+      type: Beutl.Media.Music.IPcm
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    return:
+      type: System.Boolean
+    content.vb: Function Read(start As Integer, length As Integer, sound As IPcm) As Boolean
+  overload: Beutl.Media.Source.ISoundSource.Read*
+  nameWithType.vb: ISoundSource.Read(Integer, Integer, IPcm)
+  fullName.vb: Beutl.Media.Source.ISoundSource.Read(Integer, Integer, Beutl.Media.Music.IPcm)
+  name.vb: Read(Integer, Integer, IPcm)
+- uid: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  commentId: M:Beutl.Media.Source.ISoundSource.Read(System.TimeSpan,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  id: Read(System.TimeSpan,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: Read(TimeSpan, TimeSpan, out IPcm?)
+  nameWithType: ISoundSource.Read(TimeSpan, TimeSpan, out IPcm?)
+  fullName: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan, System.TimeSpan, out Beutl.Media.Music.IPcm?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: bool Read(TimeSpan start, TimeSpan length, out IPcm? sound)
+    parameters:
+    - id: start
+      type: System.TimeSpan
+    - id: length
+      type: System.TimeSpan
+    - id: sound
+      type: Beutl.Media.Music.IPcm
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    return:
+      type: System.Boolean
+    content.vb: Function Read(start As TimeSpan, length As TimeSpan, sound As IPcm) As Boolean
+  overload: Beutl.Media.Source.ISoundSource.Read*
+  nameWithType.vb: ISoundSource.Read(TimeSpan, TimeSpan, IPcm)
+  fullName.vb: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan, System.TimeSpan, Beutl.Media.Music.IPcm)
+  name.vb: Read(TimeSpan, TimeSpan, IPcm)
+- uid: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan,System.Int32,Beutl.Media.Music.IPcm@)
+  commentId: M:Beutl.Media.Source.ISoundSource.Read(System.TimeSpan,System.Int32,Beutl.Media.Music.IPcm@)
+  id: Read(System.TimeSpan,System.Int32,Beutl.Media.Music.IPcm@)
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: Read(TimeSpan, int, out IPcm?)
+  nameWithType: ISoundSource.Read(TimeSpan, int, out IPcm?)
+  fullName: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan, int, out Beutl.Media.Music.IPcm?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: bool Read(TimeSpan start, int length, out IPcm? sound)
+    parameters:
+    - id: start
+      type: System.TimeSpan
+    - id: length
+      type: System.Int32
+    - id: sound
+      type: Beutl.Media.Music.IPcm
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    return:
+      type: System.Boolean
+    content.vb: Function Read(start As TimeSpan, length As Integer, sound As IPcm) As Boolean
+  overload: Beutl.Media.Source.ISoundSource.Read*
+  nameWithType.vb: ISoundSource.Read(TimeSpan, Integer, IPcm)
+  fullName.vb: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan, Integer, Beutl.Media.Music.IPcm)
+  name.vb: Read(TimeSpan, Integer, IPcm)
+- uid: Beutl.Media.Source.ISoundSource.Read(System.Int32,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  commentId: M:Beutl.Media.Source.ISoundSource.Read(System.Int32,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  id: Read(System.Int32,System.TimeSpan,Beutl.Media.Music.IPcm@)
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: Read(int, TimeSpan, out IPcm?)
+  nameWithType: ISoundSource.Read(int, TimeSpan, out IPcm?)
+  fullName: Beutl.Media.Source.ISoundSource.Read(int, System.TimeSpan, out Beutl.Media.Music.IPcm?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: bool Read(int start, TimeSpan length, out IPcm? sound)
+    parameters:
+    - id: start
+      type: System.Int32
+    - id: length
+      type: System.TimeSpan
+    - id: sound
+      type: Beutl.Media.Music.IPcm
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    return:
+      type: System.Boolean
+    content.vb: Function Read(start As Integer, length As TimeSpan, sound As IPcm) As Boolean
+  overload: Beutl.Media.Source.ISoundSource.Read*
+  nameWithType.vb: ISoundSource.Read(Integer, TimeSpan, IPcm)
+  fullName.vb: Beutl.Media.Source.ISoundSource.Read(Integer, System.TimeSpan, Beutl.Media.Music.IPcm)
+  name.vb: Read(Integer, TimeSpan, IPcm)
+- uid: Beutl.Media.Source.ISoundSource.Clone
+  commentId: M:Beutl.Media.Source.ISoundSource.Clone
+  id: Clone
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: ISoundSource.Clone()
+  fullName: Beutl.Media.Source.ISoundSource.Clone()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: ISoundSource Clone()
+    return:
+      type: Beutl.Media.Source.ISoundSource
+    content.vb: Function Clone() As ISoundSource
+  overload: Beutl.Media.Source.ISoundSource.Clone*
+- uid: Beutl.Media.Source.ISoundSource.Duration
+  commentId: P:Beutl.Media.Source.ISoundSource.Duration
+  id: Duration
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: ISoundSource.Duration
+  fullName: Beutl.Media.Source.ISoundSource.Duration
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: TimeSpan Duration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: ReadOnly Property Duration As TimeSpan
+  overload: Beutl.Media.Source.ISoundSource.Duration*
+- uid: Beutl.Media.Source.ISoundSource.SampleRate
+  commentId: P:Beutl.Media.Source.ISoundSource.SampleRate
+  id: SampleRate
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: SampleRate
+  nameWithType: ISoundSource.SampleRate
+  fullName: Beutl.Media.Source.ISoundSource.SampleRate
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: int SampleRate { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property SampleRate As Integer
+  overload: Beutl.Media.Source.ISoundSource.SampleRate*
+- uid: Beutl.Media.Source.ISoundSource.NumChannels
+  commentId: P:Beutl.Media.Source.ISoundSource.NumChannels
+  id: NumChannels
+  parent: Beutl.Media.Source.ISoundSource
+  langs:
+  - csharp
+  - vb
+  name: NumChannels
+  nameWithType: ISoundSource.NumChannels
+  fullName: Beutl.Media.Source.ISoundSource.NumChannels
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: int NumChannels { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property NumChannels As Integer
+  overload: Beutl.Media.Source.ISoundSource.NumChannels*
+references:
+- uid: Beutl.Media.Source
+  commentId: N:Beutl.Media.Source
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Source
+  nameWithType: Beutl.Media.Source
+  fullName: Beutl.Media.Source
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Source
+    name: Source
+    isExternal: true
+    href: Beutl.Media.Source.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Source
+    name: Source
+    isExternal: true
+    href: Beutl.Media.Source.html
+- uid: Beutl.Media.Source.IMediaSource.IsDisposed
+  commentId: P:Beutl.Media.Source.IMediaSource.IsDisposed
+  parent: Beutl.Media.Source.IMediaSource
+  isExternal: true
+  href: Beutl.Media.Source.IMediaSource.html#Beutl_Media_Source_IMediaSource_IsDisposed
+  name: IsDisposed
+  nameWithType: IMediaSource.IsDisposed
+  fullName: Beutl.Media.Source.IMediaSource.IsDisposed
+- uid: Beutl.Media.Source.IMediaSource.Name
+  commentId: P:Beutl.Media.Source.IMediaSource.Name
+  parent: Beutl.Media.Source.IMediaSource
+  isExternal: true
+  href: Beutl.Media.Source.IMediaSource.html#Beutl_Media_Source_IMediaSource_Name
+  name: Name
+  nameWithType: IMediaSource.Name
+  fullName: Beutl.Media.Source.IMediaSource.Name
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  parent: Beutl.IO.IFileSource
+  isExternal: true
+  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
+  name: ReadFrom(Uri)
+  nameWithType: IFileSource.ReadFrom(Uri)
+  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  spec.csharp:
+  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+    name: ReadFrom
+    isExternal: true
+    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
+  - name: (
+  - uid: System.Uri
+    name: Uri
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+    name: ReadFrom
+    isExternal: true
+    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
+  - name: (
+  - uid: System.Uri
+    name: Uri
+    isExternal: true
+  - name: )
+- uid: Beutl.IO.IFileSource.Uri
+  commentId: P:Beutl.IO.IFileSource.Uri
+  parent: Beutl.IO.IFileSource
+  isExternal: true
+  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
+  name: Uri
+  nameWithType: IFileSource.Uri
+  fullName: Beutl.IO.IFileSource.Uri
+- uid: Beutl.Media.Source.IMediaSource
+  commentId: T:Beutl.Media.Source.IMediaSource
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.IMediaSource.html
+  name: IMediaSource
+  nameWithType: IMediaSource
+  fullName: Beutl.Media.Source.IMediaSource
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Beutl.IO.IFileSource
+  commentId: T:Beutl.IO.IFileSource
+  parent: Beutl.IO
+  isExternal: true
+  href: Beutl.IO.IFileSource.html
+  name: IFileSource
+  nameWithType: IFileSource
+  fullName: Beutl.IO.IFileSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.IO
+  commentId: N:Beutl.IO
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.IO
+  nameWithType: Beutl.IO
+  fullName: Beutl.IO
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.IO
+    name: IO
+    isExternal: true
+    href: Beutl.IO.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.IO
+    name: IO
+    isExternal: true
+    href: Beutl.IO.html
+- uid: Beutl.Media.Source.ISoundSource.Read*
+  commentId: Overload:Beutl.Media.Source.ISoundSource.Read
+  isExternal: true
+  href: Beutl.Media.Source.ISoundSource.html#Beutl_Media_Source_ISoundSource_Read_System_Int32_System_Int32_Beutl_Media_Music_IPcm__
+  name: Read
+  nameWithType: ISoundSource.Read
+  fullName: Beutl.Media.Source.ISoundSource.Read
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.Music.IPcm
+  commentId: T:Beutl.Media.Music.IPcm
+  parent: Beutl.Media.Music
+  isExternal: true
+  href: Beutl.Media.Music.IPcm.html
+  name: IPcm
+  nameWithType: IPcm
+  fullName: Beutl.Media.Music.IPcm
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media.Music
+  commentId: N:Beutl.Media.Music
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Music
+  nameWithType: Beutl.Media.Music
+  fullName: Beutl.Media.Music
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Media.Source.ISoundSource.Clone*
+  commentId: Overload:Beutl.Media.Source.ISoundSource.Clone
+  isExternal: true
+  href: Beutl.Media.Source.ISoundSource.html#Beutl_Media_Source_ISoundSource_Clone
+  name: Clone
+  nameWithType: ISoundSource.Clone
+  fullName: Beutl.Media.Source.ISoundSource.Clone
+- uid: Beutl.Media.Source.ISoundSource
+  commentId: T:Beutl.Media.Source.ISoundSource
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.ISoundSource.html
+  name: ISoundSource
+  nameWithType: ISoundSource
+  fullName: Beutl.Media.Source.ISoundSource
+- uid: Beutl.Media.Source.ISoundSource.Duration*
+  commentId: Overload:Beutl.Media.Source.ISoundSource.Duration
+  isExternal: true
+  href: Beutl.Media.Source.ISoundSource.html#Beutl_Media_Source_ISoundSource_Duration
+  name: Duration
+  nameWithType: ISoundSource.Duration
+  fullName: Beutl.Media.Source.ISoundSource.Duration
+- uid: Beutl.Media.Source.ISoundSource.SampleRate*
+  commentId: Overload:Beutl.Media.Source.ISoundSource.SampleRate
+  isExternal: true
+  href: Beutl.Media.Source.ISoundSource.html#Beutl_Media_Source_ISoundSource_SampleRate
+  name: SampleRate
+  nameWithType: ISoundSource.SampleRate
+  fullName: Beutl.Media.Source.ISoundSource.SampleRate
+- uid: Beutl.Media.Source.ISoundSource.NumChannels*
+  commentId: Overload:Beutl.Media.Source.ISoundSource.NumChannels
+  isExternal: true
+  href: Beutl.Media.Source.ISoundSource.html#Beutl_Media_Source_ISoundSource_NumChannels
+  name: NumChannels
+  nameWithType: ISoundSource.NumChannels
+  fullName: Beutl.Media.Source.ISoundSource.NumChannels

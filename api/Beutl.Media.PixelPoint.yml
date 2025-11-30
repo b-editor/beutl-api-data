@@ -1,0 +1,2233 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.PixelPoint
+  commentId: T:Beutl.Media.PixelPoint
+  id: PixelPoint
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.PixelPoint.#ctor(System.Int32,System.Int32)
+  - Beutl.Media.PixelPoint.Equals(Beutl.Media.PixelPoint)
+  - Beutl.Media.PixelPoint.Equals(System.Object)
+  - Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point)
+  - Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point,Beutl.Graphics.Vector)
+  - Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point,System.Single)
+  - Beutl.Media.PixelPoint.GetHashCode
+  - Beutl.Media.PixelPoint.Origin
+  - Beutl.Media.PixelPoint.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Media.PixelPoint.Parse(System.String)
+  - Beutl.Media.PixelPoint.ToPoint(Beutl.Graphics.Vector)
+  - Beutl.Media.PixelPoint.ToPoint(System.Single)
+  - Beutl.Media.PixelPoint.ToString
+  - Beutl.Media.PixelPoint.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelPoint@)
+  - Beutl.Media.PixelPoint.TryParse(System.String,Beutl.Media.PixelPoint@)
+  - Beutl.Media.PixelPoint.WithX(System.Int32)
+  - Beutl.Media.PixelPoint.WithY(System.Int32)
+  - Beutl.Media.PixelPoint.X
+  - Beutl.Media.PixelPoint.Y
+  - Beutl.Media.PixelPoint.op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  - Beutl.Media.PixelPoint.op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  - Beutl.Media.PixelPoint.op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  - Beutl.Media.PixelPoint.op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  langs:
+  - csharp
+  - vb
+  name: PixelPoint
+  nameWithType: PixelPoint
+  fullName: Beutl.Media.PixelPoint
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(PixelPointJsonConverter))]
+
+      [TypeConverter(typeof(PixelPointConverter))]
+
+      public readonly struct PixelPoint : IEquatable<PixelPoint>, ISpanParsable<PixelPoint>, IParsable<PixelPoint>, IEqualityOperators<PixelPoint, PixelPoint, bool>, IAdditionOperators<PixelPoint, PixelPoint, PixelPoint>, ISubtractionOperators<PixelPoint, PixelPoint, PixelPoint>, ITupleConvertible<PixelPoint, int>
+    content.vb: >-
+      <JsonConverter(GetType(PixelPointJsonConverter))>
+
+      <TypeConverter(GetType(PixelPointConverter))>
+
+      Public Structure PixelPoint Implements IEquatable(Of PixelPoint), ISpanParsable(Of PixelPoint), IParsable(Of PixelPoint), IEqualityOperators(Of PixelPoint, PixelPoint, Boolean), IAdditionOperators(Of PixelPoint, PixelPoint, PixelPoint), ISubtractionOperators(Of PixelPoint, PixelPoint, PixelPoint), ITupleConvertible(Of PixelPoint, Integer)
+  implements:
+  - System.IEquatable{Beutl.Media.PixelPoint}
+  - System.ISpanParsable{Beutl.Media.PixelPoint}
+  - System.IParsable{Beutl.Media.PixelPoint}
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}
+  - System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  - System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  - Beutl.ITupleConvertible{Beutl.Media.PixelPoint,System.Int32}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.PixelPointConverter
+- uid: Beutl.Media.PixelPoint.Origin
+  commentId: F:Beutl.Media.PixelPoint.Origin
+  id: Origin
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: PixelPoint.Origin
+  fullName: Beutl.Media.PixelPoint.Origin
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static readonly PixelPoint Origin
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Shared ReadOnly Origin As PixelPoint
+- uid: Beutl.Media.PixelPoint.#ctor(System.Int32,System.Int32)
+  commentId: M:Beutl.Media.PixelPoint.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: PixelPoint(int, int)
+  nameWithType: PixelPoint.PixelPoint(int, int)
+  fullName: Beutl.Media.PixelPoint.PixelPoint(int, int)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint(int x, int y)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    content.vb: Public Sub New(x As Integer, y As Integer)
+  overload: Beutl.Media.PixelPoint.#ctor*
+  nameWithType.vb: PixelPoint.New(Integer, Integer)
+  fullName.vb: Beutl.Media.PixelPoint.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: Beutl.Media.PixelPoint.op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelPoint.op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  id: op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  isEii: true
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: operator ==(PixelPoint, PixelPoint)
+  nameWithType: PixelPoint.operator ==(PixelPoint, PixelPoint)
+  fullName: Beutl.Media.PixelPoint.operator ==(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static bool operator ==(PixelPoint left, PixelPoint right)
+    parameters:
+    - id: left
+      type: Beutl.Media.PixelPoint
+    - id: right
+      type: Beutl.Media.PixelPoint
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator =(left As PixelPoint, right As PixelPoint) As Boolean
+  overload: Beutl.Media.PixelPoint.op_Equality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  nameWithType.vb: PixelPoint.=(PixelPoint, PixelPoint)
+  fullName.vb: Beutl.Media.PixelPoint.=(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: =(PixelPoint, PixelPoint)
+- uid: Beutl.Media.PixelPoint.op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelPoint.op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  id: op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  isEii: true
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: operator !=(PixelPoint, PixelPoint)
+  nameWithType: PixelPoint.operator !=(PixelPoint, PixelPoint)
+  fullName: Beutl.Media.PixelPoint.operator !=(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static bool operator !=(PixelPoint left, PixelPoint right)
+    parameters:
+    - id: left
+      type: Beutl.Media.PixelPoint
+    - id: right
+      type: Beutl.Media.PixelPoint
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator <>(left As PixelPoint, right As PixelPoint) As Boolean
+  overload: Beutl.Media.PixelPoint.op_Inequality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  nameWithType.vb: PixelPoint.<>(PixelPoint, PixelPoint)
+  fullName.vb: Beutl.Media.PixelPoint.<>(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: <>(PixelPoint, PixelPoint)
+- uid: Beutl.Media.PixelPoint.op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelPoint.op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  id: op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  isEii: true
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: operator +(PixelPoint, PixelPoint)
+  nameWithType: PixelPoint.operator +(PixelPoint, PixelPoint)
+  fullName: Beutl.Media.PixelPoint.operator +(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static PixelPoint operator +(PixelPoint a, PixelPoint b)
+    parameters:
+    - id: a
+      type: Beutl.Media.PixelPoint
+    - id: b
+      type: Beutl.Media.PixelPoint
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Shared Operator +(a As PixelPoint, b As PixelPoint) As PixelPoint
+  overload: Beutl.Media.PixelPoint.op_Addition*
+  implements:
+  - System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  nameWithType.vb: PixelPoint.+(PixelPoint, PixelPoint)
+  fullName.vb: Beutl.Media.PixelPoint.+(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: +(PixelPoint, PixelPoint)
+- uid: Beutl.Media.PixelPoint.op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelPoint.op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  id: op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  isEii: true
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: operator -(PixelPoint, PixelPoint)
+  nameWithType: PixelPoint.operator -(PixelPoint, PixelPoint)
+  fullName: Beutl.Media.PixelPoint.operator -(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static PixelPoint operator -(PixelPoint a, PixelPoint b)
+    parameters:
+    - id: a
+      type: Beutl.Media.PixelPoint
+    - id: b
+      type: Beutl.Media.PixelPoint
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Shared Operator -(a As PixelPoint, b As PixelPoint) As PixelPoint
+  overload: Beutl.Media.PixelPoint.op_Subtraction*
+  implements:
+  - System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  nameWithType.vb: PixelPoint.-(PixelPoint, PixelPoint)
+  fullName.vb: Beutl.Media.PixelPoint.-(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: -(PixelPoint, PixelPoint)
+- uid: Beutl.Media.PixelPoint.TryParse(System.String,Beutl.Media.PixelPoint@)
+  commentId: M:Beutl.Media.PixelPoint.TryParse(System.String,Beutl.Media.PixelPoint@)
+  id: TryParse(System.String,Beutl.Media.PixelPoint@)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out PixelPoint)
+  nameWithType: PixelPoint.TryParse(string, out PixelPoint)
+  fullName: Beutl.Media.PixelPoint.TryParse(string, out Beutl.Media.PixelPoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(string s, out PixelPoint rect)
+    parameters:
+    - id: s
+      type: System.String
+    - id: rect
+      type: Beutl.Media.PixelPoint
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, rect As PixelPoint) As Boolean
+  overload: Beutl.Media.PixelPoint.TryParse*
+  nameWithType.vb: PixelPoint.TryParse(String, PixelPoint)
+  fullName.vb: Beutl.Media.PixelPoint.TryParse(String, Beutl.Media.PixelPoint)
+  name.vb: TryParse(String, PixelPoint)
+- uid: Beutl.Media.PixelPoint.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelPoint@)
+  commentId: M:Beutl.Media.PixelPoint.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelPoint@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelPoint@)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out PixelPoint)
+  nameWithType: PixelPoint.TryParse(ReadOnlySpan<char>, out PixelPoint)
+  fullName: Beutl.Media.PixelPoint.TryParse(System.ReadOnlySpan<char>, out Beutl.Media.PixelPoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out PixelPoint rect)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: rect
+      type: Beutl.Media.PixelPoint
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), rect As PixelPoint) As Boolean
+  overload: Beutl.Media.PixelPoint.TryParse*
+  nameWithType.vb: PixelPoint.TryParse(ReadOnlySpan(Of Char), PixelPoint)
+  fullName.vb: Beutl.Media.PixelPoint.TryParse(System.ReadOnlySpan(Of Char), Beutl.Media.PixelPoint)
+  name.vb: TryParse(ReadOnlySpan(Of Char), PixelPoint)
+- uid: Beutl.Media.PixelPoint.Parse(System.String)
+  commentId: M:Beutl.Media.PixelPoint.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: PixelPoint.Parse(string)
+  fullName: Beutl.Media.PixelPoint.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelPoint Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Shared Function Parse(s As String) As PixelPoint
+  overload: Beutl.Media.PixelPoint.Parse*
+  nameWithType.vb: PixelPoint.Parse(String)
+  fullName.vb: Beutl.Media.PixelPoint.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Media.PixelPoint.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Media.PixelPoint.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: PixelPoint.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Media.PixelPoint.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelPoint Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As PixelPoint
+  overload: Beutl.Media.PixelPoint.Parse*
+  nameWithType.vb: PixelPoint.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Media.PixelPoint.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Media.PixelPoint.Equals(Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelPoint.Equals(Beutl.Media.PixelPoint)
+  id: Equals(Beutl.Media.PixelPoint)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: Equals(PixelPoint)
+  nameWithType: PixelPoint.Equals(PixelPoint)
+  fullName: Beutl.Media.PixelPoint.Equals(Beutl.Media.PixelPoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(PixelPoint other)
+    parameters:
+    - id: other
+      type: Beutl.Media.PixelPoint
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As PixelPoint) As Boolean
+  overload: Beutl.Media.PixelPoint.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.PixelPoint}.Equals(Beutl.Media.PixelPoint)
+- uid: Beutl.Media.PixelPoint.Equals(System.Object)
+  commentId: M:Beutl.Media.PixelPoint.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: PixelPoint.Equals(object?)
+  fullName: Beutl.Media.PixelPoint.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.PixelPoint.Equals*
+  nameWithType.vb: PixelPoint.Equals(Object)
+  fullName.vb: Beutl.Media.PixelPoint.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.PixelPoint.GetHashCode
+  commentId: M:Beutl.Media.PixelPoint.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: PixelPoint.GetHashCode()
+  fullName: Beutl.Media.PixelPoint.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.PixelPoint.GetHashCode*
+- uid: Beutl.Media.PixelPoint.WithX(System.Int32)
+  commentId: M:Beutl.Media.PixelPoint.WithX(System.Int32)
+  id: WithX(System.Int32)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: WithX(int)
+  nameWithType: PixelPoint.WithX(int)
+  fullName: Beutl.Media.PixelPoint.WithX(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint WithX(int x)
+    parameters:
+    - id: x
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Function WithX(x As Integer) As PixelPoint
+  overload: Beutl.Media.PixelPoint.WithX*
+  nameWithType.vb: PixelPoint.WithX(Integer)
+  fullName.vb: Beutl.Media.PixelPoint.WithX(Integer)
+  name.vb: WithX(Integer)
+- uid: Beutl.Media.PixelPoint.WithY(System.Int32)
+  commentId: M:Beutl.Media.PixelPoint.WithY(System.Int32)
+  id: WithY(System.Int32)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: WithY(int)
+  nameWithType: PixelPoint.WithY(int)
+  fullName: Beutl.Media.PixelPoint.WithY(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint WithY(int y)
+    parameters:
+    - id: y
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Function WithY(y As Integer) As PixelPoint
+  overload: Beutl.Media.PixelPoint.WithY*
+  nameWithType.vb: PixelPoint.WithY(Integer)
+  fullName.vb: Beutl.Media.PixelPoint.WithY(Integer)
+  name.vb: WithY(Integer)
+- uid: Beutl.Media.PixelPoint.ToPoint(System.Single)
+  commentId: M:Beutl.Media.PixelPoint.ToPoint(System.Single)
+  id: ToPoint(System.Single)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: ToPoint(float)
+  nameWithType: PixelPoint.ToPoint(float)
+  fullName: Beutl.Media.PixelPoint.ToPoint(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Point ToPoint(float scale)
+    parameters:
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public Function ToPoint(scale As Single) As Point
+  overload: Beutl.Media.PixelPoint.ToPoint*
+  nameWithType.vb: PixelPoint.ToPoint(Single)
+  fullName.vb: Beutl.Media.PixelPoint.ToPoint(Single)
+  name.vb: ToPoint(Single)
+- uid: Beutl.Media.PixelPoint.ToPoint(Beutl.Graphics.Vector)
+  commentId: M:Beutl.Media.PixelPoint.ToPoint(Beutl.Graphics.Vector)
+  id: ToPoint(Beutl.Graphics.Vector)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: ToPoint(Vector)
+  nameWithType: PixelPoint.ToPoint(Vector)
+  fullName: Beutl.Media.PixelPoint.ToPoint(Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Point ToPoint(Vector scale)
+    parameters:
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public Function ToPoint(scale As Vector) As Point
+  overload: Beutl.Media.PixelPoint.ToPoint*
+- uid: Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point)
+  commentId: M:Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point)
+  id: FromPoint(Beutl.Graphics.Point)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: FromPoint(Point)
+  nameWithType: PixelPoint.FromPoint(Point)
+  fullName: Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelPoint FromPoint(Point point)
+    parameters:
+    - id: point
+      type: Beutl.Graphics.Point
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Shared Function FromPoint(point As Point) As PixelPoint
+  overload: Beutl.Media.PixelPoint.FromPoint*
+- uid: Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point,System.Single)
+  commentId: M:Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point,System.Single)
+  id: FromPoint(Beutl.Graphics.Point,System.Single)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: FromPoint(Point, float)
+  nameWithType: PixelPoint.FromPoint(Point, float)
+  fullName: Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelPoint FromPoint(Point point, float scale)
+    parameters:
+    - id: point
+      type: Beutl.Graphics.Point
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Shared Function FromPoint(point As Point, scale As Single) As PixelPoint
+  overload: Beutl.Media.PixelPoint.FromPoint*
+  nameWithType.vb: PixelPoint.FromPoint(Point, Single)
+  fullName.vb: Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point, Single)
+  name.vb: FromPoint(Point, Single)
+- uid: Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point,Beutl.Graphics.Vector)
+  commentId: M:Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point,Beutl.Graphics.Vector)
+  id: FromPoint(Beutl.Graphics.Point,Beutl.Graphics.Vector)
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: FromPoint(Point, Vector)
+  nameWithType: PixelPoint.FromPoint(Point, Vector)
+  fullName: Beutl.Media.PixelPoint.FromPoint(Beutl.Graphics.Point, Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelPoint FromPoint(Point point, Vector scale)
+    parameters:
+    - id: point
+      type: Beutl.Graphics.Point
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Shared Function FromPoint(point As Point, scale As Vector) As PixelPoint
+  overload: Beutl.Media.PixelPoint.FromPoint*
+- uid: Beutl.Media.PixelPoint.ToString
+  commentId: M:Beutl.Media.PixelPoint.ToString
+  id: ToString
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PixelPoint.ToString()
+  fullName: Beutl.Media.PixelPoint.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Media.PixelPoint.ToString*
+- uid: Beutl.Media.PixelPoint.X
+  commentId: P:Beutl.Media.PixelPoint.X
+  id: X
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: PixelPoint.X
+  fullName: Beutl.Media.PixelPoint.X
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int X { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property X As Integer
+  overload: Beutl.Media.PixelPoint.X*
+- uid: Beutl.Media.PixelPoint.Y
+  commentId: P:Beutl.Media.PixelPoint.Y
+  id: Y
+  parent: Beutl.Media.PixelPoint
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: PixelPoint.Y
+  fullName: Beutl.Media.PixelPoint.Y
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelPoint.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Y { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Y As Integer
+  overload: Beutl.Media.PixelPoint.Y*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.PixelPoint}
+  commentId: T:System.IEquatable{Beutl.Media.PixelPoint}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<PixelPoint>
+  nameWithType: IEquatable<PixelPoint>
+  fullName: System.IEquatable<Beutl.Media.PixelPoint>
+  nameWithType.vb: IEquatable(Of PixelPoint)
+  fullName.vb: System.IEquatable(Of Beutl.Media.PixelPoint)
+  name.vb: IEquatable(Of PixelPoint)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Media.PixelPoint}
+  commentId: T:System.ISpanParsable{Beutl.Media.PixelPoint}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<PixelPoint>
+  nameWithType: ISpanParsable<PixelPoint>
+  fullName: System.ISpanParsable<Beutl.Media.PixelPoint>
+  nameWithType.vb: ISpanParsable(Of PixelPoint)
+  fullName.vb: System.ISpanParsable(Of Beutl.Media.PixelPoint)
+  name.vb: ISpanParsable(Of PixelPoint)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.IParsable{Beutl.Media.PixelPoint}
+  commentId: T:System.IParsable{Beutl.Media.PixelPoint}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<PixelPoint>
+  nameWithType: IParsable<PixelPoint>
+  fullName: System.IParsable<Beutl.Media.PixelPoint>
+  nameWithType.vb: IParsable(Of PixelPoint)
+  fullName.vb: System.IParsable(Of Beutl.Media.PixelPoint)
+  name.vb: IParsable(Of PixelPoint)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}
+  commentId: T:System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}
+  parent: System.Numerics
+  definition: System.Numerics.IEqualityOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<PixelPoint, PixelPoint, bool>
+  nameWithType: IEqualityOperators<PixelPoint, PixelPoint, bool>
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, bool>
+  nameWithType.vb: IEqualityOperators(Of PixelPoint, PixelPoint, Boolean)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Boolean)
+  name.vb: IEqualityOperators(Of PixelPoint, PixelPoint, Boolean)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  commentId: T:System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  parent: System.Numerics
+  definition: System.Numerics.IAdditionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  name: IAdditionOperators<PixelPoint, PixelPoint, PixelPoint>
+  nameWithType: IAdditionOperators<PixelPoint, PixelPoint, PixelPoint>
+  fullName: System.Numerics.IAdditionOperators<Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint>
+  nameWithType.vb: IAdditionOperators(Of PixelPoint, PixelPoint, PixelPoint)
+  fullName.vb: System.Numerics.IAdditionOperators(Of Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: IAdditionOperators(Of PixelPoint, PixelPoint, PixelPoint)
+  spec.csharp:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: <
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  commentId: T:System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  parent: System.Numerics
+  definition: System.Numerics.ISubtractionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  name: ISubtractionOperators<PixelPoint, PixelPoint, PixelPoint>
+  nameWithType: ISubtractionOperators<PixelPoint, PixelPoint, PixelPoint>
+  fullName: System.Numerics.ISubtractionOperators<Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint>
+  nameWithType.vb: ISubtractionOperators(Of PixelPoint, PixelPoint, PixelPoint)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: ISubtractionOperators(Of PixelPoint, PixelPoint, PixelPoint)
+  spec.csharp:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: <
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: Beutl.ITupleConvertible{Beutl.Media.PixelPoint,System.Int32}
+  commentId: T:Beutl.ITupleConvertible{Beutl.Media.PixelPoint,System.Int32}
+  parent: Beutl
+  definition: Beutl.ITupleConvertible`2
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  name: ITupleConvertible<PixelPoint, int>
+  nameWithType: ITupleConvertible<PixelPoint, int>
+  fullName: Beutl.ITupleConvertible<Beutl.Media.PixelPoint, int>
+  nameWithType.vb: ITupleConvertible(Of PixelPoint, Integer)
+  fullName.vb: Beutl.ITupleConvertible(Of Beutl.Media.PixelPoint, Integer)
+  name.vb: ITupleConvertible(Of PixelPoint, Integer)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: <
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3
+  commentId: T:System.Numerics.IEqualityOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult)
+  name.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Numerics.IAdditionOperators`3
+  commentId: T:System.Numerics.IAdditionOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  name: IAdditionOperators<TSelf, TOther, TResult>
+  nameWithType: IAdditionOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IAdditionOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IAdditionOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IAdditionOperators(Of TSelf, TOther, TResult)
+  name.vb: IAdditionOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics.ISubtractionOperators`3
+  commentId: T:System.Numerics.ISubtractionOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  name: ISubtractionOperators<TSelf, TOther, TResult>
+  nameWithType: ISubtractionOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.ISubtractionOperators<TSelf, TOther, TResult>
+  nameWithType.vb: ISubtractionOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of TSelf, TOther, TResult)
+  name.vb: ISubtractionOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.PixelPoint
+  commentId: T:Beutl.Media.PixelPoint
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html
+  name: PixelPoint
+  nameWithType: PixelPoint
+  fullName: Beutl.Media.PixelPoint
+- uid: Beutl.Media.PixelPoint.#ctor*
+  commentId: Overload:Beutl.Media.PixelPoint.#ctor
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint__ctor_System_Int32_System_Int32_
+  name: PixelPoint
+  nameWithType: PixelPoint.PixelPoint
+  fullName: Beutl.Media.PixelPoint.PixelPoint
+  nameWithType.vb: PixelPoint.New
+  fullName.vb: Beutl.Media.PixelPoint.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.PixelPoint.op_Equality*
+  commentId: Overload:Beutl.Media.PixelPoint.op_Equality
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Equality_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+  name: operator ==
+  nameWithType: PixelPoint.operator ==
+  fullName: Beutl.Media.PixelPoint.operator ==
+  nameWithType.vb: PixelPoint.=
+  fullName.vb: Beutl.Media.PixelPoint.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelPoint.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Equality_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  parent: System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(PixelPoint, PixelPoint)
+  nameWithType: IEqualityOperators<PixelPoint, PixelPoint, bool>.operator ==(PixelPoint, PixelPoint)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, bool>.operator ==(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  nameWithType.vb: IEqualityOperators(Of PixelPoint, PixelPoint, Boolean).=(PixelPoint, PixelPoint)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Boolean).=(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: =(PixelPoint, PixelPoint)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Equality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  name.vb: =(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelPoint.op_Inequality*
+  commentId: Overload:Beutl.Media.PixelPoint.op_Inequality
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Inequality_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+  name: operator !=
+  nameWithType: PixelPoint.operator !=
+  fullName: Beutl.Media.PixelPoint.operator !=
+  nameWithType.vb: PixelPoint.<>
+  fullName.vb: Beutl.Media.PixelPoint.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelPoint.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Inequality_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  parent: System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(PixelPoint, PixelPoint)
+  nameWithType: IEqualityOperators<PixelPoint, PixelPoint, bool>.operator !=(PixelPoint, PixelPoint)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, bool>.operator !=(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  nameWithType.vb: IEqualityOperators(Of PixelPoint, PixelPoint, Boolean).<>(PixelPoint, PixelPoint)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Boolean).<>(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: <>(PixelPoint, PixelPoint)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,System.Boolean}.op_Inequality(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  name.vb: <>(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelPoint.op_Addition*
+  commentId: Overload:Beutl.Media.PixelPoint.op_Addition
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Addition_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+  name: operator +
+  nameWithType: PixelPoint.operator +
+  fullName: Beutl.Media.PixelPoint.operator +
+  nameWithType.vb: PixelPoint.+
+  fullName.vb: Beutl.Media.PixelPoint.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelPoint.op_Addition*
+    name: +
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Addition_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+- uid: System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  parent: System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  definition: System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  name: operator +(PixelPoint, PixelPoint)
+  nameWithType: IAdditionOperators<PixelPoint, PixelPoint, PixelPoint>.operator +(PixelPoint, PixelPoint)
+  fullName: System.Numerics.IAdditionOperators<Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint>.operator +(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  nameWithType.vb: IAdditionOperators(Of PixelPoint, PixelPoint, PixelPoint).+(PixelPoint, PixelPoint)
+  fullName.vb: System.Numerics.IAdditionOperators(Of Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint).+(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: +(PixelPoint, PixelPoint)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IAdditionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Addition(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+    name: +
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+  spec.vb:
+  - name: +
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+  commentId: M:System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  name: operator +(TSelf, TOther)
+  nameWithType: IAdditionOperators<TSelf, TOther, TResult>.operator +(TSelf, TOther)
+  fullName: System.Numerics.IAdditionOperators<TSelf, TOther, TResult>.operator +(TSelf, TOther)
+  nameWithType.vb: IAdditionOperators(Of TSelf, TOther, TResult).+(TSelf, TOther)
+  fullName.vb: System.Numerics.IAdditionOperators(Of TSelf, TOther, TResult).+(TSelf, TOther)
+  name.vb: +(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+    name: +
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: +
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelPoint.op_Subtraction*
+  commentId: Overload:Beutl.Media.PixelPoint.op_Subtraction
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Subtraction_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+  name: operator -
+  nameWithType: PixelPoint.operator -
+  fullName: Beutl.Media.PixelPoint.operator -
+  nameWithType.vb: PixelPoint.-
+  fullName.vb: Beutl.Media.PixelPoint.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelPoint.op_Subtraction*
+    name: '-'
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_op_Subtraction_Beutl_Media_PixelPoint_Beutl_Media_PixelPoint_
+- uid: System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  parent: System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}
+  definition: System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  name: operator -(PixelPoint, PixelPoint)
+  nameWithType: ISubtractionOperators<PixelPoint, PixelPoint, PixelPoint>.operator -(PixelPoint, PixelPoint)
+  fullName: System.Numerics.ISubtractionOperators<Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint>.operator -(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  nameWithType.vb: ISubtractionOperators(Of PixelPoint, PixelPoint, PixelPoint).-(PixelPoint, PixelPoint)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of Beutl.Media.PixelPoint, Beutl.Media.PixelPoint, Beutl.Media.PixelPoint).-(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: -(PixelPoint, PixelPoint)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.ISubtractionOperators{Beutl.Media.PixelPoint,Beutl.Media.PixelPoint,Beutl.Media.PixelPoint}.op_Subtraction(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+    name: '-'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+  spec.vb:
+  - name: '-'
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+  commentId: M:System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  name: operator -(TSelf, TOther)
+  nameWithType: ISubtractionOperators<TSelf, TOther, TResult>.operator -(TSelf, TOther)
+  fullName: System.Numerics.ISubtractionOperators<TSelf, TOther, TResult>.operator -(TSelf, TOther)
+  nameWithType.vb: ISubtractionOperators(Of TSelf, TOther, TResult).-(TSelf, TOther)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of TSelf, TOther, TResult).-(TSelf, TOther)
+  name.vb: -(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+    name: '-'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: '-'
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelPoint.TryParse*
+  commentId: Overload:Beutl.Media.PixelPoint.TryParse
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_TryParse_System_String_Beutl_Media_PixelPoint__
+  name: TryParse
+  nameWithType: PixelPoint.TryParse
+  fullName: Beutl.Media.PixelPoint.TryParse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.PixelPoint.Parse*
+  commentId: Overload:Beutl.Media.PixelPoint.Parse
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_Parse_System_String_
+  name: Parse
+  nameWithType: PixelPoint.Parse
+  fullName: Beutl.Media.PixelPoint.Parse
+- uid: Beutl.Media.PixelPoint.Equals*
+  commentId: Overload:Beutl.Media.PixelPoint.Equals
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_Equals_Beutl_Media_PixelPoint_
+  name: Equals
+  nameWithType: PixelPoint.Equals
+  fullName: Beutl.Media.PixelPoint.Equals
+- uid: System.IEquatable{Beutl.Media.PixelPoint}.Equals(Beutl.Media.PixelPoint)
+  commentId: M:System.IEquatable{Beutl.Media.PixelPoint}.Equals(Beutl.Media.PixelPoint)
+  parent: System.IEquatable{Beutl.Media.PixelPoint}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(PixelPoint)
+  nameWithType: IEquatable<PixelPoint>.Equals(PixelPoint)
+  fullName: System.IEquatable<Beutl.Media.PixelPoint>.Equals(Beutl.Media.PixelPoint)
+  nameWithType.vb: IEquatable(Of PixelPoint).Equals(PixelPoint)
+  fullName.vb: System.IEquatable(Of Beutl.Media.PixelPoint).Equals(Beutl.Media.PixelPoint)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.PixelPoint}.Equals(Beutl.Media.PixelPoint)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.PixelPoint}.Equals(Beutl.Media.PixelPoint)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.PixelPoint
+    name: PixelPoint
+    isExternal: true
+    href: Beutl.Media.PixelPoint.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.PixelPoint.GetHashCode*
+  commentId: Overload:Beutl.Media.PixelPoint.GetHashCode
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_GetHashCode
+  name: GetHashCode
+  nameWithType: PixelPoint.GetHashCode
+  fullName: Beutl.Media.PixelPoint.GetHashCode
+- uid: Beutl.Media.PixelPoint.WithX*
+  commentId: Overload:Beutl.Media.PixelPoint.WithX
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_WithX_System_Int32_
+  name: WithX
+  nameWithType: PixelPoint.WithX
+  fullName: Beutl.Media.PixelPoint.WithX
+- uid: Beutl.Media.PixelPoint.WithY*
+  commentId: Overload:Beutl.Media.PixelPoint.WithY
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_WithY_System_Int32_
+  name: WithY
+  nameWithType: PixelPoint.WithY
+  fullName: Beutl.Media.PixelPoint.WithY
+- uid: Beutl.Media.PixelPoint.ToPoint*
+  commentId: Overload:Beutl.Media.PixelPoint.ToPoint
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_ToPoint_System_Single_
+  name: ToPoint
+  nameWithType: PixelPoint.ToPoint
+  fullName: Beutl.Media.PixelPoint.ToPoint
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.Point
+  commentId: T:Beutl.Graphics.Point
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Point.html
+  name: Point
+  nameWithType: Point
+  fullName: Beutl.Graphics.Point
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: Beutl.Graphics.Vector
+  commentId: T:Beutl.Graphics.Vector
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: Beutl.Graphics.Vector
+- uid: Beutl.Media.PixelPoint.FromPoint*
+  commentId: Overload:Beutl.Media.PixelPoint.FromPoint
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_FromPoint_Beutl_Graphics_Point_
+  name: FromPoint
+  nameWithType: PixelPoint.FromPoint
+  fullName: Beutl.Media.PixelPoint.FromPoint
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Media.PixelPoint.ToString*
+  commentId: Overload:Beutl.Media.PixelPoint.ToString
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_ToString
+  name: ToString
+  nameWithType: PixelPoint.ToString
+  fullName: Beutl.Media.PixelPoint.ToString
+- uid: Beutl.Media.PixelPoint.X*
+  commentId: Overload:Beutl.Media.PixelPoint.X
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_X
+  name: X
+  nameWithType: PixelPoint.X
+  fullName: Beutl.Media.PixelPoint.X
+- uid: Beutl.Media.PixelPoint.Y*
+  commentId: Overload:Beutl.Media.PixelPoint.Y
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html#Beutl_Media_PixelPoint_Y
+  name: Y
+  nameWithType: PixelPoint.Y
+  fullName: Beutl.Media.PixelPoint.Y

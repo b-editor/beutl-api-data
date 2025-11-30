@@ -1,0 +1,2941 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.ImmediateCanvas
+  commentId: T:Beutl.Graphics.ImmediateCanvas
+  id: ImmediateCanvas
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.ImmediateCanvas.#ctor(Beutl.Graphics.Rendering.RenderTarget)
+  - Beutl.Graphics.ImmediateCanvas.BlendMode
+  - Beutl.Graphics.ImmediateCanvas.Clear
+  - Beutl.Graphics.ImmediateCanvas.Clear(Beutl.Media.Color)
+  - Beutl.Graphics.ImmediateCanvas.ClipPath(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  - Beutl.Graphics.ImmediateCanvas.ClipRect(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  - Beutl.Graphics.ImmediateCanvas.Dispose
+  - Beutl.Graphics.ImmediateCanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+  - Beutl.Graphics.ImmediateCanvas.DrawBitmap(Beutl.Media.IBitmap,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  - Beutl.Graphics.ImmediateCanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawRenderTarget(Beutl.Graphics.Rendering.RenderTarget,Beutl.Graphics.Point)
+  - Beutl.Graphics.ImmediateCanvas.DrawSurface(SkiaSharp.SKSurface,Beutl.Graphics.Point)
+  - Beutl.Graphics.ImmediateCanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ImmediateCanvas.Finalize
+  - Beutl.Graphics.ImmediateCanvas.IsDisposed
+  - Beutl.Graphics.ImmediateCanvas.Opacity
+  - Beutl.Graphics.ImmediateCanvas.Pop(System.Int32)
+  - Beutl.Graphics.ImmediateCanvas.Push
+  - Beutl.Graphics.ImmediateCanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+  - Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  - Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  - Beutl.Graphics.ImmediateCanvas.PushLayer(Beutl.Graphics.Rect)
+  - Beutl.Graphics.ImmediateCanvas.PushOpacity(System.Single)
+  - Beutl.Graphics.ImmediateCanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  - Beutl.Graphics.ImmediateCanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  - Beutl.Graphics.ImmediateCanvas.Size
+  - Beutl.Graphics.ImmediateCanvas.Snapshot
+  - Beutl.Graphics.ImmediateCanvas.Transform
+  langs:
+  - csharp
+  - vb
+  name: ImmediateCanvas
+  nameWithType: ImmediateCanvas
+  fullName: Beutl.Graphics.ImmediateCanvas
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CanvasPushedState.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: 'public class ImmediateCanvas : ICanvas, IDisposable, IPopable'
+    content.vb: Public Class ImmediateCanvas Implements ICanvas, IDisposable, IPopable
+  inheritance:
+  - System.Object
+  implements:
+  - Beutl.Graphics.ICanvas
+  - System.IDisposable
+  - Beutl.Graphics.IPopable
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Graphics.ImmediateCanvas.#ctor(Beutl.Graphics.Rendering.RenderTarget)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.#ctor(Beutl.Graphics.Rendering.RenderTarget)
+  id: '#ctor(Beutl.Graphics.Rendering.RenderTarget)'
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: ImmediateCanvas(RenderTarget)
+  nameWithType: ImmediateCanvas.ImmediateCanvas(RenderTarget)
+  fullName: Beutl.Graphics.ImmediateCanvas.ImmediateCanvas(Beutl.Graphics.Rendering.RenderTarget)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public ImmediateCanvas(RenderTarget renderTarget)
+    parameters:
+    - id: renderTarget
+      type: Beutl.Graphics.Rendering.RenderTarget
+    content.vb: Public Sub New(renderTarget As RenderTarget)
+  overload: Beutl.Graphics.ImmediateCanvas.#ctor*
+  nameWithType.vb: ImmediateCanvas.New(RenderTarget)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.New(Beutl.Graphics.Rendering.RenderTarget)
+  name.vb: New(RenderTarget)
+- uid: Beutl.Graphics.ImmediateCanvas.Finalize
+  commentId: M:Beutl.Graphics.ImmediateCanvas.Finalize
+  id: Finalize
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: ~ImmediateCanvas()
+  nameWithType: ImmediateCanvas.~ImmediateCanvas()
+  fullName: Beutl.Graphics.ImmediateCanvas.~ImmediateCanvas()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: protected ~ImmediateCanvas()
+    content.vb: 'Protected '
+  overload: Beutl.Graphics.ImmediateCanvas.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Beutl.Graphics.ImmediateCanvas.Clear
+  commentId: M:Beutl.Graphics.ImmediateCanvas.Clear
+  id: Clear
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: ImmediateCanvas.Clear()
+  fullName: Beutl.Graphics.ImmediateCanvas.Clear()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Beutl.Graphics.ImmediateCanvas.Clear*
+  implements:
+  - Beutl.Graphics.ICanvas.Clear
+- uid: Beutl.Graphics.ImmediateCanvas.Clear(Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.Clear(Beutl.Media.Color)
+  id: Clear(Beutl.Media.Color)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Clear(Color)
+  nameWithType: ImmediateCanvas.Clear(Color)
+  fullName: Beutl.Graphics.ImmediateCanvas.Clear(Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void Clear(Color color)
+    parameters:
+    - id: color
+      type: Beutl.Media.Color
+    content.vb: Public Sub Clear(color As Color)
+  overload: Beutl.Graphics.ImmediateCanvas.Clear*
+  implements:
+  - Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
+- uid: Beutl.Graphics.ImmediateCanvas.ClipRect(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.ClipRect(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  id: ClipRect(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: ClipRect(Rect, ClipOperation)
+  nameWithType: ImmediateCanvas.ClipRect(Rect, ClipOperation)
+  fullName: Beutl.Graphics.ImmediateCanvas.ClipRect(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public void ClipRect(Rect clip, ClipOperation operation = ClipOperation.Intersect)
+    parameters:
+    - id: clip
+      type: Beutl.Graphics.Rect
+    - id: operation
+      type: Beutl.Graphics.ClipOperation
+    content.vb: Public Sub ClipRect(clip As Rect, operation As ClipOperation = ClipOperation.Intersect)
+  overload: Beutl.Graphics.ImmediateCanvas.ClipRect*
+- uid: Beutl.Graphics.ImmediateCanvas.ClipPath(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.ClipPath(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  id: ClipPath(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: ClipPath(Resource, ClipOperation)
+  nameWithType: ImmediateCanvas.ClipPath(Geometry.Resource, ClipOperation)
+  fullName: Beutl.Graphics.ImmediateCanvas.ClipPath(Beutl.Media.Geometry.Resource, Beutl.Graphics.ClipOperation)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public void ClipPath(Geometry.Resource geometry, ClipOperation operation = ClipOperation.Intersect)
+    parameters:
+    - id: geometry
+      type: Beutl.Media.Geometry.Resource
+    - id: operation
+      type: Beutl.Graphics.ClipOperation
+    content.vb: Public Sub ClipPath(geometry As Geometry.Resource, operation As ClipOperation = ClipOperation.Intersect)
+  overload: Beutl.Graphics.ImmediateCanvas.ClipPath*
+- uid: Beutl.Graphics.ImmediateCanvas.Dispose
+  commentId: M:Beutl.Graphics.ImmediateCanvas.Dispose
+  id: Dispose
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ImmediateCanvas.Dispose()
+  fullName: Beutl.Graphics.ImmediateCanvas.Dispose()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Beutl.Graphics.ImmediateCanvas.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Beutl.Graphics.ImmediateCanvas.DrawSurface(SkiaSharp.SKSurface,Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawSurface(SkiaSharp.SKSurface,Beutl.Graphics.Point)
+  id: DrawSurface(SkiaSharp.SKSurface,Beutl.Graphics.Point)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawSurface(SKSurface, Point)
+  nameWithType: ImmediateCanvas.DrawSurface(SKSurface, Point)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawSurface(SkiaSharp.SKSurface, Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public void DrawSurface(SKSurface surface, Point point)
+    parameters:
+    - id: surface
+      type: SkiaSharp.SKSurface
+    - id: point
+      type: Beutl.Graphics.Point
+    content.vb: Public Sub DrawSurface(surface As SKSurface, point As Point)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawSurface*
+- uid: Beutl.Graphics.ImmediateCanvas.DrawRenderTarget(Beutl.Graphics.Rendering.RenderTarget,Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawRenderTarget(Beutl.Graphics.Rendering.RenderTarget,Beutl.Graphics.Point)
+  id: DrawRenderTarget(Beutl.Graphics.Rendering.RenderTarget,Beutl.Graphics.Point)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawRenderTarget(RenderTarget, Point)
+  nameWithType: ImmediateCanvas.DrawRenderTarget(RenderTarget, Point)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawRenderTarget(Beutl.Graphics.Rendering.RenderTarget, Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public void DrawRenderTarget(RenderTarget renderTarget, Point point)
+    parameters:
+    - id: renderTarget
+      type: Beutl.Graphics.Rendering.RenderTarget
+    - id: point
+      type: Beutl.Graphics.Point
+    content.vb: Public Sub DrawRenderTarget(renderTarget As RenderTarget, point As Point)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawRenderTarget*
+- uid: Beutl.Graphics.ImmediateCanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  id: DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawDrawable(Resource)
+  nameWithType: ImmediateCanvas.DrawDrawable(Drawable.Resource)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawDrawable(Drawable.Resource drawable)
+    parameters:
+    - id: drawable
+      type: Beutl.Graphics.Drawable.Resource
+    content.vb: Public Sub DrawDrawable(drawable As Drawable.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawDrawable*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  id: DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawNode(RenderNode)
+  nameWithType: ImmediateCanvas.DrawNode(RenderNode)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawNode(RenderNode node)
+    parameters:
+    - id: node
+      type: Beutl.Graphics.Rendering.RenderNode
+    content.vb: Public Sub DrawNode(node As RenderNode)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawNode*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+  id: DrawBackdrop(Beutl.Graphics.IBackdrop)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawBackdrop(IBackdrop)
+  nameWithType: ImmediateCanvas.DrawBackdrop(IBackdrop)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawBackdrop(IBackdrop backdrop)
+    parameters:
+    - id: backdrop
+      type: Beutl.Graphics.IBackdrop
+    content.vb: Public Sub DrawBackdrop(backdrop As IBackdrop)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawBackdrop*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+- uid: Beutl.Graphics.ImmediateCanvas.Snapshot
+  commentId: M:Beutl.Graphics.ImmediateCanvas.Snapshot
+  id: Snapshot
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Snapshot()
+  nameWithType: ImmediateCanvas.Snapshot()
+  fullName: Beutl.Graphics.ImmediateCanvas.Snapshot()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public IBackdrop Snapshot()
+    return:
+      type: Beutl.Graphics.IBackdrop
+    content.vb: Public Function Snapshot() As IBackdrop
+  overload: Beutl.Graphics.ImmediateCanvas.Snapshot*
+  implements:
+  - Beutl.Graphics.ICanvas.Snapshot
+- uid: Beutl.Graphics.ImmediateCanvas.DrawBitmap(Beutl.Media.IBitmap,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawBitmap(Beutl.Media.IBitmap,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawBitmap(Beutl.Media.IBitmap,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawBitmap(IBitmap, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawBitmap(IBitmap, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawBitmap(Beutl.Media.IBitmap, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public void DrawBitmap(IBitmap bmp, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: bmp
+      type: Beutl.Media.IBitmap
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawBitmap(bmp As IBitmap, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawBitmap*
+  nameWithType.vb: ImmediateCanvas.DrawBitmap(IBitmap, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawBitmap(Beutl.Media.IBitmap, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawBitmap(IBitmap, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawImageSource(IImageSource, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawImageSource(IImageSource, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawImageSource(Beutl.Media.Source.IImageSource, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawImageSource(IImageSource source, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: source
+      type: Beutl.Media.Source.IImageSource
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawImageSource(source As IImageSource, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawImageSource*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ImmediateCanvas.DrawImageSource(IImageSource, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawImageSource(Beutl.Media.Source.IImageSource, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawImageSource(IImageSource, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawVideoSource(IVideoSource, TimeSpan, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawVideoSource(IVideoSource, TimeSpan, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, System.TimeSpan, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawVideoSource(IVideoSource source, TimeSpan frame, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: source
+      type: Beutl.Media.Source.IVideoSource
+    - id: frame
+      type: System.TimeSpan
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawVideoSource(source As IVideoSource, frame As TimeSpan, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawVideoSource*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ImmediateCanvas.DrawVideoSource(IVideoSource, TimeSpan, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, System.TimeSpan, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawVideoSource(IVideoSource, TimeSpan, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawVideoSource(IVideoSource, int, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawVideoSource(IVideoSource, int, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, int, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawVideoSource(IVideoSource source, int frame, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: source
+      type: Beutl.Media.Source.IVideoSource
+    - id: frame
+      type: System.Int32
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawVideoSource(source As IVideoSource, frame As Integer, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawVideoSource*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ImmediateCanvas.DrawVideoSource(IVideoSource, Integer, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawVideoSource(IVideoSource, Integer, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawEllipse(Rect, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawEllipse(Rect, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawEllipse(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawEllipse(Rect rect, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawEllipse(rect As Rect, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawEllipse*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ImmediateCanvas.DrawEllipse(Rect, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawEllipse(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawEllipse(Rect, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawRectangle(Rect, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawRectangle(Rect, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawRectangle(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawRectangle(Rect rect, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawRectangle(rect As Rect, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawRectangle*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ImmediateCanvas.DrawRectangle(Rect, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawRectangle(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawRectangle(Rect, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawText(FormattedText, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawText(FormattedText, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawText(Beutl.Media.TextFormatting.FormattedText, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawText(FormattedText text, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: text
+      type: Beutl.Media.TextFormatting.FormattedText
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawText(text As FormattedText, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawText*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ImmediateCanvas.DrawText(FormattedText, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawText(Beutl.Media.TextFormatting.FormattedText, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawText(FormattedText, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  id: DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: DrawGeometry(Resource, Resource?, Resource?)
+  nameWithType: ImmediateCanvas.DrawGeometry(Geometry.Resource, Brush.Resource?, Pen.Resource?)
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawGeometry(Beutl.Media.Geometry.Resource, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void DrawGeometry(Geometry.Resource geometry, Brush.Resource? fill, Pen.Resource? pen)
+    parameters:
+    - id: geometry
+      type: Beutl.Media.Geometry.Resource
+    - id: fill
+      type: Beutl.Media.Brush.Resource
+    - id: pen
+      type: Beutl.Media.Pen.Resource
+    content.vb: Public Sub DrawGeometry(geometry As Geometry.Resource, fill As Brush.Resource, pen As Pen.Resource)
+  overload: Beutl.Graphics.ImmediateCanvas.DrawGeometry*
+  implements:
+  - Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ImmediateCanvas.DrawGeometry(Geometry.Resource, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.DrawGeometry(Beutl.Media.Geometry.Resource, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawGeometry(Resource, Resource, Resource)
+- uid: Beutl.Graphics.ImmediateCanvas.Pop(System.Int32)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.Pop(System.Int32)
+  id: Pop(System.Int32)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Pop(int)
+  nameWithType: ImmediateCanvas.Pop(int)
+  fullName: Beutl.Graphics.ImmediateCanvas.Pop(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public void Pop(int count = -1)
+    parameters:
+    - id: count
+      type: System.Int32
+    content.vb: Public Sub Pop(count As Integer = -1)
+  overload: Beutl.Graphics.ImmediateCanvas.Pop*
+  implements:
+  - Beutl.Graphics.IPopable.Pop(System.Int32)
+  nameWithType.vb: ImmediateCanvas.Pop(Integer)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.Pop(Integer)
+  name.vb: Pop(Integer)
+- uid: Beutl.Graphics.ImmediateCanvas.Push
+  commentId: M:Beutl.Graphics.ImmediateCanvas.Push
+  id: Push
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Push()
+  nameWithType: ImmediateCanvas.Push()
+  fullName: Beutl.Graphics.ImmediateCanvas.Push()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState Push()
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function Push() As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.Push*
+  implements:
+  - Beutl.Graphics.ICanvas.Push
+- uid: Beutl.Graphics.ImmediateCanvas.PushLayer(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.PushLayer(Beutl.Graphics.Rect)
+  id: PushLayer(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: PushLayer(Rect)
+  nameWithType: ImmediateCanvas.PushLayer(Rect)
+  fullName: Beutl.Graphics.ImmediateCanvas.PushLayer(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState PushLayer(Rect limit = default)
+    parameters:
+    - id: limit
+      type: Beutl.Graphics.Rect
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function PushLayer(limit As Rect = Nothing) As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.PushLayer*
+  implements:
+  - Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
+- uid: Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  id: PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: PushClip(Rect, ClipOperation)
+  nameWithType: ImmediateCanvas.PushClip(Rect, ClipOperation)
+  fullName: Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState PushClip(Rect clip, ClipOperation operation = ClipOperation.Intersect)
+    parameters:
+    - id: clip
+      type: Beutl.Graphics.Rect
+    - id: operation
+      type: Beutl.Graphics.ClipOperation
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function PushClip(clip As Rect, operation As ClipOperation = ClipOperation.Intersect) As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.PushClip*
+  implements:
+  - Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+- uid: Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  id: PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: PushClip(Resource, ClipOperation)
+  nameWithType: ImmediateCanvas.PushClip(Geometry.Resource, ClipOperation)
+  fullName: Beutl.Graphics.ImmediateCanvas.PushClip(Beutl.Media.Geometry.Resource, Beutl.Graphics.ClipOperation)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState PushClip(Geometry.Resource geometry, ClipOperation operation = ClipOperation.Intersect)
+    parameters:
+    - id: geometry
+      type: Beutl.Media.Geometry.Resource
+    - id: operation
+      type: Beutl.Graphics.ClipOperation
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function PushClip(geometry As Geometry.Resource, operation As ClipOperation = ClipOperation.Intersect) As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.PushClip*
+  implements:
+  - Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+- uid: Beutl.Graphics.ImmediateCanvas.PushOpacity(System.Single)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.PushOpacity(System.Single)
+  id: PushOpacity(System.Single)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: PushOpacity(float)
+  nameWithType: ImmediateCanvas.PushOpacity(float)
+  fullName: Beutl.Graphics.ImmediateCanvas.PushOpacity(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState PushOpacity(float opacity)
+    parameters:
+    - id: opacity
+      type: System.Single
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function PushOpacity(opacity As Single) As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.PushOpacity*
+  implements:
+  - Beutl.Graphics.ICanvas.PushOpacity(System.Single)
+  nameWithType.vb: ImmediateCanvas.PushOpacity(Single)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.PushOpacity(Single)
+  name.vb: PushOpacity(Single)
+- uid: Beutl.Graphics.ImmediateCanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  id: PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: PushOpacityMask(Resource, Rect, bool)
+  nameWithType: ImmediateCanvas.PushOpacityMask(Brush.Resource, Rect, bool)
+  fullName: Beutl.Graphics.ImmediateCanvas.PushOpacityMask(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, bool)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState PushOpacityMask(Brush.Resource mask, Rect bounds, bool invert = false)
+    parameters:
+    - id: mask
+      type: Beutl.Media.Brush.Resource
+    - id: bounds
+      type: Beutl.Graphics.Rect
+    - id: invert
+      type: System.Boolean
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function PushOpacityMask(mask As Brush.Resource, bounds As Rect, invert As Boolean = False) As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.PushOpacityMask*
+  implements:
+  - Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  nameWithType.vb: ImmediateCanvas.PushOpacityMask(Brush.Resource, Rect, Boolean)
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.PushOpacityMask(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, Boolean)
+  name.vb: PushOpacityMask(Resource, Rect, Boolean)
+- uid: Beutl.Graphics.ImmediateCanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  id: PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: PushTransform(Matrix, TransformOperator)
+  nameWithType: ImmediateCanvas.PushTransform(Matrix, TransformOperator)
+  fullName: Beutl.Graphics.ImmediateCanvas.PushTransform(Beutl.Graphics.Matrix, Beutl.Graphics.TransformOperator)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState PushTransform(Matrix matrix, TransformOperator transformOperator = TransformOperator.Prepend)
+    parameters:
+    - id: matrix
+      type: Beutl.Graphics.Matrix
+    - id: transformOperator
+      type: Beutl.Graphics.TransformOperator
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function PushTransform(matrix As Matrix, transformOperator As TransformOperator = TransformOperator.Prepend) As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.PushTransform*
+  implements:
+  - Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+- uid: Beutl.Graphics.ImmediateCanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+  commentId: M:Beutl.Graphics.ImmediateCanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+  id: PushBlendMode(Beutl.Graphics.BlendMode)
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: PushBlendMode(BlendMode)
+  nameWithType: ImmediateCanvas.PushBlendMode(BlendMode)
+  fullName: Beutl.Graphics.ImmediateCanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PushedState PushBlendMode(BlendMode blendMode)
+    parameters:
+    - id: blendMode
+      type: Beutl.Graphics.BlendMode
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Public Function PushBlendMode(blendMode As BlendMode) As PushedState
+  overload: Beutl.Graphics.ImmediateCanvas.PushBlendMode*
+  implements:
+  - Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+- uid: Beutl.Graphics.ImmediateCanvas.IsDisposed
+  commentId: P:Beutl.Graphics.ImmediateCanvas.IsDisposed
+  id: IsDisposed
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: ImmediateCanvas.IsDisposed
+  fullName: Beutl.Graphics.ImmediateCanvas.IsDisposed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisposed As Boolean
+  overload: Beutl.Graphics.ImmediateCanvas.IsDisposed*
+  implements:
+  - Beutl.Graphics.ICanvas.IsDisposed
+- uid: Beutl.Graphics.ImmediateCanvas.BlendMode
+  commentId: P:Beutl.Graphics.ImmediateCanvas.BlendMode
+  id: BlendMode
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: BlendMode
+  nameWithType: ImmediateCanvas.BlendMode
+  fullName: Beutl.Graphics.ImmediateCanvas.BlendMode
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public BlendMode BlendMode { get; set; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.BlendMode
+    content.vb: Public Property BlendMode As BlendMode
+  overload: Beutl.Graphics.ImmediateCanvas.BlendMode*
+- uid: Beutl.Graphics.ImmediateCanvas.Opacity
+  commentId: P:Beutl.Graphics.ImmediateCanvas.Opacity
+  id: Opacity
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Opacity
+  nameWithType: ImmediateCanvas.Opacity
+  fullName: Beutl.Graphics.ImmediateCanvas.Opacity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Opacity { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Opacity As Single
+  overload: Beutl.Graphics.ImmediateCanvas.Opacity*
+- uid: Beutl.Graphics.ImmediateCanvas.Size
+  commentId: P:Beutl.Graphics.ImmediateCanvas.Size
+  id: Size
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: ImmediateCanvas.Size
+  fullName: Beutl.Graphics.ImmediateCanvas.Size
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public PixelSize Size { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public ReadOnly Property Size As PixelSize
+  overload: Beutl.Graphics.ImmediateCanvas.Size*
+  implements:
+  - Beutl.Graphics.ICanvas.Size
+- uid: Beutl.Graphics.ImmediateCanvas.Transform
+  commentId: P:Beutl.Graphics.ImmediateCanvas.Transform
+  id: Transform
+  parent: Beutl.Graphics.ImmediateCanvas
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: ImmediateCanvas.Transform
+  fullName: Beutl.Graphics.ImmediateCanvas.Transform
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ImmediateCanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Matrix Transform { get; set; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Matrix
+    content.vb: Public Property Transform As Matrix
+  overload: Beutl.Graphics.ImmediateCanvas.Transform*
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Graphics.ICanvas
+  commentId: T:Beutl.Graphics.ICanvas
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html
+  name: ICanvas
+  nameWithType: ICanvas
+  fullName: Beutl.Graphics.ICanvas
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Beutl.Graphics.IPopable
+  commentId: T:Beutl.Graphics.IPopable
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.IPopable.html
+  name: IPopable
+  nameWithType: IPopable
+  fullName: Beutl.Graphics.IPopable
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Graphics.ImmediateCanvas.#ctor*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.#ctor
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas__ctor_Beutl_Graphics_Rendering_RenderTarget_
+  name: ImmediateCanvas
+  nameWithType: ImmediateCanvas.ImmediateCanvas
+  fullName: Beutl.Graphics.ImmediateCanvas.ImmediateCanvas
+  nameWithType.vb: ImmediateCanvas.New
+  fullName.vb: Beutl.Graphics.ImmediateCanvas.New
+  name.vb: New
+- uid: Beutl.Graphics.Rendering.RenderTarget
+  commentId: T:Beutl.Graphics.Rendering.RenderTarget
+  parent: Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.Graphics.Rendering.RenderTarget.html
+  name: RenderTarget
+  nameWithType: RenderTarget
+  fullName: Beutl.Graphics.Rendering.RenderTarget
+- uid: Beutl.Graphics.Rendering
+  commentId: N:Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics.Rendering
+  nameWithType: Beutl.Graphics.Rendering
+  fullName: Beutl.Graphics.Rendering
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html
+- uid: Beutl.Graphics.ImmediateCanvas.Finalize*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Finalize
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Finalize
+  name: ~ImmediateCanvas
+  nameWithType: ImmediateCanvas.~ImmediateCanvas
+  fullName: Beutl.Graphics.ImmediateCanvas.~ImmediateCanvas
+  spec.csharp:
+  - name: "~"
+  - uid: Beutl.Graphics.ImmediateCanvas.Finalize*
+    name: ImmediateCanvas
+    isExternal: true
+    href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Finalize
+- uid: Beutl.Graphics.ImmediateCanvas.Clear*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Clear
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Clear
+  name: Clear
+  nameWithType: ImmediateCanvas.Clear
+  fullName: Beutl.Graphics.ImmediateCanvas.Clear
+- uid: Beutl.Graphics.ICanvas.Clear
+  commentId: M:Beutl.Graphics.ICanvas.Clear
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Clear
+  name: Clear()
+  nameWithType: ICanvas.Clear()
+  fullName: Beutl.Graphics.ICanvas.Clear()
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.Clear
+    name: Clear
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.Clear
+    name: Clear
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Clear
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Clear_Beutl_Media_Color_
+  name: Clear(Color)
+  nameWithType: ICanvas.Clear(Color)
+  fullName: Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
+    name: Clear
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Clear_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
+    name: Clear
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Clear_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: Beutl.Media.Color
+  commentId: T:Beutl.Media.Color
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: Beutl.Media.Color
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.Graphics.ImmediateCanvas.ClipRect*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.ClipRect
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_ClipRect_Beutl_Graphics_Rect_Beutl_Graphics_ClipOperation_
+  name: ClipRect
+  nameWithType: ImmediateCanvas.ClipRect
+  fullName: Beutl.Graphics.ImmediateCanvas.ClipRect
+- uid: Beutl.Graphics.Rect
+  commentId: T:Beutl.Graphics.Rect
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: Beutl.Graphics.Rect
+- uid: Beutl.Graphics.ClipOperation
+  commentId: T:Beutl.Graphics.ClipOperation
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.ClipOperation.html
+  name: ClipOperation
+  nameWithType: ClipOperation
+  fullName: Beutl.Graphics.ClipOperation
+- uid: Beutl.Graphics.ImmediateCanvas.ClipPath*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.ClipPath
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_ClipPath_Beutl_Media_Geometry_Resource_Beutl_Graphics_ClipOperation_
+  name: ClipPath
+  nameWithType: ImmediateCanvas.ClipPath
+  fullName: Beutl.Graphics.ImmediateCanvas.ClipPath
+- uid: Beutl.Media.Geometry.Resource
+  commentId: T:Beutl.Media.Geometry.Resource
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Geometry.html
+  name: Geometry.Resource
+  nameWithType: Geometry.Resource
+  fullName: Beutl.Media.Geometry.Resource
+  spec.csharp:
+  - uid: Beutl.Media.Geometry
+    name: Geometry
+    isExternal: true
+    href: Beutl.Media.Geometry.html
+  - name: .
+  - uid: Beutl.Media.Geometry.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Geometry.Resource.html
+  spec.vb:
+  - uid: Beutl.Media.Geometry
+    name: Geometry
+    isExternal: true
+    href: Beutl.Media.Geometry.html
+  - name: .
+  - uid: Beutl.Media.Geometry.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Geometry.Resource.html
+- uid: Beutl.Graphics.ImmediateCanvas.Dispose*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Dispose
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Dispose
+  name: Dispose
+  nameWithType: ImmediateCanvas.Dispose
+  fullName: Beutl.Graphics.ImmediateCanvas.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.DrawSurface*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawSurface
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawSurface_SkiaSharp_SKSurface_Beutl_Graphics_Point_
+  name: DrawSurface
+  nameWithType: ImmediateCanvas.DrawSurface
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawSurface
+- uid: SkiaSharp.SKSurface
+  commentId: T:SkiaSharp.SKSurface
+  parent: SkiaSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/skiasharp.sksurface
+  name: SKSurface
+  nameWithType: SKSurface
+  fullName: SkiaSharp.SKSurface
+- uid: Beutl.Graphics.Point
+  commentId: T:Beutl.Graphics.Point
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Point.html
+  name: Point
+  nameWithType: Point
+  fullName: Beutl.Graphics.Point
+- uid: SkiaSharp
+  commentId: N:SkiaSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/skiasharp
+  name: SkiaSharp
+  nameWithType: SkiaSharp
+  fullName: SkiaSharp
+- uid: Beutl.Graphics.ImmediateCanvas.DrawRenderTarget*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawRenderTarget
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawRenderTarget_Beutl_Graphics_Rendering_RenderTarget_Beutl_Graphics_Point_
+  name: DrawRenderTarget
+  nameWithType: ImmediateCanvas.DrawRenderTarget
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawRenderTarget
+- uid: Beutl.Graphics.ImmediateCanvas.DrawDrawable*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawDrawable
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawDrawable_Beutl_Graphics_Drawable_Resource_
+  name: DrawDrawable
+  nameWithType: ImmediateCanvas.DrawDrawable
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawDrawable
+- uid: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawDrawable_Beutl_Graphics_Drawable_Resource_
+  name: DrawDrawable(Resource)
+  nameWithType: ICanvas.DrawDrawable(Drawable.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+    name: DrawDrawable
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawDrawable_Beutl_Graphics_Drawable_Resource_
+  - name: (
+  - uid: Beutl.Graphics.Drawable.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Graphics.Drawable.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+    name: DrawDrawable
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawDrawable_Beutl_Graphics_Drawable_Resource_
+  - name: (
+  - uid: Beutl.Graphics.Drawable.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Graphics.Drawable.Resource.html
+  - name: )
+- uid: Beutl.Graphics.Drawable.Resource
+  commentId: T:Beutl.Graphics.Drawable.Resource
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Drawable.html
+  name: Drawable.Resource
+  nameWithType: Drawable.Resource
+  fullName: Beutl.Graphics.Drawable.Resource
+  spec.csharp:
+  - uid: Beutl.Graphics.Drawable
+    name: Drawable
+    isExternal: true
+    href: Beutl.Graphics.Drawable.html
+  - name: .
+  - uid: Beutl.Graphics.Drawable.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Graphics.Drawable.Resource.html
+  spec.vb:
+  - uid: Beutl.Graphics.Drawable
+    name: Drawable
+    isExternal: true
+    href: Beutl.Graphics.Drawable.html
+  - name: .
+  - uid: Beutl.Graphics.Drawable.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Graphics.Drawable.Resource.html
+- uid: Beutl.Graphics.ImmediateCanvas.DrawNode*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawNode
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawNode_Beutl_Graphics_Rendering_RenderNode_
+  name: DrawNode
+  nameWithType: ImmediateCanvas.DrawNode
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawNode
+- uid: Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  commentId: M:Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawNode_Beutl_Graphics_Rendering_RenderNode_
+  name: DrawNode(RenderNode)
+  nameWithType: ICanvas.DrawNode(RenderNode)
+  fullName: Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+    name: DrawNode
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawNode_Beutl_Graphics_Rendering_RenderNode_
+  - name: (
+  - uid: Beutl.Graphics.Rendering.RenderNode
+    name: RenderNode
+    isExternal: true
+    href: Beutl.Graphics.Rendering.RenderNode.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
+    name: DrawNode
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawNode_Beutl_Graphics_Rendering_RenderNode_
+  - name: (
+  - uid: Beutl.Graphics.Rendering.RenderNode
+    name: RenderNode
+    isExternal: true
+    href: Beutl.Graphics.Rendering.RenderNode.html
+  - name: )
+- uid: Beutl.Graphics.Rendering.RenderNode
+  commentId: T:Beutl.Graphics.Rendering.RenderNode
+  parent: Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.Graphics.Rendering.RenderNode.html
+  name: RenderNode
+  nameWithType: RenderNode
+  fullName: Beutl.Graphics.Rendering.RenderNode
+- uid: Beutl.Graphics.ImmediateCanvas.DrawBackdrop*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawBackdrop
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawBackdrop_Beutl_Graphics_IBackdrop_
+  name: DrawBackdrop
+  nameWithType: ImmediateCanvas.DrawBackdrop
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawBackdrop
+- uid: Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+  commentId: M:Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawBackdrop_Beutl_Graphics_IBackdrop_
+  name: DrawBackdrop(IBackdrop)
+  nameWithType: ICanvas.DrawBackdrop(IBackdrop)
+  fullName: Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+    name: DrawBackdrop
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawBackdrop_Beutl_Graphics_IBackdrop_
+  - name: (
+  - uid: Beutl.Graphics.IBackdrop
+    name: IBackdrop
+    isExternal: true
+    href: Beutl.Graphics.IBackdrop.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
+    name: DrawBackdrop
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawBackdrop_Beutl_Graphics_IBackdrop_
+  - name: (
+  - uid: Beutl.Graphics.IBackdrop
+    name: IBackdrop
+    isExternal: true
+    href: Beutl.Graphics.IBackdrop.html
+  - name: )
+- uid: Beutl.Graphics.IBackdrop
+  commentId: T:Beutl.Graphics.IBackdrop
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.IBackdrop.html
+  name: IBackdrop
+  nameWithType: IBackdrop
+  fullName: Beutl.Graphics.IBackdrop
+- uid: Beutl.Graphics.ImmediateCanvas.Snapshot*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Snapshot
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Snapshot
+  name: Snapshot
+  nameWithType: ImmediateCanvas.Snapshot
+  fullName: Beutl.Graphics.ImmediateCanvas.Snapshot
+- uid: Beutl.Graphics.ICanvas.Snapshot
+  commentId: M:Beutl.Graphics.ICanvas.Snapshot
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Snapshot
+  name: Snapshot()
+  nameWithType: ICanvas.Snapshot()
+  fullName: Beutl.Graphics.ICanvas.Snapshot()
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.Snapshot
+    name: Snapshot
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Snapshot
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.Snapshot
+    name: Snapshot
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Snapshot
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.DrawBitmap*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawBitmap
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawBitmap_Beutl_Media_IBitmap_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawBitmap
+  nameWithType: ImmediateCanvas.DrawBitmap
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawBitmap
+- uid: Beutl.Media.IBitmap
+  commentId: T:Beutl.Media.IBitmap
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.IBitmap.html
+  name: IBitmap
+  nameWithType: IBitmap
+  fullName: Beutl.Media.IBitmap
+- uid: Beutl.Media.Brush.Resource
+  commentId: T:Beutl.Media.Brush.Resource
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Brush.html
+  name: Brush.Resource
+  nameWithType: Brush.Resource
+  fullName: Beutl.Media.Brush.Resource
+  spec.csharp:
+  - uid: Beutl.Media.Brush
+    name: Brush
+    isExternal: true
+    href: Beutl.Media.Brush.html
+  - name: .
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  spec.vb:
+  - uid: Beutl.Media.Brush
+    name: Brush
+    isExternal: true
+    href: Beutl.Media.Brush.html
+  - name: .
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+- uid: Beutl.Media.Pen.Resource
+  commentId: T:Beutl.Media.Pen.Resource
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Pen.html
+  name: Pen.Resource
+  nameWithType: Pen.Resource
+  fullName: Beutl.Media.Pen.Resource
+  spec.csharp:
+  - uid: Beutl.Media.Pen
+    name: Pen
+    isExternal: true
+    href: Beutl.Media.Pen.html
+  - name: .
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  spec.vb:
+  - uid: Beutl.Media.Pen
+    name: Pen
+    isExternal: true
+    href: Beutl.Media.Pen.html
+  - name: .
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+- uid: Beutl.Graphics.ImmediateCanvas.DrawImageSource*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawImageSource
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawImageSource_Beutl_Media_Source_IImageSource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawImageSource
+  nameWithType: ImmediateCanvas.DrawImageSource
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawImageSource
+- uid: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawImageSource_Beutl_Media_Source_IImageSource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawImageSource(IImageSource, Resource, Resource)
+  nameWithType: ICanvas.DrawImageSource(IImageSource, Brush.Resource, Pen.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawImageSource
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawImageSource_Beutl_Media_Source_IImageSource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Source.IImageSource
+    name: IImageSource
+    isExternal: true
+    href: Beutl.Media.Source.IImageSource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawImageSource
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawImageSource_Beutl_Media_Source_IImageSource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Source.IImageSource
+    name: IImageSource
+    isExternal: true
+    href: Beutl.Media.Source.IImageSource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+- uid: Beutl.Media.Source.IImageSource
+  commentId: T:Beutl.Media.Source.IImageSource
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.IImageSource.html
+  name: IImageSource
+  nameWithType: IImageSource
+  fullName: Beutl.Media.Source.IImageSource
+- uid: Beutl.Media.Source
+  commentId: N:Beutl.Media.Source
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Source
+  nameWithType: Beutl.Media.Source
+  fullName: Beutl.Media.Source
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Source
+    name: Source
+    isExternal: true
+    href: Beutl.Media.Source.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Source
+    name: Source
+    isExternal: true
+    href: Beutl.Media.Source.html
+- uid: Beutl.Graphics.ImmediateCanvas.DrawVideoSource*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawVideoSource
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_TimeSpan_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawVideoSource
+  nameWithType: ImmediateCanvas.DrawVideoSource
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawVideoSource
+- uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_TimeSpan_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawVideoSource(IVideoSource, TimeSpan, Resource, Resource)
+  nameWithType: ICanvas.DrawVideoSource(IVideoSource, TimeSpan, Brush.Resource, Pen.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, System.TimeSpan, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawVideoSource
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_TimeSpan_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Source.IVideoSource
+    name: IVideoSource
+    isExternal: true
+    href: Beutl.Media.Source.IVideoSource.html
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawVideoSource
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_TimeSpan_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Source.IVideoSource
+    name: IVideoSource
+    isExternal: true
+    href: Beutl.Media.Source.IVideoSource.html
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+- uid: Beutl.Media.Source.IVideoSource
+  commentId: T:Beutl.Media.Source.IVideoSource
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.IVideoSource.html
+  name: IVideoSource
+  nameWithType: IVideoSource
+  fullName: Beutl.Media.Source.IVideoSource
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_Int32_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawVideoSource(IVideoSource, int, Resource, Resource)
+  nameWithType: ICanvas.DrawVideoSource(IVideoSource, int, Brush.Resource, Pen.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, int, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  nameWithType.vb: ICanvas.DrawVideoSource(IVideoSource, Integer, Brush.Resource, Pen.Resource)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  name.vb: DrawVideoSource(IVideoSource, Integer, Resource, Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawVideoSource
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_Int32_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Source.IVideoSource
+    name: IVideoSource
+    isExternal: true
+    href: Beutl.Media.Source.IVideoSource.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawVideoSource
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_Int32_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Source.IVideoSource
+    name: IVideoSource
+    isExternal: true
+    href: Beutl.Media.Source.IVideoSource.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Graphics.ImmediateCanvas.DrawEllipse*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawEllipse
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawEllipse_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawEllipse
+  nameWithType: ImmediateCanvas.DrawEllipse
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawEllipse
+- uid: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawEllipse_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawEllipse(Rect, Resource, Resource)
+  nameWithType: ICanvas.DrawEllipse(Rect, Brush.Resource, Pen.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawEllipse
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawEllipse_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawEllipse
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawEllipse_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.DrawRectangle*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawRectangle
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawRectangle_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawRectangle
+  nameWithType: ImmediateCanvas.DrawRectangle
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawRectangle
+- uid: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawRectangle_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawRectangle(Rect, Resource, Resource)
+  nameWithType: ICanvas.DrawRectangle(Rect, Brush.Resource, Pen.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawRectangle
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawRectangle_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawRectangle
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawRectangle_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.DrawText*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawText
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawText_Beutl_Media_TextFormatting_FormattedText_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawText
+  nameWithType: ImmediateCanvas.DrawText
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawText
+- uid: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawText_Beutl_Media_TextFormatting_FormattedText_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawText(FormattedText, Resource, Resource)
+  nameWithType: ICanvas.DrawText(FormattedText, Brush.Resource, Pen.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawText
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawText_Beutl_Media_TextFormatting_FormattedText_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.TextFormatting.FormattedText
+    name: FormattedText
+    isExternal: true
+    href: Beutl.Media.TextFormatting.FormattedText.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawText
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawText_Beutl_Media_TextFormatting_FormattedText_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.TextFormatting.FormattedText
+    name: FormattedText
+    isExternal: true
+    href: Beutl.Media.TextFormatting.FormattedText.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+- uid: Beutl.Media.TextFormatting.FormattedText
+  commentId: T:Beutl.Media.TextFormatting.FormattedText
+  parent: Beutl.Media.TextFormatting
+  isExternal: true
+  href: Beutl.Media.TextFormatting.FormattedText.html
+  name: FormattedText
+  nameWithType: FormattedText
+  fullName: Beutl.Media.TextFormatting.FormattedText
+- uid: Beutl.Media.TextFormatting
+  commentId: N:Beutl.Media.TextFormatting
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.TextFormatting
+  nameWithType: Beutl.Media.TextFormatting
+  fullName: Beutl.Media.TextFormatting
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.TextFormatting
+    name: TextFormatting
+    isExternal: true
+    href: Beutl.Media.TextFormatting.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.TextFormatting
+    name: TextFormatting
+    isExternal: true
+    href: Beutl.Media.TextFormatting.html
+- uid: Beutl.Graphics.ImmediateCanvas.DrawGeometry*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.DrawGeometry
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_DrawGeometry_Beutl_Media_Geometry_Resource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawGeometry
+  nameWithType: ImmediateCanvas.DrawGeometry
+  fullName: Beutl.Graphics.ImmediateCanvas.DrawGeometry
+- uid: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  commentId: M:Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawGeometry_Beutl_Media_Geometry_Resource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  name: DrawGeometry(Resource, Resource, Resource)
+  nameWithType: ICanvas.DrawGeometry(Geometry.Resource, Brush.Resource, Pen.Resource)
+  fullName: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawGeometry
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawGeometry_Beutl_Media_Geometry_Resource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Geometry.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Geometry.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+    name: DrawGeometry
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawGeometry_Beutl_Media_Geometry_Resource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  - name: (
+  - uid: Beutl.Media.Geometry.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Geometry.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Pen.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Pen.Resource.html
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.Pop*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Pop
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Pop_System_Int32_
+  name: Pop
+  nameWithType: ImmediateCanvas.Pop
+  fullName: Beutl.Graphics.ImmediateCanvas.Pop
+- uid: Beutl.Graphics.IPopable.Pop(System.Int32)
+  commentId: M:Beutl.Graphics.IPopable.Pop(System.Int32)
+  parent: Beutl.Graphics.IPopable
+  isExternal: true
+  href: Beutl.Graphics.IPopable.html#Beutl_Graphics_IPopable_Pop_System_Int32_
+  name: Pop(int)
+  nameWithType: IPopable.Pop(int)
+  fullName: Beutl.Graphics.IPopable.Pop(int)
+  nameWithType.vb: IPopable.Pop(Integer)
+  fullName.vb: Beutl.Graphics.IPopable.Pop(Integer)
+  name.vb: Pop(Integer)
+  spec.csharp:
+  - uid: Beutl.Graphics.IPopable.Pop(System.Int32)
+    name: Pop
+    isExternal: true
+    href: Beutl.Graphics.IPopable.html#Beutl_Graphics_IPopable_Pop_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.IPopable.Pop(System.Int32)
+    name: Pop
+    isExternal: true
+    href: Beutl.Graphics.IPopable.html#Beutl_Graphics_IPopable_Pop_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.Push*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Push
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Push
+  name: Push
+  nameWithType: ImmediateCanvas.Push
+  fullName: Beutl.Graphics.ImmediateCanvas.Push
+- uid: Beutl.Graphics.ICanvas.Push
+  commentId: M:Beutl.Graphics.ICanvas.Push
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Push
+  name: Push()
+  nameWithType: ICanvas.Push()
+  fullName: Beutl.Graphics.ICanvas.Push()
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.Push
+    name: Push
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Push
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.Push
+    name: Push
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Push
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.PushedState
+  commentId: T:Beutl.Graphics.PushedState
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.PushedState.html
+  name: PushedState
+  nameWithType: PushedState
+  fullName: Beutl.Graphics.PushedState
+- uid: Beutl.Graphics.ImmediateCanvas.PushLayer*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.PushLayer
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_PushLayer_Beutl_Graphics_Rect_
+  name: PushLayer
+  nameWithType: ImmediateCanvas.PushLayer
+  fullName: Beutl.Graphics.ImmediateCanvas.PushLayer
+- uid: Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushLayer_Beutl_Graphics_Rect_
+  name: PushLayer(Rect)
+  nameWithType: ICanvas.PushLayer(Rect)
+  fullName: Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
+    name: PushLayer
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushLayer_Beutl_Graphics_Rect_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
+    name: PushLayer
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushLayer_Beutl_Graphics_Rect_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.PushClip*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.PushClip
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_PushClip_Beutl_Graphics_Rect_Beutl_Graphics_ClipOperation_
+  name: PushClip
+  nameWithType: ImmediateCanvas.PushClip
+  fullName: Beutl.Graphics.ImmediateCanvas.PushClip
+- uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushClip_Beutl_Graphics_Rect_Beutl_Graphics_ClipOperation_
+  name: PushClip(Rect, ClipOperation)
+  nameWithType: ICanvas.PushClip(Rect, ClipOperation)
+  fullName: Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+    name: PushClip
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushClip_Beutl_Graphics_Rect_Beutl_Graphics_ClipOperation_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.ClipOperation
+    name: ClipOperation
+    isExternal: true
+    href: Beutl.Graphics.ClipOperation.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+    name: PushClip
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushClip_Beutl_Graphics_Rect_Beutl_Graphics_ClipOperation_
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.ClipOperation
+    name: ClipOperation
+    isExternal: true
+    href: Beutl.Graphics.ClipOperation.html
+  - name: )
+- uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushClip_Beutl_Media_Geometry_Resource_Beutl_Graphics_ClipOperation_
+  name: PushClip(Resource, ClipOperation)
+  nameWithType: ICanvas.PushClip(Geometry.Resource, ClipOperation)
+  fullName: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource, Beutl.Graphics.ClipOperation)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+    name: PushClip
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushClip_Beutl_Media_Geometry_Resource_Beutl_Graphics_ClipOperation_
+  - name: (
+  - uid: Beutl.Media.Geometry.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Geometry.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.ClipOperation
+    name: ClipOperation
+    isExternal: true
+    href: Beutl.Graphics.ClipOperation.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+    name: PushClip
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushClip_Beutl_Media_Geometry_Resource_Beutl_Graphics_ClipOperation_
+  - name: (
+  - uid: Beutl.Media.Geometry.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Geometry.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.ClipOperation
+    name: ClipOperation
+    isExternal: true
+    href: Beutl.Graphics.ClipOperation.html
+  - name: )
+- uid: Beutl.Graphics.ImmediateCanvas.PushOpacity*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.PushOpacity
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_PushOpacity_System_Single_
+  name: PushOpacity
+  nameWithType: ImmediateCanvas.PushOpacity
+  fullName: Beutl.Graphics.ImmediateCanvas.PushOpacity
+- uid: Beutl.Graphics.ICanvas.PushOpacity(System.Single)
+  commentId: M:Beutl.Graphics.ICanvas.PushOpacity(System.Single)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacity_System_Single_
+  name: PushOpacity(float)
+  nameWithType: ICanvas.PushOpacity(float)
+  fullName: Beutl.Graphics.ICanvas.PushOpacity(float)
+  nameWithType.vb: ICanvas.PushOpacity(Single)
+  fullName.vb: Beutl.Graphics.ICanvas.PushOpacity(Single)
+  name.vb: PushOpacity(Single)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.PushOpacity(System.Single)
+    name: PushOpacity
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacity_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.PushOpacity(System.Single)
+    name: PushOpacity
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacity_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.ImmediateCanvas.PushOpacityMask*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.PushOpacityMask
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_PushOpacityMask_Beutl_Media_Brush_Resource_Beutl_Graphics_Rect_System_Boolean_
+  name: PushOpacityMask
+  nameWithType: ImmediateCanvas.PushOpacityMask
+  fullName: Beutl.Graphics.ImmediateCanvas.PushOpacityMask
+- uid: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  commentId: M:Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacityMask_Beutl_Media_Brush_Resource_Beutl_Graphics_Rect_System_Boolean_
+  name: PushOpacityMask(Resource, Rect, bool)
+  nameWithType: ICanvas.PushOpacityMask(Brush.Resource, Rect, bool)
+  fullName: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, bool)
+  nameWithType.vb: ICanvas.PushOpacityMask(Brush.Resource, Rect, Boolean)
+  fullName.vb: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, Boolean)
+  name.vb: PushOpacityMask(Resource, Rect, Boolean)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+    name: PushOpacityMask
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacityMask_Beutl_Media_Brush_Resource_Beutl_Graphics_Rect_System_Boolean_
+  - name: (
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+    name: PushOpacityMask
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacityMask_Beutl_Media_Brush_Resource_Beutl_Graphics_Rect_System_Boolean_
+  - name: (
+  - uid: Beutl.Media.Brush.Resource
+    name: Resource
+    isExternal: true
+    href: Beutl.Media.Brush.Resource.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Graphics.ImmediateCanvas.PushTransform*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.PushTransform
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_PushTransform_Beutl_Graphics_Matrix_Beutl_Graphics_TransformOperator_
+  name: PushTransform
+  nameWithType: ImmediateCanvas.PushTransform
+  fullName: Beutl.Graphics.ImmediateCanvas.PushTransform
+- uid: Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  commentId: M:Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushTransform_Beutl_Graphics_Matrix_Beutl_Graphics_TransformOperator_
+  name: PushTransform(Matrix, TransformOperator)
+  nameWithType: ICanvas.PushTransform(Matrix, TransformOperator)
+  fullName: Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix, Beutl.Graphics.TransformOperator)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+    name: PushTransform
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushTransform_Beutl_Graphics_Matrix_Beutl_Graphics_TransformOperator_
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.TransformOperator
+    name: TransformOperator
+    isExternal: true
+    href: Beutl.Graphics.TransformOperator.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+    name: PushTransform
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushTransform_Beutl_Graphics_Matrix_Beutl_Graphics_TransformOperator_
+  - name: (
+  - uid: Beutl.Graphics.Matrix
+    name: Matrix
+    isExternal: true
+    href: Beutl.Graphics.Matrix.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.TransformOperator
+    name: TransformOperator
+    isExternal: true
+    href: Beutl.Graphics.TransformOperator.html
+  - name: )
+- uid: Beutl.Graphics.Matrix
+  commentId: T:Beutl.Graphics.Matrix
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Beutl.Graphics.Matrix
+- uid: Beutl.Graphics.TransformOperator
+  commentId: T:Beutl.Graphics.TransformOperator
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.TransformOperator.html
+  name: TransformOperator
+  nameWithType: TransformOperator
+  fullName: Beutl.Graphics.TransformOperator
+- uid: Beutl.Graphics.ImmediateCanvas.PushBlendMode*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.PushBlendMode
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_PushBlendMode_Beutl_Graphics_BlendMode_
+  name: PushBlendMode
+  nameWithType: ImmediateCanvas.PushBlendMode
+  fullName: Beutl.Graphics.ImmediateCanvas.PushBlendMode
+- uid: Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+  commentId: M:Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushBlendMode_Beutl_Graphics_BlendMode_
+  name: PushBlendMode(BlendMode)
+  nameWithType: ICanvas.PushBlendMode(BlendMode)
+  fullName: Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+  spec.csharp:
+  - uid: Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+    name: PushBlendMode
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushBlendMode_Beutl_Graphics_BlendMode_
+  - name: (
+  - uid: Beutl.Graphics.BlendMode
+    name: BlendMode
+    isExternal: true
+    href: Beutl.Graphics.BlendMode.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
+    name: PushBlendMode
+    isExternal: true
+    href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushBlendMode_Beutl_Graphics_BlendMode_
+  - name: (
+  - uid: Beutl.Graphics.BlendMode
+    name: BlendMode
+    isExternal: true
+    href: Beutl.Graphics.BlendMode.html
+  - name: )
+- uid: Beutl.Graphics.BlendMode
+  commentId: T:Beutl.Graphics.BlendMode
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.BlendMode.html
+  name: BlendMode
+  nameWithType: BlendMode
+  fullName: Beutl.Graphics.BlendMode
+- uid: Beutl.Graphics.ImmediateCanvas.IsDisposed*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.IsDisposed
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_IsDisposed
+  name: IsDisposed
+  nameWithType: ImmediateCanvas.IsDisposed
+  fullName: Beutl.Graphics.ImmediateCanvas.IsDisposed
+- uid: Beutl.Graphics.ICanvas.IsDisposed
+  commentId: P:Beutl.Graphics.ICanvas.IsDisposed
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_IsDisposed
+  name: IsDisposed
+  nameWithType: ICanvas.IsDisposed
+  fullName: Beutl.Graphics.ICanvas.IsDisposed
+- uid: Beutl.Graphics.ImmediateCanvas.BlendMode*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.BlendMode
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_BlendMode
+  name: BlendMode
+  nameWithType: ImmediateCanvas.BlendMode
+  fullName: Beutl.Graphics.ImmediateCanvas.BlendMode
+- uid: Beutl.Graphics.ImmediateCanvas.Opacity*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Opacity
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Opacity
+  name: Opacity
+  nameWithType: ImmediateCanvas.Opacity
+  fullName: Beutl.Graphics.ImmediateCanvas.Opacity
+- uid: Beutl.Graphics.ImmediateCanvas.Size*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Size
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Size
+  name: Size
+  nameWithType: ImmediateCanvas.Size
+  fullName: Beutl.Graphics.ImmediateCanvas.Size
+- uid: Beutl.Graphics.ICanvas.Size
+  commentId: P:Beutl.Graphics.ICanvas.Size
+  parent: Beutl.Graphics.ICanvas
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_Size
+  name: Size
+  nameWithType: ICanvas.Size
+  fullName: Beutl.Graphics.ICanvas.Size
+- uid: Beutl.Media.PixelSize
+  commentId: T:Beutl.Media.PixelSize
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelSize.html
+  name: PixelSize
+  nameWithType: PixelSize
+  fullName: Beutl.Media.PixelSize
+- uid: Beutl.Graphics.ImmediateCanvas.Transform*
+  commentId: Overload:Beutl.Graphics.ImmediateCanvas.Transform
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html#Beutl_Graphics_ImmediateCanvas_Transform
+  name: Transform
+  nameWithType: ImmediateCanvas.Transform
+  fullName: Beutl.Graphics.ImmediateCanvas.Transform

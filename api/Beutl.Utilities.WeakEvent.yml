@@ -1,0 +1,774 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Utilities.WeakEvent
+  commentId: T:Beutl.Utilities.WeakEvent
+  id: WeakEvent
+  parent: Beutl.Utilities
+  children:
+  - Beutl.Utilities.WeakEvent.#ctor
+  - Beutl.Utilities.WeakEvent.Register``1(System.Action{``0,System.EventHandler},System.Action{``0,System.EventHandler})
+  - Beutl.Utilities.WeakEvent.Register``2(System.Action{``0,System.EventHandler{``1}},System.Action{``0,System.EventHandler{``1}})
+  - Beutl.Utilities.WeakEvent.Register``2(System.Func{``0,System.EventHandler{``1},System.Action})
+  langs:
+  - csharp
+  - vb
+  name: WeakEvent
+  nameWithType: WeakEvent
+  fullName: Beutl.Utilities.WeakEvent
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/WeakEvent.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public class WeakEvent
+    content.vb: Public Class WeakEvent
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Beutl.Utilities.WeakEvent`2
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Utilities.WeakEvent.Register``2(System.Action{``0,System.EventHandler{``1}},System.Action{``0,System.EventHandler{``1}})
+  commentId: M:Beutl.Utilities.WeakEvent.Register``2(System.Action{``0,System.EventHandler{``1}},System.Action{``0,System.EventHandler{``1}})
+  id: Register``2(System.Action{``0,System.EventHandler{``1}},System.Action{``0,System.EventHandler{``1}})
+  parent: Beutl.Utilities.WeakEvent
+  langs:
+  - csharp
+  - vb
+  name: Register<TSender, TEventArgs>(Action<TSender, EventHandler<TEventArgs>>, Action<TSender, EventHandler<TEventArgs>>)
+  nameWithType: WeakEvent.Register<TSender, TEventArgs>(Action<TSender, EventHandler<TEventArgs>>, Action<TSender, EventHandler<TEventArgs>>)
+  fullName: Beutl.Utilities.WeakEvent.Register<TSender, TEventArgs>(System.Action<TSender, System.EventHandler<TEventArgs>>, System.Action<TSender, System.EventHandler<TEventArgs>>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/WeakEvent.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: 'public static WeakEvent<TSender, TEventArgs> Register<TSender, TEventArgs>(Action<TSender, EventHandler<TEventArgs>> subscribe, Action<TSender, EventHandler<TEventArgs>> unsubscribe) where TSender : class where TEventArgs : EventArgs'
+    parameters:
+    - id: subscribe
+      type: System.Action{{TSender},System.EventHandler{{TEventArgs}}}
+    - id: unsubscribe
+      type: System.Action{{TSender},System.EventHandler{{TEventArgs}}}
+    typeParameters:
+    - id: TSender
+    - id: TEventArgs
+    return:
+      type: Beutl.Utilities.WeakEvent{{TSender},{TEventArgs}}
+    content.vb: Public Shared Function Register(Of TSender As Class, TEventArgs As EventArgs)(subscribe As Action(Of TSender, EventHandler(Of TEventArgs)), unsubscribe As Action(Of TSender, EventHandler(Of TEventArgs))) As WeakEvent(Of TSender, TEventArgs)
+  overload: Beutl.Utilities.WeakEvent.Register*
+  nameWithType.vb: WeakEvent.Register(Of TSender, TEventArgs)(Action(Of TSender, EventHandler(Of TEventArgs)), Action(Of TSender, EventHandler(Of TEventArgs)))
+  fullName.vb: Beutl.Utilities.WeakEvent.Register(Of TSender, TEventArgs)(System.Action(Of TSender, System.EventHandler(Of TEventArgs)), System.Action(Of TSender, System.EventHandler(Of TEventArgs)))
+  name.vb: Register(Of TSender, TEventArgs)(Action(Of TSender, EventHandler(Of TEventArgs)), Action(Of TSender, EventHandler(Of TEventArgs)))
+- uid: Beutl.Utilities.WeakEvent.Register``2(System.Func{``0,System.EventHandler{``1},System.Action})
+  commentId: M:Beutl.Utilities.WeakEvent.Register``2(System.Func{``0,System.EventHandler{``1},System.Action})
+  id: Register``2(System.Func{``0,System.EventHandler{``1},System.Action})
+  parent: Beutl.Utilities.WeakEvent
+  langs:
+  - csharp
+  - vb
+  name: Register<TSender, TEventArgs>(Func<TSender, EventHandler<TEventArgs>, Action>)
+  nameWithType: WeakEvent.Register<TSender, TEventArgs>(Func<TSender, EventHandler<TEventArgs>, Action>)
+  fullName: Beutl.Utilities.WeakEvent.Register<TSender, TEventArgs>(System.Func<TSender, System.EventHandler<TEventArgs>, System.Action>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/WeakEvent.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: 'public static WeakEvent<TSender, TEventArgs> Register<TSender, TEventArgs>(Func<TSender, EventHandler<TEventArgs>, Action> subscribe) where TSender : class where TEventArgs : EventArgs'
+    parameters:
+    - id: subscribe
+      type: System.Func{{TSender},System.EventHandler{{TEventArgs}},System.Action}
+    typeParameters:
+    - id: TSender
+    - id: TEventArgs
+    return:
+      type: Beutl.Utilities.WeakEvent{{TSender},{TEventArgs}}
+    content.vb: Public Shared Function Register(Of TSender As Class, TEventArgs As EventArgs)(subscribe As Func(Of TSender, EventHandler(Of TEventArgs), Action)) As WeakEvent(Of TSender, TEventArgs)
+  overload: Beutl.Utilities.WeakEvent.Register*
+  nameWithType.vb: WeakEvent.Register(Of TSender, TEventArgs)(Func(Of TSender, EventHandler(Of TEventArgs), Action))
+  fullName.vb: Beutl.Utilities.WeakEvent.Register(Of TSender, TEventArgs)(System.Func(Of TSender, System.EventHandler(Of TEventArgs), System.Action))
+  name.vb: Register(Of TSender, TEventArgs)(Func(Of TSender, EventHandler(Of TEventArgs), Action))
+- uid: Beutl.Utilities.WeakEvent.Register``1(System.Action{``0,System.EventHandler},System.Action{``0,System.EventHandler})
+  commentId: M:Beutl.Utilities.WeakEvent.Register``1(System.Action{``0,System.EventHandler},System.Action{``0,System.EventHandler})
+  id: Register``1(System.Action{``0,System.EventHandler},System.Action{``0,System.EventHandler})
+  parent: Beutl.Utilities.WeakEvent
+  langs:
+  - csharp
+  - vb
+  name: Register<TSender>(Action<TSender, EventHandler>, Action<TSender, EventHandler>)
+  nameWithType: WeakEvent.Register<TSender>(Action<TSender, EventHandler>, Action<TSender, EventHandler>)
+  fullName: Beutl.Utilities.WeakEvent.Register<TSender>(System.Action<TSender, System.EventHandler>, System.Action<TSender, System.EventHandler>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/WeakEvent.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: 'public static WeakEvent<TSender, EventArgs> Register<TSender>(Action<TSender, EventHandler> subscribe, Action<TSender, EventHandler> unsubscribe) where TSender : class'
+    parameters:
+    - id: subscribe
+      type: System.Action{{TSender},System.EventHandler}
+    - id: unsubscribe
+      type: System.Action{{TSender},System.EventHandler}
+    typeParameters:
+    - id: TSender
+    return:
+      type: Beutl.Utilities.WeakEvent{{TSender},System.EventArgs}
+    content.vb: Public Shared Function Register(Of TSender As Class)(subscribe As Action(Of TSender, EventHandler), unsubscribe As Action(Of TSender, EventHandler)) As WeakEvent(Of TSender, EventArgs)
+  overload: Beutl.Utilities.WeakEvent.Register*
+  nameWithType.vb: WeakEvent.Register(Of TSender)(Action(Of TSender, EventHandler), Action(Of TSender, EventHandler))
+  fullName.vb: Beutl.Utilities.WeakEvent.Register(Of TSender)(System.Action(Of TSender, System.EventHandler), System.Action(Of TSender, System.EventHandler))
+  name.vb: Register(Of TSender)(Action(Of TSender, EventHandler), Action(Of TSender, EventHandler))
+- uid: Beutl.Utilities.WeakEvent.#ctor
+  commentId: M:Beutl.Utilities.WeakEvent.#ctor
+  id: '#ctor'
+  parent: Beutl.Utilities.WeakEvent
+  langs:
+  - csharp
+  - vb
+  name: WeakEvent()
+  nameWithType: WeakEvent.WeakEvent()
+  fullName: Beutl.Utilities.WeakEvent.WeakEvent()
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/WeakEvent.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public WeakEvent()
+    content.vb: Public Sub New()
+  overload: Beutl.Utilities.WeakEvent.#ctor*
+  nameWithType.vb: WeakEvent.New()
+  fullName.vb: Beutl.Utilities.WeakEvent.New()
+  name.vb: New()
+references:
+- uid: Beutl.Utilities
+  commentId: N:Beutl.Utilities
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Utilities
+  nameWithType: Beutl.Utilities
+  fullName: Beutl.Utilities
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Utilities
+    name: Utilities
+    isExternal: true
+    href: Beutl.Utilities.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Utilities
+    name: Utilities
+    isExternal: true
+    href: Beutl.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Utilities.WeakEvent.Register*
+  commentId: Overload:Beutl.Utilities.WeakEvent.Register
+  isExternal: true
+  href: Beutl.Utilities.WeakEvent.html#Beutl_Utilities_WeakEvent_Register__2_System_Action___0_System_EventHandler___1___System_Action___0_System_EventHandler___1___
+  name: Register
+  nameWithType: WeakEvent.Register
+  fullName: Beutl.Utilities.WeakEvent.Register
+- uid: System.Action{{TSender},System.EventHandler{{TEventArgs}}}
+  commentId: T:System.Action{``0,System.EventHandler{``1}}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<TSender, EventHandler<TEventArgs>>
+  nameWithType: Action<TSender, EventHandler<TEventArgs>>
+  fullName: System.Action<TSender, System.EventHandler<TEventArgs>>
+  nameWithType.vb: Action(Of TSender, EventHandler(Of TEventArgs))
+  fullName.vb: System.Action(Of TSender, System.EventHandler(Of TEventArgs))
+  name.vb: Action(Of TSender, EventHandler(Of TEventArgs))
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+  - name: )
+- uid: Beutl.Utilities.WeakEvent{{TSender},{TEventArgs}}
+  commentId: T:Beutl.Utilities.WeakEvent{``0,``1}
+  parent: Beutl.Utilities
+  definition: Beutl.Utilities.WeakEvent`2
+  href: Beutl.Utilities.WeakEvent-2.html
+  name: WeakEvent<TSender, TEventArgs>
+  nameWithType: WeakEvent<TSender, TEventArgs>
+  fullName: Beutl.Utilities.WeakEvent<TSender, TEventArgs>
+  nameWithType.vb: WeakEvent(Of TSender, TEventArgs)
+  fullName.vb: Beutl.Utilities.WeakEvent(Of TSender, TEventArgs)
+  name.vb: WeakEvent(Of TSender, TEventArgs)
+  spec.csharp:
+  - uid: Beutl.Utilities.WeakEvent`2
+    name: WeakEvent
+    isExternal: true
+    href: Beutl.Utilities.WeakEvent-2.html
+  - name: <
+  - name: TSender
+  - name: ','
+  - name: " "
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Utilities.WeakEvent`2
+    name: WeakEvent
+    isExternal: true
+    href: Beutl.Utilities.WeakEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSender
+  - name: ','
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Beutl.Utilities.WeakEvent`2
+  commentId: T:Beutl.Utilities.WeakEvent`2
+  isExternal: true
+  href: Beutl.Utilities.WeakEvent-2.html
+  name: WeakEvent<TSender, TEventArgs>
+  nameWithType: WeakEvent<TSender, TEventArgs>
+  fullName: Beutl.Utilities.WeakEvent<TSender, TEventArgs>
+  nameWithType.vb: WeakEvent(Of TSender, TEventArgs)
+  fullName.vb: Beutl.Utilities.WeakEvent(Of TSender, TEventArgs)
+  name.vb: WeakEvent(Of TSender, TEventArgs)
+  spec.csharp:
+  - uid: Beutl.Utilities.WeakEvent`2
+    name: WeakEvent
+    isExternal: true
+    href: Beutl.Utilities.WeakEvent-2.html
+  - name: <
+  - name: TSender
+  - name: ','
+  - name: " "
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Utilities.WeakEvent`2
+    name: WeakEvent
+    isExternal: true
+    href: Beutl.Utilities.WeakEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSender
+  - name: ','
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.Func{{TSender},System.EventHandler{{TEventArgs}},System.Action}
+  commentId: T:System.Func{``0,System.EventHandler{``1},System.Action}
+  parent: System
+  definition: System.Func`3
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<TSender, EventHandler<TEventArgs>, Action>
+  nameWithType: Func<TSender, EventHandler<TEventArgs>, Action>
+  fullName: System.Func<TSender, System.EventHandler<TEventArgs>, System.Action>
+  nameWithType.vb: Func(Of TSender, EventHandler(Of TEventArgs), Action)
+  fullName.vb: System.Func(Of TSender, System.EventHandler(Of TEventArgs), System.Action)
+  name.vb: Func(Of TSender, EventHandler(Of TEventArgs), Action)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Action{{TSender},System.EventHandler}
+  commentId: T:System.Action{``0,System.EventHandler}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<TSender, EventHandler>
+  nameWithType: Action<TSender, EventHandler>
+  fullName: System.Action<TSender, System.EventHandler>
+  nameWithType.vb: Action(Of TSender, EventHandler)
+  fullName.vb: System.Action(Of TSender, System.EventHandler)
+  name.vb: Action(Of TSender, EventHandler)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventHandler
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventHandler
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  - name: )
+- uid: Beutl.Utilities.WeakEvent{{TSender},System.EventArgs}
+  commentId: T:Beutl.Utilities.WeakEvent{``0,System.EventArgs}
+  parent: Beutl.Utilities
+  definition: Beutl.Utilities.WeakEvent`2
+  href: Beutl.Utilities.WeakEvent-2.html
+  name: WeakEvent<TSender, EventArgs>
+  nameWithType: WeakEvent<TSender, EventArgs>
+  fullName: Beutl.Utilities.WeakEvent<TSender, System.EventArgs>
+  nameWithType.vb: WeakEvent(Of TSender, EventArgs)
+  fullName.vb: Beutl.Utilities.WeakEvent(Of TSender, System.EventArgs)
+  name.vb: WeakEvent(Of TSender, EventArgs)
+  spec.csharp:
+  - uid: Beutl.Utilities.WeakEvent`2
+    name: WeakEvent
+    isExternal: true
+    href: Beutl.Utilities.WeakEvent-2.html
+  - name: <
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventArgs
+    name: EventArgs
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Utilities.WeakEvent`2
+    name: WeakEvent
+    isExternal: true
+    href: Beutl.Utilities.WeakEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSender
+  - name: ','
+  - name: " "
+  - uid: System.EventArgs
+    name: EventArgs
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  - name: )
+- uid: Beutl.Utilities.WeakEvent.#ctor*
+  commentId: Overload:Beutl.Utilities.WeakEvent.#ctor
+  isExternal: true
+  href: Beutl.Utilities.WeakEvent.html#Beutl_Utilities_WeakEvent__ctor
+  name: WeakEvent
+  nameWithType: WeakEvent.WeakEvent
+  fullName: Beutl.Utilities.WeakEvent.WeakEvent
+  nameWithType.vb: WeakEvent.New
+  fullName.vb: Beutl.Utilities.WeakEvent.New
+  name.vb: New

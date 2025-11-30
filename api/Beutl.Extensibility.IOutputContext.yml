@@ -1,0 +1,589 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Extensibility.IOutputContext
+  commentId: T:Beutl.Extensibility.IOutputContext
+  id: IOutputContext
+  parent: Beutl.Extensibility
+  children:
+  - Beutl.Extensibility.IOutputContext.Extension
+  - Beutl.Extensibility.IOutputContext.Finished
+  - Beutl.Extensibility.IOutputContext.IsEncoding
+  - Beutl.Extensibility.IOutputContext.IsIndeterminate
+  - Beutl.Extensibility.IOutputContext.Name
+  - Beutl.Extensibility.IOutputContext.Object
+  - Beutl.Extensibility.IOutputContext.Progress
+  - Beutl.Extensibility.IOutputContext.Started
+  langs:
+  - csharp
+  - vb
+  name: IOutputContext
+  nameWithType: IOutputContext
+  fullName: Beutl.Extensibility.IOutputContext
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: 'public interface IOutputContext : IDisposable, IJsonSerializable'
+    content.vb: Public Interface IOutputContext Inherits IDisposable, IJsonSerializable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  - Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  - Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+- uid: Beutl.Extensibility.IOutputContext.Extension
+  commentId: P:Beutl.Extensibility.IOutputContext.Extension
+  id: Extension
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: Extension
+  nameWithType: IOutputContext.Extension
+  fullName: Beutl.Extensibility.IOutputContext.Extension
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: OutputExtension Extension { get; }
+    parameters: []
+    return:
+      type: Beutl.Extensibility.OutputExtension
+    content.vb: ReadOnly Property Extension As OutputExtension
+  overload: Beutl.Extensibility.IOutputContext.Extension*
+- uid: Beutl.Extensibility.IOutputContext.Object
+  commentId: P:Beutl.Extensibility.IOutputContext.Object
+  id: Object
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: Object
+  nameWithType: IOutputContext.Object
+  fullName: Beutl.Extensibility.IOutputContext.Object
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: CoreObject Object { get; }
+    parameters: []
+    return:
+      type: Beutl.CoreObject
+    content.vb: ReadOnly Property [Object] As CoreObject
+  overload: Beutl.Extensibility.IOutputContext.Object*
+- uid: Beutl.Extensibility.IOutputContext.Name
+  commentId: P:Beutl.Extensibility.IOutputContext.Name
+  id: Name
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IOutputContext.Name
+  fullName: Beutl.Extensibility.IOutputContext.Name
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: IReactiveProperty<string> Name { get; }
+    parameters: []
+    return:
+      type: Reactive.Bindings.IReactiveProperty{System.String}
+    content.vb: ReadOnly Property Name As IReactiveProperty(Of String)
+  overload: Beutl.Extensibility.IOutputContext.Name*
+- uid: Beutl.Extensibility.IOutputContext.IsIndeterminate
+  commentId: P:Beutl.Extensibility.IOutputContext.IsIndeterminate
+  id: IsIndeterminate
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: IsIndeterminate
+  nameWithType: IOutputContext.IsIndeterminate
+  fullName: Beutl.Extensibility.IOutputContext.IsIndeterminate
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: IReadOnlyReactiveProperty<bool> IsIndeterminate { get; }
+    parameters: []
+    return:
+      type: Reactive.Bindings.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: ReadOnly Property IsIndeterminate As IReadOnlyReactiveProperty(Of Boolean)
+  overload: Beutl.Extensibility.IOutputContext.IsIndeterminate*
+- uid: Beutl.Extensibility.IOutputContext.IsEncoding
+  commentId: P:Beutl.Extensibility.IOutputContext.IsEncoding
+  id: IsEncoding
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: IsEncoding
+  nameWithType: IOutputContext.IsEncoding
+  fullName: Beutl.Extensibility.IOutputContext.IsEncoding
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: IReadOnlyReactiveProperty<bool> IsEncoding { get; }
+    parameters: []
+    return:
+      type: Reactive.Bindings.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: ReadOnly Property IsEncoding As IReadOnlyReactiveProperty(Of Boolean)
+  overload: Beutl.Extensibility.IOutputContext.IsEncoding*
+- uid: Beutl.Extensibility.IOutputContext.Progress
+  commentId: P:Beutl.Extensibility.IOutputContext.Progress
+  id: Progress
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: Progress
+  nameWithType: IOutputContext.Progress
+  fullName: Beutl.Extensibility.IOutputContext.Progress
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: IReadOnlyReactiveProperty<double> Progress { get; }
+    parameters: []
+    return:
+      type: Reactive.Bindings.IReadOnlyReactiveProperty{System.Double}
+    content.vb: ReadOnly Property Progress As IReadOnlyReactiveProperty(Of Double)
+  overload: Beutl.Extensibility.IOutputContext.Progress*
+- uid: Beutl.Extensibility.IOutputContext.Started
+  commentId: E:Beutl.Extensibility.IOutputContext.Started
+  id: Started
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: Started
+  nameWithType: IOutputContext.Started
+  fullName: Beutl.Extensibility.IOutputContext.Started
+  type: Event
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: event EventHandler? Started
+    return:
+      type: System.EventHandler
+    content.vb: Event Started As EventHandler
+- uid: Beutl.Extensibility.IOutputContext.Finished
+  commentId: E:Beutl.Extensibility.IOutputContext.Finished
+  id: Finished
+  parent: Beutl.Extensibility.IOutputContext
+  langs:
+  - csharp
+  - vb
+  name: Finished
+  nameWithType: IOutputContext.Finished
+  fullName: Beutl.Extensibility.IOutputContext.Finished
+  type: Event
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: event EventHandler? Finished
+    return:
+      type: System.EventHandler
+    content.vb: Event Finished As EventHandler
+references:
+- uid: Beutl.Extensibility
+  commentId: N:Beutl.Extensibility
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Extensibility
+  nameWithType: Beutl.Extensibility
+  fullName: Beutl.Extensibility
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  parent: Beutl.IJsonSerializable
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  name: WriteToJson(JsonObject)
+  nameWithType: IJsonSerializable.WriteToJson(JsonObject)
+  fullName: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  spec.csharp:
+  - uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+    name: WriteToJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+  spec.vb:
+  - uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+    name: WriteToJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+- uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+  parent: Beutl.IJsonSerializable
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  name: ReadFromJson(JsonObject)
+  nameWithType: IJsonSerializable.ReadFromJson(JsonObject)
+  fullName: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+  spec.csharp:
+  - uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+    name: ReadFromJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+  spec.vb:
+  - uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+    name: ReadFromJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Beutl.IJsonSerializable
+  commentId: T:Beutl.IJsonSerializable
+  parent: Beutl
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  name: IJsonSerializable
+  nameWithType: IJsonSerializable
+  fullName: Beutl.IJsonSerializable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.Extensibility.IOutputContext.Extension*
+  commentId: Overload:Beutl.Extensibility.IOutputContext.Extension
+  isExternal: true
+  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_Extension
+  name: Extension
+  nameWithType: IOutputContext.Extension
+  fullName: Beutl.Extensibility.IOutputContext.Extension
+- uid: Beutl.Extensibility.OutputExtension
+  commentId: T:Beutl.Extensibility.OutputExtension
+  parent: Beutl.Extensibility
+  isExternal: true
+  href: Beutl.Extensibility.OutputExtension.html
+  name: OutputExtension
+  nameWithType: OutputExtension
+  fullName: Beutl.Extensibility.OutputExtension
+- uid: Beutl.Extensibility.IOutputContext.Object*
+  commentId: Overload:Beutl.Extensibility.IOutputContext.Object
+  isExternal: true
+  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_Object
+  name: Object
+  nameWithType: IOutputContext.Object
+  fullName: Beutl.Extensibility.IOutputContext.Object
+- uid: Beutl.CoreObject
+  commentId: T:Beutl.CoreObject
+  parent: Beutl
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  name: CoreObject
+  nameWithType: CoreObject
+  fullName: Beutl.CoreObject
+- uid: Beutl.Extensibility.IOutputContext.Name*
+  commentId: Overload:Beutl.Extensibility.IOutputContext.Name
+  isExternal: true
+  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_Name
+  name: Name
+  nameWithType: IOutputContext.Name
+  fullName: Beutl.Extensibility.IOutputContext.Name
+- uid: Reactive.Bindings.IReactiveProperty{System.String}
+  commentId: '!:Reactive.Bindings.IReactiveProperty{System.String}'
+  parent: Reactive.Bindings
+  definition: Reactive.Bindings.IReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: IReactiveProperty<string>
+  nameWithType: IReactiveProperty<string>
+  fullName: Reactive.Bindings.IReactiveProperty<string>
+  nameWithType.vb: IReactiveProperty(Of String)
+  fullName.vb: Reactive.Bindings.IReactiveProperty(Of String)
+  name.vb: IReactiveProperty(Of String)
+  spec.csharp:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Reactive.Bindings.IReactiveProperty`1
+  commentId: T:Reactive.Bindings.IReactiveProperty`1
+  isExternal: true
+  name: IReactiveProperty<>
+  nameWithType: IReactiveProperty<>
+  fullName: Reactive.Bindings.IReactiveProperty<>
+  nameWithType.vb: IReactiveProperty(Of )
+  fullName.vb: Reactive.Bindings.IReactiveProperty(Of )
+  name.vb: IReactiveProperty(Of )
+  spec.csharp:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: <
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Reactive.Bindings
+  commentId: N:Reactive.Bindings
+  isExternal: true
+  name: Reactive.Bindings
+  nameWithType: Reactive.Bindings
+  fullName: Reactive.Bindings
+  spec.csharp:
+  - uid: Reactive
+    name: Reactive
+    isExternal: true
+  - name: .
+  - uid: Reactive.Bindings
+    name: Bindings
+    isExternal: true
+  spec.vb:
+  - uid: Reactive
+    name: Reactive
+    isExternal: true
+  - name: .
+  - uid: Reactive.Bindings
+    name: Bindings
+    isExternal: true
+- uid: Beutl.Extensibility.IOutputContext.IsIndeterminate*
+  commentId: Overload:Beutl.Extensibility.IOutputContext.IsIndeterminate
+  isExternal: true
+  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_IsIndeterminate
+  name: IsIndeterminate
+  nameWithType: IOutputContext.IsIndeterminate
+  fullName: Beutl.Extensibility.IOutputContext.IsIndeterminate
+- uid: Reactive.Bindings.IReadOnlyReactiveProperty{System.Boolean}
+  commentId: '!:Reactive.Bindings.IReadOnlyReactiveProperty{System.Boolean}'
+  parent: Reactive.Bindings
+  definition: Reactive.Bindings.IReadOnlyReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: IReadOnlyReactiveProperty<bool>
+  nameWithType: IReadOnlyReactiveProperty<bool>
+  fullName: Reactive.Bindings.IReadOnlyReactiveProperty<bool>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Boolean)
+  fullName.vb: Reactive.Bindings.IReadOnlyReactiveProperty(Of Boolean)
+  name.vb: IReadOnlyReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: Reactive.Bindings.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Reactive.Bindings.IReadOnlyReactiveProperty`1
+  commentId: T:Reactive.Bindings.IReadOnlyReactiveProperty`1
+  isExternal: true
+  name: IReadOnlyReactiveProperty<>
+  nameWithType: IReadOnlyReactiveProperty<>
+  fullName: Reactive.Bindings.IReadOnlyReactiveProperty<>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of )
+  fullName.vb: Reactive.Bindings.IReadOnlyReactiveProperty(Of )
+  name.vb: IReadOnlyReactiveProperty(Of )
+  spec.csharp:
+  - uid: Reactive.Bindings.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Beutl.Extensibility.IOutputContext.IsEncoding*
+  commentId: Overload:Beutl.Extensibility.IOutputContext.IsEncoding
+  isExternal: true
+  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_IsEncoding
+  name: IsEncoding
+  nameWithType: IOutputContext.IsEncoding
+  fullName: Beutl.Extensibility.IOutputContext.IsEncoding
+- uid: Beutl.Extensibility.IOutputContext.Progress*
+  commentId: Overload:Beutl.Extensibility.IOutputContext.Progress
+  isExternal: true
+  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_Progress
+  name: Progress
+  nameWithType: IOutputContext.Progress
+  fullName: Beutl.Extensibility.IOutputContext.Progress
+- uid: Reactive.Bindings.IReadOnlyReactiveProperty{System.Double}
+  commentId: '!:Reactive.Bindings.IReadOnlyReactiveProperty{System.Double}'
+  parent: Reactive.Bindings
+  definition: Reactive.Bindings.IReadOnlyReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: IReadOnlyReactiveProperty<double>
+  nameWithType: IReadOnlyReactiveProperty<double>
+  fullName: Reactive.Bindings.IReadOnlyReactiveProperty<double>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Double)
+  fullName.vb: Reactive.Bindings.IReadOnlyReactiveProperty(Of Double)
+  name.vb: IReadOnlyReactiveProperty(Of Double)
+  spec.csharp:
+  - uid: Reactive.Bindings.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler

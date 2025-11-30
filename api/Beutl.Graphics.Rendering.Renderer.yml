@@ -1,0 +1,1272 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.Rendering.Renderer
+  commentId: T:Beutl.Graphics.Rendering.Renderer
+  id: Renderer
+  parent: Beutl.Graphics.Rendering
+  children:
+  - Beutl.Graphics.Rendering.Renderer.#ctor(System.Int32,System.Int32)
+  - Beutl.Graphics.Rendering.Renderer.Dispose
+  - Beutl.Graphics.Rendering.Renderer.DrawFps
+  - Beutl.Graphics.Rendering.Renderer.Finalize
+  - Beutl.Graphics.Rendering.Renderer.FrameSize
+  - Beutl.Graphics.Rendering.Renderer.GetCacheContext
+  - Beutl.Graphics.Rendering.Renderer.GetInternalCanvas(Beutl.Graphics.Rendering.Renderer)
+  - Beutl.Graphics.Rendering.Renderer.HitTest(Beutl.Graphics.Point)
+  - Beutl.Graphics.Rendering.Renderer.IsDisposed
+  - Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
+  - Beutl.Graphics.Rendering.Renderer.OnDispose(System.Boolean)
+  - Beutl.Graphics.Rendering.Renderer.Render(System.TimeSpan)
+  - Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore
+  - Beutl.Graphics.Rendering.Renderer.RenderScene
+  - Beutl.Graphics.Rendering.Renderer.Snapshot
+  - Beutl.Graphics.Rendering.Renderer.Time
+  langs:
+  - csharp
+  - vb
+  name: Renderer
+  nameWithType: Renderer
+  fullName: Beutl.Graphics.Rendering.Renderer
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: 'public class Renderer : IRenderer, IDisposable'
+    content.vb: Public Class Renderer Implements IRenderer, IDisposable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Beutl.SceneRenderer
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Graphics.Rendering.Renderer.#ctor(System.Int32,System.Int32)
+  commentId: M:Beutl.Graphics.Rendering.Renderer.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: Renderer(int, int)
+  nameWithType: Renderer.Renderer(int, int)
+  fullName: Beutl.Graphics.Rendering.Renderer.Renderer(int, int)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: public Renderer(int width, int height)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(width As Integer, height As Integer)
+  overload: Beutl.Graphics.Rendering.Renderer.#ctor*
+  nameWithType.vb: Renderer.New(Integer, Integer)
+  fullName.vb: Beutl.Graphics.Rendering.Renderer.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: Beutl.Graphics.Rendering.Renderer.Finalize
+  commentId: M:Beutl.Graphics.Rendering.Renderer.Finalize
+  id: Finalize
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: ~Renderer()
+  nameWithType: Renderer.~Renderer()
+  fullName: Beutl.Graphics.Rendering.Renderer.~Renderer()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: protected ~Renderer()
+    content.vb: 'Protected '
+  overload: Beutl.Graphics.Rendering.Renderer.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Beutl.Graphics.Rendering.Renderer.Dispose
+  commentId: M:Beutl.Graphics.Rendering.Renderer.Dispose
+  id: Dispose
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Renderer.Dispose()
+  fullName: Beutl.Graphics.Rendering.Renderer.Dispose()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Beutl.Graphics.Rendering.Renderer.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Beutl.Graphics.Rendering.Renderer.GetCacheContext
+  commentId: M:Beutl.Graphics.Rendering.Renderer.GetCacheContext
+  id: GetCacheContext
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: GetCacheContext()
+  nameWithType: Renderer.GetCacheContext()
+  fullName: Beutl.Graphics.Rendering.Renderer.GetCacheContext()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: public RenderNodeCacheContext GetCacheContext()
+    return:
+      type: Beutl.Graphics.Rendering.Cache.RenderNodeCacheContext
+    content.vb: Public Function GetCacheContext() As RenderNodeCacheContext
+  overload: Beutl.Graphics.Rendering.Renderer.GetCacheContext*
+- uid: Beutl.Graphics.Rendering.Renderer.OnDispose(System.Boolean)
+  commentId: M:Beutl.Graphics.Rendering.Renderer.OnDispose(System.Boolean)
+  id: OnDispose(System.Boolean)
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: OnDispose(bool)
+  nameWithType: Renderer.OnDispose(bool)
+  fullName: Beutl.Graphics.Rendering.Renderer.OnDispose(bool)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: protected virtual void OnDispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub OnDispose(disposing As Boolean)
+  overload: Beutl.Graphics.Rendering.Renderer.OnDispose*
+  nameWithType.vb: Renderer.OnDispose(Boolean)
+  fullName.vb: Beutl.Graphics.Rendering.Renderer.OnDispose(Boolean)
+  name.vb: OnDispose(Boolean)
+- uid: Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore
+  commentId: M:Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore
+  id: RenderGraphicsCore
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: RenderGraphicsCore()
+  nameWithType: Renderer.RenderGraphicsCore()
+  fullName: Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: protected virtual void RenderGraphicsCore()
+    content.vb: Protected Overridable Sub RenderGraphicsCore()
+  overload: Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore*
+- uid: Beutl.Graphics.Rendering.Renderer.HitTest(Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.Rendering.Renderer.HitTest(Beutl.Graphics.Point)
+  id: HitTest(Beutl.Graphics.Point)
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: HitTest(Point)
+  nameWithType: Renderer.HitTest(Point)
+  fullName: Beutl.Graphics.Rendering.Renderer.HitTest(Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public Drawable? HitTest(Point point)
+    parameters:
+    - id: point
+      type: Beutl.Graphics.Point
+    return:
+      type: Beutl.Graphics.Drawable
+    content.vb: Public Function HitTest(point As Point) As Drawable
+  overload: Beutl.Graphics.Rendering.Renderer.HitTest*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.HitTest(Beutl.Graphics.Point)
+- uid: Beutl.Graphics.Rendering.Renderer.Render(System.TimeSpan)
+  commentId: M:Beutl.Graphics.Rendering.Renderer.Render(System.TimeSpan)
+  id: Render(System.TimeSpan)
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: Render(TimeSpan)
+  nameWithType: Renderer.Render(TimeSpan)
+  fullName: Beutl.Graphics.Rendering.Renderer.Render(System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public bool Render(TimeSpan time)
+    parameters:
+    - id: time
+      type: System.TimeSpan
+    return:
+      type: System.Boolean
+    content.vb: Public Function Render(time As TimeSpan) As Boolean
+  overload: Beutl.Graphics.Rendering.Renderer.Render*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.Render(System.TimeSpan)
+- uid: Beutl.Graphics.Rendering.Renderer.Snapshot
+  commentId: M:Beutl.Graphics.Rendering.Renderer.Snapshot
+  id: Snapshot
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: Snapshot()
+  nameWithType: Renderer.Snapshot()
+  fullName: Beutl.Graphics.Rendering.Renderer.Snapshot()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public Bitmap<Bgra8888> Snapshot()
+    return:
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    content.vb: Public Function Snapshot() As Bitmap(Of Bgra8888)
+  overload: Beutl.Graphics.Rendering.Renderer.Snapshot*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.Snapshot
+- uid: Beutl.Graphics.Rendering.Renderer.GetInternalCanvas(Beutl.Graphics.Rendering.Renderer)
+  commentId: M:Beutl.Graphics.Rendering.Renderer.GetInternalCanvas(Beutl.Graphics.Rendering.Renderer)
+  id: GetInternalCanvas(Beutl.Graphics.Rendering.Renderer)
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: GetInternalCanvas(Renderer)
+  nameWithType: Renderer.GetInternalCanvas(Renderer)
+  fullName: Beutl.Graphics.Rendering.Renderer.GetInternalCanvas(Beutl.Graphics.Rendering.Renderer)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: public static ImmediateCanvas GetInternalCanvas(Renderer renderer)
+    parameters:
+    - id: renderer
+      type: Beutl.Graphics.Rendering.Renderer
+    return:
+      type: Beutl.Graphics.ImmediateCanvas
+    content.vb: Public Shared Function GetInternalCanvas(renderer As Renderer) As ImmediateCanvas
+  overload: Beutl.Graphics.Rendering.Renderer.GetInternalCanvas*
+- uid: Beutl.Graphics.Rendering.Renderer.IsDisposed
+  commentId: P:Beutl.Graphics.Rendering.Renderer.IsDisposed
+  id: IsDisposed
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: Renderer.IsDisposed
+  fullName: Beutl.Graphics.Rendering.Renderer.IsDisposed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisposed As Boolean
+  overload: Beutl.Graphics.Rendering.Renderer.IsDisposed*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.IsDisposed
+- uid: Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
+  commentId: P:Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
+  id: IsGraphicsRendering
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: IsGraphicsRendering
+  nameWithType: Renderer.IsGraphicsRendering
+  fullName: Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public bool IsGraphicsRendering { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGraphicsRendering As Boolean
+  overload: Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.IsGraphicsRendering
+- uid: Beutl.Graphics.Rendering.Renderer.DrawFps
+  commentId: P:Beutl.Graphics.Rendering.Renderer.DrawFps
+  id: DrawFps
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: DrawFps
+  nameWithType: Renderer.DrawFps
+  fullName: Beutl.Graphics.Rendering.Renderer.DrawFps
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public bool DrawFps { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DrawFps As Boolean
+  overload: Beutl.Graphics.Rendering.Renderer.DrawFps*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.DrawFps
+- uid: Beutl.Graphics.Rendering.Renderer.Time
+  commentId: P:Beutl.Graphics.Rendering.Renderer.Time
+  id: Time
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: Time
+  nameWithType: Renderer.Time
+  fullName: Beutl.Graphics.Rendering.Renderer.Time
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public TimeSpan Time { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public ReadOnly Property Time As TimeSpan
+  overload: Beutl.Graphics.Rendering.Renderer.Time*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.Time
+- uid: Beutl.Graphics.Rendering.Renderer.FrameSize
+  commentId: P:Beutl.Graphics.Rendering.Renderer.FrameSize
+  id: FrameSize
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: FrameSize
+  nameWithType: Renderer.FrameSize
+  fullName: Beutl.Graphics.Rendering.Renderer.FrameSize
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public PixelSize FrameSize { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public ReadOnly Property FrameSize As PixelSize
+  overload: Beutl.Graphics.Rendering.Renderer.FrameSize*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.FrameSize
+- uid: Beutl.Graphics.Rendering.Renderer.RenderScene
+  commentId: P:Beutl.Graphics.Rendering.Renderer.RenderScene
+  id: RenderScene
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: RenderScene
+  nameWithType: Renderer.RenderScene
+  fullName: Beutl.Graphics.Rendering.Renderer.RenderScene
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  example: []
+  syntax:
+    content: public RenderScene RenderScene { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Rendering.RenderScene
+    content.vb: Public ReadOnly Property RenderScene As RenderScene
+  overload: Beutl.Graphics.Rendering.Renderer.RenderScene*
+  implements:
+  - Beutl.Graphics.Rendering.IRenderer.RenderScene
+references:
+- uid: Beutl.Graphics.Rendering
+  commentId: N:Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics.Rendering
+  nameWithType: Beutl.Graphics.Rendering
+  fullName: Beutl.Graphics.Rendering
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Graphics.Rendering.IRenderer
+  commentId: T:Beutl.Graphics.Rendering.IRenderer
+  parent: Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html
+  name: IRenderer
+  nameWithType: IRenderer
+  fullName: Beutl.Graphics.Rendering.IRenderer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Graphics.Rendering.Renderer.#ctor*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.#ctor
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer__ctor_System_Int32_System_Int32_
+  name: Renderer
+  nameWithType: Renderer.Renderer
+  fullName: Beutl.Graphics.Rendering.Renderer.Renderer
+  nameWithType.vb: Renderer.New
+  fullName.vb: Beutl.Graphics.Rendering.Renderer.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Graphics.Rendering.Renderer.Finalize*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.Finalize
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Finalize
+  name: ~Renderer
+  nameWithType: Renderer.~Renderer
+  fullName: Beutl.Graphics.Rendering.Renderer.~Renderer
+  spec.csharp:
+  - name: "~"
+  - uid: Beutl.Graphics.Rendering.Renderer.Finalize*
+    name: Renderer
+    isExternal: true
+    href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Finalize
+- uid: Beutl.Graphics.Rendering.Renderer.Dispose*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.Dispose
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Dispose
+  name: Dispose
+  nameWithType: Renderer.Dispose
+  fullName: Beutl.Graphics.Rendering.Renderer.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.Rendering.Renderer.GetCacheContext*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.GetCacheContext
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_GetCacheContext
+  name: GetCacheContext
+  nameWithType: Renderer.GetCacheContext
+  fullName: Beutl.Graphics.Rendering.Renderer.GetCacheContext
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCacheContext
+  commentId: T:Beutl.Graphics.Rendering.Cache.RenderNodeCacheContext
+  parent: Beutl.Graphics.Rendering.Cache
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Cache.RenderNodeCacheContext.html
+  name: RenderNodeCacheContext
+  nameWithType: RenderNodeCacheContext
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCacheContext
+- uid: Beutl.Graphics.Rendering.Cache
+  commentId: N:Beutl.Graphics.Rendering.Cache
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics.Rendering.Cache
+  nameWithType: Beutl.Graphics.Rendering.Cache
+  fullName: Beutl.Graphics.Rendering.Cache
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering.Cache
+    name: Cache
+    isExternal: true
+    href: Beutl.Graphics.Rendering.Cache.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering.Cache
+    name: Cache
+    isExternal: true
+    href: Beutl.Graphics.Rendering.Cache.html
+- uid: Beutl.Graphics.Rendering.Renderer.OnDispose*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.OnDispose
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_OnDispose_System_Boolean_
+  name: OnDispose
+  nameWithType: Renderer.OnDispose
+  fullName: Beutl.Graphics.Rendering.Renderer.OnDispose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_RenderGraphicsCore
+  name: RenderGraphicsCore
+  nameWithType: Renderer.RenderGraphicsCore
+  fullName: Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore
+- uid: Beutl.Graphics.Rendering.Renderer.HitTest*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.HitTest
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_HitTest_Beutl_Graphics_Point_
+  name: HitTest
+  nameWithType: Renderer.HitTest
+  fullName: Beutl.Graphics.Rendering.Renderer.HitTest
+- uid: Beutl.Graphics.Rendering.IRenderer.HitTest(Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.Rendering.IRenderer.HitTest(Beutl.Graphics.Point)
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_HitTest_Beutl_Graphics_Point_
+  name: HitTest(Point)
+  nameWithType: IRenderer.HitTest(Point)
+  fullName: Beutl.Graphics.Rendering.IRenderer.HitTest(Beutl.Graphics.Point)
+  spec.csharp:
+  - uid: Beutl.Graphics.Rendering.IRenderer.HitTest(Beutl.Graphics.Point)
+    name: HitTest
+    isExternal: true
+    href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_HitTest_Beutl_Graphics_Point_
+  - name: (
+  - uid: Beutl.Graphics.Point
+    name: Point
+    isExternal: true
+    href: Beutl.Graphics.Point.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Rendering.IRenderer.HitTest(Beutl.Graphics.Point)
+    name: HitTest
+    isExternal: true
+    href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_HitTest_Beutl_Graphics_Point_
+  - name: (
+  - uid: Beutl.Graphics.Point
+    name: Point
+    isExternal: true
+    href: Beutl.Graphics.Point.html
+  - name: )
+- uid: Beutl.Graphics.Point
+  commentId: T:Beutl.Graphics.Point
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Point.html
+  name: Point
+  nameWithType: Point
+  fullName: Beutl.Graphics.Point
+- uid: Beutl.Graphics.Drawable
+  commentId: T:Beutl.Graphics.Drawable
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Drawable.html
+  name: Drawable
+  nameWithType: Drawable
+  fullName: Beutl.Graphics.Drawable
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: Beutl.Graphics.Rendering.Renderer.Render*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.Render
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Render_System_TimeSpan_
+  name: Render
+  nameWithType: Renderer.Render
+  fullName: Beutl.Graphics.Rendering.Renderer.Render
+- uid: Beutl.Graphics.Rendering.IRenderer.Render(System.TimeSpan)
+  commentId: M:Beutl.Graphics.Rendering.IRenderer.Render(System.TimeSpan)
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Render_System_TimeSpan_
+  name: Render(TimeSpan)
+  nameWithType: IRenderer.Render(TimeSpan)
+  fullName: Beutl.Graphics.Rendering.IRenderer.Render(System.TimeSpan)
+  spec.csharp:
+  - uid: Beutl.Graphics.Rendering.IRenderer.Render(System.TimeSpan)
+    name: Render
+    isExternal: true
+    href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Render_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Rendering.IRenderer.Render(System.TimeSpan)
+    name: Render
+    isExternal: true
+    href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Render_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Graphics.Rendering.Renderer.Snapshot*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.Snapshot
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Snapshot
+  name: Snapshot
+  nameWithType: Renderer.Snapshot
+  fullName: Beutl.Graphics.Rendering.Renderer.Snapshot
+- uid: Beutl.Graphics.Rendering.IRenderer.Snapshot
+  commentId: M:Beutl.Graphics.Rendering.IRenderer.Snapshot
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Snapshot
+  name: Snapshot()
+  nameWithType: IRenderer.Snapshot()
+  fullName: Beutl.Graphics.Rendering.IRenderer.Snapshot()
+  spec.csharp:
+  - uid: Beutl.Graphics.Rendering.IRenderer.Snapshot
+    name: Snapshot
+    isExternal: true
+    href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Snapshot
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Rendering.IRenderer.Snapshot
+    name: Snapshot
+    isExternal: true
+    href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Snapshot
+  - name: (
+  - name: )
+- uid: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+  commentId: T:Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+  parent: Beutl.Media
+  definition: Beutl.Media.Bitmap`1
+  href: Beutl.Media.Bitmap-1.html
+  name: Bitmap<Bgra8888>
+  nameWithType: Bitmap<Bgra8888>
+  fullName: Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>
+  nameWithType.vb: Bitmap(Of Bgra8888)
+  fullName.vb: Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888)
+  name.vb: Bitmap(Of Bgra8888)
+  spec.csharp:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: <
+  - uid: Beutl.Media.Pixel.Bgra8888
+    name: Bgra8888
+    isExternal: true
+    href: Beutl.Media.Pixel.Bgra8888.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Pixel.Bgra8888
+    name: Bgra8888
+    isExternal: true
+    href: Beutl.Media.Pixel.Bgra8888.html
+  - name: )
+- uid: Beutl.Media.Bitmap`1
+  commentId: T:Beutl.Media.Bitmap`1
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Bitmap-1.html
+  name: Bitmap<T>
+  nameWithType: Bitmap<T>
+  fullName: Beutl.Media.Bitmap<T>
+  nameWithType.vb: Bitmap(Of T)
+  fullName.vb: Beutl.Media.Bitmap(Of T)
+  name.vb: Bitmap(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.Graphics.Rendering.Renderer.GetInternalCanvas*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.GetInternalCanvas
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_GetInternalCanvas_Beutl_Graphics_Rendering_Renderer_
+  name: GetInternalCanvas
+  nameWithType: Renderer.GetInternalCanvas
+  fullName: Beutl.Graphics.Rendering.Renderer.GetInternalCanvas
+- uid: Beutl.Graphics.Rendering.Renderer
+  commentId: T:Beutl.Graphics.Rendering.Renderer
+  parent: Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html
+  name: Renderer
+  nameWithType: Renderer
+  fullName: Beutl.Graphics.Rendering.Renderer
+- uid: Beutl.Graphics.ImmediateCanvas
+  commentId: T:Beutl.Graphics.ImmediateCanvas
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.ImmediateCanvas.html
+  name: ImmediateCanvas
+  nameWithType: ImmediateCanvas
+  fullName: Beutl.Graphics.ImmediateCanvas
+- uid: Beutl.Graphics.Rendering.Renderer.IsDisposed*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.IsDisposed
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_IsDisposed
+  name: IsDisposed
+  nameWithType: Renderer.IsDisposed
+  fullName: Beutl.Graphics.Rendering.Renderer.IsDisposed
+- uid: Beutl.Graphics.Rendering.IRenderer.IsDisposed
+  commentId: P:Beutl.Graphics.Rendering.IRenderer.IsDisposed
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_IsDisposed
+  name: IsDisposed
+  nameWithType: IRenderer.IsDisposed
+  fullName: Beutl.Graphics.Rendering.IRenderer.IsDisposed
+- uid: Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_IsGraphicsRendering
+  name: IsGraphicsRendering
+  nameWithType: Renderer.IsGraphicsRendering
+  fullName: Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
+- uid: Beutl.Graphics.Rendering.IRenderer.IsGraphicsRendering
+  commentId: P:Beutl.Graphics.Rendering.IRenderer.IsGraphicsRendering
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_IsGraphicsRendering
+  name: IsGraphicsRendering
+  nameWithType: IRenderer.IsGraphicsRendering
+  fullName: Beutl.Graphics.Rendering.IRenderer.IsGraphicsRendering
+- uid: Beutl.Graphics.Rendering.Renderer.DrawFps*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.DrawFps
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_DrawFps
+  name: DrawFps
+  nameWithType: Renderer.DrawFps
+  fullName: Beutl.Graphics.Rendering.Renderer.DrawFps
+- uid: Beutl.Graphics.Rendering.IRenderer.DrawFps
+  commentId: P:Beutl.Graphics.Rendering.IRenderer.DrawFps
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_DrawFps
+  name: DrawFps
+  nameWithType: IRenderer.DrawFps
+  fullName: Beutl.Graphics.Rendering.IRenderer.DrawFps
+- uid: Beutl.Graphics.Rendering.Renderer.Time*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.Time
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Time
+  name: Time
+  nameWithType: Renderer.Time
+  fullName: Beutl.Graphics.Rendering.Renderer.Time
+- uid: Beutl.Graphics.Rendering.IRenderer.Time
+  commentId: P:Beutl.Graphics.Rendering.IRenderer.Time
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Time
+  name: Time
+  nameWithType: IRenderer.Time
+  fullName: Beutl.Graphics.Rendering.IRenderer.Time
+- uid: Beutl.Graphics.Rendering.Renderer.FrameSize*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.FrameSize
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_FrameSize
+  name: FrameSize
+  nameWithType: Renderer.FrameSize
+  fullName: Beutl.Graphics.Rendering.Renderer.FrameSize
+- uid: Beutl.Graphics.Rendering.IRenderer.FrameSize
+  commentId: P:Beutl.Graphics.Rendering.IRenderer.FrameSize
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_FrameSize
+  name: FrameSize
+  nameWithType: IRenderer.FrameSize
+  fullName: Beutl.Graphics.Rendering.IRenderer.FrameSize
+- uid: Beutl.Media.PixelSize
+  commentId: T:Beutl.Media.PixelSize
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelSize.html
+  name: PixelSize
+  nameWithType: PixelSize
+  fullName: Beutl.Media.PixelSize
+- uid: Beutl.Graphics.Rendering.Renderer.RenderScene*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.RenderScene
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_RenderScene
+  name: RenderScene
+  nameWithType: Renderer.RenderScene
+  fullName: Beutl.Graphics.Rendering.Renderer.RenderScene
+- uid: Beutl.Graphics.Rendering.IRenderer.RenderScene
+  commentId: P:Beutl.Graphics.Rendering.IRenderer.RenderScene
+  parent: Beutl.Graphics.Rendering.IRenderer
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_RenderScene
+  name: RenderScene
+  nameWithType: IRenderer.RenderScene
+  fullName: Beutl.Graphics.Rendering.IRenderer.RenderScene
+- uid: Beutl.Graphics.Rendering.RenderScene
+  commentId: T:Beutl.Graphics.Rendering.RenderScene
+  parent: Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.Graphics.Rendering.RenderScene.html
+  name: RenderScene
+  nameWithType: RenderScene
+  fullName: Beutl.Graphics.Rendering.RenderScene

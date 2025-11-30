@@ -1,0 +1,422 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Encoding.IEncoderInfo
+  commentId: T:Beutl.Media.Encoding.IEncoderInfo
+  id: IEncoderInfo
+  parent: Beutl.Media.Encoding
+  children:
+  - Beutl.Media.Encoding.IEncoderInfo.Create(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)
+  - Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig
+  - Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig
+  - Beutl.Media.Encoding.IEncoderInfo.IsSupported(System.String)
+  - Beutl.Media.Encoding.IEncoderInfo.Name
+  - Beutl.Media.Encoding.IEncoderInfo.SupportExtensions
+  langs:
+  - csharp
+  - vb
+  name: IEncoderInfo
+  nameWithType: IEncoderInfo
+  fullName: Beutl.Media.Encoding.IEncoderInfo
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: >-
+      [Obsolete("Use EncodingController instead.")]
+
+      public interface IEncoderInfo
+    content.vb: >-
+      <Obsolete("Use EncodingController instead.")>
+
+      Public Interface IEncoderInfo
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use EncodingController instead.
+- uid: Beutl.Media.Encoding.IEncoderInfo.Create(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)
+  commentId: M:Beutl.Media.Encoding.IEncoderInfo.Create(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)
+  id: Create(System.String,Beutl.Media.Encoding.VideoEncoderSettings,Beutl.Media.Encoding.AudioEncoderSettings)
+  parent: Beutl.Media.Encoding.IEncoderInfo
+  langs:
+  - csharp
+  - vb
+  name: Create(string, VideoEncoderSettings, AudioEncoderSettings)
+  nameWithType: IEncoderInfo.Create(string, VideoEncoderSettings, AudioEncoderSettings)
+  fullName: Beutl.Media.Encoding.IEncoderInfo.Create(string, Beutl.Media.Encoding.VideoEncoderSettings, Beutl.Media.Encoding.AudioEncoderSettings)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: MediaWriter? Create(string file, VideoEncoderSettings videoConfig, AudioEncoderSettings audioConfig)
+    parameters:
+    - id: file
+      type: System.String
+    - id: videoConfig
+      type: Beutl.Media.Encoding.VideoEncoderSettings
+    - id: audioConfig
+      type: Beutl.Media.Encoding.AudioEncoderSettings
+    return:
+      type: Beutl.Media.Encoding.MediaWriter
+    content.vb: Function Create(file As String, videoConfig As VideoEncoderSettings, audioConfig As AudioEncoderSettings) As MediaWriter
+  overload: Beutl.Media.Encoding.IEncoderInfo.Create*
+  nameWithType.vb: IEncoderInfo.Create(String, VideoEncoderSettings, AudioEncoderSettings)
+  fullName.vb: Beutl.Media.Encoding.IEncoderInfo.Create(String, Beutl.Media.Encoding.VideoEncoderSettings, Beutl.Media.Encoding.AudioEncoderSettings)
+  name.vb: Create(String, VideoEncoderSettings, AudioEncoderSettings)
+- uid: Beutl.Media.Encoding.IEncoderInfo.IsSupported(System.String)
+  commentId: M:Beutl.Media.Encoding.IEncoderInfo.IsSupported(System.String)
+  id: IsSupported(System.String)
+  parent: Beutl.Media.Encoding.IEncoderInfo
+  langs:
+  - csharp
+  - vb
+  name: IsSupported(string)
+  nameWithType: IEncoderInfo.IsSupported(string)
+  fullName: Beutl.Media.Encoding.IEncoderInfo.IsSupported(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: bool IsSupported(string file)
+    parameters:
+    - id: file
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Function IsSupported(file As String) As Boolean
+  overload: Beutl.Media.Encoding.IEncoderInfo.IsSupported*
+  nameWithType.vb: IEncoderInfo.IsSupported(String)
+  fullName.vb: Beutl.Media.Encoding.IEncoderInfo.IsSupported(String)
+  name.vb: IsSupported(String)
+- uid: Beutl.Media.Encoding.IEncoderInfo.SupportExtensions
+  commentId: M:Beutl.Media.Encoding.IEncoderInfo.SupportExtensions
+  id: SupportExtensions
+  parent: Beutl.Media.Encoding.IEncoderInfo
+  langs:
+  - csharp
+  - vb
+  name: SupportExtensions()
+  nameWithType: IEncoderInfo.SupportExtensions()
+  fullName: Beutl.Media.Encoding.IEncoderInfo.SupportExtensions()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: IEnumerable<string> SupportExtensions()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Function SupportExtensions() As IEnumerable(Of String)
+  overload: Beutl.Media.Encoding.IEncoderInfo.SupportExtensions*
+- uid: Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig
+  commentId: M:Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig
+  id: DefaultVideoConfig
+  parent: Beutl.Media.Encoding.IEncoderInfo
+  langs:
+  - csharp
+  - vb
+  name: DefaultVideoConfig()
+  nameWithType: IEncoderInfo.DefaultVideoConfig()
+  fullName: Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: VideoEncoderSettings DefaultVideoConfig()
+    return:
+      type: Beutl.Media.Encoding.VideoEncoderSettings
+    content.vb: Function DefaultVideoConfig() As VideoEncoderSettings
+  overload: Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig*
+- uid: Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig
+  commentId: M:Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig
+  id: DefaultAudioConfig
+  parent: Beutl.Media.Encoding.IEncoderInfo
+  langs:
+  - csharp
+  - vb
+  name: DefaultAudioConfig()
+  nameWithType: IEncoderInfo.DefaultAudioConfig()
+  fullName: Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: AudioEncoderSettings DefaultAudioConfig()
+    return:
+      type: Beutl.Media.Encoding.AudioEncoderSettings
+    content.vb: Function DefaultAudioConfig() As AudioEncoderSettings
+  overload: Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig*
+- uid: Beutl.Media.Encoding.IEncoderInfo.Name
+  commentId: P:Beutl.Media.Encoding.IEncoderInfo.Name
+  id: Name
+  parent: Beutl.Media.Encoding.IEncoderInfo
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IEncoderInfo.Name
+  fullName: Beutl.Media.Encoding.IEncoderInfo.Name
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/IEncoderInfo.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Encoding
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: Beutl.Media.Encoding.IEncoderInfo.Name*
+references:
+- uid: Beutl.Media.Encoding
+  commentId: N:Beutl.Media.Encoding
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Encoding
+  nameWithType: Beutl.Media.Encoding
+  fullName: Beutl.Media.Encoding
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Encoding
+    name: Encoding
+    isExternal: true
+    href: Beutl.Media.Encoding.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Encoding
+    name: Encoding
+    isExternal: true
+    href: Beutl.Media.Encoding.html
+- uid: Beutl.Media.Encoding.IEncoderInfo.Create*
+  commentId: Overload:Beutl.Media.Encoding.IEncoderInfo.Create
+  isExternal: true
+  href: Beutl.Media.Encoding.IEncoderInfo.html#Beutl_Media_Encoding_IEncoderInfo_Create_System_String_Beutl_Media_Encoding_VideoEncoderSettings_Beutl_Media_Encoding_AudioEncoderSettings_
+  name: Create
+  nameWithType: IEncoderInfo.Create
+  fullName: Beutl.Media.Encoding.IEncoderInfo.Create
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Media.Encoding.VideoEncoderSettings
+  commentId: T:Beutl.Media.Encoding.VideoEncoderSettings
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/VideoEncoderSettings.cs
+  name: VideoEncoderSettings
+  nameWithType: VideoEncoderSettings
+  fullName: Beutl.Media.Encoding.VideoEncoderSettings
+- uid: Beutl.Media.Encoding.AudioEncoderSettings
+  commentId: T:Beutl.Media.Encoding.AudioEncoderSettings
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/AudioEncoderSettings.cs
+  name: AudioEncoderSettings
+  nameWithType: AudioEncoderSettings
+  fullName: Beutl.Media.Encoding.AudioEncoderSettings
+- uid: Beutl.Media.Encoding.MediaWriter
+  commentId: T:Beutl.Media.Encoding.MediaWriter
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: Beutl.Media.Encoding.MediaWriter.html
+  name: MediaWriter
+  nameWithType: MediaWriter
+  fullName: Beutl.Media.Encoding.MediaWriter
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Media.Encoding.IEncoderInfo.IsSupported*
+  commentId: Overload:Beutl.Media.Encoding.IEncoderInfo.IsSupported
+  isExternal: true
+  href: Beutl.Media.Encoding.IEncoderInfo.html#Beutl_Media_Encoding_IEncoderInfo_IsSupported_System_String_
+  name: IsSupported
+  nameWithType: IEncoderInfo.IsSupported
+  fullName: Beutl.Media.Encoding.IEncoderInfo.IsSupported
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media.Encoding.IEncoderInfo.SupportExtensions*
+  commentId: Overload:Beutl.Media.Encoding.IEncoderInfo.SupportExtensions
+  isExternal: true
+  href: Beutl.Media.Encoding.IEncoderInfo.html#Beutl_Media_Encoding_IEncoderInfo_SupportExtensions
+  name: SupportExtensions
+  nameWithType: IEncoderInfo.SupportExtensions
+  fullName: Beutl.Media.Encoding.IEncoderInfo.SupportExtensions
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig*
+  commentId: Overload:Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig
+  isExternal: true
+  href: Beutl.Media.Encoding.IEncoderInfo.html#Beutl_Media_Encoding_IEncoderInfo_DefaultVideoConfig
+  name: DefaultVideoConfig
+  nameWithType: IEncoderInfo.DefaultVideoConfig
+  fullName: Beutl.Media.Encoding.IEncoderInfo.DefaultVideoConfig
+- uid: Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig*
+  commentId: Overload:Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig
+  isExternal: true
+  href: Beutl.Media.Encoding.IEncoderInfo.html#Beutl_Media_Encoding_IEncoderInfo_DefaultAudioConfig
+  name: DefaultAudioConfig
+  nameWithType: IEncoderInfo.DefaultAudioConfig
+  fullName: Beutl.Media.Encoding.IEncoderInfo.DefaultAudioConfig
+- uid: Beutl.Media.Encoding.IEncoderInfo.Name*
+  commentId: Overload:Beutl.Media.Encoding.IEncoderInfo.Name
+  isExternal: true
+  href: Beutl.Media.Encoding.IEncoderInfo.html#Beutl_Media_Encoding_IEncoderInfo_Name
+  name: Name
+  nameWithType: IEncoderInfo.Name
+  fullName: Beutl.Media.Encoding.IEncoderInfo.Name

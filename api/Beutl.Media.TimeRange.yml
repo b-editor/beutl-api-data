@@ -1,0 +1,1308 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.TimeRange
+  commentId: T:Beutl.Media.TimeRange
+  id: TimeRange
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.TimeRange.#ctor
+  - Beutl.Media.TimeRange.#ctor(System.TimeSpan)
+  - Beutl.Media.TimeRange.#ctor(System.TimeSpan,System.TimeSpan)
+  - Beutl.Media.TimeRange.AddStart(System.TimeSpan)
+  - Beutl.Media.TimeRange.Contains(Beutl.Media.TimeRange)
+  - Beutl.Media.TimeRange.Contains(System.TimeSpan)
+  - Beutl.Media.TimeRange.Duration
+  - Beutl.Media.TimeRange.Empty
+  - Beutl.Media.TimeRange.End
+  - Beutl.Media.TimeRange.Equals(Beutl.Media.TimeRange)
+  - Beutl.Media.TimeRange.Equals(System.Object)
+  - Beutl.Media.TimeRange.FromRange(System.TimeSpan,System.TimeSpan)
+  - Beutl.Media.TimeRange.FromSeconds(System.Double)
+  - Beutl.Media.TimeRange.FromSeconds(System.Double,System.Double)
+  - Beutl.Media.TimeRange.GetHashCode
+  - Beutl.Media.TimeRange.Intersect(Beutl.Media.TimeRange)
+  - Beutl.Media.TimeRange.Intersects(Beutl.Media.TimeRange)
+  - Beutl.Media.TimeRange.IsEmpty
+  - Beutl.Media.TimeRange.Start
+  - Beutl.Media.TimeRange.SubtractStart(System.TimeSpan)
+  - Beutl.Media.TimeRange.ToString
+  - Beutl.Media.TimeRange.Union(Beutl.Media.TimeRange)
+  - Beutl.Media.TimeRange.WithDuration(System.TimeSpan)
+  - Beutl.Media.TimeRange.WithStart(System.TimeSpan)
+  - Beutl.Media.TimeRange.op_Equality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  - Beutl.Media.TimeRange.op_Inequality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  langs:
+  - csharp
+  - vb
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: Beutl.Media.TimeRange
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: 'public readonly struct TimeRange : IEquatable<TimeRange>'
+    content.vb: Public Structure TimeRange Implements IEquatable(Of TimeRange)
+  implements:
+  - System.IEquatable{Beutl.Media.TimeRange}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Media.TimeRange.Empty
+  commentId: F:Beutl.Media.TimeRange.Empty
+  id: Empty
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: TimeRange.Empty
+  fullName: Beutl.Media.TimeRange.Empty
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static readonly TimeRange Empty
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Shared ReadOnly Empty As TimeRange
+- uid: Beutl.Media.TimeRange.#ctor
+  commentId: M:Beutl.Media.TimeRange.#ctor
+  id: '#ctor'
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: TimeRange()
+  nameWithType: TimeRange.TimeRange()
+  fullName: Beutl.Media.TimeRange.TimeRange()
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange()
+    content.vb: Public Sub New()
+  overload: Beutl.Media.TimeRange.#ctor*
+  nameWithType.vb: TimeRange.New()
+  fullName.vb: Beutl.Media.TimeRange.New()
+  name.vb: New()
+- uid: Beutl.Media.TimeRange.#ctor(System.TimeSpan,System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.#ctor(System.TimeSpan,System.TimeSpan)
+  id: '#ctor(System.TimeSpan,System.TimeSpan)'
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: TimeRange(TimeSpan, TimeSpan)
+  nameWithType: TimeRange.TimeRange(TimeSpan, TimeSpan)
+  fullName: Beutl.Media.TimeRange.TimeRange(System.TimeSpan, System.TimeSpan)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange(TimeSpan start, TimeSpan duration)
+    parameters:
+    - id: start
+      type: System.TimeSpan
+    - id: duration
+      type: System.TimeSpan
+    content.vb: Public Sub New(start As TimeSpan, duration As TimeSpan)
+  overload: Beutl.Media.TimeRange.#ctor*
+  nameWithType.vb: TimeRange.New(TimeSpan, TimeSpan)
+  fullName.vb: Beutl.Media.TimeRange.New(System.TimeSpan, System.TimeSpan)
+  name.vb: New(TimeSpan, TimeSpan)
+- uid: Beutl.Media.TimeRange.#ctor(System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.#ctor(System.TimeSpan)
+  id: '#ctor(System.TimeSpan)'
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: TimeRange(TimeSpan)
+  nameWithType: TimeRange.TimeRange(TimeSpan)
+  fullName: Beutl.Media.TimeRange.TimeRange(System.TimeSpan)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange(TimeSpan duration)
+    parameters:
+    - id: duration
+      type: System.TimeSpan
+    content.vb: Public Sub New(duration As TimeSpan)
+  overload: Beutl.Media.TimeRange.#ctor*
+  nameWithType.vb: TimeRange.New(TimeSpan)
+  fullName.vb: Beutl.Media.TimeRange.New(System.TimeSpan)
+  name.vb: New(TimeSpan)
+- uid: Beutl.Media.TimeRange.FromSeconds(System.Double,System.Double)
+  commentId: M:Beutl.Media.TimeRange.FromSeconds(System.Double,System.Double)
+  id: FromSeconds(System.Double,System.Double)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: FromSeconds(double, double)
+  nameWithType: TimeRange.FromSeconds(double, double)
+  fullName: Beutl.Media.TimeRange.FromSeconds(double, double)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static TimeRange FromSeconds(double start, double duration)
+    parameters:
+    - id: start
+      type: System.Double
+    - id: duration
+      type: System.Double
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Shared Function FromSeconds(start As Double, duration As Double) As TimeRange
+  overload: Beutl.Media.TimeRange.FromSeconds*
+  nameWithType.vb: TimeRange.FromSeconds(Double, Double)
+  fullName.vb: Beutl.Media.TimeRange.FromSeconds(Double, Double)
+  name.vb: FromSeconds(Double, Double)
+- uid: Beutl.Media.TimeRange.FromSeconds(System.Double)
+  commentId: M:Beutl.Media.TimeRange.FromSeconds(System.Double)
+  id: FromSeconds(System.Double)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: FromSeconds(double)
+  nameWithType: TimeRange.FromSeconds(double)
+  fullName: Beutl.Media.TimeRange.FromSeconds(double)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static TimeRange FromSeconds(double duration)
+    parameters:
+    - id: duration
+      type: System.Double
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Shared Function FromSeconds(duration As Double) As TimeRange
+  overload: Beutl.Media.TimeRange.FromSeconds*
+  nameWithType.vb: TimeRange.FromSeconds(Double)
+  fullName.vb: Beutl.Media.TimeRange.FromSeconds(Double)
+  name.vb: FromSeconds(Double)
+- uid: Beutl.Media.TimeRange.FromRange(System.TimeSpan,System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.FromRange(System.TimeSpan,System.TimeSpan)
+  id: FromRange(System.TimeSpan,System.TimeSpan)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: FromRange(TimeSpan, TimeSpan)
+  nameWithType: TimeRange.FromRange(TimeSpan, TimeSpan)
+  fullName: Beutl.Media.TimeRange.FromRange(System.TimeSpan, System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static TimeRange FromRange(TimeSpan start, TimeSpan end)
+    parameters:
+    - id: start
+      type: System.TimeSpan
+    - id: end
+      type: System.TimeSpan
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Shared Function FromRange(start As TimeSpan, [end] As TimeSpan) As TimeRange
+  overload: Beutl.Media.TimeRange.FromRange*
+- uid: Beutl.Media.TimeRange.ToString
+  commentId: M:Beutl.Media.TimeRange.ToString
+  id: ToString
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TimeRange.ToString()
+  fullName: Beutl.Media.TimeRange.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Media.TimeRange.ToString*
+- uid: Beutl.Media.TimeRange.Contains(System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.Contains(System.TimeSpan)
+  id: Contains(System.TimeSpan)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Contains(TimeSpan)
+  nameWithType: TimeRange.Contains(TimeSpan)
+  fullName: Beutl.Media.TimeRange.Contains(System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool Contains(TimeSpan time)
+    parameters:
+    - id: time
+      type: System.TimeSpan
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(time As TimeSpan) As Boolean
+  overload: Beutl.Media.TimeRange.Contains*
+- uid: Beutl.Media.TimeRange.Contains(Beutl.Media.TimeRange)
+  commentId: M:Beutl.Media.TimeRange.Contains(Beutl.Media.TimeRange)
+  id: Contains(Beutl.Media.TimeRange)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Contains(TimeRange)
+  nameWithType: TimeRange.Contains(TimeRange)
+  fullName: Beutl.Media.TimeRange.Contains(Beutl.Media.TimeRange)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool Contains(TimeRange time)
+    parameters:
+    - id: time
+      type: Beutl.Media.TimeRange
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(time As TimeRange) As Boolean
+  overload: Beutl.Media.TimeRange.Contains*
+- uid: Beutl.Media.TimeRange.Intersect(Beutl.Media.TimeRange)
+  commentId: M:Beutl.Media.TimeRange.Intersect(Beutl.Media.TimeRange)
+  id: Intersect(Beutl.Media.TimeRange)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Intersect(TimeRange)
+  nameWithType: TimeRange.Intersect(TimeRange)
+  fullName: Beutl.Media.TimeRange.Intersect(Beutl.Media.TimeRange)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange Intersect(TimeRange time)
+    parameters:
+    - id: time
+      type: Beutl.Media.TimeRange
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Function Intersect(time As TimeRange) As TimeRange
+  overload: Beutl.Media.TimeRange.Intersect*
+- uid: Beutl.Media.TimeRange.Intersects(Beutl.Media.TimeRange)
+  commentId: M:Beutl.Media.TimeRange.Intersects(Beutl.Media.TimeRange)
+  id: Intersects(Beutl.Media.TimeRange)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Intersects(TimeRange)
+  nameWithType: TimeRange.Intersects(TimeRange)
+  fullName: Beutl.Media.TimeRange.Intersects(Beutl.Media.TimeRange)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool Intersects(TimeRange time)
+    parameters:
+    - id: time
+      type: Beutl.Media.TimeRange
+    return:
+      type: System.Boolean
+    content.vb: Public Function Intersects(time As TimeRange) As Boolean
+  overload: Beutl.Media.TimeRange.Intersects*
+- uid: Beutl.Media.TimeRange.Union(Beutl.Media.TimeRange)
+  commentId: M:Beutl.Media.TimeRange.Union(Beutl.Media.TimeRange)
+  id: Union(Beutl.Media.TimeRange)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Union(TimeRange)
+  nameWithType: TimeRange.Union(TimeRange)
+  fullName: Beutl.Media.TimeRange.Union(Beutl.Media.TimeRange)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange Union(TimeRange time)
+    parameters:
+    - id: time
+      type: Beutl.Media.TimeRange
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Function Union(time As TimeRange) As TimeRange
+  overload: Beutl.Media.TimeRange.Union*
+- uid: Beutl.Media.TimeRange.WithStart(System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.WithStart(System.TimeSpan)
+  id: WithStart(System.TimeSpan)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: WithStart(TimeSpan)
+  nameWithType: TimeRange.WithStart(TimeSpan)
+  fullName: Beutl.Media.TimeRange.WithStart(System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange WithStart(TimeSpan start)
+    parameters:
+    - id: start
+      type: System.TimeSpan
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Function WithStart(start As TimeSpan) As TimeRange
+  overload: Beutl.Media.TimeRange.WithStart*
+- uid: Beutl.Media.TimeRange.WithDuration(System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.WithDuration(System.TimeSpan)
+  id: WithDuration(System.TimeSpan)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: WithDuration(TimeSpan)
+  nameWithType: TimeRange.WithDuration(TimeSpan)
+  fullName: Beutl.Media.TimeRange.WithDuration(System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange WithDuration(TimeSpan duration)
+    parameters:
+    - id: duration
+      type: System.TimeSpan
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Function WithDuration(duration As TimeSpan) As TimeRange
+  overload: Beutl.Media.TimeRange.WithDuration*
+- uid: Beutl.Media.TimeRange.AddStart(System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.AddStart(System.TimeSpan)
+  id: AddStart(System.TimeSpan)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: AddStart(TimeSpan)
+  nameWithType: TimeRange.AddStart(TimeSpan)
+  fullName: Beutl.Media.TimeRange.AddStart(System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange AddStart(TimeSpan ts)
+    parameters:
+    - id: ts
+      type: System.TimeSpan
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Function AddStart(ts As TimeSpan) As TimeRange
+  overload: Beutl.Media.TimeRange.AddStart*
+- uid: Beutl.Media.TimeRange.SubtractStart(System.TimeSpan)
+  commentId: M:Beutl.Media.TimeRange.SubtractStart(System.TimeSpan)
+  id: SubtractStart(System.TimeSpan)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: SubtractStart(TimeSpan)
+  nameWithType: TimeRange.SubtractStart(TimeSpan)
+  fullName: Beutl.Media.TimeRange.SubtractStart(System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeRange SubtractStart(TimeSpan ts)
+    parameters:
+    - id: ts
+      type: System.TimeSpan
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public Function SubtractStart(ts As TimeSpan) As TimeRange
+  overload: Beutl.Media.TimeRange.SubtractStart*
+- uid: Beutl.Media.TimeRange.Equals(System.Object)
+  commentId: M:Beutl.Media.TimeRange.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: TimeRange.Equals(object?)
+  fullName: Beutl.Media.TimeRange.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.TimeRange.Equals*
+  nameWithType.vb: TimeRange.Equals(Object)
+  fullName.vb: Beutl.Media.TimeRange.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.TimeRange.Equals(Beutl.Media.TimeRange)
+  commentId: M:Beutl.Media.TimeRange.Equals(Beutl.Media.TimeRange)
+  id: Equals(Beutl.Media.TimeRange)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Equals(TimeRange)
+  nameWithType: TimeRange.Equals(TimeRange)
+  fullName: Beutl.Media.TimeRange.Equals(Beutl.Media.TimeRange)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(TimeRange other)
+    parameters:
+    - id: other
+      type: Beutl.Media.TimeRange
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As TimeRange) As Boolean
+  overload: Beutl.Media.TimeRange.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.TimeRange}.Equals(Beutl.Media.TimeRange)
+- uid: Beutl.Media.TimeRange.GetHashCode
+  commentId: M:Beutl.Media.TimeRange.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: TimeRange.GetHashCode()
+  fullName: Beutl.Media.TimeRange.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.TimeRange.GetHashCode*
+- uid: Beutl.Media.TimeRange.op_Equality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  commentId: M:Beutl.Media.TimeRange.op_Equality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  id: op_Equality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: operator ==(TimeRange, TimeRange)
+  nameWithType: TimeRange.operator ==(TimeRange, TimeRange)
+  fullName: Beutl.Media.TimeRange.operator ==(Beutl.Media.TimeRange, Beutl.Media.TimeRange)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator ==(TimeRange left, TimeRange right)
+    parameters:
+    - id: left
+      type: Beutl.Media.TimeRange
+    - id: right
+      type: Beutl.Media.TimeRange
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As TimeRange, right As TimeRange) As Boolean
+  overload: Beutl.Media.TimeRange.op_Equality*
+  nameWithType.vb: TimeRange.=(TimeRange, TimeRange)
+  fullName.vb: Beutl.Media.TimeRange.=(Beutl.Media.TimeRange, Beutl.Media.TimeRange)
+  name.vb: =(TimeRange, TimeRange)
+- uid: Beutl.Media.TimeRange.op_Inequality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  commentId: M:Beutl.Media.TimeRange.op_Inequality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  id: op_Inequality(Beutl.Media.TimeRange,Beutl.Media.TimeRange)
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: operator !=(TimeRange, TimeRange)
+  nameWithType: TimeRange.operator !=(TimeRange, TimeRange)
+  fullName: Beutl.Media.TimeRange.operator !=(Beutl.Media.TimeRange, Beutl.Media.TimeRange)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator !=(TimeRange left, TimeRange right)
+    parameters:
+    - id: left
+      type: Beutl.Media.TimeRange
+    - id: right
+      type: Beutl.Media.TimeRange
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As TimeRange, right As TimeRange) As Boolean
+  overload: Beutl.Media.TimeRange.op_Inequality*
+  nameWithType.vb: TimeRange.<>(TimeRange, TimeRange)
+  fullName.vb: Beutl.Media.TimeRange.<>(Beutl.Media.TimeRange, Beutl.Media.TimeRange)
+  name.vb: <>(TimeRange, TimeRange)
+- uid: Beutl.Media.TimeRange.Start
+  commentId: P:Beutl.Media.TimeRange.Start
+  id: Start
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Start
+  nameWithType: TimeRange.Start
+  fullName: Beutl.Media.TimeRange.Start
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeSpan Start { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public ReadOnly Property Start As TimeSpan
+  overload: Beutl.Media.TimeRange.Start*
+- uid: Beutl.Media.TimeRange.Duration
+  commentId: P:Beutl.Media.TimeRange.Duration
+  id: Duration
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: TimeRange.Duration
+  fullName: Beutl.Media.TimeRange.Duration
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeSpan Duration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public ReadOnly Property Duration As TimeSpan
+  overload: Beutl.Media.TimeRange.Duration*
+- uid: Beutl.Media.TimeRange.End
+  commentId: P:Beutl.Media.TimeRange.End
+  id: End
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: TimeRange.End
+  fullName: Beutl.Media.TimeRange.End
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public TimeSpan End { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public ReadOnly Property [End] As TimeSpan
+  overload: Beutl.Media.TimeRange.End*
+- uid: Beutl.Media.TimeRange.IsEmpty
+  commentId: P:Beutl.Media.TimeRange.IsEmpty
+  id: IsEmpty
+  parent: Beutl.Media.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: TimeRange.IsEmpty
+  fullName: Beutl.Media.TimeRange.IsEmpty
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: Beutl.Media.TimeRange.IsEmpty*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.TimeRange}
+  commentId: T:System.IEquatable{Beutl.Media.TimeRange}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<TimeRange>
+  nameWithType: IEquatable<TimeRange>
+  fullName: System.IEquatable<Beutl.Media.TimeRange>
+  nameWithType.vb: IEquatable(Of TimeRange)
+  fullName.vb: System.IEquatable(Of Beutl.Media.TimeRange)
+  name.vb: IEquatable(Of TimeRange)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.TimeRange
+    name: TimeRange
+    isExternal: true
+    href: Beutl.Media.TimeRange.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.TimeRange
+    name: TimeRange
+    isExternal: true
+    href: Beutl.Media.TimeRange.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.TimeRange
+  commentId: T:Beutl.Media.TimeRange
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.TimeRange.html
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: Beutl.Media.TimeRange
+- uid: Beutl.Media.TimeRange.#ctor*
+  commentId: Overload:Beutl.Media.TimeRange.#ctor
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange__ctor
+  name: TimeRange
+  nameWithType: TimeRange.TimeRange
+  fullName: Beutl.Media.TimeRange.TimeRange
+  nameWithType.vb: TimeRange.New
+  fullName.vb: Beutl.Media.TimeRange.New
+  name.vb: New
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Media.TimeRange.FromSeconds*
+  commentId: Overload:Beutl.Media.TimeRange.FromSeconds
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_FromSeconds_System_Double_System_Double_
+  name: FromSeconds
+  nameWithType: TimeRange.FromSeconds
+  fullName: Beutl.Media.TimeRange.FromSeconds
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Beutl.Media.TimeRange.FromRange*
+  commentId: Overload:Beutl.Media.TimeRange.FromRange
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_FromRange_System_TimeSpan_System_TimeSpan_
+  name: FromRange
+  nameWithType: TimeRange.FromRange
+  fullName: Beutl.Media.TimeRange.FromRange
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Media.TimeRange.ToString*
+  commentId: Overload:Beutl.Media.TimeRange.ToString
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_ToString
+  name: ToString
+  nameWithType: TimeRange.ToString
+  fullName: Beutl.Media.TimeRange.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: Beutl.Media.TimeRange.Contains*
+  commentId: Overload:Beutl.Media.TimeRange.Contains
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_Contains_System_TimeSpan_
+  name: Contains
+  nameWithType: TimeRange.Contains
+  fullName: Beutl.Media.TimeRange.Contains
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media.TimeRange.Intersect*
+  commentId: Overload:Beutl.Media.TimeRange.Intersect
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_Intersect_Beutl_Media_TimeRange_
+  name: Intersect
+  nameWithType: TimeRange.Intersect
+  fullName: Beutl.Media.TimeRange.Intersect
+- uid: Beutl.Media.TimeRange.Intersects*
+  commentId: Overload:Beutl.Media.TimeRange.Intersects
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_Intersects_Beutl_Media_TimeRange_
+  name: Intersects
+  nameWithType: TimeRange.Intersects
+  fullName: Beutl.Media.TimeRange.Intersects
+- uid: Beutl.Media.TimeRange.Union*
+  commentId: Overload:Beutl.Media.TimeRange.Union
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_Union_Beutl_Media_TimeRange_
+  name: Union
+  nameWithType: TimeRange.Union
+  fullName: Beutl.Media.TimeRange.Union
+- uid: Beutl.Media.TimeRange.WithStart*
+  commentId: Overload:Beutl.Media.TimeRange.WithStart
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_WithStart_System_TimeSpan_
+  name: WithStart
+  nameWithType: TimeRange.WithStart
+  fullName: Beutl.Media.TimeRange.WithStart
+- uid: Beutl.Media.TimeRange.WithDuration*
+  commentId: Overload:Beutl.Media.TimeRange.WithDuration
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_WithDuration_System_TimeSpan_
+  name: WithDuration
+  nameWithType: TimeRange.WithDuration
+  fullName: Beutl.Media.TimeRange.WithDuration
+- uid: Beutl.Media.TimeRange.AddStart*
+  commentId: Overload:Beutl.Media.TimeRange.AddStart
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_AddStart_System_TimeSpan_
+  name: AddStart
+  nameWithType: TimeRange.AddStart
+  fullName: Beutl.Media.TimeRange.AddStart
+- uid: Beutl.Media.TimeRange.SubtractStart*
+  commentId: Overload:Beutl.Media.TimeRange.SubtractStart
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_SubtractStart_System_TimeSpan_
+  name: SubtractStart
+  nameWithType: TimeRange.SubtractStart
+  fullName: Beutl.Media.TimeRange.SubtractStart
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Media.TimeRange.Equals*
+  commentId: Overload:Beutl.Media.TimeRange.Equals
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_Equals_System_Object_
+  name: Equals
+  nameWithType: TimeRange.Equals
+  fullName: Beutl.Media.TimeRange.Equals
+- uid: System.IEquatable{Beutl.Media.TimeRange}.Equals(Beutl.Media.TimeRange)
+  commentId: M:System.IEquatable{Beutl.Media.TimeRange}.Equals(Beutl.Media.TimeRange)
+  parent: System.IEquatable{Beutl.Media.TimeRange}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(TimeRange)
+  nameWithType: IEquatable<TimeRange>.Equals(TimeRange)
+  fullName: System.IEquatable<Beutl.Media.TimeRange>.Equals(Beutl.Media.TimeRange)
+  nameWithType.vb: IEquatable(Of TimeRange).Equals(TimeRange)
+  fullName.vb: System.IEquatable(Of Beutl.Media.TimeRange).Equals(Beutl.Media.TimeRange)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.TimeRange}.Equals(Beutl.Media.TimeRange)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.TimeRange
+    name: TimeRange
+    isExternal: true
+    href: Beutl.Media.TimeRange.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.TimeRange}.Equals(Beutl.Media.TimeRange)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.TimeRange
+    name: TimeRange
+    isExternal: true
+    href: Beutl.Media.TimeRange.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.TimeRange.GetHashCode*
+  commentId: Overload:Beutl.Media.TimeRange.GetHashCode
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_GetHashCode
+  name: GetHashCode
+  nameWithType: TimeRange.GetHashCode
+  fullName: Beutl.Media.TimeRange.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.TimeRange.op_Equality*
+  commentId: Overload:Beutl.Media.TimeRange.op_Equality
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_op_Equality_Beutl_Media_TimeRange_Beutl_Media_TimeRange_
+  name: operator ==
+  nameWithType: TimeRange.operator ==
+  fullName: Beutl.Media.TimeRange.operator ==
+  nameWithType.vb: TimeRange.=
+  fullName.vb: Beutl.Media.TimeRange.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.TimeRange.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_op_Equality_Beutl_Media_TimeRange_Beutl_Media_TimeRange_
+- uid: Beutl.Media.TimeRange.op_Inequality*
+  commentId: Overload:Beutl.Media.TimeRange.op_Inequality
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_op_Inequality_Beutl_Media_TimeRange_Beutl_Media_TimeRange_
+  name: operator !=
+  nameWithType: TimeRange.operator !=
+  fullName: Beutl.Media.TimeRange.operator !=
+  nameWithType.vb: TimeRange.<>
+  fullName.vb: Beutl.Media.TimeRange.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.TimeRange.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_op_Inequality_Beutl_Media_TimeRange_Beutl_Media_TimeRange_
+- uid: Beutl.Media.TimeRange.Start*
+  commentId: Overload:Beutl.Media.TimeRange.Start
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_Start
+  name: Start
+  nameWithType: TimeRange.Start
+  fullName: Beutl.Media.TimeRange.Start
+- uid: Beutl.Media.TimeRange.Duration*
+  commentId: Overload:Beutl.Media.TimeRange.Duration
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_Duration
+  name: Duration
+  nameWithType: TimeRange.Duration
+  fullName: Beutl.Media.TimeRange.Duration
+- uid: Beutl.Media.TimeRange.End*
+  commentId: Overload:Beutl.Media.TimeRange.End
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_End
+  name: End
+  nameWithType: TimeRange.End
+  fullName: Beutl.Media.TimeRange.End
+- uid: Beutl.Media.TimeRange.IsEmpty*
+  commentId: Overload:Beutl.Media.TimeRange.IsEmpty
+  isExternal: true
+  href: Beutl.Media.TimeRange.html#Beutl_Media_TimeRange_IsEmpty
+  name: IsEmpty
+  nameWithType: TimeRange.IsEmpty
+  fullName: Beutl.Media.TimeRange.IsEmpty

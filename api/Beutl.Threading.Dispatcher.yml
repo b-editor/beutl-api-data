@@ -1,0 +1,1552 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Threading.Dispatcher
+  commentId: T:Beutl.Threading.Dispatcher
+  id: Dispatcher
+  parent: Beutl.Threading
+  children:
+  - Beutl.Threading.Dispatcher.CheckAccess
+  - Beutl.Threading.Dispatcher.Current
+  - Beutl.Threading.Dispatcher.Dispatch(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.Dispatch(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.HasShutdownFinished
+  - Beutl.Threading.Dispatcher.HasShutdownStarted
+  - Beutl.Threading.Dispatcher.Invoke(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.InvokeAsync(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.InvokeAsync(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.InvokeAsync``1(System.Func{System.Threading.Tasks.Task{``0}},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.InvokeAsync``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.Invoke``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.Run(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.Run(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.Schedule(System.TimeSpan,System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.Schedule(System.TimeSpan,System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  - Beutl.Threading.Dispatcher.Shutdown
+  - Beutl.Threading.Dispatcher.ShutdownFinished
+  - Beutl.Threading.Dispatcher.ShutdownStarted
+  - Beutl.Threading.Dispatcher.Spawn(System.Action,System.TimeProvider)
+  - Beutl.Threading.Dispatcher.Spawn(System.TimeProvider)
+  - Beutl.Threading.Dispatcher.Stop
+  - Beutl.Threading.Dispatcher.Thread
+  - Beutl.Threading.Dispatcher.UnhandledException
+  - Beutl.Threading.Dispatcher.VerifyAccess
+  - Beutl.Threading.Dispatcher.Yield(Beutl.Threading.DispatchPriority)
+  langs:
+  - csharp
+  - vb
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: Beutl.Threading.Dispatcher
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public class Dispatcher
+    content.vb: Public Class Dispatcher
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Threading.Dispatcher.Stop
+  commentId: M:Beutl.Threading.Dispatcher.Stop
+  id: Stop
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Dispatcher.Stop()
+  fullName: Beutl.Threading.Dispatcher.Stop()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: >-
+      [Obsolete("Use Shutdown.")]
+
+      [ExcludeFromCodeCoverage]
+
+      public void Stop()
+    content.vb: >-
+      <Obsolete("Use Shutdown.")>
+
+      <ExcludeFromCodeCoverage>
+
+      Public Sub [Stop]()
+  overload: Beutl.Threading.Dispatcher.Stop*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use Shutdown.
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+- uid: Beutl.Threading.Dispatcher.Shutdown
+  commentId: M:Beutl.Threading.Dispatcher.Shutdown
+  id: Shutdown
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Shutdown()
+  nameWithType: Dispatcher.Shutdown()
+  fullName: Beutl.Threading.Dispatcher.Shutdown()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Shutdown()
+    content.vb: Public Sub Shutdown()
+  overload: Beutl.Threading.Dispatcher.Shutdown*
+- uid: Beutl.Threading.Dispatcher.CheckAccess
+  commentId: M:Beutl.Threading.Dispatcher.CheckAccess
+  id: CheckAccess
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: CheckAccess()
+  nameWithType: Dispatcher.CheckAccess()
+  fullName: Beutl.Threading.Dispatcher.CheckAccess()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public bool CheckAccess()
+    return:
+      type: System.Boolean
+    content.vb: Public Function CheckAccess() As Boolean
+  overload: Beutl.Threading.Dispatcher.CheckAccess*
+- uid: Beutl.Threading.Dispatcher.VerifyAccess
+  commentId: M:Beutl.Threading.Dispatcher.VerifyAccess
+  id: VerifyAccess
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: VerifyAccess()
+  nameWithType: Dispatcher.VerifyAccess()
+  fullName: Beutl.Threading.Dispatcher.VerifyAccess()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void VerifyAccess()
+    content.vb: Public Sub VerifyAccess()
+  overload: Beutl.Threading.Dispatcher.VerifyAccess*
+- uid: Beutl.Threading.Dispatcher.Spawn(System.TimeProvider)
+  commentId: M:Beutl.Threading.Dispatcher.Spawn(System.TimeProvider)
+  id: Spawn(System.TimeProvider)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Spawn(TimeProvider?)
+  nameWithType: Dispatcher.Spawn(TimeProvider?)
+  fullName: Beutl.Threading.Dispatcher.Spawn(System.TimeProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public static Dispatcher Spawn(TimeProvider? timeProvider = null)
+    parameters:
+    - id: timeProvider
+      type: System.TimeProvider
+    return:
+      type: Beutl.Threading.Dispatcher
+    content.vb: Public Shared Function Spawn(timeProvider As TimeProvider = Nothing) As Dispatcher
+  overload: Beutl.Threading.Dispatcher.Spawn*
+  nameWithType.vb: Dispatcher.Spawn(TimeProvider)
+  fullName.vb: Beutl.Threading.Dispatcher.Spawn(System.TimeProvider)
+  name.vb: Spawn(TimeProvider)
+- uid: Beutl.Threading.Dispatcher.Spawn(System.Action,System.TimeProvider)
+  commentId: M:Beutl.Threading.Dispatcher.Spawn(System.Action,System.TimeProvider)
+  id: Spawn(System.Action,System.TimeProvider)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Spawn(Action, TimeProvider?)
+  nameWithType: Dispatcher.Spawn(Action, TimeProvider?)
+  fullName: Beutl.Threading.Dispatcher.Spawn(System.Action, System.TimeProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public static Dispatcher Spawn(Action operation, TimeProvider? timeProvider = null)
+    parameters:
+    - id: operation
+      type: System.Action
+    - id: timeProvider
+      type: System.TimeProvider
+    return:
+      type: Beutl.Threading.Dispatcher
+    content.vb: Public Shared Function Spawn(operation As Action, timeProvider As TimeProvider = Nothing) As Dispatcher
+  overload: Beutl.Threading.Dispatcher.Spawn*
+  nameWithType.vb: Dispatcher.Spawn(Action, TimeProvider)
+  fullName.vb: Beutl.Threading.Dispatcher.Spawn(System.Action, System.TimeProvider)
+  name.vb: Spawn(Action, TimeProvider)
+- uid: Beutl.Threading.Dispatcher.Invoke(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Invoke(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Invoke(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Invoke(Action, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Invoke(Action, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Invoke(System.Action, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Invoke(Action operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Action
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Invoke(operation As Action, priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing)
+  overload: Beutl.Threading.Dispatcher.Invoke*
+- uid: Beutl.Threading.Dispatcher.Invoke``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Invoke``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Invoke``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Invoke<T>(Func<T>, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Invoke<T>(Func<T>, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Invoke<T>(System.Func<T>, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public T Invoke<T>(Func<T> operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Func{{T}}
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Invoke(Of T)(operation As Func(Of T), priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing) As T
+  overload: Beutl.Threading.Dispatcher.Invoke*
+  nameWithType.vb: Dispatcher.Invoke(Of T)(Func(Of T), DispatchPriority, CancellationToken)
+  fullName.vb: Beutl.Threading.Dispatcher.Invoke(Of T)(System.Func(Of T), Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  name.vb: Invoke(Of T)(Func(Of T), DispatchPriority, CancellationToken)
+- uid: Beutl.Threading.Dispatcher.InvokeAsync(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.InvokeAsync(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: InvokeAsync(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync(Action, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.InvokeAsync(Action, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.InvokeAsync(System.Action, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public Task InvokeAsync(Action operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Action
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function InvokeAsync(operation As Action, priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing) As Task
+  overload: Beutl.Threading.Dispatcher.InvokeAsync*
+- uid: Beutl.Threading.Dispatcher.InvokeAsync(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.InvokeAsync(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: InvokeAsync(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync(Func<Task>, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.InvokeAsync(Func<Task>, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.InvokeAsync(System.Func<System.Threading.Tasks.Task>, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public Task InvokeAsync(Func<Task> operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Func{System.Threading.Tasks.Task}
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function InvokeAsync(operation As Func(Of Task), priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing) As Task
+  overload: Beutl.Threading.Dispatcher.InvokeAsync*
+  nameWithType.vb: Dispatcher.InvokeAsync(Func(Of Task), DispatchPriority, CancellationToken)
+  fullName.vb: Beutl.Threading.Dispatcher.InvokeAsync(System.Func(Of System.Threading.Tasks.Task), Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  name.vb: InvokeAsync(Func(Of Task), DispatchPriority, CancellationToken)
+- uid: Beutl.Threading.Dispatcher.InvokeAsync``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.InvokeAsync``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: InvokeAsync``1(System.Func{``0},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync<T>(Func<T>, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.InvokeAsync<T>(Func<T>, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.InvokeAsync<T>(System.Func<T>, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public Task<T> InvokeAsync<T>(Func<T> operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Func{{T}}
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function InvokeAsync(Of T)(operation As Func(Of T), priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing) As Task(Of T)
+  overload: Beutl.Threading.Dispatcher.InvokeAsync*
+  nameWithType.vb: Dispatcher.InvokeAsync(Of T)(Func(Of T), DispatchPriority, CancellationToken)
+  fullName.vb: Beutl.Threading.Dispatcher.InvokeAsync(Of T)(System.Func(Of T), Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  name.vb: InvokeAsync(Of T)(Func(Of T), DispatchPriority, CancellationToken)
+- uid: Beutl.Threading.Dispatcher.InvokeAsync``1(System.Func{System.Threading.Tasks.Task{``0}},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.InvokeAsync``1(System.Func{System.Threading.Tasks.Task{``0}},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: InvokeAsync``1(System.Func{System.Threading.Tasks.Task{``0}},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync<T>(Func<Task<T>>, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.InvokeAsync<T>(Func<Task<T>>, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.InvokeAsync<T>(System.Func<System.Threading.Tasks.Task<T>>, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public Task<T> InvokeAsync<T>(Func<Task<T>> operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Func{System.Threading.Tasks.Task{{T}}}
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function InvokeAsync(Of T)(operation As Func(Of Task(Of T)), priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing) As Task(Of T)
+  overload: Beutl.Threading.Dispatcher.InvokeAsync*
+  nameWithType.vb: Dispatcher.InvokeAsync(Of T)(Func(Of Task(Of T)), DispatchPriority, CancellationToken)
+  fullName.vb: Beutl.Threading.Dispatcher.InvokeAsync(Of T)(System.Func(Of System.Threading.Tasks.Task(Of T)), Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  name.vb: InvokeAsync(Of T)(Func(Of Task(Of T)), DispatchPriority, CancellationToken)
+- uid: Beutl.Threading.Dispatcher.Dispatch(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Dispatch(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Dispatch(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Dispatch(Action, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Dispatch(Action, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Dispatch(System.Action, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Dispatch(Action operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Action
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Dispatch(operation As Action, priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing)
+  overload: Beutl.Threading.Dispatcher.Dispatch*
+- uid: Beutl.Threading.Dispatcher.Dispatch(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Dispatch(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Dispatch(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Dispatch(Func<Task>, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Dispatch(Func<Task>, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Dispatch(System.Func<System.Threading.Tasks.Task>, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Dispatch(Func<Task> operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Func{System.Threading.Tasks.Task}
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Dispatch(operation As Func(Of Task), priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing)
+  overload: Beutl.Threading.Dispatcher.Dispatch*
+  nameWithType.vb: Dispatcher.Dispatch(Func(Of Task), DispatchPriority, CancellationToken)
+  fullName.vb: Beutl.Threading.Dispatcher.Dispatch(System.Func(Of System.Threading.Tasks.Task), Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  name.vb: Dispatch(Func(Of Task), DispatchPriority, CancellationToken)
+- uid: Beutl.Threading.Dispatcher.Run(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Run(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Run(System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Run(Action, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Run(Action, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Run(System.Action, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Run(Action operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Action
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Run(operation As Action, priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing)
+  overload: Beutl.Threading.Dispatcher.Run*
+- uid: Beutl.Threading.Dispatcher.Run(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Run(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Run(System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Run(Func<Task>, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Run(Func<Task>, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Run(System.Func<System.Threading.Tasks.Task>, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Run(Func<Task> operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: operation
+      type: System.Func{System.Threading.Tasks.Task}
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Run(operation As Func(Of Task), priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing)
+  overload: Beutl.Threading.Dispatcher.Run*
+  nameWithType.vb: Dispatcher.Run(Func(Of Task), DispatchPriority, CancellationToken)
+  fullName.vb: Beutl.Threading.Dispatcher.Run(System.Func(Of System.Threading.Tasks.Task), Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  name.vb: Run(Func(Of Task), DispatchPriority, CancellationToken)
+- uid: Beutl.Threading.Dispatcher.Schedule(System.TimeSpan,System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Schedule(System.TimeSpan,System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Schedule(System.TimeSpan,System.Action,Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Schedule(TimeSpan, Action, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Schedule(TimeSpan, Action, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Schedule(System.TimeSpan, System.Action, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Schedule(TimeSpan delay, Action operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: delay
+      type: System.TimeSpan
+    - id: operation
+      type: System.Action
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Schedule(delay As TimeSpan, operation As Action, priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing)
+  overload: Beutl.Threading.Dispatcher.Schedule*
+- uid: Beutl.Threading.Dispatcher.Schedule(System.TimeSpan,System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  commentId: M:Beutl.Threading.Dispatcher.Schedule(System.TimeSpan,System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  id: Schedule(System.TimeSpan,System.Func{System.Threading.Tasks.Task},Beutl.Threading.DispatchPriority,System.Threading.CancellationToken)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Schedule(TimeSpan, Func<Task>, DispatchPriority, CancellationToken)
+  nameWithType: Dispatcher.Schedule(TimeSpan, Func<Task>, DispatchPriority, CancellationToken)
+  fullName: Beutl.Threading.Dispatcher.Schedule(System.TimeSpan, System.Func<System.Threading.Tasks.Task>, Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public void Schedule(TimeSpan delay, Func<Task> operation, DispatchPriority priority = DispatchPriority.Medium, CancellationToken ct = default)
+    parameters:
+    - id: delay
+      type: System.TimeSpan
+    - id: operation
+      type: System.Func{System.Threading.Tasks.Task}
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    - id: ct
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Schedule(delay As TimeSpan, operation As Func(Of Task), priority As DispatchPriority = DispatchPriority.Medium, ct As CancellationToken = Nothing)
+  overload: Beutl.Threading.Dispatcher.Schedule*
+  nameWithType.vb: Dispatcher.Schedule(TimeSpan, Func(Of Task), DispatchPriority, CancellationToken)
+  fullName.vb: Beutl.Threading.Dispatcher.Schedule(System.TimeSpan, System.Func(Of System.Threading.Tasks.Task), Beutl.Threading.DispatchPriority, System.Threading.CancellationToken)
+  name.vb: Schedule(TimeSpan, Func(Of Task), DispatchPriority, CancellationToken)
+- uid: Beutl.Threading.Dispatcher.Yield(Beutl.Threading.DispatchPriority)
+  commentId: M:Beutl.Threading.Dispatcher.Yield(Beutl.Threading.DispatchPriority)
+  id: Yield(Beutl.Threading.DispatchPriority)
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Yield(DispatchPriority)
+  nameWithType: Dispatcher.Yield(DispatchPriority)
+  fullName: Beutl.Threading.Dispatcher.Yield(Beutl.Threading.DispatchPriority)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public static YieldTask Yield(DispatchPriority priority = DispatchPriority.Low)
+    parameters:
+    - id: priority
+      type: Beutl.Threading.DispatchPriority
+    return:
+      type: Beutl.Threading.YieldTask
+    content.vb: Public Shared Function Yield(priority As DispatchPriority = DispatchPriority.Low) As YieldTask
+  overload: Beutl.Threading.Dispatcher.Yield*
+- uid: Beutl.Threading.Dispatcher.Current
+  commentId: P:Beutl.Threading.Dispatcher.Current
+  id: Current
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: Dispatcher.Current
+  fullName: Beutl.Threading.Dispatcher.Current
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public static Dispatcher Current { get; }
+    parameters: []
+    return:
+      type: Beutl.Threading.Dispatcher
+    content.vb: Public Shared ReadOnly Property Current As Dispatcher
+  overload: Beutl.Threading.Dispatcher.Current*
+- uid: Beutl.Threading.Dispatcher.Thread
+  commentId: P:Beutl.Threading.Dispatcher.Thread
+  id: Thread
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Thread
+  nameWithType: Dispatcher.Thread
+  fullName: Beutl.Threading.Dispatcher.Thread
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public Thread Thread { get; }
+    parameters: []
+    return:
+      type: System.Threading.Thread
+    content.vb: Public ReadOnly Property Thread As Thread
+  overload: Beutl.Threading.Dispatcher.Thread*
+- uid: Beutl.Threading.Dispatcher.HasShutdownStarted
+  commentId: P:Beutl.Threading.Dispatcher.HasShutdownStarted
+  id: HasShutdownStarted
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: HasShutdownStarted
+  nameWithType: Dispatcher.HasShutdownStarted
+  fullName: Beutl.Threading.Dispatcher.HasShutdownStarted
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public bool HasShutdownStarted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasShutdownStarted As Boolean
+  overload: Beutl.Threading.Dispatcher.HasShutdownStarted*
+- uid: Beutl.Threading.Dispatcher.HasShutdownFinished
+  commentId: P:Beutl.Threading.Dispatcher.HasShutdownFinished
+  id: HasShutdownFinished
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: HasShutdownFinished
+  nameWithType: Dispatcher.HasShutdownFinished
+  fullName: Beutl.Threading.Dispatcher.HasShutdownFinished
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public bool HasShutdownFinished { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasShutdownFinished As Boolean
+  overload: Beutl.Threading.Dispatcher.HasShutdownFinished*
+- uid: Beutl.Threading.Dispatcher.UnhandledException
+  commentId: E:Beutl.Threading.Dispatcher.UnhandledException
+  id: UnhandledException
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: UnhandledException
+  nameWithType: Dispatcher.UnhandledException
+  fullName: Beutl.Threading.Dispatcher.UnhandledException
+  type: Event
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public event EventHandler<DispatcherUnhandledExceptionEventArgs>? UnhandledException
+    return:
+      type: System.EventHandler{Beutl.Threading.DispatcherUnhandledExceptionEventArgs}
+    content.vb: Public Event UnhandledException As EventHandler(Of DispatcherUnhandledExceptionEventArgs)
+- uid: Beutl.Threading.Dispatcher.ShutdownStarted
+  commentId: E:Beutl.Threading.Dispatcher.ShutdownStarted
+  id: ShutdownStarted
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: ShutdownStarted
+  nameWithType: Dispatcher.ShutdownStarted
+  fullName: Beutl.Threading.Dispatcher.ShutdownStarted
+  type: Event
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public event EventHandler? ShutdownStarted
+    return:
+      type: System.EventHandler
+    content.vb: Public Event ShutdownStarted As EventHandler
+- uid: Beutl.Threading.Dispatcher.ShutdownFinished
+  commentId: E:Beutl.Threading.Dispatcher.ShutdownFinished
+  id: ShutdownFinished
+  parent: Beutl.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: ShutdownFinished
+  nameWithType: Dispatcher.ShutdownFinished
+  fullName: Beutl.Threading.Dispatcher.ShutdownFinished
+  type: Event
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Threading/Dispatcher.cs
+  assemblies:
+  - Beutl.Threading
+  namespace: Beutl.Threading
+  syntax:
+    content: public event EventHandler? ShutdownFinished
+    return:
+      type: System.EventHandler
+    content.vb: Public Event ShutdownFinished As EventHandler
+references:
+- uid: Beutl.Threading
+  commentId: N:Beutl.Threading
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Threading
+  nameWithType: Beutl.Threading
+  fullName: Beutl.Threading
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Threading
+    name: Threading
+    isExternal: true
+    href: Beutl.Threading.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Threading
+    name: Threading
+    isExternal: true
+    href: Beutl.Threading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Threading.Dispatcher.Stop*
+  commentId: Overload:Beutl.Threading.Dispatcher.Stop
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Stop
+  name: Stop
+  nameWithType: Dispatcher.Stop
+  fullName: Beutl.Threading.Dispatcher.Stop
+- uid: Beutl.Threading.Dispatcher.Shutdown*
+  commentId: Overload:Beutl.Threading.Dispatcher.Shutdown
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Shutdown
+  name: Shutdown
+  nameWithType: Dispatcher.Shutdown
+  fullName: Beutl.Threading.Dispatcher.Shutdown
+- uid: Beutl.Threading.Dispatcher.CheckAccess*
+  commentId: Overload:Beutl.Threading.Dispatcher.CheckAccess
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_CheckAccess
+  name: CheckAccess
+  nameWithType: Dispatcher.CheckAccess
+  fullName: Beutl.Threading.Dispatcher.CheckAccess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Threading.Dispatcher.VerifyAccess*
+  commentId: Overload:Beutl.Threading.Dispatcher.VerifyAccess
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_VerifyAccess
+  name: VerifyAccess
+  nameWithType: Dispatcher.VerifyAccess
+  fullName: Beutl.Threading.Dispatcher.VerifyAccess
+- uid: Beutl.Threading.Dispatcher.Spawn*
+  commentId: Overload:Beutl.Threading.Dispatcher.Spawn
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Spawn_System_TimeProvider_
+  name: Spawn
+  nameWithType: Dispatcher.Spawn
+  fullName: Beutl.Threading.Dispatcher.Spawn
+- uid: System.TimeProvider
+  commentId: T:System.TimeProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timeprovider
+  name: TimeProvider
+  nameWithType: TimeProvider
+  fullName: System.TimeProvider
+- uid: Beutl.Threading.Dispatcher
+  commentId: T:Beutl.Threading.Dispatcher
+  parent: Beutl.Threading
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: Beutl.Threading.Dispatcher
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Beutl.Threading.Dispatcher.Invoke*
+  commentId: Overload:Beutl.Threading.Dispatcher.Invoke
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Invoke_System_Action_Beutl_Threading_DispatchPriority_System_Threading_CancellationToken_
+  name: Invoke
+  nameWithType: Dispatcher.Invoke
+  fullName: Beutl.Threading.Dispatcher.Invoke
+- uid: Beutl.Threading.DispatchPriority
+  commentId: T:Beutl.Threading.DispatchPriority
+  parent: Beutl.Threading
+  isExternal: true
+  href: Beutl.Threading.DispatchPriority.html
+  name: DispatchPriority
+  nameWithType: DispatchPriority
+  fullName: Beutl.Threading.DispatchPriority
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Func{{T}}
+  commentId: T:System.Func{``0}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<T>
+  nameWithType: Func<T>
+  fullName: System.Func<T>
+  nameWithType.vb: Func(Of T)
+  fullName.vb: System.Func(Of T)
+  name.vb: Func(Of T)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.Threading.Dispatcher.InvokeAsync*
+  commentId: Overload:Beutl.Threading.Dispatcher.InvokeAsync
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_InvokeAsync_System_Action_Beutl_Threading_DispatchPriority_System_Threading_CancellationToken_
+  name: InvokeAsync
+  nameWithType: Dispatcher.InvokeAsync
+  fullName: Beutl.Threading.Dispatcher.InvokeAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Func{System.Threading.Tasks.Task}
+  commentId: T:System.Func{System.Threading.Tasks.Task}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<Task>
+  nameWithType: Func<Task>
+  fullName: System.Func<System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of Task)
+  fullName.vb: System.Func(Of System.Threading.Tasks.Task)
+  name.vb: Func(Of Task)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: )
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Func{System.Threading.Tasks.Task{{T}}}
+  commentId: T:System.Func{System.Threading.Tasks.Task{``0}}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<Task<T>>
+  nameWithType: Func<Task<T>>
+  fullName: System.Func<System.Threading.Tasks.Task<T>>
+  nameWithType.vb: Func(Of Task(Of T))
+  fullName.vb: System.Func(Of System.Threading.Tasks.Task(Of T))
+  name.vb: Func(Of Task(Of T))
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.Threading.Dispatcher.Dispatch*
+  commentId: Overload:Beutl.Threading.Dispatcher.Dispatch
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Dispatch_System_Action_Beutl_Threading_DispatchPriority_System_Threading_CancellationToken_
+  name: Dispatch
+  nameWithType: Dispatcher.Dispatch
+  fullName: Beutl.Threading.Dispatcher.Dispatch
+- uid: Beutl.Threading.Dispatcher.Run*
+  commentId: Overload:Beutl.Threading.Dispatcher.Run
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Run_System_Action_Beutl_Threading_DispatchPriority_System_Threading_CancellationToken_
+  name: Run
+  nameWithType: Dispatcher.Run
+  fullName: Beutl.Threading.Dispatcher.Run
+- uid: Beutl.Threading.Dispatcher.Schedule*
+  commentId: Overload:Beutl.Threading.Dispatcher.Schedule
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Schedule_System_TimeSpan_System_Action_Beutl_Threading_DispatchPriority_System_Threading_CancellationToken_
+  name: Schedule
+  nameWithType: Dispatcher.Schedule
+  fullName: Beutl.Threading.Dispatcher.Schedule
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Threading.Dispatcher.Yield*
+  commentId: Overload:Beutl.Threading.Dispatcher.Yield
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Yield_Beutl_Threading_DispatchPriority_
+  name: Yield
+  nameWithType: Dispatcher.Yield
+  fullName: Beutl.Threading.Dispatcher.Yield
+- uid: Beutl.Threading.YieldTask
+  commentId: T:Beutl.Threading.YieldTask
+  parent: Beutl.Threading
+  isExternal: true
+  href: Beutl.Threading.YieldTask.html
+  name: YieldTask
+  nameWithType: YieldTask
+  fullName: Beutl.Threading.YieldTask
+- uid: Beutl.Threading.Dispatcher.Current*
+  commentId: Overload:Beutl.Threading.Dispatcher.Current
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Current
+  name: Current
+  nameWithType: Dispatcher.Current
+  fullName: Beutl.Threading.Dispatcher.Current
+- uid: Beutl.Threading.Dispatcher.Thread*
+  commentId: Overload:Beutl.Threading.Dispatcher.Thread
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_Thread
+  name: Thread
+  nameWithType: Dispatcher.Thread
+  fullName: Beutl.Threading.Dispatcher.Thread
+- uid: System.Threading.Thread
+  commentId: T:System.Threading.Thread
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.thread
+  name: Thread
+  nameWithType: Thread
+  fullName: System.Threading.Thread
+- uid: Beutl.Threading.Dispatcher.HasShutdownStarted*
+  commentId: Overload:Beutl.Threading.Dispatcher.HasShutdownStarted
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_HasShutdownStarted
+  name: HasShutdownStarted
+  nameWithType: Dispatcher.HasShutdownStarted
+  fullName: Beutl.Threading.Dispatcher.HasShutdownStarted
+- uid: Beutl.Threading.Dispatcher.HasShutdownFinished*
+  commentId: Overload:Beutl.Threading.Dispatcher.HasShutdownFinished
+  isExternal: true
+  href: Beutl.Threading.Dispatcher.html#Beutl_Threading_Dispatcher_HasShutdownFinished
+  name: HasShutdownFinished
+  nameWithType: Dispatcher.HasShutdownFinished
+  fullName: Beutl.Threading.Dispatcher.HasShutdownFinished
+- uid: System.EventHandler{Beutl.Threading.DispatcherUnhandledExceptionEventArgs}
+  commentId: T:System.EventHandler{Beutl.Threading.DispatcherUnhandledExceptionEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<DispatcherUnhandledExceptionEventArgs>
+  nameWithType: EventHandler<DispatcherUnhandledExceptionEventArgs>
+  fullName: System.EventHandler<Beutl.Threading.DispatcherUnhandledExceptionEventArgs>
+  nameWithType.vb: EventHandler(Of DispatcherUnhandledExceptionEventArgs)
+  fullName.vb: System.EventHandler(Of Beutl.Threading.DispatcherUnhandledExceptionEventArgs)
+  name.vb: EventHandler(Of DispatcherUnhandledExceptionEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: Beutl.Threading.DispatcherUnhandledExceptionEventArgs
+    name: DispatcherUnhandledExceptionEventArgs
+    isExternal: true
+    href: Beutl.Threading.DispatcherUnhandledExceptionEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Threading.DispatcherUnhandledExceptionEventArgs
+    name: DispatcherUnhandledExceptionEventArgs
+    isExternal: true
+    href: Beutl.Threading.DispatcherUnhandledExceptionEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler

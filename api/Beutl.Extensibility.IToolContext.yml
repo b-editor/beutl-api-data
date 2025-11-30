@@ -1,0 +1,524 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Extensibility.IToolContext
+  commentId: T:Beutl.Extensibility.IToolContext
+  id: IToolContext
+  parent: Beutl.Extensibility
+  children:
+  - Beutl.Extensibility.IToolContext.DisplayMode
+  - Beutl.Extensibility.IToolContext.Extension
+  - Beutl.Extensibility.IToolContext.Header
+  - Beutl.Extensibility.IToolContext.IsSelected
+  - Beutl.Extensibility.IToolContext.Placement
+  langs:
+  - csharp
+  - vb
+  name: IToolContext
+  nameWithType: IToolContext
+  fullName: Beutl.Extensibility.IToolContext
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/SceneEditorTabExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: 'public interface IToolContext : IDisposable, IJsonSerializable, IServiceProvider'
+    content.vb: Public Interface IToolContext Inherits IDisposable, IJsonSerializable, IServiceProvider
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  - Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  - Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+  - System.IServiceProvider.GetService(System.Type)
+- uid: Beutl.Extensibility.IToolContext.Extension
+  commentId: P:Beutl.Extensibility.IToolContext.Extension
+  id: Extension
+  parent: Beutl.Extensibility.IToolContext
+  langs:
+  - csharp
+  - vb
+  name: Extension
+  nameWithType: IToolContext.Extension
+  fullName: Beutl.Extensibility.IToolContext.Extension
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/SceneEditorTabExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: ToolTabExtension Extension { get; }
+    parameters: []
+    return:
+      type: Beutl.Extensibility.ToolTabExtension
+    content.vb: ReadOnly Property Extension As ToolTabExtension
+  overload: Beutl.Extensibility.IToolContext.Extension*
+- uid: Beutl.Extensibility.IToolContext.IsSelected
+  commentId: P:Beutl.Extensibility.IToolContext.IsSelected
+  id: IsSelected
+  parent: Beutl.Extensibility.IToolContext
+  langs:
+  - csharp
+  - vb
+  name: IsSelected
+  nameWithType: IToolContext.IsSelected
+  fullName: Beutl.Extensibility.IToolContext.IsSelected
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/SceneEditorTabExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: IReactiveProperty<bool> IsSelected { get; }
+    parameters: []
+    return:
+      type: Reactive.Bindings.IReactiveProperty{System.Boolean}
+    content.vb: ReadOnly Property IsSelected As IReactiveProperty(Of Boolean)
+  overload: Beutl.Extensibility.IToolContext.IsSelected*
+- uid: Beutl.Extensibility.IToolContext.Placement
+  commentId: P:Beutl.Extensibility.IToolContext.Placement
+  id: Placement
+  parent: Beutl.Extensibility.IToolContext
+  langs:
+  - csharp
+  - vb
+  name: Placement
+  nameWithType: IToolContext.Placement
+  fullName: Beutl.Extensibility.IToolContext.Placement
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/SceneEditorTabExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: IReactiveProperty<ToolTabExtension.TabPlacement> Placement { get; }
+    parameters: []
+    return:
+      type: Reactive.Bindings.IReactiveProperty{Beutl.Extensibility.ToolTabExtension.TabPlacement}
+    content.vb: ReadOnly Property Placement As IReactiveProperty(Of ToolTabExtension.TabPlacement)
+  overload: Beutl.Extensibility.IToolContext.Placement*
+- uid: Beutl.Extensibility.IToolContext.DisplayMode
+  commentId: P:Beutl.Extensibility.IToolContext.DisplayMode
+  id: DisplayMode
+  parent: Beutl.Extensibility.IToolContext
+  langs:
+  - csharp
+  - vb
+  name: DisplayMode
+  nameWithType: IToolContext.DisplayMode
+  fullName: Beutl.Extensibility.IToolContext.DisplayMode
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/SceneEditorTabExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: IReactiveProperty<ToolTabExtension.TabDisplayMode> DisplayMode { get; }
+    parameters: []
+    return:
+      type: Reactive.Bindings.IReactiveProperty{Beutl.Extensibility.ToolTabExtension.TabDisplayMode}
+    content.vb: ReadOnly Property DisplayMode As IReactiveProperty(Of ToolTabExtension.TabDisplayMode)
+  overload: Beutl.Extensibility.IToolContext.DisplayMode*
+- uid: Beutl.Extensibility.IToolContext.Header
+  commentId: P:Beutl.Extensibility.IToolContext.Header
+  id: Header
+  parent: Beutl.Extensibility.IToolContext
+  langs:
+  - csharp
+  - vb
+  name: Header
+  nameWithType: IToolContext.Header
+  fullName: Beutl.Extensibility.IToolContext.Header
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/SceneEditorTabExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: string Header { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Header As String
+  overload: Beutl.Extensibility.IToolContext.Header*
+references:
+- uid: Beutl.Extensibility
+  commentId: N:Beutl.Extensibility
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Extensibility
+  nameWithType: Beutl.Extensibility
+  fullName: Beutl.Extensibility
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  parent: Beutl.IJsonSerializable
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  name: WriteToJson(JsonObject)
+  nameWithType: IJsonSerializable.WriteToJson(JsonObject)
+  fullName: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+  spec.csharp:
+  - uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+    name: WriteToJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+  spec.vb:
+  - uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
+    name: WriteToJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+- uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+  parent: Beutl.IJsonSerializable
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  name: ReadFromJson(JsonObject)
+  nameWithType: IJsonSerializable.ReadFromJson(JsonObject)
+  fullName: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+  spec.csharp:
+  - uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+    name: ReadFromJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+  spec.vb:
+  - uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
+    name: ReadFromJson
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: )
+- uid: System.IServiceProvider.GetService(System.Type)
+  commentId: M:System.IServiceProvider.GetService(System.Type)
+  parent: System.IServiceProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider.getservice
+  name: GetService(Type)
+  nameWithType: IServiceProvider.GetService(Type)
+  fullName: System.IServiceProvider.GetService(System.Type)
+  spec.csharp:
+  - uid: System.IServiceProvider.GetService(System.Type)
+    name: GetService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider.getservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: System.IServiceProvider.GetService(System.Type)
+    name: GetService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider.getservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Beutl.IJsonSerializable
+  commentId: T:Beutl.IJsonSerializable
+  parent: Beutl
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  name: IJsonSerializable
+  nameWithType: IJsonSerializable
+  fullName: Beutl.IJsonSerializable
+- uid: System.IServiceProvider
+  commentId: T:System.IServiceProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: System.IServiceProvider
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.Extensibility.IToolContext.Extension*
+  commentId: Overload:Beutl.Extensibility.IToolContext.Extension
+  isExternal: true
+  href: Beutl.Extensibility.IToolContext.html#Beutl_Extensibility_IToolContext_Extension
+  name: Extension
+  nameWithType: IToolContext.Extension
+  fullName: Beutl.Extensibility.IToolContext.Extension
+- uid: Beutl.Extensibility.ToolTabExtension
+  commentId: T:Beutl.Extensibility.ToolTabExtension
+  parent: Beutl.Extensibility
+  isExternal: true
+  href: Beutl.Extensibility.ToolTabExtension.html
+  name: ToolTabExtension
+  nameWithType: ToolTabExtension
+  fullName: Beutl.Extensibility.ToolTabExtension
+- uid: Beutl.Extensibility.IToolContext.IsSelected*
+  commentId: Overload:Beutl.Extensibility.IToolContext.IsSelected
+  isExternal: true
+  href: Beutl.Extensibility.IToolContext.html#Beutl_Extensibility_IToolContext_IsSelected
+  name: IsSelected
+  nameWithType: IToolContext.IsSelected
+  fullName: Beutl.Extensibility.IToolContext.IsSelected
+- uid: Reactive.Bindings.IReactiveProperty{System.Boolean}
+  commentId: '!:Reactive.Bindings.IReactiveProperty{System.Boolean}'
+  parent: Reactive.Bindings
+  definition: Reactive.Bindings.IReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: IReactiveProperty<bool>
+  nameWithType: IReactiveProperty<bool>
+  fullName: Reactive.Bindings.IReactiveProperty<bool>
+  nameWithType.vb: IReactiveProperty(Of Boolean)
+  fullName.vb: Reactive.Bindings.IReactiveProperty(Of Boolean)
+  name.vb: IReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Reactive.Bindings.IReactiveProperty`1
+  commentId: T:Reactive.Bindings.IReactiveProperty`1
+  isExternal: true
+  name: IReactiveProperty<>
+  nameWithType: IReactiveProperty<>
+  fullName: Reactive.Bindings.IReactiveProperty<>
+  nameWithType.vb: IReactiveProperty(Of )
+  fullName.vb: Reactive.Bindings.IReactiveProperty(Of )
+  name.vb: IReactiveProperty(Of )
+  spec.csharp:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: <
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Reactive.Bindings
+  commentId: N:Reactive.Bindings
+  isExternal: true
+  name: Reactive.Bindings
+  nameWithType: Reactive.Bindings
+  fullName: Reactive.Bindings
+  spec.csharp:
+  - uid: Reactive
+    name: Reactive
+    isExternal: true
+  - name: .
+  - uid: Reactive.Bindings
+    name: Bindings
+    isExternal: true
+  spec.vb:
+  - uid: Reactive
+    name: Reactive
+    isExternal: true
+  - name: .
+  - uid: Reactive.Bindings
+    name: Bindings
+    isExternal: true
+- uid: Beutl.Extensibility.IToolContext.Placement*
+  commentId: Overload:Beutl.Extensibility.IToolContext.Placement
+  isExternal: true
+  href: Beutl.Extensibility.IToolContext.html#Beutl_Extensibility_IToolContext_Placement
+  name: Placement
+  nameWithType: IToolContext.Placement
+  fullName: Beutl.Extensibility.IToolContext.Placement
+- uid: Reactive.Bindings.IReactiveProperty{Beutl.Extensibility.ToolTabExtension.TabPlacement}
+  commentId: '!:Reactive.Bindings.IReactiveProperty{Beutl.Extensibility.ToolTabExtension.TabPlacement}'
+  parent: Reactive.Bindings
+  definition: Reactive.Bindings.IReactiveProperty`1
+  href: Beutl.Extensibility.ToolTabExtension.TabPlacement.html
+  name: IReactiveProperty<TabPlacement>
+  nameWithType: IReactiveProperty<ToolTabExtension.TabPlacement>
+  fullName: Reactive.Bindings.IReactiveProperty<Beutl.Extensibility.ToolTabExtension.TabPlacement>
+  nameWithType.vb: IReactiveProperty(Of ToolTabExtension.TabPlacement)
+  fullName.vb: Reactive.Bindings.IReactiveProperty(Of Beutl.Extensibility.ToolTabExtension.TabPlacement)
+  name.vb: IReactiveProperty(Of TabPlacement)
+  spec.csharp:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: Beutl.Extensibility.ToolTabExtension.TabPlacement
+    name: TabPlacement
+    isExternal: true
+    href: Beutl.Extensibility.ToolTabExtension.TabPlacement.html
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Extensibility.ToolTabExtension.TabPlacement
+    name: TabPlacement
+    isExternal: true
+    href: Beutl.Extensibility.ToolTabExtension.TabPlacement.html
+  - name: )
+- uid: Beutl.Extensibility.IToolContext.DisplayMode*
+  commentId: Overload:Beutl.Extensibility.IToolContext.DisplayMode
+  isExternal: true
+  href: Beutl.Extensibility.IToolContext.html#Beutl_Extensibility_IToolContext_DisplayMode
+  name: DisplayMode
+  nameWithType: IToolContext.DisplayMode
+  fullName: Beutl.Extensibility.IToolContext.DisplayMode
+- uid: Reactive.Bindings.IReactiveProperty{Beutl.Extensibility.ToolTabExtension.TabDisplayMode}
+  commentId: '!:Reactive.Bindings.IReactiveProperty{Beutl.Extensibility.ToolTabExtension.TabDisplayMode}'
+  parent: Reactive.Bindings
+  definition: Reactive.Bindings.IReactiveProperty`1
+  href: Beutl.Extensibility.ToolTabExtension.TabDisplayMode.html
+  name: IReactiveProperty<TabDisplayMode>
+  nameWithType: IReactiveProperty<ToolTabExtension.TabDisplayMode>
+  fullName: Reactive.Bindings.IReactiveProperty<Beutl.Extensibility.ToolTabExtension.TabDisplayMode>
+  nameWithType.vb: IReactiveProperty(Of ToolTabExtension.TabDisplayMode)
+  fullName.vb: Reactive.Bindings.IReactiveProperty(Of Beutl.Extensibility.ToolTabExtension.TabDisplayMode)
+  name.vb: IReactiveProperty(Of TabDisplayMode)
+  spec.csharp:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: Beutl.Extensibility.ToolTabExtension.TabDisplayMode
+    name: TabDisplayMode
+    isExternal: true
+    href: Beutl.Extensibility.ToolTabExtension.TabDisplayMode.html
+  - name: '>'
+  spec.vb:
+  - uid: Reactive.Bindings.IReactiveProperty`1
+    name: IReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Extensibility.ToolTabExtension.TabDisplayMode
+    name: TabDisplayMode
+    isExternal: true
+    href: Beutl.Extensibility.ToolTabExtension.TabDisplayMode.html
+  - name: )
+- uid: Beutl.Extensibility.IToolContext.Header*
+  commentId: Overload:Beutl.Extensibility.IToolContext.Header
+  isExternal: true
+  href: Beutl.Extensibility.IToolContext.html#Beutl_Extensibility_IToolContext_Header
+  name: Header
+  nameWithType: IToolContext.Header
+  fullName: Beutl.Extensibility.IToolContext.Header
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

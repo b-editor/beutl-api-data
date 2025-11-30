@@ -1,0 +1,685 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Audio.Graph.AudioProcessContext
+  commentId: T:Beutl.Audio.Graph.AudioProcessContext
+  id: AudioProcessContext
+  parent: Beutl.Audio.Graph
+  children:
+  - Beutl.Audio.Graph.AudioProcessContext.#ctor(Beutl.Media.TimeRange,System.Int32,Beutl.Animation.AnimationSampler,System.Nullable{Beutl.Media.TimeRange})
+  - Beutl.Audio.Graph.AudioProcessContext.AnimationSampler
+  - Beutl.Audio.Graph.AudioProcessContext.GetSampleCount
+  - Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime(System.TimeSpan)
+  - Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample(System.Int32)
+  - Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange
+  - Beutl.Audio.Graph.AudioProcessContext.SampleRate
+  - Beutl.Audio.Graph.AudioProcessContext.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: AudioProcessContext
+  nameWithType: AudioProcessContext
+  fullName: Beutl.Audio.Graph.AudioProcessContext
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public sealed class AudioProcessContext
+    content.vb: Public NotInheritable Class AudioProcessContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Audio.Graph.AudioProcessContext.#ctor(Beutl.Media.TimeRange,System.Int32,Beutl.Animation.AnimationSampler,System.Nullable{Beutl.Media.TimeRange})
+  commentId: M:Beutl.Audio.Graph.AudioProcessContext.#ctor(Beutl.Media.TimeRange,System.Int32,Beutl.Animation.AnimationSampler,System.Nullable{Beutl.Media.TimeRange})
+  id: '#ctor(Beutl.Media.TimeRange,System.Int32,Beutl.Animation.AnimationSampler,System.Nullable{Beutl.Media.TimeRange})'
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: AudioProcessContext(TimeRange, int, AnimationSampler, TimeRange?)
+  nameWithType: AudioProcessContext.AudioProcessContext(TimeRange, int, AnimationSampler, TimeRange?)
+  fullName: Beutl.Audio.Graph.AudioProcessContext.AudioProcessContext(Beutl.Media.TimeRange, int, Beutl.Animation.AnimationSampler, Beutl.Media.TimeRange?)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public AudioProcessContext(TimeRange timeRange, int sampleRate, AnimationSampler animationSampler, TimeRange? originalTimeRange)
+    parameters:
+    - id: timeRange
+      type: Beutl.Media.TimeRange
+    - id: sampleRate
+      type: System.Int32
+    - id: animationSampler
+      type: Beutl.Animation.AnimationSampler
+    - id: originalTimeRange
+      type: System.Nullable{Beutl.Media.TimeRange}
+    content.vb: Public Sub New(timeRange As TimeRange, sampleRate As Integer, animationSampler As AnimationSampler, originalTimeRange As TimeRange?)
+  overload: Beutl.Audio.Graph.AudioProcessContext.#ctor*
+  nameWithType.vb: AudioProcessContext.New(TimeRange, Integer, AnimationSampler, TimeRange?)
+  fullName.vb: Beutl.Audio.Graph.AudioProcessContext.New(Beutl.Media.TimeRange, Integer, Beutl.Animation.AnimationSampler, Beutl.Media.TimeRange?)
+  name.vb: New(TimeRange, Integer, AnimationSampler, TimeRange?)
+- uid: Beutl.Audio.Graph.AudioProcessContext.GetSampleCount
+  commentId: M:Beutl.Audio.Graph.AudioProcessContext.GetSampleCount
+  id: GetSampleCount
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: GetSampleCount()
+  nameWithType: AudioProcessContext.GetSampleCount()
+  fullName: Beutl.Audio.Graph.AudioProcessContext.GetSampleCount()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public int GetSampleCount()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetSampleCount() As Integer
+  overload: Beutl.Audio.Graph.AudioProcessContext.GetSampleCount*
+- uid: Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample(System.Int32)
+  commentId: M:Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample(System.Int32)
+  id: GetTimeForSample(System.Int32)
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: GetTimeForSample(int)
+  nameWithType: AudioProcessContext.GetTimeForSample(int)
+  fullName: Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public TimeSpan GetTimeForSample(int sampleIndex)
+    parameters:
+    - id: sampleIndex
+      type: System.Int32
+    return:
+      type: System.TimeSpan
+    content.vb: Public Function GetTimeForSample(sampleIndex As Integer) As TimeSpan
+  overload: Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample*
+  nameWithType.vb: AudioProcessContext.GetTimeForSample(Integer)
+  fullName.vb: Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample(Integer)
+  name.vb: GetTimeForSample(Integer)
+- uid: Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime(System.TimeSpan)
+  commentId: M:Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime(System.TimeSpan)
+  id: GetSampleForTime(System.TimeSpan)
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: GetSampleForTime(TimeSpan)
+  nameWithType: AudioProcessContext.GetSampleForTime(TimeSpan)
+  fullName: Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime(System.TimeSpan)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public int GetSampleForTime(TimeSpan time)
+    parameters:
+    - id: time
+      type: System.TimeSpan
+    return:
+      type: System.Int32
+    content.vb: Public Function GetSampleForTime(time As TimeSpan) As Integer
+  overload: Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime*
+- uid: Beutl.Audio.Graph.AudioProcessContext.TimeRange
+  commentId: P:Beutl.Audio.Graph.AudioProcessContext.TimeRange
+  id: TimeRange
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: TimeRange
+  nameWithType: AudioProcessContext.TimeRange
+  fullName: Beutl.Audio.Graph.AudioProcessContext.TimeRange
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public TimeRange TimeRange { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public ReadOnly Property TimeRange As TimeRange
+  overload: Beutl.Audio.Graph.AudioProcessContext.TimeRange*
+- uid: Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange
+  commentId: P:Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange
+  id: OriginalTimeRange
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: OriginalTimeRange
+  nameWithType: AudioProcessContext.OriginalTimeRange
+  fullName: Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public TimeRange OriginalTimeRange { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.TimeRange
+    content.vb: Public ReadOnly Property OriginalTimeRange As TimeRange
+  overload: Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange*
+- uid: Beutl.Audio.Graph.AudioProcessContext.SampleRate
+  commentId: P:Beutl.Audio.Graph.AudioProcessContext.SampleRate
+  id: SampleRate
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: SampleRate
+  nameWithType: AudioProcessContext.SampleRate
+  fullName: Beutl.Audio.Graph.AudioProcessContext.SampleRate
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public int SampleRate { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SampleRate As Integer
+  overload: Beutl.Audio.Graph.AudioProcessContext.SampleRate*
+- uid: Beutl.Audio.Graph.AudioProcessContext.AnimationSampler
+  commentId: P:Beutl.Audio.Graph.AudioProcessContext.AnimationSampler
+  id: AnimationSampler
+  parent: Beutl.Audio.Graph.AudioProcessContext
+  langs:
+  - csharp
+  - vb
+  name: AnimationSampler
+  nameWithType: AudioProcessContext.AnimationSampler
+  fullName: Beutl.Audio.Graph.AudioProcessContext.AnimationSampler
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioProcessContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public AnimationSampler AnimationSampler { get; }
+    parameters: []
+    return:
+      type: Beutl.Animation.AnimationSampler
+    content.vb: Public ReadOnly Property AnimationSampler As AnimationSampler
+  overload: Beutl.Audio.Graph.AudioProcessContext.AnimationSampler*
+references:
+- uid: Beutl.Audio.Graph
+  commentId: N:Beutl.Audio.Graph
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Audio.Graph
+  nameWithType: Beutl.Audio.Graph
+  fullName: Beutl.Audio.Graph
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Audio
+    name: Audio
+    isExternal: true
+    href: Beutl.Audio.html
+  - name: .
+  - uid: Beutl.Audio.Graph
+    name: Graph
+    isExternal: true
+    href: Beutl.Audio.Graph.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Audio
+    name: Audio
+    isExternal: true
+    href: Beutl.Audio.html
+  - name: .
+  - uid: Beutl.Audio.Graph
+    name: Graph
+    isExternal: true
+    href: Beutl.Audio.Graph.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Audio.Graph.AudioProcessContext.#ctor*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.#ctor
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext__ctor_Beutl_Media_TimeRange_System_Int32_Beutl_Animation_AnimationSampler_System_Nullable_Beutl_Media_TimeRange__
+  name: AudioProcessContext
+  nameWithType: AudioProcessContext.AudioProcessContext
+  fullName: Beutl.Audio.Graph.AudioProcessContext.AudioProcessContext
+  nameWithType.vb: AudioProcessContext.New
+  fullName.vb: Beutl.Audio.Graph.AudioProcessContext.New
+  name.vb: New
+- uid: Beutl.Media.TimeRange
+  commentId: T:Beutl.Media.TimeRange
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.TimeRange.html
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: Beutl.Media.TimeRange
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Animation.AnimationSampler
+  commentId: T:Beutl.Animation.AnimationSampler
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.AnimationSampler.html
+  name: AnimationSampler
+  nameWithType: AnimationSampler
+  fullName: Beutl.Animation.AnimationSampler
+- uid: System.Nullable{Beutl.Media.TimeRange}
+  commentId: T:System.Nullable{Beutl.Media.TimeRange}
+  parent: System
+  definition: System.Nullable`1
+  href: Beutl.Media.TimeRange.html
+  name: TimeRange?
+  nameWithType: TimeRange?
+  fullName: Beutl.Media.TimeRange?
+  spec.csharp:
+  - uid: Beutl.Media.TimeRange
+    name: TimeRange
+    isExternal: true
+    href: Beutl.Media.TimeRange.html
+  - name: '?'
+  spec.vb:
+  - uid: Beutl.Media.TimeRange
+    name: TimeRange
+    isExternal: true
+    href: Beutl.Media.TimeRange.html
+  - name: '?'
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Audio.Graph.AudioProcessContext.GetSampleCount*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.GetSampleCount
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext_GetSampleCount
+  name: GetSampleCount
+  nameWithType: AudioProcessContext.GetSampleCount
+  fullName: Beutl.Audio.Graph.AudioProcessContext.GetSampleCount
+- uid: Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext_GetTimeForSample_System_Int32_
+  name: GetTimeForSample
+  nameWithType: AudioProcessContext.GetTimeForSample
+  fullName: Beutl.Audio.Graph.AudioProcessContext.GetTimeForSample
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext_GetSampleForTime_System_TimeSpan_
+  name: GetSampleForTime
+  nameWithType: AudioProcessContext.GetSampleForTime
+  fullName: Beutl.Audio.Graph.AudioProcessContext.GetSampleForTime
+- uid: Beutl.Audio.Graph.AudioProcessContext.TimeRange*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.TimeRange
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext_TimeRange
+  name: TimeRange
+  nameWithType: AudioProcessContext.TimeRange
+  fullName: Beutl.Audio.Graph.AudioProcessContext.TimeRange
+- uid: Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext_OriginalTimeRange
+  name: OriginalTimeRange
+  nameWithType: AudioProcessContext.OriginalTimeRange
+  fullName: Beutl.Audio.Graph.AudioProcessContext.OriginalTimeRange
+- uid: Beutl.Audio.Graph.AudioProcessContext.SampleRate*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.SampleRate
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext_SampleRate
+  name: SampleRate
+  nameWithType: AudioProcessContext.SampleRate
+  fullName: Beutl.Audio.Graph.AudioProcessContext.SampleRate
+- uid: Beutl.Audio.Graph.AudioProcessContext.AnimationSampler*
+  commentId: Overload:Beutl.Audio.Graph.AudioProcessContext.AnimationSampler
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioProcessContext.html#Beutl_Audio_Graph_AudioProcessContext_AnimationSampler
+  name: AnimationSampler
+  nameWithType: AudioProcessContext.AnimationSampler
+  fullName: Beutl.Audio.Graph.AudioProcessContext.AnimationSampler

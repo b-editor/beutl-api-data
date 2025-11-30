@@ -1,0 +1,624 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Extensibility.EncodingController
+  commentId: T:Beutl.Extensibility.EncodingController
+  id: EncodingController
+  parent: Beutl.Extensibility
+  children:
+  - Beutl.Extensibility.EncodingController.#ctor(System.String)
+  - Beutl.Extensibility.EncodingController.AudioSettings
+  - Beutl.Extensibility.EncodingController.Encode(Beutl.Extensibility.IFrameProvider,Beutl.Extensibility.ISampleProvider,System.Threading.CancellationToken)
+  - Beutl.Extensibility.EncodingController.OutputFile
+  - Beutl.Extensibility.EncodingController.VideoSettings
+  langs:
+  - csharp
+  - vb
+  name: EncodingController
+  nameWithType: EncodingController
+  fullName: Beutl.Extensibility.EncodingController
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EncodingController.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: public abstract class EncodingController
+    content.vb: Public MustInherit Class EncodingController
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Extensibility.EncodingController.#ctor(System.String)
+  commentId: M:Beutl.Extensibility.EncodingController.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Beutl.Extensibility.EncodingController
+  langs:
+  - csharp
+  - vb
+  name: EncodingController(string)
+  nameWithType: EncodingController.EncodingController(string)
+  fullName: Beutl.Extensibility.EncodingController.EncodingController(string)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EncodingController.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: protected EncodingController(string outputFile)
+    parameters:
+    - id: outputFile
+      type: System.String
+    content.vb: Protected Sub New(outputFile As String)
+  overload: Beutl.Extensibility.EncodingController.#ctor*
+  nameWithType.vb: EncodingController.New(String)
+  fullName.vb: Beutl.Extensibility.EncodingController.New(String)
+  name.vb: New(String)
+- uid: Beutl.Extensibility.EncodingController.Encode(Beutl.Extensibility.IFrameProvider,Beutl.Extensibility.ISampleProvider,System.Threading.CancellationToken)
+  commentId: M:Beutl.Extensibility.EncodingController.Encode(Beutl.Extensibility.IFrameProvider,Beutl.Extensibility.ISampleProvider,System.Threading.CancellationToken)
+  id: Encode(Beutl.Extensibility.IFrameProvider,Beutl.Extensibility.ISampleProvider,System.Threading.CancellationToken)
+  parent: Beutl.Extensibility.EncodingController
+  langs:
+  - csharp
+  - vb
+  name: Encode(IFrameProvider, ISampleProvider, CancellationToken)
+  nameWithType: EncodingController.Encode(IFrameProvider, ISampleProvider, CancellationToken)
+  fullName: Beutl.Extensibility.EncodingController.Encode(Beutl.Extensibility.IFrameProvider, Beutl.Extensibility.ISampleProvider, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EncodingController.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: public abstract ValueTask Encode(IFrameProvider frameProvider, ISampleProvider sampleProvider, CancellationToken cancellationToken)
+    parameters:
+    - id: frameProvider
+      type: Beutl.Extensibility.IFrameProvider
+    - id: sampleProvider
+      type: Beutl.Extensibility.ISampleProvider
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.ValueTask
+    content.vb: Public MustOverride Function Encode(frameProvider As IFrameProvider, sampleProvider As ISampleProvider, cancellationToken As CancellationToken) As ValueTask
+  overload: Beutl.Extensibility.EncodingController.Encode*
+- uid: Beutl.Extensibility.EncodingController.OutputFile
+  commentId: P:Beutl.Extensibility.EncodingController.OutputFile
+  id: OutputFile
+  parent: Beutl.Extensibility.EncodingController
+  langs:
+  - csharp
+  - vb
+  name: OutputFile
+  nameWithType: EncodingController.OutputFile
+  fullName: Beutl.Extensibility.EncodingController.OutputFile
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EncodingController.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: public string OutputFile { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property OutputFile As String
+  overload: Beutl.Extensibility.EncodingController.OutputFile*
+- uid: Beutl.Extensibility.EncodingController.VideoSettings
+  commentId: P:Beutl.Extensibility.EncodingController.VideoSettings
+  id: VideoSettings
+  parent: Beutl.Extensibility.EncodingController
+  langs:
+  - csharp
+  - vb
+  name: VideoSettings
+  nameWithType: EncodingController.VideoSettings
+  fullName: Beutl.Extensibility.EncodingController.VideoSettings
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EncodingController.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: public abstract VideoEncoderSettings VideoSettings { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.Encoding.VideoEncoderSettings
+    content.vb: Public MustOverride ReadOnly Property VideoSettings As VideoEncoderSettings
+  overload: Beutl.Extensibility.EncodingController.VideoSettings*
+- uid: Beutl.Extensibility.EncodingController.AudioSettings
+  commentId: P:Beutl.Extensibility.EncodingController.AudioSettings
+  id: AudioSettings
+  parent: Beutl.Extensibility.EncodingController
+  langs:
+  - csharp
+  - vb
+  name: AudioSettings
+  nameWithType: EncodingController.AudioSettings
+  fullName: Beutl.Extensibility.EncodingController.AudioSettings
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EncodingController.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: public abstract AudioEncoderSettings AudioSettings { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.Encoding.AudioEncoderSettings
+    content.vb: Public MustOverride ReadOnly Property AudioSettings As AudioEncoderSettings
+  overload: Beutl.Extensibility.EncodingController.AudioSettings*
+references:
+- uid: Beutl.Extensibility
+  commentId: N:Beutl.Extensibility
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Extensibility
+  nameWithType: Beutl.Extensibility
+  fullName: Beutl.Extensibility
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Extensibility.EncodingController.#ctor*
+  commentId: Overload:Beutl.Extensibility.EncodingController.#ctor
+  isExternal: true
+  href: Beutl.Extensibility.EncodingController.html#Beutl_Extensibility_EncodingController__ctor_System_String_
+  name: EncodingController
+  nameWithType: EncodingController.EncodingController
+  fullName: Beutl.Extensibility.EncodingController.EncodingController
+  nameWithType.vb: EncodingController.New
+  fullName.vb: Beutl.Extensibility.EncodingController.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Extensibility.EncodingController.Encode*
+  commentId: Overload:Beutl.Extensibility.EncodingController.Encode
+  isExternal: true
+  href: Beutl.Extensibility.EncodingController.html#Beutl_Extensibility_EncodingController_Encode_Beutl_Extensibility_IFrameProvider_Beutl_Extensibility_ISampleProvider_System_Threading_CancellationToken_
+  name: Encode
+  nameWithType: EncodingController.Encode
+  fullName: Beutl.Extensibility.EncodingController.Encode
+- uid: Beutl.Extensibility.IFrameProvider
+  commentId: T:Beutl.Extensibility.IFrameProvider
+  parent: Beutl.Extensibility
+  isExternal: true
+  href: Beutl.Extensibility.IFrameProvider.html
+  name: IFrameProvider
+  nameWithType: IFrameProvider
+  fullName: Beutl.Extensibility.IFrameProvider
+- uid: Beutl.Extensibility.ISampleProvider
+  commentId: T:Beutl.Extensibility.ISampleProvider
+  parent: Beutl.Extensibility
+  isExternal: true
+  href: Beutl.Extensibility.ISampleProvider.html
+  name: ISampleProvider
+  nameWithType: ISampleProvider
+  fullName: Beutl.Extensibility.ISampleProvider
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Beutl.Extensibility.EncodingController.OutputFile*
+  commentId: Overload:Beutl.Extensibility.EncodingController.OutputFile
+  isExternal: true
+  href: Beutl.Extensibility.EncodingController.html#Beutl_Extensibility_EncodingController_OutputFile
+  name: OutputFile
+  nameWithType: EncodingController.OutputFile
+  fullName: Beutl.Extensibility.EncodingController.OutputFile
+- uid: Beutl.Extensibility.EncodingController.VideoSettings*
+  commentId: Overload:Beutl.Extensibility.EncodingController.VideoSettings
+  isExternal: true
+  href: Beutl.Extensibility.EncodingController.html#Beutl_Extensibility_EncodingController_VideoSettings
+  name: VideoSettings
+  nameWithType: EncodingController.VideoSettings
+  fullName: Beutl.Extensibility.EncodingController.VideoSettings
+- uid: Beutl.Media.Encoding.VideoEncoderSettings
+  commentId: T:Beutl.Media.Encoding.VideoEncoderSettings
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/VideoEncoderSettings.cs
+  name: VideoEncoderSettings
+  nameWithType: VideoEncoderSettings
+  fullName: Beutl.Media.Encoding.VideoEncoderSettings
+- uid: Beutl.Media.Encoding
+  commentId: N:Beutl.Media.Encoding
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Encoding
+  nameWithType: Beutl.Media.Encoding
+  fullName: Beutl.Media.Encoding
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Encoding
+    name: Encoding
+    isExternal: true
+    href: Beutl.Media.Encoding.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Encoding
+    name: Encoding
+    isExternal: true
+    href: Beutl.Media.Encoding.html
+- uid: Beutl.Extensibility.EncodingController.AudioSettings*
+  commentId: Overload:Beutl.Extensibility.EncodingController.AudioSettings
+  isExternal: true
+  href: Beutl.Extensibility.EncodingController.html#Beutl_Extensibility_EncodingController_AudioSettings
+  name: AudioSettings
+  nameWithType: EncodingController.AudioSettings
+  fullName: Beutl.Extensibility.EncodingController.AudioSettings
+- uid: Beutl.Media.Encoding.AudioEncoderSettings
+  commentId: T:Beutl.Media.Encoding.AudioEncoderSettings
+  parent: Beutl.Media.Encoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Encoding/AudioEncoderSettings.cs
+  name: AudioEncoderSettings
+  nameWithType: AudioEncoderSettings
+  fullName: Beutl.Media.Encoding.AudioEncoderSettings

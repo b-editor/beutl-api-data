@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Source.IVideoSource
+  commentId: T:Beutl.Media.Source.IVideoSource
+  id: IVideoSource
+  parent: Beutl.Media.Source
+  children:
+  - Beutl.Media.Source.IVideoSource.Clone
+  - Beutl.Media.Source.IVideoSource.Duration
+  - Beutl.Media.Source.IVideoSource.FrameRate
+  - Beutl.Media.Source.IVideoSource.FrameSize
+  - Beutl.Media.Source.IVideoSource.Read(System.Int32,Beutl.Media.IBitmap@)
+  - Beutl.Media.Source.IVideoSource.Read(System.TimeSpan,Beutl.Media.IBitmap@)
+  langs:
+  - csharp
+  - vb
+  name: IVideoSource
+  nameWithType: IVideoSource
+  fullName: Beutl.Media.Source.IVideoSource
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: >-
+      [JsonConverter(typeof(VideoSourceJsonConverter))]
+
+      public interface IVideoSource : IMediaSource, IDisposable, IFileSource
+    content.vb: >-
+      <JsonConverter(GetType(VideoSourceJsonConverter))>
+
+      Public Interface IVideoSource Inherits IMediaSource, IDisposable, IFileSource
+  inheritedMembers:
+  - Beutl.Media.Source.IMediaSource.IsDisposed
+  - Beutl.Media.Source.IMediaSource.Name
+  - System.IDisposable.Dispose
+  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  - Beutl.IO.IFileSource.Uri
+  attributes:
+  - type: System.Text.Json.Serialization.JsonConverterAttribute
+    ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Media.Source.VideoSourceJsonConverter
+- uid: Beutl.Media.Source.IVideoSource.Read(System.TimeSpan,Beutl.Media.IBitmap@)
+  commentId: M:Beutl.Media.Source.IVideoSource.Read(System.TimeSpan,Beutl.Media.IBitmap@)
+  id: Read(System.TimeSpan,Beutl.Media.IBitmap@)
+  parent: Beutl.Media.Source.IVideoSource
+  langs:
+  - csharp
+  - vb
+  name: Read(TimeSpan, out IBitmap?)
+  nameWithType: IVideoSource.Read(TimeSpan, out IBitmap?)
+  fullName: Beutl.Media.Source.IVideoSource.Read(System.TimeSpan, out Beutl.Media.IBitmap?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: bool Read(TimeSpan frame, out IBitmap? bitmap)
+    parameters:
+    - id: frame
+      type: System.TimeSpan
+    - id: bitmap
+      type: Beutl.Media.IBitmap
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    return:
+      type: System.Boolean
+    content.vb: Function Read(frame As TimeSpan, bitmap As IBitmap) As Boolean
+  overload: Beutl.Media.Source.IVideoSource.Read*
+  nameWithType.vb: IVideoSource.Read(TimeSpan, IBitmap)
+  fullName.vb: Beutl.Media.Source.IVideoSource.Read(System.TimeSpan, Beutl.Media.IBitmap)
+  name.vb: Read(TimeSpan, IBitmap)
+- uid: Beutl.Media.Source.IVideoSource.Read(System.Int32,Beutl.Media.IBitmap@)
+  commentId: M:Beutl.Media.Source.IVideoSource.Read(System.Int32,Beutl.Media.IBitmap@)
+  id: Read(System.Int32,Beutl.Media.IBitmap@)
+  parent: Beutl.Media.Source.IVideoSource
+  langs:
+  - csharp
+  - vb
+  name: Read(int, out IBitmap?)
+  nameWithType: IVideoSource.Read(int, out IBitmap?)
+  fullName: Beutl.Media.Source.IVideoSource.Read(int, out Beutl.Media.IBitmap?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: bool Read(int frame, out IBitmap? bitmap)
+    parameters:
+    - id: frame
+      type: System.Int32
+    - id: bitmap
+      type: Beutl.Media.IBitmap
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    return:
+      type: System.Boolean
+    content.vb: Function Read(frame As Integer, bitmap As IBitmap) As Boolean
+  overload: Beutl.Media.Source.IVideoSource.Read*
+  nameWithType.vb: IVideoSource.Read(Integer, IBitmap)
+  fullName.vb: Beutl.Media.Source.IVideoSource.Read(Integer, Beutl.Media.IBitmap)
+  name.vb: Read(Integer, IBitmap)
+- uid: Beutl.Media.Source.IVideoSource.Clone
+  commentId: M:Beutl.Media.Source.IVideoSource.Clone
+  id: Clone
+  parent: Beutl.Media.Source.IVideoSource
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: IVideoSource.Clone()
+  fullName: Beutl.Media.Source.IVideoSource.Clone()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: IVideoSource Clone()
+    return:
+      type: Beutl.Media.Source.IVideoSource
+    content.vb: Function Clone() As IVideoSource
+  overload: Beutl.Media.Source.IVideoSource.Clone*
+- uid: Beutl.Media.Source.IVideoSource.Duration
+  commentId: P:Beutl.Media.Source.IVideoSource.Duration
+  id: Duration
+  parent: Beutl.Media.Source.IVideoSource
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: IVideoSource.Duration
+  fullName: Beutl.Media.Source.IVideoSource.Duration
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: TimeSpan Duration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: ReadOnly Property Duration As TimeSpan
+  overload: Beutl.Media.Source.IVideoSource.Duration*
+- uid: Beutl.Media.Source.IVideoSource.FrameRate
+  commentId: P:Beutl.Media.Source.IVideoSource.FrameRate
+  id: FrameRate
+  parent: Beutl.Media.Source.IVideoSource
+  langs:
+  - csharp
+  - vb
+  name: FrameRate
+  nameWithType: IVideoSource.FrameRate
+  fullName: Beutl.Media.Source.IVideoSource.FrameRate
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: Rational FrameRate { get; }
+    parameters: []
+    return:
+      type: Beutl.Rational
+    content.vb: ReadOnly Property FrameRate As Rational
+  overload: Beutl.Media.Source.IVideoSource.FrameRate*
+- uid: Beutl.Media.Source.IVideoSource.FrameSize
+  commentId: P:Beutl.Media.Source.IVideoSource.FrameSize
+  id: FrameSize
+  parent: Beutl.Media.Source.IVideoSource
+  langs:
+  - csharp
+  - vb
+  name: FrameSize
+  nameWithType: IVideoSource.FrameSize
+  fullName: Beutl.Media.Source.IVideoSource.FrameSize
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Source
+  syntax:
+    content: PixelSize FrameSize { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: ReadOnly Property FrameSize As PixelSize
+  overload: Beutl.Media.Source.IVideoSource.FrameSize*
+references:
+- uid: Beutl.Media.Source
+  commentId: N:Beutl.Media.Source
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Source
+  nameWithType: Beutl.Media.Source
+  fullName: Beutl.Media.Source
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Source
+    name: Source
+    isExternal: true
+    href: Beutl.Media.Source.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Source
+    name: Source
+    isExternal: true
+    href: Beutl.Media.Source.html
+- uid: Beutl.Media.Source.IMediaSource.IsDisposed
+  commentId: P:Beutl.Media.Source.IMediaSource.IsDisposed
+  parent: Beutl.Media.Source.IMediaSource
+  isExternal: true
+  href: Beutl.Media.Source.IMediaSource.html#Beutl_Media_Source_IMediaSource_IsDisposed
+  name: IsDisposed
+  nameWithType: IMediaSource.IsDisposed
+  fullName: Beutl.Media.Source.IMediaSource.IsDisposed
+- uid: Beutl.Media.Source.IMediaSource.Name
+  commentId: P:Beutl.Media.Source.IMediaSource.Name
+  parent: Beutl.Media.Source.IMediaSource
+  isExternal: true
+  href: Beutl.Media.Source.IMediaSource.html#Beutl_Media_Source_IMediaSource_Name
+  name: Name
+  nameWithType: IMediaSource.Name
+  fullName: Beutl.Media.Source.IMediaSource.Name
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  parent: Beutl.IO.IFileSource
+  isExternal: true
+  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
+  name: ReadFrom(Uri)
+  nameWithType: IFileSource.ReadFrom(Uri)
+  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+  spec.csharp:
+  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+    name: ReadFrom
+    isExternal: true
+    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
+  - name: (
+  - uid: System.Uri
+    name: Uri
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
+    name: ReadFrom
+    isExternal: true
+    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
+  - name: (
+  - uid: System.Uri
+    name: Uri
+    isExternal: true
+  - name: )
+- uid: Beutl.IO.IFileSource.Uri
+  commentId: P:Beutl.IO.IFileSource.Uri
+  parent: Beutl.IO.IFileSource
+  isExternal: true
+  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
+  name: Uri
+  nameWithType: IFileSource.Uri
+  fullName: Beutl.IO.IFileSource.Uri
+- uid: Beutl.Media.Source.IMediaSource
+  commentId: T:Beutl.Media.Source.IMediaSource
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.IMediaSource.html
+  name: IMediaSource
+  nameWithType: IMediaSource
+  fullName: Beutl.Media.Source.IMediaSource
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Beutl.IO.IFileSource
+  commentId: T:Beutl.IO.IFileSource
+  parent: Beutl.IO
+  isExternal: true
+  href: Beutl.IO.IFileSource.html
+  name: IFileSource
+  nameWithType: IFileSource
+  fullName: Beutl.IO.IFileSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.IO
+  commentId: N:Beutl.IO
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.IO
+  nameWithType: Beutl.IO
+  fullName: Beutl.IO
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.IO
+    name: IO
+    isExternal: true
+    href: Beutl.IO.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.IO
+    name: IO
+    isExternal: true
+    href: Beutl.IO.html
+- uid: Beutl.Media.Source.IVideoSource.Read*
+  commentId: Overload:Beutl.Media.Source.IVideoSource.Read
+  isExternal: true
+  href: Beutl.Media.Source.IVideoSource.html#Beutl_Media_Source_IVideoSource_Read_System_TimeSpan_Beutl_Media_IBitmap__
+  name: Read
+  nameWithType: IVideoSource.Read
+  fullName: Beutl.Media.Source.IVideoSource.Read
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Beutl.Media.IBitmap
+  commentId: T:Beutl.Media.IBitmap
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.IBitmap.html
+  name: IBitmap
+  nameWithType: IBitmap
+  fullName: Beutl.Media.IBitmap
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.Source.IVideoSource.Clone*
+  commentId: Overload:Beutl.Media.Source.IVideoSource.Clone
+  isExternal: true
+  href: Beutl.Media.Source.IVideoSource.html#Beutl_Media_Source_IVideoSource_Clone
+  name: Clone
+  nameWithType: IVideoSource.Clone
+  fullName: Beutl.Media.Source.IVideoSource.Clone
+- uid: Beutl.Media.Source.IVideoSource
+  commentId: T:Beutl.Media.Source.IVideoSource
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.IVideoSource.html
+  name: IVideoSource
+  nameWithType: IVideoSource
+  fullName: Beutl.Media.Source.IVideoSource
+- uid: Beutl.Media.Source.IVideoSource.Duration*
+  commentId: Overload:Beutl.Media.Source.IVideoSource.Duration
+  isExternal: true
+  href: Beutl.Media.Source.IVideoSource.html#Beutl_Media_Source_IVideoSource_Duration
+  name: Duration
+  nameWithType: IVideoSource.Duration
+  fullName: Beutl.Media.Source.IVideoSource.Duration
+- uid: Beutl.Media.Source.IVideoSource.FrameRate*
+  commentId: Overload:Beutl.Media.Source.IVideoSource.FrameRate
+  isExternal: true
+  href: Beutl.Media.Source.IVideoSource.html#Beutl_Media_Source_IVideoSource_FrameRate
+  name: FrameRate
+  nameWithType: IVideoSource.FrameRate
+  fullName: Beutl.Media.Source.IVideoSource.FrameRate
+- uid: Beutl.Rational
+  commentId: T:Beutl.Rational
+  parent: Beutl
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Rational.Number.cs
+  name: Rational
+  nameWithType: Rational
+  fullName: Beutl.Rational
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.Media.Source.IVideoSource.FrameSize*
+  commentId: Overload:Beutl.Media.Source.IVideoSource.FrameSize
+  isExternal: true
+  href: Beutl.Media.Source.IVideoSource.html#Beutl_Media_Source_IVideoSource_FrameSize
+  name: FrameSize
+  nameWithType: IVideoSource.FrameSize
+  fullName: Beutl.Media.Source.IVideoSource.FrameSize
+- uid: Beutl.Media.PixelSize
+  commentId: T:Beutl.Media.PixelSize
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelSize.html
+  name: PixelSize
+  nameWithType: PixelSize
+  fullName: Beutl.Media.PixelSize

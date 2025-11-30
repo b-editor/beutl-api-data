@@ -1,0 +1,1784 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.PixelSize
+  commentId: T:Beutl.Media.PixelSize
+  id: PixelSize
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.PixelSize.#ctor(System.Int32,System.Int32)
+  - Beutl.Media.PixelSize.AspectRatio
+  - Beutl.Media.PixelSize.Empty
+  - Beutl.Media.PixelSize.Equals(Beutl.Media.PixelSize)
+  - Beutl.Media.PixelSize.Equals(System.Object)
+  - Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  - Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size,System.Single)
+  - Beutl.Media.PixelSize.GetHashCode
+  - Beutl.Media.PixelSize.Height
+  - Beutl.Media.PixelSize.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Media.PixelSize.Parse(System.String)
+  - Beutl.Media.PixelSize.ToSize(Beutl.Graphics.Vector)
+  - Beutl.Media.PixelSize.ToSize(System.Single)
+  - Beutl.Media.PixelSize.ToString
+  - Beutl.Media.PixelSize.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelSize@)
+  - Beutl.Media.PixelSize.TryParse(System.String,Beutl.Media.PixelSize@)
+  - Beutl.Media.PixelSize.Width
+  - Beutl.Media.PixelSize.WithHeight(System.Int32)
+  - Beutl.Media.PixelSize.WithWidth(System.Int32)
+  - Beutl.Media.PixelSize.op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  - Beutl.Media.PixelSize.op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  langs:
+  - csharp
+  - vb
+  name: PixelSize
+  nameWithType: PixelSize
+  fullName: Beutl.Media.PixelSize
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(PixelSizeJsonConverter))]
+
+      [TypeConverter(typeof(PixelSizeConverter))]
+
+      public readonly struct PixelSize : IEquatable<PixelSize>, ISpanParsable<PixelSize>, IParsable<PixelSize>, IEqualityOperators<PixelSize, PixelSize, bool>, ITupleConvertible<PixelSize, int>
+    content.vb: >-
+      <JsonConverter(GetType(PixelSizeJsonConverter))>
+
+      <TypeConverter(GetType(PixelSizeConverter))>
+
+      Public Structure PixelSize Implements IEquatable(Of PixelSize), ISpanParsable(Of PixelSize), IParsable(Of PixelSize), IEqualityOperators(Of PixelSize, PixelSize, Boolean), ITupleConvertible(Of PixelSize, Integer)
+  implements:
+  - System.IEquatable{Beutl.Media.PixelSize}
+  - System.ISpanParsable{Beutl.Media.PixelSize}
+  - System.IParsable{Beutl.Media.PixelSize}
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}
+  - Beutl.ITupleConvertible{Beutl.Media.PixelSize,System.Int32}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.PixelSizeConverter
+- uid: Beutl.Media.PixelSize.Empty
+  commentId: F:Beutl.Media.PixelSize.Empty
+  id: Empty
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: PixelSize.Empty
+  fullName: Beutl.Media.PixelSize.Empty
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static readonly PixelSize Empty
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Shared ReadOnly Empty As PixelSize
+- uid: Beutl.Media.PixelSize.#ctor(System.Int32,System.Int32)
+  commentId: M:Beutl.Media.PixelSize.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: PixelSize(int, int)
+  nameWithType: PixelSize.PixelSize(int, int)
+  fullName: Beutl.Media.PixelSize.PixelSize(int, int)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelSize(int width, int height)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(width As Integer, height As Integer)
+  overload: Beutl.Media.PixelSize.#ctor*
+  nameWithType.vb: PixelSize.New(Integer, Integer)
+  fullName.vb: Beutl.Media.PixelSize.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: Beutl.Media.PixelSize.op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  commentId: M:Beutl.Media.PixelSize.op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  id: op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  isEii: true
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: operator ==(PixelSize, PixelSize)
+  nameWithType: PixelSize.operator ==(PixelSize, PixelSize)
+  fullName: Beutl.Media.PixelSize.operator ==(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static bool operator ==(PixelSize left, PixelSize right)
+    parameters:
+    - id: left
+      type: Beutl.Media.PixelSize
+    - id: right
+      type: Beutl.Media.PixelSize
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator =(left As PixelSize, right As PixelSize) As Boolean
+  overload: Beutl.Media.PixelSize.op_Equality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  nameWithType.vb: PixelSize.=(PixelSize, PixelSize)
+  fullName.vb: Beutl.Media.PixelSize.=(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  name.vb: =(PixelSize, PixelSize)
+- uid: Beutl.Media.PixelSize.op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  commentId: M:Beutl.Media.PixelSize.op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  id: op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  isEii: true
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: operator !=(PixelSize, PixelSize)
+  nameWithType: PixelSize.operator !=(PixelSize, PixelSize)
+  fullName: Beutl.Media.PixelSize.operator !=(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static bool operator !=(PixelSize left, PixelSize right)
+    parameters:
+    - id: left
+      type: Beutl.Media.PixelSize
+    - id: right
+      type: Beutl.Media.PixelSize
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator <>(left As PixelSize, right As PixelSize) As Boolean
+  overload: Beutl.Media.PixelSize.op_Inequality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  nameWithType.vb: PixelSize.<>(PixelSize, PixelSize)
+  fullName.vb: Beutl.Media.PixelSize.<>(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  name.vb: <>(PixelSize, PixelSize)
+- uid: Beutl.Media.PixelSize.TryParse(System.String,Beutl.Media.PixelSize@)
+  commentId: M:Beutl.Media.PixelSize.TryParse(System.String,Beutl.Media.PixelSize@)
+  id: TryParse(System.String,Beutl.Media.PixelSize@)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out PixelSize)
+  nameWithType: PixelSize.TryParse(string, out PixelSize)
+  fullName: Beutl.Media.PixelSize.TryParse(string, out Beutl.Media.PixelSize)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(string s, out PixelSize size)
+    parameters:
+    - id: s
+      type: System.String
+    - id: size
+      type: Beutl.Media.PixelSize
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, size As PixelSize) As Boolean
+  overload: Beutl.Media.PixelSize.TryParse*
+  nameWithType.vb: PixelSize.TryParse(String, PixelSize)
+  fullName.vb: Beutl.Media.PixelSize.TryParse(String, Beutl.Media.PixelSize)
+  name.vb: TryParse(String, PixelSize)
+- uid: Beutl.Media.PixelSize.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelSize@)
+  commentId: M:Beutl.Media.PixelSize.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelSize@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelSize@)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out PixelSize)
+  nameWithType: PixelSize.TryParse(ReadOnlySpan<char>, out PixelSize)
+  fullName: Beutl.Media.PixelSize.TryParse(System.ReadOnlySpan<char>, out Beutl.Media.PixelSize)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out PixelSize size)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: size
+      type: Beutl.Media.PixelSize
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), size As PixelSize) As Boolean
+  overload: Beutl.Media.PixelSize.TryParse*
+  nameWithType.vb: PixelSize.TryParse(ReadOnlySpan(Of Char), PixelSize)
+  fullName.vb: Beutl.Media.PixelSize.TryParse(System.ReadOnlySpan(Of Char), Beutl.Media.PixelSize)
+  name.vb: TryParse(ReadOnlySpan(Of Char), PixelSize)
+- uid: Beutl.Media.PixelSize.Parse(System.String)
+  commentId: M:Beutl.Media.PixelSize.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: PixelSize.Parse(string)
+  fullName: Beutl.Media.PixelSize.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelSize Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Shared Function Parse(s As String) As PixelSize
+  overload: Beutl.Media.PixelSize.Parse*
+  nameWithType.vb: PixelSize.Parse(String)
+  fullName.vb: Beutl.Media.PixelSize.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Media.PixelSize.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Media.PixelSize.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: PixelSize.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Media.PixelSize.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelSize Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As PixelSize
+  overload: Beutl.Media.PixelSize.Parse*
+  nameWithType.vb: PixelSize.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Media.PixelSize.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Media.PixelSize.Equals(Beutl.Media.PixelSize)
+  commentId: M:Beutl.Media.PixelSize.Equals(Beutl.Media.PixelSize)
+  id: Equals(Beutl.Media.PixelSize)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: Equals(PixelSize)
+  nameWithType: PixelSize.Equals(PixelSize)
+  fullName: Beutl.Media.PixelSize.Equals(Beutl.Media.PixelSize)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(PixelSize other)
+    parameters:
+    - id: other
+      type: Beutl.Media.PixelSize
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As PixelSize) As Boolean
+  overload: Beutl.Media.PixelSize.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.PixelSize}.Equals(Beutl.Media.PixelSize)
+- uid: Beutl.Media.PixelSize.Equals(System.Object)
+  commentId: M:Beutl.Media.PixelSize.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: PixelSize.Equals(object?)
+  fullName: Beutl.Media.PixelSize.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.PixelSize.Equals*
+  nameWithType.vb: PixelSize.Equals(Object)
+  fullName.vb: Beutl.Media.PixelSize.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.PixelSize.GetHashCode
+  commentId: M:Beutl.Media.PixelSize.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: PixelSize.GetHashCode()
+  fullName: Beutl.Media.PixelSize.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.PixelSize.GetHashCode*
+- uid: Beutl.Media.PixelSize.WithWidth(System.Int32)
+  commentId: M:Beutl.Media.PixelSize.WithWidth(System.Int32)
+  id: WithWidth(System.Int32)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: WithWidth(int)
+  nameWithType: PixelSize.WithWidth(int)
+  fullName: Beutl.Media.PixelSize.WithWidth(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelSize WithWidth(int width)
+    parameters:
+    - id: width
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Function WithWidth(width As Integer) As PixelSize
+  overload: Beutl.Media.PixelSize.WithWidth*
+  nameWithType.vb: PixelSize.WithWidth(Integer)
+  fullName.vb: Beutl.Media.PixelSize.WithWidth(Integer)
+  name.vb: WithWidth(Integer)
+- uid: Beutl.Media.PixelSize.WithHeight(System.Int32)
+  commentId: M:Beutl.Media.PixelSize.WithHeight(System.Int32)
+  id: WithHeight(System.Int32)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: WithHeight(int)
+  nameWithType: PixelSize.WithHeight(int)
+  fullName: Beutl.Media.PixelSize.WithHeight(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelSize WithHeight(int height)
+    parameters:
+    - id: height
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Function WithHeight(height As Integer) As PixelSize
+  overload: Beutl.Media.PixelSize.WithHeight*
+  nameWithType.vb: PixelSize.WithHeight(Integer)
+  fullName.vb: Beutl.Media.PixelSize.WithHeight(Integer)
+  name.vb: WithHeight(Integer)
+- uid: Beutl.Media.PixelSize.ToSize(System.Single)
+  commentId: M:Beutl.Media.PixelSize.ToSize(System.Single)
+  id: ToSize(System.Single)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: ToSize(float)
+  nameWithType: PixelSize.ToSize(float)
+  fullName: Beutl.Media.PixelSize.ToSize(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Size ToSize(float scale)
+    parameters:
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function ToSize(scale As Single) As Size
+  overload: Beutl.Media.PixelSize.ToSize*
+  nameWithType.vb: PixelSize.ToSize(Single)
+  fullName.vb: Beutl.Media.PixelSize.ToSize(Single)
+  name.vb: ToSize(Single)
+- uid: Beutl.Media.PixelSize.ToSize(Beutl.Graphics.Vector)
+  commentId: M:Beutl.Media.PixelSize.ToSize(Beutl.Graphics.Vector)
+  id: ToSize(Beutl.Graphics.Vector)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: ToSize(Vector)
+  nameWithType: PixelSize.ToSize(Vector)
+  fullName: Beutl.Media.PixelSize.ToSize(Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Size ToSize(Vector scale)
+    parameters:
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function ToSize(scale As Vector) As Size
+  overload: Beutl.Media.PixelSize.ToSize*
+- uid: Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size,System.Single)
+  commentId: M:Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size,System.Single)
+  id: FromSize(Beutl.Graphics.Size,System.Single)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: FromSize(Size, float)
+  nameWithType: PixelSize.FromSize(Size, float)
+  fullName: Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelSize FromSize(Size size, float scale)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Shared Function FromSize(size As Size, scale As Single) As PixelSize
+  overload: Beutl.Media.PixelSize.FromSize*
+  nameWithType.vb: PixelSize.FromSize(Size, Single)
+  fullName.vb: Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size, Single)
+  name.vb: FromSize(Size, Single)
+- uid: Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  commentId: M:Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  id: FromSize(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: FromSize(Size, Vector)
+  nameWithType: PixelSize.FromSize(Size, Vector)
+  fullName: Beutl.Media.PixelSize.FromSize(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelSize FromSize(Size size, Vector scale)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Shared Function FromSize(size As Size, scale As Vector) As PixelSize
+  overload: Beutl.Media.PixelSize.FromSize*
+- uid: Beutl.Media.PixelSize.ToString
+  commentId: M:Beutl.Media.PixelSize.ToString
+  id: ToString
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PixelSize.ToString()
+  fullName: Beutl.Media.PixelSize.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Media.PixelSize.ToString*
+- uid: Beutl.Media.PixelSize.AspectRatio
+  commentId: P:Beutl.Media.PixelSize.AspectRatio
+  id: AspectRatio
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: AspectRatio
+  nameWithType: PixelSize.AspectRatio
+  fullName: Beutl.Media.PixelSize.AspectRatio
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float AspectRatio { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property AspectRatio As Single
+  overload: Beutl.Media.PixelSize.AspectRatio*
+- uid: Beutl.Media.PixelSize.Width
+  commentId: P:Beutl.Media.PixelSize.Width
+  id: Width
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: PixelSize.Width
+  fullName: Beutl.Media.PixelSize.Width
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Width As Integer
+  overload: Beutl.Media.PixelSize.Width*
+- uid: Beutl.Media.PixelSize.Height
+  commentId: P:Beutl.Media.PixelSize.Height
+  id: Height
+  parent: Beutl.Media.PixelSize
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: PixelSize.Height
+  fullName: Beutl.Media.PixelSize.Height
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelSize.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Height As Integer
+  overload: Beutl.Media.PixelSize.Height*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.PixelSize}
+  commentId: T:System.IEquatable{Beutl.Media.PixelSize}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<PixelSize>
+  nameWithType: IEquatable<PixelSize>
+  fullName: System.IEquatable<Beutl.Media.PixelSize>
+  nameWithType.vb: IEquatable(Of PixelSize)
+  fullName.vb: System.IEquatable(Of Beutl.Media.PixelSize)
+  name.vb: IEquatable(Of PixelSize)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Media.PixelSize}
+  commentId: T:System.ISpanParsable{Beutl.Media.PixelSize}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<PixelSize>
+  nameWithType: ISpanParsable<PixelSize>
+  fullName: System.ISpanParsable<Beutl.Media.PixelSize>
+  nameWithType.vb: ISpanParsable(Of PixelSize)
+  fullName.vb: System.ISpanParsable(Of Beutl.Media.PixelSize)
+  name.vb: ISpanParsable(Of PixelSize)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+- uid: System.IParsable{Beutl.Media.PixelSize}
+  commentId: T:System.IParsable{Beutl.Media.PixelSize}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<PixelSize>
+  nameWithType: IParsable<PixelSize>
+  fullName: System.IParsable<Beutl.Media.PixelSize>
+  nameWithType.vb: IParsable(Of PixelSize)
+  fullName.vb: System.IParsable(Of Beutl.Media.PixelSize)
+  name.vb: IParsable(Of PixelSize)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}
+  commentId: T:System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}
+  parent: System.Numerics
+  definition: System.Numerics.IEqualityOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<PixelSize, PixelSize, bool>
+  nameWithType: IEqualityOperators<PixelSize, PixelSize, bool>
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelSize, Beutl.Media.PixelSize, bool>
+  nameWithType.vb: IEqualityOperators(Of PixelSize, PixelSize, Boolean)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelSize, Beutl.Media.PixelSize, Boolean)
+  name.vb: IEqualityOperators(Of PixelSize, PixelSize, Boolean)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.ITupleConvertible{Beutl.Media.PixelSize,System.Int32}
+  commentId: T:Beutl.ITupleConvertible{Beutl.Media.PixelSize,System.Int32}
+  parent: Beutl
+  definition: Beutl.ITupleConvertible`2
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  name: ITupleConvertible<PixelSize, int>
+  nameWithType: ITupleConvertible<PixelSize, int>
+  fullName: Beutl.ITupleConvertible<Beutl.Media.PixelSize, int>
+  nameWithType.vb: ITupleConvertible(Of PixelSize, Integer)
+  fullName.vb: Beutl.ITupleConvertible(Of Beutl.Media.PixelSize, Integer)
+  name.vb: ITupleConvertible(Of PixelSize, Integer)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: <
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3
+  commentId: T:System.Numerics.IEqualityOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult)
+  name.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.PixelSize
+  commentId: T:Beutl.Media.PixelSize
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelSize.html
+  name: PixelSize
+  nameWithType: PixelSize
+  fullName: Beutl.Media.PixelSize
+- uid: Beutl.Media.PixelSize.#ctor*
+  commentId: Overload:Beutl.Media.PixelSize.#ctor
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize__ctor_System_Int32_System_Int32_
+  name: PixelSize
+  nameWithType: PixelSize.PixelSize
+  fullName: Beutl.Media.PixelSize.PixelSize
+  nameWithType.vb: PixelSize.New
+  fullName.vb: Beutl.Media.PixelSize.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.PixelSize.op_Equality*
+  commentId: Overload:Beutl.Media.PixelSize.op_Equality
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_op_Equality_Beutl_Media_PixelSize_Beutl_Media_PixelSize_
+  name: operator ==
+  nameWithType: PixelSize.operator ==
+  fullName: Beutl.Media.PixelSize.operator ==
+  nameWithType.vb: PixelSize.=
+  fullName.vb: Beutl.Media.PixelSize.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelSize.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_op_Equality_Beutl_Media_PixelSize_Beutl_Media_PixelSize_
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  parent: System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(PixelSize, PixelSize)
+  nameWithType: IEqualityOperators<PixelSize, PixelSize, bool>.operator ==(PixelSize, PixelSize)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelSize, Beutl.Media.PixelSize, bool>.operator ==(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  nameWithType.vb: IEqualityOperators(Of PixelSize, PixelSize, Boolean).=(PixelSize, PixelSize)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelSize, Beutl.Media.PixelSize, Boolean).=(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  name.vb: =(PixelSize, PixelSize)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Equality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  name.vb: =(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelSize.op_Inequality*
+  commentId: Overload:Beutl.Media.PixelSize.op_Inequality
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_op_Inequality_Beutl_Media_PixelSize_Beutl_Media_PixelSize_
+  name: operator !=
+  nameWithType: PixelSize.operator !=
+  fullName: Beutl.Media.PixelSize.operator !=
+  nameWithType.vb: PixelSize.<>
+  fullName.vb: Beutl.Media.PixelSize.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelSize.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_op_Inequality_Beutl_Media_PixelSize_Beutl_Media_PixelSize_
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+  parent: System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(PixelSize, PixelSize)
+  nameWithType: IEqualityOperators<PixelSize, PixelSize, bool>.operator !=(PixelSize, PixelSize)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelSize, Beutl.Media.PixelSize, bool>.operator !=(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  nameWithType.vb: IEqualityOperators(Of PixelSize, PixelSize, Boolean).<>(PixelSize, PixelSize)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelSize, Beutl.Media.PixelSize, Boolean).<>(Beutl.Media.PixelSize, Beutl.Media.PixelSize)
+  name.vb: <>(PixelSize, PixelSize)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelSize,Beutl.Media.PixelSize,System.Boolean}.op_Inequality(Beutl.Media.PixelSize,Beutl.Media.PixelSize)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  name.vb: <>(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelSize.TryParse*
+  commentId: Overload:Beutl.Media.PixelSize.TryParse
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_TryParse_System_String_Beutl_Media_PixelSize__
+  name: TryParse
+  nameWithType: PixelSize.TryParse
+  fullName: Beutl.Media.PixelSize.TryParse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.PixelSize.Parse*
+  commentId: Overload:Beutl.Media.PixelSize.Parse
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_Parse_System_String_
+  name: Parse
+  nameWithType: PixelSize.Parse
+  fullName: Beutl.Media.PixelSize.Parse
+- uid: Beutl.Media.PixelSize.Equals*
+  commentId: Overload:Beutl.Media.PixelSize.Equals
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_Equals_Beutl_Media_PixelSize_
+  name: Equals
+  nameWithType: PixelSize.Equals
+  fullName: Beutl.Media.PixelSize.Equals
+- uid: System.IEquatable{Beutl.Media.PixelSize}.Equals(Beutl.Media.PixelSize)
+  commentId: M:System.IEquatable{Beutl.Media.PixelSize}.Equals(Beutl.Media.PixelSize)
+  parent: System.IEquatable{Beutl.Media.PixelSize}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(PixelSize)
+  nameWithType: IEquatable<PixelSize>.Equals(PixelSize)
+  fullName: System.IEquatable<Beutl.Media.PixelSize>.Equals(Beutl.Media.PixelSize)
+  nameWithType.vb: IEquatable(Of PixelSize).Equals(PixelSize)
+  fullName.vb: System.IEquatable(Of Beutl.Media.PixelSize).Equals(Beutl.Media.PixelSize)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.PixelSize}.Equals(Beutl.Media.PixelSize)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.PixelSize}.Equals(Beutl.Media.PixelSize)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.PixelSize
+    name: PixelSize
+    isExternal: true
+    href: Beutl.Media.PixelSize.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.PixelSize.GetHashCode*
+  commentId: Overload:Beutl.Media.PixelSize.GetHashCode
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_GetHashCode
+  name: GetHashCode
+  nameWithType: PixelSize.GetHashCode
+  fullName: Beutl.Media.PixelSize.GetHashCode
+- uid: Beutl.Media.PixelSize.WithWidth*
+  commentId: Overload:Beutl.Media.PixelSize.WithWidth
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_WithWidth_System_Int32_
+  name: WithWidth
+  nameWithType: PixelSize.WithWidth
+  fullName: Beutl.Media.PixelSize.WithWidth
+- uid: Beutl.Media.PixelSize.WithHeight*
+  commentId: Overload:Beutl.Media.PixelSize.WithHeight
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_WithHeight_System_Int32_
+  name: WithHeight
+  nameWithType: PixelSize.WithHeight
+  fullName: Beutl.Media.PixelSize.WithHeight
+- uid: Beutl.Media.PixelSize.ToSize*
+  commentId: Overload:Beutl.Media.PixelSize.ToSize
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_ToSize_System_Single_
+  name: ToSize
+  nameWithType: PixelSize.ToSize
+  fullName: Beutl.Media.PixelSize.ToSize
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.Size
+  commentId: T:Beutl.Graphics.Size
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Size.html
+  name: Size
+  nameWithType: Size
+  fullName: Beutl.Graphics.Size
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: Beutl.Graphics.Vector
+  commentId: T:Beutl.Graphics.Vector
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: Beutl.Graphics.Vector
+- uid: Beutl.Media.PixelSize.FromSize*
+  commentId: Overload:Beutl.Media.PixelSize.FromSize
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_FromSize_Beutl_Graphics_Size_System_Single_
+  name: FromSize
+  nameWithType: PixelSize.FromSize
+  fullName: Beutl.Media.PixelSize.FromSize
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Media.PixelSize.ToString*
+  commentId: Overload:Beutl.Media.PixelSize.ToString
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_ToString
+  name: ToString
+  nameWithType: PixelSize.ToString
+  fullName: Beutl.Media.PixelSize.ToString
+- uid: Beutl.Media.PixelSize.AspectRatio*
+  commentId: Overload:Beutl.Media.PixelSize.AspectRatio
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_AspectRatio
+  name: AspectRatio
+  nameWithType: PixelSize.AspectRatio
+  fullName: Beutl.Media.PixelSize.AspectRatio
+- uid: Beutl.Media.PixelSize.Width*
+  commentId: Overload:Beutl.Media.PixelSize.Width
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_Width
+  name: Width
+  nameWithType: PixelSize.Width
+  fullName: Beutl.Media.PixelSize.Width
+- uid: Beutl.Media.PixelSize.Height*
+  commentId: Overload:Beutl.Media.PixelSize.Height
+  isExternal: true
+  href: Beutl.Media.PixelSize.html#Beutl_Media_PixelSize_Height
+  name: Height
+  nameWithType: PixelSize.Height
+  fullName: Beutl.Media.PixelSize.Height

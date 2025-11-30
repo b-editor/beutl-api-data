@@ -1,0 +1,1610 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Color
+  commentId: T:Beutl.Media.Color
+  id: Color
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)
+  - Beutl.Media.Color.A
+  - Beutl.Media.Color.B
+  - Beutl.Media.Color.Equals(Beutl.Media.Color)
+  - Beutl.Media.Color.Equals(System.Object)
+  - Beutl.Media.Color.FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)
+  - Beutl.Media.Color.FromInt32(System.Int32)
+  - Beutl.Media.Color.FromRgb(System.Byte,System.Byte,System.Byte)
+  - Beutl.Media.Color.FromUInt32(System.UInt32)
+  - Beutl.Media.Color.G
+  - Beutl.Media.Color.GetHashCode
+  - Beutl.Media.Color.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Media.Color.Parse(System.String)
+  - Beutl.Media.Color.R
+  - Beutl.Media.Color.ToCmyk
+  - Beutl.Media.Color.ToHsv
+  - Beutl.Media.Color.ToInt32
+  - Beutl.Media.Color.ToString
+  - Beutl.Media.Color.ToUint32
+  - Beutl.Media.Color.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.Color@)
+  - Beutl.Media.Color.TryParse(System.String,Beutl.Media.Color@)
+  - Beutl.Media.Color.op_Equality(Beutl.Media.Color,Beutl.Media.Color)
+  - Beutl.Media.Color.op_Inequality(Beutl.Media.Color,Beutl.Media.Color)
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Color
+  fullName: Beutl.Media.Color
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(ColorJsonConverter))]
+
+      [TypeConverter(typeof(ColorConverter))]
+
+      public readonly struct Color : IEquatable<Color>, ISpanParsable<Color>, IParsable<Color>
+    content.vb: >-
+      <JsonConverter(GetType(ColorJsonConverter))>
+
+      <TypeConverter(GetType(ColorConverter))>
+
+      Public Structure Color Implements IEquatable(Of Color), ISpanParsable(Of Color), IParsable(Of Color)
+  implements:
+  - System.IEquatable{Beutl.Media.Color}
+  - System.ISpanParsable{Beutl.Media.Color}
+  - System.IParsable{Beutl.Media.Color}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Beutl.Media.Color.Beutl.Media.ColorExtensions.ToBrush
+  - Beutl.Media.Color.Beutl.Media.ColorExtensions.ToBrushResource
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.ColorConverter
+- uid: Beutl.Media.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)
+  commentId: M:Beutl.Media.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)
+  id: '#ctor(System.Byte,System.Byte,System.Byte,System.Byte)'
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: Color(byte, byte, byte, byte)
+  nameWithType: Color.Color(byte, byte, byte, byte)
+  fullName: Beutl.Media.Color.Color(byte, byte, byte, byte)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Color(byte a, byte r, byte g, byte b)
+    parameters:
+    - id: a
+      type: System.Byte
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    content.vb: Public Sub New(a As Byte, r As Byte, g As Byte, b As Byte)
+  overload: Beutl.Media.Color.#ctor*
+  nameWithType.vb: Color.New(Byte, Byte, Byte, Byte)
+  fullName.vb: Beutl.Media.Color.New(Byte, Byte, Byte, Byte)
+  name.vb: New(Byte, Byte, Byte, Byte)
+- uid: Beutl.Media.Color.FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)
+  commentId: M:Beutl.Media.Color.FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)
+  id: FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: FromArgb(byte, byte, byte, byte)
+  nameWithType: Color.FromArgb(byte, byte, byte, byte)
+  fullName: Beutl.Media.Color.FromArgb(byte, byte, byte, byte)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static Color FromArgb(byte a, byte r, byte g, byte b)
+    parameters:
+    - id: a
+      type: System.Byte
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Shared Function FromArgb(a As Byte, r As Byte, g As Byte, b As Byte) As Color
+  overload: Beutl.Media.Color.FromArgb*
+  nameWithType.vb: Color.FromArgb(Byte, Byte, Byte, Byte)
+  fullName.vb: Beutl.Media.Color.FromArgb(Byte, Byte, Byte, Byte)
+  name.vb: FromArgb(Byte, Byte, Byte, Byte)
+- uid: Beutl.Media.Color.FromRgb(System.Byte,System.Byte,System.Byte)
+  commentId: M:Beutl.Media.Color.FromRgb(System.Byte,System.Byte,System.Byte)
+  id: FromRgb(System.Byte,System.Byte,System.Byte)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: FromRgb(byte, byte, byte)
+  nameWithType: Color.FromRgb(byte, byte, byte)
+  fullName: Beutl.Media.Color.FromRgb(byte, byte, byte)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static Color FromRgb(byte r, byte g, byte b)
+    parameters:
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Shared Function FromRgb(r As Byte, g As Byte, b As Byte) As Color
+  overload: Beutl.Media.Color.FromRgb*
+  nameWithType.vb: Color.FromRgb(Byte, Byte, Byte)
+  fullName.vb: Beutl.Media.Color.FromRgb(Byte, Byte, Byte)
+  name.vb: FromRgb(Byte, Byte, Byte)
+- uid: Beutl.Media.Color.FromUInt32(System.UInt32)
+  commentId: M:Beutl.Media.Color.FromUInt32(System.UInt32)
+  id: FromUInt32(System.UInt32)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: FromUInt32(uint)
+  nameWithType: Color.FromUInt32(uint)
+  fullName: Beutl.Media.Color.FromUInt32(uint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static Color FromUInt32(uint value)
+    parameters:
+    - id: value
+      type: System.UInt32
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Shared Function FromUInt32(value As UInteger) As Color
+  overload: Beutl.Media.Color.FromUInt32*
+  nameWithType.vb: Color.FromUInt32(UInteger)
+  fullName.vb: Beutl.Media.Color.FromUInt32(UInteger)
+  name.vb: FromUInt32(UInteger)
+- uid: Beutl.Media.Color.FromInt32(System.Int32)
+  commentId: M:Beutl.Media.Color.FromInt32(System.Int32)
+  id: FromInt32(System.Int32)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: FromInt32(int)
+  nameWithType: Color.FromInt32(int)
+  fullName: Beutl.Media.Color.FromInt32(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static Color FromInt32(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Shared Function FromInt32(value As Integer) As Color
+  overload: Beutl.Media.Color.FromInt32*
+  nameWithType.vb: Color.FromInt32(Integer)
+  fullName.vb: Beutl.Media.Color.FromInt32(Integer)
+  name.vb: FromInt32(Integer)
+- uid: Beutl.Media.Color.Parse(System.String)
+  commentId: M:Beutl.Media.Color.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: Color.Parse(string)
+  fullName: Beutl.Media.Color.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static Color Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Shared Function Parse(s As String) As Color
+  overload: Beutl.Media.Color.Parse*
+  nameWithType.vb: Color.Parse(String)
+  fullName.vb: Beutl.Media.Color.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Media.Color.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Media.Color.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: Color.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Media.Color.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static Color Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As Color
+  overload: Beutl.Media.Color.Parse*
+  nameWithType.vb: Color.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Media.Color.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Media.Color.TryParse(System.String,Beutl.Media.Color@)
+  commentId: M:Beutl.Media.Color.TryParse(System.String,Beutl.Media.Color@)
+  id: TryParse(System.String,Beutl.Media.Color@)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out Color)
+  nameWithType: Color.TryParse(string, out Color)
+  fullName: Beutl.Media.Color.TryParse(string, out Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(string s, out Color color)
+    parameters:
+    - id: s
+      type: System.String
+    - id: color
+      type: Beutl.Media.Color
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, color As Color) As Boolean
+  overload: Beutl.Media.Color.TryParse*
+  nameWithType.vb: Color.TryParse(String, Color)
+  fullName.vb: Beutl.Media.Color.TryParse(String, Beutl.Media.Color)
+  name.vb: TryParse(String, Color)
+- uid: Beutl.Media.Color.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.Color@)
+  commentId: M:Beutl.Media.Color.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.Color@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.Color@)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out Color)
+  nameWithType: Color.TryParse(ReadOnlySpan<char>, out Color)
+  fullName: Beutl.Media.Color.TryParse(System.ReadOnlySpan<char>, out Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out Color color)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: color
+      type: Beutl.Media.Color
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), color As Color) As Boolean
+  overload: Beutl.Media.Color.TryParse*
+  nameWithType.vb: Color.TryParse(ReadOnlySpan(Of Char), Color)
+  fullName.vb: Beutl.Media.Color.TryParse(System.ReadOnlySpan(Of Char), Beutl.Media.Color)
+  name.vb: TryParse(ReadOnlySpan(Of Char), Color)
+- uid: Beutl.Media.Color.ToString
+  commentId: M:Beutl.Media.Color.ToString
+  id: ToString
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Color.ToString()
+  fullName: Beutl.Media.Color.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Media.Color.ToString*
+- uid: Beutl.Media.Color.ToUint32
+  commentId: M:Beutl.Media.Color.ToUint32
+  id: ToUint32
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: ToUint32()
+  nameWithType: Color.ToUint32()
+  fullName: Beutl.Media.Color.ToUint32()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public uint ToUint32()
+    return:
+      type: System.UInt32
+    content.vb: Public Function ToUint32() As UInteger
+  overload: Beutl.Media.Color.ToUint32*
+- uid: Beutl.Media.Color.ToInt32
+  commentId: M:Beutl.Media.Color.ToInt32
+  id: ToInt32
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: ToInt32()
+  nameWithType: Color.ToInt32()
+  fullName: Beutl.Media.Color.ToInt32()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int ToInt32()
+    return:
+      type: System.Int32
+    content.vb: Public Function ToInt32() As Integer
+  overload: Beutl.Media.Color.ToInt32*
+- uid: Beutl.Media.Color.ToHsv
+  commentId: M:Beutl.Media.Color.ToHsv
+  id: ToHsv
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: ToHsv()
+  nameWithType: Color.ToHsv()
+  fullName: Beutl.Media.Color.ToHsv()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Hsv ToHsv()
+    return:
+      type: Beutl.Media.Hsv
+    content.vb: Public Function ToHsv() As Hsv
+  overload: Beutl.Media.Color.ToHsv*
+- uid: Beutl.Media.Color.ToCmyk
+  commentId: M:Beutl.Media.Color.ToCmyk
+  id: ToCmyk
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: ToCmyk()
+  nameWithType: Color.ToCmyk()
+  fullName: Beutl.Media.Color.ToCmyk()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Cmyk ToCmyk()
+    return:
+      type: Beutl.Media.Cmyk
+    content.vb: Public Function ToCmyk() As Cmyk
+  overload: Beutl.Media.Color.ToCmyk*
+- uid: Beutl.Media.Color.Equals(Beutl.Media.Color)
+  commentId: M:Beutl.Media.Color.Equals(Beutl.Media.Color)
+  id: Equals(Beutl.Media.Color)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: Equals(Color)
+  nameWithType: Color.Equals(Color)
+  fullName: Beutl.Media.Color.Equals(Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(Color other)
+    parameters:
+    - id: other
+      type: Beutl.Media.Color
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Color) As Boolean
+  overload: Beutl.Media.Color.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.Color}.Equals(Beutl.Media.Color)
+- uid: Beutl.Media.Color.Equals(System.Object)
+  commentId: M:Beutl.Media.Color.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Color.Equals(object?)
+  fullName: Beutl.Media.Color.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.Color.Equals*
+  nameWithType.vb: Color.Equals(Object)
+  fullName.vb: Beutl.Media.Color.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.Color.GetHashCode
+  commentId: M:Beutl.Media.Color.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Color.GetHashCode()
+  fullName: Beutl.Media.Color.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.Color.GetHashCode*
+- uid: Beutl.Media.Color.op_Equality(Beutl.Media.Color,Beutl.Media.Color)
+  commentId: M:Beutl.Media.Color.op_Equality(Beutl.Media.Color,Beutl.Media.Color)
+  id: op_Equality(Beutl.Media.Color,Beutl.Media.Color)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Color, Color)
+  nameWithType: Color.operator ==(Color, Color)
+  fullName: Beutl.Media.Color.operator ==(Beutl.Media.Color, Beutl.Media.Color)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator ==(Color left, Color right)
+    parameters:
+    - id: left
+      type: Beutl.Media.Color
+    - id: right
+      type: Beutl.Media.Color
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Color, right As Color) As Boolean
+  overload: Beutl.Media.Color.op_Equality*
+  nameWithType.vb: Color.=(Color, Color)
+  fullName.vb: Beutl.Media.Color.=(Beutl.Media.Color, Beutl.Media.Color)
+  name.vb: =(Color, Color)
+- uid: Beutl.Media.Color.op_Inequality(Beutl.Media.Color,Beutl.Media.Color)
+  commentId: M:Beutl.Media.Color.op_Inequality(Beutl.Media.Color,Beutl.Media.Color)
+  id: op_Inequality(Beutl.Media.Color,Beutl.Media.Color)
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Color, Color)
+  nameWithType: Color.operator !=(Color, Color)
+  fullName: Beutl.Media.Color.operator !=(Beutl.Media.Color, Beutl.Media.Color)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator !=(Color left, Color right)
+    parameters:
+    - id: left
+      type: Beutl.Media.Color
+    - id: right
+      type: Beutl.Media.Color
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Color, right As Color) As Boolean
+  overload: Beutl.Media.Color.op_Inequality*
+  nameWithType.vb: Color.<>(Color, Color)
+  fullName.vb: Beutl.Media.Color.<>(Beutl.Media.Color, Beutl.Media.Color)
+  name.vb: <>(Color, Color)
+- uid: Beutl.Media.Color.A
+  commentId: P:Beutl.Media.Color.A
+  id: A
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: Color.A
+  fullName: Beutl.Media.Color.A
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public byte A { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property A As Byte
+  overload: Beutl.Media.Color.A*
+- uid: Beutl.Media.Color.R
+  commentId: P:Beutl.Media.Color.R
+  id: R
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: R
+  nameWithType: Color.R
+  fullName: Beutl.Media.Color.R
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public byte R { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property R As Byte
+  overload: Beutl.Media.Color.R*
+- uid: Beutl.Media.Color.G
+  commentId: P:Beutl.Media.Color.G
+  id: G
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: G
+  nameWithType: Color.G
+  fullName: Beutl.Media.Color.G
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public byte G { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property G As Byte
+  overload: Beutl.Media.Color.G*
+- uid: Beutl.Media.Color.B
+  commentId: P:Beutl.Media.Color.B
+  id: B
+  parent: Beutl.Media.Color
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: Color.B
+  fullName: Beutl.Media.Color.B
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Color.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public byte B { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property B As Byte
+  overload: Beutl.Media.Color.B*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.Color}
+  commentId: T:System.IEquatable{Beutl.Media.Color}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Color>
+  nameWithType: IEquatable<Color>
+  fullName: System.IEquatable<Beutl.Media.Color>
+  nameWithType.vb: IEquatable(Of Color)
+  fullName.vb: System.IEquatable(Of Beutl.Media.Color)
+  name.vb: IEquatable(Of Color)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Media.Color}
+  commentId: T:System.ISpanParsable{Beutl.Media.Color}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<Color>
+  nameWithType: ISpanParsable<Color>
+  fullName: System.ISpanParsable<Beutl.Media.Color>
+  nameWithType.vb: ISpanParsable(Of Color)
+  fullName.vb: System.ISpanParsable(Of Beutl.Media.Color)
+  name.vb: ISpanParsable(Of Color)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: System.IParsable{Beutl.Media.Color}
+  commentId: T:System.IParsable{Beutl.Media.Color}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<Color>
+  nameWithType: IParsable<Color>
+  fullName: System.IParsable<Beutl.Media.Color>
+  nameWithType.vb: IParsable(Of Color)
+  fullName.vb: System.IParsable(Of Beutl.Media.Color)
+  name.vb: IParsable(Of Color)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Media.Color.Beutl.Media.ColorExtensions.ToBrush
+  commentId: M:Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+  parent: Beutl.Media.ColorExtensions
+  definition: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+  href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrush_Beutl_Media_Color_
+  name: ToBrush(Color)
+  nameWithType: ColorExtensions.ToBrush(Color)
+  fullName: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+  spec.csharp:
+  - uid: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+    name: ToBrush
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrush_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+    name: ToBrush
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrush_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: Beutl.Media.Color.Beutl.Media.ColorExtensions.ToBrushResource
+  commentId: M:Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  parent: Beutl.Media.ColorExtensions
+  definition: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrushResource_Beutl_Media_Color_
+  name: ToBrushResource(Color)
+  nameWithType: ColorExtensions.ToBrushResource(Color)
+  fullName: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  spec.csharp:
+  - uid: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+    name: ToBrushResource
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrushResource_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+    name: ToBrushResource
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrushResource_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+  commentId: M:Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+  isExternal: true
+  href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrush_Beutl_Media_Color_
+  name: ToBrush(Color)
+  nameWithType: ColorExtensions.ToBrush(Color)
+  fullName: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+  spec.csharp:
+  - uid: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+    name: ToBrush
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrush_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
+    name: ToBrush
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrush_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: Beutl.Media.ColorExtensions
+  commentId: T:Beutl.Media.ColorExtensions
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.ColorExtensions.html
+  name: ColorExtensions
+  nameWithType: ColorExtensions
+  fullName: Beutl.Media.ColorExtensions
+- uid: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  commentId: M:Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  isExternal: true
+  href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrushResource_Beutl_Media_Color_
+  name: ToBrushResource(Color)
+  nameWithType: ColorExtensions.ToBrushResource(Color)
+  fullName: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  spec.csharp:
+  - uid: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+    name: ToBrushResource
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrushResource_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+    name: ToBrushResource
+    isExternal: true
+    href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrushResource_Beutl_Media_Color_
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: Beutl.Media.Color.#ctor*
+  commentId: Overload:Beutl.Media.Color.#ctor
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color__ctor_System_Byte_System_Byte_System_Byte_System_Byte_
+  name: Color
+  nameWithType: Color.Color
+  fullName: Beutl.Media.Color.Color
+  nameWithType.vb: Color.New
+  fullName.vb: Beutl.Media.Color.New
+  name.vb: New
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: Beutl.Media.Color.FromArgb*
+  commentId: Overload:Beutl.Media.Color.FromArgb
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_FromArgb_System_Byte_System_Byte_System_Byte_System_Byte_
+  name: FromArgb
+  nameWithType: Color.FromArgb
+  fullName: Beutl.Media.Color.FromArgb
+- uid: Beutl.Media.Color
+  commentId: T:Beutl.Media.Color
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: Beutl.Media.Color
+- uid: Beutl.Media.Color.FromRgb*
+  commentId: Overload:Beutl.Media.Color.FromRgb
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_FromRgb_System_Byte_System_Byte_System_Byte_
+  name: FromRgb
+  nameWithType: Color.FromRgb
+  fullName: Beutl.Media.Color.FromRgb
+- uid: Beutl.Media.Color.FromUInt32*
+  commentId: Overload:Beutl.Media.Color.FromUInt32
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_FromUInt32_System_UInt32_
+  name: FromUInt32
+  nameWithType: Color.FromUInt32
+  fullName: Beutl.Media.Color.FromUInt32
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Beutl.Media.Color.FromInt32*
+  commentId: Overload:Beutl.Media.Color.FromInt32
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_FromInt32_System_Int32_
+  name: FromInt32
+  nameWithType: Color.FromInt32
+  fullName: Beutl.Media.Color.FromInt32
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.Color.Parse*
+  commentId: Overload:Beutl.Media.Color.Parse
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_Parse_System_String_
+  name: Parse
+  nameWithType: Color.Parse
+  fullName: Beutl.Media.Color.Parse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.Color.TryParse*
+  commentId: Overload:Beutl.Media.Color.TryParse
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_TryParse_System_String_Beutl_Media_Color__
+  name: TryParse
+  nameWithType: Color.TryParse
+  fullName: Beutl.Media.Color.TryParse
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Media.Color.ToString*
+  commentId: Overload:Beutl.Media.Color.ToString
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_ToString
+  name: ToString
+  nameWithType: Color.ToString
+  fullName: Beutl.Media.Color.ToString
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: Beutl.Media.Color.ToUint32*
+  commentId: Overload:Beutl.Media.Color.ToUint32
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_ToUint32
+  name: ToUint32
+  nameWithType: Color.ToUint32
+  fullName: Beutl.Media.Color.ToUint32
+- uid: Beutl.Media.Color.ToInt32*
+  commentId: Overload:Beutl.Media.Color.ToInt32
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_ToInt32
+  name: ToInt32
+  nameWithType: Color.ToInt32
+  fullName: Beutl.Media.Color.ToInt32
+- uid: Beutl.Media.Color.ToHsv*
+  commentId: Overload:Beutl.Media.Color.ToHsv
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_ToHsv
+  name: ToHsv
+  nameWithType: Color.ToHsv
+  fullName: Beutl.Media.Color.ToHsv
+- uid: Beutl.Media.Hsv
+  commentId: T:Beutl.Media.Hsv
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Hsv.html
+  name: Hsv
+  nameWithType: Hsv
+  fullName: Beutl.Media.Hsv
+- uid: Beutl.Media.Color.ToCmyk*
+  commentId: Overload:Beutl.Media.Color.ToCmyk
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_ToCmyk
+  name: ToCmyk
+  nameWithType: Color.ToCmyk
+  fullName: Beutl.Media.Color.ToCmyk
+- uid: Beutl.Media.Cmyk
+  commentId: T:Beutl.Media.Cmyk
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Cmyk.html
+  name: Cmyk
+  nameWithType: Cmyk
+  fullName: Beutl.Media.Cmyk
+- uid: Beutl.Media.Color.Equals*
+  commentId: Overload:Beutl.Media.Color.Equals
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_Equals_Beutl_Media_Color_
+  name: Equals
+  nameWithType: Color.Equals
+  fullName: Beutl.Media.Color.Equals
+- uid: System.IEquatable{Beutl.Media.Color}.Equals(Beutl.Media.Color)
+  commentId: M:System.IEquatable{Beutl.Media.Color}.Equals(Beutl.Media.Color)
+  parent: System.IEquatable{Beutl.Media.Color}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Color)
+  nameWithType: IEquatable<Color>.Equals(Color)
+  fullName: System.IEquatable<Beutl.Media.Color>.Equals(Beutl.Media.Color)
+  nameWithType.vb: IEquatable(Of Color).Equals(Color)
+  fullName.vb: System.IEquatable(Of Beutl.Media.Color).Equals(Beutl.Media.Color)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.Color}.Equals(Beutl.Media.Color)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.Color}.Equals(Beutl.Media.Color)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.Color.GetHashCode*
+  commentId: Overload:Beutl.Media.Color.GetHashCode
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_GetHashCode
+  name: GetHashCode
+  nameWithType: Color.GetHashCode
+  fullName: Beutl.Media.Color.GetHashCode
+- uid: Beutl.Media.Color.op_Equality*
+  commentId: Overload:Beutl.Media.Color.op_Equality
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_op_Equality_Beutl_Media_Color_Beutl_Media_Color_
+  name: operator ==
+  nameWithType: Color.operator ==
+  fullName: Beutl.Media.Color.operator ==
+  nameWithType.vb: Color.=
+  fullName.vb: Beutl.Media.Color.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.Color.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.Color.html#Beutl_Media_Color_op_Equality_Beutl_Media_Color_Beutl_Media_Color_
+- uid: Beutl.Media.Color.op_Inequality*
+  commentId: Overload:Beutl.Media.Color.op_Inequality
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_op_Inequality_Beutl_Media_Color_Beutl_Media_Color_
+  name: operator !=
+  nameWithType: Color.operator !=
+  fullName: Beutl.Media.Color.operator !=
+  nameWithType.vb: Color.<>
+  fullName.vb: Beutl.Media.Color.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.Color.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.Color.html#Beutl_Media_Color_op_Inequality_Beutl_Media_Color_Beutl_Media_Color_
+- uid: Beutl.Media.Color.A*
+  commentId: Overload:Beutl.Media.Color.A
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_A
+  name: A
+  nameWithType: Color.A
+  fullName: Beutl.Media.Color.A
+- uid: Beutl.Media.Color.R*
+  commentId: Overload:Beutl.Media.Color.R
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_R
+  name: R
+  nameWithType: Color.R
+  fullName: Beutl.Media.Color.R
+- uid: Beutl.Media.Color.G*
+  commentId: Overload:Beutl.Media.Color.G
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_G
+  name: G
+  nameWithType: Color.G
+  fullName: Beutl.Media.Color.G
+- uid: Beutl.Media.Color.B*
+  commentId: Overload:Beutl.Media.Color.B
+  isExternal: true
+  href: Beutl.Media.Color.html#Beutl_Media_Color_B
+  name: B
+  nameWithType: Color.B
+  fullName: Beutl.Media.Color.B

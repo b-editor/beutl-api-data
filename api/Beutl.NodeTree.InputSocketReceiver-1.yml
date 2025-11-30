@@ -1,0 +1,291 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.NodeTree.InputSocketReceiver`1
+  commentId: T:Beutl.NodeTree.InputSocketReceiver`1
+  id: InputSocketReceiver`1
+  parent: Beutl.NodeTree
+  children:
+  - Beutl.NodeTree.InputSocketReceiver`1.#ctor(System.Object,System.IntPtr)
+  - Beutl.NodeTree.InputSocketReceiver`1.BeginInvoke(System.Object,`0@,System.AsyncCallback,System.Object)
+  - Beutl.NodeTree.InputSocketReceiver`1.EndInvoke(`0@,System.IAsyncResult)
+  - Beutl.NodeTree.InputSocketReceiver`1.Invoke(System.Object,`0@)
+  langs:
+  - csharp
+  - vb
+  name: InputSocketReceiver<T>
+  nameWithType: InputSocketReceiver<T>
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>
+  type: Delegate
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/InputSocket.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public delegate bool InputSocketReceiver<T>(object? obj, out T? received)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: received
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Delegate Function InputSocketReceiver(Of T)(obj As Object, received As T) As Boolean
+  nameWithType.vb: InputSocketReceiver(Of T)
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T)
+  name.vb: InputSocketReceiver(Of T)
+- uid: Beutl.NodeTree.InputSocketReceiver`1.#ctor(System.Object,System.IntPtr)
+  commentId: M:Beutl.NodeTree.InputSocketReceiver`1.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: Beutl.NodeTree.InputSocketReceiver`1
+  langs:
+  - csharp
+  - vb
+  name: InputSocketReceiver(object, nint)
+  nameWithType: InputSocketReceiver<T>.InputSocketReceiver(object, nint)
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.InputSocketReceiver(object, nint)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/InputSocket.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public InputSocketReceiver(object @object, nint method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New([object] As Object, method As IntPtr)
+  overload: Beutl.NodeTree.InputSocketReceiver`1.#ctor*
+  nameWithType.vb: InputSocketReceiver(Of T).New(Object, IntPtr)
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).New(Object, System.IntPtr)
+  name.vb: New(Object, IntPtr)
+- uid: Beutl.NodeTree.InputSocketReceiver`1.Invoke(System.Object,`0@)
+  commentId: M:Beutl.NodeTree.InputSocketReceiver`1.Invoke(System.Object,`0@)
+  id: Invoke(System.Object,`0@)
+  parent: Beutl.NodeTree.InputSocketReceiver`1
+  langs:
+  - csharp
+  - vb
+  name: Invoke(object?, out T?)
+  nameWithType: InputSocketReceiver<T>.Invoke(object?, out T?)
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.Invoke(object?, out T?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/InputSocket.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public virtual bool Invoke(object? obj, out T? received)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: received
+      type: '{T}'
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Invoke(obj As Object, received As T) As Boolean
+  overload: Beutl.NodeTree.InputSocketReceiver`1.Invoke*
+  nameWithType.vb: InputSocketReceiver(Of T).Invoke(Object, T)
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).Invoke(Object, T)
+  name.vb: Invoke(Object, T)
+- uid: Beutl.NodeTree.InputSocketReceiver`1.BeginInvoke(System.Object,`0@,System.AsyncCallback,System.Object)
+  commentId: M:Beutl.NodeTree.InputSocketReceiver`1.BeginInvoke(System.Object,`0@,System.AsyncCallback,System.Object)
+  id: BeginInvoke(System.Object,`0@,System.AsyncCallback,System.Object)
+  parent: Beutl.NodeTree.InputSocketReceiver`1
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(object?, out T?, AsyncCallback, object)
+  nameWithType: InputSocketReceiver<T>.BeginInvoke(object?, out T?, AsyncCallback, object)
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.BeginInvoke(object?, out T?, System.AsyncCallback, object)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/InputSocket.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(object? obj, out T? received, AsyncCallback callback, object @object)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: received
+      type: '{T}'
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(obj As Object, received As T, callback As AsyncCallback, [object] As Object) As IAsyncResult
+  overload: Beutl.NodeTree.InputSocketReceiver`1.BeginInvoke*
+  nameWithType.vb: InputSocketReceiver(Of T).BeginInvoke(Object, T, AsyncCallback, Object)
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).BeginInvoke(Object, T, System.AsyncCallback, Object)
+  name.vb: BeginInvoke(Object, T, AsyncCallback, Object)
+- uid: Beutl.NodeTree.InputSocketReceiver`1.EndInvoke(`0@,System.IAsyncResult)
+  commentId: M:Beutl.NodeTree.InputSocketReceiver`1.EndInvoke(`0@,System.IAsyncResult)
+  id: EndInvoke(`0@,System.IAsyncResult)
+  parent: Beutl.NodeTree.InputSocketReceiver`1
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(out T?, IAsyncResult)
+  nameWithType: InputSocketReceiver<T>.EndInvoke(out T?, IAsyncResult)
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.EndInvoke(out T?, System.IAsyncResult)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/InputSocket.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public virtual bool EndInvoke(out T? received, IAsyncResult result)
+    parameters:
+    - id: received
+      type: '{T}'
+    - id: result
+      type: System.IAsyncResult
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function EndInvoke(received As T, result As IAsyncResult) As Boolean
+  overload: Beutl.NodeTree.InputSocketReceiver`1.EndInvoke*
+  nameWithType.vb: InputSocketReceiver(Of T).EndInvoke(T, IAsyncResult)
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).EndInvoke(T, System.IAsyncResult)
+  name.vb: EndInvoke(T, IAsyncResult)
+references:
+- uid: Beutl.NodeTree
+  commentId: N:Beutl.NodeTree
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.NodeTree
+  nameWithType: Beutl.NodeTree
+  fullName: Beutl.NodeTree
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.NodeTree
+    name: NodeTree
+    isExternal: true
+    href: Beutl.NodeTree.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.NodeTree
+    name: NodeTree
+    isExternal: true
+    href: Beutl.NodeTree.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.NodeTree.InputSocketReceiver`1.#ctor*
+  commentId: Overload:Beutl.NodeTree.InputSocketReceiver`1.#ctor
+  isExternal: true
+  href: Beutl.NodeTree.InputSocketReceiver-1.html#Beutl_NodeTree_InputSocketReceiver_1__ctor_System_Object_System_IntPtr_
+  name: InputSocketReceiver
+  nameWithType: InputSocketReceiver<T>.InputSocketReceiver
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.InputSocketReceiver
+  nameWithType.vb: InputSocketReceiver(Of T).New
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).New
+  name.vb: New
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: Beutl.NodeTree.InputSocketReceiver`1.Invoke*
+  commentId: Overload:Beutl.NodeTree.InputSocketReceiver`1.Invoke
+  isExternal: true
+  href: Beutl.NodeTree.InputSocketReceiver-1.html#Beutl_NodeTree_InputSocketReceiver_1_Invoke_System_Object__0__
+  name: Invoke
+  nameWithType: InputSocketReceiver<T>.Invoke
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.Invoke
+  nameWithType.vb: InputSocketReceiver(Of T).Invoke
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).Invoke
+- uid: Beutl.NodeTree.InputSocketReceiver`1.BeginInvoke*
+  commentId: Overload:Beutl.NodeTree.InputSocketReceiver`1.BeginInvoke
+  isExternal: true
+  href: Beutl.NodeTree.InputSocketReceiver-1.html#Beutl_NodeTree_InputSocketReceiver_1_BeginInvoke_System_Object__0__System_AsyncCallback_System_Object_
+  name: BeginInvoke
+  nameWithType: InputSocketReceiver<T>.BeginInvoke
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.BeginInvoke
+  nameWithType.vb: InputSocketReceiver(Of T).BeginInvoke
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Beutl.NodeTree.InputSocketReceiver`1.EndInvoke*
+  commentId: Overload:Beutl.NodeTree.InputSocketReceiver`1.EndInvoke
+  isExternal: true
+  href: Beutl.NodeTree.InputSocketReceiver-1.html#Beutl_NodeTree_InputSocketReceiver_1_EndInvoke__0__System_IAsyncResult_
+  name: EndInvoke
+  nameWithType: InputSocketReceiver<T>.EndInvoke
+  fullName: Beutl.NodeTree.InputSocketReceiver<T>.EndInvoke
+  nameWithType.vb: InputSocketReceiver(Of T).EndInvoke
+  fullName.vb: Beutl.NodeTree.InputSocketReceiver(Of T).EndInvoke

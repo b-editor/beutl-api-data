@@ -1,0 +1,115 @@
+name: Update API Documentation
+
+on:
+  # b-editor/beutl からの repository_dispatch イベントで起動
+  repository_dispatch:
+    types: [beutl-release]
+
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      beutl_ref:
+        description: 'Beutl ref (tag or branch) to generate docs from'
+        required: false
+        default: 'main'
+
+jobs:
+  update-api-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout beutl-api-data
+        uses: actions/checkout@v4
+        with:
+          path: beutl-api-data
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout beutl
+        uses: actions/checkout@v4
+        with:
+          repository: b-editor/beutl
+          ref: ${{ github.event.client_payload.ref || inputs.beutl_ref || 'main' }}
+          path: beutl
+          submodules: recursive
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Build Beutl (Release)
+        working-directory: beutl
+        run: |
+          dotnet restore
+          dotnet build -c Release --no-restore
+
+      - name: Generate API Metadata
+        working-directory: beutl
+        run: |
+          # Create temporary docfx.json for metadata generation
+          cat > docfx-metadata.json << 'EOF'
+          {
+            "metadata": [
+              {
+                "src": [
+                  {
+                    "files": ["**/*.dll"],
+                    "src": "artifacts/bin"
+                  }
+                ],
+                "dest": "api",
+                "includePrivateMembers": false,
+                "disableGitFeatures": false,
+                "disableDefaultFilter": false,
+                "noRestore": true,
+                "namespaceLayout": "flattened",
+                "memberLayout": "samePage",
+                "allowCompilationErrors": true
+              }
+            ]
+          }
+          EOF
+
+          docfx metadata docfx-metadata.json
+
+      - name: Update API files
+        run: |
+          # Clear existing API files
+          rm -rf beutl-api-data/api/*.yml
+
+          # Copy new API files
+          cp -r beutl/api/*.yml beutl-api-data/api/
+
+          # Get version info
+          VERSION="${{ github.event.client_payload.version || 'dev' }}"
+          echo "Generated from Beutl version: $VERSION" > beutl-api-data/api/.version
+          echo "Generated at: $(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> beutl-api-data/api/.version
+
+      - name: Commit and Push
+        working-directory: beutl-api-data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          VERSION="${{ github.event.client_payload.version || 'manual-update' }}"
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update API documentation for Beutl $VERSION"
+            git push
+          fi
+
+      - name: Trigger beutl-web-docs update
+        if: success()
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
+          repository: b-editor/beutl-web-docs
+          event-type: api-docs-updated
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

@@ -1,0 +1,5162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.Size
+  commentId: T:Beutl.Graphics.Size
+  id: Size
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.Size.#ctor(System.Single,System.Single)
+  - Beutl.Graphics.Size.AspectRatio
+  - Beutl.Graphics.Size.Ceiling
+  - Beutl.Graphics.Size.Constrain(Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.Deconstruct(System.Single@,System.Single@)
+  - Beutl.Graphics.Size.Deflate(Beutl.Graphics.Thickness)
+  - Beutl.Graphics.Size.Deflate(System.Single)
+  - Beutl.Graphics.Size.Empty
+  - Beutl.Graphics.Size.Equals(Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.Equals(System.Object)
+  - Beutl.Graphics.Size.GetHashCode
+  - Beutl.Graphics.Size.Height
+  - Beutl.Graphics.Size.Infinity
+  - Beutl.Graphics.Size.Inflate(Beutl.Graphics.Thickness)
+  - Beutl.Graphics.Size.Inflate(System.Single)
+  - Beutl.Graphics.Size.IsDefault
+  - Beutl.Graphics.Size.NearlyEquals(Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Byte})
+  - Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  - Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.Size.Parse(System.String)
+  - Beutl.Graphics.Size.Parse(System.String,System.IFormatProvider)
+  - Beutl.Graphics.Size.ToString
+  - Beutl.Graphics.Size.ToString(System.String,System.IFormatProvider)
+  - Beutl.Graphics.Size.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.Size.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Size@)
+  - Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+  - Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Size@)
+  - Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+  - Beutl.Graphics.Size.TryParse(System.String,Beutl.Graphics.Size@)
+  - Beutl.Graphics.Size.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+  - Beutl.Graphics.Size.Width
+  - Beutl.Graphics.Size.WithHeight(System.Single)
+  - Beutl.Graphics.Size.WithWidth(System.Single)
+  - Beutl.Graphics.Size.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  - Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  - Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,System.Single)
+  - Beutl.Graphics.Size.op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  - Beutl.Graphics.Size.op_Multiply(Beutl.Graphics.Size,System.Single)
+  - Beutl.Graphics.Size.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  - Beutl.Graphics.Size.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: Size
+  fullName: Beutl.Graphics.Size
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: >-
+      [JsonConverter(typeof(SizeJsonConverter))]
+
+      [TypeConverter(typeof(SizeConverter))]
+
+      public readonly struct Size : IEquatable<Size>, ISpanParsable<Size>, IParsable<Size>, ISpanFormattable, IFormattable, IUtf8SpanFormattable, IUtf8SpanParsable<Size>, IEqualityOperators<Size, Size, bool>, IMultiplyOperators<Size, Vector, Size>, IDivisionOperators<Size, Vector, Size>, IDivisionOperators<Size, Size, Vector>, IMultiplyOperators<Size, float, Size>, IDivisionOperators<Size, float, Size>, IAdditionOperators<Size, Size, Size>, ISubtractionOperators<Size, Size, Size>, IAdditionOperators<Size, Thickness, Size>, ISubtractionOperators<Size, Thickness, Size>, ITupleConvertible<Size, float>
+    content.vb: >-
+      <JsonConverter(GetType(SizeJsonConverter))>
+
+      <TypeConverter(GetType(SizeConverter))>
+
+      Public Structure Size Implements IEquatable(Of Size), ISpanParsable(Of Size), IParsable(Of Size), ISpanFormattable, IFormattable, IUtf8SpanFormattable, IUtf8SpanParsable(Of Size), IEqualityOperators(Of Size, Size, Boolean), IMultiplyOperators(Of Size, Vector, Size), IDivisionOperators(Of Size, Vector, Size), IDivisionOperators(Of Size, Size, Vector), IMultiplyOperators(Of Size, Single, Size), IDivisionOperators(Of Size, Single, Size), IAdditionOperators(Of Size, Size, Size), ISubtractionOperators(Of Size, Size, Size), IAdditionOperators(Of Size, Thickness, Size), ISubtractionOperators(Of Size, Thickness, Size), ITupleConvertible(Of Size, Single)
+  implements:
+  - System.IEquatable{Beutl.Graphics.Size}
+  - System.ISpanParsable{Beutl.Graphics.Size}
+  - System.IParsable{Beutl.Graphics.Size}
+  - System.ISpanFormattable
+  - System.IFormattable
+  - System.IUtf8SpanFormattable
+  - System.IUtf8SpanParsable{Beutl.Graphics.Size}
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  - System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  - System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  - System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  - System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  - Beutl.ITupleConvertible{Beutl.Graphics.Size,System.Single}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.SizeConverter
+- uid: Beutl.Graphics.Size.Infinity
+  commentId: F:Beutl.Graphics.Size.Infinity
+  id: Infinity
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Infinity
+  nameWithType: Size.Infinity
+  fullName: Beutl.Graphics.Size.Infinity
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static readonly Size Infinity
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Shared ReadOnly Infinity As Size
+- uid: Beutl.Graphics.Size.Empty
+  commentId: F:Beutl.Graphics.Size.Empty
+  id: Empty
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: Size.Empty
+  fullName: Beutl.Graphics.Size.Empty
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static readonly Size Empty
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Shared ReadOnly Empty As Size
+- uid: Beutl.Graphics.Size.#ctor(System.Single,System.Single)
+  commentId: M:Beutl.Graphics.Size.#ctor(System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single)'
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Size(float, float)
+  nameWithType: Size.Size(float, float)
+  fullName: Beutl.Graphics.Size.Size(float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size(float width, float height)
+    parameters:
+    - id: width
+      type: System.Single
+    - id: height
+      type: System.Single
+    content.vb: Public Sub New(width As Single, height As Single)
+  overload: Beutl.Graphics.Size.#ctor*
+  nameWithType.vb: Size.New(Single, Single)
+  fullName.vb: Beutl.Graphics.Size.New(Single, Single)
+  name.vb: New(Single, Single)
+- uid: Beutl.Graphics.Size.op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  id: op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Size, Size)
+  nameWithType: Size.operator ==(Size, Size)
+  fullName: Beutl.Graphics.Size.operator ==(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool operator ==(Size left, Size right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.Size
+    - id: right
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator =(left As Size, right As Size) As Boolean
+  overload: Beutl.Graphics.Size.op_Equality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  nameWithType.vb: Size.=(Size, Size)
+  fullName.vb: Beutl.Graphics.Size.=(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: =(Size, Size)
+- uid: Beutl.Graphics.Size.op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  id: op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Size, Size)
+  nameWithType: Size.operator !=(Size, Size)
+  fullName: Beutl.Graphics.Size.operator !=(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool operator !=(Size left, Size right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.Size
+    - id: right
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator <>(left As Size, right As Size) As Boolean
+  overload: Beutl.Graphics.Size.op_Inequality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  nameWithType.vb: Size.<>(Size, Size)
+  fullName.vb: Beutl.Graphics.Size.<>(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: <>(Size, Size)
+- uid: Beutl.Graphics.Size.op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Size.op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  id: op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator *(Size, Vector)
+  nameWithType: Size.operator *(Size, Vector)
+  fullName: Beutl.Graphics.Size.operator *(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator *(Size size, Vector scale)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator *(size As Size, scale As Vector) As Size
+  overload: Beutl.Graphics.Size.op_Multiply*
+  implements:
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  nameWithType.vb: Size.*(Size, Vector)
+  fullName.vb: Beutl.Graphics.Size.*(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  name.vb: '*(Size, Vector)'
+- uid: Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  id: op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator /(Size, Vector)
+  nameWithType: Size.operator /(Size, Vector)
+  fullName: Beutl.Graphics.Size.operator /(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator /(Size size, Vector scale)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator /(size As Size, scale As Vector) As Size
+  overload: Beutl.Graphics.Size.op_Division*
+  implements:
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  nameWithType.vb: Size./(Size, Vector)
+  fullName.vb: Beutl.Graphics.Size./(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  name.vb: /(Size, Vector)
+- uid: Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  id: op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator /(Size, Size)
+  nameWithType: Size.operator /(Size, Size)
+  fullName: Beutl.Graphics.Size.operator /(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Vector operator /(Size left, Size right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.Size
+    - id: right
+      type: Beutl.Graphics.Size
+    return:
+      type: Beutl.Graphics.Vector
+    content.vb: Shared Operator /(left As Size, right As Size) As Vector
+  overload: Beutl.Graphics.Size.op_Division*
+  implements:
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  nameWithType.vb: Size./(Size, Size)
+  fullName.vb: Beutl.Graphics.Size./(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: /(Size, Size)
+- uid: Beutl.Graphics.Size.op_Multiply(Beutl.Graphics.Size,System.Single)
+  commentId: M:Beutl.Graphics.Size.op_Multiply(Beutl.Graphics.Size,System.Single)
+  id: op_Multiply(Beutl.Graphics.Size,System.Single)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator *(Size, float)
+  nameWithType: Size.operator *(Size, float)
+  fullName: Beutl.Graphics.Size.operator *(Beutl.Graphics.Size, float)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator *(Size size, float scale)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator *(size As Size, scale As Single) As Size
+  overload: Beutl.Graphics.Size.op_Multiply*
+  implements:
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,System.Single)
+  nameWithType.vb: Size.*(Size, Single)
+  fullName.vb: Beutl.Graphics.Size.*(Beutl.Graphics.Size, Single)
+  name.vb: '*(Size, Single)'
+- uid: Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,System.Single)
+  commentId: M:Beutl.Graphics.Size.op_Division(Beutl.Graphics.Size,System.Single)
+  id: op_Division(Beutl.Graphics.Size,System.Single)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator /(Size, float)
+  nameWithType: Size.operator /(Size, float)
+  fullName: Beutl.Graphics.Size.operator /(Beutl.Graphics.Size, float)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator /(Size size, float scale)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator /(size As Size, scale As Single) As Size
+  overload: Beutl.Graphics.Size.op_Division*
+  implements:
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,System.Single)
+  nameWithType.vb: Size./(Size, Single)
+  fullName.vb: Beutl.Graphics.Size./(Beutl.Graphics.Size, Single)
+  name.vb: /(Size, Single)
+- uid: Beutl.Graphics.Size.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  id: op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator +(Size, Size)
+  nameWithType: Size.operator +(Size, Size)
+  fullName: Beutl.Graphics.Size.operator +(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator +(Size size, Size toAdd)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: toAdd
+      type: Beutl.Graphics.Size
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator +(size As Size, toAdd As Size) As Size
+  overload: Beutl.Graphics.Size.op_Addition*
+  implements:
+  - System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  nameWithType.vb: Size.+(Size, Size)
+  fullName.vb: Beutl.Graphics.Size.+(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: +(Size, Size)
+- uid: Beutl.Graphics.Size.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  id: op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator -(Size, Size)
+  nameWithType: Size.operator -(Size, Size)
+  fullName: Beutl.Graphics.Size.operator -(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator -(Size size, Size toSubtract)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: toSubtract
+      type: Beutl.Graphics.Size
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator -(size As Size, toSubtract As Size) As Size
+  overload: Beutl.Graphics.Size.op_Subtraction*
+  implements:
+  - System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  nameWithType.vb: Size.-(Size, Size)
+  fullName.vb: Beutl.Graphics.Size.-(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: -(Size, Size)
+- uid: Beutl.Graphics.Size.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  commentId: M:Beutl.Graphics.Size.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  id: op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator +(Size, Thickness)
+  nameWithType: Size.operator +(Size, Thickness)
+  fullName: Beutl.Graphics.Size.operator +(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator +(Size size, Thickness thickness)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: thickness
+      type: Beutl.Graphics.Thickness
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator +(size As Size, thickness As Thickness) As Size
+  overload: Beutl.Graphics.Size.op_Addition*
+  implements:
+  - System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  nameWithType.vb: Size.+(Size, Thickness)
+  fullName.vb: Beutl.Graphics.Size.+(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  name.vb: +(Size, Thickness)
+- uid: Beutl.Graphics.Size.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  commentId: M:Beutl.Graphics.Size.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  id: op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: operator -(Size, Thickness)
+  nameWithType: Size.operator -(Size, Thickness)
+  fullName: Beutl.Graphics.Size.operator -(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size operator -(Size size, Thickness thickness)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    - id: thickness
+      type: Beutl.Graphics.Thickness
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Operator -(size As Size, thickness As Thickness) As Size
+  overload: Beutl.Graphics.Size.op_Subtraction*
+  implements:
+  - System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  nameWithType.vb: Size.-(Size, Thickness)
+  fullName.vb: Beutl.Graphics.Size.-(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  name.vb: -(Size, Thickness)
+- uid: Beutl.Graphics.Size.TryParse(System.String,Beutl.Graphics.Size@)
+  commentId: M:Beutl.Graphics.Size.TryParse(System.String,Beutl.Graphics.Size@)
+  id: TryParse(System.String,Beutl.Graphics.Size@)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out Size)
+  nameWithType: Size.TryParse(string, out Size)
+  fullName: Beutl.Graphics.Size.TryParse(string, out Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(string s, out Size size)
+    parameters:
+    - id: s
+      type: System.String
+    - id: size
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, size As Size) As Boolean
+  overload: Beutl.Graphics.Size.TryParse*
+  nameWithType.vb: Size.TryParse(String, Size)
+  fullName.vb: Beutl.Graphics.Size.TryParse(String, Beutl.Graphics.Size)
+  name.vb: TryParse(String, Size)
+- uid: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Size@)
+  commentId: M:Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Size@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Size@)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out Size)
+  nameWithType: Size.TryParse(ReadOnlySpan<char>, out Size)
+  fullName: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan<char>, out Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out Size size)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: size
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), size As Size) As Boolean
+  overload: Beutl.Graphics.Size.TryParse*
+  nameWithType.vb: Size.TryParse(ReadOnlySpan(Of Char), Size)
+  fullName.vb: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan(Of Char), Beutl.Graphics.Size)
+  name.vb: TryParse(ReadOnlySpan(Of Char), Size)
+- uid: Beutl.Graphics.Size.Parse(System.String)
+  commentId: M:Beutl.Graphics.Size.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: Size.Parse(string)
+  fullName: Beutl.Graphics.Size.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Size Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Shared Function Parse(s As String) As Size
+  overload: Beutl.Graphics.Size.Parse*
+  nameWithType.vb: Size.Parse(String)
+  fullName.vb: Beutl.Graphics.Size.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: Size.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Graphics.Size.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Size Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As Size
+  overload: Beutl.Graphics.Size.Parse*
+  nameWithType.vb: Size.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Graphics.Size.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Graphics.Size.Constrain(Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.Constrain(Beutl.Graphics.Size)
+  id: Constrain(Beutl.Graphics.Size)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Constrain(Size)
+  nameWithType: Size.Constrain(Size)
+  fullName: Beutl.Graphics.Size.Constrain(Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size Constrain(Size constraint)
+    parameters:
+    - id: constraint
+      type: Beutl.Graphics.Size
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function Constrain(constraint As Size) As Size
+  overload: Beutl.Graphics.Size.Constrain*
+- uid: Beutl.Graphics.Size.Deflate(Beutl.Graphics.Thickness)
+  commentId: M:Beutl.Graphics.Size.Deflate(Beutl.Graphics.Thickness)
+  id: Deflate(Beutl.Graphics.Thickness)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Deflate(Thickness)
+  nameWithType: Size.Deflate(Thickness)
+  fullName: Beutl.Graphics.Size.Deflate(Beutl.Graphics.Thickness)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size Deflate(Thickness thickness)
+    parameters:
+    - id: thickness
+      type: Beutl.Graphics.Thickness
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function Deflate(thickness As Thickness) As Size
+  overload: Beutl.Graphics.Size.Deflate*
+- uid: Beutl.Graphics.Size.Deflate(System.Single)
+  commentId: M:Beutl.Graphics.Size.Deflate(System.Single)
+  id: Deflate(System.Single)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Deflate(float)
+  nameWithType: Size.Deflate(float)
+  fullName: Beutl.Graphics.Size.Deflate(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size Deflate(float thickness)
+    parameters:
+    - id: thickness
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function Deflate(thickness As Single) As Size
+  overload: Beutl.Graphics.Size.Deflate*
+  nameWithType.vb: Size.Deflate(Single)
+  fullName.vb: Beutl.Graphics.Size.Deflate(Single)
+  name.vb: Deflate(Single)
+- uid: Beutl.Graphics.Size.Equals(Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.Equals(Beutl.Graphics.Size)
+  id: Equals(Beutl.Graphics.Size)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Equals(Size)
+  nameWithType: Size.Equals(Size)
+  fullName: Beutl.Graphics.Size.Equals(Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool Equals(Size other)
+    parameters:
+    - id: other
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Size) As Boolean
+  overload: Beutl.Graphics.Size.Equals*
+  implements:
+  - System.IEquatable{Beutl.Graphics.Size}.Equals(Beutl.Graphics.Size)
+- uid: Beutl.Graphics.Size.NearlyEquals(Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Size.NearlyEquals(Beutl.Graphics.Size)
+  id: NearlyEquals(Beutl.Graphics.Size)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: NearlyEquals(Size)
+  nameWithType: Size.NearlyEquals(Size)
+  fullName: Beutl.Graphics.Size.NearlyEquals(Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool NearlyEquals(Size other)
+    parameters:
+    - id: other
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Public Function NearlyEquals(other As Size) As Boolean
+  overload: Beutl.Graphics.Size.NearlyEquals*
+- uid: Beutl.Graphics.Size.Equals(System.Object)
+  commentId: M:Beutl.Graphics.Size.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Size.Equals(object?)
+  fullName: Beutl.Graphics.Size.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Graphics.Size.Equals*
+  nameWithType.vb: Size.Equals(Object)
+  fullName.vb: Beutl.Graphics.Size.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Graphics.Size.GetHashCode
+  commentId: M:Beutl.Graphics.Size.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Size.GetHashCode()
+  fullName: Beutl.Graphics.Size.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Graphics.Size.GetHashCode*
+- uid: Beutl.Graphics.Size.Inflate(Beutl.Graphics.Thickness)
+  commentId: M:Beutl.Graphics.Size.Inflate(Beutl.Graphics.Thickness)
+  id: Inflate(Beutl.Graphics.Thickness)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Inflate(Thickness)
+  nameWithType: Size.Inflate(Thickness)
+  fullName: Beutl.Graphics.Size.Inflate(Beutl.Graphics.Thickness)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size Inflate(Thickness thickness)
+    parameters:
+    - id: thickness
+      type: Beutl.Graphics.Thickness
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function Inflate(thickness As Thickness) As Size
+  overload: Beutl.Graphics.Size.Inflate*
+- uid: Beutl.Graphics.Size.Inflate(System.Single)
+  commentId: M:Beutl.Graphics.Size.Inflate(System.Single)
+  id: Inflate(System.Single)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Inflate(float)
+  nameWithType: Size.Inflate(float)
+  fullName: Beutl.Graphics.Size.Inflate(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size Inflate(float thickness)
+    parameters:
+    - id: thickness
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function Inflate(thickness As Single) As Size
+  overload: Beutl.Graphics.Size.Inflate*
+  nameWithType.vb: Size.Inflate(Single)
+  fullName.vb: Beutl.Graphics.Size.Inflate(Single)
+  name.vb: Inflate(Single)
+- uid: Beutl.Graphics.Size.WithWidth(System.Single)
+  commentId: M:Beutl.Graphics.Size.WithWidth(System.Single)
+  id: WithWidth(System.Single)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: WithWidth(float)
+  nameWithType: Size.WithWidth(float)
+  fullName: Beutl.Graphics.Size.WithWidth(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size WithWidth(float width)
+    parameters:
+    - id: width
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function WithWidth(width As Single) As Size
+  overload: Beutl.Graphics.Size.WithWidth*
+  nameWithType.vb: Size.WithWidth(Single)
+  fullName.vb: Beutl.Graphics.Size.WithWidth(Single)
+  name.vb: WithWidth(Single)
+- uid: Beutl.Graphics.Size.WithHeight(System.Single)
+  commentId: M:Beutl.Graphics.Size.WithHeight(System.Single)
+  id: WithHeight(System.Single)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: WithHeight(float)
+  nameWithType: Size.WithHeight(float)
+  fullName: Beutl.Graphics.Size.WithHeight(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size WithHeight(float height)
+    parameters:
+    - id: height
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Function WithHeight(height As Single) As Size
+  overload: Beutl.Graphics.Size.WithHeight*
+  nameWithType.vb: Size.WithHeight(Single)
+  fullName.vb: Beutl.Graphics.Size.WithHeight(Single)
+  name.vb: WithHeight(Single)
+- uid: Beutl.Graphics.Size.Ceiling
+  commentId: M:Beutl.Graphics.Size.Ceiling
+  id: Ceiling
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Ceiling()
+  nameWithType: Size.Ceiling()
+  fullName: Beutl.Graphics.Size.Ceiling()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public PixelSize Ceiling()
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public Function Ceiling() As PixelSize
+  overload: Beutl.Graphics.Size.Ceiling*
+- uid: Beutl.Graphics.Size.ToString
+  commentId: M:Beutl.Graphics.Size.ToString
+  id: ToString
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Size.ToString()
+  fullName: Beutl.Graphics.Size.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Graphics.Size.ToString*
+- uid: Beutl.Graphics.Size.Deconstruct(System.Single@,System.Single@)
+  commentId: M:Beutl.Graphics.Size.Deconstruct(System.Single@,System.Single@)
+  id: Deconstruct(System.Single@,System.Single@)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out float, out float)
+  nameWithType: Size.Deconstruct(out float, out float)
+  fullName: Beutl.Graphics.Size.Deconstruct(out float, out float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public void Deconstruct(out float width, out float height)
+    parameters:
+    - id: width
+      type: System.Single
+    - id: height
+      type: System.Single
+    content.vb: Public Sub Deconstruct(width As Single, height As Single)
+  overload: Beutl.Graphics.Size.Deconstruct*
+  nameWithType.vb: Size.Deconstruct(Single, Single)
+  fullName.vb: Beutl.Graphics.Size.Deconstruct(Single, Single)
+  name.vb: Deconstruct(Single, Single)
+- uid: Beutl.Graphics.Size.Parse(System.String,System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Size.Parse(System.String,System.IFormatProvider)
+  id: Parse(System.String,System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Parse(string, IFormatProvider?)
+  nameWithType: Size.Parse(string, IFormatProvider?)
+  fullName: Beutl.Graphics.Size.Parse(string, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size Parse(string s, IFormatProvider? provider)
+    parameters:
+    - id: s
+      type: System.String
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Function Parse(s As String, provider As IFormatProvider) As Size
+  overload: Beutl.Graphics.Size.Parse*
+  implements:
+  - System.IParsable{Beutl.Graphics.Size}.Parse(System.String,System.IFormatProvider)
+  nameWithType.vb: Size.Parse(String, IFormatProvider)
+  fullName.vb: Beutl.Graphics.Size.Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+- uid: Beutl.Graphics.Size.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+  commentId: M:Beutl.Graphics.Size.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+  id: TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string?, IFormatProvider?, out Size)
+  nameWithType: Size.TryParse(string?, IFormatProvider?, out Size)
+  fullName: Beutl.Graphics.Size.TryParse(string?, System.IFormatProvider?, out Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(string? s, IFormatProvider? provider, out Size result)
+    parameters:
+    - id: s
+      type: System.String
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(s As String, provider As IFormatProvider, result As Size) As Boolean
+  overload: Beutl.Graphics.Size.TryParse*
+  implements:
+  - System.IParsable{Beutl.Graphics.Size}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+  nameWithType.vb: Size.TryParse(String, IFormatProvider, Size)
+  fullName.vb: Beutl.Graphics.Size.TryParse(String, System.IFormatProvider, Beutl.Graphics.Size)
+  name.vb: TryParse(String, IFormatProvider, Size)
+- uid: Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: Size.Parse(ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.Size.Parse(System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size Parse(ReadOnlySpan<char> s, IFormatProvider? provider)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Function Parse(s As ReadOnlySpan(Of Char), provider As IFormatProvider) As Size
+  overload: Beutl.Graphics.Size.Parse*
+  implements:
+  - System.ISpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: Size.Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Size.Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+  commentId: M:Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+  id: TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider?, out Size)
+  nameWithType: Size.TryParse(ReadOnlySpan<char>, IFormatProvider?, out Size)
+  fullName: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider?, out Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(ReadOnlySpan<char> s, IFormatProvider? provider, out Size result)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(s As ReadOnlySpan(Of Char), provider As IFormatProvider, result As Size) As Boolean
+  overload: Beutl.Graphics.Size.TryParse*
+  implements:
+  - System.ISpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+  nameWithType.vb: Size.TryParse(ReadOnlySpan(Of Char), IFormatProvider, Size)
+  fullName.vb: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, Beutl.Graphics.Size)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, Size)
+- uid: Beutl.Graphics.Size.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Size.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: Size.TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.Size.TryFormat(System.Span<char>, out int, System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool TryFormat(Span<char> destination, out int charsWritten, ReadOnlySpan<char> format = default, IFormatProvider? provider = null)
+    parameters:
+    - id: destination
+      type: System.Span{System.Char}
+    - id: charsWritten
+      type: System.Int32
+    - id: format
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryFormat(destination As Span(Of Char), charsWritten As Integer, format As ReadOnlySpan(Of Char) = Nothing, provider As IFormatProvider = Nothing) As Boolean
+  overload: Beutl.Graphics.Size.TryFormat*
+  implements:
+  - System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: Size.TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Size.TryFormat(System.Span(Of Char), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.Size.ToString(System.String,System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Size.ToString(System.String,System.IFormatProvider)
+  id: ToString(System.String,System.IFormatProvider)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: ToString(string?, IFormatProvider?)
+  nameWithType: Size.ToString(string?, IFormatProvider?)
+  fullName: Beutl.Graphics.Size.ToString(string?, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public string ToString(string? format, IFormatProvider? formatProvider)
+    parameters:
+    - id: format
+      type: System.String
+    - id: formatProvider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+    content.vb: Public Function ToString(format As String, formatProvider As IFormatProvider) As String
+  overload: Beutl.Graphics.Size.ToString*
+  implements:
+  - System.IFormattable.ToString(System.String,System.IFormatProvider)
+  nameWithType.vb: Size.ToString(String, IFormatProvider)
+  fullName.vb: Beutl.Graphics.Size.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+- uid: Beutl.Graphics.Size.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Size.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: Size.TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.Size.TryFormat(System.Span<byte>, out int, System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool TryFormat(Span<byte> utf8Destination, out int bytesWritten, ReadOnlySpan<char> format = default, IFormatProvider? provider = null)
+    parameters:
+    - id: utf8Destination
+      type: System.Span{System.Byte}
+    - id: bytesWritten
+      type: System.Int32
+    - id: format
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryFormat(utf8Destination As Span(Of Byte), bytesWritten As Integer, format As ReadOnlySpan(Of Char) = Nothing, provider As IFormatProvider = Nothing) As Boolean
+  overload: Beutl.Graphics.Size.TryFormat*
+  implements:
+  - System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: Size.TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Size.TryFormat(System.Span(Of Byte), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Byte})
+  commentId: M:Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Byte})
+  id: Parse(System.ReadOnlySpan{System.Byte})
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<byte>)
+  nameWithType: Size.Parse(ReadOnlySpan<byte>)
+  fullName: Beutl.Graphics.Size.Parse(System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Size Parse(ReadOnlySpan<byte> utf8Text)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public Shared Function Parse(utf8Text As ReadOnlySpan(Of Byte)) As Size
+  overload: Beutl.Graphics.Size.Parse*
+  nameWithType.vb: Size.Parse(ReadOnlySpan(Of Byte))
+  fullName.vb: Beutl.Graphics.Size.Parse(System.ReadOnlySpan(Of Byte))
+  name.vb: Parse(ReadOnlySpan(Of Byte))
+- uid: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Size@)
+  commentId: M:Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Size@)
+  id: TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Size@)
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<byte>, out Size)
+  nameWithType: Size.TryParse(ReadOnlySpan<byte>, out Size)
+  fullName: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan<byte>, out Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<byte> utf8Text, out Size result)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: result
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(utf8Text As ReadOnlySpan(Of Byte), result As Size) As Boolean
+  overload: Beutl.Graphics.Size.TryParse*
+  nameWithType.vb: Size.TryParse(ReadOnlySpan(Of Byte), Size)
+  fullName.vb: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan(Of Byte), Beutl.Graphics.Size)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), Size)
+- uid: Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Size.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  id: Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider?)
+  nameWithType: Size.Parse(ReadOnlySpan<byte>, IFormatProvider?)
+  fullName: Beutl.Graphics.Size.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Size Parse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Shared Function Parse(utf8Text As ReadOnlySpan(Of Byte), provider As IFormatProvider) As Size
+  overload: Beutl.Graphics.Size.Parse*
+  implements:
+  - System.IUtf8SpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  nameWithType.vb: Size.Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Size.Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+- uid: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+  commentId: M:Beutl.Graphics.Size.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+  id: TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+  isEii: true
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider?, out Size)
+  nameWithType: Size.TryParse(ReadOnlySpan<byte>, IFormatProvider?, out Size)
+  fullName: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider?, out Beutl.Graphics.Size)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider, out Size result)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.Size
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(utf8Text As ReadOnlySpan(Of Byte), provider As IFormatProvider, result As Size) As Boolean
+  overload: Beutl.Graphics.Size.TryParse*
+  implements:
+  - System.IUtf8SpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+  nameWithType.vb: Size.TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Size)
+  fullName.vb: Beutl.Graphics.Size.TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, Beutl.Graphics.Size)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Size)
+- uid: Beutl.Graphics.Size.AspectRatio
+  commentId: P:Beutl.Graphics.Size.AspectRatio
+  id: AspectRatio
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: AspectRatio
+  nameWithType: Size.AspectRatio
+  fullName: Beutl.Graphics.Size.AspectRatio
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float AspectRatio { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property AspectRatio As Single
+  overload: Beutl.Graphics.Size.AspectRatio*
+- uid: Beutl.Graphics.Size.Width
+  commentId: P:Beutl.Graphics.Size.Width
+  id: Width
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Size.Width
+  fullName: Beutl.Graphics.Size.Width
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Width { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Width As Single
+  overload: Beutl.Graphics.Size.Width*
+- uid: Beutl.Graphics.Size.Height
+  commentId: P:Beutl.Graphics.Size.Height
+  id: Height
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Size.Height
+  fullName: Beutl.Graphics.Size.Height
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Height { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Height As Single
+  overload: Beutl.Graphics.Size.Height*
+- uid: Beutl.Graphics.Size.IsDefault
+  commentId: P:Beutl.Graphics.Size.IsDefault
+  id: IsDefault
+  parent: Beutl.Graphics.Size
+  langs:
+  - csharp
+  - vb
+  name: IsDefault
+  nameWithType: Size.IsDefault
+  fullName: Beutl.Graphics.Size.IsDefault
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Size.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool IsDefault { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDefault As Boolean
+  overload: Beutl.Graphics.Size.IsDefault*
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.IEquatable{Beutl.Graphics.Size}
+  commentId: T:System.IEquatable{Beutl.Graphics.Size}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Size>
+  nameWithType: IEquatable<Size>
+  fullName: System.IEquatable<Beutl.Graphics.Size>
+  nameWithType.vb: IEquatable(Of Size)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.Size)
+  name.vb: IEquatable(Of Size)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.Size}
+  commentId: T:System.ISpanParsable{Beutl.Graphics.Size}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<Size>
+  nameWithType: ISpanParsable<Size>
+  fullName: System.ISpanParsable<Beutl.Graphics.Size>
+  nameWithType.vb: ISpanParsable(Of Size)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.Size)
+  name.vb: ISpanParsable(Of Size)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.IParsable{Beutl.Graphics.Size}
+  commentId: T:System.IParsable{Beutl.Graphics.Size}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<Size>
+  nameWithType: IParsable<Size>
+  fullName: System.IParsable<Beutl.Graphics.Size>
+  nameWithType.vb: IParsable(Of Size)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.Size)
+  name.vb: IParsable(Of Size)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.ISpanFormattable
+  commentId: T:System.ISpanFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanformattable
+  name: ISpanFormattable
+  nameWithType: ISpanFormattable
+  fullName: System.ISpanFormattable
+- uid: System.IFormattable
+  commentId: T:System.IFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  name: IFormattable
+  nameWithType: IFormattable
+  fullName: System.IFormattable
+- uid: System.IUtf8SpanFormattable
+  commentId: T:System.IUtf8SpanFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable
+  name: IUtf8SpanFormattable
+  nameWithType: IUtf8SpanFormattable
+  fullName: System.IUtf8SpanFormattable
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.Size}
+  commentId: T:System.IUtf8SpanParsable{Beutl.Graphics.Size}
+  parent: System
+  definition: System.IUtf8SpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  name: IUtf8SpanParsable<Size>
+  nameWithType: IUtf8SpanParsable<Size>
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.Size>
+  nameWithType.vb: IUtf8SpanParsable(Of Size)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.Size)
+  name.vb: IUtf8SpanParsable(Of Size)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}
+  commentId: T:System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}
+  parent: System.Numerics
+  definition: System.Numerics.IEqualityOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<Size, Size, bool>
+  nameWithType: IEqualityOperators<Size, Size, bool>
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, bool>
+  nameWithType.vb: IEqualityOperators(Of Size, Size, Boolean)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Boolean)
+  name.vb: IEqualityOperators(Of Size, Size, Boolean)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.IMultiplyOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<Size, Vector, Size>
+  nameWithType: IMultiplyOperators<Size, Vector, Size>
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size>
+  nameWithType.vb: IMultiplyOperators(Of Size, Vector, Size)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size)
+  name.vb: IMultiplyOperators(Of Size, Vector, Size)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.IDivisionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  name: IDivisionOperators<Size, Vector, Size>
+  nameWithType: IDivisionOperators<Size, Vector, Size>
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size>
+  nameWithType.vb: IDivisionOperators(Of Size, Vector, Size)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size)
+  name.vb: IDivisionOperators(Of Size, Vector, Size)
+  spec.csharp:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}
+  commentId: T:System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}
+  parent: System.Numerics
+  definition: System.Numerics.IDivisionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  name: IDivisionOperators<Size, Size, Vector>
+  nameWithType: IDivisionOperators<Size, Size, Vector>
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Vector>
+  nameWithType.vb: IDivisionOperators(Of Size, Size, Vector)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  name.vb: IDivisionOperators(Of Size, Size, Vector)
+  spec.csharp:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.IMultiplyOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<Size, float, Size>
+  nameWithType: IMultiplyOperators<Size, float, Size>
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Size, float, Beutl.Graphics.Size>
+  nameWithType.vb: IMultiplyOperators(Of Size, Single, Size)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Size, Single, Beutl.Graphics.Size)
+  name.vb: IMultiplyOperators(Of Size, Single, Size)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.IDivisionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  name: IDivisionOperators<Size, float, Size>
+  nameWithType: IDivisionOperators<Size, float, Size>
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Size, float, Beutl.Graphics.Size>
+  nameWithType.vb: IDivisionOperators(Of Size, Single, Size)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Size, Single, Beutl.Graphics.Size)
+  name.vb: IDivisionOperators(Of Size, Single, Size)
+  spec.csharp:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.IAdditionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  name: IAdditionOperators<Size, Size, Size>
+  nameWithType: IAdditionOperators<Size, Size, Size>
+  fullName: System.Numerics.IAdditionOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size>
+  nameWithType.vb: IAdditionOperators(Of Size, Size, Size)
+  fullName.vb: System.Numerics.IAdditionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: IAdditionOperators(Of Size, Size, Size)
+  spec.csharp:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.ISubtractionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  name: ISubtractionOperators<Size, Size, Size>
+  nameWithType: ISubtractionOperators<Size, Size, Size>
+  fullName: System.Numerics.ISubtractionOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size>
+  nameWithType.vb: ISubtractionOperators(Of Size, Size, Size)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: ISubtractionOperators(Of Size, Size, Size)
+  spec.csharp:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.IAdditionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  name: IAdditionOperators<Size, Thickness, Size>
+  nameWithType: IAdditionOperators<Size, Thickness, Size>
+  fullName: System.Numerics.IAdditionOperators<Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size>
+  nameWithType.vb: IAdditionOperators(Of Size, Thickness, Size)
+  fullName.vb: System.Numerics.IAdditionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size)
+  name.vb: IAdditionOperators(Of Size, Thickness, Size)
+  spec.csharp:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  commentId: T:System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  parent: System.Numerics
+  definition: System.Numerics.ISubtractionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  name: ISubtractionOperators<Size, Thickness, Size>
+  nameWithType: ISubtractionOperators<Size, Thickness, Size>
+  fullName: System.Numerics.ISubtractionOperators<Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size>
+  nameWithType.vb: ISubtractionOperators(Of Size, Thickness, Size)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size)
+  name.vb: ISubtractionOperators(Of Size, Thickness, Size)
+  spec.csharp:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: Beutl.ITupleConvertible{Beutl.Graphics.Size,System.Single}
+  commentId: T:Beutl.ITupleConvertible{Beutl.Graphics.Size,System.Single}
+  parent: Beutl
+  definition: Beutl.ITupleConvertible`2
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  name: ITupleConvertible<Size, float>
+  nameWithType: ITupleConvertible<Size, float>
+  fullName: Beutl.ITupleConvertible<Beutl.Graphics.Size, float>
+  nameWithType.vb: ITupleConvertible(Of Size, Single)
+  fullName.vb: Beutl.ITupleConvertible(Of Beutl.Graphics.Size, Single)
+  name.vb: ITupleConvertible(Of Size, Single)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: <
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IUtf8SpanParsable`1
+  commentId: T:System.IUtf8SpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  name: IUtf8SpanParsable<TSelf>
+  nameWithType: IUtf8SpanParsable<TSelf>
+  fullName: System.IUtf8SpanParsable<TSelf>
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf)
+  name.vb: IUtf8SpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3
+  commentId: T:System.Numerics.IEqualityOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult)
+  name.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Numerics.IMultiplyOperators`3
+  commentId: T:System.Numerics.IMultiplyOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<TSelf, TOther, TResult>
+  nameWithType: IMultiplyOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IMultiplyOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IMultiplyOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of TSelf, TOther, TResult)
+  name.vb: IMultiplyOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics.IDivisionOperators`3
+  commentId: T:System.Numerics.IDivisionOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  name: IDivisionOperators<TSelf, TOther, TResult>
+  nameWithType: IDivisionOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IDivisionOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IDivisionOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IDivisionOperators(Of TSelf, TOther, TResult)
+  name.vb: IDivisionOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics.IAdditionOperators`3
+  commentId: T:System.Numerics.IAdditionOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  name: IAdditionOperators<TSelf, TOther, TResult>
+  nameWithType: IAdditionOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IAdditionOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IAdditionOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IAdditionOperators(Of TSelf, TOther, TResult)
+  name.vb: IAdditionOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IAdditionOperators`3
+    name: IAdditionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics.ISubtractionOperators`3
+  commentId: T:System.Numerics.ISubtractionOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  name: ISubtractionOperators<TSelf, TOther, TResult>
+  nameWithType: ISubtractionOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.ISubtractionOperators<TSelf, TOther, TResult>
+  nameWithType.vb: ISubtractionOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of TSelf, TOther, TResult)
+  name.vb: ISubtractionOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.ISubtractionOperators`3
+    name: ISubtractionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Graphics.Size
+  commentId: T:Beutl.Graphics.Size
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Size.html
+  name: Size
+  nameWithType: Size
+  fullName: Beutl.Graphics.Size
+- uid: Beutl.Graphics.Size.#ctor*
+  commentId: Overload:Beutl.Graphics.Size.#ctor
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size__ctor_System_Single_System_Single_
+  name: Size
+  nameWithType: Size.Size
+  fullName: Beutl.Graphics.Size.Size
+  nameWithType.vb: Size.New
+  fullName.vb: Beutl.Graphics.Size.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.Size.op_Equality*
+  commentId: Overload:Beutl.Graphics.Size.op_Equality
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Equality_Beutl_Graphics_Size_Beutl_Graphics_Size_
+  name: operator ==
+  nameWithType: Size.operator ==
+  fullName: Beutl.Graphics.Size.operator ==
+  nameWithType.vb: Size.=
+  fullName.vb: Beutl.Graphics.Size.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Size.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Equality_Beutl_Graphics_Size_Beutl_Graphics_Size_
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  parent: System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(Size, Size)
+  nameWithType: IEqualityOperators<Size, Size, bool>.operator ==(Size, Size)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, bool>.operator ==(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  nameWithType.vb: IEqualityOperators(Of Size, Size, Boolean).=(Size, Size)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Boolean).=(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: =(Size, Size)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Equality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  name.vb: =(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Size.op_Inequality*
+  commentId: Overload:Beutl.Graphics.Size.op_Inequality
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Inequality_Beutl_Graphics_Size_Beutl_Graphics_Size_
+  name: operator !=
+  nameWithType: Size.operator !=
+  fullName: Beutl.Graphics.Size.operator !=
+  nameWithType.vb: Size.<>
+  fullName.vb: Beutl.Graphics.Size.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Size.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Inequality_Beutl_Graphics_Size_Beutl_Graphics_Size_
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  parent: System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(Size, Size)
+  nameWithType: IEqualityOperators<Size, Size, bool>.operator !=(Size, Size)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, bool>.operator !=(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  nameWithType.vb: IEqualityOperators(Of Size, Size, Boolean).<>(Size, Size)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Boolean).<>(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: <>(Size, Size)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,System.Boolean}.op_Inequality(Beutl.Graphics.Size,Beutl.Graphics.Size)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  name.vb: <>(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Size.op_Multiply*
+  commentId: Overload:Beutl.Graphics.Size.op_Multiply
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Multiply_Beutl_Graphics_Size_Beutl_Graphics_Vector_
+  name: operator *
+  nameWithType: Size.operator *
+  fullName: Beutl.Graphics.Size.operator *
+  nameWithType.vb: Size.*
+  fullName.vb: Beutl.Graphics.Size.*
+  name.vb: '*'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Size.op_Multiply*
+    name: '*'
+    isExternal: true
+    href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Multiply_Beutl_Graphics_Size_Beutl_Graphics_Vector_
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  commentId: M:System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  parent: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  definition: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(Size, Vector)
+  nameWithType: IMultiplyOperators<Size, Vector, Size>.operator *(Size, Vector)
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size>.operator *(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  nameWithType.vb: IMultiplyOperators(Of Size, Vector, Size).*(Size, Vector)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size).*(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  name.vb: '*(Size, Vector)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+- uid: Beutl.Graphics.Vector
+  commentId: T:Beutl.Graphics.Vector
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: Beutl.Graphics.Vector
+- uid: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  commentId: M:System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(TSelf, TOther)
+  nameWithType: IMultiplyOperators<TSelf, TOther, TResult>.operator *(TSelf, TOther)
+  fullName: System.Numerics.IMultiplyOperators<TSelf, TOther, TResult>.operator *(TSelf, TOther)
+  nameWithType.vb: IMultiplyOperators(Of TSelf, TOther, TResult).*(TSelf, TOther)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of TSelf, TOther, TResult).*(TSelf, TOther)
+  name.vb: '*(TSelf, TOther)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Size.op_Division*
+  commentId: Overload:Beutl.Graphics.Size.op_Division
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Division_Beutl_Graphics_Size_Beutl_Graphics_Vector_
+  name: operator /
+  nameWithType: Size.operator /
+  fullName: Beutl.Graphics.Size.operator /
+  nameWithType.vb: Size./
+  fullName.vb: Beutl.Graphics.Size./
+  name.vb: /
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Size.op_Division*
+    name: /
+    isExternal: true
+    href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Division_Beutl_Graphics_Size_Beutl_Graphics_Vector_
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  commentId: M:System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+  parent: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}
+  definition: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  name: operator /(Size, Vector)
+  nameWithType: IDivisionOperators<Size, Vector, Size>.operator /(Size, Vector)
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size>.operator /(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  nameWithType.vb: IDivisionOperators(Of Size, Vector, Size)./(Size, Vector)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Vector, Beutl.Graphics.Size)./(Beutl.Graphics.Size, Beutl.Graphics.Vector)
+  name.vb: /(Size, Vector)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Vector,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Vector)
+    name: /
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+  spec.vb:
+  - name: /
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+- uid: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  commentId: M:System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  name: operator /(TSelf, TOther)
+  nameWithType: IDivisionOperators<TSelf, TOther, TResult>.operator /(TSelf, TOther)
+  fullName: System.Numerics.IDivisionOperators<TSelf, TOther, TResult>.operator /(TSelf, TOther)
+  nameWithType.vb: IDivisionOperators(Of TSelf, TOther, TResult)./(TSelf, TOther)
+  fullName.vb: System.Numerics.IDivisionOperators(Of TSelf, TOther, TResult)./(TSelf, TOther)
+  name.vb: /(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+    name: /
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: /
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  parent: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}
+  definition: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  name: operator /(Size, Size)
+  nameWithType: IDivisionOperators<Size, Size, Vector>.operator /(Size, Size)
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Vector>.operator /(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  nameWithType.vb: IDivisionOperators(Of Size, Size, Vector)./(Size, Size)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Vector)./(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: /(Size, Size)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Vector}.op_Division(Beutl.Graphics.Size,Beutl.Graphics.Size)
+    name: /
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - name: /
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,System.Single)
+  commentId: M:System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,System.Single)
+  parent: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  definition: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(Size, float)
+  nameWithType: IMultiplyOperators<Size, float, Size>.operator *(Size, float)
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Size, float, Beutl.Graphics.Size>.operator *(Beutl.Graphics.Size, float)
+  nameWithType.vb: IMultiplyOperators(Of Size, Single, Size).*(Size, Single)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Size, Single, Beutl.Graphics.Size).*(Beutl.Graphics.Size, Single)
+  name.vb: '*(Size, Single)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Multiply(Beutl.Graphics.Size,System.Single)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,System.Single)
+  commentId: M:System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,System.Single)
+  parent: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}
+  definition: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  name: operator /(Size, float)
+  nameWithType: IDivisionOperators<Size, float, Size>.operator /(Size, float)
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Size, float, Beutl.Graphics.Size>.operator /(Beutl.Graphics.Size, float)
+  nameWithType.vb: IDivisionOperators(Of Size, Single, Size)./(Size, Single)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Size, Single, Beutl.Graphics.Size)./(Beutl.Graphics.Size, Single)
+  name.vb: /(Size, Single)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Size,System.Single,Beutl.Graphics.Size}.op_Division(Beutl.Graphics.Size,System.Single)
+    name: /
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - name: /
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: Beutl.Graphics.Size.op_Addition*
+  commentId: Overload:Beutl.Graphics.Size.op_Addition
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Addition_Beutl_Graphics_Size_Beutl_Graphics_Size_
+  name: operator +
+  nameWithType: Size.operator +
+  fullName: Beutl.Graphics.Size.operator +
+  nameWithType.vb: Size.+
+  fullName.vb: Beutl.Graphics.Size.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Size.op_Addition*
+    name: +
+    isExternal: true
+    href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Addition_Beutl_Graphics_Size_Beutl_Graphics_Size_
+- uid: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  parent: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  definition: System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  name: operator +(Size, Size)
+  nameWithType: IAdditionOperators<Size, Size, Size>.operator +(Size, Size)
+  fullName: System.Numerics.IAdditionOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size>.operator +(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  nameWithType.vb: IAdditionOperators(Of Size, Size, Size).+(Size, Size)
+  fullName.vb: System.Numerics.IAdditionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size).+(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: +(Size, Size)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Size)
+    name: +
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - name: +
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+  commentId: M:System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  name: operator +(TSelf, TOther)
+  nameWithType: IAdditionOperators<TSelf, TOther, TResult>.operator +(TSelf, TOther)
+  fullName: System.Numerics.IAdditionOperators<TSelf, TOther, TResult>.operator +(TSelf, TOther)
+  nameWithType.vb: IAdditionOperators(Of TSelf, TOther, TResult).+(TSelf, TOther)
+  fullName.vb: System.Numerics.IAdditionOperators(Of TSelf, TOther, TResult).+(TSelf, TOther)
+  name.vb: +(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+    name: +
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: +
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Size.op_Subtraction*
+  commentId: Overload:Beutl.Graphics.Size.op_Subtraction
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Subtraction_Beutl_Graphics_Size_Beutl_Graphics_Size_
+  name: operator -
+  nameWithType: Size.operator -
+  fullName: Beutl.Graphics.Size.operator -
+  nameWithType.vb: Size.-
+  fullName.vb: Beutl.Graphics.Size.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Size.op_Subtraction*
+    name: '-'
+    isExternal: true
+    href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_op_Subtraction_Beutl_Graphics_Size_Beutl_Graphics_Size_
+- uid: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  commentId: M:System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+  parent: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}
+  definition: System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  name: operator -(Size, Size)
+  nameWithType: ISubtractionOperators<Size, Size, Size>.operator -(Size, Size)
+  fullName: System.Numerics.ISubtractionOperators<Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size>.operator -(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  nameWithType.vb: ISubtractionOperators(Of Size, Size, Size).-(Size, Size)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Size, Beutl.Graphics.Size).-(Beutl.Graphics.Size, Beutl.Graphics.Size)
+  name.vb: -(Size, Size)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Size,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Size)
+    name: '-'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - name: '-'
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+  commentId: M:System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  name: operator -(TSelf, TOther)
+  nameWithType: ISubtractionOperators<TSelf, TOther, TResult>.operator -(TSelf, TOther)
+  fullName: System.Numerics.ISubtractionOperators<TSelf, TOther, TResult>.operator -(TSelf, TOther)
+  nameWithType.vb: ISubtractionOperators(Of TSelf, TOther, TResult).-(TSelf, TOther)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of TSelf, TOther, TResult).-(TSelf, TOther)
+  name.vb: -(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+    name: '-'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: '-'
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  commentId: M:System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  parent: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  definition: System.Numerics.IAdditionOperators`3.op_Addition(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  name: operator +(Size, Thickness)
+  nameWithType: IAdditionOperators<Size, Thickness, Size>.operator +(Size, Thickness)
+  fullName: System.Numerics.IAdditionOperators<Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size>.operator +(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  nameWithType.vb: IAdditionOperators(Of Size, Thickness, Size).+(Size, Thickness)
+  fullName.vb: System.Numerics.IAdditionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size).+(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  name.vb: +(Size, Thickness)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IAdditionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Addition(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+    name: +
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3.op_addition
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: )
+  spec.vb:
+  - name: +
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: )
+- uid: Beutl.Graphics.Thickness
+  commentId: T:Beutl.Graphics.Thickness
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Thickness.html
+  name: Thickness
+  nameWithType: Thickness
+  fullName: Beutl.Graphics.Thickness
+- uid: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  commentId: M:System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+  parent: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}
+  definition: System.Numerics.ISubtractionOperators`3.op_Subtraction(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  name: operator -(Size, Thickness)
+  nameWithType: ISubtractionOperators<Size, Thickness, Size>.operator -(Size, Thickness)
+  fullName: System.Numerics.ISubtractionOperators<Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size>.operator -(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  nameWithType.vb: ISubtractionOperators(Of Size, Thickness, Size).-(Size, Thickness)
+  fullName.vb: System.Numerics.ISubtractionOperators(Of Beutl.Graphics.Size, Beutl.Graphics.Thickness, Beutl.Graphics.Size).-(Beutl.Graphics.Size, Beutl.Graphics.Thickness)
+  name.vb: -(Size, Thickness)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.ISubtractionOperators{Beutl.Graphics.Size,Beutl.Graphics.Thickness,Beutl.Graphics.Size}.op_Subtraction(Beutl.Graphics.Size,Beutl.Graphics.Thickness)
+    name: '-'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3.op_subtraction
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: )
+  spec.vb:
+  - name: '-'
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Thickness
+    name: Thickness
+    isExternal: true
+    href: Beutl.Graphics.Thickness.html
+  - name: )
+- uid: Beutl.Graphics.Size.TryParse*
+  commentId: Overload:Beutl.Graphics.Size.TryParse
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_TryParse_System_String_Beutl_Graphics_Size__
+  name: TryParse
+  nameWithType: Size.TryParse
+  fullName: Beutl.Graphics.Size.TryParse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.Size.Parse*
+  commentId: Overload:Beutl.Graphics.Size.Parse
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Parse_System_String_
+  name: Parse
+  nameWithType: Size.Parse
+  fullName: Beutl.Graphics.Size.Parse
+- uid: Beutl.Graphics.Size.Constrain*
+  commentId: Overload:Beutl.Graphics.Size.Constrain
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Constrain_Beutl_Graphics_Size_
+  name: Constrain
+  nameWithType: Size.Constrain
+  fullName: Beutl.Graphics.Size.Constrain
+- uid: Beutl.Graphics.Size.Deflate*
+  commentId: Overload:Beutl.Graphics.Size.Deflate
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Deflate_Beutl_Graphics_Thickness_
+  name: Deflate
+  nameWithType: Size.Deflate
+  fullName: Beutl.Graphics.Size.Deflate
+- uid: Beutl.Graphics.Size.Equals*
+  commentId: Overload:Beutl.Graphics.Size.Equals
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Equals_Beutl_Graphics_Size_
+  name: Equals
+  nameWithType: Size.Equals
+  fullName: Beutl.Graphics.Size.Equals
+- uid: System.IEquatable{Beutl.Graphics.Size}.Equals(Beutl.Graphics.Size)
+  commentId: M:System.IEquatable{Beutl.Graphics.Size}.Equals(Beutl.Graphics.Size)
+  parent: System.IEquatable{Beutl.Graphics.Size}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Size)
+  nameWithType: IEquatable<Size>.Equals(Size)
+  fullName: System.IEquatable<Beutl.Graphics.Size>.Equals(Beutl.Graphics.Size)
+  nameWithType.vb: IEquatable(Of Size).Equals(Size)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.Size).Equals(Beutl.Graphics.Size)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Graphics.Size}.Equals(Beutl.Graphics.Size)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Graphics.Size}.Equals(Beutl.Graphics.Size)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.Size.NearlyEquals*
+  commentId: Overload:Beutl.Graphics.Size.NearlyEquals
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_NearlyEquals_Beutl_Graphics_Size_
+  name: NearlyEquals
+  nameWithType: Size.NearlyEquals
+  fullName: Beutl.Graphics.Size.NearlyEquals
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.Size.GetHashCode*
+  commentId: Overload:Beutl.Graphics.Size.GetHashCode
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_GetHashCode
+  name: GetHashCode
+  nameWithType: Size.GetHashCode
+  fullName: Beutl.Graphics.Size.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Graphics.Size.Inflate*
+  commentId: Overload:Beutl.Graphics.Size.Inflate
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Inflate_Beutl_Graphics_Thickness_
+  name: Inflate
+  nameWithType: Size.Inflate
+  fullName: Beutl.Graphics.Size.Inflate
+- uid: Beutl.Graphics.Size.WithWidth*
+  commentId: Overload:Beutl.Graphics.Size.WithWidth
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_WithWidth_System_Single_
+  name: WithWidth
+  nameWithType: Size.WithWidth
+  fullName: Beutl.Graphics.Size.WithWidth
+- uid: Beutl.Graphics.Size.WithHeight*
+  commentId: Overload:Beutl.Graphics.Size.WithHeight
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_WithHeight_System_Single_
+  name: WithHeight
+  nameWithType: Size.WithHeight
+  fullName: Beutl.Graphics.Size.WithHeight
+- uid: Beutl.Graphics.Size.Ceiling*
+  commentId: Overload:Beutl.Graphics.Size.Ceiling
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Ceiling
+  name: Ceiling
+  nameWithType: Size.Ceiling
+  fullName: Beutl.Graphics.Size.Ceiling
+- uid: Beutl.Media.PixelSize
+  commentId: T:Beutl.Media.PixelSize
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelSize.html
+  name: PixelSize
+  nameWithType: PixelSize
+  fullName: Beutl.Media.PixelSize
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.Size.ToString*
+  commentId: Overload:Beutl.Graphics.Size.ToString
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_ToString
+  name: ToString
+  nameWithType: Size.ToString
+  fullName: Beutl.Graphics.Size.ToString
+- uid: Beutl.Graphics.Size.Deconstruct*
+  commentId: Overload:Beutl.Graphics.Size.Deconstruct
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Deconstruct_System_Single__System_Single__
+  name: Deconstruct
+  nameWithType: Size.Deconstruct
+  fullName: Beutl.Graphics.Size.Deconstruct
+- uid: System.IParsable{Beutl.Graphics.Size}.Parse(System.String,System.IFormatProvider)
+  commentId: M:System.IParsable{Beutl.Graphics.Size}.Parse(System.String,System.IFormatProvider)
+  parent: System.IParsable{Beutl.Graphics.Size}
+  definition: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  name: Parse(string, IFormatProvider)
+  nameWithType: IParsable<Size>.Parse(string, IFormatProvider)
+  fullName: System.IParsable<Beutl.Graphics.Size>.Parse(string, System.IFormatProvider)
+  nameWithType.vb: IParsable(Of Size).Parse(String, IFormatProvider)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.Size).Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IParsable{Beutl.Graphics.Size}.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IParsable{Beutl.Graphics.Size}.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  commentId: M:System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  name: Parse(string, IFormatProvider)
+  nameWithType: IParsable<TSelf>.Parse(string, IFormatProvider)
+  fullName: System.IParsable<TSelf>.Parse(string, System.IFormatProvider)
+  nameWithType.vb: IParsable(Of TSelf).Parse(String, IFormatProvider)
+  fullName.vb: System.IParsable(Of TSelf).Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IParsable{Beutl.Graphics.Size}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+  commentId: M:System.IParsable{Beutl.Graphics.Size}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+  parent: System.IParsable{Beutl.Graphics.Size}
+  definition: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  name: TryParse(string, IFormatProvider, out Size)
+  nameWithType: IParsable<Size>.TryParse(string, IFormatProvider, out Size)
+  fullName: System.IParsable<Beutl.Graphics.Size>.TryParse(string, System.IFormatProvider, out Beutl.Graphics.Size)
+  nameWithType.vb: IParsable(Of Size).TryParse(String, IFormatProvider, Size)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.Size).TryParse(String, System.IFormatProvider, Beutl.Graphics.Size)
+  name.vb: TryParse(String, IFormatProvider, Size)
+  spec.csharp:
+  - uid: System.IParsable{Beutl.Graphics.Size}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - uid: System.IParsable{Beutl.Graphics.Size}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Size@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  commentId: M:System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  name: TryParse(string, IFormatProvider, out TSelf)
+  nameWithType: IParsable<TSelf>.TryParse(string, IFormatProvider, out TSelf)
+  fullName: System.IParsable<TSelf>.TryParse(string, System.IFormatProvider, out TSelf)
+  nameWithType.vb: IParsable(Of TSelf).TryParse(String, IFormatProvider, TSelf)
+  fullName.vb: System.IParsable(Of TSelf).TryParse(String, System.IFormatProvider, TSelf)
+  name.vb: TryParse(String, IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.ISpanParsable{Beutl.Graphics.Size}
+  definition: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  name: Parse(ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanParsable<Size>.Parse(ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanParsable<Beutl.Graphics.Size>.Parse(System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanParsable(Of Size).Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.Size).Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  name: Parse(ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanParsable<TSelf>.Parse(ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanParsable<TSelf>.Parse(System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanParsable(Of TSelf).Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanParsable(Of TSelf).Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+  commentId: M:System.ISpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+  parent: System.ISpanParsable{Beutl.Graphics.Size}
+  definition: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider, out Size)
+  nameWithType: ISpanParsable<Size>.TryParse(ReadOnlySpan<char>, IFormatProvider, out Size)
+  fullName: System.ISpanParsable<Beutl.Graphics.Size>.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider, out Beutl.Graphics.Size)
+  nameWithType.vb: ISpanParsable(Of Size).TryParse(ReadOnlySpan(Of Char), IFormatProvider, Size)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.Size).TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, Beutl.Graphics.Size)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, Size)
+  spec.csharp:
+  - uid: System.ISpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Size@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  commentId: M:System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider, out TSelf)
+  nameWithType: ISpanParsable<TSelf>.TryParse(ReadOnlySpan<char>, IFormatProvider, out TSelf)
+  fullName: System.ISpanParsable<TSelf>.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider, out TSelf)
+  nameWithType.vb: ISpanParsable(Of TSelf).TryParse(ReadOnlySpan(Of Char), IFormatProvider, TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf).TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, TSelf)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: Beutl.Graphics.Size.TryFormat*
+  commentId: Overload:Beutl.Graphics.Size.TryFormat
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__System_IFormatProvider_
+  name: TryFormat
+  nameWithType: Size.TryFormat
+  fullName: Beutl.Graphics.Size.TryFormat
+- uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.ISpanFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  name: TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanFormattable.TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanFormattable.TryFormat(System.Span<char>, out int, System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanFormattable.TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanFormattable.TryFormat(System.Span(Of Char), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.Span{System.Char}
+  commentId: T:System.Span{System.Char}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<char>
+  nameWithType: Span<char>
+  fullName: System.Span<char>
+  nameWithType.vb: Span(Of Char)
+  fullName.vb: System.Span(Of Char)
+  name.vb: Span(Of Char)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+  commentId: M:System.IFormattable.ToString(System.String,System.IFormatProvider)
+  parent: System.IFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  name: ToString(string, IFormatProvider)
+  nameWithType: IFormattable.ToString(string, IFormatProvider)
+  fullName: System.IFormattable.ToString(string, System.IFormatProvider)
+  nameWithType.vb: IFormattable.ToString(String, IFormatProvider)
+  fullName.vb: System.IFormattable.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.IUtf8SpanFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  name: TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: IUtf8SpanFormattable.TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.IUtf8SpanFormattable.TryFormat(System.Span<byte>, out int, System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanFormattable.TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.IUtf8SpanFormattable.TryFormat(System.Span(Of Byte), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  parent: System.IUtf8SpanParsable{Beutl.Graphics.Size}
+  definition: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider)
+  nameWithType: IUtf8SpanParsable<Size>.Parse(ReadOnlySpan<byte>, IFormatProvider)
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.Size>.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanParsable(Of Size).Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.Size).Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Size}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider)
+  nameWithType: IUtf8SpanParsable<TSelf>.Parse(ReadOnlySpan<byte>, IFormatProvider)
+  fullName: System.IUtf8SpanParsable<TSelf>.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf).Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf).Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+  commentId: M:System.IUtf8SpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+  parent: System.IUtf8SpanParsable{Beutl.Graphics.Size}
+  definition: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider, out Size)
+  nameWithType: IUtf8SpanParsable<Size>.TryParse(ReadOnlySpan<byte>, IFormatProvider, out Size)
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.Size>.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider, out Beutl.Graphics.Size)
+  nameWithType.vb: IUtf8SpanParsable(Of Size).TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Size)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.Size).TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, Beutl.Graphics.Size)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Size)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Size}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Size@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Size
+    name: Size
+    isExternal: true
+    href: Beutl.Graphics.Size.html
+  - name: )
+- uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  commentId: M:System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider, out TSelf)
+  nameWithType: IUtf8SpanParsable<TSelf>.TryParse(ReadOnlySpan<byte>, IFormatProvider, out TSelf)
+  fullName: System.IUtf8SpanParsable<TSelf>.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider, out TSelf)
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf).TryParse(ReadOnlySpan(Of Byte), IFormatProvider, TSelf)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf).TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, TSelf)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: Beutl.Graphics.Size.AspectRatio*
+  commentId: Overload:Beutl.Graphics.Size.AspectRatio
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_AspectRatio
+  name: AspectRatio
+  nameWithType: Size.AspectRatio
+  fullName: Beutl.Graphics.Size.AspectRatio
+- uid: Beutl.Graphics.Size.Width*
+  commentId: Overload:Beutl.Graphics.Size.Width
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Width
+  name: Width
+  nameWithType: Size.Width
+  fullName: Beutl.Graphics.Size.Width
+- uid: Beutl.Graphics.Size.Height*
+  commentId: Overload:Beutl.Graphics.Size.Height
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_Height
+  name: Height
+  nameWithType: Size.Height
+  fullName: Beutl.Graphics.Size.Height
+- uid: Beutl.Graphics.Size.IsDefault*
+  commentId: Overload:Beutl.Graphics.Size.IsDefault
+  isExternal: true
+  href: Beutl.Graphics.Size.html#Beutl_Graphics_Size_IsDefault
+  name: IsDefault
+  nameWithType: Size.IsDefault
+  fullName: Beutl.Graphics.Size.IsDefault

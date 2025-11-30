@@ -1,0 +1,1163 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Collections.PooledArray`1
+  commentId: T:Beutl.Collections.PooledArray`1
+  id: PooledArray`1
+  parent: Beutl.Collections
+  children:
+  - Beutl.Collections.PooledArray`1.#ctor(System.Int32)
+  - Beutl.Collections.PooledArray`1.Array
+  - Beutl.Collections.PooledArray`1.Dispose
+  - Beutl.Collections.PooledArray`1.GetEnumerator
+  - Beutl.Collections.PooledArray`1.IsDisposed
+  - Beutl.Collections.PooledArray`1.Item(System.Int32)
+  - Beutl.Collections.PooledArray`1.Length
+  - Beutl.Collections.PooledArray`1.Span
+  langs:
+  - csharp
+  - vb
+  name: PooledArray<T>
+  nameWithType: PooledArray<T>
+  fullName: Beutl.Collections.PooledArray<T>
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: 'public struct PooledArray<T> : IDisposable, IEnumerable<T>, IEnumerable'
+    typeParameters:
+    - id: T
+    content.vb: Public Structure PooledArray(Of T) Implements IDisposable, IEnumerable(Of T), IEnumerable
+  implements:
+  - System.IDisposable
+  - System.Collections.Generic.IEnumerable{{T}}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Beutl.Collections.PooledArray`1.Beutl.Reactive.DisposableExtension.DisposeWith``1(System.Collections.Generic.ICollection{System.IDisposable})
+  - System.Collections.Generic.IEnumerable{`0}.Beutl.Collections.PooledArrayExtensions.ToPooledArray``1
+  nameWithType.vb: PooledArray(Of T)
+  fullName.vb: Beutl.Collections.PooledArray(Of T)
+  name.vb: PooledArray(Of T)
+- uid: Beutl.Collections.PooledArray`1.#ctor(System.Int32)
+  commentId: M:Beutl.Collections.PooledArray`1.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: PooledArray(int)
+  nameWithType: PooledArray<T>.PooledArray(int)
+  fullName: Beutl.Collections.PooledArray<T>.PooledArray(int)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public PooledArray(int length)
+    parameters:
+    - id: length
+      type: System.Int32
+    content.vb: Public Sub New(length As Integer)
+  overload: Beutl.Collections.PooledArray`1.#ctor*
+  nameWithType.vb: PooledArray(Of T).New(Integer)
+  fullName.vb: Beutl.Collections.PooledArray(Of T).New(Integer)
+  name.vb: New(Integer)
+- uid: Beutl.Collections.PooledArray`1.Dispose
+  commentId: M:Beutl.Collections.PooledArray`1.Dispose
+  id: Dispose
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: PooledArray<T>.Dispose()
+  fullName: Beutl.Collections.PooledArray<T>.Dispose()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Beutl.Collections.PooledArray`1.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  nameWithType.vb: PooledArray(Of T).Dispose()
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Dispose()
+- uid: Beutl.Collections.PooledArray`1.GetEnumerator
+  commentId: M:Beutl.Collections.PooledArray`1.GetEnumerator
+  id: GetEnumerator
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: PooledArray<T>.GetEnumerator()
+  fullName: Beutl.Collections.PooledArray<T>.GetEnumerator()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public PooledArray<T>.ArrayEnumerator GetEnumerator()
+    return:
+      type: Beutl.Collections.PooledArray`1.ArrayEnumerator
+    content.vb: Public Function GetEnumerator() As PooledArray(Of T).ArrayEnumerator
+  overload: Beutl.Collections.PooledArray`1.GetEnumerator*
+  nameWithType.vb: PooledArray(Of T).GetEnumerator()
+  fullName.vb: Beutl.Collections.PooledArray(Of T).GetEnumerator()
+- uid: Beutl.Collections.PooledArray`1.Length
+  commentId: P:Beutl.Collections.PooledArray`1.Length
+  id: Length
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: PooledArray<T>.Length
+  fullName: Beutl.Collections.PooledArray<T>.Length
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public readonly int Length { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Length As Integer
+  overload: Beutl.Collections.PooledArray`1.Length*
+  nameWithType.vb: PooledArray(Of T).Length
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Length
+- uid: Beutl.Collections.PooledArray`1.IsDisposed
+  commentId: P:Beutl.Collections.PooledArray`1.IsDisposed
+  id: IsDisposed
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: PooledArray<T>.IsDisposed
+  fullName: Beutl.Collections.PooledArray<T>.IsDisposed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public readonly bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisposed As Boolean
+  overload: Beutl.Collections.PooledArray`1.IsDisposed*
+  nameWithType.vb: PooledArray(Of T).IsDisposed
+  fullName.vb: Beutl.Collections.PooledArray(Of T).IsDisposed
+- uid: Beutl.Collections.PooledArray`1.Span
+  commentId: P:Beutl.Collections.PooledArray`1.Span
+  id: Span
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: Span
+  nameWithType: PooledArray<T>.Span
+  fullName: Beutl.Collections.PooledArray<T>.Span
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public Span<T> Span { get; }
+    parameters: []
+    return:
+      type: System.Span{{T}}
+    content.vb: Public ReadOnly Property Span As Span(Of T)
+  overload: Beutl.Collections.PooledArray`1.Span*
+  nameWithType.vb: PooledArray(Of T).Span
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Span
+- uid: Beutl.Collections.PooledArray`1.Array
+  commentId: P:Beutl.Collections.PooledArray`1.Array
+  id: Array
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: Array
+  nameWithType: PooledArray<T>.Array
+  fullName: Beutl.Collections.PooledArray<T>.Array
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public T[] Array { get; }
+    parameters: []
+    return:
+      type: '{T}[]'
+    content.vb: Public ReadOnly Property Array As T()
+  overload: Beutl.Collections.PooledArray`1.Array*
+  nameWithType.vb: PooledArray(Of T).Array
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Array
+- uid: Beutl.Collections.PooledArray`1.Item(System.Int32)
+  commentId: P:Beutl.Collections.PooledArray`1.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: Beutl.Collections.PooledArray`1
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: PooledArray<T>.this[int]
+  fullName: Beutl.Collections.PooledArray<T>.this[int]
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/PooledArray.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Collections
+  syntax:
+    content: public ref T this[int index] { get; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Default ByRef Property this[](index As Integer) As T
+  overload: Beutl.Collections.PooledArray`1.Item*
+  nameWithType.vb: PooledArray(Of T).this[](Integer)
+  fullName.vb: Beutl.Collections.PooledArray(Of T).this[](Integer)
+  name.vb: this[](Integer)
+references:
+- uid: Beutl.Collections
+  commentId: N:Beutl.Collections
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Collections
+  nameWithType: Beutl.Collections
+  fullName: Beutl.Collections
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Collections
+    name: Collections
+    isExternal: true
+    href: Beutl.Collections.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Collections
+    name: Collections
+    isExternal: true
+    href: Beutl.Collections.html
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Collections.PooledArray`1.Beutl.Reactive.DisposableExtension.DisposeWith``1(System.Collections.Generic.ICollection{System.IDisposable})
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  parent: Beutl.Reactive.DisposableExtension
+  definition: Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeWith__1___0_System_Collections_Generic_ICollection_System_IDisposable__
+  name: DisposeWith<PooledArray<T>>(PooledArray<T>, ICollection<IDisposable>)
+  nameWithType: DisposableExtension.DisposeWith<PooledArray<T>>(PooledArray<T>, ICollection<IDisposable>)
+  fullName: Beutl.Reactive.DisposableExtension.DisposeWith<Beutl.Collections.PooledArray<T>>(Beutl.Collections.PooledArray<T>, System.Collections.Generic.ICollection<System.IDisposable>)
+  nameWithType.vb: DisposableExtension.DisposeWith(Of PooledArray(Of T))(PooledArray(Of T), ICollection(Of IDisposable))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeWith(Of Beutl.Collections.PooledArray(Of T))(Beutl.Collections.PooledArray(Of T), System.Collections.Generic.ICollection(Of System.IDisposable))
+  name.vb: DisposeWith(Of PooledArray(Of T))(PooledArray(Of T), ICollection(Of IDisposable))
+  spec.csharp:
+  - uid: Beutl.Reactive.DisposableExtension.DisposeWith``1(Beutl.Collections.PooledArray{`0},System.Collections.Generic.ICollection{System.IDisposable})
+    name: DisposeWith
+    isExternal: true
+    href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeWith__1___0_System_Collections_Generic_ICollection_System_IDisposable__
+  - name: <
+  - uid: Beutl.Collections.PooledArray`1
+    name: PooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Beutl.Collections.PooledArray`1
+    name: PooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.Reactive.DisposableExtension.DisposeWith``1(Beutl.Collections.PooledArray{`0},System.Collections.Generic.ICollection{System.IDisposable})
+    name: DisposeWith
+    isExternal: true
+    href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeWith__1___0_System_Collections_Generic_ICollection_System_IDisposable__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Collections.PooledArray`1
+    name: PooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Beutl.Collections.PooledArray`1
+    name: PooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{`0}.Beutl.Collections.PooledArrayExtensions.ToPooledArray``1
+  commentId: M:Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  parent: Beutl.Collections.PooledArrayExtensions
+  definition: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  name: ToPooledArray<T>(IEnumerable<T>)
+  nameWithType: PooledArrayExtensions.ToPooledArray<T>(IEnumerable<T>)
+  fullName: Beutl.Collections.PooledArrayExtensions.ToPooledArray<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: PooledArrayExtensions.ToPooledArray(Of T)(IEnumerable(Of T))
+  fullName.vb: Beutl.Collections.PooledArrayExtensions.ToPooledArray(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToPooledArray(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{`0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{`0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  isExternal: true
+  href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeWith__1___0_System_Collections_Generic_ICollection_System_IDisposable__
+  name: DisposeWith<T>(T, ICollection<IDisposable>)
+  nameWithType: DisposableExtension.DisposeWith<T>(T, ICollection<IDisposable>)
+  fullName: Beutl.Reactive.DisposableExtension.DisposeWith<T>(T, System.Collections.Generic.ICollection<System.IDisposable>)
+  nameWithType.vb: DisposableExtension.DisposeWith(Of T)(T, ICollection(Of IDisposable))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeWith(Of T)(T, System.Collections.Generic.ICollection(Of System.IDisposable))
+  name.vb: DisposeWith(Of T)(T, ICollection(Of IDisposable))
+  spec.csharp:
+  - uid: Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+    name: DisposeWith
+    isExternal: true
+    href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeWith__1___0_System_Collections_Generic_ICollection_System_IDisposable__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+    name: DisposeWith
+    isExternal: true
+    href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeWith__1___0_System_Collections_Generic_ICollection_System_IDisposable__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: )
+  - name: )
+- uid: Beutl.Reactive.DisposableExtension
+  commentId: T:Beutl.Reactive.DisposableExtension
+  parent: Beutl.Reactive
+  isExternal: true
+  href: Beutl.Reactive.DisposableExtension.html
+  name: DisposableExtension
+  nameWithType: DisposableExtension
+  fullName: Beutl.Reactive.DisposableExtension
+- uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  name: ToPooledArray<T>(IEnumerable<T>)
+  nameWithType: PooledArrayExtensions.ToPooledArray<T>(IEnumerable<T>)
+  fullName: Beutl.Collections.PooledArrayExtensions.ToPooledArray<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: PooledArrayExtensions.ToPooledArray(Of T)(IEnumerable(Of T))
+  fullName.vb: Beutl.Collections.PooledArrayExtensions.ToPooledArray(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToPooledArray(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Beutl.Collections.PooledArrayExtensions.ToPooledArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToPooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArrayExtensions.html#Beutl_Collections_PooledArrayExtensions_ToPooledArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.Collections.PooledArrayExtensions
+  commentId: T:Beutl.Collections.PooledArrayExtensions
+  parent: Beutl.Collections
+  isExternal: true
+  href: Beutl.Collections.PooledArrayExtensions.html
+  name: PooledArrayExtensions
+  nameWithType: PooledArrayExtensions
+  fullName: Beutl.Collections.PooledArrayExtensions
+- uid: Beutl.Reactive
+  commentId: N:Beutl.Reactive
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Reactive
+  nameWithType: Beutl.Reactive
+  fullName: Beutl.Reactive
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Reactive
+    name: Reactive
+    isExternal: true
+    href: Beutl.Reactive.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Reactive
+    name: Reactive
+    isExternal: true
+    href: Beutl.Reactive.html
+- uid: Beutl.Collections.PooledArray`1.#ctor*
+  commentId: Overload:Beutl.Collections.PooledArray`1.#ctor
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1__ctor_System_Int32_
+  name: PooledArray
+  nameWithType: PooledArray<T>.PooledArray
+  fullName: Beutl.Collections.PooledArray<T>.PooledArray
+  nameWithType.vb: PooledArray(Of T).New
+  fullName.vb: Beutl.Collections.PooledArray(Of T).New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Collections.PooledArray`1.Dispose*
+  commentId: Overload:Beutl.Collections.PooledArray`1.Dispose
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1_Dispose
+  name: Dispose
+  nameWithType: PooledArray<T>.Dispose
+  fullName: Beutl.Collections.PooledArray<T>.Dispose
+  nameWithType.vb: PooledArray(Of T).Dispose
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.Collections.PooledArray`1.GetEnumerator*
+  commentId: Overload:Beutl.Collections.PooledArray`1.GetEnumerator
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1_GetEnumerator
+  name: GetEnumerator
+  nameWithType: PooledArray<T>.GetEnumerator
+  fullName: Beutl.Collections.PooledArray<T>.GetEnumerator
+  nameWithType.vb: PooledArray(Of T).GetEnumerator
+  fullName.vb: Beutl.Collections.PooledArray(Of T).GetEnumerator
+- uid: Beutl.Collections.PooledArray`1.ArrayEnumerator
+  commentId: T:Beutl.Collections.PooledArray`1.ArrayEnumerator
+  parent: Beutl.Collections
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html
+  name: PooledArray<T>.ArrayEnumerator
+  nameWithType: PooledArray<T>.ArrayEnumerator
+  fullName: Beutl.Collections.PooledArray<T>.ArrayEnumerator
+  nameWithType.vb: PooledArray(Of T).ArrayEnumerator
+  fullName.vb: Beutl.Collections.PooledArray(Of T).ArrayEnumerator
+  name.vb: PooledArray(Of T).ArrayEnumerator
+  spec.csharp:
+  - uid: Beutl.Collections.PooledArray`1
+    name: PooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: .
+  - uid: Beutl.Collections.PooledArray`1.ArrayEnumerator
+    name: ArrayEnumerator
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.ArrayEnumerator.html
+  spec.vb:
+  - uid: Beutl.Collections.PooledArray`1
+    name: PooledArray
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: .
+  - uid: Beutl.Collections.PooledArray`1.ArrayEnumerator
+    name: ArrayEnumerator
+    isExternal: true
+    href: Beutl.Collections.PooledArray-1.ArrayEnumerator.html
+- uid: Beutl.Collections.PooledArray`1.Length*
+  commentId: Overload:Beutl.Collections.PooledArray`1.Length
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1_Length
+  name: Length
+  nameWithType: PooledArray<T>.Length
+  fullName: Beutl.Collections.PooledArray<T>.Length
+  nameWithType.vb: PooledArray(Of T).Length
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Length
+- uid: Beutl.Collections.PooledArray`1.IsDisposed*
+  commentId: Overload:Beutl.Collections.PooledArray`1.IsDisposed
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1_IsDisposed
+  name: IsDisposed
+  nameWithType: PooledArray<T>.IsDisposed
+  fullName: Beutl.Collections.PooledArray<T>.IsDisposed
+  nameWithType.vb: PooledArray(Of T).IsDisposed
+  fullName.vb: Beutl.Collections.PooledArray(Of T).IsDisposed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Collections.PooledArray`1.Span*
+  commentId: Overload:Beutl.Collections.PooledArray`1.Span
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1_Span
+  name: Span
+  nameWithType: PooledArray<T>.Span
+  fullName: Beutl.Collections.PooledArray<T>.Span
+  nameWithType.vb: PooledArray(Of T).Span
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Span
+- uid: System.Span{{T}}
+  commentId: T:System.Span{`0}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Collections.PooledArray`1.Array*
+  commentId: Overload:Beutl.Collections.PooledArray`1.Array
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1_Array
+  name: Array
+  nameWithType: PooledArray<T>.Array
+  fullName: Beutl.Collections.PooledArray<T>.Array
+  nameWithType.vb: PooledArray(Of T).Array
+  fullName.vb: Beutl.Collections.PooledArray(Of T).Array
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: Beutl.Collections.PooledArray`1.Item*
+  commentId: Overload:Beutl.Collections.PooledArray`1.Item
+  isExternal: true
+  href: Beutl.Collections.PooledArray-1.html#Beutl_Collections_PooledArray_1_Item_System_Int32_
+  name: this
+  nameWithType: PooledArray<T>.this
+  fullName: Beutl.Collections.PooledArray<T>.this
+  nameWithType.vb: PooledArray(Of T).this[]
+  fullName.vb: Beutl.Collections.PooledArray(Of T).this[]
+  name.vb: this[]
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

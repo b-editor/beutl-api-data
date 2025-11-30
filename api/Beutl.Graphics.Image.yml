@@ -1,0 +1,828 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.Image
+  commentId: T:Beutl.Graphics.Image
+  id: Image
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.Image.AlphaMap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  - Beutl.Graphics.Image.AlphaSubtract(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888},Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  - Beutl.Graphics.Image.AsMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  - Beutl.Graphics.Image.ToBitmap(OpenCvSharp.Mat)
+  - Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKBitmap)
+  - Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKImage)
+  - Beutl.Graphics.Image.ToMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  - Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  - Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  - Beutl.Graphics.Image.ToSKBitmap(OpenCvSharp.Mat)
+  - Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  langs:
+  - csharp
+  - vb
+  name: Image
+  nameWithType: Image
+  fullName: Beutl.Graphics.Image
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static class Image
+    content.vb: Public Module Image
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Graphics.Image.AlphaSubtract(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888},Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  commentId: M:Beutl.Graphics.Image.AlphaSubtract(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888},Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  id: AlphaSubtract(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888},Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: AlphaSubtract(Bitmap<Bgra8888>, Bitmap<Bgra8888>)
+  nameWithType: Image.AlphaSubtract(Bitmap<Bgra8888>, Bitmap<Bgra8888>)
+  fullName: Beutl.Graphics.Image.AlphaSubtract(Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>, Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static void AlphaSubtract(this Bitmap<Bgra8888> image, Bitmap<Bgra8888> mask)
+    parameters:
+    - id: image
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    - id: mask
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    content.vb: Public Shared Sub AlphaSubtract(image As Bitmap(Of Bgra8888), mask As Bitmap(Of Bgra8888))
+  overload: Beutl.Graphics.Image.AlphaSubtract*
+  nameWithType.vb: Image.AlphaSubtract(Bitmap(Of Bgra8888), Bitmap(Of Bgra8888))
+  fullName.vb: Beutl.Graphics.Image.AlphaSubtract(Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888), Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888))
+  name.vb: AlphaSubtract(Bitmap(Of Bgra8888), Bitmap(Of Bgra8888))
+- uid: Beutl.Graphics.Image.AlphaMap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  commentId: M:Beutl.Graphics.Image.AlphaMap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  id: AlphaMap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: AlphaMap(Bitmap<Bgra8888>)
+  nameWithType: Image.AlphaMap(Bitmap<Bgra8888>)
+  fullName: Beutl.Graphics.Image.AlphaMap(Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Bitmap<Grayscale8> AlphaMap(this Bitmap<Bgra8888> image)
+    parameters:
+    - id: image
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    return:
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Grayscale8}
+    content.vb: Public Shared Function AlphaMap(image As Bitmap(Of Bgra8888)) As Bitmap(Of Grayscale8)
+  overload: Beutl.Graphics.Image.AlphaMap*
+  nameWithType.vb: Image.AlphaMap(Bitmap(Of Bgra8888))
+  fullName.vb: Beutl.Graphics.Image.AlphaMap(Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888))
+  name.vb: AlphaMap(Bitmap(Of Bgra8888))
+- uid: Beutl.Graphics.Image.ToBitmap(OpenCvSharp.Mat)
+  commentId: M:Beutl.Graphics.Image.ToBitmap(OpenCvSharp.Mat)
+  id: ToBitmap(OpenCvSharp.Mat)
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToBitmap(Mat)
+  nameWithType: Image.ToBitmap(Mat)
+  fullName: Beutl.Graphics.Image.ToBitmap(OpenCvSharp.Mat)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Bitmap<Bgra8888> ToBitmap(this Mat self)
+    parameters:
+    - id: self
+      type: OpenCvSharp.Mat
+    return:
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    content.vb: Public Shared Function ToBitmap(self As Mat) As Bitmap(Of Bgra8888)
+  overload: Beutl.Graphics.Image.ToBitmap*
+- uid: Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKBitmap)
+  commentId: M:Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKBitmap)
+  id: ToBitmap(SkiaSharp.SKBitmap)
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToBitmap(SKBitmap)
+  nameWithType: Image.ToBitmap(SKBitmap)
+  fullName: Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKBitmap)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Bitmap<Bgra8888> ToBitmap(this SKBitmap self)
+    parameters:
+    - id: self
+      type: SkiaSharp.SKBitmap
+    return:
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    content.vb: Public Shared Function ToBitmap(self As SKBitmap) As Bitmap(Of Bgra8888)
+  overload: Beutl.Graphics.Image.ToBitmap*
+- uid: Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKImage)
+  commentId: M:Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKImage)
+  id: ToBitmap(SkiaSharp.SKImage)
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToBitmap(SKImage)
+  nameWithType: Image.ToBitmap(SKImage)
+  fullName: Beutl.Graphics.Image.ToBitmap(SkiaSharp.SKImage)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Bitmap<Bgra8888> ToBitmap(this SKImage self)
+    parameters:
+    - id: self
+      type: SkiaSharp.SKImage
+    return:
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    content.vb: Public Shared Function ToBitmap(self As SKImage) As Bitmap(Of Bgra8888)
+  overload: Beutl.Graphics.Image.ToBitmap*
+- uid: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  commentId: M:Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  id: ToSKBitmap(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToSKBitmap(Bitmap<Bgra8888>)
+  nameWithType: Image.ToSKBitmap(Bitmap<Bgra8888>)
+  fullName: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static SKBitmap ToSKBitmap(this Bitmap<Bgra8888> self)
+    parameters:
+    - id: self
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    return:
+      type: SkiaSharp.SKBitmap
+    content.vb: Public Shared Function ToSKBitmap(self As Bitmap(Of Bgra8888)) As SKBitmap
+  overload: Beutl.Graphics.Image.ToSKBitmap*
+  nameWithType.vb: Image.ToSKBitmap(Bitmap(Of Bgra8888))
+  fullName.vb: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888))
+  name.vb: ToSKBitmap(Bitmap(Of Bgra8888))
+- uid: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  commentId: M:Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  id: ToSKBitmap(Beutl.Media.IBitmap)
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToSKBitmap(IBitmap)
+  nameWithType: Image.ToSKBitmap(IBitmap)
+  fullName: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static SKBitmap ToSKBitmap(this IBitmap self)
+    parameters:
+    - id: self
+      type: Beutl.Media.IBitmap
+    return:
+      type: SkiaSharp.SKBitmap
+    content.vb: Public Shared Function ToSKBitmap(self As IBitmap) As SKBitmap
+  overload: Beutl.Graphics.Image.ToSKBitmap*
+- uid: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  commentId: M:Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  id: ToSKImage(Beutl.Media.IBitmap)
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToSKImage(IBitmap)
+  nameWithType: Image.ToSKImage(IBitmap)
+  fullName: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static SKImage ToSKImage(this IBitmap self)
+    parameters:
+    - id: self
+      type: Beutl.Media.IBitmap
+    return:
+      type: SkiaSharp.SKImage
+    content.vb: Public Shared Function ToSKImage(self As IBitmap) As SKImage
+  overload: Beutl.Graphics.Image.ToSKImage*
+- uid: Beutl.Graphics.Image.ToSKBitmap(OpenCvSharp.Mat)
+  commentId: M:Beutl.Graphics.Image.ToSKBitmap(OpenCvSharp.Mat)
+  id: ToSKBitmap(OpenCvSharp.Mat)
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToSKBitmap(Mat)
+  nameWithType: Image.ToSKBitmap(Mat)
+  fullName: Beutl.Graphics.Image.ToSKBitmap(OpenCvSharp.Mat)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static SKBitmap ToSKBitmap(this Mat self)
+    parameters:
+    - id: self
+      type: OpenCvSharp.Mat
+    return:
+      type: SkiaSharp.SKBitmap
+    content.vb: Public Shared Function ToSKBitmap(self As Mat) As SKBitmap
+  overload: Beutl.Graphics.Image.ToSKBitmap*
+- uid: Beutl.Graphics.Image.ToMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  commentId: M:Beutl.Graphics.Image.ToMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  id: ToMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: ToMat(Bitmap<Bgra8888>)
+  nameWithType: Image.ToMat(Bitmap<Bgra8888>)
+  fullName: Beutl.Graphics.Image.ToMat(Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Mat ToMat(this Bitmap<Bgra8888> self)
+    parameters:
+    - id: self
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    return:
+      type: OpenCvSharp.Mat
+    content.vb: Public Shared Function ToMat(self As Bitmap(Of Bgra8888)) As Mat
+  overload: Beutl.Graphics.Image.ToMat*
+  nameWithType.vb: Image.ToMat(Bitmap(Of Bgra8888))
+  fullName.vb: Beutl.Graphics.Image.ToMat(Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888))
+  name.vb: ToMat(Bitmap(Of Bgra8888))
+- uid: Beutl.Graphics.Image.AsMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  commentId: M:Beutl.Graphics.Image.AsMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  id: AsMat(Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888})
+  isExtensionMethod: true
+  parent: Beutl.Graphics.Image
+  langs:
+  - csharp
+  - vb
+  name: AsMat(Bitmap<Bgra8888>)
+  nameWithType: Image.AsMat(Bitmap<Bgra8888>)
+  fullName: Beutl.Graphics.Image.AsMat(Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Image.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Mat AsMat(this Bitmap<Bgra8888> self)
+    parameters:
+    - id: self
+      type: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+    return:
+      type: OpenCvSharp.Mat
+    content.vb: Public Shared Function AsMat(self As Bitmap(Of Bgra8888)) As Mat
+  overload: Beutl.Graphics.Image.AsMat*
+  nameWithType.vb: Image.AsMat(Bitmap(Of Bgra8888))
+  fullName.vb: Beutl.Graphics.Image.AsMat(Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888))
+  name.vb: AsMat(Bitmap(Of Bgra8888))
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Graphics.Image.AlphaSubtract*
+  commentId: Overload:Beutl.Graphics.Image.AlphaSubtract
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_AlphaSubtract_Beutl_Media_Bitmap_Beutl_Media_Pixel_Bgra8888__Beutl_Media_Bitmap_Beutl_Media_Pixel_Bgra8888__
+  name: AlphaSubtract
+  nameWithType: Image.AlphaSubtract
+  fullName: Beutl.Graphics.Image.AlphaSubtract
+- uid: Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+  commentId: T:Beutl.Media.Bitmap{Beutl.Media.Pixel.Bgra8888}
+  parent: Beutl.Media
+  definition: Beutl.Media.Bitmap`1
+  href: Beutl.Media.Bitmap-1.html
+  name: Bitmap<Bgra8888>
+  nameWithType: Bitmap<Bgra8888>
+  fullName: Beutl.Media.Bitmap<Beutl.Media.Pixel.Bgra8888>
+  nameWithType.vb: Bitmap(Of Bgra8888)
+  fullName.vb: Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Bgra8888)
+  name.vb: Bitmap(Of Bgra8888)
+  spec.csharp:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: <
+  - uid: Beutl.Media.Pixel.Bgra8888
+    name: Bgra8888
+    isExternal: true
+    href: Beutl.Media.Pixel.Bgra8888.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Pixel.Bgra8888
+    name: Bgra8888
+    isExternal: true
+    href: Beutl.Media.Pixel.Bgra8888.html
+  - name: )
+- uid: Beutl.Media.Bitmap`1
+  commentId: T:Beutl.Media.Bitmap`1
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Bitmap-1.html
+  name: Bitmap<T>
+  nameWithType: Bitmap<T>
+  fullName: Beutl.Media.Bitmap<T>
+  nameWithType.vb: Bitmap(Of T)
+  fullName.vb: Beutl.Media.Bitmap(Of T)
+  name.vb: Bitmap(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.Graphics.Image.AlphaMap*
+  commentId: Overload:Beutl.Graphics.Image.AlphaMap
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_AlphaMap_Beutl_Media_Bitmap_Beutl_Media_Pixel_Bgra8888__
+  name: AlphaMap
+  nameWithType: Image.AlphaMap
+  fullName: Beutl.Graphics.Image.AlphaMap
+- uid: Beutl.Media.Bitmap{Beutl.Media.Pixel.Grayscale8}
+  commentId: T:Beutl.Media.Bitmap{Beutl.Media.Pixel.Grayscale8}
+  parent: Beutl.Media
+  definition: Beutl.Media.Bitmap`1
+  href: Beutl.Media.Bitmap-1.html
+  name: Bitmap<Grayscale8>
+  nameWithType: Bitmap<Grayscale8>
+  fullName: Beutl.Media.Bitmap<Beutl.Media.Pixel.Grayscale8>
+  nameWithType.vb: Bitmap(Of Grayscale8)
+  fullName.vb: Beutl.Media.Bitmap(Of Beutl.Media.Pixel.Grayscale8)
+  name.vb: Bitmap(Of Grayscale8)
+  spec.csharp:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: <
+  - uid: Beutl.Media.Pixel.Grayscale8
+    name: Grayscale8
+    isExternal: true
+    href: Beutl.Media.Pixel.Grayscale8.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Pixel.Grayscale8
+    name: Grayscale8
+    isExternal: true
+    href: Beutl.Media.Pixel.Grayscale8.html
+  - name: )
+- uid: Beutl.Graphics.Image.ToBitmap*
+  commentId: Overload:Beutl.Graphics.Image.ToBitmap
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToBitmap_OpenCvSharp_Mat_
+  name: ToBitmap
+  nameWithType: Image.ToBitmap
+  fullName: Beutl.Graphics.Image.ToBitmap
+- uid: OpenCvSharp.Mat
+  commentId: T:OpenCvSharp.Mat
+  parent: OpenCvSharp
+  isExternal: true
+  name: Mat
+  nameWithType: Mat
+  fullName: OpenCvSharp.Mat
+- uid: OpenCvSharp
+  commentId: N:OpenCvSharp
+  isExternal: true
+  name: OpenCvSharp
+  nameWithType: OpenCvSharp
+  fullName: OpenCvSharp
+- uid: SkiaSharp.SKBitmap
+  commentId: T:SkiaSharp.SKBitmap
+  parent: SkiaSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/skiasharp.skbitmap
+  name: SKBitmap
+  nameWithType: SKBitmap
+  fullName: SkiaSharp.SKBitmap
+- uid: SkiaSharp
+  commentId: N:SkiaSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/skiasharp
+  name: SkiaSharp
+  nameWithType: SkiaSharp
+  fullName: SkiaSharp
+- uid: SkiaSharp.SKImage
+  commentId: T:SkiaSharp.SKImage
+  parent: SkiaSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/skiasharp.skimage
+  name: SKImage
+  nameWithType: SKImage
+  fullName: SkiaSharp.SKImage
+- uid: Beutl.Graphics.Image.ToSKBitmap*
+  commentId: Overload:Beutl.Graphics.Image.ToSKBitmap
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKBitmap_Beutl_Media_Bitmap_Beutl_Media_Pixel_Bgra8888__
+  name: ToSKBitmap
+  nameWithType: Image.ToSKBitmap
+  fullName: Beutl.Graphics.Image.ToSKBitmap
+- uid: Beutl.Media.IBitmap
+  commentId: T:Beutl.Media.IBitmap
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.IBitmap.html
+  name: IBitmap
+  nameWithType: IBitmap
+  fullName: Beutl.Media.IBitmap
+- uid: Beutl.Graphics.Image.ToSKImage*
+  commentId: Overload:Beutl.Graphics.Image.ToSKImage
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKImage_Beutl_Media_IBitmap_
+  name: ToSKImage
+  nameWithType: Image.ToSKImage
+  fullName: Beutl.Graphics.Image.ToSKImage
+- uid: Beutl.Graphics.Image.ToMat*
+  commentId: Overload:Beutl.Graphics.Image.ToMat
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToMat_Beutl_Media_Bitmap_Beutl_Media_Pixel_Bgra8888__
+  name: ToMat
+  nameWithType: Image.ToMat
+  fullName: Beutl.Graphics.Image.ToMat
+- uid: Beutl.Graphics.Image.AsMat*
+  commentId: Overload:Beutl.Graphics.Image.AsMat
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_AsMat_Beutl_Media_Bitmap_Beutl_Media_Pixel_Bgra8888__
+  name: AsMat
+  nameWithType: Image.AsMat
+  fullName: Beutl.Graphics.Image.AsMat

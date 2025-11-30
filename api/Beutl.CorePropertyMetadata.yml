@@ -1,0 +1,818 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.CorePropertyMetadata
+  commentId: T:Beutl.CorePropertyMetadata
+  id: CorePropertyMetadata
+  parent: Beutl
+  children:
+  - Beutl.CorePropertyMetadata.#ctor(System.Boolean,System.Attribute[])
+  - Beutl.CorePropertyMetadata.Attributes
+  - Beutl.CorePropertyMetadata.Browsable
+  - Beutl.CorePropertyMetadata.DisplayAttribute
+  - Beutl.CorePropertyMetadata.GetDefaultValue
+  - Beutl.CorePropertyMetadata.GetValidator
+  - Beutl.CorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+  - Beutl.CorePropertyMetadata.Notifiable
+  - Beutl.CorePropertyMetadata.PropertyType
+  - Beutl.CorePropertyMetadata.ShouldSerialize
+  langs:
+  - csharp
+  - vb
+  name: CorePropertyMetadata
+  nameWithType: CorePropertyMetadata
+  fullName: Beutl.CorePropertyMetadata
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: 'public abstract class CorePropertyMetadata : ICorePropertyMetadata'
+    content.vb: Public MustInherit Class CorePropertyMetadata Implements ICorePropertyMetadata
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Beutl.CorePropertyMetadata`1
+  implements:
+  - Beutl.ICorePropertyMetadata
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.CorePropertyMetadata.#ctor(System.Boolean,System.Attribute[])
+  commentId: M:Beutl.CorePropertyMetadata.#ctor(System.Boolean,System.Attribute[])
+  id: '#ctor(System.Boolean,System.Attribute[])'
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: CorePropertyMetadata(bool, params Attribute[])
+  nameWithType: CorePropertyMetadata.CorePropertyMetadata(bool, params Attribute[])
+  fullName: Beutl.CorePropertyMetadata.CorePropertyMetadata(bool, params System.Attribute[])
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: protected CorePropertyMetadata(bool shouldSerialize = true, params Attribute[] attributes)
+    parameters:
+    - id: shouldSerialize
+      type: System.Boolean
+    - id: attributes
+      type: System.Attribute[]
+    content.vb: Protected Sub New(shouldSerialize As Boolean = True, ParamArray attributes As Attribute())
+  overload: Beutl.CorePropertyMetadata.#ctor*
+  nameWithType.vb: CorePropertyMetadata.New(Boolean, ParamArray Attribute())
+  fullName.vb: Beutl.CorePropertyMetadata.New(Boolean, ParamArray System.Attribute())
+  name.vb: New(Boolean, ParamArray Attribute())
+- uid: Beutl.CorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+  commentId: M:Beutl.CorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+  id: Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: Merge(ICorePropertyMetadata, CoreProperty?)
+  nameWithType: CorePropertyMetadata.Merge(ICorePropertyMetadata, CoreProperty?)
+  fullName: Beutl.CorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata, Beutl.CoreProperty?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public virtual void Merge(ICorePropertyMetadata baseMetadata, CoreProperty? property)
+    parameters:
+    - id: baseMetadata
+      type: Beutl.ICorePropertyMetadata
+    - id: property
+      type: Beutl.CoreProperty
+    content.vb: Public Overridable Sub Merge(baseMetadata As ICorePropertyMetadata, [property] As CoreProperty)
+  overload: Beutl.CorePropertyMetadata.Merge*
+  implements:
+  - Beutl.ICorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+  nameWithType.vb: CorePropertyMetadata.Merge(ICorePropertyMetadata, CoreProperty)
+  fullName.vb: Beutl.CorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata, Beutl.CoreProperty)
+  name.vb: Merge(ICorePropertyMetadata, CoreProperty)
+- uid: Beutl.CorePropertyMetadata.GetDefaultValue
+  commentId: M:Beutl.CorePropertyMetadata.GetDefaultValue
+  id: GetDefaultValue
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultValue()
+  nameWithType: CorePropertyMetadata.GetDefaultValue()
+  fullName: Beutl.CorePropertyMetadata.GetDefaultValue()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: protected abstract object? GetDefaultValue()
+    return:
+      type: System.Object
+    content.vb: Protected MustOverride Function GetDefaultValue() As Object
+  overload: Beutl.CorePropertyMetadata.GetDefaultValue*
+- uid: Beutl.CorePropertyMetadata.GetValidator
+  commentId: M:Beutl.CorePropertyMetadata.GetValidator
+  id: GetValidator
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: GetValidator()
+  nameWithType: CorePropertyMetadata.GetValidator()
+  fullName: Beutl.CorePropertyMetadata.GetValidator()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: protected abstract IValidator? GetValidator()
+    return:
+      type: Beutl.Validation.IValidator
+    content.vb: Protected MustOverride Function GetValidator() As IValidator
+  overload: Beutl.CorePropertyMetadata.GetValidator*
+- uid: Beutl.CorePropertyMetadata.ShouldSerialize
+  commentId: P:Beutl.CorePropertyMetadata.ShouldSerialize
+  id: ShouldSerialize
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerialize
+  nameWithType: CorePropertyMetadata.ShouldSerialize
+  fullName: Beutl.CorePropertyMetadata.ShouldSerialize
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public bool ShouldSerialize { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ShouldSerialize As Boolean
+  overload: Beutl.CorePropertyMetadata.ShouldSerialize*
+- uid: Beutl.CorePropertyMetadata.Notifiable
+  commentId: P:Beutl.CorePropertyMetadata.Notifiable
+  id: Notifiable
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: Notifiable
+  nameWithType: CorePropertyMetadata.Notifiable
+  fullName: Beutl.CorePropertyMetadata.Notifiable
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public bool Notifiable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Notifiable As Boolean
+  overload: Beutl.CorePropertyMetadata.Notifiable*
+- uid: Beutl.CorePropertyMetadata.Browsable
+  commentId: P:Beutl.CorePropertyMetadata.Browsable
+  id: Browsable
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: Browsable
+  nameWithType: CorePropertyMetadata.Browsable
+  fullName: Beutl.CorePropertyMetadata.Browsable
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public bool Browsable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Browsable As Boolean
+  overload: Beutl.CorePropertyMetadata.Browsable*
+- uid: Beutl.CorePropertyMetadata.DisplayAttribute
+  commentId: P:Beutl.CorePropertyMetadata.DisplayAttribute
+  id: DisplayAttribute
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: DisplayAttribute
+  nameWithType: CorePropertyMetadata.DisplayAttribute
+  fullName: Beutl.CorePropertyMetadata.DisplayAttribute
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public DisplayAttribute? DisplayAttribute { get; }
+    parameters: []
+    return:
+      type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    content.vb: Public ReadOnly Property DisplayAttribute As DisplayAttribute
+  overload: Beutl.CorePropertyMetadata.DisplayAttribute*
+  implements:
+  - Beutl.ICorePropertyMetadata.DisplayAttribute
+- uid: Beutl.CorePropertyMetadata.PropertyType
+  commentId: P:Beutl.CorePropertyMetadata.PropertyType
+  id: PropertyType
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: PropertyType
+  nameWithType: CorePropertyMetadata.PropertyType
+  fullName: Beutl.CorePropertyMetadata.PropertyType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public abstract Type PropertyType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public MustOverride ReadOnly Property PropertyType As Type
+  overload: Beutl.CorePropertyMetadata.PropertyType*
+  implements:
+  - Beutl.ICorePropertyMetadata.PropertyType
+- uid: Beutl.CorePropertyMetadata.Attributes
+  commentId: P:Beutl.CorePropertyMetadata.Attributes
+  id: Attributes
+  parent: Beutl.CorePropertyMetadata
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: CorePropertyMetadata.Attributes
+  fullName: Beutl.CorePropertyMetadata.Attributes
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CorePropertyMetadata.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public Attribute[] Attributes { get; }
+    parameters: []
+    return:
+      type: System.Attribute[]
+    content.vb: Public ReadOnly Property Attributes As Attribute()
+  overload: Beutl.CorePropertyMetadata.Attributes*
+  implements:
+  - Beutl.ICorePropertyMetadata.Attributes
+references:
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.ICorePropertyMetadata
+  commentId: T:Beutl.ICorePropertyMetadata
+  parent: Beutl
+  isExternal: true
+  href: Beutl.ICorePropertyMetadata.html
+  name: ICorePropertyMetadata
+  nameWithType: ICorePropertyMetadata
+  fullName: Beutl.ICorePropertyMetadata
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.CorePropertyMetadata.#ctor*
+  commentId: Overload:Beutl.CorePropertyMetadata.#ctor
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata__ctor_System_Boolean_System_Attribute___
+  name: CorePropertyMetadata
+  nameWithType: CorePropertyMetadata.CorePropertyMetadata
+  fullName: Beutl.CorePropertyMetadata.CorePropertyMetadata
+  nameWithType.vb: CorePropertyMetadata.New
+  fullName.vb: Beutl.CorePropertyMetadata.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Attribute[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.attribute
+  name: Attribute[]
+  nameWithType: Attribute[]
+  fullName: System.Attribute[]
+  nameWithType.vb: Attribute()
+  fullName.vb: System.Attribute()
+  name.vb: Attribute()
+  spec.csharp:
+  - uid: System.Attribute
+    name: Attribute
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.attribute
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Attribute
+    name: Attribute
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.attribute
+  - name: (
+  - name: )
+- uid: Beutl.CorePropertyMetadata.Merge*
+  commentId: Overload:Beutl.CorePropertyMetadata.Merge
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_Merge_Beutl_ICorePropertyMetadata_Beutl_CoreProperty_
+  name: Merge
+  nameWithType: CorePropertyMetadata.Merge
+  fullName: Beutl.CorePropertyMetadata.Merge
+- uid: Beutl.ICorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+  commentId: M:Beutl.ICorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+  parent: Beutl.ICorePropertyMetadata
+  isExternal: true
+  href: Beutl.ICorePropertyMetadata.html#Beutl_ICorePropertyMetadata_Merge_Beutl_ICorePropertyMetadata_Beutl_CoreProperty_
+  name: Merge(ICorePropertyMetadata, CoreProperty)
+  nameWithType: ICorePropertyMetadata.Merge(ICorePropertyMetadata, CoreProperty)
+  fullName: Beutl.ICorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata, Beutl.CoreProperty)
+  spec.csharp:
+  - uid: Beutl.ICorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+    name: Merge
+    isExternal: true
+    href: Beutl.ICorePropertyMetadata.html#Beutl_ICorePropertyMetadata_Merge_Beutl_ICorePropertyMetadata_Beutl_CoreProperty_
+  - name: (
+  - uid: Beutl.ICorePropertyMetadata
+    name: ICorePropertyMetadata
+    isExternal: true
+    href: Beutl.ICorePropertyMetadata.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.ICorePropertyMetadata.Merge(Beutl.ICorePropertyMetadata,Beutl.CoreProperty)
+    name: Merge
+    isExternal: true
+    href: Beutl.ICorePropertyMetadata.html#Beutl_ICorePropertyMetadata_Merge_Beutl_ICorePropertyMetadata_Beutl_CoreProperty_
+  - name: (
+  - uid: Beutl.ICorePropertyMetadata
+    name: ICorePropertyMetadata
+    isExternal: true
+    href: Beutl.ICorePropertyMetadata.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty.html
+  - name: )
+- uid: Beutl.CoreProperty
+  commentId: T:Beutl.CoreProperty
+  parent: Beutl
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+  name: CoreProperty
+  nameWithType: CoreProperty
+  fullName: Beutl.CoreProperty
+- uid: Beutl.CorePropertyMetadata.GetDefaultValue*
+  commentId: Overload:Beutl.CorePropertyMetadata.GetDefaultValue
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_GetDefaultValue
+  name: GetDefaultValue
+  nameWithType: CorePropertyMetadata.GetDefaultValue
+  fullName: Beutl.CorePropertyMetadata.GetDefaultValue
+- uid: Beutl.CorePropertyMetadata.GetValidator*
+  commentId: Overload:Beutl.CorePropertyMetadata.GetValidator
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_GetValidator
+  name: GetValidator
+  nameWithType: CorePropertyMetadata.GetValidator
+  fullName: Beutl.CorePropertyMetadata.GetValidator
+- uid: Beutl.Validation.IValidator
+  commentId: T:Beutl.Validation.IValidator
+  parent: Beutl.Validation
+  isExternal: true
+  href: Beutl.Validation.IValidator.html
+  name: IValidator
+  nameWithType: IValidator
+  fullName: Beutl.Validation.IValidator
+- uid: Beutl.Validation
+  commentId: N:Beutl.Validation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Validation
+  nameWithType: Beutl.Validation
+  fullName: Beutl.Validation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Validation
+    name: Validation
+    isExternal: true
+    href: Beutl.Validation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Validation
+    name: Validation
+    isExternal: true
+    href: Beutl.Validation.html
+- uid: Beutl.CorePropertyMetadata.ShouldSerialize*
+  commentId: Overload:Beutl.CorePropertyMetadata.ShouldSerialize
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_ShouldSerialize
+  name: ShouldSerialize
+  nameWithType: CorePropertyMetadata.ShouldSerialize
+  fullName: Beutl.CorePropertyMetadata.ShouldSerialize
+- uid: Beutl.CorePropertyMetadata.Notifiable*
+  commentId: Overload:Beutl.CorePropertyMetadata.Notifiable
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_Notifiable
+  name: Notifiable
+  nameWithType: CorePropertyMetadata.Notifiable
+  fullName: Beutl.CorePropertyMetadata.Notifiable
+- uid: Beutl.CorePropertyMetadata.Browsable*
+  commentId: Overload:Beutl.CorePropertyMetadata.Browsable
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_Browsable
+  name: Browsable
+  nameWithType: CorePropertyMetadata.Browsable
+  fullName: Beutl.CorePropertyMetadata.Browsable
+- uid: Beutl.CorePropertyMetadata.DisplayAttribute*
+  commentId: Overload:Beutl.CorePropertyMetadata.DisplayAttribute
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_DisplayAttribute
+  name: DisplayAttribute
+  nameWithType: CorePropertyMetadata.DisplayAttribute
+  fullName: Beutl.CorePropertyMetadata.DisplayAttribute
+- uid: Beutl.ICorePropertyMetadata.DisplayAttribute
+  commentId: P:Beutl.ICorePropertyMetadata.DisplayAttribute
+  parent: Beutl.ICorePropertyMetadata
+  isExternal: true
+  href: Beutl.ICorePropertyMetadata.html#Beutl_ICorePropertyMetadata_DisplayAttribute
+  name: DisplayAttribute
+  nameWithType: ICorePropertyMetadata.DisplayAttribute
+  fullName: Beutl.ICorePropertyMetadata.DisplayAttribute
+- uid: System.ComponentModel.DataAnnotations.DisplayAttribute
+  commentId: T:System.ComponentModel.DataAnnotations.DisplayAttribute
+  parent: System.ComponentModel.DataAnnotations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute
+  name: DisplayAttribute
+  nameWithType: DisplayAttribute
+  fullName: System.ComponentModel.DataAnnotations.DisplayAttribute
+- uid: System.ComponentModel.DataAnnotations
+  commentId: N:System.ComponentModel.DataAnnotations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel.DataAnnotations
+  nameWithType: System.ComponentModel.DataAnnotations
+  fullName: System.ComponentModel.DataAnnotations
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  - name: .
+  - uid: System.ComponentModel.DataAnnotations
+    name: DataAnnotations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  - name: .
+  - uid: System.ComponentModel.DataAnnotations
+    name: DataAnnotations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations
+- uid: Beutl.CorePropertyMetadata.PropertyType*
+  commentId: Overload:Beutl.CorePropertyMetadata.PropertyType
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_PropertyType
+  name: PropertyType
+  nameWithType: CorePropertyMetadata.PropertyType
+  fullName: Beutl.CorePropertyMetadata.PropertyType
+- uid: Beutl.ICorePropertyMetadata.PropertyType
+  commentId: P:Beutl.ICorePropertyMetadata.PropertyType
+  parent: Beutl.ICorePropertyMetadata
+  isExternal: true
+  href: Beutl.ICorePropertyMetadata.html#Beutl_ICorePropertyMetadata_PropertyType
+  name: PropertyType
+  nameWithType: ICorePropertyMetadata.PropertyType
+  fullName: Beutl.ICorePropertyMetadata.PropertyType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Beutl.CorePropertyMetadata.Attributes*
+  commentId: Overload:Beutl.CorePropertyMetadata.Attributes
+  isExternal: true
+  href: Beutl.CorePropertyMetadata.html#Beutl_CorePropertyMetadata_Attributes
+  name: Attributes
+  nameWithType: CorePropertyMetadata.Attributes
+  fullName: Beutl.CorePropertyMetadata.Attributes
+- uid: Beutl.ICorePropertyMetadata.Attributes
+  commentId: P:Beutl.ICorePropertyMetadata.Attributes
+  parent: Beutl.ICorePropertyMetadata
+  isExternal: true
+  href: Beutl.ICorePropertyMetadata.html#Beutl_ICorePropertyMetadata_Attributes
+  name: Attributes
+  nameWithType: ICorePropertyMetadata.Attributes
+  fullName: Beutl.ICorePropertyMetadata.Attributes

@@ -1,0 +1,439 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Music.Samples.ISample`1
+  commentId: T:Beutl.Media.Music.Samples.ISample`1
+  id: ISample`1
+  parent: Beutl.Media.Music.Samples
+  children:
+  - Beutl.Media.Music.Samples.ISample`1.Amplifier(`0,Beutl.Media.Music.Sample)
+  - Beutl.Media.Music.Samples.ISample`1.Compound(`0,`0)
+  - Beutl.Media.Music.Samples.ISample`1.ConvertFrom(Beutl.Media.Music.Sample)
+  - Beutl.Media.Music.Samples.ISample`1.ConvertTo(`0)
+  - Beutl.Media.Music.Samples.ISample`1.GetChannelData(`0,System.Int32,System.Span{System.Byte},System.Int32@)
+  - Beutl.Media.Music.Samples.ISample`1.GetNumChannels
+  langs:
+  - csharp
+  - vb
+  name: ISample<T>
+  nameWithType: ISample<T>
+  fullName: Beutl.Media.Music.Samples.ISample<T>
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/Samples/ISample.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music.Samples
+  syntax:
+    content: 'public interface ISample<T> where T : unmanaged, ISample<T>'
+    typeParameters:
+    - id: T
+    content.vb: Public Interface ISample(Of T As {Structure, ISample(Of T)})
+  nameWithType.vb: ISample(Of T)
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T)
+  name.vb: ISample(Of T)
+- uid: Beutl.Media.Music.Samples.ISample`1.Compound(`0,`0)
+  commentId: M:Beutl.Media.Music.Samples.ISample`1.Compound(`0,`0)
+  id: Compound(`0,`0)
+  parent: Beutl.Media.Music.Samples.ISample`1
+  langs:
+  - csharp
+  - vb
+  name: Compound(T, T)
+  nameWithType: ISample<T>.Compound(T, T)
+  fullName: Beutl.Media.Music.Samples.ISample<T>.Compound(T, T)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/Samples/ISample.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music.Samples
+  syntax:
+    content: public static abstract T Compound(T s1, T s2)
+    parameters:
+    - id: s1
+      type: '{T}'
+    - id: s2
+      type: '{T}'
+    return:
+      type: '{T}'
+    content.vb: Public Shared MustInherit Function Compound(s1 As T, s2 As T) As T
+  overload: Beutl.Media.Music.Samples.ISample`1.Compound*
+  nameWithType.vb: ISample(Of T).Compound(T, T)
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).Compound(T, T)
+- uid: Beutl.Media.Music.Samples.ISample`1.Amplifier(`0,Beutl.Media.Music.Sample)
+  commentId: M:Beutl.Media.Music.Samples.ISample`1.Amplifier(`0,Beutl.Media.Music.Sample)
+  id: Amplifier(`0,Beutl.Media.Music.Sample)
+  parent: Beutl.Media.Music.Samples.ISample`1
+  langs:
+  - csharp
+  - vb
+  name: Amplifier(T, Sample)
+  nameWithType: ISample<T>.Amplifier(T, Sample)
+  fullName: Beutl.Media.Music.Samples.ISample<T>.Amplifier(T, Beutl.Media.Music.Sample)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/Samples/ISample.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music.Samples
+  syntax:
+    content: public static abstract T Amplifier(T s, Sample level)
+    parameters:
+    - id: s
+      type: '{T}'
+    - id: level
+      type: Beutl.Media.Music.Sample
+    return:
+      type: '{T}'
+    content.vb: Public Shared MustInherit Function Amplifier(s As T, level As Sample) As T
+  overload: Beutl.Media.Music.Samples.ISample`1.Amplifier*
+  nameWithType.vb: ISample(Of T).Amplifier(T, Sample)
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).Amplifier(T, Beutl.Media.Music.Sample)
+- uid: Beutl.Media.Music.Samples.ISample`1.GetNumChannels
+  commentId: M:Beutl.Media.Music.Samples.ISample`1.GetNumChannels
+  id: GetNumChannels
+  parent: Beutl.Media.Music.Samples.ISample`1
+  langs:
+  - csharp
+  - vb
+  name: GetNumChannels()
+  nameWithType: ISample<T>.GetNumChannels()
+  fullName: Beutl.Media.Music.Samples.ISample<T>.GetNumChannels()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/Samples/ISample.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music.Samples
+  syntax:
+    content: public static abstract int GetNumChannels()
+    return:
+      type: System.Int32
+    content.vb: Public Shared MustInherit Function GetNumChannels() As Integer
+  overload: Beutl.Media.Music.Samples.ISample`1.GetNumChannels*
+  nameWithType.vb: ISample(Of T).GetNumChannels()
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).GetNumChannels()
+- uid: Beutl.Media.Music.Samples.ISample`1.GetChannelData(`0,System.Int32,System.Span{System.Byte},System.Int32@)
+  commentId: M:Beutl.Media.Music.Samples.ISample`1.GetChannelData(`0,System.Int32,System.Span{System.Byte},System.Int32@)
+  id: GetChannelData(`0,System.Int32,System.Span{System.Byte},System.Int32@)
+  parent: Beutl.Media.Music.Samples.ISample`1
+  langs:
+  - csharp
+  - vb
+  name: GetChannelData(T, int, Span<byte>, out int)
+  nameWithType: ISample<T>.GetChannelData(T, int, Span<byte>, out int)
+  fullName: Beutl.Media.Music.Samples.ISample<T>.GetChannelData(T, int, System.Span<byte>, out int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/Samples/ISample.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music.Samples
+  syntax:
+    content: public static abstract void GetChannelData(T s, int channel, Span<byte> destination, out int bytesWritten)
+    parameters:
+    - id: s
+      type: '{T}'
+    - id: channel
+      type: System.Int32
+    - id: destination
+      type: System.Span{System.Byte}
+    - id: bytesWritten
+      type: System.Int32
+    content.vb: Public Shared MustInherit Sub GetChannelData(s As T, channel As Integer, destination As Span(Of Byte), bytesWritten As Integer)
+  overload: Beutl.Media.Music.Samples.ISample`1.GetChannelData*
+  nameWithType.vb: ISample(Of T).GetChannelData(T, Integer, Span(Of Byte), Integer)
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).GetChannelData(T, Integer, System.Span(Of Byte), Integer)
+  name.vb: GetChannelData(T, Integer, Span(Of Byte), Integer)
+- uid: Beutl.Media.Music.Samples.ISample`1.ConvertFrom(Beutl.Media.Music.Sample)
+  commentId: M:Beutl.Media.Music.Samples.ISample`1.ConvertFrom(Beutl.Media.Music.Sample)
+  id: ConvertFrom(Beutl.Media.Music.Sample)
+  parent: Beutl.Media.Music.Samples.ISample`1
+  langs:
+  - csharp
+  - vb
+  name: ConvertFrom(Sample)
+  nameWithType: ISample<T>.ConvertFrom(Sample)
+  fullName: Beutl.Media.Music.Samples.ISample<T>.ConvertFrom(Beutl.Media.Music.Sample)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/Samples/ISample.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music.Samples
+  syntax:
+    content: public static abstract T ConvertFrom(Sample src)
+    parameters:
+    - id: src
+      type: Beutl.Media.Music.Sample
+    return:
+      type: '{T}'
+    content.vb: Public Shared MustInherit Function ConvertFrom(src As Sample) As T
+  overload: Beutl.Media.Music.Samples.ISample`1.ConvertFrom*
+  nameWithType.vb: ISample(Of T).ConvertFrom(Sample)
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).ConvertFrom(Beutl.Media.Music.Sample)
+- uid: Beutl.Media.Music.Samples.ISample`1.ConvertTo(`0)
+  commentId: M:Beutl.Media.Music.Samples.ISample`1.ConvertTo(`0)
+  id: ConvertTo(`0)
+  parent: Beutl.Media.Music.Samples.ISample`1
+  langs:
+  - csharp
+  - vb
+  name: ConvertTo(T)
+  nameWithType: ISample<T>.ConvertTo(T)
+  fullName: Beutl.Media.Music.Samples.ISample<T>.ConvertTo(T)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Music/Samples/ISample.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Music.Samples
+  syntax:
+    content: public static abstract Sample ConvertTo(T src)
+    parameters:
+    - id: src
+      type: '{T}'
+    return:
+      type: Beutl.Media.Music.Sample
+    content.vb: Public Shared MustInherit Function ConvertTo(src As T) As Sample
+  overload: Beutl.Media.Music.Samples.ISample`1.ConvertTo*
+  nameWithType.vb: ISample(Of T).ConvertTo(T)
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).ConvertTo(T)
+references:
+- uid: Beutl.Media.Music.Samples
+  commentId: N:Beutl.Media.Music.Samples
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Music.Samples
+  nameWithType: Beutl.Media.Music.Samples
+  fullName: Beutl.Media.Music.Samples
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+  - name: .
+  - uid: Beutl.Media.Music.Samples
+    name: Samples
+    isExternal: true
+    href: Beutl.Media.Music.Samples.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+  - name: .
+  - uid: Beutl.Media.Music.Samples
+    name: Samples
+    isExternal: true
+    href: Beutl.Media.Music.Samples.html
+- uid: Beutl.Media.Music.Samples.ISample`1.Compound*
+  commentId: Overload:Beutl.Media.Music.Samples.ISample`1.Compound
+  isExternal: true
+  href: Beutl.Media.Music.Samples.ISample-1.html#Beutl_Media_Music_Samples_ISample_1_Compound__0__0_
+  name: Compound
+  nameWithType: ISample<T>.Compound
+  fullName: Beutl.Media.Music.Samples.ISample<T>.Compound
+  nameWithType.vb: ISample(Of T).Compound
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).Compound
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.Media.Music.Samples.ISample`1.Amplifier*
+  commentId: Overload:Beutl.Media.Music.Samples.ISample`1.Amplifier
+  isExternal: true
+  href: Beutl.Media.Music.Samples.ISample-1.html#Beutl_Media_Music_Samples_ISample_1_Amplifier__0_Beutl_Media_Music_Sample_
+  name: Amplifier
+  nameWithType: ISample<T>.Amplifier
+  fullName: Beutl.Media.Music.Samples.ISample<T>.Amplifier
+  nameWithType.vb: ISample(Of T).Amplifier
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).Amplifier
+- uid: Beutl.Media.Music.Sample
+  commentId: T:Beutl.Media.Music.Sample
+  parent: Beutl.Media.Music
+  isExternal: true
+  href: Beutl.Media.Music.Sample.html
+  name: Sample
+  nameWithType: Sample
+  fullName: Beutl.Media.Music.Sample
+- uid: Beutl.Media.Music
+  commentId: N:Beutl.Media.Music
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Music
+  nameWithType: Beutl.Media.Music
+  fullName: Beutl.Media.Music
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Music
+    name: Music
+    isExternal: true
+    href: Beutl.Media.Music.html
+- uid: Beutl.Media.Music.Samples.ISample`1.GetNumChannels*
+  commentId: Overload:Beutl.Media.Music.Samples.ISample`1.GetNumChannels
+  isExternal: true
+  href: Beutl.Media.Music.Samples.ISample-1.html#Beutl_Media_Music_Samples_ISample_1_GetNumChannels
+  name: GetNumChannels
+  nameWithType: ISample<T>.GetNumChannels
+  fullName: Beutl.Media.Music.Samples.ISample<T>.GetNumChannels
+  nameWithType.vb: ISample(Of T).GetNumChannels
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).GetNumChannels
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Media.Music.Samples.ISample`1.GetChannelData*
+  commentId: Overload:Beutl.Media.Music.Samples.ISample`1.GetChannelData
+  isExternal: true
+  href: Beutl.Media.Music.Samples.ISample-1.html#Beutl_Media_Music_Samples_ISample_1_GetChannelData__0_System_Int32_System_Span_System_Byte__System_Int32__
+  name: GetChannelData
+  nameWithType: ISample<T>.GetChannelData
+  fullName: Beutl.Media.Music.Samples.ISample<T>.GetChannelData
+  nameWithType.vb: ISample(Of T).GetChannelData
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).GetChannelData
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.Music.Samples.ISample`1.ConvertFrom*
+  commentId: Overload:Beutl.Media.Music.Samples.ISample`1.ConvertFrom
+  isExternal: true
+  href: Beutl.Media.Music.Samples.ISample-1.html#Beutl_Media_Music_Samples_ISample_1_ConvertFrom_Beutl_Media_Music_Sample_
+  name: ConvertFrom
+  nameWithType: ISample<T>.ConvertFrom
+  fullName: Beutl.Media.Music.Samples.ISample<T>.ConvertFrom
+  nameWithType.vb: ISample(Of T).ConvertFrom
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).ConvertFrom
+- uid: Beutl.Media.Music.Samples.ISample`1.ConvertTo*
+  commentId: Overload:Beutl.Media.Music.Samples.ISample`1.ConvertTo
+  isExternal: true
+  href: Beutl.Media.Music.Samples.ISample-1.html#Beutl_Media_Music_Samples_ISample_1_ConvertTo__0_
+  name: ConvertTo
+  nameWithType: ISample<T>.ConvertTo
+  fullName: Beutl.Media.Music.Samples.ISample<T>.ConvertTo
+  nameWithType.vb: ISample(Of T).ConvertTo
+  fullName.vb: Beutl.Media.Music.Samples.ISample(Of T).ConvertTo

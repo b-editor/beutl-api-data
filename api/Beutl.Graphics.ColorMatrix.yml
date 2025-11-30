@@ -1,0 +1,1869 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.ColorMatrix
+  commentId: T:Beutl.Graphics.ColorMatrix
+  id: ColorMatrix
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.ColorMatrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  - Beutl.Graphics.ColorMatrix.CreateBrightness(System.Single)
+  - Beutl.Graphics.ColorMatrix.CreateContrast(System.Single)
+  - Beutl.Graphics.ColorMatrix.CreateFromSpan(System.ReadOnlySpan{System.Single})
+  - Beutl.Graphics.ColorMatrix.CreateHueRotate(System.Single)
+  - Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha
+  - Beutl.Graphics.ColorMatrix.CreateSaturate(System.Single)
+  - Beutl.Graphics.ColorMatrix.Equals(Beutl.Graphics.ColorMatrix)
+  - Beutl.Graphics.ColorMatrix.Equals(System.Object)
+  - Beutl.Graphics.ColorMatrix.GetHashCode
+  - Beutl.Graphics.ColorMatrix.Identity
+  - Beutl.Graphics.ColorMatrix.IsIdentity
+  - Beutl.Graphics.ColorMatrix.M11
+  - Beutl.Graphics.ColorMatrix.M12
+  - Beutl.Graphics.ColorMatrix.M13
+  - Beutl.Graphics.ColorMatrix.M14
+  - Beutl.Graphics.ColorMatrix.M15
+  - Beutl.Graphics.ColorMatrix.M21
+  - Beutl.Graphics.ColorMatrix.M22
+  - Beutl.Graphics.ColorMatrix.M23
+  - Beutl.Graphics.ColorMatrix.M24
+  - Beutl.Graphics.ColorMatrix.M25
+  - Beutl.Graphics.ColorMatrix.M31
+  - Beutl.Graphics.ColorMatrix.M32
+  - Beutl.Graphics.ColorMatrix.M33
+  - Beutl.Graphics.ColorMatrix.M34
+  - Beutl.Graphics.ColorMatrix.M35
+  - Beutl.Graphics.ColorMatrix.M41
+  - Beutl.Graphics.ColorMatrix.M42
+  - Beutl.Graphics.ColorMatrix.M43
+  - Beutl.Graphics.ColorMatrix.M44
+  - Beutl.Graphics.ColorMatrix.M45
+  - Beutl.Graphics.ColorMatrix.ToArray
+  - Beutl.Graphics.ColorMatrix.ToString
+  - Beutl.Graphics.ColorMatrix.op_Equality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  - Beutl.Graphics.ColorMatrix.op_Inequality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  - Beutl.Graphics.ColorMatrix.op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  - Beutl.Graphics.ColorMatrix.op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Media.Color)
+  langs:
+  - csharp
+  - vb
+  name: ColorMatrix
+  nameWithType: ColorMatrix
+  fullName: Beutl.Graphics.ColorMatrix
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: 'public readonly struct ColorMatrix : IEquatable<ColorMatrix>'
+    content.vb: Public Structure ColorMatrix Implements IEquatable(Of ColorMatrix)
+  implements:
+  - System.IEquatable{Beutl.Graphics.ColorMatrix}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Graphics.ColorMatrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Beutl.Graphics.ColorMatrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)'
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: ColorMatrix(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
+  nameWithType: ColorMatrix.ColorMatrix(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
+  fullName: Beutl.Graphics.ColorMatrix.ColorMatrix(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public ColorMatrix(float m11, float m12, float m13, float m14, float m15, float m21, float m22, float m23, float m24, float m25, float m31, float m32, float m33, float m34, float m35, float m41, float m42, float m43, float m44, float m45)
+    parameters:
+    - id: m11
+      type: System.Single
+    - id: m12
+      type: System.Single
+    - id: m13
+      type: System.Single
+    - id: m14
+      type: System.Single
+    - id: m15
+      type: System.Single
+    - id: m21
+      type: System.Single
+    - id: m22
+      type: System.Single
+    - id: m23
+      type: System.Single
+    - id: m24
+      type: System.Single
+    - id: m25
+      type: System.Single
+    - id: m31
+      type: System.Single
+    - id: m32
+      type: System.Single
+    - id: m33
+      type: System.Single
+    - id: m34
+      type: System.Single
+    - id: m35
+      type: System.Single
+    - id: m41
+      type: System.Single
+    - id: m42
+      type: System.Single
+    - id: m43
+      type: System.Single
+    - id: m44
+      type: System.Single
+    - id: m45
+      type: System.Single
+    content.vb: Public Sub New(m11 As Single, m12 As Single, m13 As Single, m14 As Single, m15 As Single, m21 As Single, m22 As Single, m23 As Single, m24 As Single, m25 As Single, m31 As Single, m32 As Single, m33 As Single, m34 As Single, m35 As Single, m41 As Single, m42 As Single, m43 As Single, m44 As Single, m45 As Single)
+  overload: Beutl.Graphics.ColorMatrix.#ctor*
+  nameWithType.vb: ColorMatrix.New(Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single)
+  fullName.vb: Beutl.Graphics.ColorMatrix.New(Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single)
+  name.vb: New(Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single, Single)
+- uid: Beutl.Graphics.ColorMatrix.CreateFromSpan(System.ReadOnlySpan{System.Single})
+  commentId: M:Beutl.Graphics.ColorMatrix.CreateFromSpan(System.ReadOnlySpan{System.Single})
+  id: CreateFromSpan(System.ReadOnlySpan{System.Single})
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: CreateFromSpan(ReadOnlySpan<float>)
+  nameWithType: ColorMatrix.CreateFromSpan(ReadOnlySpan<float>)
+  fullName: Beutl.Graphics.ColorMatrix.CreateFromSpan(System.ReadOnlySpan<float>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix CreateFromSpan(ReadOnlySpan<float> span)
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{System.Single}
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared Function CreateFromSpan(span As ReadOnlySpan(Of Single)) As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.CreateFromSpan*
+  nameWithType.vb: ColorMatrix.CreateFromSpan(ReadOnlySpan(Of Single))
+  fullName.vb: Beutl.Graphics.ColorMatrix.CreateFromSpan(System.ReadOnlySpan(Of Single))
+  name.vb: CreateFromSpan(ReadOnlySpan(Of Single))
+- uid: Beutl.Graphics.ColorMatrix.CreateSaturate(System.Single)
+  commentId: M:Beutl.Graphics.ColorMatrix.CreateSaturate(System.Single)
+  id: CreateSaturate(System.Single)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: CreateSaturate(float)
+  nameWithType: ColorMatrix.CreateSaturate(float)
+  fullName: Beutl.Graphics.ColorMatrix.CreateSaturate(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix CreateSaturate(float s)
+    parameters:
+    - id: s
+      type: System.Single
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared Function CreateSaturate(s As Single) As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.CreateSaturate*
+  nameWithType.vb: ColorMatrix.CreateSaturate(Single)
+  fullName.vb: Beutl.Graphics.ColorMatrix.CreateSaturate(Single)
+  name.vb: CreateSaturate(Single)
+- uid: Beutl.Graphics.ColorMatrix.CreateHueRotate(System.Single)
+  commentId: M:Beutl.Graphics.ColorMatrix.CreateHueRotate(System.Single)
+  id: CreateHueRotate(System.Single)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: CreateHueRotate(float)
+  nameWithType: ColorMatrix.CreateHueRotate(float)
+  fullName: Beutl.Graphics.ColorMatrix.CreateHueRotate(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix CreateHueRotate(float hue)
+    parameters:
+    - id: hue
+      type: System.Single
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared Function CreateHueRotate(hue As Single) As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.CreateHueRotate*
+  nameWithType.vb: ColorMatrix.CreateHueRotate(Single)
+  fullName.vb: Beutl.Graphics.ColorMatrix.CreateHueRotate(Single)
+  name.vb: CreateHueRotate(Single)
+- uid: Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha
+  commentId: M:Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha
+  id: CreateLuminanceToAlpha
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: CreateLuminanceToAlpha()
+  nameWithType: ColorMatrix.CreateLuminanceToAlpha()
+  fullName: Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix CreateLuminanceToAlpha()
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared Function CreateLuminanceToAlpha() As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha*
+- uid: Beutl.Graphics.ColorMatrix.CreateBrightness(System.Single)
+  commentId: M:Beutl.Graphics.ColorMatrix.CreateBrightness(System.Single)
+  id: CreateBrightness(System.Single)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: CreateBrightness(float)
+  nameWithType: ColorMatrix.CreateBrightness(float)
+  fullName: Beutl.Graphics.ColorMatrix.CreateBrightness(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix CreateBrightness(float amount)
+    parameters:
+    - id: amount
+      type: System.Single
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared Function CreateBrightness(amount As Single) As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.CreateBrightness*
+  nameWithType.vb: ColorMatrix.CreateBrightness(Single)
+  fullName.vb: Beutl.Graphics.ColorMatrix.CreateBrightness(Single)
+  name.vb: CreateBrightness(Single)
+- uid: Beutl.Graphics.ColorMatrix.CreateContrast(System.Single)
+  commentId: M:Beutl.Graphics.ColorMatrix.CreateContrast(System.Single)
+  id: CreateContrast(System.Single)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: CreateContrast(float)
+  nameWithType: ColorMatrix.CreateContrast(float)
+  fullName: Beutl.Graphics.ColorMatrix.CreateContrast(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix CreateContrast(float contrast)
+    parameters:
+    - id: contrast
+      type: System.Single
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared Function CreateContrast(contrast As Single) As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.CreateContrast*
+  nameWithType.vb: ColorMatrix.CreateContrast(Single)
+  fullName.vb: Beutl.Graphics.ColorMatrix.CreateContrast(Single)
+  name.vb: CreateContrast(Single)
+- uid: Beutl.Graphics.ColorMatrix.ToArray
+  commentId: M:Beutl.Graphics.ColorMatrix.ToArray
+  id: ToArray
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: ToArray()
+  nameWithType: ColorMatrix.ToArray()
+  fullName: Beutl.Graphics.ColorMatrix.ToArray()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float[] ToArray()
+    return:
+      type: System.Single[]
+    content.vb: Public Function ToArray() As Single()
+  overload: Beutl.Graphics.ColorMatrix.ToArray*
+- uid: Beutl.Graphics.ColorMatrix.op_Equality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  commentId: M:Beutl.Graphics.ColorMatrix.op_Equality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  id: op_Equality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: operator ==(in ColorMatrix, in ColorMatrix)
+  nameWithType: ColorMatrix.operator ==(in ColorMatrix, in ColorMatrix)
+  fullName: Beutl.Graphics.ColorMatrix.operator ==(in Beutl.Graphics.ColorMatrix, in Beutl.Graphics.ColorMatrix)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool operator ==(in ColorMatrix value1, in ColorMatrix value2)
+    parameters:
+    - id: value1
+      type: Beutl.Graphics.ColorMatrix
+    - id: value2
+      type: Beutl.Graphics.ColorMatrix
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(value1 As ColorMatrix, value2 As ColorMatrix) As Boolean
+  overload: Beutl.Graphics.ColorMatrix.op_Equality*
+  nameWithType.vb: ColorMatrix.=(ColorMatrix, ColorMatrix)
+  fullName.vb: Beutl.Graphics.ColorMatrix.=(Beutl.Graphics.ColorMatrix, Beutl.Graphics.ColorMatrix)
+  name.vb: =(ColorMatrix, ColorMatrix)
+- uid: Beutl.Graphics.ColorMatrix.op_Inequality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  commentId: M:Beutl.Graphics.ColorMatrix.op_Inequality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  id: op_Inequality(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: operator !=(in ColorMatrix, in ColorMatrix)
+  nameWithType: ColorMatrix.operator !=(in ColorMatrix, in ColorMatrix)
+  fullName: Beutl.Graphics.ColorMatrix.operator !=(in Beutl.Graphics.ColorMatrix, in Beutl.Graphics.ColorMatrix)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool operator !=(in ColorMatrix value1, in ColorMatrix value2)
+    parameters:
+    - id: value1
+      type: Beutl.Graphics.ColorMatrix
+    - id: value2
+      type: Beutl.Graphics.ColorMatrix
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(value1 As ColorMatrix, value2 As ColorMatrix) As Boolean
+  overload: Beutl.Graphics.ColorMatrix.op_Inequality*
+  nameWithType.vb: ColorMatrix.<>(ColorMatrix, ColorMatrix)
+  fullName.vb: Beutl.Graphics.ColorMatrix.<>(Beutl.Graphics.ColorMatrix, Beutl.Graphics.ColorMatrix)
+  name.vb: <>(ColorMatrix, ColorMatrix)
+- uid: Beutl.Graphics.ColorMatrix.op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.ColorMatrix.op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Media.Color)
+  id: op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Media.Color)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: operator *(in ColorMatrix, Color)
+  nameWithType: ColorMatrix.operator *(in ColorMatrix, Color)
+  fullName: Beutl.Graphics.ColorMatrix.operator *(in Beutl.Graphics.ColorMatrix, Beutl.Media.Color)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Color operator *(in ColorMatrix left, Color right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.ColorMatrix
+    - id: right
+      type: Beutl.Media.Color
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Shared Operator *(left As ColorMatrix, right As Color) As Color
+  overload: Beutl.Graphics.ColorMatrix.op_Multiply*
+  nameWithType.vb: ColorMatrix.*(ColorMatrix, Color)
+  fullName.vb: Beutl.Graphics.ColorMatrix.*(Beutl.Graphics.ColorMatrix, Beutl.Media.Color)
+  name.vb: '*(ColorMatrix, Color)'
+- uid: Beutl.Graphics.ColorMatrix.op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  commentId: M:Beutl.Graphics.ColorMatrix.op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  id: op_Multiply(Beutl.Graphics.ColorMatrix@,Beutl.Graphics.ColorMatrix@)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: operator *(in ColorMatrix, in ColorMatrix)
+  nameWithType: ColorMatrix.operator *(in ColorMatrix, in ColorMatrix)
+  fullName: Beutl.Graphics.ColorMatrix.operator *(in Beutl.Graphics.ColorMatrix, in Beutl.Graphics.ColorMatrix)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix operator *(in ColorMatrix left, in ColorMatrix right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.ColorMatrix
+    - id: right
+      type: Beutl.Graphics.ColorMatrix
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared Operator *(left As ColorMatrix, right As ColorMatrix) As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.op_Multiply*
+  nameWithType.vb: ColorMatrix.*(ColorMatrix, ColorMatrix)
+  fullName.vb: Beutl.Graphics.ColorMatrix.*(Beutl.Graphics.ColorMatrix, Beutl.Graphics.ColorMatrix)
+  name.vb: '*(ColorMatrix, ColorMatrix)'
+- uid: Beutl.Graphics.ColorMatrix.Equals(System.Object)
+  commentId: M:Beutl.Graphics.ColorMatrix.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: ColorMatrix.Equals(object?)
+  fullName: Beutl.Graphics.ColorMatrix.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Graphics.ColorMatrix.Equals*
+  nameWithType.vb: ColorMatrix.Equals(Object)
+  fullName.vb: Beutl.Graphics.ColorMatrix.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Graphics.ColorMatrix.Equals(Beutl.Graphics.ColorMatrix)
+  commentId: M:Beutl.Graphics.ColorMatrix.Equals(Beutl.Graphics.ColorMatrix)
+  id: Equals(Beutl.Graphics.ColorMatrix)
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: Equals(ColorMatrix)
+  nameWithType: ColorMatrix.Equals(ColorMatrix)
+  fullName: Beutl.Graphics.ColorMatrix.Equals(Beutl.Graphics.ColorMatrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool Equals(ColorMatrix other)
+    parameters:
+    - id: other
+      type: Beutl.Graphics.ColorMatrix
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As ColorMatrix) As Boolean
+  overload: Beutl.Graphics.ColorMatrix.Equals*
+  implements:
+  - System.IEquatable{Beutl.Graphics.ColorMatrix}.Equals(Beutl.Graphics.ColorMatrix)
+- uid: Beutl.Graphics.ColorMatrix.GetHashCode
+  commentId: M:Beutl.Graphics.ColorMatrix.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ColorMatrix.GetHashCode()
+  fullName: Beutl.Graphics.ColorMatrix.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Graphics.ColorMatrix.GetHashCode*
+- uid: Beutl.Graphics.ColorMatrix.ToString
+  commentId: M:Beutl.Graphics.ColorMatrix.ToString
+  id: ToString
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ColorMatrix.ToString()
+  fullName: Beutl.Graphics.ColorMatrix.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Graphics.ColorMatrix.ToString*
+- uid: Beutl.Graphics.ColorMatrix.Identity
+  commentId: P:Beutl.Graphics.ColorMatrix.Identity
+  id: Identity
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: Identity
+  nameWithType: ColorMatrix.Identity
+  fullName: Beutl.Graphics.ColorMatrix.Identity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static ColorMatrix Identity { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.ColorMatrix
+    content.vb: Public Shared ReadOnly Property Identity As ColorMatrix
+  overload: Beutl.Graphics.ColorMatrix.Identity*
+- uid: Beutl.Graphics.ColorMatrix.IsIdentity
+  commentId: P:Beutl.Graphics.ColorMatrix.IsIdentity
+  id: IsIdentity
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: IsIdentity
+  nameWithType: ColorMatrix.IsIdentity
+  fullName: Beutl.Graphics.ColorMatrix.IsIdentity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool IsIdentity { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIdentity As Boolean
+  overload: Beutl.Graphics.ColorMatrix.IsIdentity*
+- uid: Beutl.Graphics.ColorMatrix.M11
+  commentId: P:Beutl.Graphics.ColorMatrix.M11
+  id: M11
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M11
+  nameWithType: ColorMatrix.M11
+  fullName: Beutl.Graphics.ColorMatrix.M11
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M11 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M11 As Single
+  overload: Beutl.Graphics.ColorMatrix.M11*
+- uid: Beutl.Graphics.ColorMatrix.M12
+  commentId: P:Beutl.Graphics.ColorMatrix.M12
+  id: M12
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M12
+  nameWithType: ColorMatrix.M12
+  fullName: Beutl.Graphics.ColorMatrix.M12
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M12 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M12 As Single
+  overload: Beutl.Graphics.ColorMatrix.M12*
+- uid: Beutl.Graphics.ColorMatrix.M13
+  commentId: P:Beutl.Graphics.ColorMatrix.M13
+  id: M13
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M13
+  nameWithType: ColorMatrix.M13
+  fullName: Beutl.Graphics.ColorMatrix.M13
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M13 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M13 As Single
+  overload: Beutl.Graphics.ColorMatrix.M13*
+- uid: Beutl.Graphics.ColorMatrix.M14
+  commentId: P:Beutl.Graphics.ColorMatrix.M14
+  id: M14
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M14
+  nameWithType: ColorMatrix.M14
+  fullName: Beutl.Graphics.ColorMatrix.M14
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M14 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M14 As Single
+  overload: Beutl.Graphics.ColorMatrix.M14*
+- uid: Beutl.Graphics.ColorMatrix.M15
+  commentId: P:Beutl.Graphics.ColorMatrix.M15
+  id: M15
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M15
+  nameWithType: ColorMatrix.M15
+  fullName: Beutl.Graphics.ColorMatrix.M15
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M15 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M15 As Single
+  overload: Beutl.Graphics.ColorMatrix.M15*
+- uid: Beutl.Graphics.ColorMatrix.M21
+  commentId: P:Beutl.Graphics.ColorMatrix.M21
+  id: M21
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M21
+  nameWithType: ColorMatrix.M21
+  fullName: Beutl.Graphics.ColorMatrix.M21
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M21 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M21 As Single
+  overload: Beutl.Graphics.ColorMatrix.M21*
+- uid: Beutl.Graphics.ColorMatrix.M22
+  commentId: P:Beutl.Graphics.ColorMatrix.M22
+  id: M22
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M22
+  nameWithType: ColorMatrix.M22
+  fullName: Beutl.Graphics.ColorMatrix.M22
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M22 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M22 As Single
+  overload: Beutl.Graphics.ColorMatrix.M22*
+- uid: Beutl.Graphics.ColorMatrix.M23
+  commentId: P:Beutl.Graphics.ColorMatrix.M23
+  id: M23
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M23
+  nameWithType: ColorMatrix.M23
+  fullName: Beutl.Graphics.ColorMatrix.M23
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M23 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M23 As Single
+  overload: Beutl.Graphics.ColorMatrix.M23*
+- uid: Beutl.Graphics.ColorMatrix.M24
+  commentId: P:Beutl.Graphics.ColorMatrix.M24
+  id: M24
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M24
+  nameWithType: ColorMatrix.M24
+  fullName: Beutl.Graphics.ColorMatrix.M24
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M24 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M24 As Single
+  overload: Beutl.Graphics.ColorMatrix.M24*
+- uid: Beutl.Graphics.ColorMatrix.M25
+  commentId: P:Beutl.Graphics.ColorMatrix.M25
+  id: M25
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M25
+  nameWithType: ColorMatrix.M25
+  fullName: Beutl.Graphics.ColorMatrix.M25
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M25 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M25 As Single
+  overload: Beutl.Graphics.ColorMatrix.M25*
+- uid: Beutl.Graphics.ColorMatrix.M31
+  commentId: P:Beutl.Graphics.ColorMatrix.M31
+  id: M31
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M31
+  nameWithType: ColorMatrix.M31
+  fullName: Beutl.Graphics.ColorMatrix.M31
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M31 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M31 As Single
+  overload: Beutl.Graphics.ColorMatrix.M31*
+- uid: Beutl.Graphics.ColorMatrix.M32
+  commentId: P:Beutl.Graphics.ColorMatrix.M32
+  id: M32
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M32
+  nameWithType: ColorMatrix.M32
+  fullName: Beutl.Graphics.ColorMatrix.M32
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M32 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M32 As Single
+  overload: Beutl.Graphics.ColorMatrix.M32*
+- uid: Beutl.Graphics.ColorMatrix.M33
+  commentId: P:Beutl.Graphics.ColorMatrix.M33
+  id: M33
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M33
+  nameWithType: ColorMatrix.M33
+  fullName: Beutl.Graphics.ColorMatrix.M33
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M33 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M33 As Single
+  overload: Beutl.Graphics.ColorMatrix.M33*
+- uid: Beutl.Graphics.ColorMatrix.M34
+  commentId: P:Beutl.Graphics.ColorMatrix.M34
+  id: M34
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M34
+  nameWithType: ColorMatrix.M34
+  fullName: Beutl.Graphics.ColorMatrix.M34
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M34 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M34 As Single
+  overload: Beutl.Graphics.ColorMatrix.M34*
+- uid: Beutl.Graphics.ColorMatrix.M35
+  commentId: P:Beutl.Graphics.ColorMatrix.M35
+  id: M35
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M35
+  nameWithType: ColorMatrix.M35
+  fullName: Beutl.Graphics.ColorMatrix.M35
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M35 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M35 As Single
+  overload: Beutl.Graphics.ColorMatrix.M35*
+- uid: Beutl.Graphics.ColorMatrix.M41
+  commentId: P:Beutl.Graphics.ColorMatrix.M41
+  id: M41
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M41
+  nameWithType: ColorMatrix.M41
+  fullName: Beutl.Graphics.ColorMatrix.M41
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M41 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M41 As Single
+  overload: Beutl.Graphics.ColorMatrix.M41*
+- uid: Beutl.Graphics.ColorMatrix.M42
+  commentId: P:Beutl.Graphics.ColorMatrix.M42
+  id: M42
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M42
+  nameWithType: ColorMatrix.M42
+  fullName: Beutl.Graphics.ColorMatrix.M42
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M42 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M42 As Single
+  overload: Beutl.Graphics.ColorMatrix.M42*
+- uid: Beutl.Graphics.ColorMatrix.M43
+  commentId: P:Beutl.Graphics.ColorMatrix.M43
+  id: M43
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M43
+  nameWithType: ColorMatrix.M43
+  fullName: Beutl.Graphics.ColorMatrix.M43
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M43 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M43 As Single
+  overload: Beutl.Graphics.ColorMatrix.M43*
+- uid: Beutl.Graphics.ColorMatrix.M44
+  commentId: P:Beutl.Graphics.ColorMatrix.M44
+  id: M44
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M44
+  nameWithType: ColorMatrix.M44
+  fullName: Beutl.Graphics.ColorMatrix.M44
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M44 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M44 As Single
+  overload: Beutl.Graphics.ColorMatrix.M44*
+- uid: Beutl.Graphics.ColorMatrix.M45
+  commentId: P:Beutl.Graphics.ColorMatrix.M45
+  id: M45
+  parent: Beutl.Graphics.ColorMatrix
+  langs:
+  - csharp
+  - vb
+  name: M45
+  nameWithType: ColorMatrix.M45
+  fullName: Beutl.Graphics.ColorMatrix.M45
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ColorMatrix.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float M45 { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M45 As Single
+  overload: Beutl.Graphics.ColorMatrix.M45*
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.IEquatable{Beutl.Graphics.ColorMatrix}
+  commentId: T:System.IEquatable{Beutl.Graphics.ColorMatrix}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ColorMatrix>
+  nameWithType: IEquatable<ColorMatrix>
+  fullName: System.IEquatable<Beutl.Graphics.ColorMatrix>
+  nameWithType.vb: IEquatable(Of ColorMatrix)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.ColorMatrix)
+  name.vb: IEquatable(Of ColorMatrix)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Graphics.ColorMatrix
+    name: ColorMatrix
+    isExternal: true
+    href: Beutl.Graphics.ColorMatrix.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.ColorMatrix
+    name: ColorMatrix
+    isExternal: true
+    href: Beutl.Graphics.ColorMatrix.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Graphics.ColorMatrix.#ctor*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.#ctor
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: ColorMatrix
+  nameWithType: ColorMatrix.ColorMatrix
+  fullName: Beutl.Graphics.ColorMatrix.ColorMatrix
+  nameWithType.vb: ColorMatrix.New
+  fullName.vb: Beutl.Graphics.ColorMatrix.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.ColorMatrix.CreateFromSpan*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.CreateFromSpan
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_CreateFromSpan_System_ReadOnlySpan_System_Single__
+  name: CreateFromSpan
+  nameWithType: ColorMatrix.CreateFromSpan
+  fullName: Beutl.Graphics.ColorMatrix.CreateFromSpan
+- uid: System.ReadOnlySpan{System.Single}
+  commentId: T:System.ReadOnlySpan{System.Single}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<float>
+  nameWithType: ReadOnlySpan<float>
+  fullName: System.ReadOnlySpan<float>
+  nameWithType.vb: ReadOnlySpan(Of Single)
+  fullName.vb: System.ReadOnlySpan(Of Single)
+  name.vb: ReadOnlySpan(Of Single)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: Beutl.Graphics.ColorMatrix
+  commentId: T:Beutl.Graphics.ColorMatrix
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html
+  name: ColorMatrix
+  nameWithType: ColorMatrix
+  fullName: Beutl.Graphics.ColorMatrix
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.ColorMatrix.CreateSaturate*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.CreateSaturate
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_CreateSaturate_System_Single_
+  name: CreateSaturate
+  nameWithType: ColorMatrix.CreateSaturate
+  fullName: Beutl.Graphics.ColorMatrix.CreateSaturate
+- uid: Beutl.Graphics.ColorMatrix.CreateHueRotate*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.CreateHueRotate
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_CreateHueRotate_System_Single_
+  name: CreateHueRotate
+  nameWithType: ColorMatrix.CreateHueRotate
+  fullName: Beutl.Graphics.ColorMatrix.CreateHueRotate
+- uid: Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_CreateLuminanceToAlpha
+  name: CreateLuminanceToAlpha
+  nameWithType: ColorMatrix.CreateLuminanceToAlpha
+  fullName: Beutl.Graphics.ColorMatrix.CreateLuminanceToAlpha
+- uid: Beutl.Graphics.ColorMatrix.CreateBrightness*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.CreateBrightness
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_CreateBrightness_System_Single_
+  name: CreateBrightness
+  nameWithType: ColorMatrix.CreateBrightness
+  fullName: Beutl.Graphics.ColorMatrix.CreateBrightness
+- uid: Beutl.Graphics.ColorMatrix.CreateContrast*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.CreateContrast
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_CreateContrast_System_Single_
+  name: CreateContrast
+  nameWithType: ColorMatrix.CreateContrast
+  fullName: Beutl.Graphics.ColorMatrix.CreateContrast
+- uid: Beutl.Graphics.ColorMatrix.ToArray*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.ToArray
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_ToArray
+  name: ToArray
+  nameWithType: ColorMatrix.ToArray
+  fullName: Beutl.Graphics.ColorMatrix.ToArray
+- uid: System.Single[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float[]
+  nameWithType: float[]
+  fullName: float[]
+  nameWithType.vb: Single()
+  fullName.vb: Single()
+  name.vb: Single()
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.ColorMatrix.op_Equality*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.op_Equality
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_op_Equality_Beutl_Graphics_ColorMatrix__Beutl_Graphics_ColorMatrix__
+  name: operator ==
+  nameWithType: ColorMatrix.operator ==
+  fullName: Beutl.Graphics.ColorMatrix.operator ==
+  nameWithType.vb: ColorMatrix.=
+  fullName.vb: Beutl.Graphics.ColorMatrix.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.ColorMatrix.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_op_Equality_Beutl_Graphics_ColorMatrix__Beutl_Graphics_ColorMatrix__
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Graphics.ColorMatrix.op_Inequality*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.op_Inequality
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_op_Inequality_Beutl_Graphics_ColorMatrix__Beutl_Graphics_ColorMatrix__
+  name: operator !=
+  nameWithType: ColorMatrix.operator !=
+  fullName: Beutl.Graphics.ColorMatrix.operator !=
+  nameWithType.vb: ColorMatrix.<>
+  fullName.vb: Beutl.Graphics.ColorMatrix.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.ColorMatrix.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_op_Inequality_Beutl_Graphics_ColorMatrix__Beutl_Graphics_ColorMatrix__
+- uid: Beutl.Graphics.ColorMatrix.op_Multiply*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.op_Multiply
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_op_Multiply_Beutl_Graphics_ColorMatrix__Beutl_Media_Color_
+  name: operator *
+  nameWithType: ColorMatrix.operator *
+  fullName: Beutl.Graphics.ColorMatrix.operator *
+  nameWithType.vb: ColorMatrix.*
+  fullName.vb: Beutl.Graphics.ColorMatrix.*
+  name.vb: '*'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.ColorMatrix.op_Multiply*
+    name: '*'
+    isExternal: true
+    href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_op_Multiply_Beutl_Graphics_ColorMatrix__Beutl_Media_Color_
+- uid: Beutl.Media.Color
+  commentId: T:Beutl.Media.Color
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: Beutl.Media.Color
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Graphics.ColorMatrix.Equals*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.Equals
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_Equals_System_Object_
+  name: Equals
+  nameWithType: ColorMatrix.Equals
+  fullName: Beutl.Graphics.ColorMatrix.Equals
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.IEquatable{Beutl.Graphics.ColorMatrix}.Equals(Beutl.Graphics.ColorMatrix)
+  commentId: M:System.IEquatable{Beutl.Graphics.ColorMatrix}.Equals(Beutl.Graphics.ColorMatrix)
+  parent: System.IEquatable{Beutl.Graphics.ColorMatrix}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(ColorMatrix)
+  nameWithType: IEquatable<ColorMatrix>.Equals(ColorMatrix)
+  fullName: System.IEquatable<Beutl.Graphics.ColorMatrix>.Equals(Beutl.Graphics.ColorMatrix)
+  nameWithType.vb: IEquatable(Of ColorMatrix).Equals(ColorMatrix)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.ColorMatrix).Equals(Beutl.Graphics.ColorMatrix)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Graphics.ColorMatrix}.Equals(Beutl.Graphics.ColorMatrix)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.ColorMatrix
+    name: ColorMatrix
+    isExternal: true
+    href: Beutl.Graphics.ColorMatrix.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Graphics.ColorMatrix}.Equals(Beutl.Graphics.ColorMatrix)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.ColorMatrix
+    name: ColorMatrix
+    isExternal: true
+    href: Beutl.Graphics.ColorMatrix.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.ColorMatrix.GetHashCode*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.GetHashCode
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_GetHashCode
+  name: GetHashCode
+  nameWithType: ColorMatrix.GetHashCode
+  fullName: Beutl.Graphics.ColorMatrix.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.ColorMatrix.ToString*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.ToString
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_ToString
+  name: ToString
+  nameWithType: ColorMatrix.ToString
+  fullName: Beutl.Graphics.ColorMatrix.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Graphics.ColorMatrix.Identity*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.Identity
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_Identity
+  name: Identity
+  nameWithType: ColorMatrix.Identity
+  fullName: Beutl.Graphics.ColorMatrix.Identity
+- uid: Beutl.Graphics.ColorMatrix.IsIdentity*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.IsIdentity
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_IsIdentity
+  name: IsIdentity
+  nameWithType: ColorMatrix.IsIdentity
+  fullName: Beutl.Graphics.ColorMatrix.IsIdentity
+- uid: Beutl.Graphics.ColorMatrix.M11*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M11
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M11
+  name: M11
+  nameWithType: ColorMatrix.M11
+  fullName: Beutl.Graphics.ColorMatrix.M11
+- uid: Beutl.Graphics.ColorMatrix.M12*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M12
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M12
+  name: M12
+  nameWithType: ColorMatrix.M12
+  fullName: Beutl.Graphics.ColorMatrix.M12
+- uid: Beutl.Graphics.ColorMatrix.M13*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M13
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M13
+  name: M13
+  nameWithType: ColorMatrix.M13
+  fullName: Beutl.Graphics.ColorMatrix.M13
+- uid: Beutl.Graphics.ColorMatrix.M14*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M14
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M14
+  name: M14
+  nameWithType: ColorMatrix.M14
+  fullName: Beutl.Graphics.ColorMatrix.M14
+- uid: Beutl.Graphics.ColorMatrix.M15*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M15
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M15
+  name: M15
+  nameWithType: ColorMatrix.M15
+  fullName: Beutl.Graphics.ColorMatrix.M15
+- uid: Beutl.Graphics.ColorMatrix.M21*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M21
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M21
+  name: M21
+  nameWithType: ColorMatrix.M21
+  fullName: Beutl.Graphics.ColorMatrix.M21
+- uid: Beutl.Graphics.ColorMatrix.M22*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M22
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M22
+  name: M22
+  nameWithType: ColorMatrix.M22
+  fullName: Beutl.Graphics.ColorMatrix.M22
+- uid: Beutl.Graphics.ColorMatrix.M23*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M23
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M23
+  name: M23
+  nameWithType: ColorMatrix.M23
+  fullName: Beutl.Graphics.ColorMatrix.M23
+- uid: Beutl.Graphics.ColorMatrix.M24*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M24
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M24
+  name: M24
+  nameWithType: ColorMatrix.M24
+  fullName: Beutl.Graphics.ColorMatrix.M24
+- uid: Beutl.Graphics.ColorMatrix.M25*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M25
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M25
+  name: M25
+  nameWithType: ColorMatrix.M25
+  fullName: Beutl.Graphics.ColorMatrix.M25
+- uid: Beutl.Graphics.ColorMatrix.M31*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M31
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M31
+  name: M31
+  nameWithType: ColorMatrix.M31
+  fullName: Beutl.Graphics.ColorMatrix.M31
+- uid: Beutl.Graphics.ColorMatrix.M32*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M32
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M32
+  name: M32
+  nameWithType: ColorMatrix.M32
+  fullName: Beutl.Graphics.ColorMatrix.M32
+- uid: Beutl.Graphics.ColorMatrix.M33*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M33
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M33
+  name: M33
+  nameWithType: ColorMatrix.M33
+  fullName: Beutl.Graphics.ColorMatrix.M33
+- uid: Beutl.Graphics.ColorMatrix.M34*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M34
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M34
+  name: M34
+  nameWithType: ColorMatrix.M34
+  fullName: Beutl.Graphics.ColorMatrix.M34
+- uid: Beutl.Graphics.ColorMatrix.M35*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M35
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M35
+  name: M35
+  nameWithType: ColorMatrix.M35
+  fullName: Beutl.Graphics.ColorMatrix.M35
+- uid: Beutl.Graphics.ColorMatrix.M41*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M41
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M41
+  name: M41
+  nameWithType: ColorMatrix.M41
+  fullName: Beutl.Graphics.ColorMatrix.M41
+- uid: Beutl.Graphics.ColorMatrix.M42*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M42
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M42
+  name: M42
+  nameWithType: ColorMatrix.M42
+  fullName: Beutl.Graphics.ColorMatrix.M42
+- uid: Beutl.Graphics.ColorMatrix.M43*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M43
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M43
+  name: M43
+  nameWithType: ColorMatrix.M43
+  fullName: Beutl.Graphics.ColorMatrix.M43
+- uid: Beutl.Graphics.ColorMatrix.M44*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M44
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M44
+  name: M44
+  nameWithType: ColorMatrix.M44
+  fullName: Beutl.Graphics.ColorMatrix.M44
+- uid: Beutl.Graphics.ColorMatrix.M45*
+  commentId: Overload:Beutl.Graphics.ColorMatrix.M45
+  isExternal: true
+  href: Beutl.Graphics.ColorMatrix.html#Beutl_Graphics_ColorMatrix_M45
+  name: M45
+  nameWithType: ColorMatrix.M45
+  fullName: Beutl.Graphics.ColorMatrix.M45

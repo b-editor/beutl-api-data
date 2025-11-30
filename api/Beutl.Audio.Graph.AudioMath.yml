@@ -1,0 +1,964 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Audio.Graph.AudioMath
+  commentId: T:Beutl.Audio.Graph.AudioMath
+  id: AudioMath
+  parent: Beutl.Audio.Graph
+  children:
+  - Beutl.Audio.Graph.AudioMath.AddWithGain(System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single)
+  - Beutl.Audio.Graph.AudioMath.ApplyGain(System.Span{System.Single},System.Single)
+  - Beutl.Audio.Graph.AudioMath.ApplyLimiter(System.Span{System.Single},System.Single,System.Single)
+  - Beutl.Audio.Graph.AudioMath.ApplySoftClipper(System.Span{System.Single},System.Single)
+  - Beutl.Audio.Graph.AudioMath.CalculateRms(System.ReadOnlySpan{System.Single})
+  - Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  - Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.Single)
+  - Beutl.Audio.Graph.AudioMath.ConvertLinearToDb(System.Single)
+  - Beutl.Audio.Graph.AudioMath.FadeIn(System.Span{System.Single},System.Int32)
+  - Beutl.Audio.Graph.AudioMath.FadeOut(System.Span{System.Single},System.Int32)
+  - Beutl.Audio.Graph.AudioMath.FindPeak(System.ReadOnlySpan{System.Single})
+  - Beutl.Audio.Graph.AudioMath.MixBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single,System.Single)
+  - Beutl.Audio.Graph.AudioMath.MultiplyBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  - Beutl.Audio.Graph.AudioMath.Normalize(System.Span{System.Single},System.Single)
+  langs:
+  - csharp
+  - vb
+  name: AudioMath
+  nameWithType: AudioMath
+  fullName: Beutl.Audio.Graph.AudioMath
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static class AudioMath
+    content.vb: Public Module AudioMath
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Audio.Graph.AudioMath.AddWithGain(System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.AddWithGain(System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single)
+  id: AddWithGain(System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: AddWithGain(ReadOnlySpan<float>, Span<float>, float)
+  nameWithType: AudioMath.AddWithGain(ReadOnlySpan<float>, Span<float>, float)
+  fullName: Beutl.Audio.Graph.AudioMath.AddWithGain(System.ReadOnlySpan<float>, System.Span<float>, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void AddWithGain(ReadOnlySpan<float> input, Span<float> output, float gain)
+    parameters:
+    - id: input
+      type: System.ReadOnlySpan{System.Single}
+    - id: output
+      type: System.Span{System.Single}
+    - id: gain
+      type: System.Single
+    content.vb: Public Shared Sub AddWithGain(input As ReadOnlySpan(Of Single), output As Span(Of Single), gain As Single)
+  overload: Beutl.Audio.Graph.AudioMath.AddWithGain*
+  nameWithType.vb: AudioMath.AddWithGain(ReadOnlySpan(Of Single), Span(Of Single), Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.AddWithGain(System.ReadOnlySpan(Of Single), System.Span(Of Single), Single)
+  name.vb: AddWithGain(ReadOnlySpan(Of Single), Span(Of Single), Single)
+- uid: Beutl.Audio.Graph.AudioMath.MultiplyBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  commentId: M:Beutl.Audio.Graph.AudioMath.MultiplyBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  id: MultiplyBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: MultiplyBuffers(ReadOnlySpan<float>, ReadOnlySpan<float>, Span<float>)
+  nameWithType: AudioMath.MultiplyBuffers(ReadOnlySpan<float>, ReadOnlySpan<float>, Span<float>)
+  fullName: Beutl.Audio.Graph.AudioMath.MultiplyBuffers(System.ReadOnlySpan<float>, System.ReadOnlySpan<float>, System.Span<float>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void MultiplyBuffers(ReadOnlySpan<float> input, ReadOnlySpan<float> gains, Span<float> output)
+    parameters:
+    - id: input
+      type: System.ReadOnlySpan{System.Single}
+    - id: gains
+      type: System.ReadOnlySpan{System.Single}
+    - id: output
+      type: System.Span{System.Single}
+    content.vb: Public Shared Sub MultiplyBuffers(input As ReadOnlySpan(Of Single), gains As ReadOnlySpan(Of Single), output As Span(Of Single))
+  overload: Beutl.Audio.Graph.AudioMath.MultiplyBuffers*
+  nameWithType.vb: AudioMath.MultiplyBuffers(ReadOnlySpan(Of Single), ReadOnlySpan(Of Single), Span(Of Single))
+  fullName.vb: Beutl.Audio.Graph.AudioMath.MultiplyBuffers(System.ReadOnlySpan(Of Single), System.ReadOnlySpan(Of Single), System.Span(Of Single))
+  name.vb: MultiplyBuffers(ReadOnlySpan(Of Single), ReadOnlySpan(Of Single), Span(Of Single))
+- uid: Beutl.Audio.Graph.AudioMath.ApplyGain(System.Span{System.Single},System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.ApplyGain(System.Span{System.Single},System.Single)
+  id: ApplyGain(System.Span{System.Single},System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: ApplyGain(Span<float>, float)
+  nameWithType: AudioMath.ApplyGain(Span<float>, float)
+  fullName: Beutl.Audio.Graph.AudioMath.ApplyGain(System.Span<float>, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void ApplyGain(Span<float> buffer, float gain)
+    parameters:
+    - id: buffer
+      type: System.Span{System.Single}
+    - id: gain
+      type: System.Single
+    content.vb: Public Shared Sub ApplyGain(buffer As Span(Of Single), gain As Single)
+  overload: Beutl.Audio.Graph.AudioMath.ApplyGain*
+  nameWithType.vb: AudioMath.ApplyGain(Span(Of Single), Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.ApplyGain(System.Span(Of Single), Single)
+  name.vb: ApplyGain(Span(Of Single), Single)
+- uid: Beutl.Audio.Graph.AudioMath.MixBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single,System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.MixBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single,System.Single)
+  id: MixBuffers(System.ReadOnlySpan{System.Single},System.ReadOnlySpan{System.Single},System.Span{System.Single},System.Single,System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: MixBuffers(ReadOnlySpan<float>, ReadOnlySpan<float>, Span<float>, float, float)
+  nameWithType: AudioMath.MixBuffers(ReadOnlySpan<float>, ReadOnlySpan<float>, Span<float>, float, float)
+  fullName: Beutl.Audio.Graph.AudioMath.MixBuffers(System.ReadOnlySpan<float>, System.ReadOnlySpan<float>, System.Span<float>, float, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void MixBuffers(ReadOnlySpan<float> input1, ReadOnlySpan<float> input2, Span<float> output, float mix1 = 0.5, float mix2 = 0.5)
+    parameters:
+    - id: input1
+      type: System.ReadOnlySpan{System.Single}
+    - id: input2
+      type: System.ReadOnlySpan{System.Single}
+    - id: output
+      type: System.Span{System.Single}
+    - id: mix1
+      type: System.Single
+    - id: mix2
+      type: System.Single
+    content.vb: Public Shared Sub MixBuffers(input1 As ReadOnlySpan(Of Single), input2 As ReadOnlySpan(Of Single), output As Span(Of Single), mix1 As Single = 0.5, mix2 As Single = 0.5)
+  overload: Beutl.Audio.Graph.AudioMath.MixBuffers*
+  nameWithType.vb: AudioMath.MixBuffers(ReadOnlySpan(Of Single), ReadOnlySpan(Of Single), Span(Of Single), Single, Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.MixBuffers(System.ReadOnlySpan(Of Single), System.ReadOnlySpan(Of Single), System.Span(Of Single), Single, Single)
+  name.vb: MixBuffers(ReadOnlySpan(Of Single), ReadOnlySpan(Of Single), Span(Of Single), Single, Single)
+- uid: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.Single)
+  id: ConvertDbToLinear(System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: ConvertDbToLinear(float)
+  nameWithType: AudioMath.ConvertDbToLinear(float)
+  fullName: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static float ConvertDbToLinear(float db)
+    parameters:
+    - id: db
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function ConvertDbToLinear(db As Single) As Single
+  overload: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear*
+  nameWithType.vb: AudioMath.ConvertDbToLinear(Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(Single)
+  name.vb: ConvertDbToLinear(Single)
+- uid: Beutl.Audio.Graph.AudioMath.ConvertLinearToDb(System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.ConvertLinearToDb(System.Single)
+  id: ConvertLinearToDb(System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: ConvertLinearToDb(float)
+  nameWithType: AudioMath.ConvertLinearToDb(float)
+  fullName: Beutl.Audio.Graph.AudioMath.ConvertLinearToDb(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static float ConvertLinearToDb(float linear)
+    parameters:
+    - id: linear
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function ConvertLinearToDb(linear As Single) As Single
+  overload: Beutl.Audio.Graph.AudioMath.ConvertLinearToDb*
+  nameWithType.vb: AudioMath.ConvertLinearToDb(Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.ConvertLinearToDb(Single)
+  name.vb: ConvertLinearToDb(Single)
+- uid: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  commentId: M:Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  id: ConvertDbToLinear(System.ReadOnlySpan{System.Single},System.Span{System.Single})
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: ConvertDbToLinear(ReadOnlySpan<float>, Span<float>)
+  nameWithType: AudioMath.ConvertDbToLinear(ReadOnlySpan<float>, Span<float>)
+  fullName: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.ReadOnlySpan<float>, System.Span<float>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void ConvertDbToLinear(ReadOnlySpan<float> dbValues, Span<float> linearValues)
+    parameters:
+    - id: dbValues
+      type: System.ReadOnlySpan{System.Single}
+    - id: linearValues
+      type: System.Span{System.Single}
+    content.vb: Public Shared Sub ConvertDbToLinear(dbValues As ReadOnlySpan(Of Single), linearValues As Span(Of Single))
+  overload: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear*
+  nameWithType.vb: AudioMath.ConvertDbToLinear(ReadOnlySpan(Of Single), Span(Of Single))
+  fullName.vb: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear(System.ReadOnlySpan(Of Single), System.Span(Of Single))
+  name.vb: ConvertDbToLinear(ReadOnlySpan(Of Single), Span(Of Single))
+- uid: Beutl.Audio.Graph.AudioMath.CalculateRms(System.ReadOnlySpan{System.Single})
+  commentId: M:Beutl.Audio.Graph.AudioMath.CalculateRms(System.ReadOnlySpan{System.Single})
+  id: CalculateRms(System.ReadOnlySpan{System.Single})
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: CalculateRms(ReadOnlySpan<float>)
+  nameWithType: AudioMath.CalculateRms(ReadOnlySpan<float>)
+  fullName: Beutl.Audio.Graph.AudioMath.CalculateRms(System.ReadOnlySpan<float>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static float CalculateRms(ReadOnlySpan<float> samples)
+    parameters:
+    - id: samples
+      type: System.ReadOnlySpan{System.Single}
+    return:
+      type: System.Single
+    content.vb: Public Shared Function CalculateRms(samples As ReadOnlySpan(Of Single)) As Single
+  overload: Beutl.Audio.Graph.AudioMath.CalculateRms*
+  nameWithType.vb: AudioMath.CalculateRms(ReadOnlySpan(Of Single))
+  fullName.vb: Beutl.Audio.Graph.AudioMath.CalculateRms(System.ReadOnlySpan(Of Single))
+  name.vb: CalculateRms(ReadOnlySpan(Of Single))
+- uid: Beutl.Audio.Graph.AudioMath.FindPeak(System.ReadOnlySpan{System.Single})
+  commentId: M:Beutl.Audio.Graph.AudioMath.FindPeak(System.ReadOnlySpan{System.Single})
+  id: FindPeak(System.ReadOnlySpan{System.Single})
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: FindPeak(ReadOnlySpan<float>)
+  nameWithType: AudioMath.FindPeak(ReadOnlySpan<float>)
+  fullName: Beutl.Audio.Graph.AudioMath.FindPeak(System.ReadOnlySpan<float>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static float FindPeak(ReadOnlySpan<float> samples)
+    parameters:
+    - id: samples
+      type: System.ReadOnlySpan{System.Single}
+    return:
+      type: System.Single
+    content.vb: Public Shared Function FindPeak(samples As ReadOnlySpan(Of Single)) As Single
+  overload: Beutl.Audio.Graph.AudioMath.FindPeak*
+  nameWithType.vb: AudioMath.FindPeak(ReadOnlySpan(Of Single))
+  fullName.vb: Beutl.Audio.Graph.AudioMath.FindPeak(System.ReadOnlySpan(Of Single))
+  name.vb: FindPeak(ReadOnlySpan(Of Single))
+- uid: Beutl.Audio.Graph.AudioMath.ApplyLimiter(System.Span{System.Single},System.Single,System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.ApplyLimiter(System.Span{System.Single},System.Single,System.Single)
+  id: ApplyLimiter(System.Span{System.Single},System.Single,System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: ApplyLimiter(Span<float>, float, float)
+  nameWithType: AudioMath.ApplyLimiter(Span<float>, float, float)
+  fullName: Beutl.Audio.Graph.AudioMath.ApplyLimiter(System.Span<float>, float, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void ApplyLimiter(Span<float> buffer, float threshold = 1, float ratio = 10)
+    parameters:
+    - id: buffer
+      type: System.Span{System.Single}
+    - id: threshold
+      type: System.Single
+    - id: ratio
+      type: System.Single
+    content.vb: Public Shared Sub ApplyLimiter(buffer As Span(Of Single), threshold As Single = 1, ratio As Single = 10)
+  overload: Beutl.Audio.Graph.AudioMath.ApplyLimiter*
+  nameWithType.vb: AudioMath.ApplyLimiter(Span(Of Single), Single, Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.ApplyLimiter(System.Span(Of Single), Single, Single)
+  name.vb: ApplyLimiter(Span(Of Single), Single, Single)
+- uid: Beutl.Audio.Graph.AudioMath.ApplySoftClipper(System.Span{System.Single},System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.ApplySoftClipper(System.Span{System.Single},System.Single)
+  id: ApplySoftClipper(System.Span{System.Single},System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: ApplySoftClipper(Span<float>, float)
+  nameWithType: AudioMath.ApplySoftClipper(Span<float>, float)
+  fullName: Beutl.Audio.Graph.AudioMath.ApplySoftClipper(System.Span<float>, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void ApplySoftClipper(Span<float> buffer, float threshold = 0.8)
+    parameters:
+    - id: buffer
+      type: System.Span{System.Single}
+    - id: threshold
+      type: System.Single
+    content.vb: Public Shared Sub ApplySoftClipper(buffer As Span(Of Single), threshold As Single = 0.8)
+  overload: Beutl.Audio.Graph.AudioMath.ApplySoftClipper*
+  nameWithType.vb: AudioMath.ApplySoftClipper(Span(Of Single), Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.ApplySoftClipper(System.Span(Of Single), Single)
+  name.vb: ApplySoftClipper(Span(Of Single), Single)
+- uid: Beutl.Audio.Graph.AudioMath.Normalize(System.Span{System.Single},System.Single)
+  commentId: M:Beutl.Audio.Graph.AudioMath.Normalize(System.Span{System.Single},System.Single)
+  id: Normalize(System.Span{System.Single},System.Single)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: Normalize(Span<float>, float)
+  nameWithType: AudioMath.Normalize(Span<float>, float)
+  fullName: Beutl.Audio.Graph.AudioMath.Normalize(System.Span<float>, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void Normalize(Span<float> buffer, float targetLevel = 1)
+    parameters:
+    - id: buffer
+      type: System.Span{System.Single}
+    - id: targetLevel
+      type: System.Single
+    content.vb: Public Shared Sub Normalize(buffer As Span(Of Single), targetLevel As Single = 1)
+  overload: Beutl.Audio.Graph.AudioMath.Normalize*
+  nameWithType.vb: AudioMath.Normalize(Span(Of Single), Single)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.Normalize(System.Span(Of Single), Single)
+  name.vb: Normalize(Span(Of Single), Single)
+- uid: Beutl.Audio.Graph.AudioMath.FadeIn(System.Span{System.Single},System.Int32)
+  commentId: M:Beutl.Audio.Graph.AudioMath.FadeIn(System.Span{System.Single},System.Int32)
+  id: FadeIn(System.Span{System.Single},System.Int32)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: FadeIn(Span<float>, int)
+  nameWithType: AudioMath.FadeIn(Span<float>, int)
+  fullName: Beutl.Audio.Graph.AudioMath.FadeIn(System.Span<float>, int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void FadeIn(Span<float> buffer, int fadeLength)
+    parameters:
+    - id: buffer
+      type: System.Span{System.Single}
+    - id: fadeLength
+      type: System.Int32
+    content.vb: Public Shared Sub FadeIn(buffer As Span(Of Single), fadeLength As Integer)
+  overload: Beutl.Audio.Graph.AudioMath.FadeIn*
+  nameWithType.vb: AudioMath.FadeIn(Span(Of Single), Integer)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.FadeIn(System.Span(Of Single), Integer)
+  name.vb: FadeIn(Span(Of Single), Integer)
+- uid: Beutl.Audio.Graph.AudioMath.FadeOut(System.Span{System.Single},System.Int32)
+  commentId: M:Beutl.Audio.Graph.AudioMath.FadeOut(System.Span{System.Single},System.Int32)
+  id: FadeOut(System.Span{System.Single},System.Int32)
+  parent: Beutl.Audio.Graph.AudioMath
+  langs:
+  - csharp
+  - vb
+  name: FadeOut(Span<float>, int)
+  nameWithType: AudioMath.FadeOut(Span<float>, int)
+  fullName: Beutl.Audio.Graph.AudioMath.FadeOut(System.Span<float>, int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioMath.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph
+  syntax:
+    content: public static void FadeOut(Span<float> buffer, int fadeLength)
+    parameters:
+    - id: buffer
+      type: System.Span{System.Single}
+    - id: fadeLength
+      type: System.Int32
+    content.vb: Public Shared Sub FadeOut(buffer As Span(Of Single), fadeLength As Integer)
+  overload: Beutl.Audio.Graph.AudioMath.FadeOut*
+  nameWithType.vb: AudioMath.FadeOut(Span(Of Single), Integer)
+  fullName.vb: Beutl.Audio.Graph.AudioMath.FadeOut(System.Span(Of Single), Integer)
+  name.vb: FadeOut(Span(Of Single), Integer)
+references:
+- uid: Beutl.Audio.Graph
+  commentId: N:Beutl.Audio.Graph
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Audio.Graph
+  nameWithType: Beutl.Audio.Graph
+  fullName: Beutl.Audio.Graph
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Audio
+    name: Audio
+    isExternal: true
+    href: Beutl.Audio.html
+  - name: .
+  - uid: Beutl.Audio.Graph
+    name: Graph
+    isExternal: true
+    href: Beutl.Audio.Graph.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Audio
+    name: Audio
+    isExternal: true
+    href: Beutl.Audio.html
+  - name: .
+  - uid: Beutl.Audio.Graph
+    name: Graph
+    isExternal: true
+    href: Beutl.Audio.Graph.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Audio.Graph.AudioMath.AddWithGain*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.AddWithGain
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_AddWithGain_System_ReadOnlySpan_System_Single__System_Span_System_Single__System_Single_
+  name: AddWithGain
+  nameWithType: AudioMath.AddWithGain
+  fullName: Beutl.Audio.Graph.AudioMath.AddWithGain
+- uid: System.ReadOnlySpan{System.Single}
+  commentId: T:System.ReadOnlySpan{System.Single}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<float>
+  nameWithType: ReadOnlySpan<float>
+  fullName: System.ReadOnlySpan<float>
+  nameWithType.vb: ReadOnlySpan(Of Single)
+  fullName.vb: System.ReadOnlySpan(Of Single)
+  name.vb: ReadOnlySpan(Of Single)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Span{System.Single}
+  commentId: T:System.Span{System.Single}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<float>
+  nameWithType: Span<float>
+  fullName: System.Span<float>
+  nameWithType.vb: Span(Of Single)
+  fullName.vb: System.Span(Of Single)
+  name.vb: Span(Of Single)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Audio.Graph.AudioMath.MultiplyBuffers*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.MultiplyBuffers
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_MultiplyBuffers_System_ReadOnlySpan_System_Single__System_ReadOnlySpan_System_Single__System_Span_System_Single__
+  name: MultiplyBuffers
+  nameWithType: AudioMath.MultiplyBuffers
+  fullName: Beutl.Audio.Graph.AudioMath.MultiplyBuffers
+- uid: Beutl.Audio.Graph.AudioMath.ApplyGain*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.ApplyGain
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_ApplyGain_System_Span_System_Single__System_Single_
+  name: ApplyGain
+  nameWithType: AudioMath.ApplyGain
+  fullName: Beutl.Audio.Graph.AudioMath.ApplyGain
+- uid: Beutl.Audio.Graph.AudioMath.MixBuffers*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.MixBuffers
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_MixBuffers_System_ReadOnlySpan_System_Single__System_ReadOnlySpan_System_Single__System_Span_System_Single__System_Single_System_Single_
+  name: MixBuffers
+  nameWithType: AudioMath.MixBuffers
+  fullName: Beutl.Audio.Graph.AudioMath.MixBuffers
+- uid: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.ConvertDbToLinear
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_ConvertDbToLinear_System_Single_
+  name: ConvertDbToLinear
+  nameWithType: AudioMath.ConvertDbToLinear
+  fullName: Beutl.Audio.Graph.AudioMath.ConvertDbToLinear
+- uid: Beutl.Audio.Graph.AudioMath.ConvertLinearToDb*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.ConvertLinearToDb
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_ConvertLinearToDb_System_Single_
+  name: ConvertLinearToDb
+  nameWithType: AudioMath.ConvertLinearToDb
+  fullName: Beutl.Audio.Graph.AudioMath.ConvertLinearToDb
+- uid: Beutl.Audio.Graph.AudioMath.CalculateRms*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.CalculateRms
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_CalculateRms_System_ReadOnlySpan_System_Single__
+  name: CalculateRms
+  nameWithType: AudioMath.CalculateRms
+  fullName: Beutl.Audio.Graph.AudioMath.CalculateRms
+- uid: Beutl.Audio.Graph.AudioMath.FindPeak*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.FindPeak
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_FindPeak_System_ReadOnlySpan_System_Single__
+  name: FindPeak
+  nameWithType: AudioMath.FindPeak
+  fullName: Beutl.Audio.Graph.AudioMath.FindPeak
+- uid: Beutl.Audio.Graph.AudioMath.ApplyLimiter*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.ApplyLimiter
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_ApplyLimiter_System_Span_System_Single__System_Single_System_Single_
+  name: ApplyLimiter
+  nameWithType: AudioMath.ApplyLimiter
+  fullName: Beutl.Audio.Graph.AudioMath.ApplyLimiter
+- uid: Beutl.Audio.Graph.AudioMath.ApplySoftClipper*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.ApplySoftClipper
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_ApplySoftClipper_System_Span_System_Single__System_Single_
+  name: ApplySoftClipper
+  nameWithType: AudioMath.ApplySoftClipper
+  fullName: Beutl.Audio.Graph.AudioMath.ApplySoftClipper
+- uid: Beutl.Audio.Graph.AudioMath.Normalize*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.Normalize
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_Normalize_System_Span_System_Single__System_Single_
+  name: Normalize
+  nameWithType: AudioMath.Normalize
+  fullName: Beutl.Audio.Graph.AudioMath.Normalize
+- uid: Beutl.Audio.Graph.AudioMath.FadeIn*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.FadeIn
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_FadeIn_System_Span_System_Single__System_Int32_
+  name: FadeIn
+  nameWithType: AudioMath.FadeIn
+  fullName: Beutl.Audio.Graph.AudioMath.FadeIn
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Audio.Graph.AudioMath.FadeOut*
+  commentId: Overload:Beutl.Audio.Graph.AudioMath.FadeOut
+  isExternal: true
+  href: Beutl.Audio.Graph.AudioMath.html#Beutl_Audio_Graph_AudioMath_FadeOut_System_Span_System_Single__System_Int32_
+  name: FadeOut
+  nameWithType: AudioMath.FadeOut
+  fullName: Beutl.Audio.Graph.AudioMath.FadeOut

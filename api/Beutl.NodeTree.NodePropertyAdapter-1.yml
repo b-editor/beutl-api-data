@@ -1,0 +1,1564 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.NodeTree.NodePropertyAdapter`1
+  commentId: T:Beutl.NodeTree.NodePropertyAdapter`1
+  id: NodePropertyAdapter`1
+  parent: Beutl.NodeTree
+  children:
+  - Beutl.NodeTree.NodePropertyAdapter`1.#ctor(System.String)
+  - Beutl.NodeTree.NodePropertyAdapter`1.#ctor(System.String,`0,Beutl.Animation.IAnimation{`0})
+  - Beutl.NodeTree.NodePropertyAdapter`1.Animation
+  - Beutl.NodeTree.NodePropertyAdapter`1.Description
+  - Beutl.NodeTree.NodePropertyAdapter`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  - Beutl.NodeTree.NodePropertyAdapter`1.DisplayName
+  - Beutl.NodeTree.NodePropertyAdapter`1.Edited
+  - Beutl.NodeTree.NodePropertyAdapter`1.GetDefaultValue
+  - Beutl.NodeTree.NodePropertyAdapter`1.GetObservable
+  - Beutl.NodeTree.NodePropertyAdapter`1.GetValue
+  - Beutl.NodeTree.NodePropertyAdapter`1.ImplementedType
+  - Beutl.NodeTree.NodePropertyAdapter`1.IsReadOnly
+  - Beutl.NodeTree.NodePropertyAdapter`1.Name
+  - Beutl.NodeTree.NodePropertyAdapter`1.ObserveAnimation
+  - Beutl.NodeTree.NodePropertyAdapter`1.PropertyType
+  - Beutl.NodeTree.NodePropertyAdapter`1.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  - Beutl.NodeTree.NodePropertyAdapter`1.SetValue(`0)
+  langs:
+  - csharp
+  - vb
+  name: NodePropertyAdapter<T>
+  nameWithType: NodePropertyAdapter<T>
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: 'public sealed class NodePropertyAdapter<T> : IAnimatablePropertyAdapter<T>, IPropertyAdapter<T>, IAnimatablePropertyAdapter, IPropertyAdapter'
+    typeParameters:
+    - id: T
+    content.vb: Public NotInheritable Class NodePropertyAdapter(Of T) Implements IAnimatablePropertyAdapter(Of T), IPropertyAdapter(Of T), IAnimatablePropertyAdapter, IPropertyAdapter
+  inheritance:
+  - System.Object
+  implements:
+  - Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}
+  - Beutl.Extensibility.IPropertyAdapter{{T}}
+  - Beutl.Extensibility.IAnimatablePropertyAdapter
+  - Beutl.Extensibility.IPropertyAdapter
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  nameWithType.vb: NodePropertyAdapter(Of T)
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T)
+  name.vb: NodePropertyAdapter(Of T)
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.#ctor(System.String,`0,Beutl.Animation.IAnimation{`0})
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.#ctor(System.String,`0,Beutl.Animation.IAnimation{`0})
+  id: '#ctor(System.String,`0,Beutl.Animation.IAnimation{`0})'
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: NodePropertyAdapter(string, T?, IAnimation<T>?)
+  nameWithType: NodePropertyAdapter<T>.NodePropertyAdapter(string, T?, IAnimation<T>?)
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.NodePropertyAdapter(string, T?, Beutl.Animation.IAnimation<T>?)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public NodePropertyAdapter(string name, T? value, IAnimation<T>? animation)
+    parameters:
+    - id: name
+      type: System.String
+    - id: value
+      type: '{T}'
+    - id: animation
+      type: Beutl.Animation.IAnimation{{T}}
+    content.vb: Public Sub New(name As String, value As T, animation As IAnimation(Of T))
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.#ctor*
+  nameWithType.vb: NodePropertyAdapter(Of T).New(String, T, IAnimation(Of T))
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).New(String, T, Beutl.Animation.IAnimation(Of T))
+  name.vb: New(String, T, IAnimation(Of T))
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.#ctor(System.String)
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: NodePropertyAdapter(string)
+  nameWithType: NodePropertyAdapter<T>.NodePropertyAdapter(string)
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.NodePropertyAdapter(string)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public NodePropertyAdapter(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Sub New(name As String)
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.#ctor*
+  nameWithType.vb: NodePropertyAdapter(Of T).New(String)
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).New(String)
+  name.vb: New(String)
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.GetObservable
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.GetObservable
+  id: GetObservable
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: GetObservable()
+  nameWithType: NodePropertyAdapter<T>.GetObservable()
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.GetObservable()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public IObservable<T?> GetObservable()
+    return:
+      type: System.IObservable{{T}}
+    content.vb: Public Function GetObservable() As IObservable(Of T)
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.GetObservable*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter{{T}}.GetObservable
+  nameWithType.vb: NodePropertyAdapter(Of T).GetObservable()
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).GetObservable()
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.GetValue
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.GetValue
+  id: GetValue
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: GetValue()
+  nameWithType: NodePropertyAdapter<T>.GetValue()
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.GetValue()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public T? GetValue()
+    return:
+      type: '{T}'
+    content.vb: Public Function GetValue() As T
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.GetValue*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter{{T}}.GetValue
+  nameWithType.vb: NodePropertyAdapter(Of T).GetValue()
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).GetValue()
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.SetValue(`0)
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.SetValue(`0)
+  id: SetValue(`0)
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: SetValue(T?)
+  nameWithType: NodePropertyAdapter<T>.SetValue(T?)
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.SetValue(T?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public void SetValue(T? value)
+    parameters:
+    - id: value
+      type: '{T}'
+    content.vb: Public Sub SetValue(value As T)
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.SetValue*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter{{T}}.SetValue({T})
+  nameWithType.vb: NodePropertyAdapter(Of T).SetValue(T)
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).SetValue(T)
+  name.vb: SetValue(T)
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.GetDefaultValue
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.GetDefaultValue
+  id: GetDefaultValue
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultValue()
+  nameWithType: NodePropertyAdapter<T>.GetDefaultValue()
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.GetDefaultValue()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public object? GetDefaultValue()
+    return:
+      type: System.Object
+    content.vb: Public Function GetDefaultValue() As Object
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.GetDefaultValue*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter.GetDefaultValue
+  nameWithType.vb: NodePropertyAdapter(Of T).GetDefaultValue()
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).GetDefaultValue()
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  id: Serialize(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ICoreSerializationContext)
+  nameWithType: NodePropertyAdapter<T>.Serialize(ICoreSerializationContext)
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public void Serialize(ICoreSerializationContext context)
+    parameters:
+    - id: context
+      type: Beutl.Serialization.ICoreSerializationContext
+    content.vb: Public Sub Serialize(context As ICoreSerializationContext)
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.Serialize*
+  nameWithType.vb: NodePropertyAdapter(Of T).Serialize(ICoreSerializationContext)
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Serialize(Beutl.Serialization.ICoreSerializationContext)
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.NodeTree.NodePropertyAdapter`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  id: Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ICoreSerializationContext)
+  nameWithType: NodePropertyAdapter<T>.Deserialize(ICoreSerializationContext)
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public void Deserialize(ICoreSerializationContext context)
+    parameters:
+    - id: context
+      type: Beutl.Serialization.ICoreSerializationContext
+    content.vb: Public Sub Deserialize(context As ICoreSerializationContext)
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.Deserialize*
+  nameWithType.vb: NodePropertyAdapter(Of T).Deserialize(ICoreSerializationContext)
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Deserialize(Beutl.Serialization.ICoreSerializationContext)
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Animation
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.Animation
+  id: Animation
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: Animation
+  nameWithType: NodePropertyAdapter<T>.Animation
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Animation
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public IAnimation<T>? Animation { get; set; }
+    parameters: []
+    return:
+      type: Beutl.Animation.IAnimation{{T}}
+    content.vb: Public Property Animation As IAnimation(Of T)
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.Animation*
+  implements:
+  - Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}.Animation
+  nameWithType.vb: NodePropertyAdapter(Of T).Animation
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Animation
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.ObserveAnimation
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.ObserveAnimation
+  id: ObserveAnimation
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: ObserveAnimation
+  nameWithType: NodePropertyAdapter<T>.ObserveAnimation
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.ObserveAnimation
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public IObservable<IAnimation<T>?> ObserveAnimation { get; }
+    parameters: []
+    return:
+      type: System.IObservable{Beutl.Animation.IAnimation{{T}}}
+    content.vb: Public ReadOnly Property ObserveAnimation As IObservable(Of IAnimation(Of T))
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.ObserveAnimation*
+  implements:
+  - Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}.ObserveAnimation
+  nameWithType.vb: NodePropertyAdapter(Of T).ObserveAnimation
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).ObserveAnimation
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.ImplementedType
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.ImplementedType
+  id: ImplementedType
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: ImplementedType
+  nameWithType: NodePropertyAdapter<T>.ImplementedType
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.ImplementedType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public Type ImplementedType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property ImplementedType As Type
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.ImplementedType*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter.ImplementedType
+  nameWithType.vb: NodePropertyAdapter(Of T).ImplementedType
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).ImplementedType
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.PropertyType
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.PropertyType
+  id: PropertyType
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: PropertyType
+  nameWithType: NodePropertyAdapter<T>.PropertyType
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.PropertyType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public Type PropertyType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property PropertyType As Type
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.PropertyType*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter.PropertyType
+  nameWithType.vb: NodePropertyAdapter(Of T).PropertyType
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).PropertyType
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Name
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.Name
+  id: Name
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: NodePropertyAdapter<T>.Name
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Name
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.Name*
+  nameWithType.vb: NodePropertyAdapter(Of T).Name
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Name
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.DisplayName
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.DisplayName
+  id: DisplayName
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: NodePropertyAdapter<T>.DisplayName
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.DisplayName
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public string DisplayName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property DisplayName As String
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.DisplayName*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter.DisplayName
+  nameWithType.vb: NodePropertyAdapter(Of T).DisplayName
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).DisplayName
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Description
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.Description
+  id: Description
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: NodePropertyAdapter<T>.Description
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Description
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public string? Description { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Description As String
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.Description*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter.Description
+  nameWithType.vb: NodePropertyAdapter(Of T).Description
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Description
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.IsReadOnly
+  commentId: P:Beutl.NodeTree.NodePropertyAdapter`1.IsReadOnly
+  id: IsReadOnly
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: NodePropertyAdapter<T>.IsReadOnly
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.IsReadOnly
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  example: []
+  syntax:
+    content: public bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadOnly As Boolean
+  overload: Beutl.NodeTree.NodePropertyAdapter`1.IsReadOnly*
+  implements:
+  - Beutl.Extensibility.IPropertyAdapter.IsReadOnly
+  nameWithType.vb: NodePropertyAdapter(Of T).IsReadOnly
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).IsReadOnly
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Edited
+  commentId: E:Beutl.NodeTree.NodePropertyAdapter`1.Edited
+  id: Edited
+  parent: Beutl.NodeTree.NodePropertyAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: Edited
+  nameWithType: NodePropertyAdapter<T>.Edited
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Edited
+  type: Event
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodePropertyAdapter.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.NodeTree
+  syntax:
+    content: public event EventHandler? Edited
+    return:
+      type: System.EventHandler
+    content.vb: Public Event Edited As EventHandler
+  nameWithType.vb: NodePropertyAdapter(Of T).Edited
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Edited
+references:
+- uid: Beutl.NodeTree
+  commentId: N:Beutl.NodeTree
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.NodeTree
+  nameWithType: Beutl.NodeTree
+  fullName: Beutl.NodeTree
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.NodeTree
+    name: NodeTree
+    isExternal: true
+    href: Beutl.NodeTree.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.NodeTree
+    name: NodeTree
+    isExternal: true
+    href: Beutl.NodeTree.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}
+  commentId: T:Beutl.Extensibility.IAnimatablePropertyAdapter{`0}
+  parent: Beutl.Extensibility
+  definition: Beutl.Extensibility.IAnimatablePropertyAdapter`1
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+  name: IAnimatablePropertyAdapter<T>
+  nameWithType: IAnimatablePropertyAdapter<T>
+  fullName: Beutl.Extensibility.IAnimatablePropertyAdapter<T>
+  nameWithType.vb: IAnimatablePropertyAdapter(Of T)
+  fullName.vb: Beutl.Extensibility.IAnimatablePropertyAdapter(Of T)
+  name.vb: IAnimatablePropertyAdapter(Of T)
+  spec.csharp:
+  - uid: Beutl.Extensibility.IAnimatablePropertyAdapter`1
+    name: IAnimatablePropertyAdapter
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Extensibility.IAnimatablePropertyAdapter`1
+    name: IAnimatablePropertyAdapter
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Extensibility.IPropertyAdapter{{T}}
+  commentId: T:Beutl.Extensibility.IPropertyAdapter{`0}
+  parent: Beutl.Extensibility
+  definition: Beutl.Extensibility.IPropertyAdapter`1
+  href: Beutl.Extensibility.IPropertyAdapter-1.html
+  name: IPropertyAdapter<T>
+  nameWithType: IPropertyAdapter<T>
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>
+  nameWithType.vb: IPropertyAdapter(Of T)
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T)
+  name.vb: IPropertyAdapter(Of T)
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1
+    name: IPropertyAdapter
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1
+    name: IPropertyAdapter
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Extensibility.IAnimatablePropertyAdapter
+  commentId: T:Beutl.Extensibility.IAnimatablePropertyAdapter
+  parent: Beutl.Extensibility
+  isExternal: true
+  href: Beutl.Extensibility.IAnimatablePropertyAdapter.html
+  name: IAnimatablePropertyAdapter
+  nameWithType: IAnimatablePropertyAdapter
+  fullName: Beutl.Extensibility.IAnimatablePropertyAdapter
+- uid: Beutl.Extensibility.IPropertyAdapter
+  commentId: T:Beutl.Extensibility.IPropertyAdapter
+  parent: Beutl.Extensibility
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter.html
+  name: IPropertyAdapter
+  nameWithType: IPropertyAdapter
+  fullName: Beutl.Extensibility.IPropertyAdapter
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Extensibility.IAnimatablePropertyAdapter`1
+  commentId: T:Beutl.Extensibility.IAnimatablePropertyAdapter`1
+  isExternal: true
+  href: Beutl.Extensibility.IAnimatablePropertyAdapter-1.html
+  name: IAnimatablePropertyAdapter<T>
+  nameWithType: IAnimatablePropertyAdapter<T>
+  fullName: Beutl.Extensibility.IAnimatablePropertyAdapter<T>
+  nameWithType.vb: IAnimatablePropertyAdapter(Of T)
+  fullName.vb: Beutl.Extensibility.IAnimatablePropertyAdapter(Of T)
+  name.vb: IAnimatablePropertyAdapter(Of T)
+  spec.csharp:
+  - uid: Beutl.Extensibility.IAnimatablePropertyAdapter`1
+    name: IAnimatablePropertyAdapter
+    isExternal: true
+    href: Beutl.Extensibility.IAnimatablePropertyAdapter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Extensibility.IAnimatablePropertyAdapter`1
+    name: IAnimatablePropertyAdapter
+    isExternal: true
+    href: Beutl.Extensibility.IAnimatablePropertyAdapter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Extensibility
+  commentId: N:Beutl.Extensibility
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Extensibility
+  nameWithType: Beutl.Extensibility
+  fullName: Beutl.Extensibility
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Extensibility
+    name: Extensibility
+    isExternal: true
+    href: Beutl.Extensibility.html
+- uid: Beutl.Extensibility.IPropertyAdapter`1
+  commentId: T:Beutl.Extensibility.IPropertyAdapter`1
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter-1.html
+  name: IPropertyAdapter<T>
+  nameWithType: IPropertyAdapter<T>
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>
+  nameWithType.vb: IPropertyAdapter(Of T)
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T)
+  name.vb: IPropertyAdapter(Of T)
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1
+    name: IPropertyAdapter
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1
+    name: IPropertyAdapter
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.#ctor*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.#ctor
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1__ctor_System_String__0_Beutl_Animation_IAnimation__0__
+  name: NodePropertyAdapter
+  nameWithType: NodePropertyAdapter<T>.NodePropertyAdapter
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.NodePropertyAdapter
+  nameWithType.vb: NodePropertyAdapter(Of T).New
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.Animation.IAnimation{{T}}
+  commentId: T:Beutl.Animation.IAnimation{`0}
+  parent: Beutl.Animation
+  definition: Beutl.Animation.IAnimation`1
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  name: IAnimation<T>
+  nameWithType: IAnimation<T>
+  fullName: Beutl.Animation.IAnimation<T>
+  nameWithType.vb: IAnimation(Of T)
+  fullName.vb: Beutl.Animation.IAnimation(Of T)
+  name.vb: IAnimation(Of T)
+  spec.csharp:
+  - uid: Beutl.Animation.IAnimation`1
+    name: IAnimation
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Animation.IAnimation`1
+    name: IAnimation
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.Animation.IAnimation`1
+  commentId: T:Beutl.Animation.IAnimation`1
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  name: IAnimation<T>
+  nameWithType: IAnimation<T>
+  fullName: Beutl.Animation.IAnimation<T>
+  nameWithType.vb: IAnimation(Of T)
+  fullName.vb: Beutl.Animation.IAnimation(Of T)
+  name.vb: IAnimation(Of T)
+  spec.csharp:
+  - uid: Beutl.Animation.IAnimation`1
+    name: IAnimation
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Animation.IAnimation`1
+    name: IAnimation
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.GetObservable*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.GetObservable
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_GetObservable
+  name: GetObservable
+  nameWithType: NodePropertyAdapter<T>.GetObservable
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.GetObservable
+  nameWithType.vb: NodePropertyAdapter(Of T).GetObservable
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).GetObservable
+- uid: Beutl.Extensibility.IPropertyAdapter{{T}}.GetObservable
+  commentId: M:Beutl.Extensibility.IPropertyAdapter{`0}.GetObservable
+  parent: Beutl.Extensibility.IPropertyAdapter{{T}}
+  definition: Beutl.Extensibility.IPropertyAdapter`1.GetObservable
+  href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetObservable
+  name: GetObservable()
+  nameWithType: IPropertyAdapter<T>.GetObservable()
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>.GetObservable()
+  nameWithType.vb: IPropertyAdapter(Of T).GetObservable()
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T).GetObservable()
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter{`0}.GetObservable
+    name: GetObservable
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetObservable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter{`0}.GetObservable
+    name: GetObservable
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetObservable
+  - name: (
+  - name: )
+- uid: System.IObservable{{T}}
+  commentId: T:System.IObservable{`0}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Extensibility.IPropertyAdapter`1.GetObservable
+  commentId: M:Beutl.Extensibility.IPropertyAdapter`1.GetObservable
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetObservable
+  name: GetObservable()
+  nameWithType: IPropertyAdapter<T>.GetObservable()
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>.GetObservable()
+  nameWithType.vb: IPropertyAdapter(Of T).GetObservable()
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T).GetObservable()
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1.GetObservable
+    name: GetObservable
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetObservable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1.GetObservable
+    name: GetObservable
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetObservable
+  - name: (
+  - name: )
+- uid: System.IObservable`1
+  commentId: T:System.IObservable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.GetValue*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.GetValue
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_GetValue
+  name: GetValue
+  nameWithType: NodePropertyAdapter<T>.GetValue
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.GetValue
+  nameWithType.vb: NodePropertyAdapter(Of T).GetValue
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).GetValue
+- uid: Beutl.Extensibility.IPropertyAdapter{{T}}.GetValue
+  commentId: M:Beutl.Extensibility.IPropertyAdapter{`0}.GetValue
+  parent: Beutl.Extensibility.IPropertyAdapter{{T}}
+  definition: Beutl.Extensibility.IPropertyAdapter`1.GetValue
+  href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetValue
+  name: GetValue()
+  nameWithType: IPropertyAdapter<T>.GetValue()
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>.GetValue()
+  nameWithType.vb: IPropertyAdapter(Of T).GetValue()
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T).GetValue()
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter{`0}.GetValue
+    name: GetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter{`0}.GetValue
+    name: GetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetValue
+  - name: (
+  - name: )
+- uid: Beutl.Extensibility.IPropertyAdapter`1.GetValue
+  commentId: M:Beutl.Extensibility.IPropertyAdapter`1.GetValue
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetValue
+  name: GetValue()
+  nameWithType: IPropertyAdapter<T>.GetValue()
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>.GetValue()
+  nameWithType.vb: IPropertyAdapter(Of T).GetValue()
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T).GetValue()
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1.GetValue
+    name: GetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1.GetValue
+    name: GetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_GetValue
+  - name: (
+  - name: )
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.SetValue*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.SetValue
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_SetValue__0_
+  name: SetValue
+  nameWithType: NodePropertyAdapter<T>.SetValue
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.SetValue
+  nameWithType.vb: NodePropertyAdapter(Of T).SetValue
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).SetValue
+- uid: Beutl.Extensibility.IPropertyAdapter{{T}}.SetValue({T})
+  commentId: M:Beutl.Extensibility.IPropertyAdapter{`0}.SetValue(`0)
+  parent: Beutl.Extensibility.IPropertyAdapter{{T}}
+  definition: Beutl.Extensibility.IPropertyAdapter`1.SetValue(`0)
+  href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_SetValue__0_
+  name: SetValue(T)
+  nameWithType: IPropertyAdapter<T>.SetValue(T)
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>.SetValue(T)
+  nameWithType.vb: IPropertyAdapter(Of T).SetValue(T)
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T).SetValue(T)
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter{`0}.SetValue(`0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter{`0}.SetValue(`0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Beutl.Extensibility.IPropertyAdapter`1.SetValue(`0)
+  commentId: M:Beutl.Extensibility.IPropertyAdapter`1.SetValue(`0)
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_SetValue__0_
+  name: SetValue(T)
+  nameWithType: IPropertyAdapter<T>.SetValue(T)
+  fullName: Beutl.Extensibility.IPropertyAdapter<T>.SetValue(T)
+  nameWithType.vb: IPropertyAdapter(Of T).SetValue(T)
+  fullName.vb: Beutl.Extensibility.IPropertyAdapter(Of T).SetValue(T)
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1.SetValue(`0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter`1.SetValue(`0)
+    name: SetValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter-1.html#Beutl_Extensibility_IPropertyAdapter_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.GetDefaultValue*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.GetDefaultValue
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_GetDefaultValue
+  name: GetDefaultValue
+  nameWithType: NodePropertyAdapter<T>.GetDefaultValue
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.GetDefaultValue
+  nameWithType.vb: NodePropertyAdapter(Of T).GetDefaultValue
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).GetDefaultValue
+- uid: Beutl.Extensibility.IPropertyAdapter.GetDefaultValue
+  commentId: M:Beutl.Extensibility.IPropertyAdapter.GetDefaultValue
+  parent: Beutl.Extensibility.IPropertyAdapter
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_GetDefaultValue
+  name: GetDefaultValue()
+  nameWithType: IPropertyAdapter.GetDefaultValue()
+  fullName: Beutl.Extensibility.IPropertyAdapter.GetDefaultValue()
+  spec.csharp:
+  - uid: Beutl.Extensibility.IPropertyAdapter.GetDefaultValue
+    name: GetDefaultValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_GetDefaultValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Beutl.Extensibility.IPropertyAdapter.GetDefaultValue
+    name: GetDefaultValue
+    isExternal: true
+    href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_GetDefaultValue
+  - name: (
+  - name: )
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Serialize*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.Serialize
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  name: Serialize
+  nameWithType: NodePropertyAdapter<T>.Serialize
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Serialize
+  nameWithType.vb: NodePropertyAdapter(Of T).Serialize
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Serialize
+- uid: Beutl.Serialization.ICoreSerializationContext
+  commentId: T:Beutl.Serialization.ICoreSerializationContext
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html
+  name: ICoreSerializationContext
+  nameWithType: ICoreSerializationContext
+  fullName: Beutl.Serialization.ICoreSerializationContext
+- uid: Beutl.Serialization
+  commentId: N:Beutl.Serialization
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Serialization
+  nameWithType: Beutl.Serialization
+  fullName: Beutl.Serialization
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Deserialize*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.Deserialize
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  name: Deserialize
+  nameWithType: NodePropertyAdapter<T>.Deserialize
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Deserialize
+  nameWithType.vb: NodePropertyAdapter(Of T).Deserialize
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Deserialize
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Animation*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.Animation
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_Animation
+  name: Animation
+  nameWithType: NodePropertyAdapter<T>.Animation
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Animation
+  nameWithType.vb: NodePropertyAdapter(Of T).Animation
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Animation
+- uid: Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}.Animation
+  commentId: P:Beutl.Extensibility.IAnimatablePropertyAdapter{`0}.Animation
+  parent: Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}
+  definition: Beutl.Extensibility.IAnimatablePropertyAdapter`1.Animation
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+  name: Animation
+  nameWithType: IAnimatablePropertyAdapter<T>.Animation
+  fullName: Beutl.Extensibility.IAnimatablePropertyAdapter<T>.Animation
+  nameWithType.vb: IAnimatablePropertyAdapter(Of T).Animation
+  fullName.vb: Beutl.Extensibility.IAnimatablePropertyAdapter(Of T).Animation
+- uid: Beutl.Extensibility.IAnimatablePropertyAdapter`1.Animation
+  commentId: P:Beutl.Extensibility.IAnimatablePropertyAdapter`1.Animation
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+  name: Animation
+  nameWithType: IAnimatablePropertyAdapter<T>.Animation
+  fullName: Beutl.Extensibility.IAnimatablePropertyAdapter<T>.Animation
+  nameWithType.vb: IAnimatablePropertyAdapter(Of T).Animation
+  fullName.vb: Beutl.Extensibility.IAnimatablePropertyAdapter(Of T).Animation
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.ObserveAnimation*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.ObserveAnimation
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_ObserveAnimation
+  name: ObserveAnimation
+  nameWithType: NodePropertyAdapter<T>.ObserveAnimation
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.ObserveAnimation
+  nameWithType.vb: NodePropertyAdapter(Of T).ObserveAnimation
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).ObserveAnimation
+- uid: Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}.ObserveAnimation
+  commentId: P:Beutl.Extensibility.IAnimatablePropertyAdapter{`0}.ObserveAnimation
+  parent: Beutl.Extensibility.IAnimatablePropertyAdapter{{T}}
+  definition: Beutl.Extensibility.IAnimatablePropertyAdapter`1.ObserveAnimation
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+  name: ObserveAnimation
+  nameWithType: IAnimatablePropertyAdapter<T>.ObserveAnimation
+  fullName: Beutl.Extensibility.IAnimatablePropertyAdapter<T>.ObserveAnimation
+  nameWithType.vb: IAnimatablePropertyAdapter(Of T).ObserveAnimation
+  fullName.vb: Beutl.Extensibility.IAnimatablePropertyAdapter(Of T).ObserveAnimation
+- uid: System.IObservable{Beutl.Animation.IAnimation{{T}}}
+  commentId: T:System.IObservable{Beutl.Animation.IAnimation{`0}}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<IAnimation<T>>
+  nameWithType: IObservable<IAnimation<T>>
+  fullName: System.IObservable<Beutl.Animation.IAnimation<T>>
+  nameWithType.vb: IObservable(Of IAnimation(Of T))
+  fullName.vb: System.IObservable(Of Beutl.Animation.IAnimation(Of T))
+  name.vb: IObservable(Of IAnimation(Of T))
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: Beutl.Animation.IAnimation`1
+    name: IAnimation
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Animation.IAnimation`1
+    name: IAnimation
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Beutl.Extensibility.IAnimatablePropertyAdapter`1.ObserveAnimation
+  commentId: P:Beutl.Extensibility.IAnimatablePropertyAdapter`1.ObserveAnimation
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+  name: ObserveAnimation
+  nameWithType: IAnimatablePropertyAdapter<T>.ObserveAnimation
+  fullName: Beutl.Extensibility.IAnimatablePropertyAdapter<T>.ObserveAnimation
+  nameWithType.vb: IAnimatablePropertyAdapter(Of T).ObserveAnimation
+  fullName.vb: Beutl.Extensibility.IAnimatablePropertyAdapter(Of T).ObserveAnimation
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.ImplementedType*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.ImplementedType
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_ImplementedType
+  name: ImplementedType
+  nameWithType: NodePropertyAdapter<T>.ImplementedType
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.ImplementedType
+  nameWithType.vb: NodePropertyAdapter(Of T).ImplementedType
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).ImplementedType
+- uid: Beutl.Extensibility.IPropertyAdapter.ImplementedType
+  commentId: P:Beutl.Extensibility.IPropertyAdapter.ImplementedType
+  parent: Beutl.Extensibility.IPropertyAdapter
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_ImplementedType
+  name: ImplementedType
+  nameWithType: IPropertyAdapter.ImplementedType
+  fullName: Beutl.Extensibility.IPropertyAdapter.ImplementedType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.PropertyType*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.PropertyType
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_PropertyType
+  name: PropertyType
+  nameWithType: NodePropertyAdapter<T>.PropertyType
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.PropertyType
+  nameWithType.vb: NodePropertyAdapter(Of T).PropertyType
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).PropertyType
+- uid: Beutl.Extensibility.IPropertyAdapter.PropertyType
+  commentId: P:Beutl.Extensibility.IPropertyAdapter.PropertyType
+  parent: Beutl.Extensibility.IPropertyAdapter
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_PropertyType
+  name: PropertyType
+  nameWithType: IPropertyAdapter.PropertyType
+  fullName: Beutl.Extensibility.IPropertyAdapter.PropertyType
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Name*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.Name
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_Name
+  name: Name
+  nameWithType: NodePropertyAdapter<T>.Name
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Name
+  nameWithType.vb: NodePropertyAdapter(Of T).Name
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Name
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.DisplayName*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.DisplayName
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_DisplayName
+  name: DisplayName
+  nameWithType: NodePropertyAdapter<T>.DisplayName
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.DisplayName
+  nameWithType.vb: NodePropertyAdapter(Of T).DisplayName
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).DisplayName
+- uid: Beutl.Extensibility.IPropertyAdapter.DisplayName
+  commentId: P:Beutl.Extensibility.IPropertyAdapter.DisplayName
+  parent: Beutl.Extensibility.IPropertyAdapter
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_DisplayName
+  name: DisplayName
+  nameWithType: IPropertyAdapter.DisplayName
+  fullName: Beutl.Extensibility.IPropertyAdapter.DisplayName
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.Description*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.Description
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_Description
+  name: Description
+  nameWithType: NodePropertyAdapter<T>.Description
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.Description
+  nameWithType.vb: NodePropertyAdapter(Of T).Description
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).Description
+- uid: Beutl.Extensibility.IPropertyAdapter.Description
+  commentId: P:Beutl.Extensibility.IPropertyAdapter.Description
+  parent: Beutl.Extensibility.IPropertyAdapter
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_Description
+  name: Description
+  nameWithType: IPropertyAdapter.Description
+  fullName: Beutl.Extensibility.IPropertyAdapter.Description
+- uid: Beutl.NodeTree.NodePropertyAdapter`1.IsReadOnly*
+  commentId: Overload:Beutl.NodeTree.NodePropertyAdapter`1.IsReadOnly
+  isExternal: true
+  href: Beutl.NodeTree.NodePropertyAdapter-1.html#Beutl_NodeTree_NodePropertyAdapter_1_IsReadOnly
+  name: IsReadOnly
+  nameWithType: NodePropertyAdapter<T>.IsReadOnly
+  fullName: Beutl.NodeTree.NodePropertyAdapter<T>.IsReadOnly
+  nameWithType.vb: NodePropertyAdapter(Of T).IsReadOnly
+  fullName.vb: Beutl.NodeTree.NodePropertyAdapter(Of T).IsReadOnly
+- uid: Beutl.Extensibility.IPropertyAdapter.IsReadOnly
+  commentId: P:Beutl.Extensibility.IPropertyAdapter.IsReadOnly
+  parent: Beutl.Extensibility.IPropertyAdapter
+  isExternal: true
+  href: Beutl.Extensibility.IPropertyAdapter.html#Beutl_Extensibility_IPropertyAdapter_IsReadOnly
+  name: IsReadOnly
+  nameWithType: IPropertyAdapter.IsReadOnly
+  fullName: Beutl.Extensibility.IPropertyAdapter.IsReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler

@@ -1,0 +1,1034 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.CubeFile
+  commentId: T:Beutl.Graphics.CubeFile
+  id: CubeFile
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.CubeFile.#ctor
+  - Beutl.Graphics.CubeFile.Data
+  - Beutl.Graphics.CubeFile.Dimention
+  - Beutl.Graphics.CubeFile.Equals(Beutl.Graphics.CubeFile)
+  - Beutl.Graphics.CubeFile.Equals(System.Object)
+  - Beutl.Graphics.CubeFile.FromStream(System.IO.Stream)
+  - Beutl.Graphics.CubeFile.GetHashCode
+  - Beutl.Graphics.CubeFile.Max
+  - Beutl.Graphics.CubeFile.Min
+  - Beutl.Graphics.CubeFile.Size
+  - Beutl.Graphics.CubeFile.Title
+  - Beutl.Graphics.CubeFile.ToLUT(System.Single,System.Byte[],System.Byte[],System.Byte[])
+  - Beutl.Graphics.CubeFile.TrilinearInterplate(OpenCvSharp.Vec3b)
+  langs:
+  - csharp
+  - vb
+  name: CubeFile
+  nameWithType: CubeFile
+  fullName: Beutl.Graphics.CubeFile
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: 'public class CubeFile : IEquatable<CubeFile>'
+    content.vb: Public Class CubeFile Implements IEquatable(Of CubeFile)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Beutl.Graphics.CubeFile}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Graphics.CubeFile.TrilinearInterplate(OpenCvSharp.Vec3b)
+  commentId: M:Beutl.Graphics.CubeFile.TrilinearInterplate(OpenCvSharp.Vec3b)
+  id: TrilinearInterplate(OpenCvSharp.Vec3b)
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: TrilinearInterplate(Vec3b)
+  nameWithType: CubeFile.TrilinearInterplate(Vec3b)
+  fullName: Beutl.Graphics.CubeFile.TrilinearInterplate(OpenCvSharp.Vec3b)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Vector3 TrilinearInterplate(Vec3b color)
+    parameters:
+    - id: color
+      type: OpenCvSharp.Vec3b
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Function TrilinearInterplate(color As Vec3b) As Vector3
+  overload: Beutl.Graphics.CubeFile.TrilinearInterplate*
+- uid: Beutl.Graphics.CubeFile.ToLUT(System.Single,System.Byte[],System.Byte[],System.Byte[])
+  commentId: M:Beutl.Graphics.CubeFile.ToLUT(System.Single,System.Byte[],System.Byte[],System.Byte[])
+  id: ToLUT(System.Single,System.Byte[],System.Byte[],System.Byte[])
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: ToLUT(float, byte[], byte[], byte[])
+  nameWithType: CubeFile.ToLUT(float, byte[], byte[], byte[])
+  fullName: Beutl.Graphics.CubeFile.ToLUT(float, byte[], byte[], byte[])
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public void ToLUT(float strength, byte[] r, byte[] g, byte[] b)
+    parameters:
+    - id: strength
+      type: System.Single
+    - id: r
+      type: System.Byte[]
+    - id: g
+      type: System.Byte[]
+    - id: b
+      type: System.Byte[]
+    content.vb: Public Sub ToLUT(strength As Single, r As Byte(), g As Byte(), b As Byte())
+  overload: Beutl.Graphics.CubeFile.ToLUT*
+  nameWithType.vb: CubeFile.ToLUT(Single, Byte(), Byte(), Byte())
+  fullName.vb: Beutl.Graphics.CubeFile.ToLUT(Single, Byte(), Byte(), Byte())
+  name.vb: ToLUT(Single, Byte(), Byte(), Byte())
+- uid: Beutl.Graphics.CubeFile.FromStream(System.IO.Stream)
+  commentId: M:Beutl.Graphics.CubeFile.FromStream(System.IO.Stream)
+  id: FromStream(System.IO.Stream)
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: FromStream(Stream)
+  nameWithType: CubeFile.FromStream(Stream)
+  fullName: Beutl.Graphics.CubeFile.FromStream(System.IO.Stream)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static CubeFile FromStream(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    return:
+      type: Beutl.Graphics.CubeFile
+    content.vb: Public Shared Function FromStream(stream As Stream) As CubeFile
+  overload: Beutl.Graphics.CubeFile.FromStream*
+- uid: Beutl.Graphics.CubeFile.Equals(Beutl.Graphics.CubeFile)
+  commentId: M:Beutl.Graphics.CubeFile.Equals(Beutl.Graphics.CubeFile)
+  id: Equals(Beutl.Graphics.CubeFile)
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Equals(CubeFile?)
+  nameWithType: CubeFile.Equals(CubeFile?)
+  fullName: Beutl.Graphics.CubeFile.Equals(Beutl.Graphics.CubeFile?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool Equals(CubeFile? other)
+    parameters:
+    - id: other
+      type: Beutl.Graphics.CubeFile
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As CubeFile) As Boolean
+  overload: Beutl.Graphics.CubeFile.Equals*
+  implements:
+  - System.IEquatable{Beutl.Graphics.CubeFile}.Equals(Beutl.Graphics.CubeFile)
+  nameWithType.vb: CubeFile.Equals(CubeFile)
+  fullName.vb: Beutl.Graphics.CubeFile.Equals(Beutl.Graphics.CubeFile)
+  name.vb: Equals(CubeFile)
+- uid: Beutl.Graphics.CubeFile.Equals(System.Object)
+  commentId: M:Beutl.Graphics.CubeFile.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: CubeFile.Equals(object?)
+  fullName: Beutl.Graphics.CubeFile.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Beutl.Graphics.CubeFile.Equals*
+  nameWithType.vb: CubeFile.Equals(Object)
+  fullName.vb: Beutl.Graphics.CubeFile.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Graphics.CubeFile.GetHashCode
+  commentId: M:Beutl.Graphics.CubeFile.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: CubeFile.GetHashCode()
+  fullName: Beutl.Graphics.CubeFile.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Beutl.Graphics.CubeFile.GetHashCode*
+- uid: Beutl.Graphics.CubeFile.#ctor
+  commentId: M:Beutl.Graphics.CubeFile.#ctor
+  id: '#ctor'
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: CubeFile()
+  nameWithType: CubeFile.CubeFile()
+  fullName: Beutl.Graphics.CubeFile.CubeFile()
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public CubeFile()
+    content.vb: Public Sub New()
+  overload: Beutl.Graphics.CubeFile.#ctor*
+  nameWithType.vb: CubeFile.New()
+  fullName.vb: Beutl.Graphics.CubeFile.New()
+  name.vb: New()
+- uid: Beutl.Graphics.CubeFile.Title
+  commentId: P:Beutl.Graphics.CubeFile.Title
+  id: Title
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: CubeFile.Title
+  fullName: Beutl.Graphics.CubeFile.Title
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public required string Title { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: Beutl.Graphics.CubeFile.Title*
+- uid: Beutl.Graphics.CubeFile.Dimention
+  commentId: P:Beutl.Graphics.CubeFile.Dimention
+  id: Dimention
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Dimention
+  nameWithType: CubeFile.Dimention
+  fullName: Beutl.Graphics.CubeFile.Dimention
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public required CubeFileDimension Dimention { get; init; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.CubeFileDimension
+    content.vb: Public Property Dimention As CubeFileDimension
+  overload: Beutl.Graphics.CubeFile.Dimention*
+- uid: Beutl.Graphics.CubeFile.Size
+  commentId: P:Beutl.Graphics.CubeFile.Size
+  id: Size
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: CubeFile.Size
+  fullName: Beutl.Graphics.CubeFile.Size
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public required int Size { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Size As Integer
+  overload: Beutl.Graphics.CubeFile.Size*
+- uid: Beutl.Graphics.CubeFile.Min
+  commentId: P:Beutl.Graphics.CubeFile.Min
+  id: Min
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Min
+  nameWithType: CubeFile.Min
+  fullName: Beutl.Graphics.CubeFile.Min
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public required Vector3 Min { get; init; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property Min As Vector3
+  overload: Beutl.Graphics.CubeFile.Min*
+- uid: Beutl.Graphics.CubeFile.Max
+  commentId: P:Beutl.Graphics.CubeFile.Max
+  id: Max
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Max
+  nameWithType: CubeFile.Max
+  fullName: Beutl.Graphics.CubeFile.Max
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public required Vector3 Max { get; init; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property Max As Vector3
+  overload: Beutl.Graphics.CubeFile.Max*
+- uid: Beutl.Graphics.CubeFile.Data
+  commentId: P:Beutl.Graphics.CubeFile.Data
+  id: Data
+  parent: Beutl.Graphics.CubeFile
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: CubeFile.Data
+  fullName: Beutl.Graphics.CubeFile.Data
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/CubeFile.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public required Vector3[] Data { get; init; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3[]
+    content.vb: Public Property Data As Vector3()
+  overload: Beutl.Graphics.CubeFile.Data*
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Beutl.Graphics.CubeFile}
+  commentId: T:System.IEquatable{Beutl.Graphics.CubeFile}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<CubeFile>
+  nameWithType: IEquatable<CubeFile>
+  fullName: System.IEquatable<Beutl.Graphics.CubeFile>
+  nameWithType.vb: IEquatable(Of CubeFile)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.CubeFile)
+  name.vb: IEquatable(Of CubeFile)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Graphics.CubeFile
+    name: CubeFile
+    isExternal: true
+    href: Beutl.Graphics.CubeFile.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.CubeFile
+    name: CubeFile
+    isExternal: true
+    href: Beutl.Graphics.CubeFile.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.CubeFile.TrilinearInterplate*
+  commentId: Overload:Beutl.Graphics.CubeFile.TrilinearInterplate
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_TrilinearInterplate_OpenCvSharp_Vec3b_
+  name: TrilinearInterplate
+  nameWithType: CubeFile.TrilinearInterplate
+  fullName: Beutl.Graphics.CubeFile.TrilinearInterplate
+- uid: OpenCvSharp.Vec3b
+  commentId: T:OpenCvSharp.Vec3b
+  parent: OpenCvSharp
+  isExternal: true
+  name: Vec3b
+  nameWithType: Vec3b
+  fullName: OpenCvSharp.Vec3b
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: OpenCvSharp
+  commentId: N:OpenCvSharp
+  isExternal: true
+  name: OpenCvSharp
+  nameWithType: OpenCvSharp
+  fullName: OpenCvSharp
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: Beutl.Graphics.CubeFile.ToLUT*
+  commentId: Overload:Beutl.Graphics.CubeFile.ToLUT
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_ToLUT_System_Single_System_Byte___System_Byte___System_Byte___
+  name: ToLUT
+  nameWithType: CubeFile.ToLUT
+  fullName: Beutl.Graphics.CubeFile.ToLUT
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.CubeFile.FromStream*
+  commentId: Overload:Beutl.Graphics.CubeFile.FromStream
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_FromStream_System_IO_Stream_
+  name: FromStream
+  nameWithType: CubeFile.FromStream
+  fullName: Beutl.Graphics.CubeFile.FromStream
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: Beutl.Graphics.CubeFile
+  commentId: T:Beutl.Graphics.CubeFile
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html
+  name: CubeFile
+  nameWithType: CubeFile
+  fullName: Beutl.Graphics.CubeFile
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Beutl.Graphics.CubeFile.Equals*
+  commentId: Overload:Beutl.Graphics.CubeFile.Equals
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_Equals_Beutl_Graphics_CubeFile_
+  name: Equals
+  nameWithType: CubeFile.Equals
+  fullName: Beutl.Graphics.CubeFile.Equals
+- uid: System.IEquatable{Beutl.Graphics.CubeFile}.Equals(Beutl.Graphics.CubeFile)
+  commentId: M:System.IEquatable{Beutl.Graphics.CubeFile}.Equals(Beutl.Graphics.CubeFile)
+  parent: System.IEquatable{Beutl.Graphics.CubeFile}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(CubeFile)
+  nameWithType: IEquatable<CubeFile>.Equals(CubeFile)
+  fullName: System.IEquatable<Beutl.Graphics.CubeFile>.Equals(Beutl.Graphics.CubeFile)
+  nameWithType.vb: IEquatable(Of CubeFile).Equals(CubeFile)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.CubeFile).Equals(Beutl.Graphics.CubeFile)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Graphics.CubeFile}.Equals(Beutl.Graphics.CubeFile)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.CubeFile
+    name: CubeFile
+    isExternal: true
+    href: Beutl.Graphics.CubeFile.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Graphics.CubeFile}.Equals(Beutl.Graphics.CubeFile)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.CubeFile
+    name: CubeFile
+    isExternal: true
+    href: Beutl.Graphics.CubeFile.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.CubeFile.GetHashCode*
+  commentId: Overload:Beutl.Graphics.CubeFile.GetHashCode
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_GetHashCode
+  name: GetHashCode
+  nameWithType: CubeFile.GetHashCode
+  fullName: Beutl.Graphics.CubeFile.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Graphics.CubeFile.#ctor*
+  commentId: Overload:Beutl.Graphics.CubeFile.#ctor
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile__ctor
+  name: CubeFile
+  nameWithType: CubeFile.CubeFile
+  fullName: Beutl.Graphics.CubeFile.CubeFile
+  nameWithType.vb: CubeFile.New
+  fullName.vb: Beutl.Graphics.CubeFile.New
+  name.vb: New
+- uid: Beutl.Graphics.CubeFile.Title*
+  commentId: Overload:Beutl.Graphics.CubeFile.Title
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_Title
+  name: Title
+  nameWithType: CubeFile.Title
+  fullName: Beutl.Graphics.CubeFile.Title
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Graphics.CubeFile.Dimention*
+  commentId: Overload:Beutl.Graphics.CubeFile.Dimention
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_Dimention
+  name: Dimention
+  nameWithType: CubeFile.Dimention
+  fullName: Beutl.Graphics.CubeFile.Dimention
+- uid: Beutl.Graphics.CubeFileDimension
+  commentId: T:Beutl.Graphics.CubeFileDimension
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.CubeFileDimension.html
+  name: CubeFileDimension
+  nameWithType: CubeFileDimension
+  fullName: Beutl.Graphics.CubeFileDimension
+- uid: Beutl.Graphics.CubeFile.Size*
+  commentId: Overload:Beutl.Graphics.CubeFile.Size
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_Size
+  name: Size
+  nameWithType: CubeFile.Size
+  fullName: Beutl.Graphics.CubeFile.Size
+- uid: Beutl.Graphics.CubeFile.Min*
+  commentId: Overload:Beutl.Graphics.CubeFile.Min
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_Min
+  name: Min
+  nameWithType: CubeFile.Min
+  fullName: Beutl.Graphics.CubeFile.Min
+- uid: Beutl.Graphics.CubeFile.Max*
+  commentId: Overload:Beutl.Graphics.CubeFile.Max
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_Max
+  name: Max
+  nameWithType: CubeFile.Max
+  fullName: Beutl.Graphics.CubeFile.Max
+- uid: Beutl.Graphics.CubeFile.Data*
+  commentId: Overload:Beutl.Graphics.CubeFile.Data
+  isExternal: true
+  href: Beutl.Graphics.CubeFile.html#Beutl_Graphics_CubeFile_Data
+  name: Data
+  nameWithType: CubeFile.Data
+  fullName: Beutl.Graphics.CubeFile.Data
+- uid: System.Numerics.Vector3[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: System.Numerics.Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: System.Numerics.Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: (
+  - name: )

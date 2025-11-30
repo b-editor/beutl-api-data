@@ -1,0 +1,634 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.IBitmap
+  commentId: T:Beutl.Media.IBitmap
+  id: IBitmap
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.IBitmap.ByteCount
+  - Beutl.Media.IBitmap.Clone
+  - Beutl.Media.IBitmap.Convert``1
+  - Beutl.Media.IBitmap.Data
+  - Beutl.Media.IBitmap.Height
+  - Beutl.Media.IBitmap.IsDisposed
+  - Beutl.Media.IBitmap.PixelSize
+  - Beutl.Media.IBitmap.PixelType
+  - Beutl.Media.IBitmap.Width
+  langs:
+  - csharp
+  - vb
+  name: IBitmap
+  nameWithType: IBitmap
+  fullName: Beutl.Media.IBitmap
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: 'public interface IBitmap : IDisposable, ICloneable'
+    content.vb: Public Interface IBitmap Inherits IDisposable, ICloneable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  extensionMethods:
+  - Beutl.Media.IBitmap.Beutl.Graphics.Image.ToSKBitmap
+  - Beutl.Media.IBitmap.Beutl.Graphics.Image.ToSKImage
+- uid: Beutl.Media.IBitmap.Convert``1
+  commentId: M:Beutl.Media.IBitmap.Convert``1
+  id: Convert``1
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: Convert<T>()
+  nameWithType: IBitmap.Convert<T>()
+  fullName: Beutl.Media.IBitmap.Convert<T>()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: 'Bitmap<T> Convert<T>() where T : unmanaged, IPixel<T>'
+    typeParameters:
+    - id: T
+    return:
+      type: Beutl.Media.Bitmap{{T}}
+    content.vb: Function Convert(Of T As {Structure, IPixel(Of T)})() As Bitmap(Of T)
+  overload: Beutl.Media.IBitmap.Convert*
+  nameWithType.vb: IBitmap.Convert(Of T)()
+  fullName.vb: Beutl.Media.IBitmap.Convert(Of T)()
+  name.vb: Convert(Of T)()
+- uid: Beutl.Media.IBitmap.Clone
+  commentId: M:Beutl.Media.IBitmap.Clone
+  id: Clone
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: IBitmap.Clone()
+  fullName: Beutl.Media.IBitmap.Clone()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: IBitmap Clone()
+    return:
+      type: Beutl.Media.IBitmap
+    content.vb: Function Clone() As IBitmap
+  overload: Beutl.Media.IBitmap.Clone*
+- uid: Beutl.Media.IBitmap.Width
+  commentId: P:Beutl.Media.IBitmap.Width
+  id: Width
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: IBitmap.Width
+  fullName: Beutl.Media.IBitmap.Width
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Width As Integer
+  overload: Beutl.Media.IBitmap.Width*
+- uid: Beutl.Media.IBitmap.Height
+  commentId: P:Beutl.Media.IBitmap.Height
+  id: Height
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: IBitmap.Height
+  fullName: Beutl.Media.IBitmap.Height
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Height As Integer
+  overload: Beutl.Media.IBitmap.Height*
+- uid: Beutl.Media.IBitmap.ByteCount
+  commentId: P:Beutl.Media.IBitmap.ByteCount
+  id: ByteCount
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: ByteCount
+  nameWithType: IBitmap.ByteCount
+  fullName: Beutl.Media.IBitmap.ByteCount
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: int ByteCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property ByteCount As Integer
+  overload: Beutl.Media.IBitmap.ByteCount*
+- uid: Beutl.Media.IBitmap.PixelSize
+  commentId: P:Beutl.Media.IBitmap.PixelSize
+  id: PixelSize
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: PixelSize
+  nameWithType: IBitmap.PixelSize
+  fullName: Beutl.Media.IBitmap.PixelSize
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: int PixelSize { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property PixelSize As Integer
+  overload: Beutl.Media.IBitmap.PixelSize*
+- uid: Beutl.Media.IBitmap.Data
+  commentId: P:Beutl.Media.IBitmap.Data
+  id: Data
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: IBitmap.Data
+  fullName: Beutl.Media.IBitmap.Data
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: nint Data { get; }
+    parameters: []
+    return:
+      type: System.IntPtr
+    content.vb: ReadOnly Property Data As IntPtr
+  overload: Beutl.Media.IBitmap.Data*
+- uid: Beutl.Media.IBitmap.IsDisposed
+  commentId: P:Beutl.Media.IBitmap.IsDisposed
+  id: IsDisposed
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: IBitmap.IsDisposed
+  fullName: Beutl.Media.IBitmap.IsDisposed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsDisposed As Boolean
+  overload: Beutl.Media.IBitmap.IsDisposed*
+- uid: Beutl.Media.IBitmap.PixelType
+  commentId: P:Beutl.Media.IBitmap.PixelType
+  id: PixelType
+  parent: Beutl.Media.IBitmap
+  langs:
+  - csharp
+  - vb
+  name: PixelType
+  nameWithType: IBitmap.PixelType
+  fullName: Beutl.Media.IBitmap.PixelType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/IBitmap.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: Type PixelType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property PixelType As Type
+  overload: Beutl.Media.IBitmap.PixelType*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.Media.IBitmap.Beutl.Graphics.Image.ToSKBitmap
+  commentId: M:Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  parent: Beutl.Graphics.Image
+  definition: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKBitmap_Beutl_Media_IBitmap_
+  name: ToSKBitmap(IBitmap)
+  nameWithType: Image.ToSKBitmap(IBitmap)
+  fullName: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  spec.csharp:
+  - uid: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+    name: ToSKBitmap
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKBitmap_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+    name: ToSKBitmap
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKBitmap_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+- uid: Beutl.Media.IBitmap.Beutl.Graphics.Image.ToSKImage
+  commentId: M:Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  parent: Beutl.Graphics.Image
+  definition: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKImage_Beutl_Media_IBitmap_
+  name: ToSKImage(IBitmap)
+  nameWithType: Image.ToSKImage(IBitmap)
+  fullName: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  spec.csharp:
+  - uid: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+    name: ToSKImage
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKImage_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+    name: ToSKImage
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKImage_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  commentId: M:Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKBitmap_Beutl_Media_IBitmap_
+  name: ToSKBitmap(IBitmap)
+  nameWithType: Image.ToSKBitmap(IBitmap)
+  fullName: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+  spec.csharp:
+  - uid: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+    name: ToSKBitmap
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKBitmap_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Image.ToSKBitmap(Beutl.Media.IBitmap)
+    name: ToSKBitmap
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKBitmap_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+- uid: Beutl.Graphics.Image
+  commentId: T:Beutl.Graphics.Image
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Image.html
+  name: Image
+  nameWithType: Image
+  fullName: Beutl.Graphics.Image
+- uid: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  commentId: M:Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  isExternal: true
+  href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKImage_Beutl_Media_IBitmap_
+  name: ToSKImage(IBitmap)
+  nameWithType: Image.ToSKImage(IBitmap)
+  fullName: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+  spec.csharp:
+  - uid: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+    name: ToSKImage
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKImage_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Image.ToSKImage(Beutl.Media.IBitmap)
+    name: ToSKImage
+    isExternal: true
+    href: Beutl.Graphics.Image.html#Beutl_Graphics_Image_ToSKImage_Beutl_Media_IBitmap_
+  - name: (
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: Beutl.Media.IBitmap.Convert*
+  commentId: Overload:Beutl.Media.IBitmap.Convert
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_Convert__1
+  name: Convert
+  nameWithType: IBitmap.Convert
+  fullName: Beutl.Media.IBitmap.Convert
+- uid: Beutl.Media.Bitmap{{T}}
+  commentId: T:Beutl.Media.Bitmap{``0}
+  parent: Beutl.Media
+  definition: Beutl.Media.Bitmap`1
+  href: Beutl.Media.Bitmap-1.html
+  name: Bitmap<T>
+  nameWithType: Bitmap<T>
+  fullName: Beutl.Media.Bitmap<T>
+  nameWithType.vb: Bitmap(Of T)
+  fullName.vb: Beutl.Media.Bitmap(Of T)
+  name.vb: Bitmap(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.Bitmap`1
+  commentId: T:Beutl.Media.Bitmap`1
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Bitmap-1.html
+  name: Bitmap<T>
+  nameWithType: Bitmap<T>
+  fullName: Beutl.Media.Bitmap<T>
+  nameWithType.vb: Bitmap(Of T)
+  fullName.vb: Beutl.Media.Bitmap(Of T)
+  name.vb: Bitmap(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Bitmap`1
+    name: Bitmap
+    isExternal: true
+    href: Beutl.Media.Bitmap-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.IBitmap.Clone*
+  commentId: Overload:Beutl.Media.IBitmap.Clone
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_Clone
+  name: Clone
+  nameWithType: IBitmap.Clone
+  fullName: Beutl.Media.IBitmap.Clone
+- uid: Beutl.Media.IBitmap
+  commentId: T:Beutl.Media.IBitmap
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.IBitmap.html
+  name: IBitmap
+  nameWithType: IBitmap
+  fullName: Beutl.Media.IBitmap
+- uid: Beutl.Media.IBitmap.Width*
+  commentId: Overload:Beutl.Media.IBitmap.Width
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_Width
+  name: Width
+  nameWithType: IBitmap.Width
+  fullName: Beutl.Media.IBitmap.Width
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.IBitmap.Height*
+  commentId: Overload:Beutl.Media.IBitmap.Height
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_Height
+  name: Height
+  nameWithType: IBitmap.Height
+  fullName: Beutl.Media.IBitmap.Height
+- uid: Beutl.Media.IBitmap.ByteCount*
+  commentId: Overload:Beutl.Media.IBitmap.ByteCount
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_ByteCount
+  name: ByteCount
+  nameWithType: IBitmap.ByteCount
+  fullName: Beutl.Media.IBitmap.ByteCount
+- uid: Beutl.Media.IBitmap.PixelSize*
+  commentId: Overload:Beutl.Media.IBitmap.PixelSize
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_PixelSize
+  name: PixelSize
+  nameWithType: IBitmap.PixelSize
+  fullName: Beutl.Media.IBitmap.PixelSize
+- uid: Beutl.Media.IBitmap.Data*
+  commentId: Overload:Beutl.Media.IBitmap.Data
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_Data
+  name: Data
+  nameWithType: IBitmap.Data
+  fullName: Beutl.Media.IBitmap.Data
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: Beutl.Media.IBitmap.IsDisposed*
+  commentId: Overload:Beutl.Media.IBitmap.IsDisposed
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_IsDisposed
+  name: IsDisposed
+  nameWithType: IBitmap.IsDisposed
+  fullName: Beutl.Media.IBitmap.IsDisposed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media.IBitmap.PixelType*
+  commentId: Overload:Beutl.Media.IBitmap.PixelType
+  isExternal: true
+  href: Beutl.Media.IBitmap.html#Beutl_Media_IBitmap_PixelType
+  name: PixelType
+  nameWithType: IBitmap.PixelType
+  fullName: Beutl.Media.IBitmap.PixelType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type

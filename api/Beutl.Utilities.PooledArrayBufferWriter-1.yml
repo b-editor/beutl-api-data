@@ -1,0 +1,1497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1
+  commentId: T:Beutl.Utilities.PooledArrayBufferWriter`1
+  id: PooledArrayBufferWriter`1
+  parent: Beutl.Utilities
+  children:
+  - Beutl.Utilities.PooledArrayBufferWriter`1.#ctor(System.Buffers.ArrayPool{`0})
+  - Beutl.Utilities.PooledArrayBufferWriter`1.#ctor(System.Int32,System.Buffers.ArrayPool{`0})
+  - Beutl.Utilities.PooledArrayBufferWriter`1.Advance(System.Int32)
+  - Beutl.Utilities.PooledArrayBufferWriter`1.Capacity
+  - Beutl.Utilities.PooledArrayBufferWriter`1.Clear
+  - Beutl.Utilities.PooledArrayBufferWriter`1.Dispose
+  - Beutl.Utilities.PooledArrayBufferWriter`1.Finalize
+  - Beutl.Utilities.PooledArrayBufferWriter`1.FreeCapacity
+  - Beutl.Utilities.PooledArrayBufferWriter`1.GetArray(Beutl.Utilities.PooledArrayBufferWriter{`0})
+  - Beutl.Utilities.PooledArrayBufferWriter`1.GetMemory(System.Int32)
+  - Beutl.Utilities.PooledArrayBufferWriter`1.GetSpan(System.Int32)
+  - Beutl.Utilities.PooledArrayBufferWriter`1.IsDisposed
+  - Beutl.Utilities.PooledArrayBufferWriter`1.WrittenCount
+  - Beutl.Utilities.PooledArrayBufferWriter`1.WrittenMemory
+  - Beutl.Utilities.PooledArrayBufferWriter`1.WrittenSpan
+  langs:
+  - csharp
+  - vb
+  name: PooledArrayBufferWriter<T>
+  nameWithType: PooledArrayBufferWriter<T>
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: 'public sealed class PooledArrayBufferWriter<T> : IBufferWriter<T>, IDisposable'
+    typeParameters:
+    - id: T
+    content.vb: Public NotInheritable Class PooledArrayBufferWriter(Of T) Implements IBufferWriter(Of T), IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Buffers.IBufferWriter{{T}}
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  nameWithType.vb: PooledArrayBufferWriter(Of T)
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T)
+  name.vb: PooledArrayBufferWriter(Of T)
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.#ctor(System.Buffers.ArrayPool{`0})
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.#ctor(System.Buffers.ArrayPool{`0})
+  id: '#ctor(System.Buffers.ArrayPool{`0})'
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: PooledArrayBufferWriter(ArrayPool<T>?)
+  nameWithType: PooledArrayBufferWriter<T>.PooledArrayBufferWriter(ArrayPool<T>?)
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.PooledArrayBufferWriter(System.Buffers.ArrayPool<T>?)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public PooledArrayBufferWriter(ArrayPool<T>? pool = null)
+    parameters:
+    - id: pool
+      type: System.Buffers.ArrayPool{{T}}
+    content.vb: Public Sub New(pool As ArrayPool(Of T) = Nothing)
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.#ctor*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).New(ArrayPool(Of T))
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).New(System.Buffers.ArrayPool(Of T))
+  name.vb: New(ArrayPool(Of T))
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.#ctor(System.Int32,System.Buffers.ArrayPool{`0})
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.#ctor(System.Int32,System.Buffers.ArrayPool{`0})
+  id: '#ctor(System.Int32,System.Buffers.ArrayPool{`0})'
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: PooledArrayBufferWriter(int, ArrayPool<T>?)
+  nameWithType: PooledArrayBufferWriter<T>.PooledArrayBufferWriter(int, ArrayPool<T>?)
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.PooledArrayBufferWriter(int, System.Buffers.ArrayPool<T>?)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public PooledArrayBufferWriter(int initialCapacity, ArrayPool<T>? pool = null)
+    parameters:
+    - id: initialCapacity
+      type: System.Int32
+    - id: pool
+      type: System.Buffers.ArrayPool{{T}}
+    content.vb: Public Sub New(initialCapacity As Integer, pool As ArrayPool(Of T) = Nothing)
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.#ctor*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).New(Integer, ArrayPool(Of T))
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).New(Integer, System.Buffers.ArrayPool(Of T))
+  name.vb: New(Integer, ArrayPool(Of T))
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Finalize
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.Finalize
+  id: Finalize
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: ~PooledArrayBufferWriter()
+  nameWithType: PooledArrayBufferWriter<T>.~PooledArrayBufferWriter()
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.~PooledArrayBufferWriter()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      protected ~PooledArrayBufferWriter()
+    content.vb: "<ExcludeFromCodeCoverage>\nProtected "
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.Finalize*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Clear
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.Clear
+  id: Clear
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: PooledArrayBufferWriter<T>.Clear()
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Clear()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.Clear*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Clear()
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Clear()
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Advance(System.Int32)
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.Advance(System.Int32)
+  id: Advance(System.Int32)
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: Advance(int)
+  nameWithType: PooledArrayBufferWriter<T>.Advance(int)
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Advance(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  example: []
+  syntax:
+    content: public void Advance(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+    content.vb: Public Sub Advance(count As Integer)
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.Advance*
+  implements:
+  - System.Buffers.IBufferWriter{{T}}.Advance(System.Int32)
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Advance(Integer)
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Advance(Integer)
+  name.vb: Advance(Integer)
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.GetMemory(System.Int32)
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.GetMemory(System.Int32)
+  id: GetMemory(System.Int32)
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: GetMemory(int)
+  nameWithType: PooledArrayBufferWriter<T>.GetMemory(int)
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.GetMemory(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  example: []
+  syntax:
+    content: public Memory<T> GetMemory(int sizeHint = 0)
+    parameters:
+    - id: sizeHint
+      type: System.Int32
+    return:
+      type: System.Memory{{T}}
+    content.vb: Public Function GetMemory(sizeHint As Integer = 0) As Memory(Of T)
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.GetMemory*
+  implements:
+  - System.Buffers.IBufferWriter{{T}}.GetMemory(System.Int32)
+  nameWithType.vb: PooledArrayBufferWriter(Of T).GetMemory(Integer)
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).GetMemory(Integer)
+  name.vb: GetMemory(Integer)
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.GetSpan(System.Int32)
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.GetSpan(System.Int32)
+  id: GetSpan(System.Int32)
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: GetSpan(int)
+  nameWithType: PooledArrayBufferWriter<T>.GetSpan(int)
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.GetSpan(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  example: []
+  syntax:
+    content: public Span<T> GetSpan(int sizeHint = 0)
+    parameters:
+    - id: sizeHint
+      type: System.Int32
+    return:
+      type: System.Span{{T}}
+    content.vb: Public Function GetSpan(sizeHint As Integer = 0) As Span(Of T)
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.GetSpan*
+  implements:
+  - System.Buffers.IBufferWriter{{T}}.GetSpan(System.Int32)
+  nameWithType.vb: PooledArrayBufferWriter(Of T).GetSpan(Integer)
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).GetSpan(Integer)
+  name.vb: GetSpan(Integer)
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.GetArray(Beutl.Utilities.PooledArrayBufferWriter{`0})
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.GetArray(Beutl.Utilities.PooledArrayBufferWriter{`0})
+  id: GetArray(Beutl.Utilities.PooledArrayBufferWriter{`0})
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: GetArray(PooledArrayBufferWriter<T>)
+  nameWithType: PooledArrayBufferWriter<T>.GetArray(PooledArrayBufferWriter<T>)
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.GetArray(Beutl.Utilities.PooledArrayBufferWriter<T>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public static T[] GetArray(PooledArrayBufferWriter<T> self)
+    parameters:
+    - id: self
+      type: Beutl.Utilities.PooledArrayBufferWriter`1
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function GetArray(self As PooledArrayBufferWriter(Of T)) As T()
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.GetArray*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).GetArray(PooledArrayBufferWriter(Of T))
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).GetArray(Beutl.Utilities.PooledArrayBufferWriter(Of T))
+  name.vb: GetArray(PooledArrayBufferWriter(Of T))
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Dispose
+  commentId: M:Beutl.Utilities.PooledArrayBufferWriter`1.Dispose
+  id: Dispose
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: PooledArrayBufferWriter<T>.Dispose()
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Dispose()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Dispose()
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Dispose()
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenMemory
+  commentId: P:Beutl.Utilities.PooledArrayBufferWriter`1.WrittenMemory
+  id: WrittenMemory
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: WrittenMemory
+  nameWithType: PooledArrayBufferWriter<T>.WrittenMemory
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.WrittenMemory
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public ReadOnlyMemory<T> WrittenMemory { get; }
+    parameters: []
+    return:
+      type: System.ReadOnlyMemory{{T}}
+    content.vb: Public ReadOnly Property WrittenMemory As ReadOnlyMemory(Of T)
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenMemory*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).WrittenMemory
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).WrittenMemory
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenSpan
+  commentId: P:Beutl.Utilities.PooledArrayBufferWriter`1.WrittenSpan
+  id: WrittenSpan
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: WrittenSpan
+  nameWithType: PooledArrayBufferWriter<T>.WrittenSpan
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.WrittenSpan
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public ReadOnlySpan<T> WrittenSpan { get; }
+    parameters: []
+    return:
+      type: System.ReadOnlySpan{{T}}
+    content.vb: Public ReadOnly Property WrittenSpan As ReadOnlySpan(Of T)
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenSpan*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).WrittenSpan
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).WrittenSpan
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenCount
+  commentId: P:Beutl.Utilities.PooledArrayBufferWriter`1.WrittenCount
+  id: WrittenCount
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: WrittenCount
+  nameWithType: PooledArrayBufferWriter<T>.WrittenCount
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.WrittenCount
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public int WrittenCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property WrittenCount As Integer
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenCount*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).WrittenCount
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).WrittenCount
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Capacity
+  commentId: P:Beutl.Utilities.PooledArrayBufferWriter`1.Capacity
+  id: Capacity
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: Capacity
+  nameWithType: PooledArrayBufferWriter<T>.Capacity
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Capacity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: >-
+      [ExcludeFromCodeCoverage]
+
+      public int Capacity { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ExcludeFromCodeCoverage>
+
+      Public ReadOnly Property Capacity As Integer
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.Capacity*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute.#ctor
+    arguments: []
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Capacity
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Capacity
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.FreeCapacity
+  commentId: P:Beutl.Utilities.PooledArrayBufferWriter`1.FreeCapacity
+  id: FreeCapacity
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: FreeCapacity
+  nameWithType: PooledArrayBufferWriter<T>.FreeCapacity
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.FreeCapacity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public int FreeCapacity { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property FreeCapacity As Integer
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.FreeCapacity*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).FreeCapacity
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).FreeCapacity
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.IsDisposed
+  commentId: P:Beutl.Utilities.PooledArrayBufferWriter`1.IsDisposed
+  id: IsDisposed
+  parent: Beutl.Utilities.PooledArrayBufferWriter`1
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: PooledArrayBufferWriter<T>.IsDisposed
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.IsDisposed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/PooledArrayBufferWriter.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisposed As Boolean
+  overload: Beutl.Utilities.PooledArrayBufferWriter`1.IsDisposed*
+  nameWithType.vb: PooledArrayBufferWriter(Of T).IsDisposed
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).IsDisposed
+references:
+- uid: Beutl.Utilities
+  commentId: N:Beutl.Utilities
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Utilities
+  nameWithType: Beutl.Utilities
+  fullName: Beutl.Utilities
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Utilities
+    name: Utilities
+    isExternal: true
+    href: Beutl.Utilities.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Utilities
+    name: Utilities
+    isExternal: true
+    href: Beutl.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Buffers.IBufferWriter{{T}}
+  commentId: T:System.Buffers.IBufferWriter{`0}
+  parent: System.Buffers
+  definition: System.Buffers.IBufferWriter`1
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1
+  name: IBufferWriter<T>
+  nameWithType: IBufferWriter<T>
+  fullName: System.Buffers.IBufferWriter<T>
+  nameWithType.vb: IBufferWriter(Of T)
+  fullName.vb: System.Buffers.IBufferWriter(Of T)
+  name.vb: IBufferWriter(Of T)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter`1
+    name: IBufferWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter`1
+    name: IBufferWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Buffers.IBufferWriter`1
+  commentId: T:System.Buffers.IBufferWriter`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1
+  name: IBufferWriter<T>
+  nameWithType: IBufferWriter<T>
+  fullName: System.Buffers.IBufferWriter<T>
+  nameWithType.vb: IBufferWriter(Of T)
+  fullName.vb: System.Buffers.IBufferWriter(Of T)
+  name.vb: IBufferWriter(Of T)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter`1
+    name: IBufferWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter`1
+    name: IBufferWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Buffers
+  commentId: N:System.Buffers
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Buffers
+  nameWithType: System.Buffers
+  fullName: System.Buffers
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Buffers
+    name: Buffers
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Buffers
+    name: Buffers
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.#ctor*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.#ctor
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1__ctor_System_Buffers_ArrayPool__0__
+  name: PooledArrayBufferWriter
+  nameWithType: PooledArrayBufferWriter<T>.PooledArrayBufferWriter
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.PooledArrayBufferWriter
+  nameWithType.vb: PooledArrayBufferWriter(Of T).New
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).New
+  name.vb: New
+- uid: System.Buffers.ArrayPool{{T}}
+  commentId: T:System.Buffers.ArrayPool{`0}
+  parent: System.Buffers
+  definition: System.Buffers.ArrayPool`1
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  name: ArrayPool<T>
+  nameWithType: ArrayPool<T>
+  fullName: System.Buffers.ArrayPool<T>
+  nameWithType.vb: ArrayPool(Of T)
+  fullName.vb: System.Buffers.ArrayPool(Of T)
+  name.vb: ArrayPool(Of T)
+  spec.csharp:
+  - uid: System.Buffers.ArrayPool`1
+    name: ArrayPool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Buffers.ArrayPool`1
+    name: ArrayPool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Buffers.ArrayPool`1
+  commentId: T:System.Buffers.ArrayPool`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  name: ArrayPool<T>
+  nameWithType: ArrayPool<T>
+  fullName: System.Buffers.ArrayPool<T>
+  nameWithType.vb: ArrayPool(Of T)
+  fullName.vb: System.Buffers.ArrayPool(Of T)
+  name.vb: ArrayPool(Of T)
+  spec.csharp:
+  - uid: System.Buffers.ArrayPool`1
+    name: ArrayPool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Buffers.ArrayPool`1
+    name: ArrayPool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Finalize*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.Finalize
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_Finalize
+  name: ~PooledArrayBufferWriter
+  nameWithType: PooledArrayBufferWriter<T>.~PooledArrayBufferWriter
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.~PooledArrayBufferWriter
+  spec.csharp:
+  - name: "~"
+  - uid: Beutl.Utilities.PooledArrayBufferWriter`1.Finalize*
+    name: PooledArrayBufferWriter
+    isExternal: true
+    href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_Finalize
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Clear*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.Clear
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_Clear
+  name: Clear
+  nameWithType: PooledArrayBufferWriter<T>.Clear
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Clear
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Clear
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Clear
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Advance*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.Advance
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_Advance_System_Int32_
+  name: Advance
+  nameWithType: PooledArrayBufferWriter<T>.Advance
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Advance
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Advance
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Advance
+- uid: System.Buffers.IBufferWriter{{T}}.Advance(System.Int32)
+  commentId: M:System.Buffers.IBufferWriter{`0}.Advance(System.Int32)
+  parent: System.Buffers.IBufferWriter{{T}}
+  definition: System.Buffers.IBufferWriter`1.Advance(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.advance
+  name: Advance(int)
+  nameWithType: IBufferWriter<T>.Advance(int)
+  fullName: System.Buffers.IBufferWriter<T>.Advance(int)
+  nameWithType.vb: IBufferWriter(Of T).Advance(Integer)
+  fullName.vb: System.Buffers.IBufferWriter(Of T).Advance(Integer)
+  name.vb: Advance(Integer)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter{`0}.Advance(System.Int32)
+    name: Advance
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.advance
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter{`0}.Advance(System.Int32)
+    name: Advance
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.advance
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Buffers.IBufferWriter`1.Advance(System.Int32)
+  commentId: M:System.Buffers.IBufferWriter`1.Advance(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.advance
+  name: Advance(int)
+  nameWithType: IBufferWriter<T>.Advance(int)
+  fullName: System.Buffers.IBufferWriter<T>.Advance(int)
+  nameWithType.vb: IBufferWriter(Of T).Advance(Integer)
+  fullName.vb: System.Buffers.IBufferWriter(Of T).Advance(Integer)
+  name.vb: Advance(Integer)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter`1.Advance(System.Int32)
+    name: Advance
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.advance
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter`1.Advance(System.Int32)
+    name: Advance
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.advance
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.GetMemory*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.GetMemory
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_GetMemory_System_Int32_
+  name: GetMemory
+  nameWithType: PooledArrayBufferWriter<T>.GetMemory
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.GetMemory
+  nameWithType.vb: PooledArrayBufferWriter(Of T).GetMemory
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).GetMemory
+- uid: System.Buffers.IBufferWriter{{T}}.GetMemory(System.Int32)
+  commentId: M:System.Buffers.IBufferWriter{`0}.GetMemory(System.Int32)
+  parent: System.Buffers.IBufferWriter{{T}}
+  definition: System.Buffers.IBufferWriter`1.GetMemory(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getmemory
+  name: GetMemory(int)
+  nameWithType: IBufferWriter<T>.GetMemory(int)
+  fullName: System.Buffers.IBufferWriter<T>.GetMemory(int)
+  nameWithType.vb: IBufferWriter(Of T).GetMemory(Integer)
+  fullName.vb: System.Buffers.IBufferWriter(Of T).GetMemory(Integer)
+  name.vb: GetMemory(Integer)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter{`0}.GetMemory(System.Int32)
+    name: GetMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getmemory
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter{`0}.GetMemory(System.Int32)
+    name: GetMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getmemory
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Memory{{T}}
+  commentId: T:System.Memory{`0}
+  parent: System
+  definition: System.Memory`1
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Buffers.IBufferWriter`1.GetMemory(System.Int32)
+  commentId: M:System.Buffers.IBufferWriter`1.GetMemory(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getmemory
+  name: GetMemory(int)
+  nameWithType: IBufferWriter<T>.GetMemory(int)
+  fullName: System.Buffers.IBufferWriter<T>.GetMemory(int)
+  nameWithType.vb: IBufferWriter(Of T).GetMemory(Integer)
+  fullName.vb: System.Buffers.IBufferWriter(Of T).GetMemory(Integer)
+  name.vb: GetMemory(Integer)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter`1.GetMemory(System.Int32)
+    name: GetMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getmemory
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter`1.GetMemory(System.Int32)
+    name: GetMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getmemory
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Memory`1
+  commentId: T:System.Memory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.GetSpan*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.GetSpan
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_GetSpan_System_Int32_
+  name: GetSpan
+  nameWithType: PooledArrayBufferWriter<T>.GetSpan
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.GetSpan
+  nameWithType.vb: PooledArrayBufferWriter(Of T).GetSpan
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).GetSpan
+- uid: System.Buffers.IBufferWriter{{T}}.GetSpan(System.Int32)
+  commentId: M:System.Buffers.IBufferWriter{`0}.GetSpan(System.Int32)
+  parent: System.Buffers.IBufferWriter{{T}}
+  definition: System.Buffers.IBufferWriter`1.GetSpan(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getspan
+  name: GetSpan(int)
+  nameWithType: IBufferWriter<T>.GetSpan(int)
+  fullName: System.Buffers.IBufferWriter<T>.GetSpan(int)
+  nameWithType.vb: IBufferWriter(Of T).GetSpan(Integer)
+  fullName.vb: System.Buffers.IBufferWriter(Of T).GetSpan(Integer)
+  name.vb: GetSpan(Integer)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter{`0}.GetSpan(System.Int32)
+    name: GetSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getspan
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter{`0}.GetSpan(System.Int32)
+    name: GetSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getspan
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Span{{T}}
+  commentId: T:System.Span{`0}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Buffers.IBufferWriter`1.GetSpan(System.Int32)
+  commentId: M:System.Buffers.IBufferWriter`1.GetSpan(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getspan
+  name: GetSpan(int)
+  nameWithType: IBufferWriter<T>.GetSpan(int)
+  fullName: System.Buffers.IBufferWriter<T>.GetSpan(int)
+  nameWithType.vb: IBufferWriter(Of T).GetSpan(Integer)
+  fullName.vb: System.Buffers.IBufferWriter(Of T).GetSpan(Integer)
+  name.vb: GetSpan(Integer)
+  spec.csharp:
+  - uid: System.Buffers.IBufferWriter`1.GetSpan(System.Int32)
+    name: GetSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getspan
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Buffers.IBufferWriter`1.GetSpan(System.Int32)
+    name: GetSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.ibufferwriter-1.getspan
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.GetArray*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.GetArray
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_GetArray_Beutl_Utilities_PooledArrayBufferWriter__0__
+  name: GetArray
+  nameWithType: PooledArrayBufferWriter<T>.GetArray
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.GetArray
+  nameWithType.vb: PooledArrayBufferWriter(Of T).GetArray
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).GetArray
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1
+  commentId: T:Beutl.Utilities.PooledArrayBufferWriter`1
+  parent: Beutl.Utilities
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html
+  name: PooledArrayBufferWriter<T>
+  nameWithType: PooledArrayBufferWriter<T>
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>
+  nameWithType.vb: PooledArrayBufferWriter(Of T)
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T)
+  name.vb: PooledArrayBufferWriter(Of T)
+  spec.csharp:
+  - uid: Beutl.Utilities.PooledArrayBufferWriter`1
+    name: PooledArrayBufferWriter
+    isExternal: true
+    href: Beutl.Utilities.PooledArrayBufferWriter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Utilities.PooledArrayBufferWriter`1
+    name: PooledArrayBufferWriter
+    isExternal: true
+    href: Beutl.Utilities.PooledArrayBufferWriter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Dispose*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.Dispose
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_Dispose
+  name: Dispose
+  nameWithType: PooledArrayBufferWriter<T>.Dispose
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Dispose
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Dispose
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenMemory*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.WrittenMemory
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_WrittenMemory
+  name: WrittenMemory
+  nameWithType: PooledArrayBufferWriter<T>.WrittenMemory
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.WrittenMemory
+  nameWithType.vb: PooledArrayBufferWriter(Of T).WrittenMemory
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).WrittenMemory
+- uid: System.ReadOnlyMemory{{T}}
+  commentId: T:System.ReadOnlyMemory{`0}
+  parent: System
+  definition: System.ReadOnlyMemory`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ReadOnlyMemory`1
+  commentId: T:System.ReadOnlyMemory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenSpan*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.WrittenSpan
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_WrittenSpan
+  name: WrittenSpan
+  nameWithType: PooledArrayBufferWriter<T>.WrittenSpan
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.WrittenSpan
+  nameWithType.vb: PooledArrayBufferWriter(Of T).WrittenSpan
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).WrittenSpan
+- uid: System.ReadOnlySpan{{T}}
+  commentId: T:System.ReadOnlySpan{`0}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.WrittenCount*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.WrittenCount
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_WrittenCount
+  name: WrittenCount
+  nameWithType: PooledArrayBufferWriter<T>.WrittenCount
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.WrittenCount
+  nameWithType.vb: PooledArrayBufferWriter(Of T).WrittenCount
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).WrittenCount
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.Capacity*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.Capacity
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_Capacity
+  name: Capacity
+  nameWithType: PooledArrayBufferWriter<T>.Capacity
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.Capacity
+  nameWithType.vb: PooledArrayBufferWriter(Of T).Capacity
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).Capacity
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.FreeCapacity*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.FreeCapacity
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_FreeCapacity
+  name: FreeCapacity
+  nameWithType: PooledArrayBufferWriter<T>.FreeCapacity
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.FreeCapacity
+  nameWithType.vb: PooledArrayBufferWriter(Of T).FreeCapacity
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).FreeCapacity
+- uid: Beutl.Utilities.PooledArrayBufferWriter`1.IsDisposed*
+  commentId: Overload:Beutl.Utilities.PooledArrayBufferWriter`1.IsDisposed
+  isExternal: true
+  href: Beutl.Utilities.PooledArrayBufferWriter-1.html#Beutl_Utilities_PooledArrayBufferWriter_1_IsDisposed
+  name: IsDisposed
+  nameWithType: PooledArrayBufferWriter<T>.IsDisposed
+  fullName: Beutl.Utilities.PooledArrayBufferWriter<T>.IsDisposed
+  nameWithType.vb: PooledArrayBufferWriter(Of T).IsDisposed
+  fullName.vb: Beutl.Utilities.PooledArrayBufferWriter(Of T).IsDisposed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

@@ -1,0 +1,1197 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Services.Notification
+  commentId: T:Beutl.Services.Notification
+  id: Notification
+  parent: Beutl.Services
+  children:
+  - Beutl.Services.Notification.#ctor(Beutl.Services.Notification)
+  - Beutl.Services.Notification.#ctor(System.String,System.String,Beutl.Services.NotificationType,System.Nullable{System.TimeSpan},System.Action,System.Action,System.String)
+  - Beutl.Services.Notification.ActionButtonText
+  - Beutl.Services.Notification.Deconstruct(System.String@,System.String@,Beutl.Services.NotificationType@,System.Nullable{System.TimeSpan}@,System.Action@,System.Action@,System.String@)
+  - Beutl.Services.Notification.EqualityContract
+  - Beutl.Services.Notification.Equals(Beutl.Services.Notification)
+  - Beutl.Services.Notification.Equals(System.Object)
+  - Beutl.Services.Notification.Expiration
+  - Beutl.Services.Notification.GetHashCode
+  - Beutl.Services.Notification.Message
+  - Beutl.Services.Notification.OnActionButtonClick
+  - Beutl.Services.Notification.OnClose
+  - Beutl.Services.Notification.PrintMembers(System.Text.StringBuilder)
+  - Beutl.Services.Notification.Title
+  - Beutl.Services.Notification.ToString
+  - Beutl.Services.Notification.Type
+  - Beutl.Services.Notification.op_Equality(Beutl.Services.Notification,Beutl.Services.Notification)
+  - Beutl.Services.Notification.op_Inequality(Beutl.Services.Notification,Beutl.Services.Notification)
+  langs:
+  - csharp
+  - vb
+  name: Notification
+  nameWithType: Notification
+  fullName: Beutl.Services.Notification
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: 'public record Notification : IEquatable<Notification>'
+    content.vb: Public Class Notification Implements IEquatable(Of Notification)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Beutl.Services.Notification}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Services.Notification.#ctor(System.String,System.String,Beutl.Services.NotificationType,System.Nullable{System.TimeSpan},System.Action,System.Action,System.String)
+  commentId: M:Beutl.Services.Notification.#ctor(System.String,System.String,Beutl.Services.NotificationType,System.Nullable{System.TimeSpan},System.Action,System.Action,System.String)
+  id: '#ctor(System.String,System.String,Beutl.Services.NotificationType,System.Nullable{System.TimeSpan},System.Action,System.Action,System.String)'
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Notification(string, string, NotificationType, TimeSpan?, Action?, Action?, string?)
+  nameWithType: Notification.Notification(string, string, NotificationType, TimeSpan?, Action?, Action?, string?)
+  fullName: Beutl.Services.Notification.Notification(string, string, Beutl.Services.NotificationType, System.TimeSpan?, System.Action?, System.Action?, string?)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public Notification(string Title, string Message, NotificationType Type = NotificationType.Information, TimeSpan? Expiration = null, Action? OnClose = null, Action? OnActionButtonClick = null, string? ActionButtonText = null)
+    parameters:
+    - id: Title
+      type: System.String
+    - id: Message
+      type: System.String
+    - id: Type
+      type: Beutl.Services.NotificationType
+    - id: Expiration
+      type: System.Nullable{System.TimeSpan}
+    - id: OnClose
+      type: System.Action
+    - id: OnActionButtonClick
+      type: System.Action
+    - id: ActionButtonText
+      type: System.String
+    content.vb: Public Sub New(Title As String, Message As String, Type As NotificationType = NotificationType.Information, Expiration As TimeSpan? = Nothing, OnClose As Action = Nothing, OnActionButtonClick As Action = Nothing, ActionButtonText As String = Nothing)
+  overload: Beutl.Services.Notification.#ctor*
+  nameWithType.vb: Notification.New(String, String, NotificationType, TimeSpan?, Action, Action, String)
+  fullName.vb: Beutl.Services.Notification.New(String, String, Beutl.Services.NotificationType, System.TimeSpan?, System.Action, System.Action, String)
+  name.vb: New(String, String, NotificationType, TimeSpan?, Action, Action, String)
+- uid: Beutl.Services.Notification.ToString
+  commentId: M:Beutl.Services.Notification.ToString
+  id: ToString
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Notification.ToString()
+  fullName: Beutl.Services.Notification.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Beutl.Services.Notification.ToString*
+- uid: Beutl.Services.Notification.PrintMembers(System.Text.StringBuilder)
+  commentId: M:Beutl.Services.Notification.PrintMembers(System.Text.StringBuilder)
+  id: PrintMembers(System.Text.StringBuilder)
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: PrintMembers(StringBuilder)
+  nameWithType: Notification.PrintMembers(StringBuilder)
+  fullName: Beutl.Services.Notification.PrintMembers(System.Text.StringBuilder)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: protected virtual bool PrintMembers(StringBuilder builder)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable Function PrintMembers(builder As StringBuilder) As Boolean
+  overload: Beutl.Services.Notification.PrintMembers*
+- uid: Beutl.Services.Notification.op_Inequality(Beutl.Services.Notification,Beutl.Services.Notification)
+  commentId: M:Beutl.Services.Notification.op_Inequality(Beutl.Services.Notification,Beutl.Services.Notification)
+  id: op_Inequality(Beutl.Services.Notification,Beutl.Services.Notification)
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Notification?, Notification?)
+  nameWithType: Notification.operator !=(Notification?, Notification?)
+  fullName: Beutl.Services.Notification.operator !=(Beutl.Services.Notification?, Beutl.Services.Notification?)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public static bool operator !=(Notification? left, Notification? right)
+    parameters:
+    - id: left
+      type: Beutl.Services.Notification
+    - id: right
+      type: Beutl.Services.Notification
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Notification, right As Notification) As Boolean
+  overload: Beutl.Services.Notification.op_Inequality*
+  nameWithType.vb: Notification.<>(Notification, Notification)
+  fullName.vb: Beutl.Services.Notification.<>(Beutl.Services.Notification, Beutl.Services.Notification)
+  name.vb: <>(Notification, Notification)
+- uid: Beutl.Services.Notification.op_Equality(Beutl.Services.Notification,Beutl.Services.Notification)
+  commentId: M:Beutl.Services.Notification.op_Equality(Beutl.Services.Notification,Beutl.Services.Notification)
+  id: op_Equality(Beutl.Services.Notification,Beutl.Services.Notification)
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Notification?, Notification?)
+  nameWithType: Notification.operator ==(Notification?, Notification?)
+  fullName: Beutl.Services.Notification.operator ==(Beutl.Services.Notification?, Beutl.Services.Notification?)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public static bool operator ==(Notification? left, Notification? right)
+    parameters:
+    - id: left
+      type: Beutl.Services.Notification
+    - id: right
+      type: Beutl.Services.Notification
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Notification, right As Notification) As Boolean
+  overload: Beutl.Services.Notification.op_Equality*
+  nameWithType.vb: Notification.=(Notification, Notification)
+  fullName.vb: Beutl.Services.Notification.=(Beutl.Services.Notification, Beutl.Services.Notification)
+  name.vb: =(Notification, Notification)
+- uid: Beutl.Services.Notification.GetHashCode
+  commentId: M:Beutl.Services.Notification.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Notification.GetHashCode()
+  fullName: Beutl.Services.Notification.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Beutl.Services.Notification.GetHashCode*
+- uid: Beutl.Services.Notification.Equals(System.Object)
+  commentId: M:Beutl.Services.Notification.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Notification.Equals(object?)
+  fullName: Beutl.Services.Notification.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Beutl.Services.Notification.Equals*
+  nameWithType.vb: Notification.Equals(Object)
+  fullName.vb: Beutl.Services.Notification.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Services.Notification.Equals(Beutl.Services.Notification)
+  commentId: M:Beutl.Services.Notification.Equals(Beutl.Services.Notification)
+  id: Equals(Beutl.Services.Notification)
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Equals(Notification?)
+  nameWithType: Notification.Equals(Notification?)
+  fullName: Beutl.Services.Notification.Equals(Beutl.Services.Notification?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  example: []
+  syntax:
+    content: public virtual bool Equals(Notification? other)
+    parameters:
+    - id: other
+      type: Beutl.Services.Notification
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Equals(other As Notification) As Boolean
+  overload: Beutl.Services.Notification.Equals*
+  implements:
+  - System.IEquatable{Beutl.Services.Notification}.Equals(Beutl.Services.Notification)
+  nameWithType.vb: Notification.Equals(Notification)
+  fullName.vb: Beutl.Services.Notification.Equals(Beutl.Services.Notification)
+  name.vb: Equals(Notification)
+- uid: Beutl.Services.Notification.#ctor(Beutl.Services.Notification)
+  commentId: M:Beutl.Services.Notification.#ctor(Beutl.Services.Notification)
+  id: '#ctor(Beutl.Services.Notification)'
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Notification(Notification)
+  nameWithType: Notification.Notification(Notification)
+  fullName: Beutl.Services.Notification.Notification(Beutl.Services.Notification)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: protected Notification(Notification original)
+    parameters:
+    - id: original
+      type: Beutl.Services.Notification
+    content.vb: Protected Sub New(original As Notification)
+  overload: Beutl.Services.Notification.#ctor*
+  nameWithType.vb: Notification.New(Notification)
+  fullName.vb: Beutl.Services.Notification.New(Beutl.Services.Notification)
+  name.vb: New(Notification)
+- uid: Beutl.Services.Notification.Deconstruct(System.String@,System.String@,Beutl.Services.NotificationType@,System.Nullable{System.TimeSpan}@,System.Action@,System.Action@,System.String@)
+  commentId: M:Beutl.Services.Notification.Deconstruct(System.String@,System.String@,Beutl.Services.NotificationType@,System.Nullable{System.TimeSpan}@,System.Action@,System.Action@,System.String@)
+  id: Deconstruct(System.String@,System.String@,Beutl.Services.NotificationType@,System.Nullable{System.TimeSpan}@,System.Action@,System.Action@,System.String@)
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out string, out string, out NotificationType, out TimeSpan?, out Action?, out Action?, out string?)
+  nameWithType: Notification.Deconstruct(out string, out string, out NotificationType, out TimeSpan?, out Action?, out Action?, out string?)
+  fullName: Beutl.Services.Notification.Deconstruct(out string, out string, out Beutl.Services.NotificationType, out System.TimeSpan?, out System.Action?, out System.Action?, out string?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public void Deconstruct(out string Title, out string Message, out NotificationType Type, out TimeSpan? Expiration, out Action? OnClose, out Action? OnActionButtonClick, out string? ActionButtonText)
+    parameters:
+    - id: Title
+      type: System.String
+    - id: Message
+      type: System.String
+    - id: Type
+      type: Beutl.Services.NotificationType
+    - id: Expiration
+      type: System.Nullable{System.TimeSpan}
+    - id: OnClose
+      type: System.Action
+    - id: OnActionButtonClick
+      type: System.Action
+    - id: ActionButtonText
+      type: System.String
+    content.vb: Public Sub Deconstruct(Title As String, Message As String, Type As NotificationType, Expiration As TimeSpan?, OnClose As Action, OnActionButtonClick As Action, ActionButtonText As String)
+  overload: Beutl.Services.Notification.Deconstruct*
+  nameWithType.vb: Notification.Deconstruct(String, String, NotificationType, TimeSpan?, Action, Action, String)
+  fullName.vb: Beutl.Services.Notification.Deconstruct(String, String, Beutl.Services.NotificationType, System.TimeSpan?, System.Action, System.Action, String)
+  name.vb: Deconstruct(String, String, NotificationType, TimeSpan?, Action, Action, String)
+- uid: Beutl.Services.Notification.EqualityContract
+  commentId: P:Beutl.Services.Notification.EqualityContract
+  id: EqualityContract
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: EqualityContract
+  nameWithType: Notification.EqualityContract
+  fullName: Beutl.Services.Notification.EqualityContract
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: protected virtual Type EqualityContract { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Protected Overridable ReadOnly Property EqualityContract As Type
+  overload: Beutl.Services.Notification.EqualityContract*
+- uid: Beutl.Services.Notification.Title
+  commentId: P:Beutl.Services.Notification.Title
+  id: Title
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: Notification.Title
+  fullName: Beutl.Services.Notification.Title
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public string Title { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: Beutl.Services.Notification.Title*
+- uid: Beutl.Services.Notification.Message
+  commentId: P:Beutl.Services.Notification.Message
+  id: Message
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: Notification.Message
+  fullName: Beutl.Services.Notification.Message
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public string Message { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: Beutl.Services.Notification.Message*
+- uid: Beutl.Services.Notification.Type
+  commentId: P:Beutl.Services.Notification.Type
+  id: Type
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Notification.Type
+  fullName: Beutl.Services.Notification.Type
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public NotificationType Type { get; init; }
+    parameters: []
+    return:
+      type: Beutl.Services.NotificationType
+    content.vb: Public Property Type As NotificationType
+  overload: Beutl.Services.Notification.Type*
+- uid: Beutl.Services.Notification.Expiration
+  commentId: P:Beutl.Services.Notification.Expiration
+  id: Expiration
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: Expiration
+  nameWithType: Notification.Expiration
+  fullName: Beutl.Services.Notification.Expiration
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public TimeSpan? Expiration { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.TimeSpan}
+    content.vb: Public Property Expiration As TimeSpan?
+  overload: Beutl.Services.Notification.Expiration*
+- uid: Beutl.Services.Notification.OnClose
+  commentId: P:Beutl.Services.Notification.OnClose
+  id: OnClose
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: OnClose
+  nameWithType: Notification.OnClose
+  fullName: Beutl.Services.Notification.OnClose
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public Action? OnClose { get; init; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property OnClose As Action
+  overload: Beutl.Services.Notification.OnClose*
+- uid: Beutl.Services.Notification.OnActionButtonClick
+  commentId: P:Beutl.Services.Notification.OnActionButtonClick
+  id: OnActionButtonClick
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: OnActionButtonClick
+  nameWithType: Notification.OnActionButtonClick
+  fullName: Beutl.Services.Notification.OnActionButtonClick
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public Action? OnActionButtonClick { get; init; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property OnActionButtonClick As Action
+  overload: Beutl.Services.Notification.OnActionButtonClick*
+- uid: Beutl.Services.Notification.ActionButtonText
+  commentId: P:Beutl.Services.Notification.ActionButtonText
+  id: ActionButtonText
+  parent: Beutl.Services.Notification
+  langs:
+  - csharp
+  - vb
+  name: ActionButtonText
+  nameWithType: Notification.ActionButtonText
+  fullName: Beutl.Services.Notification.ActionButtonText
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/INotificationService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public string? ActionButtonText { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ActionButtonText As String
+  overload: Beutl.Services.Notification.ActionButtonText*
+references:
+- uid: Beutl.Services
+  commentId: N:Beutl.Services
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Services
+  nameWithType: Beutl.Services
+  fullName: Beutl.Services
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Services
+    name: Services
+    isExternal: true
+    href: Beutl.Services.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Services
+    name: Services
+    isExternal: true
+    href: Beutl.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Beutl.Services.Notification}
+  commentId: T:System.IEquatable{Beutl.Services.Notification}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Notification>
+  nameWithType: IEquatable<Notification>
+  fullName: System.IEquatable<Beutl.Services.Notification>
+  nameWithType.vb: IEquatable(Of Notification)
+  fullName.vb: System.IEquatable(Of Beutl.Services.Notification)
+  name.vb: IEquatable(Of Notification)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Services.Notification
+    name: Notification
+    isExternal: true
+    href: Beutl.Services.Notification.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Services.Notification
+    name: Notification
+    isExternal: true
+    href: Beutl.Services.Notification.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Services.Notification.#ctor*
+  commentId: Overload:Beutl.Services.Notification.#ctor
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification__ctor_System_String_System_String_Beutl_Services_NotificationType_System_Nullable_System_TimeSpan__System_Action_System_Action_System_String_
+  name: Notification
+  nameWithType: Notification.Notification
+  fullName: Beutl.Services.Notification.Notification
+  nameWithType.vb: Notification.New
+  fullName.vb: Beutl.Services.Notification.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Services.NotificationType
+  commentId: T:Beutl.Services.NotificationType
+  parent: Beutl.Services
+  isExternal: true
+  href: Beutl.Services.NotificationType.html
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: Beutl.Services.NotificationType
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan?
+  nameWithType: TimeSpan?
+  fullName: System.TimeSpan?
+  spec.csharp:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  spec.vb:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Services.Notification.ToString*
+  commentId: Overload:Beutl.Services.Notification.ToString
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_ToString
+  name: ToString
+  nameWithType: Notification.ToString
+  fullName: Beutl.Services.Notification.ToString
+- uid: Beutl.Services.Notification.PrintMembers*
+  commentId: Overload:Beutl.Services.Notification.PrintMembers
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_PrintMembers_System_Text_StringBuilder_
+  name: PrintMembers
+  nameWithType: Notification.PrintMembers
+  fullName: Beutl.Services.Notification.PrintMembers
+- uid: System.Text.StringBuilder
+  commentId: T:System.Text.StringBuilder
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.stringbuilder
+  name: StringBuilder
+  nameWithType: StringBuilder
+  fullName: System.Text.StringBuilder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: Beutl.Services.Notification.op_Inequality*
+  commentId: Overload:Beutl.Services.Notification.op_Inequality
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_op_Inequality_Beutl_Services_Notification_Beutl_Services_Notification_
+  name: operator !=
+  nameWithType: Notification.operator !=
+  fullName: Beutl.Services.Notification.operator !=
+  nameWithType.vb: Notification.<>
+  fullName.vb: Beutl.Services.Notification.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Services.Notification.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Services.Notification.html#Beutl_Services_Notification_op_Inequality_Beutl_Services_Notification_Beutl_Services_Notification_
+- uid: Beutl.Services.Notification
+  commentId: T:Beutl.Services.Notification
+  parent: Beutl.Services
+  isExternal: true
+  href: Beutl.Services.Notification.html
+  name: Notification
+  nameWithType: Notification
+  fullName: Beutl.Services.Notification
+- uid: Beutl.Services.Notification.op_Equality*
+  commentId: Overload:Beutl.Services.Notification.op_Equality
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_op_Equality_Beutl_Services_Notification_Beutl_Services_Notification_
+  name: operator ==
+  nameWithType: Notification.operator ==
+  fullName: Beutl.Services.Notification.operator ==
+  nameWithType.vb: Notification.=
+  fullName.vb: Beutl.Services.Notification.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Services.Notification.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Services.Notification.html#Beutl_Services_Notification_op_Equality_Beutl_Services_Notification_Beutl_Services_Notification_
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Services.Notification.GetHashCode*
+  commentId: Overload:Beutl.Services.Notification.GetHashCode
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_GetHashCode
+  name: GetHashCode
+  nameWithType: Notification.GetHashCode
+  fullName: Beutl.Services.Notification.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Services.Notification.Equals*
+  commentId: Overload:Beutl.Services.Notification.Equals
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_Equals_System_Object_
+  name: Equals
+  nameWithType: Notification.Equals
+  fullName: Beutl.Services.Notification.Equals
+- uid: System.IEquatable{Beutl.Services.Notification}.Equals(Beutl.Services.Notification)
+  commentId: M:System.IEquatable{Beutl.Services.Notification}.Equals(Beutl.Services.Notification)
+  parent: System.IEquatable{Beutl.Services.Notification}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Notification)
+  nameWithType: IEquatable<Notification>.Equals(Notification)
+  fullName: System.IEquatable<Beutl.Services.Notification>.Equals(Beutl.Services.Notification)
+  nameWithType.vb: IEquatable(Of Notification).Equals(Notification)
+  fullName.vb: System.IEquatable(Of Beutl.Services.Notification).Equals(Beutl.Services.Notification)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Services.Notification}.Equals(Beutl.Services.Notification)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Services.Notification
+    name: Notification
+    isExternal: true
+    href: Beutl.Services.Notification.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Services.Notification}.Equals(Beutl.Services.Notification)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Services.Notification
+    name: Notification
+    isExternal: true
+    href: Beutl.Services.Notification.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: Beutl.Services.Notification.Deconstruct*
+  commentId: Overload:Beutl.Services.Notification.Deconstruct
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_Deconstruct_System_String__System_String__Beutl_Services_NotificationType__System_Nullable_System_TimeSpan___System_Action__System_Action__System_String__
+  name: Deconstruct
+  nameWithType: Notification.Deconstruct
+  fullName: Beutl.Services.Notification.Deconstruct
+- uid: Beutl.Services.Notification.EqualityContract*
+  commentId: Overload:Beutl.Services.Notification.EqualityContract
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_EqualityContract
+  name: EqualityContract
+  nameWithType: Notification.EqualityContract
+  fullName: Beutl.Services.Notification.EqualityContract
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Beutl.Services.Notification.Title*
+  commentId: Overload:Beutl.Services.Notification.Title
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_Title
+  name: Title
+  nameWithType: Notification.Title
+  fullName: Beutl.Services.Notification.Title
+- uid: Beutl.Services.Notification.Message*
+  commentId: Overload:Beutl.Services.Notification.Message
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_Message
+  name: Message
+  nameWithType: Notification.Message
+  fullName: Beutl.Services.Notification.Message
+- uid: Beutl.Services.Notification.Type*
+  commentId: Overload:Beutl.Services.Notification.Type
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_Type
+  name: Type
+  nameWithType: Notification.Type
+  fullName: Beutl.Services.Notification.Type
+- uid: Beutl.Services.Notification.Expiration*
+  commentId: Overload:Beutl.Services.Notification.Expiration
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_Expiration
+  name: Expiration
+  nameWithType: Notification.Expiration
+  fullName: Beutl.Services.Notification.Expiration
+- uid: Beutl.Services.Notification.OnClose*
+  commentId: Overload:Beutl.Services.Notification.OnClose
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_OnClose
+  name: OnClose
+  nameWithType: Notification.OnClose
+  fullName: Beutl.Services.Notification.OnClose
+- uid: Beutl.Services.Notification.OnActionButtonClick*
+  commentId: Overload:Beutl.Services.Notification.OnActionButtonClick
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_OnActionButtonClick
+  name: OnActionButtonClick
+  nameWithType: Notification.OnActionButtonClick
+  fullName: Beutl.Services.Notification.OnActionButtonClick
+- uid: Beutl.Services.Notification.ActionButtonText*
+  commentId: Overload:Beutl.Services.Notification.ActionButtonText
+  isExternal: true
+  href: Beutl.Services.Notification.html#Beutl_Services_Notification_ActionButtonText
+  name: ActionButtonText
+  nameWithType: Notification.ActionButtonText
+  fullName: Beutl.Services.Notification.ActionButtonText

@@ -1,0 +1,929 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.IModifiableHierarchical
+  commentId: T:Beutl.IModifiableHierarchical
+  id: IModifiableHierarchical
+  parent: Beutl
+  children:
+  - Beutl.IModifiableHierarchical.AddChild(Beutl.IHierarchical)
+  - Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  - Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  - Beutl.IModifiableHierarchical.RemoveChild(Beutl.IHierarchical)
+  - Beutl.IModifiableHierarchical.SetParent(Beutl.IHierarchical)
+  langs:
+  - csharp
+  - vb
+  name: IModifiableHierarchical
+  nameWithType: IModifiableHierarchical
+  fullName: Beutl.IModifiableHierarchical
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: 'public interface IModifiableHierarchical : IHierarchical'
+    content.vb: Public Interface IModifiableHierarchical Inherits IHierarchical
+  inheritedMembers:
+  - Beutl.IHierarchical.HierarchicalParent
+  - Beutl.IHierarchical.HierarchicalRoot
+  - Beutl.IHierarchical.HierarchicalChildren
+  - Beutl.IHierarchical.AttachedToHierarchy
+  - Beutl.IHierarchical.DetachedFromHierarchy
+  extensionMethods:
+  - Beutl.IHierarchical.Beutl.HierarchicalExtensions.EnumerateAllChildren``1
+  - Beutl.IHierarchical.Beutl.HierarchicalExtensions.EnumerateAncestors``1
+  - Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindHierarchicalParent(System.Type,System.Boolean)
+  - Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindHierarchicalParent``1(System.Boolean)
+  - Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindHierarchicalRoot
+  - Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(System.Type,System.Boolean)
+  - Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(System.Boolean)
+- uid: Beutl.IModifiableHierarchical.AddChild(Beutl.IHierarchical)
+  commentId: M:Beutl.IModifiableHierarchical.AddChild(Beutl.IHierarchical)
+  id: AddChild(Beutl.IHierarchical)
+  parent: Beutl.IModifiableHierarchical
+  langs:
+  - csharp
+  - vb
+  name: AddChild(IHierarchical)
+  nameWithType: IModifiableHierarchical.AddChild(IHierarchical)
+  fullName: Beutl.IModifiableHierarchical.AddChild(Beutl.IHierarchical)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void AddChild(IHierarchical child)
+    parameters:
+    - id: child
+      type: Beutl.IHierarchical
+    content.vb: Sub AddChild(child As IHierarchical)
+  overload: Beutl.IModifiableHierarchical.AddChild*
+- uid: Beutl.IModifiableHierarchical.RemoveChild(Beutl.IHierarchical)
+  commentId: M:Beutl.IModifiableHierarchical.RemoveChild(Beutl.IHierarchical)
+  id: RemoveChild(Beutl.IHierarchical)
+  parent: Beutl.IModifiableHierarchical
+  langs:
+  - csharp
+  - vb
+  name: RemoveChild(IHierarchical)
+  nameWithType: IModifiableHierarchical.RemoveChild(IHierarchical)
+  fullName: Beutl.IModifiableHierarchical.RemoveChild(Beutl.IHierarchical)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void RemoveChild(IHierarchical child)
+    parameters:
+    - id: child
+      type: Beutl.IHierarchical
+    content.vb: Sub RemoveChild(child As IHierarchical)
+  overload: Beutl.IModifiableHierarchical.RemoveChild*
+- uid: Beutl.IModifiableHierarchical.SetParent(Beutl.IHierarchical)
+  commentId: M:Beutl.IModifiableHierarchical.SetParent(Beutl.IHierarchical)
+  id: SetParent(Beutl.IHierarchical)
+  parent: Beutl.IModifiableHierarchical
+  langs:
+  - csharp
+  - vb
+  name: SetParent(IHierarchical?)
+  nameWithType: IModifiableHierarchical.SetParent(IHierarchical?)
+  fullName: Beutl.IModifiableHierarchical.SetParent(Beutl.IHierarchical?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void SetParent(IHierarchical? parent)
+    parameters:
+    - id: parent
+      type: Beutl.IHierarchical
+    content.vb: Sub SetParent(parent As IHierarchical)
+  overload: Beutl.IModifiableHierarchical.SetParent*
+  nameWithType.vb: IModifiableHierarchical.SetParent(IHierarchical)
+  fullName.vb: Beutl.IModifiableHierarchical.SetParent(Beutl.IHierarchical)
+  name.vb: SetParent(IHierarchical)
+- uid: Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  commentId: M:Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  id: NotifyAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  parent: Beutl.IModifiableHierarchical
+  langs:
+  - csharp
+  - vb
+  name: NotifyAttachedToHierarchy(in HierarchyAttachmentEventArgs)
+  nameWithType: IModifiableHierarchical.NotifyAttachedToHierarchy(in HierarchyAttachmentEventArgs)
+  fullName: Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy(in Beutl.HierarchyAttachmentEventArgs)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void NotifyAttachedToHierarchy(in HierarchyAttachmentEventArgs e)
+    parameters:
+    - id: e
+      type: Beutl.HierarchyAttachmentEventArgs
+    content.vb: Sub NotifyAttachedToHierarchy(e As HierarchyAttachmentEventArgs)
+  overload: Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy*
+  nameWithType.vb: IModifiableHierarchical.NotifyAttachedToHierarchy(HierarchyAttachmentEventArgs)
+  fullName.vb: Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs)
+  name.vb: NotifyAttachedToHierarchy(HierarchyAttachmentEventArgs)
+- uid: Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  commentId: M:Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  id: NotifyDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
+  parent: Beutl.IModifiableHierarchical
+  langs:
+  - csharp
+  - vb
+  name: NotifyDetachedFromHierarchy(in HierarchyAttachmentEventArgs)
+  nameWithType: IModifiableHierarchical.NotifyDetachedFromHierarchy(in HierarchyAttachmentEventArgs)
+  fullName: Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy(in Beutl.HierarchyAttachmentEventArgs)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: void NotifyDetachedFromHierarchy(in HierarchyAttachmentEventArgs e)
+    parameters:
+    - id: e
+      type: Beutl.HierarchyAttachmentEventArgs
+    content.vb: Sub NotifyDetachedFromHierarchy(e As HierarchyAttachmentEventArgs)
+  overload: Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy*
+  nameWithType.vb: IModifiableHierarchical.NotifyDetachedFromHierarchy(HierarchyAttachmentEventArgs)
+  fullName.vb: Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs)
+  name.vb: NotifyDetachedFromHierarchy(HierarchyAttachmentEventArgs)
+references:
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.IHierarchical.HierarchicalParent
+  commentId: P:Beutl.IHierarchical.HierarchicalParent
+  parent: Beutl.IHierarchical
+  isExternal: true
+  href: Beutl.IHierarchical.html#Beutl_IHierarchical_HierarchicalParent
+  name: HierarchicalParent
+  nameWithType: IHierarchical.HierarchicalParent
+  fullName: Beutl.IHierarchical.HierarchicalParent
+- uid: Beutl.IHierarchical.HierarchicalRoot
+  commentId: P:Beutl.IHierarchical.HierarchicalRoot
+  parent: Beutl.IHierarchical
+  isExternal: true
+  href: Beutl.IHierarchical.html#Beutl_IHierarchical_HierarchicalRoot
+  name: HierarchicalRoot
+  nameWithType: IHierarchical.HierarchicalRoot
+  fullName: Beutl.IHierarchical.HierarchicalRoot
+- uid: Beutl.IHierarchical.HierarchicalChildren
+  commentId: P:Beutl.IHierarchical.HierarchicalChildren
+  parent: Beutl.IHierarchical
+  isExternal: true
+  href: Beutl.IHierarchical.html#Beutl_IHierarchical_HierarchicalChildren
+  name: HierarchicalChildren
+  nameWithType: IHierarchical.HierarchicalChildren
+  fullName: Beutl.IHierarchical.HierarchicalChildren
+- uid: Beutl.IHierarchical.AttachedToHierarchy
+  commentId: E:Beutl.IHierarchical.AttachedToHierarchy
+  parent: Beutl.IHierarchical
+  isExternal: true
+  href: Beutl.IHierarchical.html#Beutl_IHierarchical_AttachedToHierarchy
+  name: AttachedToHierarchy
+  nameWithType: IHierarchical.AttachedToHierarchy
+  fullName: Beutl.IHierarchical.AttachedToHierarchy
+- uid: Beutl.IHierarchical.DetachedFromHierarchy
+  commentId: E:Beutl.IHierarchical.DetachedFromHierarchy
+  parent: Beutl.IHierarchical
+  isExternal: true
+  href: Beutl.IHierarchical.html#Beutl_IHierarchical_DetachedFromHierarchy
+  name: DetachedFromHierarchy
+  nameWithType: IHierarchical.DetachedFromHierarchy
+  fullName: Beutl.IHierarchical.DetachedFromHierarchy
+- uid: Beutl.IHierarchical.Beutl.HierarchicalExtensions.EnumerateAllChildren``1
+  commentId: M:Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+  parent: Beutl.HierarchicalExtensions
+  definition: Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAllChildren__1_Beutl_IHierarchical_
+  name: EnumerateAllChildren<TResult>(IHierarchical)
+  nameWithType: HierarchicalExtensions.EnumerateAllChildren<TResult>(IHierarchical)
+  fullName: Beutl.HierarchicalExtensions.EnumerateAllChildren<TResult>(Beutl.IHierarchical)
+  nameWithType.vb: HierarchicalExtensions.EnumerateAllChildren(Of TResult)(IHierarchical)
+  fullName.vb: Beutl.HierarchicalExtensions.EnumerateAllChildren(Of TResult)(Beutl.IHierarchical)
+  name.vb: EnumerateAllChildren(Of TResult)(IHierarchical)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+    name: EnumerateAllChildren
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAllChildren__1_Beutl_IHierarchical_
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+    name: EnumerateAllChildren
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAllChildren__1_Beutl_IHierarchical_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+- uid: Beutl.IHierarchical.Beutl.HierarchicalExtensions.EnumerateAncestors``1
+  commentId: M:Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+  parent: Beutl.HierarchicalExtensions
+  definition: Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAncestors__1_Beutl_IHierarchical_
+  name: EnumerateAncestors<TResult>(IHierarchical)
+  nameWithType: HierarchicalExtensions.EnumerateAncestors<TResult>(IHierarchical)
+  fullName: Beutl.HierarchicalExtensions.EnumerateAncestors<TResult>(Beutl.IHierarchical)
+  nameWithType.vb: HierarchicalExtensions.EnumerateAncestors(Of TResult)(IHierarchical)
+  fullName.vb: Beutl.HierarchicalExtensions.EnumerateAncestors(Of TResult)(Beutl.IHierarchical)
+  name.vb: EnumerateAncestors(Of TResult)(IHierarchical)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+    name: EnumerateAncestors
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAncestors__1_Beutl_IHierarchical_
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+    name: EnumerateAncestors
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAncestors__1_Beutl_IHierarchical_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+- uid: Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindHierarchicalParent(System.Type,System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  parent: Beutl.HierarchicalExtensions
+  definition: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  name: FindHierarchicalParent(IHierarchical, Type, bool)
+  nameWithType: HierarchicalExtensions.FindHierarchicalParent(IHierarchical, Type, bool)
+  fullName: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical, System.Type, bool)
+  nameWithType.vb: HierarchicalExtensions.FindHierarchicalParent(IHierarchical, Type, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical, System.Type, Boolean)
+  name.vb: FindHierarchicalParent(IHierarchical, Type, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindHierarchicalParent``1(System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  parent: Beutl.HierarchicalExtensions
+  definition: Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  name: FindHierarchicalParent<T>(IHierarchical, bool)
+  nameWithType: HierarchicalExtensions.FindHierarchicalParent<T>(IHierarchical, bool)
+  fullName: Beutl.HierarchicalExtensions.FindHierarchicalParent<T>(Beutl.IHierarchical, bool)
+  nameWithType.vb: HierarchicalExtensions.FindHierarchicalParent(Of T)(IHierarchical, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindHierarchicalParent(Of T)(Beutl.IHierarchical, Boolean)
+  name.vb: FindHierarchicalParent(Of T)(IHierarchical, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindHierarchicalRoot
+  commentId: M:Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+  parent: Beutl.HierarchicalExtensions
+  definition: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalRoot_Beutl_IHierarchical_
+  name: FindHierarchicalRoot(IHierarchical)
+  nameWithType: HierarchicalExtensions.FindHierarchicalRoot(IHierarchical)
+  fullName: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+    name: FindHierarchicalRoot
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalRoot_Beutl_IHierarchical_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+    name: FindHierarchicalRoot
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalRoot_Beutl_IHierarchical_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+- uid: Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(System.Type,System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  parent: Beutl.HierarchicalExtensions
+  definition: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  name: FindRequiredHierarchicalParent(IHierarchical, Type, bool)
+  nameWithType: HierarchicalExtensions.FindRequiredHierarchicalParent(IHierarchical, Type, bool)
+  fullName: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical, System.Type, bool)
+  nameWithType.vb: HierarchicalExtensions.FindRequiredHierarchicalParent(IHierarchical, Type, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical, System.Type, Boolean)
+  name.vb: FindRequiredHierarchicalParent(IHierarchical, Type, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.IHierarchical.Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  parent: Beutl.HierarchicalExtensions
+  definition: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  name: FindRequiredHierarchicalParent<T>(IHierarchical, bool)
+  nameWithType: HierarchicalExtensions.FindRequiredHierarchicalParent<T>(IHierarchical, bool)
+  fullName: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent<T>(Beutl.IHierarchical, bool)
+  nameWithType.vb: HierarchicalExtensions.FindRequiredHierarchicalParent(Of T)(IHierarchical, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Of T)(Beutl.IHierarchical, Boolean)
+  name.vb: FindRequiredHierarchicalParent(Of T)(IHierarchical, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.IHierarchical
+  commentId: T:Beutl.IHierarchical
+  parent: Beutl
+  isExternal: true
+  href: Beutl.IHierarchical.html
+  name: IHierarchical
+  nameWithType: IHierarchical
+  fullName: Beutl.IHierarchical
+- uid: Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+  commentId: M:Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAllChildren__1_Beutl_IHierarchical_
+  name: EnumerateAllChildren<TResult>(IHierarchical)
+  nameWithType: HierarchicalExtensions.EnumerateAllChildren<TResult>(IHierarchical)
+  fullName: Beutl.HierarchicalExtensions.EnumerateAllChildren<TResult>(Beutl.IHierarchical)
+  nameWithType.vb: HierarchicalExtensions.EnumerateAllChildren(Of TResult)(IHierarchical)
+  fullName.vb: Beutl.HierarchicalExtensions.EnumerateAllChildren(Of TResult)(Beutl.IHierarchical)
+  name.vb: EnumerateAllChildren(Of TResult)(IHierarchical)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+    name: EnumerateAllChildren
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAllChildren__1_Beutl_IHierarchical_
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAllChildren``1(Beutl.IHierarchical)
+    name: EnumerateAllChildren
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAllChildren__1_Beutl_IHierarchical_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+- uid: Beutl.HierarchicalExtensions
+  commentId: T:Beutl.HierarchicalExtensions
+  parent: Beutl
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html
+  name: HierarchicalExtensions
+  nameWithType: HierarchicalExtensions
+  fullName: Beutl.HierarchicalExtensions
+- uid: Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+  commentId: M:Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAncestors__1_Beutl_IHierarchical_
+  name: EnumerateAncestors<TResult>(IHierarchical)
+  nameWithType: HierarchicalExtensions.EnumerateAncestors<TResult>(IHierarchical)
+  fullName: Beutl.HierarchicalExtensions.EnumerateAncestors<TResult>(Beutl.IHierarchical)
+  nameWithType.vb: HierarchicalExtensions.EnumerateAncestors(Of TResult)(IHierarchical)
+  fullName.vb: Beutl.HierarchicalExtensions.EnumerateAncestors(Of TResult)(Beutl.IHierarchical)
+  name.vb: EnumerateAncestors(Of TResult)(IHierarchical)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+    name: EnumerateAncestors
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAncestors__1_Beutl_IHierarchical_
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.EnumerateAncestors``1(Beutl.IHierarchical)
+    name: EnumerateAncestors
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_EnumerateAncestors__1_Beutl_IHierarchical_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+- uid: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  name: FindHierarchicalParent(IHierarchical, Type, bool)
+  nameWithType: HierarchicalExtensions.FindHierarchicalParent(IHierarchical, Type, bool)
+  fullName: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical, System.Type, bool)
+  nameWithType.vb: HierarchicalExtensions.FindHierarchicalParent(IHierarchical, Type, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical, System.Type, Boolean)
+  name.vb: FindHierarchicalParent(IHierarchical, Type, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  name: FindHierarchicalParent<T>(IHierarchical, bool)
+  nameWithType: HierarchicalExtensions.FindHierarchicalParent<T>(IHierarchical, bool)
+  fullName: Beutl.HierarchicalExtensions.FindHierarchicalParent<T>(Beutl.IHierarchical, bool)
+  nameWithType.vb: HierarchicalExtensions.FindHierarchicalParent(Of T)(IHierarchical, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindHierarchicalParent(Of T)(Beutl.IHierarchical, Boolean)
+  name.vb: FindHierarchicalParent(Of T)(IHierarchical, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+  commentId: M:Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalRoot_Beutl_IHierarchical_
+  name: FindHierarchicalRoot(IHierarchical)
+  nameWithType: HierarchicalExtensions.FindHierarchicalRoot(IHierarchical)
+  fullName: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+    name: FindHierarchicalRoot
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalRoot_Beutl_IHierarchical_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindHierarchicalRoot(Beutl.IHierarchical)
+    name: FindHierarchicalRoot
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindHierarchicalRoot_Beutl_IHierarchical_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: )
+- uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  name: FindRequiredHierarchicalParent(IHierarchical, Type, bool)
+  nameWithType: HierarchicalExtensions.FindRequiredHierarchicalParent(IHierarchical, Type, bool)
+  fullName: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical, System.Type, bool)
+  nameWithType.vb: HierarchicalExtensions.FindRequiredHierarchicalParent(IHierarchical, Type, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical, System.Type, Boolean)
+  name.vb: FindRequiredHierarchicalParent(IHierarchical, Type, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Beutl.IHierarchical,System.Type,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent_Beutl_IHierarchical_System_Type_System_Boolean_
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  commentId: M:Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+  isExternal: true
+  href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  name: FindRequiredHierarchicalParent<T>(IHierarchical, bool)
+  nameWithType: HierarchicalExtensions.FindRequiredHierarchicalParent<T>(IHierarchical, bool)
+  fullName: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent<T>(Beutl.IHierarchical, bool)
+  nameWithType.vb: HierarchicalExtensions.FindRequiredHierarchicalParent(Of T)(IHierarchical, Boolean)
+  fullName.vb: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent(Of T)(Beutl.IHierarchical, Boolean)
+  name.vb: FindRequiredHierarchicalParent(Of T)(IHierarchical, Boolean)
+  spec.csharp:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.HierarchicalExtensions.FindRequiredHierarchicalParent``1(Beutl.IHierarchical,System.Boolean)
+    name: FindRequiredHierarchicalParent
+    isExternal: true
+    href: Beutl.HierarchicalExtensions.html#Beutl_HierarchicalExtensions_FindRequiredHierarchicalParent__1_Beutl_IHierarchical_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.IHierarchical
+    name: IHierarchical
+    isExternal: true
+    href: Beutl.IHierarchical.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.IModifiableHierarchical.AddChild*
+  commentId: Overload:Beutl.IModifiableHierarchical.AddChild
+  isExternal: true
+  href: Beutl.IModifiableHierarchical.html#Beutl_IModifiableHierarchical_AddChild_Beutl_IHierarchical_
+  name: AddChild
+  nameWithType: IModifiableHierarchical.AddChild
+  fullName: Beutl.IModifiableHierarchical.AddChild
+- uid: Beutl.IModifiableHierarchical.RemoveChild*
+  commentId: Overload:Beutl.IModifiableHierarchical.RemoveChild
+  isExternal: true
+  href: Beutl.IModifiableHierarchical.html#Beutl_IModifiableHierarchical_RemoveChild_Beutl_IHierarchical_
+  name: RemoveChild
+  nameWithType: IModifiableHierarchical.RemoveChild
+  fullName: Beutl.IModifiableHierarchical.RemoveChild
+- uid: Beutl.IModifiableHierarchical.SetParent*
+  commentId: Overload:Beutl.IModifiableHierarchical.SetParent
+  isExternal: true
+  href: Beutl.IModifiableHierarchical.html#Beutl_IModifiableHierarchical_SetParent_Beutl_IHierarchical_
+  name: SetParent
+  nameWithType: IModifiableHierarchical.SetParent
+  fullName: Beutl.IModifiableHierarchical.SetParent
+- uid: Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy*
+  commentId: Overload:Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy
+  isExternal: true
+  href: Beutl.IModifiableHierarchical.html#Beutl_IModifiableHierarchical_NotifyAttachedToHierarchy_Beutl_HierarchyAttachmentEventArgs__
+  name: NotifyAttachedToHierarchy
+  nameWithType: IModifiableHierarchical.NotifyAttachedToHierarchy
+  fullName: Beutl.IModifiableHierarchical.NotifyAttachedToHierarchy
+- uid: Beutl.HierarchyAttachmentEventArgs
+  commentId: T:Beutl.HierarchyAttachmentEventArgs
+  parent: Beutl
+  isExternal: true
+  href: Beutl.HierarchyAttachmentEventArgs.html
+  name: HierarchyAttachmentEventArgs
+  nameWithType: HierarchyAttachmentEventArgs
+  fullName: Beutl.HierarchyAttachmentEventArgs
+- uid: Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy*
+  commentId: Overload:Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy
+  isExternal: true
+  href: Beutl.IModifiableHierarchical.html#Beutl_IModifiableHierarchical_NotifyDetachedFromHierarchy_Beutl_HierarchyAttachmentEventArgs__
+  name: NotifyDetachedFromHierarchy
+  nameWithType: IModifiableHierarchical.NotifyDetachedFromHierarchy
+  fullName: Beutl.IModifiableHierarchical.NotifyDetachedFromHierarchy

@@ -1,0 +1,600 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Decoding.DecoderRegistry
+  commentId: T:Beutl.Media.Decoding.DecoderRegistry
+  id: DecoderRegistry
+  parent: Beutl.Media.Decoding
+  children:
+  - Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder
+  - Beutl.Media.Decoding.DecoderRegistry.GuessDecoder(System.String)
+  - Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile(System.String,Beutl.Media.Decoding.MediaOptions)
+  - Beutl.Media.Decoding.DecoderRegistry.Register(Beutl.Media.Decoding.IDecoderInfo)
+  langs:
+  - csharp
+  - vb
+  name: DecoderRegistry
+  nameWithType: DecoderRegistry
+  fullName: Beutl.Media.Decoding.DecoderRegistry
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Decoding/DecoderRegistry.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Decoding
+  syntax:
+    content: public static class DecoderRegistry
+    content.vb: Public Module DecoderRegistry
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder
+  commentId: M:Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder
+  id: EnumerateDecoder
+  parent: Beutl.Media.Decoding.DecoderRegistry
+  langs:
+  - csharp
+  - vb
+  name: EnumerateDecoder()
+  nameWithType: DecoderRegistry.EnumerateDecoder()
+  fullName: Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Decoding/DecoderRegistry.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Decoding
+  syntax:
+    content: public static IEnumerable<IDecoderInfo> EnumerateDecoder()
+    return:
+      type: System.Collections.Generic.IEnumerable{Beutl.Media.Decoding.IDecoderInfo}
+    content.vb: Public Shared Function EnumerateDecoder() As IEnumerable(Of IDecoderInfo)
+  overload: Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder*
+- uid: Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile(System.String,Beutl.Media.Decoding.MediaOptions)
+  commentId: M:Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile(System.String,Beutl.Media.Decoding.MediaOptions)
+  id: OpenMediaFile(System.String,Beutl.Media.Decoding.MediaOptions)
+  parent: Beutl.Media.Decoding.DecoderRegistry
+  langs:
+  - csharp
+  - vb
+  name: OpenMediaFile(string, MediaOptions)
+  nameWithType: DecoderRegistry.OpenMediaFile(string, MediaOptions)
+  fullName: Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile(string, Beutl.Media.Decoding.MediaOptions)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Decoding/DecoderRegistry.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Decoding
+  syntax:
+    content: public static MediaReader? OpenMediaFile(string file, MediaOptions options)
+    parameters:
+    - id: file
+      type: System.String
+    - id: options
+      type: Beutl.Media.Decoding.MediaOptions
+    return:
+      type: Beutl.Media.Decoding.MediaReader
+    content.vb: Public Shared Function OpenMediaFile(file As String, options As MediaOptions) As MediaReader
+  overload: Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile*
+  nameWithType.vb: DecoderRegistry.OpenMediaFile(String, MediaOptions)
+  fullName.vb: Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile(String, Beutl.Media.Decoding.MediaOptions)
+  name.vb: OpenMediaFile(String, MediaOptions)
+- uid: Beutl.Media.Decoding.DecoderRegistry.GuessDecoder(System.String)
+  commentId: M:Beutl.Media.Decoding.DecoderRegistry.GuessDecoder(System.String)
+  id: GuessDecoder(System.String)
+  parent: Beutl.Media.Decoding.DecoderRegistry
+  langs:
+  - csharp
+  - vb
+  name: GuessDecoder(string)
+  nameWithType: DecoderRegistry.GuessDecoder(string)
+  fullName: Beutl.Media.Decoding.DecoderRegistry.GuessDecoder(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Decoding/DecoderRegistry.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Decoding
+  syntax:
+    content: public static IDecoderInfo[] GuessDecoder(string file)
+    parameters:
+    - id: file
+      type: System.String
+    return:
+      type: Beutl.Media.Decoding.IDecoderInfo[]
+    content.vb: Public Shared Function GuessDecoder(file As String) As IDecoderInfo()
+  overload: Beutl.Media.Decoding.DecoderRegistry.GuessDecoder*
+  nameWithType.vb: DecoderRegistry.GuessDecoder(String)
+  fullName.vb: Beutl.Media.Decoding.DecoderRegistry.GuessDecoder(String)
+  name.vb: GuessDecoder(String)
+- uid: Beutl.Media.Decoding.DecoderRegistry.Register(Beutl.Media.Decoding.IDecoderInfo)
+  commentId: M:Beutl.Media.Decoding.DecoderRegistry.Register(Beutl.Media.Decoding.IDecoderInfo)
+  id: Register(Beutl.Media.Decoding.IDecoderInfo)
+  parent: Beutl.Media.Decoding.DecoderRegistry
+  langs:
+  - csharp
+  - vb
+  name: Register(IDecoderInfo)
+  nameWithType: DecoderRegistry.Register(IDecoderInfo)
+  fullName: Beutl.Media.Decoding.DecoderRegistry.Register(Beutl.Media.Decoding.IDecoderInfo)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Decoding/DecoderRegistry.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media.Decoding
+  syntax:
+    content: public static void Register(IDecoderInfo decoder)
+    parameters:
+    - id: decoder
+      type: Beutl.Media.Decoding.IDecoderInfo
+    content.vb: Public Shared Sub Register(decoder As IDecoderInfo)
+  overload: Beutl.Media.Decoding.DecoderRegistry.Register*
+references:
+- uid: Beutl.Media.Decoding
+  commentId: N:Beutl.Media.Decoding
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media.Decoding
+  nameWithType: Beutl.Media.Decoding
+  fullName: Beutl.Media.Decoding
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Decoding
+    name: Decoding
+    isExternal: true
+    href: Beutl.Media.Decoding.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  - name: .
+  - uid: Beutl.Media.Decoding
+    name: Decoding
+    isExternal: true
+    href: Beutl.Media.Decoding.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder*
+  commentId: Overload:Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder
+  isExternal: true
+  href: Beutl.Media.Decoding.DecoderRegistry.html#Beutl_Media_Decoding_DecoderRegistry_EnumerateDecoder
+  name: EnumerateDecoder
+  nameWithType: DecoderRegistry.EnumerateDecoder
+  fullName: Beutl.Media.Decoding.DecoderRegistry.EnumerateDecoder
+- uid: System.Collections.Generic.IEnumerable{Beutl.Media.Decoding.IDecoderInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{Beutl.Media.Decoding.IDecoderInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IDecoderInfo>
+  nameWithType: IEnumerable<IDecoderInfo>
+  fullName: System.Collections.Generic.IEnumerable<Beutl.Media.Decoding.IDecoderInfo>
+  nameWithType.vb: IEnumerable(Of IDecoderInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Beutl.Media.Decoding.IDecoderInfo)
+  name.vb: IEnumerable(Of IDecoderInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Beutl.Media.Decoding.IDecoderInfo
+    name: IDecoderInfo
+    isExternal: true
+    href: Beutl.Media.Decoding.IDecoderInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Decoding.IDecoderInfo
+    name: IDecoderInfo
+    isExternal: true
+    href: Beutl.Media.Decoding.IDecoderInfo.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile*
+  commentId: Overload:Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile
+  isExternal: true
+  href: Beutl.Media.Decoding.DecoderRegistry.html#Beutl_Media_Decoding_DecoderRegistry_OpenMediaFile_System_String_Beutl_Media_Decoding_MediaOptions_
+  name: OpenMediaFile
+  nameWithType: DecoderRegistry.OpenMediaFile
+  fullName: Beutl.Media.Decoding.DecoderRegistry.OpenMediaFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Media.Decoding.MediaOptions
+  commentId: T:Beutl.Media.Decoding.MediaOptions
+  parent: Beutl.Media.Decoding
+  isExternal: true
+  href: Beutl.Media.Decoding.MediaOptions.html
+  name: MediaOptions
+  nameWithType: MediaOptions
+  fullName: Beutl.Media.Decoding.MediaOptions
+- uid: Beutl.Media.Decoding.MediaReader
+  commentId: T:Beutl.Media.Decoding.MediaReader
+  parent: Beutl.Media.Decoding
+  isExternal: true
+  href: Beutl.Media.Decoding.MediaReader.html
+  name: MediaReader
+  nameWithType: MediaReader
+  fullName: Beutl.Media.Decoding.MediaReader
+- uid: Beutl.Media.Decoding.DecoderRegistry.GuessDecoder*
+  commentId: Overload:Beutl.Media.Decoding.DecoderRegistry.GuessDecoder
+  isExternal: true
+  href: Beutl.Media.Decoding.DecoderRegistry.html#Beutl_Media_Decoding_DecoderRegistry_GuessDecoder_System_String_
+  name: GuessDecoder
+  nameWithType: DecoderRegistry.GuessDecoder
+  fullName: Beutl.Media.Decoding.DecoderRegistry.GuessDecoder
+- uid: Beutl.Media.Decoding.IDecoderInfo[]
+  isExternal: true
+  href: Beutl.Media.Decoding.IDecoderInfo.html
+  name: IDecoderInfo[]
+  nameWithType: IDecoderInfo[]
+  fullName: Beutl.Media.Decoding.IDecoderInfo[]
+  nameWithType.vb: IDecoderInfo()
+  fullName.vb: Beutl.Media.Decoding.IDecoderInfo()
+  name.vb: IDecoderInfo()
+  spec.csharp:
+  - uid: Beutl.Media.Decoding.IDecoderInfo
+    name: IDecoderInfo
+    isExternal: true
+    href: Beutl.Media.Decoding.IDecoderInfo.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Beutl.Media.Decoding.IDecoderInfo
+    name: IDecoderInfo
+    isExternal: true
+    href: Beutl.Media.Decoding.IDecoderInfo.html
+  - name: (
+  - name: )
+- uid: Beutl.Media.Decoding.DecoderRegistry.Register*
+  commentId: Overload:Beutl.Media.Decoding.DecoderRegistry.Register
+  isExternal: true
+  href: Beutl.Media.Decoding.DecoderRegistry.html#Beutl_Media_Decoding_DecoderRegistry_Register_Beutl_Media_Decoding_IDecoderInfo_
+  name: Register
+  nameWithType: DecoderRegistry.Register
+  fullName: Beutl.Media.Decoding.DecoderRegistry.Register
+- uid: Beutl.Media.Decoding.IDecoderInfo
+  commentId: T:Beutl.Media.Decoding.IDecoderInfo
+  parent: Beutl.Media.Decoding
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Decoding/IDecoderInfo.cs
+  name: IDecoderInfo
+  nameWithType: IDecoderInfo
+  fullName: Beutl.Media.Decoding.IDecoderInfo

@@ -1,0 +1,390 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.ICoreProperty
+  commentId: T:Beutl.ICoreProperty
+  id: ICoreProperty
+  parent: Beutl
+  children:
+  - Beutl.ICoreProperty.Changed
+  - Beutl.ICoreProperty.GetMetadata``1(System.Type)
+  - Beutl.ICoreProperty.Id
+  - Beutl.ICoreProperty.Name
+  - Beutl.ICoreProperty.OwnerType
+  - Beutl.ICoreProperty.PropertyType
+  - Beutl.ICoreProperty.TryGetMetadata``1(System.Type,``0@)
+  langs:
+  - csharp
+  - vb
+  name: ICoreProperty
+  nameWithType: ICoreProperty
+  fullName: Beutl.ICoreProperty
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public interface ICoreProperty
+    content.vb: Public Interface ICoreProperty
+- uid: Beutl.ICoreProperty.GetMetadata``1(System.Type)
+  commentId: M:Beutl.ICoreProperty.GetMetadata``1(System.Type)
+  id: GetMetadata``1(System.Type)
+  parent: Beutl.ICoreProperty
+  langs:
+  - csharp
+  - vb
+  name: GetMetadata<TMetadata>(Type)
+  nameWithType: ICoreProperty.GetMetadata<TMetadata>(Type)
+  fullName: Beutl.ICoreProperty.GetMetadata<TMetadata>(System.Type)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: 'TMetadata GetMetadata<TMetadata>(Type type) where TMetadata : ICorePropertyMetadata'
+    parameters:
+    - id: type
+      type: System.Type
+    typeParameters:
+    - id: TMetadata
+    return:
+      type: '{TMetadata}'
+    content.vb: Function GetMetadata(Of TMetadata As ICorePropertyMetadata)(type As Type) As TMetadata
+  overload: Beutl.ICoreProperty.GetMetadata*
+  nameWithType.vb: ICoreProperty.GetMetadata(Of TMetadata)(Type)
+  fullName.vb: Beutl.ICoreProperty.GetMetadata(Of TMetadata)(System.Type)
+  name.vb: GetMetadata(Of TMetadata)(Type)
+- uid: Beutl.ICoreProperty.TryGetMetadata``1(System.Type,``0@)
+  commentId: M:Beutl.ICoreProperty.TryGetMetadata``1(System.Type,``0@)
+  id: TryGetMetadata``1(System.Type,``0@)
+  parent: Beutl.ICoreProperty
+  langs:
+  - csharp
+  - vb
+  name: TryGetMetadata<TMetadata>(Type, out TMetadata?)
+  nameWithType: ICoreProperty.TryGetMetadata<TMetadata>(Type, out TMetadata?)
+  fullName: Beutl.ICoreProperty.TryGetMetadata<TMetadata>(System.Type, out TMetadata?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: 'bool TryGetMetadata<TMetadata>(Type type, out TMetadata? result) where TMetadata : ICorePropertyMetadata'
+    parameters:
+    - id: type
+      type: System.Type
+    - id: result
+      type: '{TMetadata}'
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    typeParameters:
+    - id: TMetadata
+    return:
+      type: System.Boolean
+    content.vb: Function TryGetMetadata(Of TMetadata As ICorePropertyMetadata)(type As Type, result As TMetadata) As Boolean
+  overload: Beutl.ICoreProperty.TryGetMetadata*
+  nameWithType.vb: ICoreProperty.TryGetMetadata(Of TMetadata)(Type, TMetadata)
+  fullName.vb: Beutl.ICoreProperty.TryGetMetadata(Of TMetadata)(System.Type, TMetadata)
+  name.vb: TryGetMetadata(Of TMetadata)(Type, TMetadata)
+- uid: Beutl.ICoreProperty.Name
+  commentId: P:Beutl.ICoreProperty.Name
+  id: Name
+  parent: Beutl.ICoreProperty
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ICoreProperty.Name
+  fullName: Beutl.ICoreProperty.Name
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: Beutl.ICoreProperty.Name*
+- uid: Beutl.ICoreProperty.PropertyType
+  commentId: P:Beutl.ICoreProperty.PropertyType
+  id: PropertyType
+  parent: Beutl.ICoreProperty
+  langs:
+  - csharp
+  - vb
+  name: PropertyType
+  nameWithType: ICoreProperty.PropertyType
+  fullName: Beutl.ICoreProperty.PropertyType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: Type PropertyType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property PropertyType As Type
+  overload: Beutl.ICoreProperty.PropertyType*
+- uid: Beutl.ICoreProperty.OwnerType
+  commentId: P:Beutl.ICoreProperty.OwnerType
+  id: OwnerType
+  parent: Beutl.ICoreProperty
+  langs:
+  - csharp
+  - vb
+  name: OwnerType
+  nameWithType: ICoreProperty.OwnerType
+  fullName: Beutl.ICoreProperty.OwnerType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: Type OwnerType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property OwnerType As Type
+  overload: Beutl.ICoreProperty.OwnerType*
+- uid: Beutl.ICoreProperty.Id
+  commentId: P:Beutl.ICoreProperty.Id
+  id: Id
+  parent: Beutl.ICoreProperty
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ICoreProperty.Id
+  fullName: Beutl.ICoreProperty.Id
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: int Id { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Id As Integer
+  overload: Beutl.ICoreProperty.Id*
+- uid: Beutl.ICoreProperty.Changed
+  commentId: P:Beutl.ICoreProperty.Changed
+  id: Changed
+  parent: Beutl.ICoreProperty
+  langs:
+  - csharp
+  - vb
+  name: Changed
+  nameWithType: ICoreProperty.Changed
+  fullName: Beutl.ICoreProperty.Changed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ICoreProperty.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: IObservable<CorePropertyChangedEventArgs> Changed { get; }
+    parameters: []
+    return:
+      type: System.IObservable{Beutl.CorePropertyChangedEventArgs}
+    content.vb: ReadOnly Property Changed As IObservable(Of CorePropertyChangedEventArgs)
+  overload: Beutl.ICoreProperty.Changed*
+references:
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.ICoreProperty.GetMetadata*
+  commentId: Overload:Beutl.ICoreProperty.GetMetadata
+  isExternal: true
+  href: Beutl.ICoreProperty.html#Beutl_ICoreProperty_GetMetadata__1_System_Type_
+  name: GetMetadata
+  nameWithType: ICoreProperty.GetMetadata
+  fullName: Beutl.ICoreProperty.GetMetadata
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: '{TMetadata}'
+  commentId: '!:TMetadata'
+  definition: TMetadata
+  name: TMetadata
+  nameWithType: TMetadata
+  fullName: TMetadata
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TMetadata
+  name: TMetadata
+  nameWithType: TMetadata
+  fullName: TMetadata
+- uid: Beutl.ICoreProperty.TryGetMetadata*
+  commentId: Overload:Beutl.ICoreProperty.TryGetMetadata
+  isExternal: true
+  href: Beutl.ICoreProperty.html#Beutl_ICoreProperty_TryGetMetadata__1_System_Type___0__
+  name: TryGetMetadata
+  nameWithType: ICoreProperty.TryGetMetadata
+  fullName: Beutl.ICoreProperty.TryGetMetadata
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.ICoreProperty.Name*
+  commentId: Overload:Beutl.ICoreProperty.Name
+  isExternal: true
+  href: Beutl.ICoreProperty.html#Beutl_ICoreProperty_Name
+  name: Name
+  nameWithType: ICoreProperty.Name
+  fullName: Beutl.ICoreProperty.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.ICoreProperty.PropertyType*
+  commentId: Overload:Beutl.ICoreProperty.PropertyType
+  isExternal: true
+  href: Beutl.ICoreProperty.html#Beutl_ICoreProperty_PropertyType
+  name: PropertyType
+  nameWithType: ICoreProperty.PropertyType
+  fullName: Beutl.ICoreProperty.PropertyType
+- uid: Beutl.ICoreProperty.OwnerType*
+  commentId: Overload:Beutl.ICoreProperty.OwnerType
+  isExternal: true
+  href: Beutl.ICoreProperty.html#Beutl_ICoreProperty_OwnerType
+  name: OwnerType
+  nameWithType: ICoreProperty.OwnerType
+  fullName: Beutl.ICoreProperty.OwnerType
+- uid: Beutl.ICoreProperty.Id*
+  commentId: Overload:Beutl.ICoreProperty.Id
+  isExternal: true
+  href: Beutl.ICoreProperty.html#Beutl_ICoreProperty_Id
+  name: Id
+  nameWithType: ICoreProperty.Id
+  fullName: Beutl.ICoreProperty.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.ICoreProperty.Changed*
+  commentId: Overload:Beutl.ICoreProperty.Changed
+  isExternal: true
+  href: Beutl.ICoreProperty.html#Beutl_ICoreProperty_Changed
+  name: Changed
+  nameWithType: ICoreProperty.Changed
+  fullName: Beutl.ICoreProperty.Changed
+- uid: System.IObservable{Beutl.CorePropertyChangedEventArgs}
+  commentId: T:System.IObservable{Beutl.CorePropertyChangedEventArgs}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<CorePropertyChangedEventArgs>
+  nameWithType: IObservable<CorePropertyChangedEventArgs>
+  fullName: System.IObservable<Beutl.CorePropertyChangedEventArgs>
+  nameWithType.vb: IObservable(Of CorePropertyChangedEventArgs)
+  fullName.vb: System.IObservable(Of Beutl.CorePropertyChangedEventArgs)
+  name.vb: IObservable(Of CorePropertyChangedEventArgs)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: Beutl.CorePropertyChangedEventArgs
+    name: CorePropertyChangedEventArgs
+    isExternal: true
+    href: Beutl.CorePropertyChangedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.CorePropertyChangedEventArgs
+    name: CorePropertyChangedEventArgs
+    isExternal: true
+    href: Beutl.CorePropertyChangedEventArgs.html
+  - name: )
+- uid: System.IObservable`1
+  commentId: T:System.IObservable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

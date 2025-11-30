@@ -1,0 +1,1076 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Reactive.DisposableExtension
+  commentId: T:Beutl.Reactive.DisposableExtension
+  id: DisposableExtension
+  parent: Beutl.Reactive
+  children:
+  - Beutl.Reactive.DisposableExtension.DisposeAll``2(System.ValueTuple{``0,``1}@)
+  - Beutl.Reactive.DisposableExtension.DisposeAll``3(System.ValueTuple{``0,``1,``2}@)
+  - Beutl.Reactive.DisposableExtension.DisposeAll``4(System.ValueTuple{``0,``1,``2,``3}@)
+  - Beutl.Reactive.DisposableExtension.DisposeAll``5(System.ValueTuple{``0,``1,``2,``3,``4}@)
+  - Beutl.Reactive.DisposableExtension.DisposeAll``6(System.ValueTuple{``0,``1,``2,``3,``4,``5}@)
+  - Beutl.Reactive.DisposableExtension.DisposeAll``7(System.ValueTuple{``0,``1,``2,``3,``4,``5,``6}@)
+  - Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  langs:
+  - csharp
+  - vb
+  name: DisposableExtension
+  nameWithType: DisposableExtension
+  fullName: Beutl.Reactive.DisposableExtension
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: public static class DisposableExtension
+    content.vb: Public Module DisposableExtension
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  id: DisposeWith``1(``0,System.Collections.Generic.ICollection{System.IDisposable})
+  isExtensionMethod: true
+  parent: Beutl.Reactive.DisposableExtension
+  langs:
+  - csharp
+  - vb
+  name: DisposeWith<T>(T, ICollection<IDisposable>)
+  nameWithType: DisposableExtension.DisposeWith<T>(T, ICollection<IDisposable>)
+  fullName: Beutl.Reactive.DisposableExtension.DisposeWith<T>(T, System.Collections.Generic.ICollection<System.IDisposable>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: 'public static T DisposeWith<T>(this T disposable, ICollection<IDisposable> list) where T : IDisposable'
+    parameters:
+    - id: disposable
+      type: '{T}'
+    - id: list
+      type: System.Collections.Generic.ICollection{System.IDisposable}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function DisposeWith(Of T As IDisposable)(disposable As T, list As ICollection(Of IDisposable)) As T
+  overload: Beutl.Reactive.DisposableExtension.DisposeWith*
+  nameWithType.vb: DisposableExtension.DisposeWith(Of T)(T, ICollection(Of IDisposable))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeWith(Of T)(T, System.Collections.Generic.ICollection(Of System.IDisposable))
+  name.vb: DisposeWith(Of T)(T, ICollection(Of IDisposable))
+- uid: Beutl.Reactive.DisposableExtension.DisposeAll``2(System.ValueTuple{``0,``1}@)
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeAll``2(System.ValueTuple{``0,``1}@)
+  id: DisposeAll``2(System.ValueTuple{``0,``1}@)
+  isExtensionMethod: true
+  parent: Beutl.Reactive.DisposableExtension
+  langs:
+  - csharp
+  - vb
+  name: DisposeAll<T1, T2>(in (T1?, T2?))
+  nameWithType: DisposableExtension.DisposeAll<T1, T2>(in (T1?, T2?))
+  fullName: Beutl.Reactive.DisposableExtension.DisposeAll<T1, T2>(in (T1?, T2?))
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: 'public static void DisposeAll<T1, T2>(this in (T1?, T2?) tuple) where T1 : IDisposable where T2 : IDisposable'
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{{T1},{T2}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    content.vb: Public Shared Sub DisposeAll(Of T1 As IDisposable, T2 As IDisposable)(tuple As (T1, T2))
+  overload: Beutl.Reactive.DisposableExtension.DisposeAll*
+  nameWithType.vb: DisposableExtension.DisposeAll(Of T1, T2)((T1, T2))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeAll(Of T1, T2)((T1, T2))
+  name.vb: DisposeAll(Of T1, T2)((T1, T2))
+- uid: Beutl.Reactive.DisposableExtension.DisposeAll``3(System.ValueTuple{``0,``1,``2}@)
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeAll``3(System.ValueTuple{``0,``1,``2}@)
+  id: DisposeAll``3(System.ValueTuple{``0,``1,``2}@)
+  isExtensionMethod: true
+  parent: Beutl.Reactive.DisposableExtension
+  langs:
+  - csharp
+  - vb
+  name: DisposeAll<T1, T2, T3>(in (T1?, T2?, T3?))
+  nameWithType: DisposableExtension.DisposeAll<T1, T2, T3>(in (T1?, T2?, T3?))
+  fullName: Beutl.Reactive.DisposableExtension.DisposeAll<T1, T2, T3>(in (T1?, T2?, T3?))
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: 'public static void DisposeAll<T1, T2, T3>(this in (T1?, T2?, T3?) tuple) where T1 : IDisposable where T2 : IDisposable where T3 : IDisposable'
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{{T1},{T2},{T3}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    content.vb: Public Shared Sub DisposeAll(Of T1 As IDisposable, T2 As IDisposable, T3 As IDisposable)(tuple As (T1, T2, T3))
+  overload: Beutl.Reactive.DisposableExtension.DisposeAll*
+  nameWithType.vb: DisposableExtension.DisposeAll(Of T1, T2, T3)((T1, T2, T3))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeAll(Of T1, T2, T3)((T1, T2, T3))
+  name.vb: DisposeAll(Of T1, T2, T3)((T1, T2, T3))
+- uid: Beutl.Reactive.DisposableExtension.DisposeAll``4(System.ValueTuple{``0,``1,``2,``3}@)
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeAll``4(System.ValueTuple{``0,``1,``2,``3}@)
+  id: DisposeAll``4(System.ValueTuple{``0,``1,``2,``3}@)
+  isExtensionMethod: true
+  parent: Beutl.Reactive.DisposableExtension
+  langs:
+  - csharp
+  - vb
+  name: DisposeAll<T1, T2, T3, T4>(in (T1?, T2?, T3?, T4?))
+  nameWithType: DisposableExtension.DisposeAll<T1, T2, T3, T4>(in (T1?, T2?, T3?, T4?))
+  fullName: Beutl.Reactive.DisposableExtension.DisposeAll<T1, T2, T3, T4>(in (T1?, T2?, T3?, T4?))
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: 'public static void DisposeAll<T1, T2, T3, T4>(this in (T1?, T2?, T3?, T4?) tuple) where T1 : IDisposable where T2 : IDisposable where T3 : IDisposable where T4 : IDisposable'
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{{T1},{T2},{T3},{T4}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    content.vb: Public Shared Sub DisposeAll(Of T1 As IDisposable, T2 As IDisposable, T3 As IDisposable, T4 As IDisposable)(tuple As (T1, T2, T3, T4))
+  overload: Beutl.Reactive.DisposableExtension.DisposeAll*
+  nameWithType.vb: DisposableExtension.DisposeAll(Of T1, T2, T3, T4)((T1, T2, T3, T4))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeAll(Of T1, T2, T3, T4)((T1, T2, T3, T4))
+  name.vb: DisposeAll(Of T1, T2, T3, T4)((T1, T2, T3, T4))
+- uid: Beutl.Reactive.DisposableExtension.DisposeAll``5(System.ValueTuple{``0,``1,``2,``3,``4}@)
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeAll``5(System.ValueTuple{``0,``1,``2,``3,``4}@)
+  id: DisposeAll``5(System.ValueTuple{``0,``1,``2,``3,``4}@)
+  isExtensionMethod: true
+  parent: Beutl.Reactive.DisposableExtension
+  langs:
+  - csharp
+  - vb
+  name: DisposeAll<T1, T2, T3, T4, T5>(in (T1?, T2?, T3?, T4?, T5?))
+  nameWithType: DisposableExtension.DisposeAll<T1, T2, T3, T4, T5>(in (T1?, T2?, T3?, T4?, T5?))
+  fullName: Beutl.Reactive.DisposableExtension.DisposeAll<T1, T2, T3, T4, T5>(in (T1?, T2?, T3?, T4?, T5?))
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: 'public static void DisposeAll<T1, T2, T3, T4, T5>(this in (T1?, T2?, T3?, T4?, T5?) tuple) where T1 : IDisposable where T2 : IDisposable where T3 : IDisposable where T4 : IDisposable where T5 : IDisposable'
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{{T1},{T2},{T3},{T4},{T5}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    - id: T5
+    content.vb: Public Shared Sub DisposeAll(Of T1 As IDisposable, T2 As IDisposable, T3 As IDisposable, T4 As IDisposable, T5 As IDisposable)(tuple As (T1, T2, T3, T4, T5))
+  overload: Beutl.Reactive.DisposableExtension.DisposeAll*
+  nameWithType.vb: DisposableExtension.DisposeAll(Of T1, T2, T3, T4, T5)((T1, T2, T3, T4, T5))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeAll(Of T1, T2, T3, T4, T5)((T1, T2, T3, T4, T5))
+  name.vb: DisposeAll(Of T1, T2, T3, T4, T5)((T1, T2, T3, T4, T5))
+- uid: Beutl.Reactive.DisposableExtension.DisposeAll``6(System.ValueTuple{``0,``1,``2,``3,``4,``5}@)
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeAll``6(System.ValueTuple{``0,``1,``2,``3,``4,``5}@)
+  id: DisposeAll``6(System.ValueTuple{``0,``1,``2,``3,``4,``5}@)
+  isExtensionMethod: true
+  parent: Beutl.Reactive.DisposableExtension
+  langs:
+  - csharp
+  - vb
+  name: DisposeAll<T1, T2, T3, T4, T5, T6>(in (T1?, T2?, T3?, T4?, T5?, T6?))
+  nameWithType: DisposableExtension.DisposeAll<T1, T2, T3, T4, T5, T6>(in (T1?, T2?, T3?, T4?, T5?, T6?))
+  fullName: Beutl.Reactive.DisposableExtension.DisposeAll<T1, T2, T3, T4, T5, T6>(in (T1?, T2?, T3?, T4?, T5?, T6?))
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: 'public static void DisposeAll<T1, T2, T3, T4, T5, T6>(this in (T1?, T2?, T3?, T4?, T5?, T6?) tuple) where T1 : IDisposable where T2 : IDisposable where T3 : IDisposable where T4 : IDisposable where T5 : IDisposable where T6 : IDisposable'
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{{T1},{T2},{T3},{T4},{T5},{T6}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    - id: T5
+    - id: T6
+    content.vb: Public Shared Sub DisposeAll(Of T1 As IDisposable, T2 As IDisposable, T3 As IDisposable, T4 As IDisposable, T5 As IDisposable, T6 As IDisposable)(tuple As (T1, T2, T3, T4, T5, T6))
+  overload: Beutl.Reactive.DisposableExtension.DisposeAll*
+  nameWithType.vb: DisposableExtension.DisposeAll(Of T1, T2, T3, T4, T5, T6)((T1, T2, T3, T4, T5, T6))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeAll(Of T1, T2, T3, T4, T5, T6)((T1, T2, T3, T4, T5, T6))
+  name.vb: DisposeAll(Of T1, T2, T3, T4, T5, T6)((T1, T2, T3, T4, T5, T6))
+- uid: Beutl.Reactive.DisposableExtension.DisposeAll``7(System.ValueTuple{``0,``1,``2,``3,``4,``5,``6}@)
+  commentId: M:Beutl.Reactive.DisposableExtension.DisposeAll``7(System.ValueTuple{``0,``1,``2,``3,``4,``5,``6}@)
+  id: DisposeAll``7(System.ValueTuple{``0,``1,``2,``3,``4,``5,``6}@)
+  isExtensionMethod: true
+  parent: Beutl.Reactive.DisposableExtension
+  langs:
+  - csharp
+  - vb
+  name: DisposeAll<T1, T2, T3, T4, T5, T6, T7>(in (T1?, T2?, T3?, T4?, T5?, T6?, T7?))
+  nameWithType: DisposableExtension.DisposeAll<T1, T2, T3, T4, T5, T6, T7>(in (T1?, T2?, T3?, T4?, T5?, T6?, T7?))
+  fullName: Beutl.Reactive.DisposableExtension.DisposeAll<T1, T2, T3, T4, T5, T6, T7>(in (T1?, T2?, T3?, T4?, T5?, T6?, T7?))
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reactive/DisposableExtension.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Reactive
+  syntax:
+    content: 'public static void DisposeAll<T1, T2, T3, T4, T5, T6, T7>(this in (T1?, T2?, T3?, T4?, T5?, T6?, T7?) tuple) where T1 : IDisposable where T2 : IDisposable where T3 : IDisposable where T4 : IDisposable where T5 : IDisposable where T6 : IDisposable where T7 : IDisposable'
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{{T1},{T2},{T3},{T4},{T5},{T6},{T7}}
+    typeParameters:
+    - id: T1
+    - id: T2
+    - id: T3
+    - id: T4
+    - id: T5
+    - id: T6
+    - id: T7
+    content.vb: Public Shared Sub DisposeAll(Of T1 As IDisposable, T2 As IDisposable, T3 As IDisposable, T4 As IDisposable, T5 As IDisposable, T6 As IDisposable, T7 As IDisposable)(tuple As (T1, T2, T3, T4, T5, T6, T7))
+  overload: Beutl.Reactive.DisposableExtension.DisposeAll*
+  nameWithType.vb: DisposableExtension.DisposeAll(Of T1, T2, T3, T4, T5, T6, T7)((T1, T2, T3, T4, T5, T6, T7))
+  fullName.vb: Beutl.Reactive.DisposableExtension.DisposeAll(Of T1, T2, T3, T4, T5, T6, T7)((T1, T2, T3, T4, T5, T6, T7))
+  name.vb: DisposeAll(Of T1, T2, T3, T4, T5, T6, T7)((T1, T2, T3, T4, T5, T6, T7))
+references:
+- uid: Beutl.Reactive
+  commentId: N:Beutl.Reactive
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Reactive
+  nameWithType: Beutl.Reactive
+  fullName: Beutl.Reactive
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Reactive
+    name: Reactive
+    isExternal: true
+    href: Beutl.Reactive.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Reactive
+    name: Reactive
+    isExternal: true
+    href: Beutl.Reactive.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Reactive.DisposableExtension.DisposeWith*
+  commentId: Overload:Beutl.Reactive.DisposableExtension.DisposeWith
+  isExternal: true
+  href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeWith__1___0_System_Collections_Generic_ICollection_System_IDisposable__
+  name: DisposeWith
+  nameWithType: DisposableExtension.DisposeWith
+  fullName: Beutl.Reactive.DisposableExtension.DisposeWith
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic.ICollection{System.IDisposable}
+  commentId: T:System.Collections.Generic.ICollection{System.IDisposable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<IDisposable>
+  nameWithType: ICollection<IDisposable>
+  fullName: System.Collections.Generic.ICollection<System.IDisposable>
+  nameWithType.vb: ICollection(Of IDisposable)
+  fullName.vb: System.Collections.Generic.ICollection(Of System.IDisposable)
+  name.vb: ICollection(Of IDisposable)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Beutl.Reactive.DisposableExtension.DisposeAll*
+  commentId: Overload:Beutl.Reactive.DisposableExtension.DisposeAll
+  isExternal: true
+  href: Beutl.Reactive.DisposableExtension.html#Beutl_Reactive_DisposableExtension_DisposeAll__2_System_ValueTuple___0___1___
+  name: DisposeAll
+  nameWithType: DisposableExtension.DisposeAll
+  fullName: Beutl.Reactive.DisposableExtension.DisposeAll
+- uid: System.ValueTuple{{T1},{T2}}
+  commentId: T:System.ValueTuple{``0,``1}
+  parent: System
+  definition: System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: System.ValueTuple{{T1},{T2},{T3}}
+  commentId: T:System.ValueTuple{``0,``1,``2}
+  parent: System
+  definition: System.ValueTuple`3
+  name: (T1, T2, T3)
+  nameWithType: (T1, T2, T3)
+  fullName: (T1, T2, T3)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  name: (T1, T2, T3)
+  nameWithType: (T1, T2, T3)
+  fullName: (T1, T2, T3)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: System.ValueTuple{{T1},{T2},{T3},{T4}}
+  commentId: T:System.ValueTuple{``0,``1,``2,``3}
+  parent: System
+  definition: System.ValueTuple`4
+  name: (T1, T2, T3, T4)
+  nameWithType: (T1, T2, T3, T4)
+  fullName: (T1, T2, T3, T4)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+- uid: System.ValueTuple`4
+  commentId: T:System.ValueTuple`4
+  name: (T1, T2, T3, T4)
+  nameWithType: (T1, T2, T3, T4)
+  fullName: (T1, T2, T3, T4)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+- uid: System.ValueTuple{{T1},{T2},{T3},{T4},{T5}}
+  commentId: T:System.ValueTuple{``0,``1,``2,``3,``4}
+  parent: System
+  definition: System.ValueTuple`5
+  name: (T1, T2, T3, T4, T5)
+  nameWithType: (T1, T2, T3, T4, T5)
+  fullName: (T1, T2, T3, T4, T5)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: )
+- uid: System.ValueTuple`5
+  commentId: T:System.ValueTuple`5
+  name: (T1, T2, T3, T4, T5)
+  nameWithType: (T1, T2, T3, T4, T5)
+  fullName: (T1, T2, T3, T4, T5)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: )
+- uid: System.ValueTuple{{T1},{T2},{T3},{T4},{T5},{T6}}
+  commentId: T:System.ValueTuple{``0,``1,``2,``3,``4,``5}
+  parent: System
+  definition: System.ValueTuple`6
+  name: (T1, T2, T3, T4, T5, T6)
+  nameWithType: (T1, T2, T3, T4, T5, T6)
+  fullName: (T1, T2, T3, T4, T5, T6)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: )
+- uid: System.ValueTuple`6
+  commentId: T:System.ValueTuple`6
+  name: (T1, T2, T3, T4, T5, T6)
+  nameWithType: (T1, T2, T3, T4, T5, T6)
+  fullName: (T1, T2, T3, T4, T5, T6)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: )
+- uid: System.ValueTuple{{T1},{T2},{T3},{T4},{T5},{T6},{T7}}
+  commentId: T:System.ValueTuple{``0,``1,``2,``3,``4,``5,``6}
+  parent: System
+  definition: System.ValueTuple`7
+  name: (T1, T2, T3, T4, T5, T6, T7)
+  nameWithType: (T1, T2, T3, T4, T5, T6, T7)
+  fullName: (T1, T2, T3, T4, T5, T6, T7)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: )
+- uid: System.ValueTuple`7
+  commentId: T:System.ValueTuple`7
+  name: (T1, T2, T3, T4, T5, T6, T7)
+  nameWithType: (T1, T2, T3, T4, T5, T6, T7)
+  fullName: (T1, T2, T3, T4, T5, T6, T7)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: )

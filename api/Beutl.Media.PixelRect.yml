@@ -1,0 +1,2552 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.PixelRect
+  commentId: T:Beutl.Media.PixelRect
+  id: PixelRect
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  - Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelSize)
+  - Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelSize)
+  - Beutl.Media.PixelRect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  - Beutl.Media.PixelRect.Bottom
+  - Beutl.Media.PixelRect.BottomLeft
+  - Beutl.Media.PixelRect.BottomRight
+  - Beutl.Media.PixelRect.Center
+  - Beutl.Media.PixelRect.CenterRect(Beutl.Media.PixelRect)
+  - Beutl.Media.PixelRect.Contains(Beutl.Media.PixelPoint)
+  - Beutl.Media.PixelRect.Contains(Beutl.Media.PixelRect)
+  - Beutl.Media.PixelRect.Empty
+  - Beutl.Media.PixelRect.Equals(Beutl.Media.PixelRect)
+  - Beutl.Media.PixelRect.Equals(System.Object)
+  - Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect)
+  - Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  - Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect,System.Single)
+  - Beutl.Media.PixelRect.GetHashCode
+  - Beutl.Media.PixelRect.Height
+  - Beutl.Media.PixelRect.Intersect(Beutl.Media.PixelRect)
+  - Beutl.Media.PixelRect.Intersects(Beutl.Media.PixelRect)
+  - Beutl.Media.PixelRect.IsEmpty
+  - Beutl.Media.PixelRect.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Media.PixelRect.Parse(System.String)
+  - Beutl.Media.PixelRect.Position
+  - Beutl.Media.PixelRect.Right
+  - Beutl.Media.PixelRect.Size
+  - Beutl.Media.PixelRect.ToRect(Beutl.Graphics.Vector)
+  - Beutl.Media.PixelRect.ToRect(System.Single)
+  - Beutl.Media.PixelRect.ToString
+  - Beutl.Media.PixelRect.TopLeft
+  - Beutl.Media.PixelRect.TopRight
+  - Beutl.Media.PixelRect.Translate(Beutl.Media.PixelPoint)
+  - Beutl.Media.PixelRect.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelRect@)
+  - Beutl.Media.PixelRect.TryParse(System.String,Beutl.Media.PixelRect@)
+  - Beutl.Media.PixelRect.Union(Beutl.Media.PixelRect)
+  - Beutl.Media.PixelRect.Width
+  - Beutl.Media.PixelRect.WithHeight(System.Int32)
+  - Beutl.Media.PixelRect.WithWidth(System.Int32)
+  - Beutl.Media.PixelRect.WithX(System.Int32)
+  - Beutl.Media.PixelRect.WithY(System.Int32)
+  - Beutl.Media.PixelRect.X
+  - Beutl.Media.PixelRect.Y
+  - Beutl.Media.PixelRect.op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  - Beutl.Media.PixelRect.op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  langs:
+  - csharp
+  - vb
+  name: PixelRect
+  nameWithType: PixelRect
+  fullName: Beutl.Media.PixelRect
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(PixelRectJsonConverter))]
+
+      [TypeConverter(typeof(PixelRectConverter))]
+
+      public readonly struct PixelRect : IEquatable<PixelRect>, ISpanParsable<PixelRect>, IParsable<PixelRect>, IEqualityOperators<PixelRect, PixelRect, bool>, ITupleConvertible<PixelRect, int>
+    content.vb: >-
+      <JsonConverter(GetType(PixelRectJsonConverter))>
+
+      <TypeConverter(GetType(PixelRectConverter))>
+
+      Public Structure PixelRect Implements IEquatable(Of PixelRect), ISpanParsable(Of PixelRect), IParsable(Of PixelRect), IEqualityOperators(Of PixelRect, PixelRect, Boolean), ITupleConvertible(Of PixelRect, Integer)
+  implements:
+  - System.IEquatable{Beutl.Media.PixelRect}
+  - System.ISpanParsable{Beutl.Media.PixelRect}
+  - System.IParsable{Beutl.Media.PixelRect}
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}
+  - Beutl.ITupleConvertible{Beutl.Media.PixelRect,System.Int32}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.PixelRectConverter
+- uid: Beutl.Media.PixelRect.Empty
+  commentId: F:Beutl.Media.PixelRect.Empty
+  id: Empty
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: PixelRect.Empty
+  fullName: Beutl.Media.PixelRect.Empty
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static readonly PixelRect Empty
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Shared ReadOnly Empty As PixelRect
+- uid: Beutl.Media.PixelRect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Beutl.Media.PixelRect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: PixelRect(int, int, int, int)
+  nameWithType: PixelRect.PixelRect(int, int, int, int)
+  fullName: Beutl.Media.PixelRect.PixelRect(int, int, int, int)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect(int x, int y, int width, int height)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: Beutl.Media.PixelRect.#ctor*
+  nameWithType.vb: PixelRect.New(Integer, Integer, Integer, Integer)
+  fullName.vb: Beutl.Media.PixelRect.New(Integer, Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer, Integer)
+- uid: Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelSize)
+  commentId: M:Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelSize)
+  id: '#ctor(Beutl.Media.PixelSize)'
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: PixelRect(PixelSize)
+  nameWithType: PixelRect.PixelRect(PixelSize)
+  fullName: Beutl.Media.PixelRect.PixelRect(Beutl.Media.PixelSize)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect(PixelSize size)
+    parameters:
+    - id: size
+      type: Beutl.Media.PixelSize
+    content.vb: Public Sub New(size As PixelSize)
+  overload: Beutl.Media.PixelRect.#ctor*
+  nameWithType.vb: PixelRect.New(PixelSize)
+  fullName.vb: Beutl.Media.PixelRect.New(Beutl.Media.PixelSize)
+  name.vb: New(PixelSize)
+- uid: Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelSize)
+  commentId: M:Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelSize)
+  id: '#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelSize)'
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: PixelRect(PixelPoint, PixelSize)
+  nameWithType: PixelRect.PixelRect(PixelPoint, PixelSize)
+  fullName: Beutl.Media.PixelRect.PixelRect(Beutl.Media.PixelPoint, Beutl.Media.PixelSize)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect(PixelPoint position, PixelSize size)
+    parameters:
+    - id: position
+      type: Beutl.Media.PixelPoint
+    - id: size
+      type: Beutl.Media.PixelSize
+    content.vb: Public Sub New(position As PixelPoint, size As PixelSize)
+  overload: Beutl.Media.PixelRect.#ctor*
+  nameWithType.vb: PixelRect.New(PixelPoint, PixelSize)
+  fullName.vb: Beutl.Media.PixelRect.New(Beutl.Media.PixelPoint, Beutl.Media.PixelSize)
+  name.vb: New(PixelPoint, PixelSize)
+- uid: Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelRect.#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)
+  id: '#ctor(Beutl.Media.PixelPoint,Beutl.Media.PixelPoint)'
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: PixelRect(PixelPoint, PixelPoint)
+  nameWithType: PixelRect.PixelRect(PixelPoint, PixelPoint)
+  fullName: Beutl.Media.PixelRect.PixelRect(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect(PixelPoint topLeft, PixelPoint bottomRight)
+    parameters:
+    - id: topLeft
+      type: Beutl.Media.PixelPoint
+    - id: bottomRight
+      type: Beutl.Media.PixelPoint
+    content.vb: Public Sub New(topLeft As PixelPoint, bottomRight As PixelPoint)
+  overload: Beutl.Media.PixelRect.#ctor*
+  nameWithType.vb: PixelRect.New(PixelPoint, PixelPoint)
+  fullName.vb: Beutl.Media.PixelRect.New(Beutl.Media.PixelPoint, Beutl.Media.PixelPoint)
+  name.vb: New(PixelPoint, PixelPoint)
+- uid: Beutl.Media.PixelRect.op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  id: op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  isEii: true
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: operator ==(PixelRect, PixelRect)
+  nameWithType: PixelRect.operator ==(PixelRect, PixelRect)
+  fullName: Beutl.Media.PixelRect.operator ==(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static bool operator ==(PixelRect left, PixelRect right)
+    parameters:
+    - id: left
+      type: Beutl.Media.PixelRect
+    - id: right
+      type: Beutl.Media.PixelRect
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator =(left As PixelRect, right As PixelRect) As Boolean
+  overload: Beutl.Media.PixelRect.op_Equality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  nameWithType.vb: PixelRect.=(PixelRect, PixelRect)
+  fullName.vb: Beutl.Media.PixelRect.=(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  name.vb: =(PixelRect, PixelRect)
+- uid: Beutl.Media.PixelRect.op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  id: op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  isEii: true
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: operator !=(PixelRect, PixelRect)
+  nameWithType: PixelRect.operator !=(PixelRect, PixelRect)
+  fullName: Beutl.Media.PixelRect.operator !=(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: static bool operator !=(PixelRect left, PixelRect right)
+    parameters:
+    - id: left
+      type: Beutl.Media.PixelRect
+    - id: right
+      type: Beutl.Media.PixelRect
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator <>(left As PixelRect, right As PixelRect) As Boolean
+  overload: Beutl.Media.PixelRect.op_Inequality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  nameWithType.vb: PixelRect.<>(PixelRect, PixelRect)
+  fullName.vb: Beutl.Media.PixelRect.<>(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  name.vb: <>(PixelRect, PixelRect)
+- uid: Beutl.Media.PixelRect.Contains(Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelRect.Contains(Beutl.Media.PixelPoint)
+  id: Contains(Beutl.Media.PixelPoint)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Contains(PixelPoint)
+  nameWithType: PixelRect.Contains(PixelPoint)
+  fullName: Beutl.Media.PixelRect.Contains(Beutl.Media.PixelPoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool Contains(PixelPoint p)
+    parameters:
+    - id: p
+      type: Beutl.Media.PixelPoint
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(p As PixelPoint) As Boolean
+  overload: Beutl.Media.PixelRect.Contains*
+- uid: Beutl.Media.PixelRect.Contains(Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.Contains(Beutl.Media.PixelRect)
+  id: Contains(Beutl.Media.PixelRect)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Contains(PixelRect)
+  nameWithType: PixelRect.Contains(PixelRect)
+  fullName: Beutl.Media.PixelRect.Contains(Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool Contains(PixelRect r)
+    parameters:
+    - id: r
+      type: Beutl.Media.PixelRect
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(r As PixelRect) As Boolean
+  overload: Beutl.Media.PixelRect.Contains*
+- uid: Beutl.Media.PixelRect.CenterRect(Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.CenterRect(Beutl.Media.PixelRect)
+  id: CenterRect(Beutl.Media.PixelRect)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: CenterRect(PixelRect)
+  nameWithType: PixelRect.CenterRect(PixelRect)
+  fullName: Beutl.Media.PixelRect.CenterRect(Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect CenterRect(PixelRect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Media.PixelRect
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function CenterRect(rect As PixelRect) As PixelRect
+  overload: Beutl.Media.PixelRect.CenterRect*
+- uid: Beutl.Media.PixelRect.Equals(Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.Equals(Beutl.Media.PixelRect)
+  id: Equals(Beutl.Media.PixelRect)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Equals(PixelRect)
+  nameWithType: PixelRect.Equals(PixelRect)
+  fullName: Beutl.Media.PixelRect.Equals(Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(PixelRect other)
+    parameters:
+    - id: other
+      type: Beutl.Media.PixelRect
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As PixelRect) As Boolean
+  overload: Beutl.Media.PixelRect.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.PixelRect}.Equals(Beutl.Media.PixelRect)
+- uid: Beutl.Media.PixelRect.Equals(System.Object)
+  commentId: M:Beutl.Media.PixelRect.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: PixelRect.Equals(object?)
+  fullName: Beutl.Media.PixelRect.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.PixelRect.Equals*
+  nameWithType.vb: PixelRect.Equals(Object)
+  fullName.vb: Beutl.Media.PixelRect.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.PixelRect.GetHashCode
+  commentId: M:Beutl.Media.PixelRect.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: PixelRect.GetHashCode()
+  fullName: Beutl.Media.PixelRect.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.PixelRect.GetHashCode*
+- uid: Beutl.Media.PixelRect.Intersect(Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.Intersect(Beutl.Media.PixelRect)
+  id: Intersect(Beutl.Media.PixelRect)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Intersect(PixelRect)
+  nameWithType: PixelRect.Intersect(PixelRect)
+  fullName: Beutl.Media.PixelRect.Intersect(Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect Intersect(PixelRect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Media.PixelRect
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function Intersect(rect As PixelRect) As PixelRect
+  overload: Beutl.Media.PixelRect.Intersect*
+- uid: Beutl.Media.PixelRect.Intersects(Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.Intersects(Beutl.Media.PixelRect)
+  id: Intersects(Beutl.Media.PixelRect)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Intersects(PixelRect)
+  nameWithType: PixelRect.Intersects(PixelRect)
+  fullName: Beutl.Media.PixelRect.Intersects(Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool Intersects(PixelRect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Media.PixelRect
+    return:
+      type: System.Boolean
+    content.vb: Public Function Intersects(rect As PixelRect) As Boolean
+  overload: Beutl.Media.PixelRect.Intersects*
+- uid: Beutl.Media.PixelRect.Translate(Beutl.Media.PixelPoint)
+  commentId: M:Beutl.Media.PixelRect.Translate(Beutl.Media.PixelPoint)
+  id: Translate(Beutl.Media.PixelPoint)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Translate(PixelPoint)
+  nameWithType: PixelRect.Translate(PixelPoint)
+  fullName: Beutl.Media.PixelRect.Translate(Beutl.Media.PixelPoint)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect Translate(PixelPoint offset)
+    parameters:
+    - id: offset
+      type: Beutl.Media.PixelPoint
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function Translate(offset As PixelPoint) As PixelRect
+  overload: Beutl.Media.PixelRect.Translate*
+- uid: Beutl.Media.PixelRect.Union(Beutl.Media.PixelRect)
+  commentId: M:Beutl.Media.PixelRect.Union(Beutl.Media.PixelRect)
+  id: Union(Beutl.Media.PixelRect)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Union(PixelRect)
+  nameWithType: PixelRect.Union(PixelRect)
+  fullName: Beutl.Media.PixelRect.Union(Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect Union(PixelRect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Media.PixelRect
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function Union(rect As PixelRect) As PixelRect
+  overload: Beutl.Media.PixelRect.Union*
+- uid: Beutl.Media.PixelRect.WithX(System.Int32)
+  commentId: M:Beutl.Media.PixelRect.WithX(System.Int32)
+  id: WithX(System.Int32)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: WithX(int)
+  nameWithType: PixelRect.WithX(int)
+  fullName: Beutl.Media.PixelRect.WithX(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect WithX(int x)
+    parameters:
+    - id: x
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function WithX(x As Integer) As PixelRect
+  overload: Beutl.Media.PixelRect.WithX*
+  nameWithType.vb: PixelRect.WithX(Integer)
+  fullName.vb: Beutl.Media.PixelRect.WithX(Integer)
+  name.vb: WithX(Integer)
+- uid: Beutl.Media.PixelRect.WithY(System.Int32)
+  commentId: M:Beutl.Media.PixelRect.WithY(System.Int32)
+  id: WithY(System.Int32)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: WithY(int)
+  nameWithType: PixelRect.WithY(int)
+  fullName: Beutl.Media.PixelRect.WithY(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect WithY(int y)
+    parameters:
+    - id: y
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function WithY(y As Integer) As PixelRect
+  overload: Beutl.Media.PixelRect.WithY*
+  nameWithType.vb: PixelRect.WithY(Integer)
+  fullName.vb: Beutl.Media.PixelRect.WithY(Integer)
+  name.vb: WithY(Integer)
+- uid: Beutl.Media.PixelRect.WithWidth(System.Int32)
+  commentId: M:Beutl.Media.PixelRect.WithWidth(System.Int32)
+  id: WithWidth(System.Int32)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: WithWidth(int)
+  nameWithType: PixelRect.WithWidth(int)
+  fullName: Beutl.Media.PixelRect.WithWidth(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect WithWidth(int width)
+    parameters:
+    - id: width
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function WithWidth(width As Integer) As PixelRect
+  overload: Beutl.Media.PixelRect.WithWidth*
+  nameWithType.vb: PixelRect.WithWidth(Integer)
+  fullName.vb: Beutl.Media.PixelRect.WithWidth(Integer)
+  name.vb: WithWidth(Integer)
+- uid: Beutl.Media.PixelRect.WithHeight(System.Int32)
+  commentId: M:Beutl.Media.PixelRect.WithHeight(System.Int32)
+  id: WithHeight(System.Int32)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: WithHeight(int)
+  nameWithType: PixelRect.WithHeight(int)
+  fullName: Beutl.Media.PixelRect.WithHeight(int)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelRect WithHeight(int height)
+    parameters:
+    - id: height
+      type: System.Int32
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Function WithHeight(height As Integer) As PixelRect
+  overload: Beutl.Media.PixelRect.WithHeight*
+  nameWithType.vb: PixelRect.WithHeight(Integer)
+  fullName.vb: Beutl.Media.PixelRect.WithHeight(Integer)
+  name.vb: WithHeight(Integer)
+- uid: Beutl.Media.PixelRect.ToRect(System.Single)
+  commentId: M:Beutl.Media.PixelRect.ToRect(System.Single)
+  id: ToRect(System.Single)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: ToRect(float)
+  nameWithType: PixelRect.ToRect(float)
+  fullName: Beutl.Media.PixelRect.ToRect(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Rect ToRect(float scale)
+    parameters:
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function ToRect(scale As Single) As Rect
+  overload: Beutl.Media.PixelRect.ToRect*
+  nameWithType.vb: PixelRect.ToRect(Single)
+  fullName.vb: Beutl.Media.PixelRect.ToRect(Single)
+  name.vb: ToRect(Single)
+- uid: Beutl.Media.PixelRect.ToRect(Beutl.Graphics.Vector)
+  commentId: M:Beutl.Media.PixelRect.ToRect(Beutl.Graphics.Vector)
+  id: ToRect(Beutl.Graphics.Vector)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: ToRect(Vector)
+  nameWithType: PixelRect.ToRect(Vector)
+  fullName: Beutl.Media.PixelRect.ToRect(Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Rect ToRect(Vector scale)
+    parameters:
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function ToRect(scale As Vector) As Rect
+  overload: Beutl.Media.PixelRect.ToRect*
+- uid: Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect)
+  id: FromRect(Beutl.Graphics.Rect)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: FromRect(Rect)
+  nameWithType: PixelRect.FromRect(Rect)
+  fullName: Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelRect FromRect(Rect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Shared Function FromRect(rect As Rect) As PixelRect
+  overload: Beutl.Media.PixelRect.FromRect*
+- uid: Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect,System.Single)
+  commentId: M:Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect,System.Single)
+  id: FromRect(Beutl.Graphics.Rect,System.Single)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: FromRect(Rect, float)
+  nameWithType: PixelRect.FromRect(Rect, float)
+  fullName: Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect, float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelRect FromRect(Rect rect, float scale)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Shared Function FromRect(rect As Rect, scale As Single) As PixelRect
+  overload: Beutl.Media.PixelRect.FromRect*
+  nameWithType.vb: PixelRect.FromRect(Rect, Single)
+  fullName.vb: Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect, Single)
+  name.vb: FromRect(Rect, Single)
+- uid: Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  commentId: M:Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  id: FromRect(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: FromRect(Rect, Vector)
+  nameWithType: PixelRect.FromRect(Rect, Vector)
+  fullName: Beutl.Media.PixelRect.FromRect(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelRect FromRect(Rect rect, Vector scale)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Shared Function FromRect(rect As Rect, scale As Vector) As PixelRect
+  overload: Beutl.Media.PixelRect.FromRect*
+- uid: Beutl.Media.PixelRect.ToString
+  commentId: M:Beutl.Media.PixelRect.ToString
+  id: ToString
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PixelRect.ToString()
+  fullName: Beutl.Media.PixelRect.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Media.PixelRect.ToString*
+- uid: Beutl.Media.PixelRect.TryParse(System.String,Beutl.Media.PixelRect@)
+  commentId: M:Beutl.Media.PixelRect.TryParse(System.String,Beutl.Media.PixelRect@)
+  id: TryParse(System.String,Beutl.Media.PixelRect@)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out PixelRect)
+  nameWithType: PixelRect.TryParse(string, out PixelRect)
+  fullName: Beutl.Media.PixelRect.TryParse(string, out Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(string s, out PixelRect rect)
+    parameters:
+    - id: s
+      type: System.String
+    - id: rect
+      type: Beutl.Media.PixelRect
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, rect As PixelRect) As Boolean
+  overload: Beutl.Media.PixelRect.TryParse*
+  nameWithType.vb: PixelRect.TryParse(String, PixelRect)
+  fullName.vb: Beutl.Media.PixelRect.TryParse(String, Beutl.Media.PixelRect)
+  name.vb: TryParse(String, PixelRect)
+- uid: Beutl.Media.PixelRect.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelRect@)
+  commentId: M:Beutl.Media.PixelRect.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelRect@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.PixelRect@)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out PixelRect)
+  nameWithType: PixelRect.TryParse(ReadOnlySpan<char>, out PixelRect)
+  fullName: Beutl.Media.PixelRect.TryParse(System.ReadOnlySpan<char>, out Beutl.Media.PixelRect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out PixelRect rect)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: rect
+      type: Beutl.Media.PixelRect
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), rect As PixelRect) As Boolean
+  overload: Beutl.Media.PixelRect.TryParse*
+  nameWithType.vb: PixelRect.TryParse(ReadOnlySpan(Of Char), PixelRect)
+  fullName.vb: Beutl.Media.PixelRect.TryParse(System.ReadOnlySpan(Of Char), Beutl.Media.PixelRect)
+  name.vb: TryParse(ReadOnlySpan(Of Char), PixelRect)
+- uid: Beutl.Media.PixelRect.Parse(System.String)
+  commentId: M:Beutl.Media.PixelRect.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: PixelRect.Parse(string)
+  fullName: Beutl.Media.PixelRect.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelRect Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Shared Function Parse(s As String) As PixelRect
+  overload: Beutl.Media.PixelRect.Parse*
+  nameWithType.vb: PixelRect.Parse(String)
+  fullName.vb: Beutl.Media.PixelRect.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Media.PixelRect.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Media.PixelRect.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: PixelRect.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Media.PixelRect.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static PixelRect Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Media.PixelRect
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As PixelRect
+  overload: Beutl.Media.PixelRect.Parse*
+  nameWithType.vb: PixelRect.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Media.PixelRect.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Media.PixelRect.X
+  commentId: P:Beutl.Media.PixelRect.X
+  id: X
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: PixelRect.X
+  fullName: Beutl.Media.PixelRect.X
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int X { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property X As Integer
+  overload: Beutl.Media.PixelRect.X*
+- uid: Beutl.Media.PixelRect.Y
+  commentId: P:Beutl.Media.PixelRect.Y
+  id: Y
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: PixelRect.Y
+  fullName: Beutl.Media.PixelRect.Y
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Y { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Y As Integer
+  overload: Beutl.Media.PixelRect.Y*
+- uid: Beutl.Media.PixelRect.Width
+  commentId: P:Beutl.Media.PixelRect.Width
+  id: Width
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: PixelRect.Width
+  fullName: Beutl.Media.PixelRect.Width
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Width As Integer
+  overload: Beutl.Media.PixelRect.Width*
+- uid: Beutl.Media.PixelRect.Height
+  commentId: P:Beutl.Media.PixelRect.Height
+  id: Height
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: PixelRect.Height
+  fullName: Beutl.Media.PixelRect.Height
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Height As Integer
+  overload: Beutl.Media.PixelRect.Height*
+- uid: Beutl.Media.PixelRect.Position
+  commentId: P:Beutl.Media.PixelRect.Position
+  id: Position
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: PixelRect.Position
+  fullName: Beutl.Media.PixelRect.Position
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint Position { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public ReadOnly Property Position As PixelPoint
+  overload: Beutl.Media.PixelRect.Position*
+- uid: Beutl.Media.PixelRect.Size
+  commentId: P:Beutl.Media.PixelRect.Size
+  id: Size
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: PixelRect.Size
+  fullName: Beutl.Media.PixelRect.Size
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelSize Size { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelSize
+    content.vb: Public ReadOnly Property Size As PixelSize
+  overload: Beutl.Media.PixelRect.Size*
+- uid: Beutl.Media.PixelRect.Right
+  commentId: P:Beutl.Media.PixelRect.Right
+  id: Right
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: PixelRect.Right
+  fullName: Beutl.Media.PixelRect.Right
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Right { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Right As Integer
+  overload: Beutl.Media.PixelRect.Right*
+- uid: Beutl.Media.PixelRect.Bottom
+  commentId: P:Beutl.Media.PixelRect.Bottom
+  id: Bottom
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Bottom
+  nameWithType: PixelRect.Bottom
+  fullName: Beutl.Media.PixelRect.Bottom
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public int Bottom { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Bottom As Integer
+  overload: Beutl.Media.PixelRect.Bottom*
+- uid: Beutl.Media.PixelRect.TopLeft
+  commentId: P:Beutl.Media.PixelRect.TopLeft
+  id: TopLeft
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: TopLeft
+  nameWithType: PixelRect.TopLeft
+  fullName: Beutl.Media.PixelRect.TopLeft
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint TopLeft { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public ReadOnly Property TopLeft As PixelPoint
+  overload: Beutl.Media.PixelRect.TopLeft*
+- uid: Beutl.Media.PixelRect.TopRight
+  commentId: P:Beutl.Media.PixelRect.TopRight
+  id: TopRight
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: TopRight
+  nameWithType: PixelRect.TopRight
+  fullName: Beutl.Media.PixelRect.TopRight
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint TopRight { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public ReadOnly Property TopRight As PixelPoint
+  overload: Beutl.Media.PixelRect.TopRight*
+- uid: Beutl.Media.PixelRect.BottomLeft
+  commentId: P:Beutl.Media.PixelRect.BottomLeft
+  id: BottomLeft
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: BottomLeft
+  nameWithType: PixelRect.BottomLeft
+  fullName: Beutl.Media.PixelRect.BottomLeft
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint BottomLeft { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public ReadOnly Property BottomLeft As PixelPoint
+  overload: Beutl.Media.PixelRect.BottomLeft*
+- uid: Beutl.Media.PixelRect.BottomRight
+  commentId: P:Beutl.Media.PixelRect.BottomRight
+  id: BottomRight
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: BottomRight
+  nameWithType: PixelRect.BottomRight
+  fullName: Beutl.Media.PixelRect.BottomRight
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint BottomRight { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public ReadOnly Property BottomRight As PixelPoint
+  overload: Beutl.Media.PixelRect.BottomRight*
+- uid: Beutl.Media.PixelRect.Center
+  commentId: P:Beutl.Media.PixelRect.Center
+  id: Center
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: PixelRect.Center
+  fullName: Beutl.Media.PixelRect.Center
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public PixelPoint Center { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.PixelPoint
+    content.vb: Public ReadOnly Property Center As PixelPoint
+  overload: Beutl.Media.PixelRect.Center*
+- uid: Beutl.Media.PixelRect.IsEmpty
+  commentId: P:Beutl.Media.PixelRect.IsEmpty
+  id: IsEmpty
+  parent: Beutl.Media.PixelRect
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: PixelRect.IsEmpty
+  fullName: Beutl.Media.PixelRect.IsEmpty
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/PixelRect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: Beutl.Media.PixelRect.IsEmpty*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.PixelRect}
+  commentId: T:System.IEquatable{Beutl.Media.PixelRect}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<PixelRect>
+  nameWithType: IEquatable<PixelRect>
+  fullName: System.IEquatable<Beutl.Media.PixelRect>
+  nameWithType.vb: IEquatable(Of PixelRect)
+  fullName.vb: System.IEquatable(Of Beutl.Media.PixelRect)
+  name.vb: IEquatable(Of PixelRect)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Media.PixelRect}
+  commentId: T:System.ISpanParsable{Beutl.Media.PixelRect}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<PixelRect>
+  nameWithType: ISpanParsable<PixelRect>
+  fullName: System.ISpanParsable<Beutl.Media.PixelRect>
+  nameWithType.vb: ISpanParsable(Of PixelRect)
+  fullName.vb: System.ISpanParsable(Of Beutl.Media.PixelRect)
+  name.vb: ISpanParsable(Of PixelRect)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+- uid: System.IParsable{Beutl.Media.PixelRect}
+  commentId: T:System.IParsable{Beutl.Media.PixelRect}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<PixelRect>
+  nameWithType: IParsable<PixelRect>
+  fullName: System.IParsable<Beutl.Media.PixelRect>
+  nameWithType.vb: IParsable(Of PixelRect)
+  fullName.vb: System.IParsable(Of Beutl.Media.PixelRect)
+  name.vb: IParsable(Of PixelRect)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}
+  commentId: T:System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}
+  parent: System.Numerics
+  definition: System.Numerics.IEqualityOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<PixelRect, PixelRect, bool>
+  nameWithType: IEqualityOperators<PixelRect, PixelRect, bool>
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelRect, Beutl.Media.PixelRect, bool>
+  nameWithType.vb: IEqualityOperators(Of PixelRect, PixelRect, Boolean)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelRect, Beutl.Media.PixelRect, Boolean)
+  name.vb: IEqualityOperators(Of PixelRect, PixelRect, Boolean)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.ITupleConvertible{Beutl.Media.PixelRect,System.Int32}
+  commentId: T:Beutl.ITupleConvertible{Beutl.Media.PixelRect,System.Int32}
+  parent: Beutl
+  definition: Beutl.ITupleConvertible`2
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  name: ITupleConvertible<PixelRect, int>
+  nameWithType: ITupleConvertible<PixelRect, int>
+  fullName: Beutl.ITupleConvertible<Beutl.Media.PixelRect, int>
+  nameWithType.vb: ITupleConvertible(Of PixelRect, Integer)
+  fullName.vb: Beutl.ITupleConvertible(Of Beutl.Media.PixelRect, Integer)
+  name.vb: ITupleConvertible(Of PixelRect, Integer)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: <
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3
+  commentId: T:System.Numerics.IEqualityOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult)
+  name.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.PixelRect
+  commentId: T:Beutl.Media.PixelRect
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelRect.html
+  name: PixelRect
+  nameWithType: PixelRect
+  fullName: Beutl.Media.PixelRect
+- uid: Beutl.Media.PixelRect.#ctor*
+  commentId: Overload:Beutl.Media.PixelRect.#ctor
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: PixelRect
+  nameWithType: PixelRect.PixelRect
+  fullName: Beutl.Media.PixelRect.PixelRect
+  nameWithType.vb: PixelRect.New
+  fullName.vb: Beutl.Media.PixelRect.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.PixelSize
+  commentId: T:Beutl.Media.PixelSize
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelSize.html
+  name: PixelSize
+  nameWithType: PixelSize
+  fullName: Beutl.Media.PixelSize
+- uid: Beutl.Media.PixelPoint
+  commentId: T:Beutl.Media.PixelPoint
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.PixelPoint.html
+  name: PixelPoint
+  nameWithType: PixelPoint
+  fullName: Beutl.Media.PixelPoint
+- uid: Beutl.Media.PixelRect.op_Equality*
+  commentId: Overload:Beutl.Media.PixelRect.op_Equality
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_op_Equality_Beutl_Media_PixelRect_Beutl_Media_PixelRect_
+  name: operator ==
+  nameWithType: PixelRect.operator ==
+  fullName: Beutl.Media.PixelRect.operator ==
+  nameWithType.vb: PixelRect.=
+  fullName.vb: Beutl.Media.PixelRect.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelRect.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_op_Equality_Beutl_Media_PixelRect_Beutl_Media_PixelRect_
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  parent: System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(PixelRect, PixelRect)
+  nameWithType: IEqualityOperators<PixelRect, PixelRect, bool>.operator ==(PixelRect, PixelRect)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelRect, Beutl.Media.PixelRect, bool>.operator ==(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  nameWithType.vb: IEqualityOperators(Of PixelRect, PixelRect, Boolean).=(PixelRect, PixelRect)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelRect, Beutl.Media.PixelRect, Boolean).=(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  name.vb: =(PixelRect, PixelRect)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Equality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  name.vb: =(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelRect.op_Inequality*
+  commentId: Overload:Beutl.Media.PixelRect.op_Inequality
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_op_Inequality_Beutl_Media_PixelRect_Beutl_Media_PixelRect_
+  name: operator !=
+  nameWithType: PixelRect.operator !=
+  fullName: Beutl.Media.PixelRect.operator !=
+  nameWithType.vb: PixelRect.<>
+  fullName.vb: Beutl.Media.PixelRect.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.PixelRect.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_op_Inequality_Beutl_Media_PixelRect_Beutl_Media_PixelRect_
+- uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+  parent: System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(PixelRect, PixelRect)
+  nameWithType: IEqualityOperators<PixelRect, PixelRect, bool>.operator !=(PixelRect, PixelRect)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Media.PixelRect, Beutl.Media.PixelRect, bool>.operator !=(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  nameWithType.vb: IEqualityOperators(Of PixelRect, PixelRect, Boolean).<>(PixelRect, PixelRect)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Media.PixelRect, Beutl.Media.PixelRect, Boolean).<>(Beutl.Media.PixelRect, Beutl.Media.PixelRect)
+  name.vb: <>(PixelRect, PixelRect)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Media.PixelRect,Beutl.Media.PixelRect,System.Boolean}.op_Inequality(Beutl.Media.PixelRect,Beutl.Media.PixelRect)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  name.vb: <>(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Media.PixelRect.Contains*
+  commentId: Overload:Beutl.Media.PixelRect.Contains
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Contains_Beutl_Media_PixelPoint_
+  name: Contains
+  nameWithType: PixelRect.Contains
+  fullName: Beutl.Media.PixelRect.Contains
+- uid: Beutl.Media.PixelRect.CenterRect*
+  commentId: Overload:Beutl.Media.PixelRect.CenterRect
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_CenterRect_Beutl_Media_PixelRect_
+  name: CenterRect
+  nameWithType: PixelRect.CenterRect
+  fullName: Beutl.Media.PixelRect.CenterRect
+- uid: Beutl.Media.PixelRect.Equals*
+  commentId: Overload:Beutl.Media.PixelRect.Equals
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Equals_Beutl_Media_PixelRect_
+  name: Equals
+  nameWithType: PixelRect.Equals
+  fullName: Beutl.Media.PixelRect.Equals
+- uid: System.IEquatable{Beutl.Media.PixelRect}.Equals(Beutl.Media.PixelRect)
+  commentId: M:System.IEquatable{Beutl.Media.PixelRect}.Equals(Beutl.Media.PixelRect)
+  parent: System.IEquatable{Beutl.Media.PixelRect}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(PixelRect)
+  nameWithType: IEquatable<PixelRect>.Equals(PixelRect)
+  fullName: System.IEquatable<Beutl.Media.PixelRect>.Equals(Beutl.Media.PixelRect)
+  nameWithType.vb: IEquatable(Of PixelRect).Equals(PixelRect)
+  fullName.vb: System.IEquatable(Of Beutl.Media.PixelRect).Equals(Beutl.Media.PixelRect)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.PixelRect}.Equals(Beutl.Media.PixelRect)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.PixelRect}.Equals(Beutl.Media.PixelRect)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.PixelRect
+    name: PixelRect
+    isExternal: true
+    href: Beutl.Media.PixelRect.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.PixelRect.GetHashCode*
+  commentId: Overload:Beutl.Media.PixelRect.GetHashCode
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_GetHashCode
+  name: GetHashCode
+  nameWithType: PixelRect.GetHashCode
+  fullName: Beutl.Media.PixelRect.GetHashCode
+- uid: Beutl.Media.PixelRect.Intersect*
+  commentId: Overload:Beutl.Media.PixelRect.Intersect
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Intersect_Beutl_Media_PixelRect_
+  name: Intersect
+  nameWithType: PixelRect.Intersect
+  fullName: Beutl.Media.PixelRect.Intersect
+- uid: Beutl.Media.PixelRect.Intersects*
+  commentId: Overload:Beutl.Media.PixelRect.Intersects
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Intersects_Beutl_Media_PixelRect_
+  name: Intersects
+  nameWithType: PixelRect.Intersects
+  fullName: Beutl.Media.PixelRect.Intersects
+- uid: Beutl.Media.PixelRect.Translate*
+  commentId: Overload:Beutl.Media.PixelRect.Translate
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Translate_Beutl_Media_PixelPoint_
+  name: Translate
+  nameWithType: PixelRect.Translate
+  fullName: Beutl.Media.PixelRect.Translate
+- uid: Beutl.Media.PixelRect.Union*
+  commentId: Overload:Beutl.Media.PixelRect.Union
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Union_Beutl_Media_PixelRect_
+  name: Union
+  nameWithType: PixelRect.Union
+  fullName: Beutl.Media.PixelRect.Union
+- uid: Beutl.Media.PixelRect.WithX*
+  commentId: Overload:Beutl.Media.PixelRect.WithX
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_WithX_System_Int32_
+  name: WithX
+  nameWithType: PixelRect.WithX
+  fullName: Beutl.Media.PixelRect.WithX
+- uid: Beutl.Media.PixelRect.WithY*
+  commentId: Overload:Beutl.Media.PixelRect.WithY
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_WithY_System_Int32_
+  name: WithY
+  nameWithType: PixelRect.WithY
+  fullName: Beutl.Media.PixelRect.WithY
+- uid: Beutl.Media.PixelRect.WithWidth*
+  commentId: Overload:Beutl.Media.PixelRect.WithWidth
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_WithWidth_System_Int32_
+  name: WithWidth
+  nameWithType: PixelRect.WithWidth
+  fullName: Beutl.Media.PixelRect.WithWidth
+- uid: Beutl.Media.PixelRect.WithHeight*
+  commentId: Overload:Beutl.Media.PixelRect.WithHeight
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_WithHeight_System_Int32_
+  name: WithHeight
+  nameWithType: PixelRect.WithHeight
+  fullName: Beutl.Media.PixelRect.WithHeight
+- uid: Beutl.Media.PixelRect.ToRect*
+  commentId: Overload:Beutl.Media.PixelRect.ToRect
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_ToRect_System_Single_
+  name: ToRect
+  nameWithType: PixelRect.ToRect
+  fullName: Beutl.Media.PixelRect.ToRect
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.Rect
+  commentId: T:Beutl.Graphics.Rect
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: Beutl.Graphics.Rect
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: Beutl.Graphics.Vector
+  commentId: T:Beutl.Graphics.Vector
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: Beutl.Graphics.Vector
+- uid: Beutl.Media.PixelRect.FromRect*
+  commentId: Overload:Beutl.Media.PixelRect.FromRect
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_FromRect_Beutl_Graphics_Rect_
+  name: FromRect
+  nameWithType: PixelRect.FromRect
+  fullName: Beutl.Media.PixelRect.FromRect
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Media.PixelRect.ToString*
+  commentId: Overload:Beutl.Media.PixelRect.ToString
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_ToString
+  name: ToString
+  nameWithType: PixelRect.ToString
+  fullName: Beutl.Media.PixelRect.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Media.PixelRect.TryParse*
+  commentId: Overload:Beutl.Media.PixelRect.TryParse
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_TryParse_System_String_Beutl_Media_PixelRect__
+  name: TryParse
+  nameWithType: PixelRect.TryParse
+  fullName: Beutl.Media.PixelRect.TryParse
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.PixelRect.Parse*
+  commentId: Overload:Beutl.Media.PixelRect.Parse
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Parse_System_String_
+  name: Parse
+  nameWithType: PixelRect.Parse
+  fullName: Beutl.Media.PixelRect.Parse
+- uid: Beutl.Media.PixelRect.X*
+  commentId: Overload:Beutl.Media.PixelRect.X
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_X
+  name: X
+  nameWithType: PixelRect.X
+  fullName: Beutl.Media.PixelRect.X
+- uid: Beutl.Media.PixelRect.Y*
+  commentId: Overload:Beutl.Media.PixelRect.Y
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Y
+  name: Y
+  nameWithType: PixelRect.Y
+  fullName: Beutl.Media.PixelRect.Y
+- uid: Beutl.Media.PixelRect.Width*
+  commentId: Overload:Beutl.Media.PixelRect.Width
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Width
+  name: Width
+  nameWithType: PixelRect.Width
+  fullName: Beutl.Media.PixelRect.Width
+- uid: Beutl.Media.PixelRect.Height*
+  commentId: Overload:Beutl.Media.PixelRect.Height
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Height
+  name: Height
+  nameWithType: PixelRect.Height
+  fullName: Beutl.Media.PixelRect.Height
+- uid: Beutl.Media.PixelRect.Position*
+  commentId: Overload:Beutl.Media.PixelRect.Position
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Position
+  name: Position
+  nameWithType: PixelRect.Position
+  fullName: Beutl.Media.PixelRect.Position
+- uid: Beutl.Media.PixelRect.Size*
+  commentId: Overload:Beutl.Media.PixelRect.Size
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Size
+  name: Size
+  nameWithType: PixelRect.Size
+  fullName: Beutl.Media.PixelRect.Size
+- uid: Beutl.Media.PixelRect.Right*
+  commentId: Overload:Beutl.Media.PixelRect.Right
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Right
+  name: Right
+  nameWithType: PixelRect.Right
+  fullName: Beutl.Media.PixelRect.Right
+- uid: Beutl.Media.PixelRect.Bottom*
+  commentId: Overload:Beutl.Media.PixelRect.Bottom
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Bottom
+  name: Bottom
+  nameWithType: PixelRect.Bottom
+  fullName: Beutl.Media.PixelRect.Bottom
+- uid: Beutl.Media.PixelRect.TopLeft*
+  commentId: Overload:Beutl.Media.PixelRect.TopLeft
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_TopLeft
+  name: TopLeft
+  nameWithType: PixelRect.TopLeft
+  fullName: Beutl.Media.PixelRect.TopLeft
+- uid: Beutl.Media.PixelRect.TopRight*
+  commentId: Overload:Beutl.Media.PixelRect.TopRight
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_TopRight
+  name: TopRight
+  nameWithType: PixelRect.TopRight
+  fullName: Beutl.Media.PixelRect.TopRight
+- uid: Beutl.Media.PixelRect.BottomLeft*
+  commentId: Overload:Beutl.Media.PixelRect.BottomLeft
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_BottomLeft
+  name: BottomLeft
+  nameWithType: PixelRect.BottomLeft
+  fullName: Beutl.Media.PixelRect.BottomLeft
+- uid: Beutl.Media.PixelRect.BottomRight*
+  commentId: Overload:Beutl.Media.PixelRect.BottomRight
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_BottomRight
+  name: BottomRight
+  nameWithType: PixelRect.BottomRight
+  fullName: Beutl.Media.PixelRect.BottomRight
+- uid: Beutl.Media.PixelRect.Center*
+  commentId: Overload:Beutl.Media.PixelRect.Center
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_Center
+  name: Center
+  nameWithType: PixelRect.Center
+  fullName: Beutl.Media.PixelRect.Center
+- uid: Beutl.Media.PixelRect.IsEmpty*
+  commentId: Overload:Beutl.Media.PixelRect.IsEmpty
+  isExternal: true
+  href: Beutl.Media.PixelRect.html#Beutl_Media_PixelRect_IsEmpty
+  name: IsEmpty
+  nameWithType: PixelRect.IsEmpty
+  fullName: Beutl.Media.PixelRect.IsEmpty

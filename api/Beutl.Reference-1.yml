@@ -1,0 +1,1125 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Reference`1
+  commentId: T:Beutl.Reference`1
+  id: Reference`1
+  parent: Beutl
+  children:
+  - Beutl.Reference`1.#ctor
+  - Beutl.Reference`1.#ctor(System.Guid)
+  - Beutl.Reference`1.#ctor(System.Guid,`0)
+  - Beutl.Reference`1.#ctor(`0)
+  - Beutl.Reference`1.Deconstruct(System.Guid@,`0@)
+  - Beutl.Reference`1.Equals(Beutl.Reference{`0})
+  - Beutl.Reference`1.Equals(System.Object)
+  - Beutl.Reference`1.GetHashCode
+  - Beutl.Reference`1.Id
+  - Beutl.Reference`1.IsNull
+  - Beutl.Reference`1.Resolved(`0)
+  - Beutl.Reference`1.Value
+  - Beutl.Reference`1.op_Equality(Beutl.Reference{`0},Beutl.Reference{`0})
+  - Beutl.Reference`1.op_Implicit(Beutl.Reference{`0})~System.Guid
+  - Beutl.Reference`1.op_Implicit(Beutl.Reference{`0})~`0
+  - Beutl.Reference`1.op_Implicit(System.Guid)~Beutl.Reference{`0}
+  - Beutl.Reference`1.op_Implicit(`0)~Beutl.Reference{`0}
+  - Beutl.Reference`1.op_Inequality(Beutl.Reference{`0},Beutl.Reference{`0})
+  langs:
+  - csharp
+  - vb
+  name: Reference<TObject>
+  nameWithType: Reference<TObject>
+  fullName: Beutl.Reference<TObject>
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: 'public readonly struct Reference<TObject> : IEquatable<Reference<TObject>>, IReference where TObject : notnull, CoreObject'
+    typeParameters:
+    - id: TObject
+    content.vb: Public Structure Reference(Of TObject As CoreObject) Implements IEquatable(Of Reference(Of TObject)), IReference
+  implements:
+  - System.IEquatable{Beutl.Reference`1}
+  - Beutl.IReference
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: Reference(Of TObject)
+  fullName.vb: Beutl.Reference(Of TObject)
+  name.vb: Reference(Of TObject)
+- uid: Beutl.Reference`1.#ctor(System.Guid)
+  commentId: M:Beutl.Reference`1.#ctor(System.Guid)
+  id: '#ctor(System.Guid)'
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Reference(Guid)
+  nameWithType: Reference<TObject>.Reference(Guid)
+  fullName: Beutl.Reference<TObject>.Reference(System.Guid)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public Reference(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    content.vb: Public Sub New(id As Guid)
+  overload: Beutl.Reference`1.#ctor*
+  nameWithType.vb: Reference(Of TObject).New(Guid)
+  fullName.vb: Beutl.Reference(Of TObject).New(System.Guid)
+  name.vb: New(Guid)
+- uid: Beutl.Reference`1.#ctor(`0)
+  commentId: M:Beutl.Reference`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Reference(TObject)
+  nameWithType: Reference<TObject>.Reference(TObject)
+  fullName: Beutl.Reference<TObject>.Reference(TObject)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public Reference(TObject value)
+    parameters:
+    - id: value
+      type: '{TObject}'
+    content.vb: Public Sub New(value As TObject)
+  overload: Beutl.Reference`1.#ctor*
+  nameWithType.vb: Reference(Of TObject).New(TObject)
+  fullName.vb: Beutl.Reference(Of TObject).New(TObject)
+  name.vb: New(TObject)
+- uid: Beutl.Reference`1.#ctor(System.Guid,`0)
+  commentId: M:Beutl.Reference`1.#ctor(System.Guid,`0)
+  id: '#ctor(System.Guid,`0)'
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Reference(Guid, TObject?)
+  nameWithType: Reference<TObject>.Reference(Guid, TObject?)
+  fullName: Beutl.Reference<TObject>.Reference(System.Guid, TObject?)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public Reference(Guid id, TObject? value)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: value
+      type: '{TObject}'
+    content.vb: Public Sub New(id As Guid, value As TObject)
+  overload: Beutl.Reference`1.#ctor*
+  nameWithType.vb: Reference(Of TObject).New(Guid, TObject)
+  fullName.vb: Beutl.Reference(Of TObject).New(System.Guid, TObject)
+  name.vb: New(Guid, TObject)
+- uid: Beutl.Reference`1.#ctor
+  commentId: M:Beutl.Reference`1.#ctor
+  id: '#ctor'
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Reference()
+  nameWithType: Reference<TObject>.Reference()
+  fullName: Beutl.Reference<TObject>.Reference()
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public Reference()
+    content.vb: Public Sub New()
+  overload: Beutl.Reference`1.#ctor*
+  nameWithType.vb: Reference(Of TObject).New()
+  fullName.vb: Beutl.Reference(Of TObject).New()
+  name.vb: New()
+- uid: Beutl.Reference`1.Resolved(`0)
+  commentId: M:Beutl.Reference`1.Resolved(`0)
+  id: Resolved(`0)
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Resolved(TObject)
+  nameWithType: Reference<TObject>.Resolved(TObject)
+  fullName: Beutl.Reference<TObject>.Resolved(TObject)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public Reference<TObject> Resolved(TObject obj)
+    parameters:
+    - id: obj
+      type: '{TObject}'
+    return:
+      type: Beutl.Reference`1
+    content.vb: Public Function Resolved(obj As TObject) As Reference(Of TObject)
+  overload: Beutl.Reference`1.Resolved*
+  nameWithType.vb: Reference(Of TObject).Resolved(TObject)
+  fullName.vb: Beutl.Reference(Of TObject).Resolved(TObject)
+- uid: Beutl.Reference`1.Deconstruct(System.Guid@,`0@)
+  commentId: M:Beutl.Reference`1.Deconstruct(System.Guid@,`0@)
+  id: Deconstruct(System.Guid@,`0@)
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Guid, out TObject?)
+  nameWithType: Reference<TObject>.Deconstruct(out Guid, out TObject?)
+  fullName: Beutl.Reference<TObject>.Deconstruct(out System.Guid, out TObject?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public void Deconstruct(out Guid Id, out TObject? Value)
+    parameters:
+    - id: Id
+      type: System.Guid
+    - id: Value
+      type: '{TObject}'
+    content.vb: Public Sub Deconstruct(Id As Guid, Value As TObject)
+  overload: Beutl.Reference`1.Deconstruct*
+  nameWithType.vb: Reference(Of TObject).Deconstruct(Guid, TObject)
+  fullName.vb: Beutl.Reference(Of TObject).Deconstruct(System.Guid, TObject)
+  name.vb: Deconstruct(Guid, TObject)
+- uid: Beutl.Reference`1.Equals(Beutl.Reference{`0})
+  commentId: M:Beutl.Reference`1.Equals(Beutl.Reference{`0})
+  id: Equals(Beutl.Reference{`0})
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(Reference<TObject>)
+  nameWithType: Reference<TObject>.Equals(Reference<TObject>)
+  fullName: Beutl.Reference<TObject>.Equals(Beutl.Reference<TObject>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public bool Equals(Reference<TObject> other)
+    parameters:
+    - id: other
+      type: Beutl.Reference`1
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Reference(Of TObject)) As Boolean
+  overload: Beutl.Reference`1.Equals*
+  implements:
+  - System.IEquatable{Beutl.Reference`1}.Equals(Beutl.Reference{{TObject}})
+  nameWithType.vb: Reference(Of TObject).Equals(Reference(Of TObject))
+  fullName.vb: Beutl.Reference(Of TObject).Equals(Beutl.Reference(Of TObject))
+  name.vb: Equals(Reference(Of TObject))
+- uid: Beutl.Reference`1.Equals(System.Object)
+  commentId: M:Beutl.Reference`1.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Reference<TObject>.Equals(object?)
+  fullName: Beutl.Reference<TObject>.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Reference`1.Equals*
+  nameWithType.vb: Reference(Of TObject).Equals(Object)
+  fullName.vb: Beutl.Reference(Of TObject).Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Reference`1.GetHashCode
+  commentId: M:Beutl.Reference`1.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Reference<TObject>.GetHashCode()
+  fullName: Beutl.Reference<TObject>.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Reference`1.GetHashCode*
+  nameWithType.vb: Reference(Of TObject).GetHashCode()
+  fullName.vb: Beutl.Reference(Of TObject).GetHashCode()
+- uid: Beutl.Reference`1.op_Implicit(Beutl.Reference{`0})~System.Guid
+  commentId: M:Beutl.Reference`1.op_Implicit(Beutl.Reference{`0})~System.Guid
+  id: op_Implicit(Beutl.Reference{`0})~System.Guid
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Guid(Reference<TObject>)
+  nameWithType: Reference<TObject>.implicit operator Guid(Reference<TObject>)
+  fullName: Beutl.Reference<TObject>.implicit operator System.Guid(Beutl.Reference<TObject>)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static implicit operator Guid(Reference<TObject> reference)
+    parameters:
+    - id: reference
+      type: Beutl.Reference`1
+    return:
+      type: System.Guid
+    content.vb: Public Shared Widening Operator CType(reference As Reference(Of TObject)) As Guid
+  overload: Beutl.Reference`1.op_Implicit*
+  nameWithType.vb: Reference(Of TObject).CType(Reference(Of TObject))
+  fullName.vb: Beutl.Reference(Of TObject).CType(Beutl.Reference(Of TObject))
+  name.vb: CType(Reference(Of TObject))
+- uid: Beutl.Reference`1.op_Implicit(System.Guid)~Beutl.Reference{`0}
+  commentId: M:Beutl.Reference`1.op_Implicit(System.Guid)~Beutl.Reference{`0}
+  id: op_Implicit(System.Guid)~Beutl.Reference{`0}
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Reference<TObject>(Guid)
+  nameWithType: Reference<TObject>.implicit operator Reference<TObject>(Guid)
+  fullName: Beutl.Reference<TObject>.implicit operator Beutl.Reference<TObject>(System.Guid)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static implicit operator Reference<TObject>(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: Beutl.Reference`1
+    content.vb: Public Shared Widening Operator CType(id As Guid) As Reference(Of TObject)
+  overload: Beutl.Reference`1.op_Implicit*
+  nameWithType.vb: Reference(Of TObject).CType(Guid)
+  fullName.vb: Beutl.Reference(Of TObject).CType(System.Guid)
+  name.vb: CType(Guid)
+- uid: Beutl.Reference`1.op_Implicit(Beutl.Reference{`0})~`0
+  commentId: M:Beutl.Reference`1.op_Implicit(Beutl.Reference{`0})~`0
+  id: op_Implicit(Beutl.Reference{`0})~`0
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: implicit operator TObject?(Reference<TObject>)
+  nameWithType: Reference<TObject>.implicit operator TObject?(Reference<TObject>)
+  fullName: Beutl.Reference<TObject>.implicit operator TObject?(Beutl.Reference<TObject>)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static implicit operator TObject?(Reference<TObject> reference)
+    parameters:
+    - id: reference
+      type: Beutl.Reference`1
+    return:
+      type: '{TObject}'
+    content.vb: Public Shared Widening Operator CType(reference As Reference(Of TObject)) As TObject
+  overload: Beutl.Reference`1.op_Implicit*
+  nameWithType.vb: Reference(Of TObject).CType(Reference(Of TObject))
+  fullName.vb: Beutl.Reference(Of TObject).CType(Beutl.Reference(Of TObject))
+  name.vb: CType(Reference(Of TObject))
+- uid: Beutl.Reference`1.op_Implicit(`0)~Beutl.Reference{`0}
+  commentId: M:Beutl.Reference`1.op_Implicit(`0)~Beutl.Reference{`0}
+  id: op_Implicit(`0)~Beutl.Reference{`0}
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Reference<TObject>(TObject)
+  nameWithType: Reference<TObject>.implicit operator Reference<TObject>(TObject)
+  fullName: Beutl.Reference<TObject>.implicit operator Beutl.Reference<TObject>(TObject)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static implicit operator Reference<TObject>(TObject value)
+    parameters:
+    - id: value
+      type: '{TObject}'
+    return:
+      type: Beutl.Reference`1
+    content.vb: Public Shared Widening Operator CType(value As TObject) As Reference(Of TObject)
+  overload: Beutl.Reference`1.op_Implicit*
+  nameWithType.vb: Reference(Of TObject).CType(TObject)
+  fullName.vb: Beutl.Reference(Of TObject).CType(TObject)
+  name.vb: CType(TObject)
+- uid: Beutl.Reference`1.op_Equality(Beutl.Reference{`0},Beutl.Reference{`0})
+  commentId: M:Beutl.Reference`1.op_Equality(Beutl.Reference{`0},Beutl.Reference{`0})
+  id: op_Equality(Beutl.Reference{`0},Beutl.Reference{`0})
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Reference<TObject>, Reference<TObject>)
+  nameWithType: Reference<TObject>.operator ==(Reference<TObject>, Reference<TObject>)
+  fullName: Beutl.Reference<TObject>.operator ==(Beutl.Reference<TObject>, Beutl.Reference<TObject>)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static bool operator ==(Reference<TObject> left, Reference<TObject> right)
+    parameters:
+    - id: left
+      type: Beutl.Reference`1
+    - id: right
+      type: Beutl.Reference`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Reference(Of TObject), right As Reference(Of TObject)) As Boolean
+  overload: Beutl.Reference`1.op_Equality*
+  nameWithType.vb: Reference(Of TObject).=(Reference(Of TObject), Reference(Of TObject))
+  fullName.vb: Beutl.Reference(Of TObject).=(Beutl.Reference(Of TObject), Beutl.Reference(Of TObject))
+  name.vb: =(Reference(Of TObject), Reference(Of TObject))
+- uid: Beutl.Reference`1.op_Inequality(Beutl.Reference{`0},Beutl.Reference{`0})
+  commentId: M:Beutl.Reference`1.op_Inequality(Beutl.Reference{`0},Beutl.Reference{`0})
+  id: op_Inequality(Beutl.Reference{`0},Beutl.Reference{`0})
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Reference<TObject>, Reference<TObject>)
+  nameWithType: Reference<TObject>.operator !=(Reference<TObject>, Reference<TObject>)
+  fullName: Beutl.Reference<TObject>.operator !=(Beutl.Reference<TObject>, Beutl.Reference<TObject>)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static bool operator !=(Reference<TObject> left, Reference<TObject> right)
+    parameters:
+    - id: left
+      type: Beutl.Reference`1
+    - id: right
+      type: Beutl.Reference`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Reference(Of TObject), right As Reference(Of TObject)) As Boolean
+  overload: Beutl.Reference`1.op_Inequality*
+  nameWithType.vb: Reference(Of TObject).<>(Reference(Of TObject), Reference(Of TObject))
+  fullName.vb: Beutl.Reference(Of TObject).<>(Beutl.Reference(Of TObject), Beutl.Reference(Of TObject))
+  name.vb: <>(Reference(Of TObject), Reference(Of TObject))
+- uid: Beutl.Reference`1.Id
+  commentId: P:Beutl.Reference`1.Id
+  id: Id
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Reference<TObject>.Id
+  fullName: Beutl.Reference<TObject>.Id
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public Guid Id { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly Property Id As Guid
+  overload: Beutl.Reference`1.Id*
+  implements:
+  - Beutl.IReference.Id
+  nameWithType.vb: Reference(Of TObject).Id
+  fullName.vb: Beutl.Reference(Of TObject).Id
+- uid: Beutl.Reference`1.Value
+  commentId: P:Beutl.Reference`1.Value
+  id: Value
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Reference<TObject>.Value
+  fullName: Beutl.Reference<TObject>.Value
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public TObject? Value { get; }
+    parameters: []
+    return:
+      type: '{TObject}'
+    content.vb: Public ReadOnly Property Value As TObject
+  overload: Beutl.Reference`1.Value*
+  nameWithType.vb: Reference(Of TObject).Value
+  fullName.vb: Beutl.Reference(Of TObject).Value
+- uid: Beutl.Reference`1.IsNull
+  commentId: P:Beutl.Reference`1.IsNull
+  id: IsNull
+  parent: Beutl.Reference`1
+  langs:
+  - csharp
+  - vb
+  name: IsNull
+  nameWithType: Reference<TObject>.IsNull
+  fullName: Beutl.Reference<TObject>.IsNull
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Reference.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  example: []
+  syntax:
+    content: public bool IsNull { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNull As Boolean
+  overload: Beutl.Reference`1.IsNull*
+  implements:
+  - Beutl.IReference.IsNull
+  nameWithType.vb: Reference(Of TObject).IsNull
+  fullName.vb: Beutl.Reference(Of TObject).IsNull
+references:
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.IEquatable{Beutl.Reference`1}
+  commentId: T:System.IEquatable{Beutl.Reference`1}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Reference<TObject>>
+  nameWithType: IEquatable<Reference<TObject>>
+  fullName: System.IEquatable<Beutl.Reference<TObject>>
+  nameWithType.vb: IEquatable(Of Reference(Of TObject))
+  fullName.vb: System.IEquatable(Of Beutl.Reference(Of TObject))
+  name.vb: IEquatable(Of Reference(Of TObject))
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Reference`1
+    name: Reference
+    isExternal: true
+    href: Beutl.Reference-1.html
+  - name: <
+  - name: TObject
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Reference`1
+    name: Reference
+    isExternal: true
+    href: Beutl.Reference-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TObject
+  - name: )
+  - name: )
+- uid: Beutl.IReference
+  commentId: T:Beutl.IReference
+  parent: Beutl
+  isExternal: true
+  href: Beutl.IReference.html
+  name: IReference
+  nameWithType: IReference
+  fullName: Beutl.IReference
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Reference`1.#ctor*
+  commentId: Overload:Beutl.Reference`1.#ctor
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1__ctor_System_Guid_
+  name: Reference
+  nameWithType: Reference<TObject>.Reference
+  fullName: Beutl.Reference<TObject>.Reference
+  nameWithType.vb: Reference(Of TObject).New
+  fullName.vb: Beutl.Reference(Of TObject).New
+  name.vb: New
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: '{TObject}'
+  commentId: '!:TObject'
+  definition: TObject
+  name: TObject
+  nameWithType: TObject
+  fullName: TObject
+- uid: TObject
+  name: TObject
+  nameWithType: TObject
+  fullName: TObject
+- uid: Beutl.Reference`1.Resolved*
+  commentId: Overload:Beutl.Reference`1.Resolved
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_Resolved__0_
+  name: Resolved
+  nameWithType: Reference<TObject>.Resolved
+  fullName: Beutl.Reference<TObject>.Resolved
+  nameWithType.vb: Reference(Of TObject).Resolved
+  fullName.vb: Beutl.Reference(Of TObject).Resolved
+- uid: Beutl.Reference`1
+  commentId: T:Beutl.Reference`1
+  parent: Beutl
+  isExternal: true
+  href: Beutl.Reference-1.html
+  name: Reference<TObject>
+  nameWithType: Reference<TObject>
+  fullName: Beutl.Reference<TObject>
+  nameWithType.vb: Reference(Of TObject)
+  fullName.vb: Beutl.Reference(Of TObject)
+  name.vb: Reference(Of TObject)
+  spec.csharp:
+  - uid: Beutl.Reference`1
+    name: Reference
+    isExternal: true
+    href: Beutl.Reference-1.html
+  - name: <
+  - name: TObject
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Reference`1
+    name: Reference
+    isExternal: true
+    href: Beutl.Reference-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TObject
+  - name: )
+- uid: Beutl.Reference`1.Deconstruct*
+  commentId: Overload:Beutl.Reference`1.Deconstruct
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_Deconstruct_System_Guid___0__
+  name: Deconstruct
+  nameWithType: Reference<TObject>.Deconstruct
+  fullName: Beutl.Reference<TObject>.Deconstruct
+  nameWithType.vb: Reference(Of TObject).Deconstruct
+  fullName.vb: Beutl.Reference(Of TObject).Deconstruct
+- uid: Beutl.Reference`1.Equals*
+  commentId: Overload:Beutl.Reference`1.Equals
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_Equals_Beutl_Reference__0__
+  name: Equals
+  nameWithType: Reference<TObject>.Equals
+  fullName: Beutl.Reference<TObject>.Equals
+  nameWithType.vb: Reference(Of TObject).Equals
+  fullName.vb: Beutl.Reference(Of TObject).Equals
+- uid: System.IEquatable{Beutl.Reference`1}.Equals(Beutl.Reference{{TObject}})
+  commentId: M:System.IEquatable{Beutl.Reference`1}.Equals(Beutl.Reference{`0})
+  parent: System.IEquatable{Beutl.Reference`1}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Reference<TObject>)
+  nameWithType: IEquatable<Reference<TObject>>.Equals(Reference<TObject>)
+  fullName: System.IEquatable<Beutl.Reference<TObject>>.Equals(Beutl.Reference<TObject>)
+  nameWithType.vb: IEquatable(Of Reference(Of TObject)).Equals(Reference(Of TObject))
+  fullName.vb: System.IEquatable(Of Beutl.Reference(Of TObject)).Equals(Beutl.Reference(Of TObject))
+  name.vb: Equals(Reference(Of TObject))
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Reference`1}.Equals(Beutl.Reference{`0})
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Reference`1
+    name: Reference
+    isExternal: true
+    href: Beutl.Reference-1.html
+  - name: <
+  - name: TObject
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Reference`1}.Equals(Beutl.Reference{`0})
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Reference`1
+    name: Reference
+    isExternal: true
+    href: Beutl.Reference-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TObject
+  - name: )
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Reference`1.GetHashCode*
+  commentId: Overload:Beutl.Reference`1.GetHashCode
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_GetHashCode
+  name: GetHashCode
+  nameWithType: Reference<TObject>.GetHashCode
+  fullName: Beutl.Reference<TObject>.GetHashCode
+  nameWithType.vb: Reference(Of TObject).GetHashCode
+  fullName.vb: Beutl.Reference(Of TObject).GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Reference`1.op_Implicit*
+  commentId: Overload:Beutl.Reference`1.op_Implicit
+  name: implicit operator
+  nameWithType: Reference<TObject>.implicit operator
+  fullName: Beutl.Reference<TObject>.implicit operator
+  nameWithType.vb: Reference(Of TObject).CType
+  fullName.vb: Beutl.Reference(Of TObject).CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: Beutl.Reference`1.op_Equality*
+  commentId: Overload:Beutl.Reference`1.op_Equality
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_op_Equality_Beutl_Reference__0__Beutl_Reference__0__
+  name: operator ==
+  nameWithType: Reference<TObject>.operator ==
+  fullName: Beutl.Reference<TObject>.operator ==
+  nameWithType.vb: Reference(Of TObject).=
+  fullName.vb: Beutl.Reference(Of TObject).=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Reference`1.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Reference-1.html#Beutl_Reference_1_op_Equality_Beutl_Reference__0__Beutl_Reference__0__
+- uid: Beutl.Reference`1.op_Inequality*
+  commentId: Overload:Beutl.Reference`1.op_Inequality
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_op_Inequality_Beutl_Reference__0__Beutl_Reference__0__
+  name: operator !=
+  nameWithType: Reference<TObject>.operator !=
+  fullName: Beutl.Reference<TObject>.operator !=
+  nameWithType.vb: Reference(Of TObject).<>
+  fullName.vb: Beutl.Reference(Of TObject).<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Reference`1.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Reference-1.html#Beutl_Reference_1_op_Inequality_Beutl_Reference__0__Beutl_Reference__0__
+- uid: Beutl.Reference`1.Id*
+  commentId: Overload:Beutl.Reference`1.Id
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_Id
+  name: Id
+  nameWithType: Reference<TObject>.Id
+  fullName: Beutl.Reference<TObject>.Id
+  nameWithType.vb: Reference(Of TObject).Id
+  fullName.vb: Beutl.Reference(Of TObject).Id
+- uid: Beutl.IReference.Id
+  commentId: P:Beutl.IReference.Id
+  parent: Beutl.IReference
+  isExternal: true
+  href: Beutl.IReference.html#Beutl_IReference_Id
+  name: Id
+  nameWithType: IReference.Id
+  fullName: Beutl.IReference.Id
+- uid: Beutl.Reference`1.Value*
+  commentId: Overload:Beutl.Reference`1.Value
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_Value
+  name: Value
+  nameWithType: Reference<TObject>.Value
+  fullName: Beutl.Reference<TObject>.Value
+  nameWithType.vb: Reference(Of TObject).Value
+  fullName.vb: Beutl.Reference(Of TObject).Value
+- uid: Beutl.Reference`1.IsNull*
+  commentId: Overload:Beutl.Reference`1.IsNull
+  isExternal: true
+  href: Beutl.Reference-1.html#Beutl_Reference_1_IsNull
+  name: IsNull
+  nameWithType: Reference<TObject>.IsNull
+  fullName: Beutl.Reference<TObject>.IsNull
+  nameWithType.vb: Reference(Of TObject).IsNull
+  fullName.vb: Beutl.Reference(Of TObject).IsNull
+- uid: Beutl.IReference.IsNull
+  commentId: P:Beutl.IReference.IsNull
+  parent: Beutl.IReference
+  isExternal: true
+  href: Beutl.IReference.html#Beutl_IReference_IsNull
+  name: IsNull
+  nameWithType: IReference.IsNull
+  fullName: Beutl.IReference.IsNull

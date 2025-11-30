@@ -1,0 +1,783 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Typeface
+  commentId: T:Beutl.Media.Typeface
+  id: Typeface
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.Typeface.#ctor(Beutl.Media.FontFamily,Beutl.Media.FontStyle,Beutl.Media.FontWeight)
+  - Beutl.Media.Typeface.Equals(Beutl.Media.Typeface)
+  - Beutl.Media.Typeface.Equals(System.Object)
+  - Beutl.Media.Typeface.FontFamily
+  - Beutl.Media.Typeface.GetHashCode
+  - Beutl.Media.Typeface.Style
+  - Beutl.Media.Typeface.Weight
+  - Beutl.Media.Typeface.op_Equality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  - Beutl.Media.Typeface.op_Inequality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  langs:
+  - csharp
+  - vb
+  name: Typeface
+  nameWithType: Typeface
+  fullName: Beutl.Media.Typeface
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(TypefaceJsonConverter))]
+
+      public readonly struct Typeface : IEquatable<Typeface>
+    content.vb: >-
+      <JsonConverter(GetType(TypefaceJsonConverter))>
+
+      Public Structure Typeface Implements IEquatable(Of Typeface)
+  implements:
+  - System.IEquatable{Beutl.Media.Typeface}
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Media.Typeface.#ctor(Beutl.Media.FontFamily,Beutl.Media.FontStyle,Beutl.Media.FontWeight)
+  commentId: M:Beutl.Media.Typeface.#ctor(Beutl.Media.FontFamily,Beutl.Media.FontStyle,Beutl.Media.FontWeight)
+  id: '#ctor(Beutl.Media.FontFamily,Beutl.Media.FontStyle,Beutl.Media.FontWeight)'
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: Typeface(FontFamily, FontStyle, FontWeight)
+  nameWithType: Typeface.Typeface(FontFamily, FontStyle, FontWeight)
+  fullName: Beutl.Media.Typeface.Typeface(Beutl.Media.FontFamily, Beutl.Media.FontStyle, Beutl.Media.FontWeight)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Typeface(FontFamily fontFamily, FontStyle style = FontStyle.Normal, FontWeight weight = FontWeight.Regular)
+    parameters:
+    - id: fontFamily
+      type: Beutl.Media.FontFamily
+    - id: style
+      type: Beutl.Media.FontStyle
+    - id: weight
+      type: Beutl.Media.FontWeight
+    content.vb: Public Sub New(fontFamily As FontFamily, style As FontStyle = FontStyle.Normal, weight As FontWeight = FontWeight.Regular)
+  overload: Beutl.Media.Typeface.#ctor*
+  nameWithType.vb: Typeface.New(FontFamily, FontStyle, FontWeight)
+  fullName.vb: Beutl.Media.Typeface.New(Beutl.Media.FontFamily, Beutl.Media.FontStyle, Beutl.Media.FontWeight)
+  name.vb: New(FontFamily, FontStyle, FontWeight)
+- uid: Beutl.Media.Typeface.Equals(System.Object)
+  commentId: M:Beutl.Media.Typeface.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Typeface.Equals(object?)
+  fullName: Beutl.Media.Typeface.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.Typeface.Equals*
+  nameWithType.vb: Typeface.Equals(Object)
+  fullName.vb: Beutl.Media.Typeface.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.Typeface.Equals(Beutl.Media.Typeface)
+  commentId: M:Beutl.Media.Typeface.Equals(Beutl.Media.Typeface)
+  id: Equals(Beutl.Media.Typeface)
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: Equals(Typeface)
+  nameWithType: Typeface.Equals(Typeface)
+  fullName: Beutl.Media.Typeface.Equals(Beutl.Media.Typeface)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(Typeface other)
+    parameters:
+    - id: other
+      type: Beutl.Media.Typeface
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Typeface) As Boolean
+  overload: Beutl.Media.Typeface.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.Typeface}.Equals(Beutl.Media.Typeface)
+- uid: Beutl.Media.Typeface.GetHashCode
+  commentId: M:Beutl.Media.Typeface.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Typeface.GetHashCode()
+  fullName: Beutl.Media.Typeface.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.Typeface.GetHashCode*
+- uid: Beutl.Media.Typeface.op_Equality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  commentId: M:Beutl.Media.Typeface.op_Equality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  id: op_Equality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Typeface, Typeface)
+  nameWithType: Typeface.operator ==(Typeface, Typeface)
+  fullName: Beutl.Media.Typeface.operator ==(Beutl.Media.Typeface, Beutl.Media.Typeface)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator ==(Typeface left, Typeface right)
+    parameters:
+    - id: left
+      type: Beutl.Media.Typeface
+    - id: right
+      type: Beutl.Media.Typeface
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Typeface, right As Typeface) As Boolean
+  overload: Beutl.Media.Typeface.op_Equality*
+  nameWithType.vb: Typeface.=(Typeface, Typeface)
+  fullName.vb: Beutl.Media.Typeface.=(Beutl.Media.Typeface, Beutl.Media.Typeface)
+  name.vb: =(Typeface, Typeface)
+- uid: Beutl.Media.Typeface.op_Inequality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  commentId: M:Beutl.Media.Typeface.op_Inequality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  id: op_Inequality(Beutl.Media.Typeface,Beutl.Media.Typeface)
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Typeface, Typeface)
+  nameWithType: Typeface.operator !=(Typeface, Typeface)
+  fullName: Beutl.Media.Typeface.operator !=(Beutl.Media.Typeface, Beutl.Media.Typeface)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator !=(Typeface left, Typeface right)
+    parameters:
+    - id: left
+      type: Beutl.Media.Typeface
+    - id: right
+      type: Beutl.Media.Typeface
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Typeface, right As Typeface) As Boolean
+  overload: Beutl.Media.Typeface.op_Inequality*
+  nameWithType.vb: Typeface.<>(Typeface, Typeface)
+  fullName.vb: Beutl.Media.Typeface.<>(Beutl.Media.Typeface, Beutl.Media.Typeface)
+  name.vb: <>(Typeface, Typeface)
+- uid: Beutl.Media.Typeface.FontFamily
+  commentId: P:Beutl.Media.Typeface.FontFamily
+  id: FontFamily
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: FontFamily
+  nameWithType: Typeface.FontFamily
+  fullName: Beutl.Media.Typeface.FontFamily
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public FontFamily FontFamily { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.FontFamily
+    content.vb: Public ReadOnly Property FontFamily As FontFamily
+  overload: Beutl.Media.Typeface.FontFamily*
+- uid: Beutl.Media.Typeface.Style
+  commentId: P:Beutl.Media.Typeface.Style
+  id: Style
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: Style
+  nameWithType: Typeface.Style
+  fullName: Beutl.Media.Typeface.Style
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public FontStyle Style { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.FontStyle
+    content.vb: Public ReadOnly Property Style As FontStyle
+  overload: Beutl.Media.Typeface.Style*
+- uid: Beutl.Media.Typeface.Weight
+  commentId: P:Beutl.Media.Typeface.Weight
+  id: Weight
+  parent: Beutl.Media.Typeface
+  langs:
+  - csharp
+  - vb
+  name: Weight
+  nameWithType: Typeface.Weight
+  fullName: Beutl.Media.Typeface.Weight
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Font/Typeface.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public FontWeight Weight { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.FontWeight
+    content.vb: Public ReadOnly Property Weight As FontWeight
+  overload: Beutl.Media.Typeface.Weight*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.Typeface}
+  commentId: T:System.IEquatable{Beutl.Media.Typeface}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Typeface>
+  nameWithType: IEquatable<Typeface>
+  fullName: System.IEquatable<Beutl.Media.Typeface>
+  nameWithType.vb: IEquatable(Of Typeface)
+  fullName.vb: System.IEquatable(Of Beutl.Media.Typeface)
+  name.vb: IEquatable(Of Typeface)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.Typeface
+    name: Typeface
+    isExternal: true
+    href: Beutl.Media.Typeface.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Typeface
+    name: Typeface
+    isExternal: true
+    href: Beutl.Media.Typeface.html
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.Typeface.#ctor*
+  commentId: Overload:Beutl.Media.Typeface.#ctor
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface__ctor_Beutl_Media_FontFamily_Beutl_Media_FontStyle_Beutl_Media_FontWeight_
+  name: Typeface
+  nameWithType: Typeface.Typeface
+  fullName: Beutl.Media.Typeface.Typeface
+  nameWithType.vb: Typeface.New
+  fullName.vb: Beutl.Media.Typeface.New
+  name.vb: New
+- uid: Beutl.Media.FontFamily
+  commentId: T:Beutl.Media.FontFamily
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.FontFamily.html
+  name: FontFamily
+  nameWithType: FontFamily
+  fullName: Beutl.Media.FontFamily
+- uid: Beutl.Media.FontStyle
+  commentId: T:Beutl.Media.FontStyle
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.FontStyle.html
+  name: FontStyle
+  nameWithType: FontStyle
+  fullName: Beutl.Media.FontStyle
+- uid: Beutl.Media.FontWeight
+  commentId: T:Beutl.Media.FontWeight
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.FontWeight.html
+  name: FontWeight
+  nameWithType: FontWeight
+  fullName: Beutl.Media.FontWeight
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Media.Typeface.Equals*
+  commentId: Overload:Beutl.Media.Typeface.Equals
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_Equals_System_Object_
+  name: Equals
+  nameWithType: Typeface.Equals
+  fullName: Beutl.Media.Typeface.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable{Beutl.Media.Typeface}.Equals(Beutl.Media.Typeface)
+  commentId: M:System.IEquatable{Beutl.Media.Typeface}.Equals(Beutl.Media.Typeface)
+  parent: System.IEquatable{Beutl.Media.Typeface}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Typeface)
+  nameWithType: IEquatable<Typeface>.Equals(Typeface)
+  fullName: System.IEquatable<Beutl.Media.Typeface>.Equals(Beutl.Media.Typeface)
+  nameWithType.vb: IEquatable(Of Typeface).Equals(Typeface)
+  fullName.vb: System.IEquatable(Of Beutl.Media.Typeface).Equals(Beutl.Media.Typeface)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.Typeface}.Equals(Beutl.Media.Typeface)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.Typeface
+    name: Typeface
+    isExternal: true
+    href: Beutl.Media.Typeface.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.Typeface}.Equals(Beutl.Media.Typeface)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.Typeface
+    name: Typeface
+    isExternal: true
+    href: Beutl.Media.Typeface.html
+  - name: )
+- uid: Beutl.Media.Typeface
+  commentId: T:Beutl.Media.Typeface
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Typeface.html
+  name: Typeface
+  nameWithType: Typeface
+  fullName: Beutl.Media.Typeface
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.Typeface.GetHashCode*
+  commentId: Overload:Beutl.Media.Typeface.GetHashCode
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_GetHashCode
+  name: GetHashCode
+  nameWithType: Typeface.GetHashCode
+  fullName: Beutl.Media.Typeface.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.Typeface.op_Equality*
+  commentId: Overload:Beutl.Media.Typeface.op_Equality
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_op_Equality_Beutl_Media_Typeface_Beutl_Media_Typeface_
+  name: operator ==
+  nameWithType: Typeface.operator ==
+  fullName: Beutl.Media.Typeface.operator ==
+  nameWithType.vb: Typeface.=
+  fullName.vb: Beutl.Media.Typeface.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.Typeface.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_op_Equality_Beutl_Media_Typeface_Beutl_Media_Typeface_
+- uid: Beutl.Media.Typeface.op_Inequality*
+  commentId: Overload:Beutl.Media.Typeface.op_Inequality
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_op_Inequality_Beutl_Media_Typeface_Beutl_Media_Typeface_
+  name: operator !=
+  nameWithType: Typeface.operator !=
+  fullName: Beutl.Media.Typeface.operator !=
+  nameWithType.vb: Typeface.<>
+  fullName.vb: Beutl.Media.Typeface.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.Typeface.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_op_Inequality_Beutl_Media_Typeface_Beutl_Media_Typeface_
+- uid: Beutl.Media.Typeface.FontFamily*
+  commentId: Overload:Beutl.Media.Typeface.FontFamily
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_FontFamily
+  name: FontFamily
+  nameWithType: Typeface.FontFamily
+  fullName: Beutl.Media.Typeface.FontFamily
+- uid: Beutl.Media.Typeface.Style*
+  commentId: Overload:Beutl.Media.Typeface.Style
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_Style
+  name: Style
+  nameWithType: Typeface.Style
+  fullName: Beutl.Media.Typeface.Style
+- uid: Beutl.Media.Typeface.Weight*
+  commentId: Overload:Beutl.Media.Typeface.Weight
+  isExternal: true
+  href: Beutl.Media.Typeface.html#Beutl_Media_Typeface_Weight
+  name: Weight
+  nameWithType: Typeface.Weight
+  fullName: Beutl.Media.Typeface.Weight

@@ -1,0 +1,232 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  id: ITupleConvertible`2
+  parent: Beutl
+  children:
+  - Beutl.ITupleConvertible`2.ConvertFrom(System.Span{`1},`0@)
+  - Beutl.ITupleConvertible`2.ConvertTo(`0,System.Span{`1})
+  - Beutl.ITupleConvertible`2.TupleLength
+  langs:
+  - csharp
+  - vb
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: 'public interface ITupleConvertible<TSelf, T> where TSelf : struct where T : unmanaged, INumber<T>'
+    typeParameters:
+    - id: TSelf
+    - id: T
+    content.vb: Public Interface ITupleConvertible(Of TSelf As Structure, T As {Structure, INumber(Of T)})
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+- uid: Beutl.ITupleConvertible`2.ConvertTo(`0,System.Span{`1})
+  commentId: M:Beutl.ITupleConvertible`2.ConvertTo(`0,System.Span{`1})
+  id: ConvertTo(`0,System.Span{`1})
+  parent: Beutl.ITupleConvertible`2
+  langs:
+  - csharp
+  - vb
+  name: ConvertTo(TSelf, Span<T>)
+  nameWithType: ITupleConvertible<TSelf, T>.ConvertTo(TSelf, Span<T>)
+  fullName: Beutl.ITupleConvertible<TSelf, T>.ConvertTo(TSelf, System.Span<T>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static abstract void ConvertTo(TSelf self, Span<T> tuple)
+    parameters:
+    - id: self
+      type: '{TSelf}'
+    - id: tuple
+      type: System.Span{{T}}
+    content.vb: Public Shared MustInherit Sub ConvertTo(self As TSelf, tuple As Span(Of T))
+  overload: Beutl.ITupleConvertible`2.ConvertTo*
+  nameWithType.vb: ITupleConvertible(Of TSelf, T).ConvertTo(TSelf, Span(Of T))
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T).ConvertTo(TSelf, System.Span(Of T))
+  name.vb: ConvertTo(TSelf, Span(Of T))
+- uid: Beutl.ITupleConvertible`2.ConvertFrom(System.Span{`1},`0@)
+  commentId: M:Beutl.ITupleConvertible`2.ConvertFrom(System.Span{`1},`0@)
+  id: ConvertFrom(System.Span{`1},`0@)
+  parent: Beutl.ITupleConvertible`2
+  langs:
+  - csharp
+  - vb
+  name: ConvertFrom(Span<T>, out TSelf)
+  nameWithType: ITupleConvertible<TSelf, T>.ConvertFrom(Span<T>, out TSelf)
+  fullName: Beutl.ITupleConvertible<TSelf, T>.ConvertFrom(System.Span<T>, out TSelf)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static abstract void ConvertFrom(Span<T> tuple, out TSelf self)
+    parameters:
+    - id: tuple
+      type: System.Span{{T}}
+    - id: self
+      type: '{TSelf}'
+    content.vb: Public Shared MustInherit Sub ConvertFrom(tuple As Span(Of T), self As TSelf)
+  overload: Beutl.ITupleConvertible`2.ConvertFrom*
+  nameWithType.vb: ITupleConvertible(Of TSelf, T).ConvertFrom(Span(Of T), TSelf)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T).ConvertFrom(System.Span(Of T), TSelf)
+  name.vb: ConvertFrom(Span(Of T), TSelf)
+- uid: Beutl.ITupleConvertible`2.TupleLength
+  commentId: P:Beutl.ITupleConvertible`2.TupleLength
+  id: TupleLength
+  parent: Beutl.ITupleConvertible`2
+  langs:
+  - csharp
+  - vb
+  name: TupleLength
+  nameWithType: ITupleConvertible<TSelf, T>.TupleLength
+  fullName: Beutl.ITupleConvertible<TSelf, T>.TupleLength
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl
+  syntax:
+    content: public static abstract int TupleLength { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared MustInherit ReadOnly Property TupleLength As Integer
+  overload: Beutl.ITupleConvertible`2.TupleLength*
+  nameWithType.vb: ITupleConvertible(Of TSelf, T).TupleLength
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T).TupleLength
+references:
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.ITupleConvertible`2.ConvertTo*
+  commentId: Overload:Beutl.ITupleConvertible`2.ConvertTo
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html#Beutl_ITupleConvertible_2_ConvertTo__0_System_Span__1__
+  name: ConvertTo
+  nameWithType: ITupleConvertible<TSelf, T>.ConvertTo
+  fullName: Beutl.ITupleConvertible<TSelf, T>.ConvertTo
+  nameWithType.vb: ITupleConvertible(Of TSelf, T).ConvertTo
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T).ConvertTo
+- uid: '{TSelf}'
+  commentId: '!:TSelf'
+  definition: TSelf
+  name: TSelf
+  nameWithType: TSelf
+  fullName: TSelf
+- uid: System.Span{{T}}
+  commentId: T:System.Span{`0}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TSelf
+  name: TSelf
+  nameWithType: TSelf
+  fullName: TSelf
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.ITupleConvertible`2.ConvertFrom*
+  commentId: Overload:Beutl.ITupleConvertible`2.ConvertFrom
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html#Beutl_ITupleConvertible_2_ConvertFrom_System_Span__1___0__
+  name: ConvertFrom
+  nameWithType: ITupleConvertible<TSelf, T>.ConvertFrom
+  fullName: Beutl.ITupleConvertible<TSelf, T>.ConvertFrom
+  nameWithType.vb: ITupleConvertible(Of TSelf, T).ConvertFrom
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T).ConvertFrom
+- uid: Beutl.ITupleConvertible`2.TupleLength*
+  commentId: Overload:Beutl.ITupleConvertible`2.TupleLength
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html#Beutl_ITupleConvertible_2_TupleLength
+  name: TupleLength
+  nameWithType: ITupleConvertible<TSelf, T>.TupleLength
+  fullName: Beutl.ITupleConvertible<TSelf, T>.TupleLength
+  nameWithType.vb: ITupleConvertible(Of TSelf, T).TupleLength
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T).TupleLength
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

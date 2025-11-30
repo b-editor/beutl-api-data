@@ -1,0 +1,4948 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Graphics.Rect
+  commentId: T:Beutl.Graphics.Rect
+  id: Rect
+  parent: Beutl.Graphics
+  children:
+  - Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Point,Beutl.Graphics.Point)
+  - Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Point,Beutl.Graphics.Size)
+  - Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Size)
+  - Beutl.Graphics.Rect.#ctor(System.Single,System.Single,System.Single,System.Single)
+  - Beutl.Graphics.Rect.Bottom
+  - Beutl.Graphics.Rect.BottomLeft
+  - Beutl.Graphics.Rect.BottomRight
+  - Beutl.Graphics.Rect.Center
+  - Beutl.Graphics.Rect.CenterRect(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.Contains(Beutl.Graphics.Point)
+  - Beutl.Graphics.Rect.Contains(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.ContainsExclusive(Beutl.Graphics.Point)
+  - Beutl.Graphics.Rect.Deflate(Beutl.Graphics.Thickness)
+  - Beutl.Graphics.Rect.Deflate(System.Single)
+  - Beutl.Graphics.Rect.Empty
+  - Beutl.Graphics.Rect.Equals(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.Equals(System.Object)
+  - Beutl.Graphics.Rect.GetHashCode
+  - Beutl.Graphics.Rect.Height
+  - Beutl.Graphics.Rect.Inflate(Beutl.Graphics.Thickness)
+  - Beutl.Graphics.Rect.Inflate(System.Single)
+  - Beutl.Graphics.Rect.Intersect(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.Intersects(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.Invalid
+  - Beutl.Graphics.Rect.IsEmpty
+  - Beutl.Graphics.Rect.IsInvalid
+  - Beutl.Graphics.Rect.Left
+  - Beutl.Graphics.Rect.Normalize
+  - Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Byte})
+  - Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  - Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.Rect.Parse(System.String)
+  - Beutl.Graphics.Rect.Parse(System.String,System.IFormatProvider)
+  - Beutl.Graphics.Rect.Position
+  - Beutl.Graphics.Rect.Right
+  - Beutl.Graphics.Rect.Size
+  - Beutl.Graphics.Rect.ToString
+  - Beutl.Graphics.Rect.ToString(System.IFormatProvider)
+  - Beutl.Graphics.Rect.ToString(System.String,System.IFormatProvider)
+  - Beutl.Graphics.Rect.Top
+  - Beutl.Graphics.Rect.TopLeft
+  - Beutl.Graphics.Rect.TopRight
+  - Beutl.Graphics.Rect.TransformToAABB(Beutl.Graphics.Matrix)
+  - Beutl.Graphics.Rect.Translate(Beutl.Graphics.Vector)
+  - Beutl.Graphics.Rect.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.Rect.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  - Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Rect@)
+  - Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+  - Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Rect@)
+  - Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+  - Beutl.Graphics.Rect.TryParse(System.String,Beutl.Graphics.Rect@)
+  - Beutl.Graphics.Rect.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+  - Beutl.Graphics.Rect.Union(Beutl.Graphics.Point)
+  - Beutl.Graphics.Rect.Union(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.Width
+  - Beutl.Graphics.Rect.WithHeight(System.Single)
+  - Beutl.Graphics.Rect.WithWidth(System.Single)
+  - Beutl.Graphics.Rect.WithX(System.Single)
+  - Beutl.Graphics.Rect.WithY(System.Single)
+  - Beutl.Graphics.Rect.X
+  - Beutl.Graphics.Rect.Y
+  - Beutl.Graphics.Rect.op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  - Beutl.Graphics.Rect.op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rect.op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  - Beutl.Graphics.Rect.op_Multiply(Beutl.Graphics.Rect,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: Rect
+  nameWithType: Rect
+  fullName: Beutl.Graphics.Rect
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: >-
+      [JsonConverter(typeof(RectJsonConverter))]
+
+      [TypeConverter(typeof(RectConverter))]
+
+      public readonly struct Rect : IEquatable<Rect>, ISpanParsable<Rect>, IParsable<Rect>, ISpanFormattable, IFormattable, IUtf8SpanParsable<Rect>, IUtf8SpanFormattable, IEqualityOperators<Rect, Rect, bool>, IMultiplyOperators<Rect, Vector, Rect>, IMultiplyOperators<Rect, float, Rect>, IDivisionOperators<Rect, Vector, Rect>, ITupleConvertible<Rect, float>
+    content.vb: >-
+      <JsonConverter(GetType(RectJsonConverter))>
+
+      <TypeConverter(GetType(RectConverter))>
+
+      Public Structure Rect Implements IEquatable(Of Rect), ISpanParsable(Of Rect), IParsable(Of Rect), ISpanFormattable, IFormattable, IUtf8SpanParsable(Of Rect), IUtf8SpanFormattable, IEqualityOperators(Of Rect, Rect, Boolean), IMultiplyOperators(Of Rect, Vector, Rect), IMultiplyOperators(Of Rect, Single, Rect), IDivisionOperators(Of Rect, Vector, Rect), ITupleConvertible(Of Rect, Single)
+  implements:
+  - System.IEquatable{Beutl.Graphics.Rect}
+  - System.ISpanParsable{Beutl.Graphics.Rect}
+  - System.IParsable{Beutl.Graphics.Rect}
+  - System.ISpanFormattable
+  - System.IFormattable
+  - System.IUtf8SpanParsable{Beutl.Graphics.Rect}
+  - System.IUtf8SpanFormattable
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  - Beutl.ITupleConvertible{Beutl.Graphics.Rect,System.Single}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.RectConverter
+- uid: Beutl.Graphics.Rect.Empty
+  commentId: F:Beutl.Graphics.Rect.Empty
+  id: Empty
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: Rect.Empty
+  fullName: Beutl.Graphics.Rect.Empty
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static readonly Rect Empty
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Shared ReadOnly Empty As Rect
+- uid: Beutl.Graphics.Rect.Invalid
+  commentId: F:Beutl.Graphics.Rect.Invalid
+  id: Invalid
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Invalid
+  nameWithType: Rect.Invalid
+  fullName: Beutl.Graphics.Rect.Invalid
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static readonly Rect Invalid
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Shared ReadOnly Invalid As Rect
+- uid: Beutl.Graphics.Rect.#ctor(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Beutl.Graphics.Rect.#ctor(System.Single,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single,System.Single)'
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Rect(float, float, float, float)
+  nameWithType: Rect.Rect(float, float, float, float)
+  fullName: Beutl.Graphics.Rect.Rect(float, float, float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect(float x, float y, float width, float height)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    - id: width
+      type: System.Single
+    - id: height
+      type: System.Single
+    content.vb: Public Sub New(x As Single, y As Single, width As Single, height As Single)
+  overload: Beutl.Graphics.Rect.#ctor*
+  nameWithType.vb: Rect.New(Single, Single, Single, Single)
+  fullName.vb: Beutl.Graphics.Rect.New(Single, Single, Single, Single)
+  name.vb: New(Single, Single, Single, Single)
+- uid: Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Size)
+  id: '#ctor(Beutl.Graphics.Size)'
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Rect(Size)
+  nameWithType: Rect.Rect(Size)
+  fullName: Beutl.Graphics.Rect.Rect(Beutl.Graphics.Size)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect(Size size)
+    parameters:
+    - id: size
+      type: Beutl.Graphics.Size
+    content.vb: Public Sub New(size As Size)
+  overload: Beutl.Graphics.Rect.#ctor*
+  nameWithType.vb: Rect.New(Size)
+  fullName.vb: Beutl.Graphics.Rect.New(Beutl.Graphics.Size)
+  name.vb: New(Size)
+- uid: Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Point,Beutl.Graphics.Size)
+  commentId: M:Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Point,Beutl.Graphics.Size)
+  id: '#ctor(Beutl.Graphics.Point,Beutl.Graphics.Size)'
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Rect(Point, Size)
+  nameWithType: Rect.Rect(Point, Size)
+  fullName: Beutl.Graphics.Rect.Rect(Beutl.Graphics.Point, Beutl.Graphics.Size)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect(Point position, Size size)
+    parameters:
+    - id: position
+      type: Beutl.Graphics.Point
+    - id: size
+      type: Beutl.Graphics.Size
+    content.vb: Public Sub New(position As Point, size As Size)
+  overload: Beutl.Graphics.Rect.#ctor*
+  nameWithType.vb: Rect.New(Point, Size)
+  fullName.vb: Beutl.Graphics.Rect.New(Beutl.Graphics.Point, Beutl.Graphics.Size)
+  name.vb: New(Point, Size)
+- uid: Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Point,Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.Rect.#ctor(Beutl.Graphics.Point,Beutl.Graphics.Point)
+  id: '#ctor(Beutl.Graphics.Point,Beutl.Graphics.Point)'
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Rect(Point, Point)
+  nameWithType: Rect.Rect(Point, Point)
+  fullName: Beutl.Graphics.Rect.Rect(Beutl.Graphics.Point, Beutl.Graphics.Point)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect(Point topLeft, Point bottomRight)
+    parameters:
+    - id: topLeft
+      type: Beutl.Graphics.Point
+    - id: bottomRight
+      type: Beutl.Graphics.Point
+    content.vb: Public Sub New(topLeft As Point, bottomRight As Point)
+  overload: Beutl.Graphics.Rect.#ctor*
+  nameWithType.vb: Rect.New(Point, Point)
+  fullName.vb: Beutl.Graphics.Rect.New(Beutl.Graphics.Point, Beutl.Graphics.Point)
+  name.vb: New(Point, Point)
+- uid: Beutl.Graphics.Rect.op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  id: op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Rect, Rect)
+  nameWithType: Rect.operator ==(Rect, Rect)
+  fullName: Beutl.Graphics.Rect.operator ==(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool operator ==(Rect left, Rect right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.Rect
+    - id: right
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator =(left As Rect, right As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.op_Equality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  nameWithType.vb: Rect.=(Rect, Rect)
+  fullName.vb: Beutl.Graphics.Rect.=(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  name.vb: =(Rect, Rect)
+- uid: Beutl.Graphics.Rect.op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  id: op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Rect, Rect)
+  nameWithType: Rect.operator !=(Rect, Rect)
+  fullName: Beutl.Graphics.Rect.operator !=(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool operator !=(Rect left, Rect right)
+    parameters:
+    - id: left
+      type: Beutl.Graphics.Rect
+    - id: right
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Shared Operator <>(left As Rect, right As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.op_Inequality*
+  implements:
+  - System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  nameWithType.vb: Rect.<>(Rect, Rect)
+  fullName.vb: Beutl.Graphics.Rect.<>(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  name.vb: <>(Rect, Rect)
+- uid: Beutl.Graphics.Rect.op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Rect.op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  id: op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: operator *(Rect, Vector)
+  nameWithType: Rect.operator *(Rect, Vector)
+  fullName: Beutl.Graphics.Rect.operator *(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Rect operator *(Rect rect, Vector scale)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Shared Operator *(rect As Rect, scale As Vector) As Rect
+  overload: Beutl.Graphics.Rect.op_Multiply*
+  implements:
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  nameWithType.vb: Rect.*(Rect, Vector)
+  fullName.vb: Beutl.Graphics.Rect.*(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  name.vb: '*(Rect, Vector)'
+- uid: Beutl.Graphics.Rect.op_Multiply(Beutl.Graphics.Rect,System.Single)
+  commentId: M:Beutl.Graphics.Rect.op_Multiply(Beutl.Graphics.Rect,System.Single)
+  id: op_Multiply(Beutl.Graphics.Rect,System.Single)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: operator *(Rect, float)
+  nameWithType: Rect.operator *(Rect, float)
+  fullName: Beutl.Graphics.Rect.operator *(Beutl.Graphics.Rect, float)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Rect operator *(Rect rect, float scale)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    - id: scale
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Shared Operator *(rect As Rect, scale As Single) As Rect
+  overload: Beutl.Graphics.Rect.op_Multiply*
+  implements:
+  - System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,System.Single)
+  nameWithType.vb: Rect.*(Rect, Single)
+  fullName.vb: Beutl.Graphics.Rect.*(Beutl.Graphics.Rect, Single)
+  name.vb: '*(Rect, Single)'
+- uid: Beutl.Graphics.Rect.op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Rect.op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  id: op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: operator /(Rect, Vector)
+  nameWithType: Rect.operator /(Rect, Vector)
+  fullName: Beutl.Graphics.Rect.operator /(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Rect operator /(Rect rect, Vector scale)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    - id: scale
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Shared Operator /(rect As Rect, scale As Vector) As Rect
+  overload: Beutl.Graphics.Rect.op_Division*
+  implements:
+  - System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  nameWithType.vb: Rect./(Rect, Vector)
+  fullName.vb: Beutl.Graphics.Rect./(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  name.vb: /(Rect, Vector)
+- uid: Beutl.Graphics.Rect.Contains(Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.Rect.Contains(Beutl.Graphics.Point)
+  id: Contains(Beutl.Graphics.Point)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Contains(Point)
+  nameWithType: Rect.Contains(Point)
+  fullName: Beutl.Graphics.Rect.Contains(Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool Contains(Point p)
+    parameters:
+    - id: p
+      type: Beutl.Graphics.Point
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(p As Point) As Boolean
+  overload: Beutl.Graphics.Rect.Contains*
+- uid: Beutl.Graphics.Rect.ContainsExclusive(Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.Rect.ContainsExclusive(Beutl.Graphics.Point)
+  id: ContainsExclusive(Beutl.Graphics.Point)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: ContainsExclusive(Point)
+  nameWithType: Rect.ContainsExclusive(Point)
+  fullName: Beutl.Graphics.Rect.ContainsExclusive(Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool ContainsExclusive(Point p)
+    parameters:
+    - id: p
+      type: Beutl.Graphics.Point
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsExclusive(p As Point) As Boolean
+  overload: Beutl.Graphics.Rect.ContainsExclusive*
+- uid: Beutl.Graphics.Rect.Contains(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.Contains(Beutl.Graphics.Rect)
+  id: Contains(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Contains(Rect)
+  nameWithType: Rect.Contains(Rect)
+  fullName: Beutl.Graphics.Rect.Contains(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool Contains(Rect r)
+    parameters:
+    - id: r
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(r As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.Contains*
+- uid: Beutl.Graphics.Rect.CenterRect(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.CenterRect(Beutl.Graphics.Rect)
+  id: CenterRect(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: CenterRect(Rect)
+  nameWithType: Rect.CenterRect(Rect)
+  fullName: Beutl.Graphics.Rect.CenterRect(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect CenterRect(Rect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function CenterRect(rect As Rect) As Rect
+  overload: Beutl.Graphics.Rect.CenterRect*
+- uid: Beutl.Graphics.Rect.Inflate(System.Single)
+  commentId: M:Beutl.Graphics.Rect.Inflate(System.Single)
+  id: Inflate(System.Single)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Inflate(float)
+  nameWithType: Rect.Inflate(float)
+  fullName: Beutl.Graphics.Rect.Inflate(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Inflate(float thickness)
+    parameters:
+    - id: thickness
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Inflate(thickness As Single) As Rect
+  overload: Beutl.Graphics.Rect.Inflate*
+  nameWithType.vb: Rect.Inflate(Single)
+  fullName.vb: Beutl.Graphics.Rect.Inflate(Single)
+  name.vb: Inflate(Single)
+- uid: Beutl.Graphics.Rect.Inflate(Beutl.Graphics.Thickness)
+  commentId: M:Beutl.Graphics.Rect.Inflate(Beutl.Graphics.Thickness)
+  id: Inflate(Beutl.Graphics.Thickness)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Inflate(Thickness)
+  nameWithType: Rect.Inflate(Thickness)
+  fullName: Beutl.Graphics.Rect.Inflate(Beutl.Graphics.Thickness)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Inflate(Thickness thickness)
+    parameters:
+    - id: thickness
+      type: Beutl.Graphics.Thickness
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Inflate(thickness As Thickness) As Rect
+  overload: Beutl.Graphics.Rect.Inflate*
+- uid: Beutl.Graphics.Rect.Deflate(System.Single)
+  commentId: M:Beutl.Graphics.Rect.Deflate(System.Single)
+  id: Deflate(System.Single)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Deflate(float)
+  nameWithType: Rect.Deflate(float)
+  fullName: Beutl.Graphics.Rect.Deflate(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Deflate(float thickness)
+    parameters:
+    - id: thickness
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Deflate(thickness As Single) As Rect
+  overload: Beutl.Graphics.Rect.Deflate*
+  nameWithType.vb: Rect.Deflate(Single)
+  fullName.vb: Beutl.Graphics.Rect.Deflate(Single)
+  name.vb: Deflate(Single)
+- uid: Beutl.Graphics.Rect.Deflate(Beutl.Graphics.Thickness)
+  commentId: M:Beutl.Graphics.Rect.Deflate(Beutl.Graphics.Thickness)
+  id: Deflate(Beutl.Graphics.Thickness)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Deflate(Thickness)
+  nameWithType: Rect.Deflate(Thickness)
+  fullName: Beutl.Graphics.Rect.Deflate(Beutl.Graphics.Thickness)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Deflate(Thickness thickness)
+    parameters:
+    - id: thickness
+      type: Beutl.Graphics.Thickness
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Deflate(thickness As Thickness) As Rect
+  overload: Beutl.Graphics.Rect.Deflate*
+- uid: Beutl.Graphics.Rect.Equals(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.Equals(Beutl.Graphics.Rect)
+  id: Equals(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Equals(Rect)
+  nameWithType: Rect.Equals(Rect)
+  fullName: Beutl.Graphics.Rect.Equals(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool Equals(Rect other)
+    parameters:
+    - id: other
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.Equals*
+  implements:
+  - System.IEquatable{Beutl.Graphics.Rect}.Equals(Beutl.Graphics.Rect)
+- uid: Beutl.Graphics.Rect.Equals(System.Object)
+  commentId: M:Beutl.Graphics.Rect.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Rect.Equals(object?)
+  fullName: Beutl.Graphics.Rect.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Graphics.Rect.Equals*
+  nameWithType.vb: Rect.Equals(Object)
+  fullName.vb: Beutl.Graphics.Rect.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Graphics.Rect.GetHashCode
+  commentId: M:Beutl.Graphics.Rect.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Rect.GetHashCode()
+  fullName: Beutl.Graphics.Rect.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Graphics.Rect.GetHashCode*
+- uid: Beutl.Graphics.Rect.Intersect(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.Intersect(Beutl.Graphics.Rect)
+  id: Intersect(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Intersect(Rect)
+  nameWithType: Rect.Intersect(Rect)
+  fullName: Beutl.Graphics.Rect.Intersect(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Intersect(Rect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Intersect(rect As Rect) As Rect
+  overload: Beutl.Graphics.Rect.Intersect*
+- uid: Beutl.Graphics.Rect.Intersects(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.Intersects(Beutl.Graphics.Rect)
+  id: Intersects(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Intersects(Rect)
+  nameWithType: Rect.Intersects(Rect)
+  fullName: Beutl.Graphics.Rect.Intersects(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool Intersects(Rect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Public Function Intersects(rect As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.Intersects*
+- uid: Beutl.Graphics.Rect.TransformToAABB(Beutl.Graphics.Matrix)
+  commentId: M:Beutl.Graphics.Rect.TransformToAABB(Beutl.Graphics.Matrix)
+  id: TransformToAABB(Beutl.Graphics.Matrix)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TransformToAABB(Matrix)
+  nameWithType: Rect.TransformToAABB(Matrix)
+  fullName: Beutl.Graphics.Rect.TransformToAABB(Beutl.Graphics.Matrix)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect TransformToAABB(Matrix matrix)
+    parameters:
+    - id: matrix
+      type: Beutl.Graphics.Matrix
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function TransformToAABB(matrix As Matrix) As Rect
+  overload: Beutl.Graphics.Rect.TransformToAABB*
+- uid: Beutl.Graphics.Rect.Translate(Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Rect.Translate(Beutl.Graphics.Vector)
+  id: Translate(Beutl.Graphics.Vector)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Translate(Vector)
+  nameWithType: Rect.Translate(Vector)
+  fullName: Beutl.Graphics.Rect.Translate(Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Translate(Vector offset)
+    parameters:
+    - id: offset
+      type: Beutl.Graphics.Vector
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Translate(offset As Vector) As Rect
+  overload: Beutl.Graphics.Rect.Translate*
+- uid: Beutl.Graphics.Rect.Normalize
+  commentId: M:Beutl.Graphics.Rect.Normalize
+  id: Normalize
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Normalize()
+  nameWithType: Rect.Normalize()
+  fullName: Beutl.Graphics.Rect.Normalize()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Normalize()
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Normalize() As Rect
+  overload: Beutl.Graphics.Rect.Normalize*
+- uid: Beutl.Graphics.Rect.Union(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rect.Union(Beutl.Graphics.Rect)
+  id: Union(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Union(Rect)
+  nameWithType: Rect.Union(Rect)
+  fullName: Beutl.Graphics.Rect.Union(Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Union(Rect rect)
+    parameters:
+    - id: rect
+      type: Beutl.Graphics.Rect
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Union(rect As Rect) As Rect
+  overload: Beutl.Graphics.Rect.Union*
+- uid: Beutl.Graphics.Rect.Union(Beutl.Graphics.Point)
+  commentId: M:Beutl.Graphics.Rect.Union(Beutl.Graphics.Point)
+  id: Union(Beutl.Graphics.Point)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Union(Point)
+  nameWithType: Rect.Union(Point)
+  fullName: Beutl.Graphics.Rect.Union(Beutl.Graphics.Point)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect Union(Point point)
+    parameters:
+    - id: point
+      type: Beutl.Graphics.Point
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function Union(point As Point) As Rect
+  overload: Beutl.Graphics.Rect.Union*
+- uid: Beutl.Graphics.Rect.WithX(System.Single)
+  commentId: M:Beutl.Graphics.Rect.WithX(System.Single)
+  id: WithX(System.Single)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithX(float)
+  nameWithType: Rect.WithX(float)
+  fullName: Beutl.Graphics.Rect.WithX(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect WithX(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function WithX(x As Single) As Rect
+  overload: Beutl.Graphics.Rect.WithX*
+  nameWithType.vb: Rect.WithX(Single)
+  fullName.vb: Beutl.Graphics.Rect.WithX(Single)
+  name.vb: WithX(Single)
+- uid: Beutl.Graphics.Rect.WithY(System.Single)
+  commentId: M:Beutl.Graphics.Rect.WithY(System.Single)
+  id: WithY(System.Single)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithY(float)
+  nameWithType: Rect.WithY(float)
+  fullName: Beutl.Graphics.Rect.WithY(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect WithY(float y)
+    parameters:
+    - id: y
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function WithY(y As Single) As Rect
+  overload: Beutl.Graphics.Rect.WithY*
+  nameWithType.vb: Rect.WithY(Single)
+  fullName.vb: Beutl.Graphics.Rect.WithY(Single)
+  name.vb: WithY(Single)
+- uid: Beutl.Graphics.Rect.WithWidth(System.Single)
+  commentId: M:Beutl.Graphics.Rect.WithWidth(System.Single)
+  id: WithWidth(System.Single)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithWidth(float)
+  nameWithType: Rect.WithWidth(float)
+  fullName: Beutl.Graphics.Rect.WithWidth(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect WithWidth(float width)
+    parameters:
+    - id: width
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function WithWidth(width As Single) As Rect
+  overload: Beutl.Graphics.Rect.WithWidth*
+  nameWithType.vb: Rect.WithWidth(Single)
+  fullName.vb: Beutl.Graphics.Rect.WithWidth(Single)
+  name.vb: WithWidth(Single)
+- uid: Beutl.Graphics.Rect.WithHeight(System.Single)
+  commentId: M:Beutl.Graphics.Rect.WithHeight(System.Single)
+  id: WithHeight(System.Single)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithHeight(float)
+  nameWithType: Rect.WithHeight(float)
+  fullName: Beutl.Graphics.Rect.WithHeight(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Rect WithHeight(float height)
+    parameters:
+    - id: height
+      type: System.Single
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Function WithHeight(height As Single) As Rect
+  overload: Beutl.Graphics.Rect.WithHeight*
+  nameWithType.vb: Rect.WithHeight(Single)
+  fullName.vb: Beutl.Graphics.Rect.WithHeight(Single)
+  name.vb: WithHeight(Single)
+- uid: Beutl.Graphics.Rect.ToString
+  commentId: M:Beutl.Graphics.Rect.ToString
+  id: ToString
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Rect.ToString()
+  fullName: Beutl.Graphics.Rect.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Graphics.Rect.ToString*
+- uid: Beutl.Graphics.Rect.TryParse(System.String,Beutl.Graphics.Rect@)
+  commentId: M:Beutl.Graphics.Rect.TryParse(System.String,Beutl.Graphics.Rect@)
+  id: TryParse(System.String,Beutl.Graphics.Rect@)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out Rect)
+  nameWithType: Rect.TryParse(string, out Rect)
+  fullName: Beutl.Graphics.Rect.TryParse(string, out Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(string s, out Rect rect)
+    parameters:
+    - id: s
+      type: System.String
+    - id: rect
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, rect As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.TryParse*
+  nameWithType.vb: Rect.TryParse(String, Rect)
+  fullName.vb: Beutl.Graphics.Rect.TryParse(String, Beutl.Graphics.Rect)
+  name.vb: TryParse(String, Rect)
+- uid: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Rect@)
+  commentId: M:Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Rect@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Graphics.Rect@)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out Rect)
+  nameWithType: Rect.TryParse(ReadOnlySpan<char>, out Rect)
+  fullName: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan<char>, out Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out Rect rect)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: rect
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), rect As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.TryParse*
+  nameWithType.vb: Rect.TryParse(ReadOnlySpan(Of Char), Rect)
+  fullName.vb: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan(Of Char), Beutl.Graphics.Rect)
+  name.vb: TryParse(ReadOnlySpan(Of Char), Rect)
+- uid: Beutl.Graphics.Rect.Parse(System.String)
+  commentId: M:Beutl.Graphics.Rect.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: Rect.Parse(string)
+  fullName: Beutl.Graphics.Rect.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Rect Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Shared Function Parse(s As String) As Rect
+  overload: Beutl.Graphics.Rect.Parse*
+  nameWithType.vb: Rect.Parse(String)
+  fullName.vb: Beutl.Graphics.Rect.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: Rect.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Rect Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As Rect
+  overload: Beutl.Graphics.Rect.Parse*
+  nameWithType.vb: Rect.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Graphics.Rect.Parse(System.String,System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Rect.Parse(System.String,System.IFormatProvider)
+  id: Parse(System.String,System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Parse(string, IFormatProvider?)
+  nameWithType: Rect.Parse(string, IFormatProvider?)
+  fullName: Beutl.Graphics.Rect.Parse(string, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Rect Parse(string s, IFormatProvider? provider)
+    parameters:
+    - id: s
+      type: System.String
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Shared Function Parse(s As String, provider As IFormatProvider) As Rect
+  overload: Beutl.Graphics.Rect.Parse*
+  implements:
+  - System.IParsable{Beutl.Graphics.Rect}.Parse(System.String,System.IFormatProvider)
+  nameWithType.vb: Rect.Parse(String, IFormatProvider)
+  fullName.vb: Beutl.Graphics.Rect.Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+- uid: Beutl.Graphics.Rect.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+  commentId: M:Beutl.Graphics.Rect.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+  id: TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string?, IFormatProvider?, out Rect)
+  nameWithType: Rect.TryParse(string?, IFormatProvider?, out Rect)
+  fullName: Beutl.Graphics.Rect.TryParse(string?, System.IFormatProvider?, out Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(string? s, IFormatProvider? provider, out Rect result)
+    parameters:
+    - id: s
+      type: System.String
+      attributes:
+      - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+        ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+        arguments:
+        - type: System.Boolean
+          value: true
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(s As String, provider As IFormatProvider, result As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.TryParse*
+  implements:
+  - System.IParsable{Beutl.Graphics.Rect}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+  nameWithType.vb: Rect.TryParse(String, IFormatProvider, Rect)
+  fullName.vb: Beutl.Graphics.Rect.TryParse(String, System.IFormatProvider, Beutl.Graphics.Rect)
+  name.vb: TryParse(String, IFormatProvider, Rect)
+- uid: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: Rect.Parse(ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Rect Parse(ReadOnlySpan<char> s, IFormatProvider? provider)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Shared Function Parse(s As ReadOnlySpan(Of Char), provider As IFormatProvider) As Rect
+  overload: Beutl.Graphics.Rect.Parse*
+  implements:
+  - System.ISpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: Rect.Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+  commentId: M:Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+  id: TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider?, out Rect)
+  nameWithType: Rect.TryParse(ReadOnlySpan<char>, IFormatProvider?, out Rect)
+  fullName: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider?, out Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(ReadOnlySpan<char> s, IFormatProvider? provider, out Rect result)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(s As ReadOnlySpan(Of Char), provider As IFormatProvider, result As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.TryParse*
+  implements:
+  - System.ISpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+  nameWithType.vb: Rect.TryParse(ReadOnlySpan(Of Char), IFormatProvider, Rect)
+  fullName.vb: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, Beutl.Graphics.Rect)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, Rect)
+- uid: Beutl.Graphics.Rect.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Rect.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: Rect.TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.Rect.TryFormat(System.Span<char>, out int, System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool TryFormat(Span<char> destination, out int charsWritten, ReadOnlySpan<char> format = default, IFormatProvider? provider = null)
+    parameters:
+    - id: destination
+      type: System.Span{System.Char}
+    - id: charsWritten
+      type: System.Int32
+    - id: format
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryFormat(destination As Span(Of Char), charsWritten As Integer, format As ReadOnlySpan(Of Char) = Nothing, provider As IFormatProvider = Nothing) As Boolean
+  overload: Beutl.Graphics.Rect.TryFormat*
+  implements:
+  - System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: Rect.TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Rect.TryFormat(System.Span(Of Char), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.Rect.ToString(System.String,System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Rect.ToString(System.String,System.IFormatProvider)
+  id: ToString(System.String,System.IFormatProvider)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: ToString(string?, IFormatProvider?)
+  nameWithType: Rect.ToString(string?, IFormatProvider?)
+  fullName: Beutl.Graphics.Rect.ToString(string?, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public string ToString(string? format, IFormatProvider? formatProvider)
+    parameters:
+    - id: format
+      type: System.String
+    - id: formatProvider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+    content.vb: Public Function ToString(format As String, formatProvider As IFormatProvider) As String
+  overload: Beutl.Graphics.Rect.ToString*
+  implements:
+  - System.IFormattable.ToString(System.String,System.IFormatProvider)
+  nameWithType.vb: Rect.ToString(String, IFormatProvider)
+  fullName.vb: Beutl.Graphics.Rect.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+- uid: Beutl.Graphics.Rect.ToString(System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Rect.ToString(System.IFormatProvider)
+  id: ToString(System.IFormatProvider)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: ToString(IFormatProvider?)
+  nameWithType: Rect.ToString(IFormatProvider?)
+  fullName: Beutl.Graphics.Rect.ToString(System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public string ToString(IFormatProvider? formatProvider)
+    parameters:
+    - id: formatProvider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+    content.vb: Public Function ToString(formatProvider As IFormatProvider) As String
+  overload: Beutl.Graphics.Rect.ToString*
+  nameWithType.vb: Rect.ToString(IFormatProvider)
+  fullName.vb: Beutl.Graphics.Rect.ToString(System.IFormatProvider)
+  name.vb: ToString(IFormatProvider)
+- uid: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Byte})
+  commentId: M:Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Byte})
+  id: Parse(System.ReadOnlySpan{System.Byte})
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<byte>)
+  nameWithType: Rect.Parse(ReadOnlySpan<byte>)
+  fullName: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan<byte>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static Rect Parse(ReadOnlySpan<byte> utf8Text)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Public Shared Function Parse(utf8Text As ReadOnlySpan(Of Byte)) As Rect
+  overload: Beutl.Graphics.Rect.Parse*
+  nameWithType.vb: Rect.Parse(ReadOnlySpan(Of Byte))
+  fullName.vb: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan(Of Byte))
+  name.vb: Parse(ReadOnlySpan(Of Byte))
+- uid: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Rect.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  id: Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider?)
+  nameWithType: Rect.Parse(ReadOnlySpan<byte>, IFormatProvider?)
+  fullName: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static Rect Parse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: Beutl.Graphics.Rect
+    content.vb: Shared Function Parse(utf8Text As ReadOnlySpan(Of Byte), provider As IFormatProvider) As Rect
+  overload: Beutl.Graphics.Rect.Parse*
+  implements:
+  - System.IUtf8SpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  nameWithType.vb: Rect.Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Rect.Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+- uid: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Rect@)
+  commentId: M:Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Rect@)
+  id: TryParse(System.ReadOnlySpan{System.Byte},Beutl.Graphics.Rect@)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<byte>, out Rect)
+  nameWithType: Rect.TryParse(ReadOnlySpan<byte>, out Rect)
+  fullName: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan<byte>, out Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<byte> utf8Text, out Rect result)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: result
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(utf8Text As ReadOnlySpan(Of Byte), result As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.TryParse*
+  nameWithType.vb: Rect.TryParse(ReadOnlySpan(Of Byte), Rect)
+  fullName.vb: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan(Of Byte), Beutl.Graphics.Rect)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), Rect)
+- uid: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+  commentId: M:Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+  id: TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+  isEii: true
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider?, out Rect)
+  nameWithType: Rect.TryParse(ReadOnlySpan<byte>, IFormatProvider?, out Rect)
+  fullName: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider?, out Beutl.Graphics.Rect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: static bool TryParse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider, out Rect result)
+    parameters:
+    - id: utf8Text
+      type: System.ReadOnlySpan{System.Byte}
+    - id: provider
+      type: System.IFormatProvider
+    - id: result
+      type: Beutl.Graphics.Rect
+    return:
+      type: System.Boolean
+    content.vb: Shared Function TryParse(utf8Text As ReadOnlySpan(Of Byte), provider As IFormatProvider, result As Rect) As Boolean
+  overload: Beutl.Graphics.Rect.TryParse*
+  implements:
+  - System.IUtf8SpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+  nameWithType.vb: Rect.TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Rect)
+  fullName.vb: Beutl.Graphics.Rect.TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, Beutl.Graphics.Rect)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Rect)
+- uid: Beutl.Graphics.Rect.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:Beutl.Graphics.Rect.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  id: TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  nameWithType: Rect.TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider?)
+  fullName: Beutl.Graphics.Rect.TryFormat(System.Span<byte>, out int, System.ReadOnlySpan<char>, System.IFormatProvider?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  example: []
+  syntax:
+    content: public bool TryFormat(Span<byte> utf8Destination, out int bytesWritten, ReadOnlySpan<char> format = default, IFormatProvider? provider = null)
+    parameters:
+    - id: utf8Destination
+      type: System.Span{System.Byte}
+    - id: bytesWritten
+      type: System.Int32
+    - id: format
+      type: System.ReadOnlySpan{System.Char}
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryFormat(utf8Destination As Span(Of Byte), bytesWritten As Integer, format As ReadOnlySpan(Of Char) = Nothing, provider As IFormatProvider = Nothing) As Boolean
+  overload: Beutl.Graphics.Rect.TryFormat*
+  implements:
+  - System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  nameWithType.vb: Rect.TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: Beutl.Graphics.Rect.TryFormat(System.Span(Of Byte), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+- uid: Beutl.Graphics.Rect.X
+  commentId: P:Beutl.Graphics.Rect.X
+  id: X
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: Rect.X
+  fullName: Beutl.Graphics.Rect.X
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float X { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property X As Single
+  overload: Beutl.Graphics.Rect.X*
+- uid: Beutl.Graphics.Rect.Y
+  commentId: P:Beutl.Graphics.Rect.Y
+  id: Y
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: Rect.Y
+  fullName: Beutl.Graphics.Rect.Y
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Y { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Y As Single
+  overload: Beutl.Graphics.Rect.Y*
+- uid: Beutl.Graphics.Rect.Width
+  commentId: P:Beutl.Graphics.Rect.Width
+  id: Width
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Rect.Width
+  fullName: Beutl.Graphics.Rect.Width
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Width { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Width As Single
+  overload: Beutl.Graphics.Rect.Width*
+- uid: Beutl.Graphics.Rect.Height
+  commentId: P:Beutl.Graphics.Rect.Height
+  id: Height
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Rect.Height
+  fullName: Beutl.Graphics.Rect.Height
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Height { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Height As Single
+  overload: Beutl.Graphics.Rect.Height*
+- uid: Beutl.Graphics.Rect.Position
+  commentId: P:Beutl.Graphics.Rect.Position
+  id: Position
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Rect.Position
+  fullName: Beutl.Graphics.Rect.Position
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point Position { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public ReadOnly Property Position As Point
+  overload: Beutl.Graphics.Rect.Position*
+- uid: Beutl.Graphics.Rect.Size
+  commentId: P:Beutl.Graphics.Rect.Size
+  id: Size
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: Rect.Size
+  fullName: Beutl.Graphics.Rect.Size
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Size Size { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Size
+    content.vb: Public ReadOnly Property Size As Size
+  overload: Beutl.Graphics.Rect.Size*
+- uid: Beutl.Graphics.Rect.Right
+  commentId: P:Beutl.Graphics.Rect.Right
+  id: Right
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: Rect.Right
+  fullName: Beutl.Graphics.Rect.Right
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Right { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Right As Single
+  overload: Beutl.Graphics.Rect.Right*
+- uid: Beutl.Graphics.Rect.Bottom
+  commentId: P:Beutl.Graphics.Rect.Bottom
+  id: Bottom
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Bottom
+  nameWithType: Rect.Bottom
+  fullName: Beutl.Graphics.Rect.Bottom
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Bottom { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Bottom As Single
+  overload: Beutl.Graphics.Rect.Bottom*
+- uid: Beutl.Graphics.Rect.Left
+  commentId: P:Beutl.Graphics.Rect.Left
+  id: Left
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: Rect.Left
+  fullName: Beutl.Graphics.Rect.Left
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Left { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Left As Single
+  overload: Beutl.Graphics.Rect.Left*
+- uid: Beutl.Graphics.Rect.Top
+  commentId: P:Beutl.Graphics.Rect.Top
+  id: Top
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: Rect.Top
+  fullName: Beutl.Graphics.Rect.Top
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public float Top { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Top As Single
+  overload: Beutl.Graphics.Rect.Top*
+- uid: Beutl.Graphics.Rect.TopLeft
+  commentId: P:Beutl.Graphics.Rect.TopLeft
+  id: TopLeft
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TopLeft
+  nameWithType: Rect.TopLeft
+  fullName: Beutl.Graphics.Rect.TopLeft
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point TopLeft { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public ReadOnly Property TopLeft As Point
+  overload: Beutl.Graphics.Rect.TopLeft*
+- uid: Beutl.Graphics.Rect.TopRight
+  commentId: P:Beutl.Graphics.Rect.TopRight
+  id: TopRight
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: TopRight
+  nameWithType: Rect.TopRight
+  fullName: Beutl.Graphics.Rect.TopRight
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point TopRight { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public ReadOnly Property TopRight As Point
+  overload: Beutl.Graphics.Rect.TopRight*
+- uid: Beutl.Graphics.Rect.BottomLeft
+  commentId: P:Beutl.Graphics.Rect.BottomLeft
+  id: BottomLeft
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: BottomLeft
+  nameWithType: Rect.BottomLeft
+  fullName: Beutl.Graphics.Rect.BottomLeft
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point BottomLeft { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public ReadOnly Property BottomLeft As Point
+  overload: Beutl.Graphics.Rect.BottomLeft*
+- uid: Beutl.Graphics.Rect.BottomRight
+  commentId: P:Beutl.Graphics.Rect.BottomRight
+  id: BottomRight
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: BottomRight
+  nameWithType: Rect.BottomRight
+  fullName: Beutl.Graphics.Rect.BottomRight
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point BottomRight { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public ReadOnly Property BottomRight As Point
+  overload: Beutl.Graphics.Rect.BottomRight*
+- uid: Beutl.Graphics.Rect.Center
+  commentId: P:Beutl.Graphics.Rect.Center
+  id: Center
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: Rect.Center
+  fullName: Beutl.Graphics.Rect.Center
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public Point Center { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Point
+    content.vb: Public ReadOnly Property Center As Point
+  overload: Beutl.Graphics.Rect.Center*
+- uid: Beutl.Graphics.Rect.IsEmpty
+  commentId: P:Beutl.Graphics.Rect.IsEmpty
+  id: IsEmpty
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: Rect.IsEmpty
+  fullName: Beutl.Graphics.Rect.IsEmpty
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: Beutl.Graphics.Rect.IsEmpty*
+- uid: Beutl.Graphics.Rect.IsInvalid
+  commentId: P:Beutl.Graphics.Rect.IsInvalid
+  id: IsInvalid
+  parent: Beutl.Graphics.Rect
+  langs:
+  - csharp
+  - vb
+  name: IsInvalid
+  nameWithType: Rect.IsInvalid
+  fullName: Beutl.Graphics.Rect.IsInvalid
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rect.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: public bool IsInvalid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalid As Boolean
+  overload: Beutl.Graphics.Rect.IsInvalid*
+references:
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+- uid: System.IEquatable{Beutl.Graphics.Rect}
+  commentId: T:System.IEquatable{Beutl.Graphics.Rect}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Rect>
+  nameWithType: IEquatable<Rect>
+  fullName: System.IEquatable<Beutl.Graphics.Rect>
+  nameWithType.vb: IEquatable(Of Rect)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.Rect)
+  name.vb: IEquatable(Of Rect)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.Rect}
+  commentId: T:System.ISpanParsable{Beutl.Graphics.Rect}
+  parent: System
+  definition: System.ISpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<Rect>
+  nameWithType: ISpanParsable<Rect>
+  fullName: System.ISpanParsable<Beutl.Graphics.Rect>
+  nameWithType.vb: ISpanParsable(Of Rect)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.Rect)
+  name.vb: ISpanParsable(Of Rect)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.IParsable{Beutl.Graphics.Rect}
+  commentId: T:System.IParsable{Beutl.Graphics.Rect}
+  parent: System
+  definition: System.IParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<Rect>
+  nameWithType: IParsable<Rect>
+  fullName: System.IParsable<Beutl.Graphics.Rect>
+  nameWithType.vb: IParsable(Of Rect)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.Rect)
+  name.vb: IParsable(Of Rect)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.ISpanFormattable
+  commentId: T:System.ISpanFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanformattable
+  name: ISpanFormattable
+  nameWithType: ISpanFormattable
+  fullName: System.ISpanFormattable
+- uid: System.IFormattable
+  commentId: T:System.IFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  name: IFormattable
+  nameWithType: IFormattable
+  fullName: System.IFormattable
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.Rect}
+  commentId: T:System.IUtf8SpanParsable{Beutl.Graphics.Rect}
+  parent: System
+  definition: System.IUtf8SpanParsable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  name: IUtf8SpanParsable<Rect>
+  nameWithType: IUtf8SpanParsable<Rect>
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.Rect>
+  nameWithType.vb: IUtf8SpanParsable(Of Rect)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.Rect)
+  name.vb: IUtf8SpanParsable(Of Rect)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.IUtf8SpanFormattable
+  commentId: T:System.IUtf8SpanFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable
+  name: IUtf8SpanFormattable
+  nameWithType: IUtf8SpanFormattable
+  fullName: System.IUtf8SpanFormattable
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}
+  commentId: T:System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}
+  parent: System.Numerics
+  definition: System.Numerics.IEqualityOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<Rect, Rect, bool>
+  nameWithType: IEqualityOperators<Rect, Rect, bool>
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.Rect, Beutl.Graphics.Rect, bool>
+  nameWithType.vb: IEqualityOperators(Of Rect, Rect, Boolean)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.Rect, Beutl.Graphics.Rect, Boolean)
+  name.vb: IEqualityOperators(Of Rect, Rect, Boolean)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  commentId: T:System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  parent: System.Numerics
+  definition: System.Numerics.IMultiplyOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<Rect, Vector, Rect>
+  nameWithType: IMultiplyOperators<Rect, Vector, Rect>
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect>
+  nameWithType.vb: IMultiplyOperators(Of Rect, Vector, Rect)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect)
+  name.vb: IMultiplyOperators(Of Rect, Vector, Rect)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}
+  commentId: T:System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}
+  parent: System.Numerics
+  definition: System.Numerics.IMultiplyOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<Rect, float, Rect>
+  nameWithType: IMultiplyOperators<Rect, float, Rect>
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Rect, float, Beutl.Graphics.Rect>
+  nameWithType.vb: IMultiplyOperators(Of Rect, Single, Rect)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Rect, Single, Beutl.Graphics.Rect)
+  name.vb: IMultiplyOperators(Of Rect, Single, Rect)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  commentId: T:System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  parent: System.Numerics
+  definition: System.Numerics.IDivisionOperators`3
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  name: IDivisionOperators<Rect, Vector, Rect>
+  nameWithType: IDivisionOperators<Rect, Vector, Rect>
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect>
+  nameWithType.vb: IDivisionOperators(Of Rect, Vector, Rect)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect)
+  name.vb: IDivisionOperators(Of Rect, Vector, Rect)
+  spec.csharp:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: Beutl.ITupleConvertible{Beutl.Graphics.Rect,System.Single}
+  commentId: T:Beutl.ITupleConvertible{Beutl.Graphics.Rect,System.Single}
+  parent: Beutl
+  definition: Beutl.ITupleConvertible`2
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  name: ITupleConvertible<Rect, float>
+  nameWithType: ITupleConvertible<Rect, float>
+  fullName: Beutl.ITupleConvertible<Beutl.Graphics.Rect, float>
+  nameWithType.vb: ITupleConvertible(Of Rect, Single)
+  fullName.vb: Beutl.ITupleConvertible(Of Beutl.Graphics.Rect, Single)
+  name.vb: ITupleConvertible(Of Rect, Single)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: <
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ISpanParsable`1
+  commentId: T:System.ISpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  name: ISpanParsable<TSelf>
+  nameWithType: ISpanParsable<TSelf>
+  fullName: System.ISpanParsable<TSelf>
+  nameWithType.vb: ISpanParsable(Of TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf)
+  name.vb: ISpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.ISpanParsable`1
+    name: ISpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IParsable`1
+  commentId: T:System.IParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  name: IParsable<TSelf>
+  nameWithType: IParsable<TSelf>
+  fullName: System.IParsable<TSelf>
+  nameWithType.vb: IParsable(Of TSelf)
+  fullName.vb: System.IParsable(Of TSelf)
+  name.vb: IParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IParsable`1
+    name: IParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IUtf8SpanParsable`1
+  commentId: T:System.IUtf8SpanParsable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  name: IUtf8SpanParsable<TSelf>
+  nameWithType: IUtf8SpanParsable<TSelf>
+  fullName: System.IUtf8SpanParsable<TSelf>
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf)
+  name.vb: IUtf8SpanParsable(Of TSelf)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1
+    name: IUtf8SpanParsable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3
+  commentId: T:System.Numerics.IEqualityOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  name: IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult)
+  name.vb: IEqualityOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IEqualityOperators`3
+    name: IEqualityOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Numerics.IMultiplyOperators`3
+  commentId: T:System.Numerics.IMultiplyOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  name: IMultiplyOperators<TSelf, TOther, TResult>
+  nameWithType: IMultiplyOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IMultiplyOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IMultiplyOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of TSelf, TOther, TResult)
+  name.vb: IMultiplyOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IMultiplyOperators`3
+    name: IMultiplyOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Numerics.IDivisionOperators`3
+  commentId: T:System.Numerics.IDivisionOperators`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  name: IDivisionOperators<TSelf, TOther, TResult>
+  nameWithType: IDivisionOperators<TSelf, TOther, TResult>
+  fullName: System.Numerics.IDivisionOperators<TSelf, TOther, TResult>
+  nameWithType.vb: IDivisionOperators(Of TSelf, TOther, TResult)
+  fullName.vb: System.Numerics.IDivisionOperators(Of TSelf, TOther, TResult)
+  name.vb: IDivisionOperators(Of TSelf, TOther, TResult)
+  spec.csharp:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.IDivisionOperators`3
+    name: IDivisionOperators
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Graphics.Rect
+  commentId: T:Beutl.Graphics.Rect
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: Beutl.Graphics.Rect
+- uid: Beutl.Graphics.Rect.#ctor*
+  commentId: Overload:Beutl.Graphics.Rect.#ctor
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect__ctor_System_Single_System_Single_System_Single_System_Single_
+  name: Rect
+  nameWithType: Rect.Rect
+  fullName: Beutl.Graphics.Rect.Rect
+  nameWithType.vb: Rect.New
+  fullName.vb: Beutl.Graphics.Rect.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Graphics.Size
+  commentId: T:Beutl.Graphics.Size
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Size.html
+  name: Size
+  nameWithType: Size
+  fullName: Beutl.Graphics.Size
+- uid: Beutl.Graphics.Point
+  commentId: T:Beutl.Graphics.Point
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Point.html
+  name: Point
+  nameWithType: Point
+  fullName: Beutl.Graphics.Point
+- uid: Beutl.Graphics.Rect.op_Equality*
+  commentId: Overload:Beutl.Graphics.Rect.op_Equality
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Equality_Beutl_Graphics_Rect_Beutl_Graphics_Rect_
+  name: operator ==
+  nameWithType: Rect.operator ==
+  fullName: Beutl.Graphics.Rect.operator ==
+  nameWithType.vb: Rect.=
+  fullName.vb: Beutl.Graphics.Rect.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Rect.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Equality_Beutl_Graphics_Rect_Beutl_Graphics_Rect_
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  parent: System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(Rect, Rect)
+  nameWithType: IEqualityOperators<Rect, Rect, bool>.operator ==(Rect, Rect)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.Rect, Beutl.Graphics.Rect, bool>.operator ==(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  nameWithType.vb: IEqualityOperators(Of Rect, Rect, Boolean).=(Rect, Rect)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.Rect, Beutl.Graphics.Rect, Boolean).=(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  name.vb: =(Rect, Rect)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Equality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  name: operator ==(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator ==(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).=(TSelf, TOther)
+  name.vb: =(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Equality(`0,`1)
+    name: ==
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_equality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: =
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Rect.op_Inequality*
+  commentId: Overload:Beutl.Graphics.Rect.op_Inequality
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Inequality_Beutl_Graphics_Rect_Beutl_Graphics_Rect_
+  name: operator !=
+  nameWithType: Rect.operator !=
+  fullName: Beutl.Graphics.Rect.operator !=
+  nameWithType.vb: Rect.<>
+  fullName.vb: Beutl.Graphics.Rect.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Rect.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Inequality_Beutl_Graphics_Rect_Beutl_Graphics_Rect_
+- uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  commentId: M:System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+  parent: System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}
+  definition: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(Rect, Rect)
+  nameWithType: IEqualityOperators<Rect, Rect, bool>.operator !=(Rect, Rect)
+  fullName: System.Numerics.IEqualityOperators<Beutl.Graphics.Rect, Beutl.Graphics.Rect, bool>.operator !=(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  nameWithType.vb: IEqualityOperators(Of Rect, Rect, Boolean).<>(Rect, Rect)
+  fullName.vb: System.Numerics.IEqualityOperators(Of Beutl.Graphics.Rect, Beutl.Graphics.Rect, Boolean).<>(Beutl.Graphics.Rect, Beutl.Graphics.Rect)
+  name.vb: <>(Rect, Rect)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators{Beutl.Graphics.Rect,Beutl.Graphics.Rect,System.Boolean}.op_Inequality(Beutl.Graphics.Rect,Beutl.Graphics.Rect)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  commentId: M:System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  name: operator !=(TSelf, TOther)
+  nameWithType: IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  fullName: System.Numerics.IEqualityOperators<TSelf, TOther, TResult>.operator !=(TSelf, TOther)
+  nameWithType.vb: IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  fullName.vb: System.Numerics.IEqualityOperators(Of TSelf, TOther, TResult).<>(TSelf, TOther)
+  name.vb: <>(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IEqualityOperators`3.op_Inequality(`0,`1)
+    name: '!='
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3.op_inequality
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: <>
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Rect.op_Multiply*
+  commentId: Overload:Beutl.Graphics.Rect.op_Multiply
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Multiply_Beutl_Graphics_Rect_Beutl_Graphics_Vector_
+  name: operator *
+  nameWithType: Rect.operator *
+  fullName: Beutl.Graphics.Rect.operator *
+  nameWithType.vb: Rect.*
+  fullName.vb: Beutl.Graphics.Rect.*
+  name.vb: '*'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Rect.op_Multiply*
+    name: '*'
+    isExternal: true
+    href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Multiply_Beutl_Graphics_Rect_Beutl_Graphics_Vector_
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  commentId: M:System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  parent: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  definition: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(Rect, Vector)
+  nameWithType: IMultiplyOperators<Rect, Vector, Rect>.operator *(Rect, Vector)
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect>.operator *(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  nameWithType.vb: IMultiplyOperators(Of Rect, Vector, Rect).*(Rect, Vector)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect).*(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  name.vb: '*(Rect, Vector)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+- uid: Beutl.Graphics.Vector
+  commentId: T:Beutl.Graphics.Vector
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: Beutl.Graphics.Vector
+- uid: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  commentId: M:System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(TSelf, TOther)
+  nameWithType: IMultiplyOperators<TSelf, TOther, TResult>.operator *(TSelf, TOther)
+  fullName: System.Numerics.IMultiplyOperators<TSelf, TOther, TResult>.operator *(TSelf, TOther)
+  nameWithType.vb: IMultiplyOperators(Of TSelf, TOther, TResult).*(TSelf, TOther)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of TSelf, TOther, TResult).*(TSelf, TOther)
+  name.vb: '*(TSelf, TOther)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,System.Single)
+  commentId: M:System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,System.Single)
+  parent: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}
+  definition: System.Numerics.IMultiplyOperators`3.op_Multiply(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  name: operator *(Rect, float)
+  nameWithType: IMultiplyOperators<Rect, float, Rect>.operator *(Rect, float)
+  fullName: System.Numerics.IMultiplyOperators<Beutl.Graphics.Rect, float, Beutl.Graphics.Rect>.operator *(Beutl.Graphics.Rect, float)
+  nameWithType.vb: IMultiplyOperators(Of Rect, Single, Rect).*(Rect, Single)
+  fullName.vb: System.Numerics.IMultiplyOperators(Of Beutl.Graphics.Rect, Single, Beutl.Graphics.Rect).*(Beutl.Graphics.Rect, Single)
+  name.vb: '*(Rect, Single)'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IMultiplyOperators{Beutl.Graphics.Rect,System.Single,Beutl.Graphics.Rect}.op_Multiply(Beutl.Graphics.Rect,System.Single)
+    name: '*'
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3.op_multiply
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - name: '*'
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: Beutl.Graphics.Rect.op_Division*
+  commentId: Overload:Beutl.Graphics.Rect.op_Division
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Division_Beutl_Graphics_Rect_Beutl_Graphics_Vector_
+  name: operator /
+  nameWithType: Rect.operator /
+  fullName: Beutl.Graphics.Rect.operator /
+  nameWithType.vb: Rect./
+  fullName.vb: Beutl.Graphics.Rect./
+  name.vb: /
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Graphics.Rect.op_Division*
+    name: /
+    isExternal: true
+    href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_op_Division_Beutl_Graphics_Rect_Beutl_Graphics_Vector_
+- uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  commentId: M:System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+  parent: System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}
+  definition: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  name: operator /(Rect, Vector)
+  nameWithType: IDivisionOperators<Rect, Vector, Rect>.operator /(Rect, Vector)
+  fullName: System.Numerics.IDivisionOperators<Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect>.operator /(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  nameWithType.vb: IDivisionOperators(Of Rect, Vector, Rect)./(Rect, Vector)
+  fullName.vb: System.Numerics.IDivisionOperators(Of Beutl.Graphics.Rect, Beutl.Graphics.Vector, Beutl.Graphics.Rect)./(Beutl.Graphics.Rect, Beutl.Graphics.Vector)
+  name.vb: /(Rect, Vector)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IDivisionOperators{Beutl.Graphics.Rect,Beutl.Graphics.Vector,Beutl.Graphics.Rect}.op_Division(Beutl.Graphics.Rect,Beutl.Graphics.Vector)
+    name: /
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+  spec.vb:
+  - name: /
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Vector
+    name: Vector
+    isExternal: true
+    href: Beutl.Graphics.Vector.html
+  - name: )
+- uid: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  commentId: M:System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  name: operator /(TSelf, TOther)
+  nameWithType: IDivisionOperators<TSelf, TOther, TResult>.operator /(TSelf, TOther)
+  fullName: System.Numerics.IDivisionOperators<TSelf, TOther, TResult>.operator /(TSelf, TOther)
+  nameWithType.vb: IDivisionOperators(Of TSelf, TOther, TResult)./(TSelf, TOther)
+  fullName.vb: System.Numerics.IDivisionOperators(Of TSelf, TOther, TResult)./(TSelf, TOther)
+  name.vb: /(TSelf, TOther)
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: System.Numerics.IDivisionOperators`3.op_Division(`0,`1)
+    name: /
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3.op_division
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+  spec.vb:
+  - name: /
+  - name: (
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TOther
+  - name: )
+- uid: Beutl.Graphics.Rect.Contains*
+  commentId: Overload:Beutl.Graphics.Rect.Contains
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Contains_Beutl_Graphics_Point_
+  name: Contains
+  nameWithType: Rect.Contains
+  fullName: Beutl.Graphics.Rect.Contains
+- uid: Beutl.Graphics.Rect.ContainsExclusive*
+  commentId: Overload:Beutl.Graphics.Rect.ContainsExclusive
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_ContainsExclusive_Beutl_Graphics_Point_
+  name: ContainsExclusive
+  nameWithType: Rect.ContainsExclusive
+  fullName: Beutl.Graphics.Rect.ContainsExclusive
+- uid: Beutl.Graphics.Rect.CenterRect*
+  commentId: Overload:Beutl.Graphics.Rect.CenterRect
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_CenterRect_Beutl_Graphics_Rect_
+  name: CenterRect
+  nameWithType: Rect.CenterRect
+  fullName: Beutl.Graphics.Rect.CenterRect
+- uid: Beutl.Graphics.Rect.Inflate*
+  commentId: Overload:Beutl.Graphics.Rect.Inflate
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Inflate_System_Single_
+  name: Inflate
+  nameWithType: Rect.Inflate
+  fullName: Beutl.Graphics.Rect.Inflate
+- uid: Beutl.Graphics.Thickness
+  commentId: T:Beutl.Graphics.Thickness
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Thickness.html
+  name: Thickness
+  nameWithType: Thickness
+  fullName: Beutl.Graphics.Thickness
+- uid: Beutl.Graphics.Rect.Deflate*
+  commentId: Overload:Beutl.Graphics.Rect.Deflate
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Deflate_System_Single_
+  name: Deflate
+  nameWithType: Rect.Deflate
+  fullName: Beutl.Graphics.Rect.Deflate
+- uid: Beutl.Graphics.Rect.Equals*
+  commentId: Overload:Beutl.Graphics.Rect.Equals
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Equals_Beutl_Graphics_Rect_
+  name: Equals
+  nameWithType: Rect.Equals
+  fullName: Beutl.Graphics.Rect.Equals
+- uid: System.IEquatable{Beutl.Graphics.Rect}.Equals(Beutl.Graphics.Rect)
+  commentId: M:System.IEquatable{Beutl.Graphics.Rect}.Equals(Beutl.Graphics.Rect)
+  parent: System.IEquatable{Beutl.Graphics.Rect}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Rect)
+  nameWithType: IEquatable<Rect>.Equals(Rect)
+  fullName: System.IEquatable<Beutl.Graphics.Rect>.Equals(Beutl.Graphics.Rect)
+  nameWithType.vb: IEquatable(Of Rect).Equals(Rect)
+  fullName.vb: System.IEquatable(Of Beutl.Graphics.Rect).Equals(Beutl.Graphics.Rect)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Graphics.Rect}.Equals(Beutl.Graphics.Rect)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Graphics.Rect}.Equals(Beutl.Graphics.Rect)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.Rect.GetHashCode*
+  commentId: Overload:Beutl.Graphics.Rect.GetHashCode
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_GetHashCode
+  name: GetHashCode
+  nameWithType: Rect.GetHashCode
+  fullName: Beutl.Graphics.Rect.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Graphics.Rect.Intersect*
+  commentId: Overload:Beutl.Graphics.Rect.Intersect
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Intersect_Beutl_Graphics_Rect_
+  name: Intersect
+  nameWithType: Rect.Intersect
+  fullName: Beutl.Graphics.Rect.Intersect
+- uid: Beutl.Graphics.Rect.Intersects*
+  commentId: Overload:Beutl.Graphics.Rect.Intersects
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Intersects_Beutl_Graphics_Rect_
+  name: Intersects
+  nameWithType: Rect.Intersects
+  fullName: Beutl.Graphics.Rect.Intersects
+- uid: Beutl.Graphics.Rect.TransformToAABB*
+  commentId: Overload:Beutl.Graphics.Rect.TransformToAABB
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_TransformToAABB_Beutl_Graphics_Matrix_
+  name: TransformToAABB
+  nameWithType: Rect.TransformToAABB
+  fullName: Beutl.Graphics.Rect.TransformToAABB
+- uid: Beutl.Graphics.Matrix
+  commentId: T:Beutl.Graphics.Matrix
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Beutl.Graphics.Matrix
+- uid: Beutl.Graphics.Rect.Translate*
+  commentId: Overload:Beutl.Graphics.Rect.Translate
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Translate_Beutl_Graphics_Vector_
+  name: Translate
+  nameWithType: Rect.Translate
+  fullName: Beutl.Graphics.Rect.Translate
+- uid: Beutl.Graphics.Rect.Normalize*
+  commentId: Overload:Beutl.Graphics.Rect.Normalize
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Normalize
+  name: Normalize
+  nameWithType: Rect.Normalize
+  fullName: Beutl.Graphics.Rect.Normalize
+- uid: Beutl.Graphics.Rect.Union*
+  commentId: Overload:Beutl.Graphics.Rect.Union
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Union_Beutl_Graphics_Rect_
+  name: Union
+  nameWithType: Rect.Union
+  fullName: Beutl.Graphics.Rect.Union
+- uid: Beutl.Graphics.Rect.WithX*
+  commentId: Overload:Beutl.Graphics.Rect.WithX
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_WithX_System_Single_
+  name: WithX
+  nameWithType: Rect.WithX
+  fullName: Beutl.Graphics.Rect.WithX
+- uid: Beutl.Graphics.Rect.WithY*
+  commentId: Overload:Beutl.Graphics.Rect.WithY
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_WithY_System_Single_
+  name: WithY
+  nameWithType: Rect.WithY
+  fullName: Beutl.Graphics.Rect.WithY
+- uid: Beutl.Graphics.Rect.WithWidth*
+  commentId: Overload:Beutl.Graphics.Rect.WithWidth
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_WithWidth_System_Single_
+  name: WithWidth
+  nameWithType: Rect.WithWidth
+  fullName: Beutl.Graphics.Rect.WithWidth
+- uid: Beutl.Graphics.Rect.WithHeight*
+  commentId: Overload:Beutl.Graphics.Rect.WithHeight
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_WithHeight_System_Single_
+  name: WithHeight
+  nameWithType: Rect.WithHeight
+  fullName: Beutl.Graphics.Rect.WithHeight
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Graphics.Rect.ToString*
+  commentId: Overload:Beutl.Graphics.Rect.ToString
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_ToString
+  name: ToString
+  nameWithType: Rect.ToString
+  fullName: Beutl.Graphics.Rect.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Graphics.Rect.TryParse*
+  commentId: Overload:Beutl.Graphics.Rect.TryParse
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_TryParse_System_String_Beutl_Graphics_Rect__
+  name: TryParse
+  nameWithType: Rect.TryParse
+  fullName: Beutl.Graphics.Rect.TryParse
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.Rect.Parse*
+  commentId: Overload:Beutl.Graphics.Rect.Parse
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Parse_System_String_
+  name: Parse
+  nameWithType: Rect.Parse
+  fullName: Beutl.Graphics.Rect.Parse
+- uid: System.IParsable{Beutl.Graphics.Rect}.Parse(System.String,System.IFormatProvider)
+  commentId: M:System.IParsable{Beutl.Graphics.Rect}.Parse(System.String,System.IFormatProvider)
+  parent: System.IParsable{Beutl.Graphics.Rect}
+  definition: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  name: Parse(string, IFormatProvider)
+  nameWithType: IParsable<Rect>.Parse(string, IFormatProvider)
+  fullName: System.IParsable<Beutl.Graphics.Rect>.Parse(string, System.IFormatProvider)
+  nameWithType.vb: IParsable(Of Rect).Parse(String, IFormatProvider)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.Rect).Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IParsable{Beutl.Graphics.Rect}.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IParsable{Beutl.Graphics.Rect}.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  commentId: M:System.IParsable`1.Parse(System.String,System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  name: Parse(string, IFormatProvider)
+  nameWithType: IParsable<TSelf>.Parse(string, IFormatProvider)
+  fullName: System.IParsable<TSelf>.Parse(string, System.IFormatProvider)
+  nameWithType.vb: IParsable(Of TSelf).Parse(String, IFormatProvider)
+  fullName.vb: System.IParsable(Of TSelf).Parse(String, System.IFormatProvider)
+  name.vb: Parse(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IParsable`1.Parse(System.String,System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.parse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IParsable{Beutl.Graphics.Rect}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+  commentId: M:System.IParsable{Beutl.Graphics.Rect}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+  parent: System.IParsable{Beutl.Graphics.Rect}
+  definition: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  name: TryParse(string, IFormatProvider, out Rect)
+  nameWithType: IParsable<Rect>.TryParse(string, IFormatProvider, out Rect)
+  fullName: System.IParsable<Beutl.Graphics.Rect>.TryParse(string, System.IFormatProvider, out Beutl.Graphics.Rect)
+  nameWithType.vb: IParsable(Of Rect).TryParse(String, IFormatProvider, Rect)
+  fullName.vb: System.IParsable(Of Beutl.Graphics.Rect).TryParse(String, System.IFormatProvider, Beutl.Graphics.Rect)
+  name.vb: TryParse(String, IFormatProvider, Rect)
+  spec.csharp:
+  - uid: System.IParsable{Beutl.Graphics.Rect}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+  spec.vb:
+  - uid: System.IParsable{Beutl.Graphics.Rect}.TryParse(System.String,System.IFormatProvider,Beutl.Graphics.Rect@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  commentId: M:System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  name: TryParse(string, IFormatProvider, out TSelf)
+  nameWithType: IParsable<TSelf>.TryParse(string, IFormatProvider, out TSelf)
+  fullName: System.IParsable<TSelf>.TryParse(string, System.IFormatProvider, out TSelf)
+  nameWithType.vb: IParsable(Of TSelf).TryParse(String, IFormatProvider, TSelf)
+  fullName.vb: System.IParsable(Of TSelf).TryParse(String, System.IFormatProvider, TSelf)
+  name.vb: TryParse(String, IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.IParsable`1.TryParse(System.String,System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iparsable-1.tryparse
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.ISpanParsable{Beutl.Graphics.Rect}
+  definition: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  name: Parse(ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanParsable<Rect>.Parse(ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanParsable<Beutl.Graphics.Rect>.Parse(System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanParsable(Of Rect).Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.Rect).Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  name: Parse(ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanParsable<TSelf>.Parse(ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanParsable<TSelf>.Parse(System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanParsable(Of TSelf).Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanParsable(Of TSelf).Parse(System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable`1.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ISpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+  commentId: M:System.ISpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+  parent: System.ISpanParsable{Beutl.Graphics.Rect}
+  definition: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider, out Rect)
+  nameWithType: ISpanParsable<Rect>.TryParse(ReadOnlySpan<char>, IFormatProvider, out Rect)
+  fullName: System.ISpanParsable<Beutl.Graphics.Rect>.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider, out Beutl.Graphics.Rect)
+  nameWithType.vb: ISpanParsable(Of Rect).TryParse(ReadOnlySpan(Of Char), IFormatProvider, Rect)
+  fullName.vb: System.ISpanParsable(Of Beutl.Graphics.Rect).TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, Beutl.Graphics.Rect)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, Rect)
+  spec.csharp:
+  - uid: System.ISpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Beutl.Graphics.Rect@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  commentId: M:System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<char>, IFormatProvider, out TSelf)
+  nameWithType: ISpanParsable<TSelf>.TryParse(ReadOnlySpan<char>, IFormatProvider, out TSelf)
+  fullName: System.ISpanParsable<TSelf>.TryParse(System.ReadOnlySpan<char>, System.IFormatProvider, out TSelf)
+  nameWithType.vb: ISpanParsable(Of TSelf).TryParse(ReadOnlySpan(Of Char), IFormatProvider, TSelf)
+  fullName.vb: System.ISpanParsable(Of TSelf).TryParse(System.ReadOnlySpan(Of Char), System.IFormatProvider, TSelf)
+  name.vb: TryParse(ReadOnlySpan(Of Char), IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.ISpanParsable`1.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: Beutl.Graphics.Rect.TryFormat*
+  commentId: Overload:Beutl.Graphics.Rect.TryFormat
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__System_IFormatProvider_
+  name: TryFormat
+  nameWithType: Rect.TryFormat
+  fullName: Beutl.Graphics.Rect.TryFormat
+- uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.ISpanFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  name: TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: ISpanFormattable.TryFormat(Span<char>, out int, ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.ISpanFormattable.TryFormat(System.Span<char>, out int, System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: ISpanFormattable.TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.ISpanFormattable.TryFormat(System.Span(Of Char), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Char), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.ISpanFormattable.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.ispanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.Span{System.Char}
+  commentId: T:System.Span{System.Char}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<char>
+  nameWithType: Span<char>
+  fullName: System.Span<char>
+  nameWithType.vb: Span(Of Char)
+  fullName.vb: System.Span(Of Char)
+  name.vb: Span(Of Char)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+  commentId: M:System.IFormattable.ToString(System.String,System.IFormatProvider)
+  parent: System.IFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  name: ToString(string, IFormatProvider)
+  nameWithType: IFormattable.ToString(string, IFormatProvider)
+  fullName: System.IFormattable.ToString(string, System.IFormatProvider)
+  nameWithType.vb: IFormattable.ToString(String, IFormatProvider)
+  fullName.vb: System.IFormattable.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  parent: System.IUtf8SpanParsable{Beutl.Graphics.Rect}
+  definition: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider)
+  nameWithType: IUtf8SpanParsable<Rect>.Parse(ReadOnlySpan<byte>, IFormatProvider)
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.Rect>.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanParsable(Of Rect).Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.Rect).Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Rect}.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  name: Parse(ReadOnlySpan<byte>, IFormatProvider)
+  nameWithType: IUtf8SpanParsable<TSelf>.Parse(ReadOnlySpan<byte>, IFormatProvider)
+  fullName: System.IUtf8SpanParsable<TSelf>.Parse(System.ReadOnlySpan<byte>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf).Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf).Parse(System.ReadOnlySpan(Of Byte), System.IFormatProvider)
+  name.vb: Parse(ReadOnlySpan(Of Byte), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1.Parse(System.ReadOnlySpan{System.Byte},System.IFormatProvider)
+    name: Parse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.parse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IUtf8SpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+  commentId: M:System.IUtf8SpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+  parent: System.IUtf8SpanParsable{Beutl.Graphics.Rect}
+  definition: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider, out Rect)
+  nameWithType: IUtf8SpanParsable<Rect>.TryParse(ReadOnlySpan<byte>, IFormatProvider, out Rect)
+  fullName: System.IUtf8SpanParsable<Beutl.Graphics.Rect>.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider, out Beutl.Graphics.Rect)
+  nameWithType.vb: IUtf8SpanParsable(Of Rect).TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Rect)
+  fullName.vb: System.IUtf8SpanParsable(Of Beutl.Graphics.Rect).TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, Beutl.Graphics.Rect)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, Rect)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable{Beutl.Graphics.Rect}.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,Beutl.Graphics.Rect@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Rect
+    name: Rect
+    isExternal: true
+    href: Beutl.Graphics.Rect.html
+  - name: )
+- uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  commentId: M:System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  name: TryParse(ReadOnlySpan<byte>, IFormatProvider, out TSelf)
+  nameWithType: IUtf8SpanParsable<TSelf>.TryParse(ReadOnlySpan<byte>, IFormatProvider, out TSelf)
+  fullName: System.IUtf8SpanParsable<TSelf>.TryParse(System.ReadOnlySpan<byte>, System.IFormatProvider, out TSelf)
+  nameWithType.vb: IUtf8SpanParsable(Of TSelf).TryParse(ReadOnlySpan(Of Byte), IFormatProvider, TSelf)
+  fullName.vb: System.IUtf8SpanParsable(Of TSelf).TryParse(System.ReadOnlySpan(Of Byte), System.IFormatProvider, TSelf)
+  name.vb: TryParse(ReadOnlySpan(Of Byte), IFormatProvider, TSelf)
+  spec.csharp:
+  - uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TSelf
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanParsable`1.TryParse(System.ReadOnlySpan{System.Byte},System.IFormatProvider,`0@)
+    name: TryParse
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1.tryparse
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: ','
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  commentId: M:System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+  parent: System.IUtf8SpanFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  name: TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider)
+  nameWithType: IUtf8SpanFormattable.TryFormat(Span<byte>, out int, ReadOnlySpan<char>, IFormatProvider)
+  fullName: System.IUtf8SpanFormattable.TryFormat(System.Span<byte>, out int, System.ReadOnlySpan<char>, System.IFormatProvider)
+  nameWithType.vb: IUtf8SpanFormattable.TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  fullName.vb: System.IUtf8SpanFormattable.TryFormat(System.Span(Of Byte), Integer, System.ReadOnlySpan(Of Char), System.IFormatProvider)
+  name.vb: TryFormat(Span(Of Byte), Integer, ReadOnlySpan(Of Char), IFormatProvider)
+  spec.csharp:
+  - uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IUtf8SpanFormattable.TryFormat(System.Span{System.Byte},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)
+    name: TryFormat
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable.tryformat
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: Beutl.Graphics.Rect.X*
+  commentId: Overload:Beutl.Graphics.Rect.X
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_X
+  name: X
+  nameWithType: Rect.X
+  fullName: Beutl.Graphics.Rect.X
+- uid: Beutl.Graphics.Rect.Y*
+  commentId: Overload:Beutl.Graphics.Rect.Y
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Y
+  name: Y
+  nameWithType: Rect.Y
+  fullName: Beutl.Graphics.Rect.Y
+- uid: Beutl.Graphics.Rect.Width*
+  commentId: Overload:Beutl.Graphics.Rect.Width
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Width
+  name: Width
+  nameWithType: Rect.Width
+  fullName: Beutl.Graphics.Rect.Width
+- uid: Beutl.Graphics.Rect.Height*
+  commentId: Overload:Beutl.Graphics.Rect.Height
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Height
+  name: Height
+  nameWithType: Rect.Height
+  fullName: Beutl.Graphics.Rect.Height
+- uid: Beutl.Graphics.Rect.Position*
+  commentId: Overload:Beutl.Graphics.Rect.Position
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Position
+  name: Position
+  nameWithType: Rect.Position
+  fullName: Beutl.Graphics.Rect.Position
+- uid: Beutl.Graphics.Rect.Size*
+  commentId: Overload:Beutl.Graphics.Rect.Size
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Size
+  name: Size
+  nameWithType: Rect.Size
+  fullName: Beutl.Graphics.Rect.Size
+- uid: Beutl.Graphics.Rect.Right*
+  commentId: Overload:Beutl.Graphics.Rect.Right
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Right
+  name: Right
+  nameWithType: Rect.Right
+  fullName: Beutl.Graphics.Rect.Right
+- uid: Beutl.Graphics.Rect.Bottom*
+  commentId: Overload:Beutl.Graphics.Rect.Bottom
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Bottom
+  name: Bottom
+  nameWithType: Rect.Bottom
+  fullName: Beutl.Graphics.Rect.Bottom
+- uid: Beutl.Graphics.Rect.Left*
+  commentId: Overload:Beutl.Graphics.Rect.Left
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Left
+  name: Left
+  nameWithType: Rect.Left
+  fullName: Beutl.Graphics.Rect.Left
+- uid: Beutl.Graphics.Rect.Top*
+  commentId: Overload:Beutl.Graphics.Rect.Top
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Top
+  name: Top
+  nameWithType: Rect.Top
+  fullName: Beutl.Graphics.Rect.Top
+- uid: Beutl.Graphics.Rect.TopLeft*
+  commentId: Overload:Beutl.Graphics.Rect.TopLeft
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_TopLeft
+  name: TopLeft
+  nameWithType: Rect.TopLeft
+  fullName: Beutl.Graphics.Rect.TopLeft
+- uid: Beutl.Graphics.Rect.TopRight*
+  commentId: Overload:Beutl.Graphics.Rect.TopRight
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_TopRight
+  name: TopRight
+  nameWithType: Rect.TopRight
+  fullName: Beutl.Graphics.Rect.TopRight
+- uid: Beutl.Graphics.Rect.BottomLeft*
+  commentId: Overload:Beutl.Graphics.Rect.BottomLeft
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_BottomLeft
+  name: BottomLeft
+  nameWithType: Rect.BottomLeft
+  fullName: Beutl.Graphics.Rect.BottomLeft
+- uid: Beutl.Graphics.Rect.BottomRight*
+  commentId: Overload:Beutl.Graphics.Rect.BottomRight
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_BottomRight
+  name: BottomRight
+  nameWithType: Rect.BottomRight
+  fullName: Beutl.Graphics.Rect.BottomRight
+- uid: Beutl.Graphics.Rect.Center*
+  commentId: Overload:Beutl.Graphics.Rect.Center
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_Center
+  name: Center
+  nameWithType: Rect.Center
+  fullName: Beutl.Graphics.Rect.Center
+- uid: Beutl.Graphics.Rect.IsEmpty*
+  commentId: Overload:Beutl.Graphics.Rect.IsEmpty
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_IsEmpty
+  name: IsEmpty
+  nameWithType: Rect.IsEmpty
+  fullName: Beutl.Graphics.Rect.IsEmpty
+- uid: Beutl.Graphics.Rect.IsInvalid*
+  commentId: Overload:Beutl.Graphics.Rect.IsInvalid
+  isExternal: true
+  href: Beutl.Graphics.Rect.html#Beutl_Graphics_Rect_IsInvalid
+  name: IsInvalid
+  nameWithType: Rect.IsInvalid
+  fullName: Beutl.Graphics.Rect.IsInvalid

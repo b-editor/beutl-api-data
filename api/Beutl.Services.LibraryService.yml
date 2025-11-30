@@ -1,0 +1,907 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Services.LibraryService
+  commentId: T:Beutl.Services.LibraryService
+  id: LibraryService
+  parent: Beutl.Services
+  children:
+  - Beutl.Services.LibraryService.#ctor
+  - Beutl.Services.LibraryService.AddMultiple(System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  - Beutl.Services.LibraryService.AddMultiple(System.String,System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  - Beutl.Services.LibraryService.Current
+  - Beutl.Services.LibraryService.FindItem(System.Type)
+  - Beutl.Services.LibraryService.GetTypesFromFormat(System.String)
+  - Beutl.Services.LibraryService.Items
+  - Beutl.Services.LibraryService.RegisterGroup(System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  - Beutl.Services.LibraryService.RegisterGroup(System.String,System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  - Beutl.Services.LibraryService.Register``1(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: LibraryService
+  nameWithType: LibraryService
+  fullName: Beutl.Services.LibraryService
+  type: Class
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public sealed class LibraryService
+    content.vb: Public NotInheritable Class LibraryService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Beutl.Services.LibraryService.GetTypesFromFormat(System.String)
+  commentId: M:Beutl.Services.LibraryService.GetTypesFromFormat(System.String)
+  id: GetTypesFromFormat(System.String)
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: GetTypesFromFormat(string)
+  nameWithType: LibraryService.GetTypesFromFormat(string)
+  fullName: Beutl.Services.LibraryService.GetTypesFromFormat(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public IReadOnlySet<Type> GetTypesFromFormat(string format)
+    parameters:
+    - id: format
+      type: System.String
+    return:
+      type: System.Collections.Generic.IReadOnlySet{System.Type}
+    content.vb: Public Function GetTypesFromFormat(format As String) As IReadOnlySet(Of Type)
+  overload: Beutl.Services.LibraryService.GetTypesFromFormat*
+  nameWithType.vb: LibraryService.GetTypesFromFormat(String)
+  fullName.vb: Beutl.Services.LibraryService.GetTypesFromFormat(String)
+  name.vb: GetTypesFromFormat(String)
+- uid: Beutl.Services.LibraryService.Register``1(System.String,System.String,System.String)
+  commentId: M:Beutl.Services.LibraryService.Register``1(System.String,System.String,System.String)
+  id: Register``1(System.String,System.String,System.String)
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: Register<T>(string, string, string?)
+  nameWithType: LibraryService.Register<T>(string, string, string?)
+  fullName: Beutl.Services.LibraryService.Register<T>(string, string, string?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public void Register<T>(string format, string displayName, string? description = null)
+    parameters:
+    - id: format
+      type: System.String
+    - id: displayName
+      type: System.String
+    - id: description
+      type: System.String
+    typeParameters:
+    - id: T
+    content.vb: Public Sub Register(Of T)(format As String, displayName As String, description As String = Nothing)
+  overload: Beutl.Services.LibraryService.Register*
+  nameWithType.vb: LibraryService.Register(Of T)(String, String, String)
+  fullName.vb: Beutl.Services.LibraryService.Register(Of T)(String, String, String)
+  name.vb: Register(Of T)(String, String, String)
+- uid: Beutl.Services.LibraryService.AddMultiple(System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  commentId: M:Beutl.Services.LibraryService.AddMultiple(System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  id: AddMultiple(System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: AddMultiple(string, Action<MultipleTypeLibraryItem>)
+  nameWithType: LibraryService.AddMultiple(string, Action<MultipleTypeLibraryItem>)
+  fullName: Beutl.Services.LibraryService.AddMultiple(string, System.Action<Beutl.Services.MultipleTypeLibraryItem>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public void AddMultiple(string displayName, Action<MultipleTypeLibraryItem> action)
+    parameters:
+    - id: displayName
+      type: System.String
+    - id: action
+      type: System.Action{Beutl.Services.MultipleTypeLibraryItem}
+    content.vb: Public Sub AddMultiple(displayName As String, action As Action(Of MultipleTypeLibraryItem))
+  overload: Beutl.Services.LibraryService.AddMultiple*
+  nameWithType.vb: LibraryService.AddMultiple(String, Action(Of MultipleTypeLibraryItem))
+  fullName.vb: Beutl.Services.LibraryService.AddMultiple(String, System.Action(Of Beutl.Services.MultipleTypeLibraryItem))
+  name.vb: AddMultiple(String, Action(Of MultipleTypeLibraryItem))
+- uid: Beutl.Services.LibraryService.AddMultiple(System.String,System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  commentId: M:Beutl.Services.LibraryService.AddMultiple(System.String,System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  id: AddMultiple(System.String,System.String,System.Action{Beutl.Services.MultipleTypeLibraryItem})
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: AddMultiple(string, string?, Action<MultipleTypeLibraryItem>)
+  nameWithType: LibraryService.AddMultiple(string, string?, Action<MultipleTypeLibraryItem>)
+  fullName: Beutl.Services.LibraryService.AddMultiple(string, string?, System.Action<Beutl.Services.MultipleTypeLibraryItem>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public void AddMultiple(string displayName, string? description, Action<MultipleTypeLibraryItem> action)
+    parameters:
+    - id: displayName
+      type: System.String
+    - id: description
+      type: System.String
+    - id: action
+      type: System.Action{Beutl.Services.MultipleTypeLibraryItem}
+    content.vb: Public Sub AddMultiple(displayName As String, description As String, action As Action(Of MultipleTypeLibraryItem))
+  overload: Beutl.Services.LibraryService.AddMultiple*
+  nameWithType.vb: LibraryService.AddMultiple(String, String, Action(Of MultipleTypeLibraryItem))
+  fullName.vb: Beutl.Services.LibraryService.AddMultiple(String, String, System.Action(Of Beutl.Services.MultipleTypeLibraryItem))
+  name.vb: AddMultiple(String, String, Action(Of MultipleTypeLibraryItem))
+- uid: Beutl.Services.LibraryService.RegisterGroup(System.String,System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  commentId: M:Beutl.Services.LibraryService.RegisterGroup(System.String,System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  id: RegisterGroup(System.String,System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: RegisterGroup(string, string?, Action<GroupLibraryItem>)
+  nameWithType: LibraryService.RegisterGroup(string, string?, Action<GroupLibraryItem>)
+  fullName: Beutl.Services.LibraryService.RegisterGroup(string, string?, System.Action<Beutl.Services.GroupLibraryItem>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public void RegisterGroup(string displayName, string? description, Action<GroupLibraryItem> action)
+    parameters:
+    - id: displayName
+      type: System.String
+    - id: description
+      type: System.String
+    - id: action
+      type: System.Action{Beutl.Services.GroupLibraryItem}
+    content.vb: Public Sub RegisterGroup(displayName As String, description As String, action As Action(Of GroupLibraryItem))
+  overload: Beutl.Services.LibraryService.RegisterGroup*
+  nameWithType.vb: LibraryService.RegisterGroup(String, String, Action(Of GroupLibraryItem))
+  fullName.vb: Beutl.Services.LibraryService.RegisterGroup(String, String, System.Action(Of Beutl.Services.GroupLibraryItem))
+  name.vb: RegisterGroup(String, String, Action(Of GroupLibraryItem))
+- uid: Beutl.Services.LibraryService.RegisterGroup(System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  commentId: M:Beutl.Services.LibraryService.RegisterGroup(System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  id: RegisterGroup(System.String,System.Action{Beutl.Services.GroupLibraryItem})
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: RegisterGroup(string, Action<GroupLibraryItem>)
+  nameWithType: LibraryService.RegisterGroup(string, Action<GroupLibraryItem>)
+  fullName: Beutl.Services.LibraryService.RegisterGroup(string, System.Action<Beutl.Services.GroupLibraryItem>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public void RegisterGroup(string displayName, Action<GroupLibraryItem> action)
+    parameters:
+    - id: displayName
+      type: System.String
+    - id: action
+      type: System.Action{Beutl.Services.GroupLibraryItem}
+    content.vb: Public Sub RegisterGroup(displayName As String, action As Action(Of GroupLibraryItem))
+  overload: Beutl.Services.LibraryService.RegisterGroup*
+  nameWithType.vb: LibraryService.RegisterGroup(String, Action(Of GroupLibraryItem))
+  fullName.vb: Beutl.Services.LibraryService.RegisterGroup(String, System.Action(Of Beutl.Services.GroupLibraryItem))
+  name.vb: RegisterGroup(String, Action(Of GroupLibraryItem))
+- uid: Beutl.Services.LibraryService.FindItem(System.Type)
+  commentId: M:Beutl.Services.LibraryService.FindItem(System.Type)
+  id: FindItem(System.Type)
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: FindItem(Type)
+  nameWithType: LibraryService.FindItem(Type)
+  fullName: Beutl.Services.LibraryService.FindItem(System.Type)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public LibraryItem? FindItem(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+    return:
+      type: Beutl.Services.LibraryItem
+    content.vb: Public Function FindItem(type As Type) As LibraryItem
+  overload: Beutl.Services.LibraryService.FindItem*
+- uid: Beutl.Services.LibraryService.#ctor
+  commentId: M:Beutl.Services.LibraryService.#ctor
+  id: '#ctor'
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: LibraryService()
+  nameWithType: LibraryService.LibraryService()
+  fullName: Beutl.Services.LibraryService.LibraryService()
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public LibraryService()
+    content.vb: Public Sub New()
+  overload: Beutl.Services.LibraryService.#ctor*
+  nameWithType.vb: LibraryService.New()
+  fullName.vb: Beutl.Services.LibraryService.New()
+  name.vb: New()
+- uid: Beutl.Services.LibraryService.Current
+  commentId: P:Beutl.Services.LibraryService.Current
+  id: Current
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: LibraryService.Current
+  fullName: Beutl.Services.LibraryService.Current
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public static LibraryService Current { get; }
+    parameters: []
+    return:
+      type: Beutl.Services.LibraryService
+    content.vb: Public Shared ReadOnly Property Current As LibraryService
+  overload: Beutl.Services.LibraryService.Current*
+- uid: Beutl.Services.LibraryService.Items
+  commentId: P:Beutl.Services.LibraryService.Items
+  id: Items
+  parent: Beutl.Services.LibraryService
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: LibraryService.Items
+  fullName: Beutl.Services.LibraryService.Items
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Services/LibraryService.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Services
+  syntax:
+    content: public IReadOnlyList<LibraryItem> Items { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Beutl.Services.LibraryItem}
+    content.vb: Public ReadOnly Property Items As IReadOnlyList(Of LibraryItem)
+  overload: Beutl.Services.LibraryService.Items*
+references:
+- uid: Beutl.Services
+  commentId: N:Beutl.Services
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Services
+  nameWithType: Beutl.Services
+  fullName: Beutl.Services
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Services
+    name: Services
+    isExternal: true
+    href: Beutl.Services.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Services
+    name: Services
+    isExternal: true
+    href: Beutl.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Services.LibraryService.GetTypesFromFormat*
+  commentId: Overload:Beutl.Services.LibraryService.GetTypesFromFormat
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService_GetTypesFromFormat_System_String_
+  name: GetTypesFromFormat
+  nameWithType: LibraryService.GetTypesFromFormat
+  fullName: Beutl.Services.LibraryService.GetTypesFromFormat
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.IReadOnlySet{System.Type}
+  commentId: T:System.Collections.Generic.IReadOnlySet{System.Type}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlySet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  name: IReadOnlySet<Type>
+  nameWithType: IReadOnlySet<Type>
+  fullName: System.Collections.Generic.IReadOnlySet<System.Type>
+  nameWithType.vb: IReadOnlySet(Of Type)
+  fullName.vb: System.Collections.Generic.IReadOnlySet(Of System.Type)
+  name.vb: IReadOnlySet(Of Type)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Collections.Generic.IReadOnlySet`1
+  commentId: T:System.Collections.Generic.IReadOnlySet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  name: IReadOnlySet<T>
+  nameWithType: IReadOnlySet<T>
+  fullName: System.Collections.Generic.IReadOnlySet<T>
+  nameWithType.vb: IReadOnlySet(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlySet(Of T)
+  name.vb: IReadOnlySet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlySet`1
+    name: IReadOnlySet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Beutl.Services.LibraryService.Register*
+  commentId: Overload:Beutl.Services.LibraryService.Register
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService_Register__1_System_String_System_String_System_String_
+  name: Register
+  nameWithType: LibraryService.Register
+  fullName: Beutl.Services.LibraryService.Register
+- uid: Beutl.Services.LibraryService.AddMultiple*
+  commentId: Overload:Beutl.Services.LibraryService.AddMultiple
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService_AddMultiple_System_String_System_Action_Beutl_Services_MultipleTypeLibraryItem__
+  name: AddMultiple
+  nameWithType: LibraryService.AddMultiple
+  fullName: Beutl.Services.LibraryService.AddMultiple
+- uid: System.Action{Beutl.Services.MultipleTypeLibraryItem}
+  commentId: T:System.Action{Beutl.Services.MultipleTypeLibraryItem}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<MultipleTypeLibraryItem>
+  nameWithType: Action<MultipleTypeLibraryItem>
+  fullName: System.Action<Beutl.Services.MultipleTypeLibraryItem>
+  nameWithType.vb: Action(Of MultipleTypeLibraryItem)
+  fullName.vb: System.Action(Of Beutl.Services.MultipleTypeLibraryItem)
+  name.vb: Action(Of MultipleTypeLibraryItem)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Beutl.Services.MultipleTypeLibraryItem
+    name: MultipleTypeLibraryItem
+    isExternal: true
+    href: Beutl.Services.MultipleTypeLibraryItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Services.MultipleTypeLibraryItem
+    name: MultipleTypeLibraryItem
+    isExternal: true
+    href: Beutl.Services.MultipleTypeLibraryItem.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Services.LibraryService.RegisterGroup*
+  commentId: Overload:Beutl.Services.LibraryService.RegisterGroup
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService_RegisterGroup_System_String_System_String_System_Action_Beutl_Services_GroupLibraryItem__
+  name: RegisterGroup
+  nameWithType: LibraryService.RegisterGroup
+  fullName: Beutl.Services.LibraryService.RegisterGroup
+- uid: System.Action{Beutl.Services.GroupLibraryItem}
+  commentId: T:System.Action{Beutl.Services.GroupLibraryItem}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<GroupLibraryItem>
+  nameWithType: Action<GroupLibraryItem>
+  fullName: System.Action<Beutl.Services.GroupLibraryItem>
+  nameWithType.vb: Action(Of GroupLibraryItem)
+  fullName.vb: System.Action(Of Beutl.Services.GroupLibraryItem)
+  name.vb: Action(Of GroupLibraryItem)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Beutl.Services.GroupLibraryItem
+    name: GroupLibraryItem
+    isExternal: true
+    href: Beutl.Services.GroupLibraryItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Services.GroupLibraryItem
+    name: GroupLibraryItem
+    isExternal: true
+    href: Beutl.Services.GroupLibraryItem.html
+  - name: )
+- uid: Beutl.Services.LibraryService.FindItem*
+  commentId: Overload:Beutl.Services.LibraryService.FindItem
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService_FindItem_System_Type_
+  name: FindItem
+  nameWithType: LibraryService.FindItem
+  fullName: Beutl.Services.LibraryService.FindItem
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Beutl.Services.LibraryItem
+  commentId: T:Beutl.Services.LibraryItem
+  parent: Beutl.Services
+  isExternal: true
+  href: Beutl.Services.LibraryItem.html
+  name: LibraryItem
+  nameWithType: LibraryItem
+  fullName: Beutl.Services.LibraryItem
+- uid: Beutl.Services.LibraryService.#ctor*
+  commentId: Overload:Beutl.Services.LibraryService.#ctor
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService__ctor
+  name: LibraryService
+  nameWithType: LibraryService.LibraryService
+  fullName: Beutl.Services.LibraryService.LibraryService
+  nameWithType.vb: LibraryService.New
+  fullName.vb: Beutl.Services.LibraryService.New
+  name.vb: New
+- uid: Beutl.Services.LibraryService.Current*
+  commentId: Overload:Beutl.Services.LibraryService.Current
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService_Current
+  name: Current
+  nameWithType: LibraryService.Current
+  fullName: Beutl.Services.LibraryService.Current
+- uid: Beutl.Services.LibraryService
+  commentId: T:Beutl.Services.LibraryService
+  parent: Beutl.Services
+  isExternal: true
+  href: Beutl.Services.LibraryService.html
+  name: LibraryService
+  nameWithType: LibraryService
+  fullName: Beutl.Services.LibraryService
+- uid: Beutl.Services.LibraryService.Items*
+  commentId: Overload:Beutl.Services.LibraryService.Items
+  isExternal: true
+  href: Beutl.Services.LibraryService.html#Beutl_Services_LibraryService_Items
+  name: Items
+  nameWithType: LibraryService.Items
+  fullName: Beutl.Services.LibraryService.Items
+- uid: System.Collections.Generic.IReadOnlyList{Beutl.Services.LibraryItem}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Beutl.Services.LibraryItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<LibraryItem>
+  nameWithType: IReadOnlyList<LibraryItem>
+  fullName: System.Collections.Generic.IReadOnlyList<Beutl.Services.LibraryItem>
+  nameWithType.vb: IReadOnlyList(Of LibraryItem)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Beutl.Services.LibraryItem)
+  name.vb: IReadOnlyList(Of LibraryItem)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Beutl.Services.LibraryItem
+    name: LibraryItem
+    isExternal: true
+    href: Beutl.Services.LibraryItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Services.LibraryItem
+    name: LibraryItem
+    isExternal: true
+    href: Beutl.Services.LibraryItem.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

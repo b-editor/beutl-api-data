@@ -1,0 +1,1475 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.CornerRadius
+  commentId: T:Beutl.Media.CornerRadius
+  id: CornerRadius
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.CornerRadius.#ctor(System.Single)
+  - Beutl.Media.CornerRadius.#ctor(System.Single,System.Single)
+  - Beutl.Media.CornerRadius.#ctor(System.Single,System.Single,System.Single,System.Single)
+  - Beutl.Media.CornerRadius.BottomLeft
+  - Beutl.Media.CornerRadius.BottomRight
+  - Beutl.Media.CornerRadius.Equals(Beutl.Media.CornerRadius)
+  - Beutl.Media.CornerRadius.Equals(System.Object)
+  - Beutl.Media.CornerRadius.GetHashCode
+  - Beutl.Media.CornerRadius.IsEmpty
+  - Beutl.Media.CornerRadius.IsUniform
+  - Beutl.Media.CornerRadius.Parse(System.ReadOnlySpan{System.Char})
+  - Beutl.Media.CornerRadius.Parse(System.String)
+  - Beutl.Media.CornerRadius.ToString
+  - Beutl.Media.CornerRadius.TopLeft
+  - Beutl.Media.CornerRadius.TopRight
+  - Beutl.Media.CornerRadius.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.CornerRadius@)
+  - Beutl.Media.CornerRadius.TryParse(System.String,Beutl.Media.CornerRadius@)
+  - Beutl.Media.CornerRadius.WithBottom(System.Single)
+  - Beutl.Media.CornerRadius.WithBottomLeft(System.Single)
+  - Beutl.Media.CornerRadius.WithBottomRight(System.Single)
+  - Beutl.Media.CornerRadius.WithTop(System.Single)
+  - Beutl.Media.CornerRadius.WithTopLeft(System.Single)
+  - Beutl.Media.CornerRadius.WithTopRight(System.Single)
+  - Beutl.Media.CornerRadius.op_Equality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  - Beutl.Media.CornerRadius.op_Inequality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  langs:
+  - csharp
+  - vb
+  name: CornerRadius
+  nameWithType: CornerRadius
+  fullName: Beutl.Media.CornerRadius
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(CornerRadiusJsonConverter))]
+
+      [TypeConverter(typeof(CornerRadiusConverter))]
+
+      public readonly struct CornerRadius : IEquatable<CornerRadius>, ITupleConvertible<CornerRadius, float>
+    content.vb: >-
+      <JsonConverter(GetType(CornerRadiusJsonConverter))>
+
+      <TypeConverter(GetType(CornerRadiusConverter))>
+
+      Public Structure CornerRadius Implements IEquatable(Of CornerRadius), ITupleConvertible(Of CornerRadius, Single)
+  implements:
+  - System.IEquatable{Beutl.Media.CornerRadius}
+  - Beutl.ITupleConvertible{Beutl.Media.CornerRadius,System.Single}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Converters.CornerRadiusConverter
+- uid: Beutl.Media.CornerRadius.#ctor(System.Single)
+  commentId: M:Beutl.Media.CornerRadius.#ctor(System.Single)
+  id: '#ctor(System.Single)'
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: CornerRadius(float)
+  nameWithType: CornerRadius.CornerRadius(float)
+  fullName: Beutl.Media.CornerRadius.CornerRadius(float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius(float uniformRadius)
+    parameters:
+    - id: uniformRadius
+      type: System.Single
+    content.vb: Public Sub New(uniformRadius As Single)
+  overload: Beutl.Media.CornerRadius.#ctor*
+  nameWithType.vb: CornerRadius.New(Single)
+  fullName.vb: Beutl.Media.CornerRadius.New(Single)
+  name.vb: New(Single)
+- uid: Beutl.Media.CornerRadius.#ctor(System.Single,System.Single)
+  commentId: M:Beutl.Media.CornerRadius.#ctor(System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single)'
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: CornerRadius(float, float)
+  nameWithType: CornerRadius.CornerRadius(float, float)
+  fullName: Beutl.Media.CornerRadius.CornerRadius(float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius(float top, float bottom)
+    parameters:
+    - id: top
+      type: System.Single
+    - id: bottom
+      type: System.Single
+    content.vb: Public Sub New(top As Single, bottom As Single)
+  overload: Beutl.Media.CornerRadius.#ctor*
+  nameWithType.vb: CornerRadius.New(Single, Single)
+  fullName.vb: Beutl.Media.CornerRadius.New(Single, Single)
+  name.vb: New(Single, Single)
+- uid: Beutl.Media.CornerRadius.#ctor(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Beutl.Media.CornerRadius.#ctor(System.Single,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single,System.Single)'
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: CornerRadius(float, float, float, float)
+  nameWithType: CornerRadius.CornerRadius(float, float, float, float)
+  fullName: Beutl.Media.CornerRadius.CornerRadius(float, float, float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius(float topLeft, float topRight, float bottomRight, float bottomLeft)
+    parameters:
+    - id: topLeft
+      type: System.Single
+    - id: topRight
+      type: System.Single
+    - id: bottomRight
+      type: System.Single
+    - id: bottomLeft
+      type: System.Single
+    content.vb: Public Sub New(topLeft As Single, topRight As Single, bottomRight As Single, bottomLeft As Single)
+  overload: Beutl.Media.CornerRadius.#ctor*
+  nameWithType.vb: CornerRadius.New(Single, Single, Single, Single)
+  fullName.vb: Beutl.Media.CornerRadius.New(Single, Single, Single, Single)
+  name.vb: New(Single, Single, Single, Single)
+- uid: Beutl.Media.CornerRadius.Equals(Beutl.Media.CornerRadius)
+  commentId: M:Beutl.Media.CornerRadius.Equals(Beutl.Media.CornerRadius)
+  id: Equals(Beutl.Media.CornerRadius)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: Equals(CornerRadius)
+  nameWithType: CornerRadius.Equals(CornerRadius)
+  fullName: Beutl.Media.CornerRadius.Equals(Beutl.Media.CornerRadius)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(CornerRadius other)
+    parameters:
+    - id: other
+      type: Beutl.Media.CornerRadius
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As CornerRadius) As Boolean
+  overload: Beutl.Media.CornerRadius.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.CornerRadius}.Equals(Beutl.Media.CornerRadius)
+- uid: Beutl.Media.CornerRadius.Equals(System.Object)
+  commentId: M:Beutl.Media.CornerRadius.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: CornerRadius.Equals(object?)
+  fullName: Beutl.Media.CornerRadius.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.CornerRadius.Equals*
+  nameWithType.vb: CornerRadius.Equals(Object)
+  fullName.vb: Beutl.Media.CornerRadius.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.CornerRadius.GetHashCode
+  commentId: M:Beutl.Media.CornerRadius.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: CornerRadius.GetHashCode()
+  fullName: Beutl.Media.CornerRadius.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.CornerRadius.GetHashCode*
+- uid: Beutl.Media.CornerRadius.ToString
+  commentId: M:Beutl.Media.CornerRadius.ToString
+  id: ToString
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: CornerRadius.ToString()
+  fullName: Beutl.Media.CornerRadius.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Media.CornerRadius.ToString*
+- uid: Beutl.Media.CornerRadius.TryParse(System.String,Beutl.Media.CornerRadius@)
+  commentId: M:Beutl.Media.CornerRadius.TryParse(System.String,Beutl.Media.CornerRadius@)
+  id: TryParse(System.String,Beutl.Media.CornerRadius@)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string, out CornerRadius)
+  nameWithType: CornerRadius.TryParse(string, out CornerRadius)
+  fullName: Beutl.Media.CornerRadius.TryParse(string, out Beutl.Media.CornerRadius)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(string s, out CornerRadius cornerRadius)
+    parameters:
+    - id: s
+      type: System.String
+    - id: cornerRadius
+      type: Beutl.Media.CornerRadius
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, cornerRadius As CornerRadius) As Boolean
+  overload: Beutl.Media.CornerRadius.TryParse*
+  nameWithType.vb: CornerRadius.TryParse(String, CornerRadius)
+  fullName.vb: Beutl.Media.CornerRadius.TryParse(String, Beutl.Media.CornerRadius)
+  name.vb: TryParse(String, CornerRadius)
+- uid: Beutl.Media.CornerRadius.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.CornerRadius@)
+  commentId: M:Beutl.Media.CornerRadius.TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.CornerRadius@)
+  id: TryParse(System.ReadOnlySpan{System.Char},Beutl.Media.CornerRadius@)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out CornerRadius)
+  nameWithType: CornerRadius.TryParse(ReadOnlySpan<char>, out CornerRadius)
+  fullName: Beutl.Media.CornerRadius.TryParse(System.ReadOnlySpan<char>, out Beutl.Media.CornerRadius)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out CornerRadius cornerRadius)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: cornerRadius
+      type: Beutl.Media.CornerRadius
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), cornerRadius As CornerRadius) As Boolean
+  overload: Beutl.Media.CornerRadius.TryParse*
+  nameWithType.vb: CornerRadius.TryParse(ReadOnlySpan(Of Char), CornerRadius)
+  fullName.vb: Beutl.Media.CornerRadius.TryParse(System.ReadOnlySpan(Of Char), Beutl.Media.CornerRadius)
+  name.vb: TryParse(ReadOnlySpan(Of Char), CornerRadius)
+- uid: Beutl.Media.CornerRadius.Parse(System.String)
+  commentId: M:Beutl.Media.CornerRadius.Parse(System.String)
+  id: Parse(System.String)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: CornerRadius.Parse(string)
+  fullName: Beutl.Media.CornerRadius.Parse(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static CornerRadius Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Shared Function Parse(s As String) As CornerRadius
+  overload: Beutl.Media.CornerRadius.Parse*
+  nameWithType.vb: CornerRadius.Parse(String)
+  fullName.vb: Beutl.Media.CornerRadius.Parse(String)
+  name.vb: Parse(String)
+- uid: Beutl.Media.CornerRadius.Parse(System.ReadOnlySpan{System.Char})
+  commentId: M:Beutl.Media.CornerRadius.Parse(System.ReadOnlySpan{System.Char})
+  id: Parse(System.ReadOnlySpan{System.Char})
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: Parse(ReadOnlySpan<char>)
+  nameWithType: CornerRadius.Parse(ReadOnlySpan<char>)
+  fullName: Beutl.Media.CornerRadius.Parse(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static CornerRadius Parse(ReadOnlySpan<char> s)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Shared Function Parse(s As ReadOnlySpan(Of Char)) As CornerRadius
+  overload: Beutl.Media.CornerRadius.Parse*
+  nameWithType.vb: CornerRadius.Parse(ReadOnlySpan(Of Char))
+  fullName.vb: Beutl.Media.CornerRadius.Parse(System.ReadOnlySpan(Of Char))
+  name.vb: Parse(ReadOnlySpan(Of Char))
+- uid: Beutl.Media.CornerRadius.WithTopLeft(System.Single)
+  commentId: M:Beutl.Media.CornerRadius.WithTopLeft(System.Single)
+  id: WithTopLeft(System.Single)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: WithTopLeft(float)
+  nameWithType: CornerRadius.WithTopLeft(float)
+  fullName: Beutl.Media.CornerRadius.WithTopLeft(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius WithTopLeft(float topLeft)
+    parameters:
+    - id: topLeft
+      type: System.Single
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Function WithTopLeft(topLeft As Single) As CornerRadius
+  overload: Beutl.Media.CornerRadius.WithTopLeft*
+  nameWithType.vb: CornerRadius.WithTopLeft(Single)
+  fullName.vb: Beutl.Media.CornerRadius.WithTopLeft(Single)
+  name.vb: WithTopLeft(Single)
+- uid: Beutl.Media.CornerRadius.WithTopRight(System.Single)
+  commentId: M:Beutl.Media.CornerRadius.WithTopRight(System.Single)
+  id: WithTopRight(System.Single)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: WithTopRight(float)
+  nameWithType: CornerRadius.WithTopRight(float)
+  fullName: Beutl.Media.CornerRadius.WithTopRight(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius WithTopRight(float topRight)
+    parameters:
+    - id: topRight
+      type: System.Single
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Function WithTopRight(topRight As Single) As CornerRadius
+  overload: Beutl.Media.CornerRadius.WithTopRight*
+  nameWithType.vb: CornerRadius.WithTopRight(Single)
+  fullName.vb: Beutl.Media.CornerRadius.WithTopRight(Single)
+  name.vb: WithTopRight(Single)
+- uid: Beutl.Media.CornerRadius.WithBottomRight(System.Single)
+  commentId: M:Beutl.Media.CornerRadius.WithBottomRight(System.Single)
+  id: WithBottomRight(System.Single)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: WithBottomRight(float)
+  nameWithType: CornerRadius.WithBottomRight(float)
+  fullName: Beutl.Media.CornerRadius.WithBottomRight(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius WithBottomRight(float bottomRight)
+    parameters:
+    - id: bottomRight
+      type: System.Single
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Function WithBottomRight(bottomRight As Single) As CornerRadius
+  overload: Beutl.Media.CornerRadius.WithBottomRight*
+  nameWithType.vb: CornerRadius.WithBottomRight(Single)
+  fullName.vb: Beutl.Media.CornerRadius.WithBottomRight(Single)
+  name.vb: WithBottomRight(Single)
+- uid: Beutl.Media.CornerRadius.WithBottomLeft(System.Single)
+  commentId: M:Beutl.Media.CornerRadius.WithBottomLeft(System.Single)
+  id: WithBottomLeft(System.Single)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: WithBottomLeft(float)
+  nameWithType: CornerRadius.WithBottomLeft(float)
+  fullName: Beutl.Media.CornerRadius.WithBottomLeft(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius WithBottomLeft(float bottomLeft)
+    parameters:
+    - id: bottomLeft
+      type: System.Single
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Function WithBottomLeft(bottomLeft As Single) As CornerRadius
+  overload: Beutl.Media.CornerRadius.WithBottomLeft*
+  nameWithType.vb: CornerRadius.WithBottomLeft(Single)
+  fullName.vb: Beutl.Media.CornerRadius.WithBottomLeft(Single)
+  name.vb: WithBottomLeft(Single)
+- uid: Beutl.Media.CornerRadius.WithTop(System.Single)
+  commentId: M:Beutl.Media.CornerRadius.WithTop(System.Single)
+  id: WithTop(System.Single)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: WithTop(float)
+  nameWithType: CornerRadius.WithTop(float)
+  fullName: Beutl.Media.CornerRadius.WithTop(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius WithTop(float top)
+    parameters:
+    - id: top
+      type: System.Single
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Function WithTop(top As Single) As CornerRadius
+  overload: Beutl.Media.CornerRadius.WithTop*
+  nameWithType.vb: CornerRadius.WithTop(Single)
+  fullName.vb: Beutl.Media.CornerRadius.WithTop(Single)
+  name.vb: WithTop(Single)
+- uid: Beutl.Media.CornerRadius.WithBottom(System.Single)
+  commentId: M:Beutl.Media.CornerRadius.WithBottom(System.Single)
+  id: WithBottom(System.Single)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: WithBottom(float)
+  nameWithType: CornerRadius.WithBottom(float)
+  fullName: Beutl.Media.CornerRadius.WithBottom(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public CornerRadius WithBottom(float bottom)
+    parameters:
+    - id: bottom
+      type: System.Single
+    return:
+      type: Beutl.Media.CornerRadius
+    content.vb: Public Function WithBottom(bottom As Single) As CornerRadius
+  overload: Beutl.Media.CornerRadius.WithBottom*
+  nameWithType.vb: CornerRadius.WithBottom(Single)
+  fullName.vb: Beutl.Media.CornerRadius.WithBottom(Single)
+  name.vb: WithBottom(Single)
+- uid: Beutl.Media.CornerRadius.op_Equality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  commentId: M:Beutl.Media.CornerRadius.op_Equality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  id: op_Equality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: operator ==(CornerRadius, CornerRadius)
+  nameWithType: CornerRadius.operator ==(CornerRadius, CornerRadius)
+  fullName: Beutl.Media.CornerRadius.operator ==(Beutl.Media.CornerRadius, Beutl.Media.CornerRadius)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator ==(CornerRadius left, CornerRadius right)
+    parameters:
+    - id: left
+      type: Beutl.Media.CornerRadius
+    - id: right
+      type: Beutl.Media.CornerRadius
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As CornerRadius, right As CornerRadius) As Boolean
+  overload: Beutl.Media.CornerRadius.op_Equality*
+  nameWithType.vb: CornerRadius.=(CornerRadius, CornerRadius)
+  fullName.vb: Beutl.Media.CornerRadius.=(Beutl.Media.CornerRadius, Beutl.Media.CornerRadius)
+  name.vb: =(CornerRadius, CornerRadius)
+- uid: Beutl.Media.CornerRadius.op_Inequality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  commentId: M:Beutl.Media.CornerRadius.op_Inequality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  id: op_Inequality(Beutl.Media.CornerRadius,Beutl.Media.CornerRadius)
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: operator !=(CornerRadius, CornerRadius)
+  nameWithType: CornerRadius.operator !=(CornerRadius, CornerRadius)
+  fullName: Beutl.Media.CornerRadius.operator !=(Beutl.Media.CornerRadius, Beutl.Media.CornerRadius)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator !=(CornerRadius left, CornerRadius right)
+    parameters:
+    - id: left
+      type: Beutl.Media.CornerRadius
+    - id: right
+      type: Beutl.Media.CornerRadius
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As CornerRadius, right As CornerRadius) As Boolean
+  overload: Beutl.Media.CornerRadius.op_Inequality*
+  nameWithType.vb: CornerRadius.<>(CornerRadius, CornerRadius)
+  fullName.vb: Beutl.Media.CornerRadius.<>(Beutl.Media.CornerRadius, Beutl.Media.CornerRadius)
+  name.vb: <>(CornerRadius, CornerRadius)
+- uid: Beutl.Media.CornerRadius.TopLeft
+  commentId: P:Beutl.Media.CornerRadius.TopLeft
+  id: TopLeft
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: TopLeft
+  nameWithType: CornerRadius.TopLeft
+  fullName: Beutl.Media.CornerRadius.TopLeft
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float TopLeft { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property TopLeft As Single
+  overload: Beutl.Media.CornerRadius.TopLeft*
+- uid: Beutl.Media.CornerRadius.TopRight
+  commentId: P:Beutl.Media.CornerRadius.TopRight
+  id: TopRight
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: TopRight
+  nameWithType: CornerRadius.TopRight
+  fullName: Beutl.Media.CornerRadius.TopRight
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float TopRight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property TopRight As Single
+  overload: Beutl.Media.CornerRadius.TopRight*
+- uid: Beutl.Media.CornerRadius.BottomRight
+  commentId: P:Beutl.Media.CornerRadius.BottomRight
+  id: BottomRight
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: BottomRight
+  nameWithType: CornerRadius.BottomRight
+  fullName: Beutl.Media.CornerRadius.BottomRight
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float BottomRight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property BottomRight As Single
+  overload: Beutl.Media.CornerRadius.BottomRight*
+- uid: Beutl.Media.CornerRadius.BottomLeft
+  commentId: P:Beutl.Media.CornerRadius.BottomLeft
+  id: BottomLeft
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: BottomLeft
+  nameWithType: CornerRadius.BottomLeft
+  fullName: Beutl.Media.CornerRadius.BottomLeft
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float BottomLeft { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property BottomLeft As Single
+  overload: Beutl.Media.CornerRadius.BottomLeft*
+- uid: Beutl.Media.CornerRadius.IsEmpty
+  commentId: P:Beutl.Media.CornerRadius.IsEmpty
+  id: IsEmpty
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: CornerRadius.IsEmpty
+  fullName: Beutl.Media.CornerRadius.IsEmpty
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: Beutl.Media.CornerRadius.IsEmpty*
+- uid: Beutl.Media.CornerRadius.IsUniform
+  commentId: P:Beutl.Media.CornerRadius.IsUniform
+  id: IsUniform
+  parent: Beutl.Media.CornerRadius
+  langs:
+  - csharp
+  - vb
+  name: IsUniform
+  nameWithType: CornerRadius.IsUniform
+  fullName: Beutl.Media.CornerRadius.IsUniform
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/CornerRadius.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public bool IsUniform { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUniform As Boolean
+  overload: Beutl.Media.CornerRadius.IsUniform*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.CornerRadius}
+  commentId: T:System.IEquatable{Beutl.Media.CornerRadius}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<CornerRadius>
+  nameWithType: IEquatable<CornerRadius>
+  fullName: System.IEquatable<Beutl.Media.CornerRadius>
+  nameWithType.vb: IEquatable(Of CornerRadius)
+  fullName.vb: System.IEquatable(Of Beutl.Media.CornerRadius)
+  name.vb: IEquatable(Of CornerRadius)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.CornerRadius
+    name: CornerRadius
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.CornerRadius
+    name: CornerRadius
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html
+  - name: )
+- uid: Beutl.ITupleConvertible{Beutl.Media.CornerRadius,System.Single}
+  commentId: T:Beutl.ITupleConvertible{Beutl.Media.CornerRadius,System.Single}
+  parent: Beutl
+  definition: Beutl.ITupleConvertible`2
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  name: ITupleConvertible<CornerRadius, float>
+  nameWithType: ITupleConvertible<CornerRadius, float>
+  fullName: Beutl.ITupleConvertible<Beutl.Media.CornerRadius, float>
+  nameWithType.vb: ITupleConvertible(Of CornerRadius, Single)
+  fullName.vb: Beutl.ITupleConvertible(Of Beutl.Media.CornerRadius, Single)
+  name.vb: ITupleConvertible(Of CornerRadius, Single)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: <
+  - uid: Beutl.Media.CornerRadius
+    name: CornerRadius
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ITupleConvertible.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.CornerRadius
+    name: CornerRadius
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.ITupleConvertible`2
+  commentId: T:Beutl.ITupleConvertible`2
+  isExternal: true
+  href: Beutl.ITupleConvertible-2.html
+  name: ITupleConvertible<TSelf, T>
+  nameWithType: ITupleConvertible<TSelf, T>
+  fullName: Beutl.ITupleConvertible<TSelf, T>
+  nameWithType.vb: ITupleConvertible(Of TSelf, T)
+  fullName.vb: Beutl.ITupleConvertible(Of TSelf, T)
+  name.vb: ITupleConvertible(Of TSelf, T)
+  spec.csharp:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.ITupleConvertible`2
+    name: ITupleConvertible
+    isExternal: true
+    href: Beutl.ITupleConvertible-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.CornerRadius.#ctor*
+  commentId: Overload:Beutl.Media.CornerRadius.#ctor
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius__ctor_System_Single_
+  name: CornerRadius
+  nameWithType: CornerRadius.CornerRadius
+  fullName: Beutl.Media.CornerRadius.CornerRadius
+  nameWithType.vb: CornerRadius.New
+  fullName.vb: Beutl.Media.CornerRadius.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Media.CornerRadius.Equals*
+  commentId: Overload:Beutl.Media.CornerRadius.Equals
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_Equals_Beutl_Media_CornerRadius_
+  name: Equals
+  nameWithType: CornerRadius.Equals
+  fullName: Beutl.Media.CornerRadius.Equals
+- uid: System.IEquatable{Beutl.Media.CornerRadius}.Equals(Beutl.Media.CornerRadius)
+  commentId: M:System.IEquatable{Beutl.Media.CornerRadius}.Equals(Beutl.Media.CornerRadius)
+  parent: System.IEquatable{Beutl.Media.CornerRadius}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(CornerRadius)
+  nameWithType: IEquatable<CornerRadius>.Equals(CornerRadius)
+  fullName: System.IEquatable<Beutl.Media.CornerRadius>.Equals(Beutl.Media.CornerRadius)
+  nameWithType.vb: IEquatable(Of CornerRadius).Equals(CornerRadius)
+  fullName.vb: System.IEquatable(Of Beutl.Media.CornerRadius).Equals(Beutl.Media.CornerRadius)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.CornerRadius}.Equals(Beutl.Media.CornerRadius)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.CornerRadius
+    name: CornerRadius
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.CornerRadius}.Equals(Beutl.Media.CornerRadius)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.CornerRadius
+    name: CornerRadius
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html
+  - name: )
+- uid: Beutl.Media.CornerRadius
+  commentId: T:Beutl.Media.CornerRadius
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html
+  name: CornerRadius
+  nameWithType: CornerRadius
+  fullName: Beutl.Media.CornerRadius
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.CornerRadius.GetHashCode*
+  commentId: Overload:Beutl.Media.CornerRadius.GetHashCode
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_GetHashCode
+  name: GetHashCode
+  nameWithType: CornerRadius.GetHashCode
+  fullName: Beutl.Media.CornerRadius.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Media.CornerRadius.ToString*
+  commentId: Overload:Beutl.Media.CornerRadius.ToString
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_ToString
+  name: ToString
+  nameWithType: CornerRadius.ToString
+  fullName: Beutl.Media.CornerRadius.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Media.CornerRadius.TryParse*
+  commentId: Overload:Beutl.Media.CornerRadius.TryParse
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_TryParse_System_String_Beutl_Media_CornerRadius__
+  name: TryParse
+  nameWithType: CornerRadius.TryParse
+  fullName: Beutl.Media.CornerRadius.TryParse
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.CornerRadius.Parse*
+  commentId: Overload:Beutl.Media.CornerRadius.Parse
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_Parse_System_String_
+  name: Parse
+  nameWithType: CornerRadius.Parse
+  fullName: Beutl.Media.CornerRadius.Parse
+- uid: Beutl.Media.CornerRadius.WithTopLeft*
+  commentId: Overload:Beutl.Media.CornerRadius.WithTopLeft
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_WithTopLeft_System_Single_
+  name: WithTopLeft
+  nameWithType: CornerRadius.WithTopLeft
+  fullName: Beutl.Media.CornerRadius.WithTopLeft
+- uid: Beutl.Media.CornerRadius.WithTopRight*
+  commentId: Overload:Beutl.Media.CornerRadius.WithTopRight
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_WithTopRight_System_Single_
+  name: WithTopRight
+  nameWithType: CornerRadius.WithTopRight
+  fullName: Beutl.Media.CornerRadius.WithTopRight
+- uid: Beutl.Media.CornerRadius.WithBottomRight*
+  commentId: Overload:Beutl.Media.CornerRadius.WithBottomRight
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_WithBottomRight_System_Single_
+  name: WithBottomRight
+  nameWithType: CornerRadius.WithBottomRight
+  fullName: Beutl.Media.CornerRadius.WithBottomRight
+- uid: Beutl.Media.CornerRadius.WithBottomLeft*
+  commentId: Overload:Beutl.Media.CornerRadius.WithBottomLeft
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_WithBottomLeft_System_Single_
+  name: WithBottomLeft
+  nameWithType: CornerRadius.WithBottomLeft
+  fullName: Beutl.Media.CornerRadius.WithBottomLeft
+- uid: Beutl.Media.CornerRadius.WithTop*
+  commentId: Overload:Beutl.Media.CornerRadius.WithTop
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_WithTop_System_Single_
+  name: WithTop
+  nameWithType: CornerRadius.WithTop
+  fullName: Beutl.Media.CornerRadius.WithTop
+- uid: Beutl.Media.CornerRadius.WithBottom*
+  commentId: Overload:Beutl.Media.CornerRadius.WithBottom
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_WithBottom_System_Single_
+  name: WithBottom
+  nameWithType: CornerRadius.WithBottom
+  fullName: Beutl.Media.CornerRadius.WithBottom
+- uid: Beutl.Media.CornerRadius.op_Equality*
+  commentId: Overload:Beutl.Media.CornerRadius.op_Equality
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_op_Equality_Beutl_Media_CornerRadius_Beutl_Media_CornerRadius_
+  name: operator ==
+  nameWithType: CornerRadius.operator ==
+  fullName: Beutl.Media.CornerRadius.operator ==
+  nameWithType.vb: CornerRadius.=
+  fullName.vb: Beutl.Media.CornerRadius.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.CornerRadius.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_op_Equality_Beutl_Media_CornerRadius_Beutl_Media_CornerRadius_
+- uid: Beutl.Media.CornerRadius.op_Inequality*
+  commentId: Overload:Beutl.Media.CornerRadius.op_Inequality
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_op_Inequality_Beutl_Media_CornerRadius_Beutl_Media_CornerRadius_
+  name: operator !=
+  nameWithType: CornerRadius.operator !=
+  fullName: Beutl.Media.CornerRadius.operator !=
+  nameWithType.vb: CornerRadius.<>
+  fullName.vb: Beutl.Media.CornerRadius.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.CornerRadius.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_op_Inequality_Beutl_Media_CornerRadius_Beutl_Media_CornerRadius_
+- uid: Beutl.Media.CornerRadius.TopLeft*
+  commentId: Overload:Beutl.Media.CornerRadius.TopLeft
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_TopLeft
+  name: TopLeft
+  nameWithType: CornerRadius.TopLeft
+  fullName: Beutl.Media.CornerRadius.TopLeft
+- uid: Beutl.Media.CornerRadius.TopRight*
+  commentId: Overload:Beutl.Media.CornerRadius.TopRight
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_TopRight
+  name: TopRight
+  nameWithType: CornerRadius.TopRight
+  fullName: Beutl.Media.CornerRadius.TopRight
+- uid: Beutl.Media.CornerRadius.BottomRight*
+  commentId: Overload:Beutl.Media.CornerRadius.BottomRight
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_BottomRight
+  name: BottomRight
+  nameWithType: CornerRadius.BottomRight
+  fullName: Beutl.Media.CornerRadius.BottomRight
+- uid: Beutl.Media.CornerRadius.BottomLeft*
+  commentId: Overload:Beutl.Media.CornerRadius.BottomLeft
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_BottomLeft
+  name: BottomLeft
+  nameWithType: CornerRadius.BottomLeft
+  fullName: Beutl.Media.CornerRadius.BottomLeft
+- uid: Beutl.Media.CornerRadius.IsEmpty*
+  commentId: Overload:Beutl.Media.CornerRadius.IsEmpty
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_IsEmpty
+  name: IsEmpty
+  nameWithType: CornerRadius.IsEmpty
+  fullName: Beutl.Media.CornerRadius.IsEmpty
+- uid: Beutl.Media.CornerRadius.IsUniform*
+  commentId: Overload:Beutl.Media.CornerRadius.IsUniform
+  isExternal: true
+  href: Beutl.Media.CornerRadius.html#Beutl_Media_CornerRadius_IsUniform
+  name: IsUniform
+  nameWithType: CornerRadius.IsUniform
+  fullName: Beutl.Media.CornerRadius.IsUniform

@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Engine.IProperty
+  commentId: T:Beutl.Engine.IProperty
+  id: IProperty
+  parent: Beutl.Engine
+  children:
+  - Beutl.Engine.IProperty.Animation
+  - Beutl.Engine.IProperty.CreateValidator(System.Reflection.PropertyInfo)
+  - Beutl.Engine.IProperty.CurrentValue
+  - Beutl.Engine.IProperty.DefaultValue
+  - Beutl.Engine.IProperty.DeserializeValue(Beutl.Serialization.ICoreSerializationContext)
+  - Beutl.Engine.IProperty.GetOwnerObject
+  - Beutl.Engine.IProperty.GetPropertyInfo
+  - Beutl.Engine.IProperty.HasLocalValue
+  - Beutl.Engine.IProperty.IsAnimatable
+  - Beutl.Engine.IProperty.Name
+  - Beutl.Engine.IProperty.SerializeValue(Beutl.Serialization.ICoreSerializationContext)
+  - Beutl.Engine.IProperty.SetOwnerObject(Beutl.Engine.EngineObject)
+  - Beutl.Engine.IProperty.SetPropertyInfo(System.Reflection.PropertyInfo)
+  - Beutl.Engine.IProperty.SetValidator(Beutl.Validation.IValidator)
+  - Beutl.Engine.IProperty.ValueType
+  langs:
+  - csharp
+  - vb
+  name: IProperty
+  nameWithType: IProperty
+  fullName: Beutl.Engine.IProperty
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: 'public interface IProperty : INotifyEdited'
+    content.vb: Public Interface IProperty Inherits INotifyEdited
+  inheritedMembers:
+  - Beutl.INotifyEdited.Edited
+- uid: Beutl.Engine.IProperty.SetPropertyInfo(System.Reflection.PropertyInfo)
+  commentId: M:Beutl.Engine.IProperty.SetPropertyInfo(System.Reflection.PropertyInfo)
+  id: SetPropertyInfo(System.Reflection.PropertyInfo)
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: SetPropertyInfo(PropertyInfo)
+  nameWithType: IProperty.SetPropertyInfo(PropertyInfo)
+  fullName: Beutl.Engine.IProperty.SetPropertyInfo(System.Reflection.PropertyInfo)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: void SetPropertyInfo(PropertyInfo propertyInfo)
+    parameters:
+    - id: propertyInfo
+      type: System.Reflection.PropertyInfo
+    content.vb: Sub SetPropertyInfo(propertyInfo As PropertyInfo)
+  overload: Beutl.Engine.IProperty.SetPropertyInfo*
+- uid: Beutl.Engine.IProperty.GetPropertyInfo
+  commentId: M:Beutl.Engine.IProperty.GetPropertyInfo
+  id: GetPropertyInfo
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: GetPropertyInfo()
+  nameWithType: IProperty.GetPropertyInfo()
+  fullName: Beutl.Engine.IProperty.GetPropertyInfo()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: PropertyInfo? GetPropertyInfo()
+    return:
+      type: System.Reflection.PropertyInfo
+    content.vb: Function GetPropertyInfo() As PropertyInfo
+  overload: Beutl.Engine.IProperty.GetPropertyInfo*
+- uid: Beutl.Engine.IProperty.SetOwnerObject(Beutl.Engine.EngineObject)
+  commentId: M:Beutl.Engine.IProperty.SetOwnerObject(Beutl.Engine.EngineObject)
+  id: SetOwnerObject(Beutl.Engine.EngineObject)
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: SetOwnerObject(EngineObject?)
+  nameWithType: IProperty.SetOwnerObject(EngineObject?)
+  fullName: Beutl.Engine.IProperty.SetOwnerObject(Beutl.Engine.EngineObject?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: void SetOwnerObject(EngineObject? owner)
+    parameters:
+    - id: owner
+      type: Beutl.Engine.EngineObject
+    content.vb: Sub SetOwnerObject(owner As EngineObject)
+  overload: Beutl.Engine.IProperty.SetOwnerObject*
+  nameWithType.vb: IProperty.SetOwnerObject(EngineObject)
+  fullName.vb: Beutl.Engine.IProperty.SetOwnerObject(Beutl.Engine.EngineObject)
+  name.vb: SetOwnerObject(EngineObject)
+- uid: Beutl.Engine.IProperty.GetOwnerObject
+  commentId: M:Beutl.Engine.IProperty.GetOwnerObject
+  id: GetOwnerObject
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: GetOwnerObject()
+  nameWithType: IProperty.GetOwnerObject()
+  fullName: Beutl.Engine.IProperty.GetOwnerObject()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: EngineObject? GetOwnerObject()
+    return:
+      type: Beutl.Engine.EngineObject
+    content.vb: Function GetOwnerObject() As EngineObject
+  overload: Beutl.Engine.IProperty.GetOwnerObject*
+- uid: Beutl.Engine.IProperty.DeserializeValue(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.Engine.IProperty.DeserializeValue(Beutl.Serialization.ICoreSerializationContext)
+  id: DeserializeValue(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: DeserializeValue(ICoreSerializationContext)
+  nameWithType: IProperty.DeserializeValue(ICoreSerializationContext)
+  fullName: Beutl.Engine.IProperty.DeserializeValue(Beutl.Serialization.ICoreSerializationContext)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: void DeserializeValue(ICoreSerializationContext context)
+    parameters:
+    - id: context
+      type: Beutl.Serialization.ICoreSerializationContext
+    content.vb: Sub DeserializeValue(context As ICoreSerializationContext)
+  overload: Beutl.Engine.IProperty.DeserializeValue*
+- uid: Beutl.Engine.IProperty.SerializeValue(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.Engine.IProperty.SerializeValue(Beutl.Serialization.ICoreSerializationContext)
+  id: SerializeValue(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: SerializeValue(ICoreSerializationContext)
+  nameWithType: IProperty.SerializeValue(ICoreSerializationContext)
+  fullName: Beutl.Engine.IProperty.SerializeValue(Beutl.Serialization.ICoreSerializationContext)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: void SerializeValue(ICoreSerializationContext context)
+    parameters:
+    - id: context
+      type: Beutl.Serialization.ICoreSerializationContext
+    content.vb: Sub SerializeValue(context As ICoreSerializationContext)
+  overload: Beutl.Engine.IProperty.SerializeValue*
+- uid: Beutl.Engine.IProperty.CreateValidator(System.Reflection.PropertyInfo)
+  commentId: M:Beutl.Engine.IProperty.CreateValidator(System.Reflection.PropertyInfo)
+  id: CreateValidator(System.Reflection.PropertyInfo)
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: CreateValidator(PropertyInfo)
+  nameWithType: IProperty.CreateValidator(PropertyInfo)
+  fullName: Beutl.Engine.IProperty.CreateValidator(System.Reflection.PropertyInfo)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: IValidator CreateValidator(PropertyInfo propertyInfo)
+    parameters:
+    - id: propertyInfo
+      type: System.Reflection.PropertyInfo
+    return:
+      type: Beutl.Validation.IValidator
+    content.vb: Function CreateValidator(propertyInfo As PropertyInfo) As IValidator
+  overload: Beutl.Engine.IProperty.CreateValidator*
+- uid: Beutl.Engine.IProperty.SetValidator(Beutl.Validation.IValidator)
+  commentId: M:Beutl.Engine.IProperty.SetValidator(Beutl.Validation.IValidator)
+  id: SetValidator(Beutl.Validation.IValidator)
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: SetValidator(IValidator)
+  nameWithType: IProperty.SetValidator(IValidator)
+  fullName: Beutl.Engine.IProperty.SetValidator(Beutl.Validation.IValidator)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: void SetValidator(IValidator validator)
+    parameters:
+    - id: validator
+      type: Beutl.Validation.IValidator
+    content.vb: Sub SetValidator(validator As IValidator)
+  overload: Beutl.Engine.IProperty.SetValidator*
+- uid: Beutl.Engine.IProperty.DefaultValue
+  commentId: P:Beutl.Engine.IProperty.DefaultValue
+  id: DefaultValue
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: DefaultValue
+  nameWithType: IProperty.DefaultValue
+  fullName: Beutl.Engine.IProperty.DefaultValue
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: object? DefaultValue { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: ReadOnly Property DefaultValue As Object
+  overload: Beutl.Engine.IProperty.DefaultValue*
+- uid: Beutl.Engine.IProperty.CurrentValue
+  commentId: P:Beutl.Engine.IProperty.CurrentValue
+  id: CurrentValue
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: CurrentValue
+  nameWithType: IProperty.CurrentValue
+  fullName: Beutl.Engine.IProperty.CurrentValue
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: object? CurrentValue { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Property CurrentValue As Object
+  overload: Beutl.Engine.IProperty.CurrentValue*
+- uid: Beutl.Engine.IProperty.Name
+  commentId: P:Beutl.Engine.IProperty.Name
+  id: Name
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IProperty.Name
+  fullName: Beutl.Engine.IProperty.Name
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: Beutl.Engine.IProperty.Name*
+- uid: Beutl.Engine.IProperty.ValueType
+  commentId: P:Beutl.Engine.IProperty.ValueType
+  id: ValueType
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: ValueType
+  nameWithType: IProperty.ValueType
+  fullName: Beutl.Engine.IProperty.ValueType
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: Type ValueType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property ValueType As Type
+  overload: Beutl.Engine.IProperty.ValueType*
+- uid: Beutl.Engine.IProperty.Animation
+  commentId: P:Beutl.Engine.IProperty.Animation
+  id: Animation
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: Animation
+  nameWithType: IProperty.Animation
+  fullName: Beutl.Engine.IProperty.Animation
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: IAnimation? Animation { get; set; }
+    parameters: []
+    return:
+      type: Beutl.Animation.IAnimation
+    content.vb: Property Animation As IAnimation
+  overload: Beutl.Engine.IProperty.Animation*
+- uid: Beutl.Engine.IProperty.IsAnimatable
+  commentId: P:Beutl.Engine.IProperty.IsAnimatable
+  id: IsAnimatable
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: IsAnimatable
+  nameWithType: IProperty.IsAnimatable
+  fullName: Beutl.Engine.IProperty.IsAnimatable
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: bool IsAnimatable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsAnimatable As Boolean
+  overload: Beutl.Engine.IProperty.IsAnimatable*
+- uid: Beutl.Engine.IProperty.HasLocalValue
+  commentId: P:Beutl.Engine.IProperty.HasLocalValue
+  id: HasLocalValue
+  parent: Beutl.Engine.IProperty
+  langs:
+  - csharp
+  - vb
+  name: HasLocalValue
+  nameWithType: IProperty.HasLocalValue
+  fullName: Beutl.Engine.IProperty.HasLocalValue
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/IProperty.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Engine
+  syntax:
+    content: bool HasLocalValue { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property HasLocalValue As Boolean
+  overload: Beutl.Engine.IProperty.HasLocalValue*
+references:
+- uid: Beutl.Engine
+  commentId: N:Beutl.Engine
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Engine
+  nameWithType: Beutl.Engine
+  fullName: Beutl.Engine
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Engine
+    name: Engine
+    isExternal: true
+    href: Beutl.Engine.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Engine
+    name: Engine
+    isExternal: true
+    href: Beutl.Engine.html
+- uid: Beutl.INotifyEdited.Edited
+  commentId: E:Beutl.INotifyEdited.Edited
+  parent: Beutl.INotifyEdited
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/INotifyEdited.cs
+  name: Edited
+  nameWithType: INotifyEdited.Edited
+  fullName: Beutl.INotifyEdited.Edited
+- uid: Beutl.INotifyEdited
+  commentId: T:Beutl.INotifyEdited
+  parent: Beutl
+  isExternal: true
+  href: Beutl.INotifyEdited.html
+  name: INotifyEdited
+  nameWithType: INotifyEdited
+  fullName: Beutl.INotifyEdited
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.Engine.IProperty.SetPropertyInfo*
+  commentId: Overload:Beutl.Engine.IProperty.SetPropertyInfo
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_SetPropertyInfo_System_Reflection_PropertyInfo_
+  name: SetPropertyInfo
+  nameWithType: IProperty.SetPropertyInfo
+  fullName: Beutl.Engine.IProperty.SetPropertyInfo
+- uid: System.Reflection.PropertyInfo
+  commentId: T:System.Reflection.PropertyInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  name: PropertyInfo
+  nameWithType: PropertyInfo
+  fullName: System.Reflection.PropertyInfo
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: Beutl.Engine.IProperty.GetPropertyInfo*
+  commentId: Overload:Beutl.Engine.IProperty.GetPropertyInfo
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_GetPropertyInfo
+  name: GetPropertyInfo
+  nameWithType: IProperty.GetPropertyInfo
+  fullName: Beutl.Engine.IProperty.GetPropertyInfo
+- uid: Beutl.Engine.IProperty.SetOwnerObject*
+  commentId: Overload:Beutl.Engine.IProperty.SetOwnerObject
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_SetOwnerObject_Beutl_Engine_EngineObject_
+  name: SetOwnerObject
+  nameWithType: IProperty.SetOwnerObject
+  fullName: Beutl.Engine.IProperty.SetOwnerObject
+- uid: Beutl.Engine.EngineObject
+  commentId: T:Beutl.Engine.EngineObject
+  parent: Beutl.Engine
+  isExternal: true
+  href: Beutl.Engine.EngineObject.html
+  name: EngineObject
+  nameWithType: EngineObject
+  fullName: Beutl.Engine.EngineObject
+- uid: Beutl.Engine.IProperty.GetOwnerObject*
+  commentId: Overload:Beutl.Engine.IProperty.GetOwnerObject
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_GetOwnerObject
+  name: GetOwnerObject
+  nameWithType: IProperty.GetOwnerObject
+  fullName: Beutl.Engine.IProperty.GetOwnerObject
+- uid: Beutl.Engine.IProperty.DeserializeValue*
+  commentId: Overload:Beutl.Engine.IProperty.DeserializeValue
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_DeserializeValue_Beutl_Serialization_ICoreSerializationContext_
+  name: DeserializeValue
+  nameWithType: IProperty.DeserializeValue
+  fullName: Beutl.Engine.IProperty.DeserializeValue
+- uid: Beutl.Serialization.ICoreSerializationContext
+  commentId: T:Beutl.Serialization.ICoreSerializationContext
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html
+  name: ICoreSerializationContext
+  nameWithType: ICoreSerializationContext
+  fullName: Beutl.Serialization.ICoreSerializationContext
+- uid: Beutl.Serialization
+  commentId: N:Beutl.Serialization
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Serialization
+  nameWithType: Beutl.Serialization
+  fullName: Beutl.Serialization
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Serialization
+    name: Serialization
+    isExternal: true
+    href: Beutl.Serialization.html
+- uid: Beutl.Engine.IProperty.SerializeValue*
+  commentId: Overload:Beutl.Engine.IProperty.SerializeValue
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_SerializeValue_Beutl_Serialization_ICoreSerializationContext_
+  name: SerializeValue
+  nameWithType: IProperty.SerializeValue
+  fullName: Beutl.Engine.IProperty.SerializeValue
+- uid: Beutl.Engine.IProperty.CreateValidator*
+  commentId: Overload:Beutl.Engine.IProperty.CreateValidator
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_CreateValidator_System_Reflection_PropertyInfo_
+  name: CreateValidator
+  nameWithType: IProperty.CreateValidator
+  fullName: Beutl.Engine.IProperty.CreateValidator
+- uid: Beutl.Validation.IValidator
+  commentId: T:Beutl.Validation.IValidator
+  parent: Beutl.Validation
+  isExternal: true
+  href: Beutl.Validation.IValidator.html
+  name: IValidator
+  nameWithType: IValidator
+  fullName: Beutl.Validation.IValidator
+- uid: Beutl.Validation
+  commentId: N:Beutl.Validation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Validation
+  nameWithType: Beutl.Validation
+  fullName: Beutl.Validation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Validation
+    name: Validation
+    isExternal: true
+    href: Beutl.Validation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Validation
+    name: Validation
+    isExternal: true
+    href: Beutl.Validation.html
+- uid: Beutl.Engine.IProperty.SetValidator*
+  commentId: Overload:Beutl.Engine.IProperty.SetValidator
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_SetValidator_Beutl_Validation_IValidator_
+  name: SetValidator
+  nameWithType: IProperty.SetValidator
+  fullName: Beutl.Engine.IProperty.SetValidator
+- uid: Beutl.Engine.IProperty.DefaultValue*
+  commentId: Overload:Beutl.Engine.IProperty.DefaultValue
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_DefaultValue
+  name: DefaultValue
+  nameWithType: IProperty.DefaultValue
+  fullName: Beutl.Engine.IProperty.DefaultValue
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Engine.IProperty.CurrentValue*
+  commentId: Overload:Beutl.Engine.IProperty.CurrentValue
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_CurrentValue
+  name: CurrentValue
+  nameWithType: IProperty.CurrentValue
+  fullName: Beutl.Engine.IProperty.CurrentValue
+- uid: Beutl.Engine.IProperty.Name*
+  commentId: Overload:Beutl.Engine.IProperty.Name
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_Name
+  name: Name
+  nameWithType: IProperty.Name
+  fullName: Beutl.Engine.IProperty.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Engine.IProperty.ValueType*
+  commentId: Overload:Beutl.Engine.IProperty.ValueType
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_ValueType
+  name: ValueType
+  nameWithType: IProperty.ValueType
+  fullName: Beutl.Engine.IProperty.ValueType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Beutl.Engine.IProperty.Animation*
+  commentId: Overload:Beutl.Engine.IProperty.Animation
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_Animation
+  name: Animation
+  nameWithType: IProperty.Animation
+  fullName: Beutl.Engine.IProperty.Animation
+- uid: Beutl.Animation.IAnimation
+  commentId: T:Beutl.Animation.IAnimation
+  parent: Beutl.Animation
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  name: IAnimation
+  nameWithType: IAnimation
+  fullName: Beutl.Animation.IAnimation
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+- uid: Beutl.Engine.IProperty.IsAnimatable*
+  commentId: Overload:Beutl.Engine.IProperty.IsAnimatable
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_IsAnimatable
+  name: IsAnimatable
+  nameWithType: IProperty.IsAnimatable
+  fullName: Beutl.Engine.IProperty.IsAnimatable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Engine.IProperty.HasLocalValue*
+  commentId: Overload:Beutl.Engine.IProperty.HasLocalValue
+  isExternal: true
+  href: Beutl.Engine.IProperty.html#Beutl_Engine_IProperty_HasLocalValue
+  name: HasLocalValue
+  nameWithType: IProperty.HasLocalValue
+  fullName: Beutl.Engine.IProperty.HasLocalValue

@@ -1,0 +1,960 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.Cmyk
+  commentId: T:Beutl.Media.Cmyk
+  id: Cmyk
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.Cmyk.#ctor(Beutl.Media.Color)
+  - Beutl.Media.Cmyk.#ctor(Beutl.Media.Hsv)
+  - Beutl.Media.Cmyk.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single)
+  - Beutl.Media.Cmyk.A
+  - Beutl.Media.Cmyk.C
+  - Beutl.Media.Cmyk.Equals(Beutl.Media.Cmyk)
+  - Beutl.Media.Cmyk.Equals(System.Object)
+  - Beutl.Media.Cmyk.GetHashCode
+  - Beutl.Media.Cmyk.K
+  - Beutl.Media.Cmyk.M
+  - Beutl.Media.Cmyk.ToColor
+  - Beutl.Media.Cmyk.ToHsv
+  - Beutl.Media.Cmyk.Y
+  - Beutl.Media.Cmyk.op_Equality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  - Beutl.Media.Cmyk.op_Inequality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  langs:
+  - csharp
+  - vb
+  name: Cmyk
+  nameWithType: Cmyk
+  fullName: Beutl.Media.Cmyk
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: 'public readonly struct Cmyk : IEquatable<Cmyk>'
+    content.vb: Public Structure Cmyk Implements IEquatable(Of Cmyk)
+  implements:
+  - System.IEquatable{Beutl.Media.Cmyk}
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Media.Cmyk.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Beutl.Media.Cmyk.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single,System.Single,System.Single)'
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: Cmyk(float, float, float, float, float)
+  nameWithType: Cmyk.Cmyk(float, float, float, float, float)
+  fullName: Beutl.Media.Cmyk.Cmyk(float, float, float, float, float)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Cmyk(float c, float m, float y, float k, float a)
+    parameters:
+    - id: c
+      type: System.Single
+    - id: m
+      type: System.Single
+    - id: y
+      type: System.Single
+    - id: k
+      type: System.Single
+    - id: a
+      type: System.Single
+    content.vb: Public Sub New(c As Single, m As Single, y As Single, k As Single, a As Single)
+  overload: Beutl.Media.Cmyk.#ctor*
+  nameWithType.vb: Cmyk.New(Single, Single, Single, Single, Single)
+  fullName.vb: Beutl.Media.Cmyk.New(Single, Single, Single, Single, Single)
+  name.vb: New(Single, Single, Single, Single, Single)
+- uid: Beutl.Media.Cmyk.#ctor(Beutl.Media.Color)
+  commentId: M:Beutl.Media.Cmyk.#ctor(Beutl.Media.Color)
+  id: '#ctor(Beutl.Media.Color)'
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: Cmyk(Color)
+  nameWithType: Cmyk.Cmyk(Color)
+  fullName: Beutl.Media.Cmyk.Cmyk(Beutl.Media.Color)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Cmyk(Color rgb)
+    parameters:
+    - id: rgb
+      type: Beutl.Media.Color
+    content.vb: Public Sub New(rgb As Color)
+  overload: Beutl.Media.Cmyk.#ctor*
+  nameWithType.vb: Cmyk.New(Color)
+  fullName.vb: Beutl.Media.Cmyk.New(Beutl.Media.Color)
+  name.vb: New(Color)
+- uid: Beutl.Media.Cmyk.#ctor(Beutl.Media.Hsv)
+  commentId: M:Beutl.Media.Cmyk.#ctor(Beutl.Media.Hsv)
+  id: '#ctor(Beutl.Media.Hsv)'
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: Cmyk(Hsv)
+  nameWithType: Cmyk.Cmyk(Hsv)
+  fullName: Beutl.Media.Cmyk.Cmyk(Beutl.Media.Hsv)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Cmyk(Hsv hsv)
+    parameters:
+    - id: hsv
+      type: Beutl.Media.Hsv
+    content.vb: Public Sub New(hsv As Hsv)
+  overload: Beutl.Media.Cmyk.#ctor*
+  nameWithType.vb: Cmyk.New(Hsv)
+  fullName.vb: Beutl.Media.Cmyk.New(Beutl.Media.Hsv)
+  name.vb: New(Hsv)
+- uid: Beutl.Media.Cmyk.op_Equality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  commentId: M:Beutl.Media.Cmyk.op_Equality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  id: op_Equality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Cmyk, Cmyk)
+  nameWithType: Cmyk.operator ==(Cmyk, Cmyk)
+  fullName: Beutl.Media.Cmyk.operator ==(Beutl.Media.Cmyk, Beutl.Media.Cmyk)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator ==(Cmyk left, Cmyk right)
+    parameters:
+    - id: left
+      type: Beutl.Media.Cmyk
+    - id: right
+      type: Beutl.Media.Cmyk
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Cmyk, right As Cmyk) As Boolean
+  overload: Beutl.Media.Cmyk.op_Equality*
+  nameWithType.vb: Cmyk.=(Cmyk, Cmyk)
+  fullName.vb: Beutl.Media.Cmyk.=(Beutl.Media.Cmyk, Beutl.Media.Cmyk)
+  name.vb: =(Cmyk, Cmyk)
+- uid: Beutl.Media.Cmyk.op_Inequality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  commentId: M:Beutl.Media.Cmyk.op_Inequality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  id: op_Inequality(Beutl.Media.Cmyk,Beutl.Media.Cmyk)
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Cmyk, Cmyk)
+  nameWithType: Cmyk.operator !=(Cmyk, Cmyk)
+  fullName: Beutl.Media.Cmyk.operator !=(Beutl.Media.Cmyk, Beutl.Media.Cmyk)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public static bool operator !=(Cmyk left, Cmyk right)
+    parameters:
+    - id: left
+      type: Beutl.Media.Cmyk
+    - id: right
+      type: Beutl.Media.Cmyk
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Cmyk, right As Cmyk) As Boolean
+  overload: Beutl.Media.Cmyk.op_Inequality*
+  nameWithType.vb: Cmyk.<>(Cmyk, Cmyk)
+  fullName.vb: Beutl.Media.Cmyk.<>(Beutl.Media.Cmyk, Beutl.Media.Cmyk)
+  name.vb: <>(Cmyk, Cmyk)
+- uid: Beutl.Media.Cmyk.ToColor
+  commentId: M:Beutl.Media.Cmyk.ToColor
+  id: ToColor
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: ToColor()
+  nameWithType: Cmyk.ToColor()
+  fullName: Beutl.Media.Cmyk.ToColor()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Color ToColor()
+    return:
+      type: Beutl.Media.Color
+    content.vb: Public Function ToColor() As Color
+  overload: Beutl.Media.Cmyk.ToColor*
+- uid: Beutl.Media.Cmyk.ToHsv
+  commentId: M:Beutl.Media.Cmyk.ToHsv
+  id: ToHsv
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: ToHsv()
+  nameWithType: Cmyk.ToHsv()
+  fullName: Beutl.Media.Cmyk.ToHsv()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public Hsv ToHsv()
+    return:
+      type: Beutl.Media.Hsv
+    content.vb: Public Function ToHsv() As Hsv
+  overload: Beutl.Media.Cmyk.ToHsv*
+- uid: Beutl.Media.Cmyk.Equals(System.Object)
+  commentId: M:Beutl.Media.Cmyk.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: Cmyk.Equals(object?)
+  fullName: Beutl.Media.Cmyk.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Media.Cmyk.Equals*
+  nameWithType.vb: Cmyk.Equals(Object)
+  fullName.vb: Beutl.Media.Cmyk.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Media.Cmyk.Equals(Beutl.Media.Cmyk)
+  commentId: M:Beutl.Media.Cmyk.Equals(Beutl.Media.Cmyk)
+  id: Equals(Beutl.Media.Cmyk)
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: Equals(Cmyk)
+  nameWithType: Cmyk.Equals(Cmyk)
+  fullName: Beutl.Media.Cmyk.Equals(Beutl.Media.Cmyk)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public bool Equals(Cmyk other)
+    parameters:
+    - id: other
+      type: Beutl.Media.Cmyk
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Cmyk) As Boolean
+  overload: Beutl.Media.Cmyk.Equals*
+  implements:
+  - System.IEquatable{Beutl.Media.Cmyk}.Equals(Beutl.Media.Cmyk)
+- uid: Beutl.Media.Cmyk.GetHashCode
+  commentId: M:Beutl.Media.Cmyk.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Cmyk.GetHashCode()
+  fullName: Beutl.Media.Cmyk.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Media.Cmyk.GetHashCode*
+- uid: Beutl.Media.Cmyk.C
+  commentId: P:Beutl.Media.Cmyk.C
+  id: C
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: C
+  nameWithType: Cmyk.C
+  fullName: Beutl.Media.Cmyk.C
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float C { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property C As Single
+  overload: Beutl.Media.Cmyk.C*
+- uid: Beutl.Media.Cmyk.M
+  commentId: P:Beutl.Media.Cmyk.M
+  id: M
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: M
+  nameWithType: Cmyk.M
+  fullName: Beutl.Media.Cmyk.M
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float M { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property M As Single
+  overload: Beutl.Media.Cmyk.M*
+- uid: Beutl.Media.Cmyk.Y
+  commentId: P:Beutl.Media.Cmyk.Y
+  id: Y
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: Cmyk.Y
+  fullName: Beutl.Media.Cmyk.Y
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float Y { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Y As Single
+  overload: Beutl.Media.Cmyk.Y*
+- uid: Beutl.Media.Cmyk.K
+  commentId: P:Beutl.Media.Cmyk.K
+  id: K
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: K
+  nameWithType: Cmyk.K
+  fullName: Beutl.Media.Cmyk.K
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float K { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property K As Single
+  overload: Beutl.Media.Cmyk.K*
+- uid: Beutl.Media.Cmyk.A
+  commentId: P:Beutl.Media.Cmyk.A
+  id: A
+  parent: Beutl.Media.Cmyk
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: Cmyk.A
+  fullName: Beutl.Media.Cmyk.A
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Cmyk.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: public float A { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property A As Single
+  overload: Beutl.Media.Cmyk.A*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: System.IEquatable{Beutl.Media.Cmyk}
+  commentId: T:System.IEquatable{Beutl.Media.Cmyk}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Cmyk>
+  nameWithType: IEquatable<Cmyk>
+  fullName: System.IEquatable<Beutl.Media.Cmyk>
+  nameWithType.vb: IEquatable(Of Cmyk)
+  fullName.vb: System.IEquatable(Of Beutl.Media.Cmyk)
+  name.vb: IEquatable(Of Cmyk)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Media.Cmyk
+    name: Cmyk
+    isExternal: true
+    href: Beutl.Media.Cmyk.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Cmyk
+    name: Cmyk
+    isExternal: true
+    href: Beutl.Media.Cmyk.html
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Media.Cmyk.#ctor*
+  commentId: Overload:Beutl.Media.Cmyk.#ctor
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: Cmyk
+  nameWithType: Cmyk.Cmyk
+  fullName: Beutl.Media.Cmyk.Cmyk
+  nameWithType.vb: Cmyk.New
+  fullName.vb: Beutl.Media.Cmyk.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Media.Color
+  commentId: T:Beutl.Media.Color
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: Beutl.Media.Color
+- uid: Beutl.Media.Hsv
+  commentId: T:Beutl.Media.Hsv
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Hsv.html
+  name: Hsv
+  nameWithType: Hsv
+  fullName: Beutl.Media.Hsv
+- uid: Beutl.Media.Cmyk.op_Equality*
+  commentId: Overload:Beutl.Media.Cmyk.op_Equality
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_op_Equality_Beutl_Media_Cmyk_Beutl_Media_Cmyk_
+  name: operator ==
+  nameWithType: Cmyk.operator ==
+  fullName: Beutl.Media.Cmyk.operator ==
+  nameWithType.vb: Cmyk.=
+  fullName.vb: Beutl.Media.Cmyk.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.Cmyk.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_op_Equality_Beutl_Media_Cmyk_Beutl_Media_Cmyk_
+- uid: Beutl.Media.Cmyk
+  commentId: T:Beutl.Media.Cmyk
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Cmyk.html
+  name: Cmyk
+  nameWithType: Cmyk
+  fullName: Beutl.Media.Cmyk
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Media.Cmyk.op_Inequality*
+  commentId: Overload:Beutl.Media.Cmyk.op_Inequality
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_op_Inequality_Beutl_Media_Cmyk_Beutl_Media_Cmyk_
+  name: operator !=
+  nameWithType: Cmyk.operator !=
+  fullName: Beutl.Media.Cmyk.operator !=
+  nameWithType.vb: Cmyk.<>
+  fullName.vb: Beutl.Media.Cmyk.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Media.Cmyk.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_op_Inequality_Beutl_Media_Cmyk_Beutl_Media_Cmyk_
+- uid: Beutl.Media.Cmyk.ToColor*
+  commentId: Overload:Beutl.Media.Cmyk.ToColor
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_ToColor
+  name: ToColor
+  nameWithType: Cmyk.ToColor
+  fullName: Beutl.Media.Cmyk.ToColor
+- uid: Beutl.Media.Cmyk.ToHsv*
+  commentId: Overload:Beutl.Media.Cmyk.ToHsv
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_ToHsv
+  name: ToHsv
+  nameWithType: Cmyk.ToHsv
+  fullName: Beutl.Media.Cmyk.ToHsv
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Media.Cmyk.Equals*
+  commentId: Overload:Beutl.Media.Cmyk.Equals
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_Equals_System_Object_
+  name: Equals
+  nameWithType: Cmyk.Equals
+  fullName: Beutl.Media.Cmyk.Equals
+- uid: System.IEquatable{Beutl.Media.Cmyk}.Equals(Beutl.Media.Cmyk)
+  commentId: M:System.IEquatable{Beutl.Media.Cmyk}.Equals(Beutl.Media.Cmyk)
+  parent: System.IEquatable{Beutl.Media.Cmyk}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(Cmyk)
+  nameWithType: IEquatable<Cmyk>.Equals(Cmyk)
+  fullName: System.IEquatable<Beutl.Media.Cmyk>.Equals(Beutl.Media.Cmyk)
+  nameWithType.vb: IEquatable(Of Cmyk).Equals(Cmyk)
+  fullName.vb: System.IEquatable(Of Beutl.Media.Cmyk).Equals(Beutl.Media.Cmyk)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Media.Cmyk}.Equals(Beutl.Media.Cmyk)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.Cmyk
+    name: Cmyk
+    isExternal: true
+    href: Beutl.Media.Cmyk.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Media.Cmyk}.Equals(Beutl.Media.Cmyk)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Media.Cmyk
+    name: Cmyk
+    isExternal: true
+    href: Beutl.Media.Cmyk.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Media.Cmyk.GetHashCode*
+  commentId: Overload:Beutl.Media.Cmyk.GetHashCode
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_GetHashCode
+  name: GetHashCode
+  nameWithType: Cmyk.GetHashCode
+  fullName: Beutl.Media.Cmyk.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Beutl.Media.Cmyk.C*
+  commentId: Overload:Beutl.Media.Cmyk.C
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_C
+  name: C
+  nameWithType: Cmyk.C
+  fullName: Beutl.Media.Cmyk.C
+- uid: Beutl.Media.Cmyk.M*
+  commentId: Overload:Beutl.Media.Cmyk.M
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_M
+  name: M
+  nameWithType: Cmyk.M
+  fullName: Beutl.Media.Cmyk.M
+- uid: Beutl.Media.Cmyk.Y*
+  commentId: Overload:Beutl.Media.Cmyk.Y
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_Y
+  name: Y
+  nameWithType: Cmyk.Y
+  fullName: Beutl.Media.Cmyk.Y
+- uid: Beutl.Media.Cmyk.K*
+  commentId: Overload:Beutl.Media.Cmyk.K
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_K
+  name: K
+  nameWithType: Cmyk.K
+  fullName: Beutl.Media.Cmyk.K
+- uid: Beutl.Media.Cmyk.A*
+  commentId: Overload:Beutl.Media.Cmyk.A
+  isExternal: true
+  href: Beutl.Media.Cmyk.html#Beutl_Media_Cmyk_A
+  name: A
+  nameWithType: Cmyk.A
+  fullName: Beutl.Media.Cmyk.A
