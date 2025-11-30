@@ -35,7 +35,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Install DocFX
         run: dotnet tool install -g docfx
@@ -43,8 +43,8 @@ jobs:
       - name: Build Beutl (Release)
         working-directory: beutl
         run: |
-          dotnet restore
-          dotnet build -c Release --no-restore
+          dotnet restore Beutl.slnx
+          dotnet build Beutl.slnx -c Release --no-restore
 
       - name: Generate API Metadata
         working-directory: beutl
@@ -56,8 +56,17 @@ jobs:
               {
                 "src": [
                   {
-                    "files": ["**/*.dll"],
-                    "src": "artifacts/bin"
+                    "files": [
+                      "**/bin/Release/net10.0/Beutl.Core.dll",
+                      "**/bin/Release/net10.0/Beutl.Engine.dll",
+                      "**/bin/Release/net10.0/Beutl.Extensibility.dll",
+                      "**/bin/Release/net10.0/Beutl.ProjectSystem.dll",
+                      "**/bin/Release/net10.0/Beutl.Operators.dll",
+                      "**/bin/Release/net10.0/Beutl.Threading.dll",
+                      "**/bin/Release/net10.0/Beutl.Utilities.dll",
+                      "**/bin/Release/net10.0/Beutl.Configuration.dll"
+                    ],
+                    "src": "src"
                   }
                 ],
                 "dest": "api",
