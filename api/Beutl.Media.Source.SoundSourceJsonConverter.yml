@@ -6,8 +6,8 @@ items:
   parent: Beutl.Media.Source
   children:
   - Beutl.Media.Source.SoundSourceJsonConverter.#ctor
-  - Beutl.Media.Source.SoundSourceJsonConverter.CanConvert(System.Type)
-  - Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance(System.Type)
+  - Beutl.Media.Source.SoundSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  - Beutl.Media.Source.SoundSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
   langs:
   - csharp
   - vb
@@ -16,85 +16,95 @@ items:
   fullName: Beutl.Media.Source.SoundSourceJsonConverter
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: 'public sealed class SoundSourceJsonConverter : FileSourceJsonConverter'
-    content.vb: Public NotInheritable Class SoundSourceJsonConverter Inherits FileSourceJsonConverter
+    content: 'public sealed class SoundSourceJsonConverter : JsonConverter<ISoundSource?>'
+    content.vb: Public NotInheritable Class SoundSourceJsonConverter Inherits JsonConverter(Of ISoundSource)
   inheritance:
   - System.Object
   - System.Text.Json.Serialization.JsonConverter
-  - System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}
-  - Beutl.IO.FileSourceJsonConverter
+  - System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
   inheritedMembers:
-  - Beutl.IO.FileSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-  - Beutl.IO.FileSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-  - System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-  - System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-  - System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.HandleNull
-  - System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.Type
+  - System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.CanConvert(System.Type)
+  - System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  - System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  - System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.HandleNull
+  - System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Type
   - System.Object.GetType
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Media.Source.SoundSourceJsonConverter.CanConvert(System.Type)
-  commentId: M:Beutl.Media.Source.SoundSourceJsonConverter.CanConvert(System.Type)
-  id: CanConvert(System.Type)
+- uid: Beutl.Media.Source.SoundSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  commentId: M:Beutl.Media.Source.SoundSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  id: Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   parent: Beutl.Media.Source.SoundSourceJsonConverter
   langs:
   - csharp
   - vb
-  name: CanConvert(Type)
-  nameWithType: SoundSourceJsonConverter.CanConvert(Type)
-  fullName: Beutl.Media.Source.SoundSourceJsonConverter.CanConvert(System.Type)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: SoundSourceJsonConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Beutl.Media.Source.SoundSourceJsonConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   example: []
   syntax:
-    content: public override bool CanConvert(Type typeToConvert)
+    content: public override ISoundSource? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     parameters:
+    - id: reader
+      type: System.Text.Json.Utf8JsonReader
     - id: typeToConvert
       type: System.Type
+    - id: options
+      type: System.Text.Json.JsonSerializerOptions
     return:
-      type: System.Boolean
-    content.vb: Public Overrides Function CanConvert(typeToConvert As Type) As Boolean
-  overridden: Beutl.IO.FileSourceJsonConverter.CanConvert(System.Type)
-  overload: Beutl.Media.Source.SoundSourceJsonConverter.CanConvert*
-- uid: Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance(System.Type)
-  commentId: M:Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance(System.Type)
-  id: CreateInstance(System.Type)
+      type: Beutl.Media.Source.ISoundSource
+    content.vb: Public Overrides Function Read(reader As Utf8JsonReader, typeToConvert As Type, options As JsonSerializerOptions) As ISoundSource
+  overridden: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  overload: Beutl.Media.Source.SoundSourceJsonConverter.Read*
+  nameWithType.vb: SoundSourceJsonConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Beutl.Media.Source.SoundSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Beutl.Media.Source.SoundSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  commentId: M:Beutl.Media.Source.SoundSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  id: Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
   parent: Beutl.Media.Source.SoundSourceJsonConverter
   langs:
   - csharp
   - vb
-  name: CreateInstance(Type)
-  nameWithType: SoundSourceJsonConverter.CreateInstance(Type)
-  fullName: Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance(System.Type)
+  name: Write(Utf8JsonWriter, ISoundSource?, JsonSerializerOptions)
+  nameWithType: SoundSourceJsonConverter.Write(Utf8JsonWriter, ISoundSource?, JsonSerializerOptions)
+  fullName: Beutl.Media.Source.SoundSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter, Beutl.Media.Source.ISoundSource?, System.Text.Json.JsonSerializerOptions)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   example: []
   syntax:
-    content: public override IFileSource? CreateInstance(Type typeToConvert)
+    content: public override void Write(Utf8JsonWriter writer, ISoundSource? value, JsonSerializerOptions options)
     parameters:
-    - id: typeToConvert
-      type: System.Type
-    return:
-      type: Beutl.IO.IFileSource
-    content.vb: Public Overrides Function CreateInstance(typeToConvert As Type) As IFileSource
-  overridden: Beutl.IO.FileSourceJsonConverter.CreateInstance(System.Type)
-  overload: Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance*
+    - id: writer
+      type: System.Text.Json.Utf8JsonWriter
+    - id: value
+      type: Beutl.Media.Source.ISoundSource
+    - id: options
+      type: System.Text.Json.JsonSerializerOptions
+    content.vb: Public Overrides Sub Write(writer As Utf8JsonWriter, value As ISoundSource, options As JsonSerializerOptions)
+  overridden: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  overload: Beutl.Media.Source.SoundSourceJsonConverter.Write*
+  nameWithType.vb: SoundSourceJsonConverter.Write(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
+  fullName.vb: Beutl.Media.Source.SoundSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter, Beutl.Media.Source.ISoundSource, System.Text.Json.JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
 - uid: Beutl.Media.Source.SoundSourceJsonConverter.#ctor
   commentId: M:Beutl.Media.Source.SoundSourceJsonConverter.#ctor
   id: '#ctor'
@@ -107,7 +117,7 @@ items:
   fullName: Beutl.Media.Source.SoundSourceJsonConverter.SoundSourceJsonConverter()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSourceJsonConverter.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -175,27 +185,27 @@ references:
   name: JsonConverter
   nameWithType: JsonConverter
   fullName: System.Text.Json.Serialization.JsonConverter
-- uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}
-  commentId: T:System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
+  commentId: T:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
   parent: System.Text.Json.Serialization
   definition: System.Text.Json.Serialization.JsonConverter`1
   href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1
-  name: JsonConverter<IFileSource>
-  nameWithType: JsonConverter<IFileSource>
-  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.IO.IFileSource>
-  nameWithType.vb: JsonConverter(Of IFileSource)
-  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.IO.IFileSource)
-  name.vb: JsonConverter(Of IFileSource)
+  name: JsonConverter<ISoundSource>
+  nameWithType: JsonConverter<ISoundSource>
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>
+  nameWithType.vb: JsonConverter(Of ISoundSource)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource)
+  name.vb: JsonConverter(Of ISoundSource)
   spec.csharp:
   - uid: System.Text.Json.Serialization.JsonConverter`1
     name: JsonConverter
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1
   - name: <
-  - uid: Beutl.IO.IFileSource
-    name: IFileSource
+  - uid: Beutl.Media.Source.ISoundSource
+    name: ISoundSource
     isExternal: true
-    href: Beutl.IO.IFileSource.html
+    href: Beutl.Media.Source.ISoundSource.html
   - name: '>'
   spec.vb:
   - uid: System.Text.Json.Serialization.JsonConverter`1
@@ -205,145 +215,56 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Beutl.IO.IFileSource
-    name: IFileSource
+  - uid: Beutl.Media.Source.ISoundSource
+    name: ISoundSource
     isExternal: true
-    href: Beutl.IO.IFileSource.html
+    href: Beutl.Media.Source.ISoundSource.html
   - name: )
-- uid: Beutl.IO.FileSourceJsonConverter
-  commentId: T:Beutl.IO.FileSourceJsonConverter
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.FileSourceJsonConverter.html
-  name: FileSourceJsonConverter
-  nameWithType: FileSourceJsonConverter
-  fullName: Beutl.IO.FileSourceJsonConverter
-- uid: Beutl.IO.FileSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-  commentId: M:Beutl.IO.FileSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-  parent: Beutl.IO.FileSourceJsonConverter
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
-  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType: FileSourceJsonConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName: Beutl.IO.FileSourceJsonConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
-  nameWithType.vb: FileSourceJsonConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName.vb: Beutl.IO.FileSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
-  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.CanConvert(System.Type)
+  commentId: M:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.CanConvert(System.Type)
+  parent: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
+  definition: System.Text.Json.Serialization.JsonConverter`1.CanConvert(System.Type)
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert
+  name: CanConvert(Type)
+  nameWithType: JsonConverter<ISoundSource>.CanConvert(Type)
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>.CanConvert(System.Type)
+  nameWithType.vb: JsonConverter(Of ISoundSource).CanConvert(Type)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource).CanConvert(System.Type)
   spec.csharp:
-  - uid: Beutl.IO.FileSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-    name: Read
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.CanConvert(System.Type)
+    name: CanConvert
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert
   - name: (
-  - name: ref
-  - name: " "
-  - uid: System.Text.Json.Utf8JsonReader
-    name: Utf8JsonReader
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader
-  - name: ','
-  - name: " "
   - uid: System.Type
     name: Type
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
-  - name: ','
-  - name: " "
-  - uid: System.Text.Json.JsonSerializerOptions
-    name: JsonSerializerOptions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
   spec.vb:
-  - uid: Beutl.IO.FileSourceJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-    name: Read
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.CanConvert(System.Type)
+    name: CanConvert
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert
   - name: (
-  - uid: System.Text.Json.Utf8JsonReader
-    name: Utf8JsonReader
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader
-  - name: ','
-  - name: " "
   - uid: System.Type
     name: Type
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
-  - name: ','
-  - name: " "
-  - uid: System.Text.Json.JsonSerializerOptions
-    name: JsonSerializerOptions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
-- uid: Beutl.IO.FileSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-  commentId: M:Beutl.IO.FileSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-  parent: Beutl.IO.FileSourceJsonConverter
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
-  name: Write(Utf8JsonWriter, IFileSource, JsonSerializerOptions)
-  nameWithType: FileSourceJsonConverter.Write(Utf8JsonWriter, IFileSource, JsonSerializerOptions)
-  fullName: Beutl.IO.FileSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter, Beutl.IO.IFileSource, System.Text.Json.JsonSerializerOptions)
-  spec.csharp:
-  - uid: Beutl.IO.FileSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-    name: Write
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
-  - name: (
-  - uid: System.Text.Json.Utf8JsonWriter
-    name: Utf8JsonWriter
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
-  - name: ','
-  - name: " "
-  - uid: Beutl.IO.IFileSource
-    name: IFileSource
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/IFileSource.cs
-  - name: ','
-  - name: " "
-  - uid: System.Text.Json.JsonSerializerOptions
-    name: JsonSerializerOptions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
-  - name: )
-  spec.vb:
-  - uid: Beutl.IO.FileSourceJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-    name: Write
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
-  - name: (
-  - uid: System.Text.Json.Utf8JsonWriter
-    name: Utf8JsonWriter
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
-  - name: ','
-  - name: " "
-  - uid: Beutl.IO.IFileSource
-    name: IFileSource
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/IFileSource.cs
-  - name: ','
-  - name: " "
-  - uid: System.Text.Json.JsonSerializerOptions
-    name: JsonSerializerOptions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
-  - name: )
-- uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-  commentId: M:System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
-  parent: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  commentId: M:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  parent: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
   definition: System.Text.Json.Serialization.JsonConverter`1.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.readaspropertyname
   name: ReadAsPropertyName(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType: JsonConverter<IFileSource>.ReadAsPropertyName(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.IO.IFileSource>.ReadAsPropertyName(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
-  nameWithType.vb: JsonConverter(Of IFileSource).ReadAsPropertyName(Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.IO.IFileSource).ReadAsPropertyName(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: JsonConverter<ISoundSource>.ReadAsPropertyName(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>.ReadAsPropertyName(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType.vb: JsonConverter(Of ISoundSource).ReadAsPropertyName(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource).ReadAsPropertyName(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
   name.vb: ReadAsPropertyName(Utf8JsonReader, Type, JsonSerializerOptions)
   spec.csharp:
-  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
     name: ReadAsPropertyName
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.readaspropertyname
@@ -368,7 +289,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
   spec.vb:
-  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
     name: ReadAsPropertyName
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.readaspropertyname
@@ -390,18 +311,18 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
-- uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-  commentId: M:System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
-  parent: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  commentId: M:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  parent: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
   definition: System.Text.Json.Serialization.JsonConverter`1.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
   href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.writeaspropertyname
-  name: WriteAsPropertyName(Utf8JsonWriter, IFileSource, JsonSerializerOptions)
-  nameWithType: JsonConverter<IFileSource>.WriteAsPropertyName(Utf8JsonWriter, IFileSource, JsonSerializerOptions)
-  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.IO.IFileSource>.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter, Beutl.IO.IFileSource, System.Text.Json.JsonSerializerOptions)
-  nameWithType.vb: JsonConverter(Of IFileSource).WriteAsPropertyName(Utf8JsonWriter, IFileSource, JsonSerializerOptions)
-  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.IO.IFileSource).WriteAsPropertyName(System.Text.Json.Utf8JsonWriter, Beutl.IO.IFileSource, System.Text.Json.JsonSerializerOptions)
+  name: WriteAsPropertyName(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
+  nameWithType: JsonConverter<ISoundSource>.WriteAsPropertyName(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter, Beutl.Media.Source.ISoundSource, System.Text.Json.JsonSerializerOptions)
+  nameWithType.vb: JsonConverter(Of ISoundSource).WriteAsPropertyName(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource).WriteAsPropertyName(System.Text.Json.Utf8JsonWriter, Beutl.Media.Source.ISoundSource, System.Text.Json.JsonSerializerOptions)
   spec.csharp:
-  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
     name: WriteAsPropertyName
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.writeaspropertyname
@@ -412,10 +333,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: ','
   - name: " "
-  - uid: Beutl.IO.IFileSource
-    name: IFileSource
+  - uid: Beutl.Media.Source.ISoundSource
+    name: ISoundSource
     isExternal: true
-    href: Beutl.IO.IFileSource.html
+    href: Beutl.Media.Source.ISoundSource.html
   - name: ','
   - name: " "
   - uid: System.Text.Json.JsonSerializerOptions
@@ -424,7 +345,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
   spec.vb:
-  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.IO.IFileSource,System.Text.Json.JsonSerializerOptions)
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.WriteAsPropertyName(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
     name: WriteAsPropertyName
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.writeaspropertyname
@@ -435,10 +356,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: ','
   - name: " "
-  - uid: Beutl.IO.IFileSource
-    name: IFileSource
+  - uid: Beutl.Media.Source.ISoundSource
+    name: ISoundSource
     isExternal: true
-    href: Beutl.IO.IFileSource.html
+    href: Beutl.Media.Source.ISoundSource.html
   - name: ','
   - name: " "
   - uid: System.Text.Json.JsonSerializerOptions
@@ -446,26 +367,26 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
-- uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.HandleNull
-  commentId: P:System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.HandleNull
-  parent: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.HandleNull
+  commentId: P:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.HandleNull
+  parent: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
   definition: System.Text.Json.Serialization.JsonConverter`1.HandleNull
   href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.handlenull
   name: HandleNull
-  nameWithType: JsonConverter<IFileSource>.HandleNull
-  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.IO.IFileSource>.HandleNull
-  nameWithType.vb: JsonConverter(Of IFileSource).HandleNull
-  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.IO.IFileSource).HandleNull
-- uid: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.Type
-  commentId: P:System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}.Type
-  parent: System.Text.Json.Serialization.JsonConverter{Beutl.IO.IFileSource}
+  nameWithType: JsonConverter<ISoundSource>.HandleNull
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>.HandleNull
+  nameWithType.vb: JsonConverter(Of ISoundSource).HandleNull
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource).HandleNull
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Type
+  commentId: P:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Type
+  parent: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
   definition: System.Text.Json.Serialization.JsonConverter`1.Type
   href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.type
   name: Type
-  nameWithType: JsonConverter<IFileSource>.Type
-  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.IO.IFileSource>.Type
-  nameWithType.vb: JsonConverter(Of IFileSource).Type
-  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.IO.IFileSource).Type
+  nameWithType: JsonConverter<ISoundSource>.Type
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>.Type
+  nameWithType.vb: JsonConverter(Of ISoundSource).Type
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource).Type
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -743,33 +664,37 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
+- uid: System.Text.Json.Serialization.JsonConverter`1.CanConvert(System.Type)
+  commentId: M:System.Text.Json.Serialization.JsonConverter`1.CanConvert(System.Type)
   isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert
+  name: CanConvert(Type)
+  nameWithType: JsonConverter<T>.CanConvert(Type)
+  fullName: System.Text.Json.Serialization.JsonConverter<T>.CanConvert(System.Type)
+  nameWithType.vb: JsonConverter(Of T).CanConvert(Type)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of T).CanConvert(System.Type)
   spec.csharp:
-  - uid: Beutl
-    name: Beutl
+  - uid: System.Text.Json.Serialization.JsonConverter`1.CanConvert(System.Type)
+    name: CanConvert
     isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert
+  - name: (
+  - uid: System.Type
+    name: Type
     isExternal: true
-    href: Beutl.IO.html
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
   spec.vb:
-  - uid: Beutl
-    name: Beutl
+  - uid: System.Text.Json.Serialization.JsonConverter`1.CanConvert(System.Type)
+    name: CanConvert
     isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert
+  - name: (
+  - uid: System.Type
+    name: Type
     isExternal: true
-    href: Beutl.IO.html
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
 - uid: System.Text.Json.Serialization.JsonConverter`1.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   commentId: M:System.Text.Json.Serialization.JsonConverter`1.ReadAsPropertyName(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   isExternal: true
@@ -895,43 +820,80 @@ references:
   fullName: System.Text.Json.Serialization.JsonConverter<T>.Type
   nameWithType.vb: JsonConverter(Of T).Type
   fullName.vb: System.Text.Json.Serialization.JsonConverter(Of T).Type
-- uid: Beutl.IO.FileSourceJsonConverter.CanConvert(System.Type)
-  commentId: M:Beutl.IO.FileSourceJsonConverter.CanConvert(System.Type)
-  parent: Beutl.IO.FileSourceJsonConverter
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
-  name: CanConvert(Type)
-  nameWithType: FileSourceJsonConverter.CanConvert(Type)
-  fullName: Beutl.IO.FileSourceJsonConverter.CanConvert(System.Type)
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  commentId: M:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  parent: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
+  definition: System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.read
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: JsonConverter<ISoundSource>.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType.vb: JsonConverter(Of ISoundSource).Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource).Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
   spec.csharp:
-  - uid: Beutl.IO.FileSourceJsonConverter.CanConvert(System.Type)
-    name: CanConvert
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+    name: Read
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.read
   - name: (
+  - name: ref
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonReader
+    name: Utf8JsonReader
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader
+  - name: ','
+  - name: " "
   - uid: System.Type
     name: Type
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
   spec.vb:
-  - uid: Beutl.IO.FileSourceJsonConverter.CanConvert(System.Type)
-    name: CanConvert
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+    name: Read
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.read
   - name: (
+  - uid: System.Text.Json.Utf8JsonReader
+    name: Utf8JsonReader
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader
+  - name: ','
+  - name: " "
   - uid: System.Type
     name: Type
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
-- uid: Beutl.Media.Source.SoundSourceJsonConverter.CanConvert*
-  commentId: Overload:Beutl.Media.Source.SoundSourceJsonConverter.CanConvert
+- uid: Beutl.Media.Source.SoundSourceJsonConverter.Read*
+  commentId: Overload:Beutl.Media.Source.SoundSourceJsonConverter.Read
   isExternal: true
-  href: Beutl.Media.Source.SoundSourceJsonConverter.html#Beutl_Media_Source_SoundSourceJsonConverter_CanConvert_System_Type_
-  name: CanConvert
-  nameWithType: SoundSourceJsonConverter.CanConvert
-  fullName: Beutl.Media.Source.SoundSourceJsonConverter.CanConvert
+  href: Beutl.Media.Source.SoundSourceJsonConverter.html#Beutl_Media_Source_SoundSourceJsonConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  name: Read
+  nameWithType: SoundSourceJsonConverter.Read
+  fullName: Beutl.Media.Source.SoundSourceJsonConverter.Read
+- uid: System.Text.Json.Utf8JsonReader
+  commentId: T:System.Text.Json.Utf8JsonReader
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader
+  name: Utf8JsonReader
+  nameWithType: Utf8JsonReader
+  fullName: System.Text.Json.Utf8JsonReader
 - uid: System.Type
   commentId: T:System.Type
   parent: System
@@ -940,62 +902,237 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+- uid: System.Text.Json.JsonSerializerOptions
+  commentId: T:System.Text.Json.JsonSerializerOptions
+  parent: System.Text.Json
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: Beutl.IO.FileSourceJsonConverter.CreateInstance(System.Type)
-  commentId: M:Beutl.IO.FileSourceJsonConverter.CreateInstance(System.Type)
-  parent: Beutl.IO.FileSourceJsonConverter
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  name: JsonSerializerOptions
+  nameWithType: JsonSerializerOptions
+  fullName: System.Text.Json.JsonSerializerOptions
+- uid: Beutl.Media.Source.ISoundSource
+  commentId: T:Beutl.Media.Source.ISoundSource
+  parent: Beutl.Media.Source
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
-  name: CreateInstance(Type)
-  nameWithType: FileSourceJsonConverter.CreateInstance(Type)
-  fullName: Beutl.IO.FileSourceJsonConverter.CreateInstance(System.Type)
+  href: Beutl.Media.Source.ISoundSource.html
+  name: ISoundSource
+  nameWithType: ISoundSource
+  fullName: Beutl.Media.Source.ISoundSource
+- uid: System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  commentId: M:System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.read
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: JsonConverter<T>.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: System.Text.Json.Serialization.JsonConverter<T>.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType.vb: JsonConverter(Of T).Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of T).Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
   spec.csharp:
-  - uid: Beutl.IO.FileSourceJsonConverter.CreateInstance(System.Type)
-    name: CreateInstance
+  - uid: System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+    name: Read
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.read
   - name: (
+  - name: ref
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonReader
+    name: Utf8JsonReader
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader
+  - name: ','
+  - name: " "
   - uid: System.Type
     name: Type
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
   spec.vb:
-  - uid: Beutl.IO.FileSourceJsonConverter.CreateInstance(System.Type)
-    name: CreateInstance
+  - uid: System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+    name: Read
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IO/FileSourceJsonConverter.cs
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.read
   - name: (
+  - uid: System.Text.Json.Utf8JsonReader
+    name: Utf8JsonReader
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader
+  - name: ','
+  - name: " "
   - uid: System.Type
     name: Type
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
   - name: )
-- uid: Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance*
-  commentId: Overload:Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
   isExternal: true
-  href: Beutl.Media.Source.SoundSourceJsonConverter.html#Beutl_Media_Source_SoundSourceJsonConverter_CreateInstance_System_Type_
-  name: CreateInstance
-  nameWithType: SoundSourceJsonConverter.CreateInstance
-  fullName: Beutl.Media.Source.SoundSourceJsonConverter.CreateInstance
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+- uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  commentId: M:System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+  parent: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}
+  definition: System.Text.Json.Serialization.JsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.write
+  name: Write(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
+  nameWithType: JsonConverter<ISoundSource>.Write(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
+  fullName: System.Text.Json.Serialization.JsonConverter<Beutl.Media.Source.ISoundSource>.Write(System.Text.Json.Utf8JsonWriter, Beutl.Media.Source.ISoundSource, System.Text.Json.JsonSerializerOptions)
+  nameWithType.vb: JsonConverter(Of ISoundSource).Write(Utf8JsonWriter, ISoundSource, JsonSerializerOptions)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of Beutl.Media.Source.ISoundSource).Write(System.Text.Json.Utf8JsonWriter, Beutl.Media.Source.ISoundSource, System.Text.Json.JsonSerializerOptions)
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+    name: Write
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.write
+  - name: (
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Source.ISoundSource
+    name: ISoundSource
+    isExternal: true
+    href: Beutl.Media.Source.ISoundSource.html
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: )
+  spec.vb:
+  - uid: System.Text.Json.Serialization.JsonConverter{Beutl.Media.Source.ISoundSource}.Write(System.Text.Json.Utf8JsonWriter,Beutl.Media.Source.ISoundSource,System.Text.Json.JsonSerializerOptions)
+    name: Write
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.write
+  - name: (
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: Beutl.Media.Source.ISoundSource
+    name: ISoundSource
+    isExternal: true
+    href: Beutl.Media.Source.ISoundSource.html
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: )
+- uid: Beutl.Media.Source.SoundSourceJsonConverter.Write*
+  commentId: Overload:Beutl.Media.Source.SoundSourceJsonConverter.Write
   isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
+  href: Beutl.Media.Source.SoundSourceJsonConverter.html#Beutl_Media_Source_SoundSourceJsonConverter_Write_System_Text_Json_Utf8JsonWriter_Beutl_Media_Source_ISoundSource_System_Text_Json_JsonSerializerOptions_
+  name: Write
+  nameWithType: SoundSourceJsonConverter.Write
+  fullName: Beutl.Media.Source.SoundSourceJsonConverter.Write
+- uid: System.Text.Json.Utf8JsonWriter
+  commentId: T:System.Text.Json.Utf8JsonWriter
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  name: Utf8JsonWriter
+  nameWithType: Utf8JsonWriter
+  fullName: System.Text.Json.Utf8JsonWriter
+- uid: System.Text.Json.Serialization.JsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
+  commentId: M:System.Text.Json.Serialization.JsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.write
+  name: Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  nameWithType: JsonConverter<T>.Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  fullName: System.Text.Json.Serialization.JsonConverter<T>.Write(System.Text.Json.Utf8JsonWriter, T, System.Text.Json.JsonSerializerOptions)
+  nameWithType.vb: JsonConverter(Of T).Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  fullName.vb: System.Text.Json.Serialization.JsonConverter(Of T).Write(System.Text.Json.Utf8JsonWriter, T, System.Text.Json.JsonSerializerOptions)
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.JsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
+    name: Write
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.write
+  - name: (
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: )
+  spec.vb:
+  - uid: System.Text.Json.Serialization.JsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
+    name: Write
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.write
+  - name: (
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: )
 - uid: Beutl.Media.Source.SoundSourceJsonConverter.#ctor*
   commentId: Overload:Beutl.Media.Source.SoundSourceJsonConverter.#ctor
   isExternal: true

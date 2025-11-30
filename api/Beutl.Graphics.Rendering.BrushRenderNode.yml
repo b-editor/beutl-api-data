@@ -5,10 +5,10 @@ items:
   id: BrushRenderNode
   parent: Beutl.Graphics.Rendering
   children:
-  - Beutl.Graphics.Rendering.BrushRenderNode.#ctor(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.Rendering.BrushRenderNode.#ctor(Beutl.Media.IBrush,Beutl.Media.IPen)
   - Beutl.Graphics.Rendering.BrushRenderNode.Fill
+  - Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
   - Beutl.Graphics.Rendering.BrushRenderNode.Pen
-  - Beutl.Graphics.Rendering.BrushRenderNode.Update(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   fullName: Beutl.Graphics.Rendering.BrushRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -40,9 +40,7 @@ items:
   inheritedMembers:
   - Beutl.Graphics.Rendering.RenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   - Beutl.Graphics.Rendering.RenderNode.Dispose
-  - Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.MemberwiseClone
@@ -51,64 +49,62 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Graphics.Rendering.BrushRenderNode.#ctor(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.Rendering.BrushRenderNode.#ctor(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: '#ctor(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)'
+- uid: Beutl.Graphics.Rendering.BrushRenderNode.#ctor(Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.Rendering.BrushRenderNode.#ctor(Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: '#ctor(Beutl.Media.IBrush,Beutl.Media.IPen)'
   parent: Beutl.Graphics.Rendering.BrushRenderNode
   langs:
   - csharp
   - vb
-  name: BrushRenderNode(Resource?, Resource?)
-  nameWithType: BrushRenderNode.BrushRenderNode(Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.Rendering.BrushRenderNode.BrushRenderNode(Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: BrushRenderNode(IBrush?, IPen?)
+  nameWithType: BrushRenderNode.BrushRenderNode(IBrush?, IPen?)
+  fullName: Beutl.Graphics.Rendering.BrushRenderNode.BrushRenderNode(Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: protected BrushRenderNode(Brush.Resource? fill, Pen.Resource? pen)
+    content: protected BrushRenderNode(IBrush? fill, IPen? pen)
     parameters:
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Protected Sub New(fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Protected Sub New(fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.Rendering.BrushRenderNode.#ctor*
-  nameWithType.vb: BrushRenderNode.New(Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.Rendering.BrushRenderNode.New(Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: New(Resource, Resource)
-- uid: Beutl.Graphics.Rendering.BrushRenderNode.Update(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.Rendering.BrushRenderNode.Update(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: Update(Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: BrushRenderNode.New(IBrush, IPen)
+  fullName.vb: Beutl.Graphics.Rendering.BrushRenderNode.New(Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: New(IBrush, IPen)
+- uid: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
+  commentId: M:Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
+  id: OnDispose(System.Boolean)
   parent: Beutl.Graphics.Rendering.BrushRenderNode
   langs:
   - csharp
   - vb
-  name: Update(Resource?, Resource?)
-  nameWithType: BrushRenderNode.Update(Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.Rendering.BrushRenderNode.Update(Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: OnDispose(bool)
+  nameWithType: BrushRenderNode.OnDispose(bool)
+  fullName: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
+  example: []
   syntax:
-    content: protected bool Update(Brush.Resource? fill, Pen.Resource? pen)
+    content: protected override void OnDispose(bool disposing)
     parameters:
-    - id: fill
-      type: Beutl.Media.Brush.Resource
-    - id: pen
-      type: Beutl.Media.Pen.Resource
-    return:
+    - id: disposing
       type: System.Boolean
-    content.vb: Protected Function Update(fill As Brush.Resource, pen As Pen.Resource) As Boolean
-  overload: Beutl.Graphics.Rendering.BrushRenderNode.Update*
-  nameWithType.vb: BrushRenderNode.Update(Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.Rendering.BrushRenderNode.Update(Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: Update(Resource, Resource)
+    content.vb: Protected Overrides Sub OnDispose(disposing As Boolean)
+  overridden: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+  overload: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose*
+  nameWithType.vb: BrushRenderNode.OnDispose(Boolean)
+  fullName.vb: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(Boolean)
+  name.vb: OnDispose(Boolean)
 - uid: Beutl.Graphics.Rendering.BrushRenderNode.Fill
   commentId: P:Beutl.Graphics.Rendering.BrushRenderNode.Fill
   id: Fill
@@ -121,16 +117,16 @@ items:
   fullName: Beutl.Graphics.Rendering.BrushRenderNode.Fill
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public (Brush.Resource Resource, int Version)? Fill { get; }
+    content: public IBrush? Fill { get; }
     parameters: []
     return:
-      type: System.Nullable{System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}}
-    content.vb: Public ReadOnly Property Fill As (Resource As Brush.Resource, Version As Integer)?
+      type: Beutl.Media.IBrush
+    content.vb: Public ReadOnly Property Fill As IBrush
   overload: Beutl.Graphics.Rendering.BrushRenderNode.Fill*
 - uid: Beutl.Graphics.Rendering.BrushRenderNode.Pen
   commentId: P:Beutl.Graphics.Rendering.BrushRenderNode.Pen
@@ -144,16 +140,16 @@ items:
   fullName: Beutl.Graphics.Rendering.BrushRenderNode.Pen
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/BrushRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public (Pen.Resource Resource, int Version)? Pen { get; }
+    content: public IPen? Pen { get; }
     parameters: []
     return:
-      type: System.Nullable{System.ValueTuple{Beutl.Media.Pen.Resource,System.Int32}}
-    content.vb: Public ReadOnly Property Pen As (Resource As Pen.Resource, Version As Integer)?
+      type: Beutl.Media.IPen
+    content.vb: Public ReadOnly Property Pen As IPen
   overload: Beutl.Graphics.Rendering.BrushRenderNode.Pen*
 references:
 - uid: Beutl.Graphics.Rendering
@@ -280,39 +276,6 @@ references:
     href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_Dispose
   - name: (
   - name: )
-- uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
-  commentId: M:Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
-  name: OnDispose(bool)
-  nameWithType: RenderNode.OnDispose(bool)
-  fullName: Beutl.Graphics.Rendering.RenderNode.OnDispose(bool)
-  nameWithType.vb: RenderNode.OnDispose(Boolean)
-  fullName.vb: Beutl.Graphics.Rendering.RenderNode.OnDispose(Boolean)
-  name.vb: OnDispose(Boolean)
-  spec.csharp:
-  - uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
-    name: OnDispose
-    isExternal: true
-    href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
-  - name: (
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-  spec.vb:
-  - uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
-    name: OnDispose
-    isExternal: true
-    href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
-  - name: (
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
 - uid: Beutl.Graphics.Rendering.RenderNode.IsDisposed
   commentId: P:Beutl.Graphics.Rendering.RenderNode.IsDisposed
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -321,14 +284,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -566,69 +521,29 @@ references:
 - uid: Beutl.Graphics.Rendering.BrushRenderNode.#ctor*
   commentId: Overload:Beutl.Graphics.Rendering.BrushRenderNode.#ctor
   isExternal: true
-  href: Beutl.Graphics.Rendering.BrushRenderNode.html#Beutl_Graphics_Rendering_BrushRenderNode__ctor_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.Rendering.BrushRenderNode.html#Beutl_Graphics_Rendering_BrushRenderNode__ctor_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: BrushRenderNode
   nameWithType: BrushRenderNode.BrushRenderNode
   fullName: Beutl.Graphics.Rendering.BrushRenderNode.BrushRenderNode
   nameWithType.vb: BrushRenderNode.New
   fullName.vb: Beutl.Graphics.Rendering.BrushRenderNode.New
   name.vb: New
-- uid: Beutl.Media.Brush.Resource
-  commentId: T:Beutl.Media.Brush.Resource
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Brush.html
-  name: Brush.Resource
-  nameWithType: Brush.Resource
-  fullName: Beutl.Media.Brush.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-- uid: Beutl.Media.Pen.Resource
-  commentId: T:Beutl.Media.Pen.Resource
+  href: Beutl.Media.IBrush.html
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
+- uid: Beutl.Media.IPen
+  commentId: T:Beutl.Media.IPen
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Pen.html
-  name: Pen.Resource
-  nameWithType: Pen.Resource
-  fullName: Beutl.Media.Pen.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
+  href: Beutl.Media.IPen.html
+  name: IPen
+  nameWithType: IPen
+  fullName: Beutl.Media.IPen
 - uid: Beutl.Media
   commentId: N:Beutl.Media
   isExternal: true
@@ -656,13 +571,46 @@ references:
     name: Media
     isExternal: true
     href: Beutl.Media.html
-- uid: Beutl.Graphics.Rendering.BrushRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.BrushRenderNode.Update
+- uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+  commentId: M:Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+  parent: Beutl.Graphics.Rendering.RenderNode
   isExternal: true
-  href: Beutl.Graphics.Rendering.BrushRenderNode.html#Beutl_Graphics_Rendering_BrushRenderNode_Update_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
-  name: Update
-  nameWithType: BrushRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.BrushRenderNode.Update
+  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
+  name: OnDispose(bool)
+  nameWithType: RenderNode.OnDispose(bool)
+  fullName: Beutl.Graphics.Rendering.RenderNode.OnDispose(bool)
+  nameWithType.vb: RenderNode.OnDispose(Boolean)
+  fullName.vb: Beutl.Graphics.Rendering.RenderNode.OnDispose(Boolean)
+  name.vb: OnDispose(Boolean)
+  spec.csharp:
+  - uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+    name: OnDispose
+    isExternal: true
+    href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+    name: OnDispose
+    isExternal: true
+    href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose*
+  commentId: Overload:Beutl.Graphics.Rendering.BrushRenderNode.OnDispose
+  isExternal: true
+  href: Beutl.Graphics.Rendering.BrushRenderNode.html#Beutl_Graphics_Rendering_BrushRenderNode_OnDispose_System_Boolean_
+  name: OnDispose
+  nameWithType: BrushRenderNode.OnDispose
+  fullName: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -681,107 +629,6 @@ references:
   name: Fill
   nameWithType: BrushRenderNode.Fill
   fullName: Beutl.Graphics.Rendering.BrushRenderNode.Fill
-- uid: System.Nullable{System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}}
-  commentId: T:System.Nullable{System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}}
-  parent: System
-  definition: System.Nullable`1
-  href: Beutl.Media.Brush.html
-  name: (Brush.Resource Resource, int Version)?
-  nameWithType: (Brush.Resource Resource, int Version)?
-  fullName: (Beutl.Media.Brush.Resource Resource, int Version)?
-  nameWithType.vb: (Resource As Brush.Resource, Version As Integer)?
-  fullName.vb: (Resource As Beutl.Media.Brush.Resource, Version As Integer)?
-  name.vb: (Resource As Brush.Resource, Version As Integer)?
-  spec.csharp:
-  - name: (
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.resource
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.version
-  - name: )
-  - name: '?'
-  spec.vb:
-  - name: (
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.resource
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  - name: ','
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.version
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: Beutl.Graphics.Rendering.BrushRenderNode.Pen*
   commentId: Overload:Beutl.Graphics.Rendering.BrushRenderNode.Pen
   isExternal: true
@@ -789,76 +636,3 @@ references:
   name: Pen
   nameWithType: BrushRenderNode.Pen
   fullName: Beutl.Graphics.Rendering.BrushRenderNode.Pen
-- uid: System.Nullable{System.ValueTuple{Beutl.Media.Pen.Resource,System.Int32}}
-  commentId: T:System.Nullable{System.ValueTuple{Beutl.Media.Pen.Resource,System.Int32}}
-  parent: System
-  definition: System.Nullable`1
-  href: Beutl.Media.Pen.html
-  name: (Pen.Resource Resource, int Version)?
-  nameWithType: (Pen.Resource Resource, int Version)?
-  fullName: (Beutl.Media.Pen.Resource Resource, int Version)?
-  nameWithType.vb: (Resource As Pen.Resource, Version As Integer)?
-  fullName.vb: (Resource As Beutl.Media.Pen.Resource, Version As Integer)?
-  name.vb: (Resource As Pen.Resource, Version As Integer)?
-  spec.csharp:
-  - name: (
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Pen.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.pen.resource,system.int32-.resource
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Pen.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.pen.resource,system.int32-.version
-  - name: )
-  - name: '?'
-  spec.vb:
-  - name: (
-  - uid: System.ValueTuple{Beutl.Media.Pen.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.pen.resource,system.int32-.resource
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
-  - name: ','
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Pen.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.pen.resource,system.int32-.version
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  - name: '?'

@@ -24,7 +24,6 @@ items:
   - Beutl.CorePropertyMetadata`1
   - Beutl.CoreProperty`1
   - Beutl.CultureNameValidation
-  - Beutl.ElementEditedEventArgs
   - Beutl.EnumExtensions
   - Beutl.EvaluationContext
   - Beutl.EvaluationTarget
@@ -41,12 +40,12 @@ items:
   - Beutl.IHierarchicalRoot
   - Beutl.IJsonSerializable
   - Beutl.IModifiableHierarchical
-  - Beutl.INotifyEdited
   - Beutl.IOptional
   - Beutl.IProjectItemGenerator
   - Beutl.IRecordableCommand
   - Beutl.IReference
   - Beutl.IStaticProperty
+  - Beutl.IStorable
   - Beutl.ITupleConvertible`2
   - Beutl.JsonHelper
   - Beutl.ListExtensions
@@ -56,6 +55,7 @@ items:
   - Beutl.Optional`1
   - Beutl.Project
   - Beutl.ProjectItem
+  - Beutl.ProjectItemContainer
   - Beutl.ProjectVariableKeys
   - Beutl.PropertyRegistry
   - Beutl.Rational
@@ -68,6 +68,7 @@ items:
   - Beutl.StaticProperty`1
   - Beutl.StaticProperty`2
   - Beutl.TimeSpanExtensions
+  - Beutl.TimelineInvalidatedEventArgs
   langs:
   - csharp
   - vb
@@ -209,7 +210,7 @@ references:
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject
@@ -217,7 +218,7 @@ references:
   commentId: T:Beutl.CoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: CoreObject
   nameWithType: CoreObject
   fullName: Beutl.CoreObject
@@ -233,7 +234,7 @@ references:
   commentId: T:Beutl.CoreProperty
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+  href: Beutl.CoreProperty.html
   name: CoreProperty
   nameWithType: CoreProperty
   fullName: Beutl.CoreProperty
@@ -399,7 +400,7 @@ references:
   commentId: T:Beutl.Hierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.Hierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: Hierarchical
   nameWithType: Hierarchical
   fullName: Beutl.Hierarchical
@@ -415,7 +416,7 @@ references:
   commentId: T:Beutl.HierarchyAttachmentEventArgs
   parent: Beutl
   isExternal: true
-  href: Beutl.HierarchyAttachmentEventArgs.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   name: HierarchyAttachmentEventArgs
   nameWithType: HierarchyAttachmentEventArgs
   fullName: Beutl.HierarchyAttachmentEventArgs
@@ -430,7 +431,7 @@ references:
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
@@ -446,7 +447,7 @@ references:
   commentId: T:Beutl.IModifiableHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IModifiableHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
   name: IModifiableHierarchical
   nameWithType: IModifiableHierarchical
   fullName: Beutl.IModifiableHierarchical
@@ -470,18 +471,10 @@ references:
   commentId: T:Beutl.IJsonSerializable
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  href: Beutl.IJsonSerializable.html
   name: IJsonSerializable
   nameWithType: IJsonSerializable
   fullName: Beutl.IJsonSerializable
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
-  isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
 - uid: Beutl.IOptional
   commentId: T:Beutl.IOptional
   parent: Beutl
@@ -492,6 +485,7 @@ references:
   fullName: Beutl.IOptional
 - uid: Beutl.IProjectItemGenerator
   commentId: T:Beutl.IProjectItemGenerator
+  parent: Beutl
   isExternal: true
   href: Beutl.IProjectItemGenerator.html
   name: IProjectItemGenerator
@@ -501,7 +495,7 @@ references:
   commentId: T:Beutl.IRecordableCommand
   parent: Beutl
   isExternal: true
-  href: Beutl.IRecordableCommand.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   name: IRecordableCommand
   nameWithType: IRecordableCommand
   fullName: Beutl.IRecordableCommand
@@ -521,6 +515,14 @@ references:
   name: IStaticProperty
   nameWithType: IStaticProperty
   fullName: Beutl.IStaticProperty
+- uid: Beutl.IStorable
+  commentId: T:Beutl.IStorable
+  parent: Beutl
+  isExternal: true
+  href: Beutl.IStorable.html
+  name: IStorable
+  nameWithType: IStorable
+  fullName: Beutl.IStorable
 - uid: Beutl.ITupleConvertible`2
   commentId: T:Beutl.ITupleConvertible`2
   isExternal: true
@@ -633,10 +635,18 @@ references:
   commentId: T:Beutl.ProjectItem
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/ProjectItem.cs
+  href: Beutl.ProjectItem.html
   name: ProjectItem
   nameWithType: ProjectItem
   fullName: Beutl.ProjectItem
+- uid: Beutl.ProjectItemContainer
+  commentId: T:Beutl.ProjectItemContainer
+  parent: Beutl
+  isExternal: true
+  href: Beutl.ProjectItemContainer.html
+  name: ProjectItemContainer
+  nameWithType: ProjectItemContainer
+  fullName: Beutl.ProjectItemContainer
 - uid: Beutl.PropertyRegistry
   commentId: T:Beutl.PropertyRegistry
   isExternal: true
@@ -648,7 +658,7 @@ references:
   commentId: T:Beutl.Rational
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Rational.Number.cs
+  href: Beutl.Rational.html
   name: Rational
   nameWithType: Rational
   fullName: Beutl.Rational
@@ -766,13 +776,6 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.ElementEditedEventArgs
-  commentId: T:Beutl.ElementEditedEventArgs
-  isExternal: true
-  href: Beutl.ElementEditedEventArgs.html
-  name: ElementEditedEventArgs
-  nameWithType: ElementEditedEventArgs
-  fullName: Beutl.ElementEditedEventArgs
 - uid: Beutl.EvaluationContext
   commentId: T:Beutl.EvaluationContext
   parent: Beutl
@@ -818,6 +821,13 @@ references:
   name: SceneRenderer
   nameWithType: SceneRenderer
   fullName: Beutl.SceneRenderer
+- uid: Beutl.TimelineInvalidatedEventArgs
+  commentId: T:Beutl.TimelineInvalidatedEventArgs
+  isExternal: true
+  href: Beutl.TimelineInvalidatedEventArgs.html
+  name: TimelineInvalidatedEventArgs
+  nameWithType: TimelineInvalidatedEventArgs
+  fullName: Beutl.TimelineInvalidatedEventArgs
 - uid: Beutl.TimeSpanExtensions
   commentId: T:Beutl.TimeSpanExtensions
   isExternal: true

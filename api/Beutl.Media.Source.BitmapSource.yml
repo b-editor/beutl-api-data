@@ -5,21 +5,18 @@ items:
   id: BitmapSource
   parent: Beutl.Media.Source
   children:
-  - Beutl.Media.Source.BitmapSource.#ctor
+  - Beutl.Media.Source.BitmapSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.IBitmap},System.String)
   - Beutl.Media.Source.BitmapSource.Clone
   - Beutl.Media.Source.BitmapSource.Equals(System.Object)
   - Beutl.Media.Source.BitmapSource.FrameSize
   - Beutl.Media.Source.BitmapSource.GetHashCode
   - Beutl.Media.Source.BitmapSource.IsGenerated
+  - Beutl.Media.Source.BitmapSource.Name
   - Beutl.Media.Source.BitmapSource.OnDispose(System.Boolean)
   - Beutl.Media.Source.BitmapSource.Open(System.String)
-  - Beutl.Media.Source.BitmapSource.Open(System.Uri)
   - Beutl.Media.Source.BitmapSource.Read(Beutl.Media.IBitmap@)
-  - Beutl.Media.Source.BitmapSource.ReadFrom(System.Uri)
   - Beutl.Media.Source.BitmapSource.TryGetRef(Beutl.Media.Source.Ref{Beutl.Media.IBitmap}@)
   - Beutl.Media.Source.BitmapSource.TryOpen(System.String,Beutl.Media.Source.BitmapSource@)
-  - Beutl.Media.Source.BitmapSource.TryOpen(System.Uri,Beutl.Media.Source.BitmapSource@)
-  - Beutl.Media.Source.BitmapSource.Uri
   langs:
   - csharp
   - vb
@@ -28,13 +25,13 @@ items:
   fullName: Beutl.Media.Source.BitmapSource
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: 'public sealed class BitmapSource : ImageSource, IImageSource, IMediaSource, IDisposable, IFileSource'
-    content.vb: Public NotInheritable Class BitmapSource Inherits ImageSource Implements IImageSource, IMediaSource, IDisposable, IFileSource
+    content: 'public sealed class BitmapSource : ImageSource, IImageSource, IMediaSource, IDisposable'
+    content.vb: Public NotInheritable Class BitmapSource Inherits ImageSource Implements IImageSource, IMediaSource, IDisposable
   inheritance:
   - System.Object
   - Beutl.Media.Source.ImageSource
@@ -42,7 +39,6 @@ items:
   - Beutl.Media.Source.IImageSource
   - Beutl.Media.Source.IMediaSource
   - System.IDisposable
-  - Beutl.IO.IFileSource
   inheritedMembers:
   - Beutl.Media.Source.ImageSource.Dispose
   - Beutl.Media.Source.ImageSource.IsDisposed
@@ -50,29 +46,34 @@ items:
   - System.Object.ToString
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: Beutl.Media.Source.BitmapSource.#ctor
-  commentId: M:Beutl.Media.Source.BitmapSource.#ctor
-  id: '#ctor'
+- uid: Beutl.Media.Source.BitmapSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.IBitmap},System.String)
+  commentId: M:Beutl.Media.Source.BitmapSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.IBitmap},System.String)
+  id: '#ctor(Beutl.Media.Source.Ref{Beutl.Media.IBitmap},System.String)'
   parent: Beutl.Media.Source.BitmapSource
   langs:
   - csharp
   - vb
-  name: BitmapSource()
-  nameWithType: BitmapSource.BitmapSource()
-  fullName: Beutl.Media.Source.BitmapSource.BitmapSource()
+  name: BitmapSource(Ref<IBitmap>, string)
+  nameWithType: BitmapSource.BitmapSource(Ref<IBitmap>, string)
+  fullName: Beutl.Media.Source.BitmapSource.BitmapSource(Beutl.Media.Source.Ref<Beutl.Media.IBitmap>, string)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: public BitmapSource()
-    content.vb: Public Sub New()
+    content: public BitmapSource(Ref<IBitmap> bitmap, string name)
+    parameters:
+    - id: bitmap
+      type: Beutl.Media.Source.Ref{Beutl.Media.IBitmap}
+    - id: name
+      type: System.String
+    content.vb: Public Sub New(bitmap As Ref(Of IBitmap), name As String)
   overload: Beutl.Media.Source.BitmapSource.#ctor*
-  nameWithType.vb: BitmapSource.New()
-  fullName.vb: Beutl.Media.Source.BitmapSource.New()
-  name.vb: New()
+  nameWithType.vb: BitmapSource.New(Ref(Of IBitmap), String)
+  fullName.vb: Beutl.Media.Source.BitmapSource.New(Beutl.Media.Source.Ref(Of Beutl.Media.IBitmap), String)
+  name.vb: New(Ref(Of IBitmap), String)
 - uid: Beutl.Media.Source.BitmapSource.Open(System.String)
   commentId: M:Beutl.Media.Source.BitmapSource.Open(System.String)
   id: Open(System.String)
@@ -85,7 +86,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.Open(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -113,7 +114,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.TryOpen(string, out Beutl.Media.Source.BitmapSource?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -131,61 +132,6 @@ items:
   nameWithType.vb: BitmapSource.TryOpen(String, BitmapSource)
   fullName.vb: Beutl.Media.Source.BitmapSource.TryOpen(String, Beutl.Media.Source.BitmapSource)
   name.vb: TryOpen(String, BitmapSource)
-- uid: Beutl.Media.Source.BitmapSource.Open(System.Uri)
-  commentId: M:Beutl.Media.Source.BitmapSource.Open(System.Uri)
-  id: Open(System.Uri)
-  parent: Beutl.Media.Source.BitmapSource
-  langs:
-  - csharp
-  - vb
-  name: Open(Uri)
-  nameWithType: BitmapSource.Open(Uri)
-  fullName: Beutl.Media.Source.BitmapSource.Open(System.Uri)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  syntax:
-    content: public static BitmapSource Open(Uri uri)
-    parameters:
-    - id: uri
-      type: System.Uri
-    return:
-      type: Beutl.Media.Source.BitmapSource
-    content.vb: Public Shared Function Open(uri As Uri) As BitmapSource
-  overload: Beutl.Media.Source.BitmapSource.Open*
-- uid: Beutl.Media.Source.BitmapSource.TryOpen(System.Uri,Beutl.Media.Source.BitmapSource@)
-  commentId: M:Beutl.Media.Source.BitmapSource.TryOpen(System.Uri,Beutl.Media.Source.BitmapSource@)
-  id: TryOpen(System.Uri,Beutl.Media.Source.BitmapSource@)
-  parent: Beutl.Media.Source.BitmapSource
-  langs:
-  - csharp
-  - vb
-  name: TryOpen(Uri, out BitmapSource?)
-  nameWithType: BitmapSource.TryOpen(Uri, out BitmapSource?)
-  fullName: Beutl.Media.Source.BitmapSource.TryOpen(System.Uri, out Beutl.Media.Source.BitmapSource?)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  syntax:
-    content: public static bool TryOpen(Uri uri, out BitmapSource? result)
-    parameters:
-    - id: uri
-      type: System.Uri
-    - id: result
-      type: Beutl.Media.Source.BitmapSource
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Function TryOpen(uri As Uri, result As BitmapSource) As Boolean
-  overload: Beutl.Media.Source.BitmapSource.TryOpen*
-  nameWithType.vb: BitmapSource.TryOpen(Uri, BitmapSource)
-  fullName.vb: Beutl.Media.Source.BitmapSource.TryOpen(System.Uri, Beutl.Media.Source.BitmapSource)
-  name.vb: TryOpen(Uri, BitmapSource)
 - uid: Beutl.Media.Source.BitmapSource.Clone
   commentId: M:Beutl.Media.Source.BitmapSource.Clone
   id: Clone
@@ -198,7 +144,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -210,31 +156,6 @@ items:
     content.vb: Public Overrides Function Clone() As IImageSource
   overridden: Beutl.Media.Source.ImageSource.Clone
   overload: Beutl.Media.Source.BitmapSource.Clone*
-- uid: Beutl.Media.Source.BitmapSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.Media.Source.BitmapSource.ReadFrom(System.Uri)
-  id: ReadFrom(System.Uri)
-  parent: Beutl.Media.Source.BitmapSource
-  langs:
-  - csharp
-  - vb
-  name: ReadFrom(Uri)
-  nameWithType: BitmapSource.ReadFrom(Uri)
-  fullName: Beutl.Media.Source.BitmapSource.ReadFrom(System.Uri)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  example: []
-  syntax:
-    content: public override void ReadFrom(Uri uri)
-    parameters:
-    - id: uri
-      type: System.Uri
-    content.vb: Public Overrides Sub ReadFrom(uri As Uri)
-  overridden: Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-  overload: Beutl.Media.Source.BitmapSource.ReadFrom*
 - uid: Beutl.Media.Source.BitmapSource.Read(Beutl.Media.IBitmap@)
   commentId: M:Beutl.Media.Source.BitmapSource.Read(Beutl.Media.IBitmap@)
   id: Read(Beutl.Media.IBitmap@)
@@ -247,7 +168,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.Read(out Beutl.Media.IBitmap?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -283,7 +204,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.TryGetRef(out Beutl.Media.Source.Ref<Beutl.Media.IBitmap>?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -319,7 +240,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -347,7 +268,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.Equals(object?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -377,7 +298,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.GetHashCode()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -401,7 +322,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.FrameSize
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -414,31 +335,31 @@ items:
     content.vb: Public Overrides ReadOnly Property FrameSize As PixelSize
   overridden: Beutl.Media.Source.ImageSource.FrameSize
   overload: Beutl.Media.Source.BitmapSource.FrameSize*
-- uid: Beutl.Media.Source.BitmapSource.Uri
-  commentId: P:Beutl.Media.Source.BitmapSource.Uri
-  id: Uri
+- uid: Beutl.Media.Source.BitmapSource.Name
+  commentId: P:Beutl.Media.Source.BitmapSource.Name
+  id: Name
   parent: Beutl.Media.Source.BitmapSource
   langs:
   - csharp
   - vb
-  name: Uri
-  nameWithType: BitmapSource.Uri
-  fullName: Beutl.Media.Source.BitmapSource.Uri
+  name: Name
+  nameWithType: BitmapSource.Name
+  fullName: Beutl.Media.Source.BitmapSource.Name
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   example: []
   syntax:
-    content: public override Uri Uri { get; }
+    content: public override string Name { get; }
     parameters: []
     return:
-      type: System.Uri
-    content.vb: Public Overrides ReadOnly Property Uri As Uri
-  overridden: Beutl.Media.Source.ImageSource.Uri
-  overload: Beutl.Media.Source.BitmapSource.Uri*
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Name As String
+  overridden: Beutl.Media.Source.ImageSource.Name
+  overload: Beutl.Media.Source.BitmapSource.Name*
 - uid: Beutl.Media.Source.BitmapSource.IsGenerated
   commentId: P:Beutl.Media.Source.BitmapSource.IsGenerated
   id: IsGenerated
@@ -451,7 +372,7 @@ items:
   fullName: Beutl.Media.Source.BitmapSource.IsGenerated
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/BitmapSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/BitmapSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -545,14 +466,6 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
 - uid: Beutl.Media.Source.ImageSource.Dispose
   commentId: M:Beutl.Media.Source.ImageSource.Dispose
   parent: Beutl.Media.Source.ImageSource
@@ -728,50 +641,51 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
 - uid: Beutl.Media.Source.BitmapSource.#ctor*
   commentId: Overload:Beutl.Media.Source.BitmapSource.#ctor
   isExternal: true
-  href: Beutl.Media.Source.BitmapSource.html#Beutl_Media_Source_BitmapSource__ctor
+  href: Beutl.Media.Source.BitmapSource.html#Beutl_Media_Source_BitmapSource__ctor_Beutl_Media_Source_Ref_Beutl_Media_IBitmap__System_String_
   name: BitmapSource
   nameWithType: BitmapSource.BitmapSource
   fullName: Beutl.Media.Source.BitmapSource.BitmapSource
   nameWithType.vb: BitmapSource.New
   fullName.vb: Beutl.Media.Source.BitmapSource.New
   name.vb: New
-- uid: Beutl.Media.Source.BitmapSource.Open*
-  commentId: Overload:Beutl.Media.Source.BitmapSource.Open
-  isExternal: true
-  href: Beutl.Media.Source.BitmapSource.html#Beutl_Media_Source_BitmapSource_Open_System_String_
-  name: Open
-  nameWithType: BitmapSource.Open
-  fullName: Beutl.Media.Source.BitmapSource.Open
+- uid: Beutl.Media.Source.Ref{Beutl.Media.IBitmap}
+  commentId: T:Beutl.Media.Source.Ref{Beutl.Media.IBitmap}
+  parent: Beutl.Media.Source
+  definition: Beutl.Media.Source.Ref`1
+  href: Beutl.Media.Source.Ref-1.html
+  name: Ref<IBitmap>
+  nameWithType: Ref<IBitmap>
+  fullName: Beutl.Media.Source.Ref<Beutl.Media.IBitmap>
+  nameWithType.vb: Ref(Of IBitmap)
+  fullName.vb: Beutl.Media.Source.Ref(Of Beutl.Media.IBitmap)
+  name.vb: Ref(Of IBitmap)
+  spec.csharp:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: <
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.IBitmap
+    name: IBitmap
+    isExternal: true
+    href: Beutl.Media.IBitmap.html
+  - name: )
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -783,6 +697,42 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: Beutl.Media.Source.Ref`1
+  commentId: T:Beutl.Media.Source.Ref`1
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.Ref-1.html
+  name: Ref<T>
+  nameWithType: Ref<T>
+  fullName: Beutl.Media.Source.Ref<T>
+  nameWithType.vb: Ref(Of T)
+  fullName.vb: Beutl.Media.Source.Ref(Of T)
+  name.vb: Ref(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Media.Source.BitmapSource.Open*
+  commentId: Overload:Beutl.Media.Source.BitmapSource.Open
+  isExternal: true
+  href: Beutl.Media.Source.BitmapSource.html#Beutl_Media_Source_BitmapSource_Open_System_String_
+  name: Open
+  nameWithType: BitmapSource.Open
+  fullName: Beutl.Media.Source.BitmapSource.Open
 - uid: Beutl.Media.Source.BitmapSource
   commentId: T:Beutl.Media.Source.BitmapSource
   parent: Beutl.Media.Source
@@ -809,13 +759,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: System.Uri
 - uid: Beutl.Media.Source.ImageSource.Clone
   commentId: M:Beutl.Media.Source.ImageSource.Clone
   parent: Beutl.Media.Source.ImageSource
@@ -845,41 +788,6 @@ references:
   name: Clone
   nameWithType: BitmapSource.Clone
   fullName: Beutl.Media.Source.BitmapSource.Clone
-- uid: Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-  parent: Beutl.Media.Source.ImageSource
-  isExternal: true
-  href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_ReadFrom_System_Uri_
-  name: ReadFrom(Uri)
-  nameWithType: ImageSource.ReadFrom(Uri)
-  fullName: Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-  spec.csharp:
-  - uid: Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-- uid: Beutl.Media.Source.BitmapSource.ReadFrom*
-  commentId: Overload:Beutl.Media.Source.BitmapSource.ReadFrom
-  isExternal: true
-  href: Beutl.Media.Source.BitmapSource.html#Beutl_Media_Source_BitmapSource_ReadFrom_System_Uri_
-  name: ReadFrom
-  nameWithType: BitmapSource.ReadFrom
-  fullName: Beutl.Media.Source.BitmapSource.ReadFrom
 - uid: Beutl.Media.Source.ImageSource.Read(Beutl.Media.IBitmap@)
   commentId: M:Beutl.Media.Source.ImageSource.Read(Beutl.Media.IBitmap@)
   parent: Beutl.Media.Source.ImageSource
@@ -1013,70 +921,6 @@ references:
   name: TryGetRef
   nameWithType: BitmapSource.TryGetRef
   fullName: Beutl.Media.Source.BitmapSource.TryGetRef
-- uid: Beutl.Media.Source.Ref{Beutl.Media.IBitmap}
-  commentId: T:Beutl.Media.Source.Ref{Beutl.Media.IBitmap}
-  parent: Beutl.Media.Source
-  definition: Beutl.Media.Source.Ref`1
-  href: Beutl.Media.Source.Ref-1.html
-  name: Ref<IBitmap>
-  nameWithType: Ref<IBitmap>
-  fullName: Beutl.Media.Source.Ref<Beutl.Media.IBitmap>
-  nameWithType.vb: Ref(Of IBitmap)
-  fullName.vb: Beutl.Media.Source.Ref(Of Beutl.Media.IBitmap)
-  name.vb: Ref(Of IBitmap)
-  spec.csharp:
-  - uid: Beutl.Media.Source.Ref`1
-    name: Ref
-    isExternal: true
-    href: Beutl.Media.Source.Ref-1.html
-  - name: <
-  - uid: Beutl.Media.IBitmap
-    name: IBitmap
-    isExternal: true
-    href: Beutl.Media.IBitmap.html
-  - name: '>'
-  spec.vb:
-  - uid: Beutl.Media.Source.Ref`1
-    name: Ref
-    isExternal: true
-    href: Beutl.Media.Source.Ref-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Beutl.Media.IBitmap
-    name: IBitmap
-    isExternal: true
-    href: Beutl.Media.IBitmap.html
-  - name: )
-- uid: Beutl.Media.Source.Ref`1
-  commentId: T:Beutl.Media.Source.Ref`1
-  parent: Beutl.Media.Source
-  isExternal: true
-  href: Beutl.Media.Source.Ref-1.html
-  name: Ref<T>
-  nameWithType: Ref<T>
-  fullName: Beutl.Media.Source.Ref<T>
-  nameWithType.vb: Ref(Of T)
-  fullName.vb: Beutl.Media.Source.Ref(Of T)
-  name.vb: Ref(Of T)
-  spec.csharp:
-  - uid: Beutl.Media.Source.Ref`1
-    name: Ref
-    isExternal: true
-    href: Beutl.Media.Source.Ref-1.html
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Beutl.Media.Source.Ref`1
-    name: Ref
-    isExternal: true
-    href: Beutl.Media.Source.Ref-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: Beutl.Media.Source.ImageSource.OnDispose(System.Boolean)
   commentId: M:Beutl.Media.Source.ImageSource.OnDispose(System.Boolean)
   parent: Beutl.Media.Source.ImageSource
@@ -1222,21 +1066,21 @@ references:
   name: PixelSize
   nameWithType: PixelSize
   fullName: Beutl.Media.PixelSize
-- uid: Beutl.Media.Source.ImageSource.Uri
-  commentId: P:Beutl.Media.Source.ImageSource.Uri
+- uid: Beutl.Media.Source.ImageSource.Name
+  commentId: P:Beutl.Media.Source.ImageSource.Name
   parent: Beutl.Media.Source.ImageSource
   isExternal: true
-  href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_Uri
-  name: Uri
-  nameWithType: ImageSource.Uri
-  fullName: Beutl.Media.Source.ImageSource.Uri
-- uid: Beutl.Media.Source.BitmapSource.Uri*
-  commentId: Overload:Beutl.Media.Source.BitmapSource.Uri
+  href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_Name
+  name: Name
+  nameWithType: ImageSource.Name
+  fullName: Beutl.Media.Source.ImageSource.Name
+- uid: Beutl.Media.Source.BitmapSource.Name*
+  commentId: Overload:Beutl.Media.Source.BitmapSource.Name
   isExternal: true
-  href: Beutl.Media.Source.BitmapSource.html#Beutl_Media_Source_BitmapSource_Uri
-  name: Uri
-  nameWithType: BitmapSource.Uri
-  fullName: Beutl.Media.Source.BitmapSource.Uri
+  href: Beutl.Media.Source.BitmapSource.html#Beutl_Media_Source_BitmapSource_Name
+  name: Name
+  nameWithType: BitmapSource.Name
+  fullName: Beutl.Media.Source.BitmapSource.Name
 - uid: Beutl.Media.Source.ImageSource.IsGenerated
   commentId: P:Beutl.Media.Source.ImageSource.IsGenerated
   parent: Beutl.Media.Source.ImageSource

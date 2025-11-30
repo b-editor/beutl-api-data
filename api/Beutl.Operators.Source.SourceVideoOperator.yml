@@ -6,7 +6,6 @@ items:
   parent: Beutl.Operators.Source
   children:
   - Beutl.Operators.Source.SourceVideoOperator.#ctor
-  - Beutl.Operators.Source.SourceVideoOperator.FillProperties
   - Beutl.Operators.Source.SourceVideoOperator.HasOriginalLength
   - Beutl.Operators.Source.SourceVideoOperator.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   - Beutl.Operators.Source.SourceVideoOperator.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
@@ -20,13 +19,13 @@ items:
   fullName: Beutl.Operators.Source.SourceVideoOperator
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Operators/Source/SourceVideoOperator.cs
   assemblies:
   - Beutl.Operators
   namespace: Beutl.Operators.Source
   syntax:
-    content: 'public sealed class SourceVideoOperator : PublishOperator<SourceVideo>, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, ISourceOperator, INotifyEdited, IPublishOperator'
-    content.vb: Public NotInheritable Class SourceVideoOperator Inherits PublishOperator(Of SourceVideo) Implements ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, ISourceOperator, INotifyEdited, IPublishOperator
+    content: 'public sealed class SourceVideoOperator : PublishOperator<SourceVideo>, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, ISourceOperator, IAffectsRender, IPublishOperator'
+    content.vb: Public NotInheritable Class SourceVideoOperator Inherits PublishOperator(Of SourceVideo) Implements ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, ISourceOperator, IAffectsRender, IPublishOperator
   inheritance:
   - System.Object
   - Beutl.CoreObject
@@ -41,7 +40,7 @@ items:
   - Beutl.IModifiableHierarchical
   - Beutl.IHierarchical
   - Beutl.Operation.ISourceOperator
-  - Beutl.INotifyEdited
+  - Beutl.Media.IAffectsRender
   - Beutl.Operation.IPublishOperator
   inheritedMembers:
   - Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.ValueProperty
@@ -57,7 +56,7 @@ items:
   - Beutl.Operation.SourceOperator.Exit
   - Beutl.Operation.SourceOperator.IsEnabled
   - Beutl.Operation.SourceOperator.Properties
-  - Beutl.Operation.SourceOperator.Edited
+  - Beutl.Operation.SourceOperator.Invalidated
   - Beutl.Hierarchical.HierarchicalParentProperty
   - Beutl.Hierarchical.HierarchicalParent
   - Beutl.Hierarchical.AttachedToHierarchy
@@ -76,7 +75,6 @@ items:
   - Beutl.CoreObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
   - Beutl.CoreObject.Id
   - Beutl.CoreObject.Name
-  - Beutl.CoreObject.Uri
   - Beutl.CoreObject.HasErrors
   - Beutl.CoreObject.PropertyChanged
   - Beutl.CoreObject.ErrorsChanged
@@ -86,28 +84,29 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Operators.Source.SourceVideoOperator.FillProperties
-  commentId: M:Beutl.Operators.Source.SourceVideoOperator.FillProperties
-  id: FillProperties
+- uid: Beutl.Operators.Source.SourceVideoOperator.#ctor
+  commentId: M:Beutl.Operators.Source.SourceVideoOperator.#ctor
+  id: '#ctor'
   parent: Beutl.Operators.Source.SourceVideoOperator
   langs:
   - csharp
   - vb
-  name: FillProperties()
-  nameWithType: SourceVideoOperator.FillProperties()
-  fullName: Beutl.Operators.Source.SourceVideoOperator.FillProperties()
-  type: Method
+  name: SourceVideoOperator()
+  nameWithType: SourceVideoOperator.SourceVideoOperator()
+  fullName: Beutl.Operators.Source.SourceVideoOperator.SourceVideoOperator()
+  type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Operators/Source/SourceVideoOperator.cs
   assemblies:
   - Beutl.Operators
   namespace: Beutl.Operators.Source
-  example: []
   syntax:
-    content: protected override void FillProperties()
-    content.vb: Protected Overrides Sub FillProperties()
-  overridden: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.FillProperties
-  overload: Beutl.Operators.Source.SourceVideoOperator.FillProperties*
+    content: public SourceVideoOperator()
+    content.vb: Public Sub New()
+  overload: Beutl.Operators.Source.SourceVideoOperator.#ctor*
+  nameWithType.vb: SourceVideoOperator.New()
+  fullName.vb: Beutl.Operators.Source.SourceVideoOperator.New()
+  name.vb: New()
 - uid: Beutl.Operators.Source.SourceVideoOperator.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   commentId: M:Beutl.Operators.Source.SourceVideoOperator.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   id: OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
@@ -120,7 +119,7 @@ items:
   fullName: Beutl.Operators.Source.SourceVideoOperator.OnDetachedFromHierarchy(in Beutl.HierarchyAttachmentEventArgs)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Operators/Source/SourceVideoOperator.cs
   assemblies:
   - Beutl.Operators
   namespace: Beutl.Operators.Source
@@ -148,7 +147,7 @@ items:
   fullName: Beutl.Operators.Source.SourceVideoOperator.OnAttachedToHierarchy(in Beutl.HierarchyAttachmentEventArgs)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Operators/Source/SourceVideoOperator.cs
   assemblies:
   - Beutl.Operators
   namespace: Beutl.Operators.Source
@@ -176,7 +175,7 @@ items:
   fullName: Beutl.Operators.Source.SourceVideoOperator.HasOriginalLength()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Operators/Source/SourceVideoOperator.cs
   assemblies:
   - Beutl.Operators
   namespace: Beutl.Operators.Source
@@ -200,7 +199,7 @@ items:
   fullName: Beutl.Operators.Source.SourceVideoOperator.TryGetOriginalLength(out System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Operators/Source/SourceVideoOperator.cs
   assemblies:
   - Beutl.Operators
   namespace: Beutl.Operators.Source
@@ -230,7 +229,7 @@ items:
   fullName: Beutl.Operators.Source.SourceVideoOperator.OnSplit(bool, System.TimeSpan, System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Operators/Source/SourceVideoOperator.cs
   assemblies:
   - Beutl.Operators
   namespace: Beutl.Operators.Source
@@ -252,29 +251,6 @@ items:
   nameWithType.vb: SourceVideoOperator.OnSplit(Boolean, TimeSpan, TimeSpan)
   fullName.vb: Beutl.Operators.Source.SourceVideoOperator.OnSplit(Boolean, System.TimeSpan, System.TimeSpan)
   name.vb: OnSplit(Boolean, TimeSpan, TimeSpan)
-- uid: Beutl.Operators.Source.SourceVideoOperator.#ctor
-  commentId: M:Beutl.Operators.Source.SourceVideoOperator.#ctor
-  id: '#ctor'
-  parent: Beutl.Operators.Source.SourceVideoOperator
-  langs:
-  - csharp
-  - vb
-  name: SourceVideoOperator()
-  nameWithType: SourceVideoOperator.SourceVideoOperator()
-  fullName: Beutl.Operators.Source.SourceVideoOperator.SourceVideoOperator()
-  type: Constructor
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Operators/Source/SourceVideoOperator.cs
-  assemblies:
-  - Beutl.Operators
-  namespace: Beutl.Operators.Source
-  syntax:
-    content: public SourceVideoOperator()
-    content.vb: Public Sub New()
-  overload: Beutl.Operators.Source.SourceVideoOperator.#ctor*
-  nameWithType.vb: SourceVideoOperator.New()
-  fullName.vb: Beutl.Operators.Source.SourceVideoOperator.New()
-  name.vb: New()
 references:
 - uid: Beutl.Operators.Source
   commentId: N:Beutl.Operators.Source
@@ -328,7 +304,7 @@ references:
   commentId: T:Beutl.CoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: CoreObject
   nameWithType: CoreObject
   fullName: Beutl.CoreObject
@@ -336,7 +312,7 @@ references:
   commentId: T:Beutl.Hierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.Hierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: Hierarchical
   nameWithType: Hierarchical
   fullName: Beutl.Hierarchical
@@ -344,7 +320,7 @@ references:
   commentId: T:Beutl.Operation.SourceOperator
   parent: Beutl.Operation
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: SourceOperator
   nameWithType: SourceOperator
   fullName: Beutl.Operation.SourceOperator
@@ -352,7 +328,7 @@ references:
   commentId: T:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   parent: Beutl.Operation
   definition: Beutl.Operation.PublishOperator`1
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: PublishOperator<SourceVideo>
   nameWithType: PublishOperator<SourceVideo>
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>
@@ -363,31 +339,31 @@ references:
   - uid: Beutl.Operation.PublishOperator`1
     name: PublishOperator
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: <
   - uid: Beutl.Graphics.SourceVideo
     name: SourceVideo
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/SourceVideo.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/SourceVideo.cs
   - name: '>'
   spec.vb:
   - uid: Beutl.Operation.PublishOperator`1
     name: PublishOperator
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: Of
   - name: " "
   - uid: Beutl.Graphics.SourceVideo
     name: SourceVideo
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/SourceVideo.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/SourceVideo.cs
   - name: )
 - uid: Beutl.ICoreObject
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject
@@ -411,7 +387,7 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -419,7 +395,7 @@ references:
   commentId: T:Beutl.IModifiableHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IModifiableHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
   name: IModifiableHierarchical
   nameWithType: IModifiableHierarchical
   fullName: Beutl.IModifiableHierarchical
@@ -427,7 +403,7 @@ references:
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
@@ -435,23 +411,23 @@ references:
   commentId: T:Beutl.Operation.ISourceOperator
   parent: Beutl.Operation
   isExternal: true
-  href: Beutl.Operation.ISourceOperator.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: ISourceOperator
   nameWithType: ISourceOperator
   fullName: Beutl.Operation.ISourceOperator
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
 - uid: Beutl.Operation.IPublishOperator
   commentId: T:Beutl.Operation.IPublishOperator
   parent: Beutl.Operation
   isExternal: true
-  href: Beutl.Operation.IPublishOperator.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/IPublishOperator.cs
   name: IPublishOperator
   nameWithType: IPublishOperator
   fullName: Beutl.Operation.IPublishOperator
@@ -459,7 +435,7 @@ references:
   commentId: F:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.ValueProperty
   parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   definition: Beutl.Operation.PublishOperator`1.ValueProperty
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: ValueProperty
   nameWithType: PublishOperator<SourceVideo>.ValueProperty
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.ValueProperty
@@ -469,7 +445,7 @@ references:
   commentId: M:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.GetEvaluationTarget
   parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   definition: Beutl.Operation.PublishOperator`1.GetEvaluationTarget
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: GetEvaluationTarget()
   nameWithType: PublishOperator<SourceVideo>.GetEvaluationTarget()
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.GetEvaluationTarget()
@@ -479,21 +455,21 @@ references:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.GetEvaluationTarget
     name: GetEvaluationTarget
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.GetEvaluationTarget
     name: GetEvaluationTarget
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: )
 - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Evaluate(Beutl.Operation.OperatorEvaluationContext)
   commentId: M:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Evaluate(Beutl.Operation.OperatorEvaluationContext)
   parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   definition: Beutl.Operation.PublishOperator`1.Evaluate(Beutl.Operation.OperatorEvaluationContext)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: Evaluate(OperatorEvaluationContext)
   nameWithType: PublishOperator<SourceVideo>.Evaluate(OperatorEvaluationContext)
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.Evaluate(Beutl.Operation.OperatorEvaluationContext)
@@ -503,29 +479,29 @@ references:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Evaluate(Beutl.Operation.OperatorEvaluationContext)
     name: Evaluate
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Evaluate(Beutl.Operation.OperatorEvaluationContext)
     name: Evaluate
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
 - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Deserialize(Beutl.Serialization.ICoreSerializationContext)
   commentId: M:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Deserialize(Beutl.Serialization.ICoreSerializationContext)
   parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   definition: Beutl.Operation.PublishOperator`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: Deserialize(ICoreSerializationContext)
   nameWithType: PublishOperator<SourceVideo>.Deserialize(ICoreSerializationContext)
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.Deserialize(Beutl.Serialization.ICoreSerializationContext)
@@ -535,29 +511,29 @@ references:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Deserialize(Beutl.Serialization.ICoreSerializationContext)
     name: Deserialize
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Deserialize(Beutl.Serialization.ICoreSerializationContext)
     name: Deserialize
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
 - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Value
   commentId: P:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.Value
   parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   definition: Beutl.Operation.PublishOperator`1.Value
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: Value
   nameWithType: PublishOperator<SourceVideo>.Value
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.Value
@@ -567,7 +543,7 @@ references:
   commentId: F:Beutl.Operation.SourceOperator.PropertiesProperty
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_PropertiesProperty
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: PropertiesProperty
   nameWithType: SourceOperator.PropertiesProperty
   fullName: Beutl.Operation.SourceOperator.PropertiesProperty
@@ -575,7 +551,7 @@ references:
   commentId: F:Beutl.Operation.SourceOperator.IsEnabledProperty
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_IsEnabledProperty
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: IsEnabledProperty
   nameWithType: SourceOperator.IsEnabledProperty
   fullName: Beutl.Operation.SourceOperator.IsEnabledProperty
@@ -583,7 +559,7 @@ references:
   commentId: M:Beutl.Operation.SourceOperator.InitializeForContext(Beutl.Operation.OperatorEvaluationContext)
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_InitializeForContext_Beutl_Operation_OperatorEvaluationContext_
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: InitializeForContext(OperatorEvaluationContext)
   nameWithType: SourceOperator.InitializeForContext(OperatorEvaluationContext)
   fullName: Beutl.Operation.SourceOperator.InitializeForContext(Beutl.Operation.OperatorEvaluationContext)
@@ -591,29 +567,29 @@ references:
   - uid: Beutl.Operation.SourceOperator.InitializeForContext(Beutl.Operation.OperatorEvaluationContext)
     name: InitializeForContext
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_InitializeForContext_Beutl_Operation_OperatorEvaluationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: Beutl.Operation.OperatorEvaluationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.SourceOperator.InitializeForContext(Beutl.Operation.OperatorEvaluationContext)
     name: InitializeForContext
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_InitializeForContext_Beutl_Operation_OperatorEvaluationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: Beutl.Operation.OperatorEvaluationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
 - uid: Beutl.Operation.SourceOperator.UninitializeForContext(Beutl.Operation.OperatorEvaluationContext)
   commentId: M:Beutl.Operation.SourceOperator.UninitializeForContext(Beutl.Operation.OperatorEvaluationContext)
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_UninitializeForContext_Beutl_Operation_OperatorEvaluationContext_
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: UninitializeForContext(OperatorEvaluationContext)
   nameWithType: SourceOperator.UninitializeForContext(OperatorEvaluationContext)
   fullName: Beutl.Operation.SourceOperator.UninitializeForContext(Beutl.Operation.OperatorEvaluationContext)
@@ -621,29 +597,29 @@ references:
   - uid: Beutl.Operation.SourceOperator.UninitializeForContext(Beutl.Operation.OperatorEvaluationContext)
     name: UninitializeForContext
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_UninitializeForContext_Beutl_Operation_OperatorEvaluationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: Beutl.Operation.OperatorEvaluationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.SourceOperator.UninitializeForContext(Beutl.Operation.OperatorEvaluationContext)
     name: UninitializeForContext
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_UninitializeForContext_Beutl_Operation_OperatorEvaluationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: Beutl.Operation.OperatorEvaluationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
 - uid: Beutl.Operation.SourceOperator.Enter
   commentId: M:Beutl.Operation.SourceOperator.Enter
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Enter
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: Enter()
   nameWithType: SourceOperator.Enter()
   fullName: Beutl.Operation.SourceOperator.Enter()
@@ -651,21 +627,21 @@ references:
   - uid: Beutl.Operation.SourceOperator.Enter
     name: Enter
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Enter
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Beutl.Operation.SourceOperator.Enter
     name: Enter
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Enter
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - name: )
 - uid: Beutl.Operation.SourceOperator.Exit
   commentId: M:Beutl.Operation.SourceOperator.Exit
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Exit
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: Exit()
   nameWithType: SourceOperator.Exit()
   fullName: Beutl.Operation.SourceOperator.Exit()
@@ -673,21 +649,21 @@ references:
   - uid: Beutl.Operation.SourceOperator.Exit
     name: Exit
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Exit
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Beutl.Operation.SourceOperator.Exit
     name: Exit
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Exit
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - name: )
 - uid: Beutl.Operation.SourceOperator.IsEnabled
   commentId: P:Beutl.Operation.SourceOperator.IsEnabled
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_IsEnabled
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: IsEnabled
   nameWithType: SourceOperator.IsEnabled
   fullName: Beutl.Operation.SourceOperator.IsEnabled
@@ -695,23 +671,23 @@ references:
   commentId: P:Beutl.Operation.SourceOperator.Properties
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Properties
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: Properties
   nameWithType: SourceOperator.Properties
   fullName: Beutl.Operation.SourceOperator.Properties
-- uid: Beutl.Operation.SourceOperator.Edited
-  commentId: E:Beutl.Operation.SourceOperator.Edited
+- uid: Beutl.Operation.SourceOperator.Invalidated
+  commentId: E:Beutl.Operation.SourceOperator.Invalidated
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_Edited
-  name: Edited
-  nameWithType: SourceOperator.Edited
-  fullName: Beutl.Operation.SourceOperator.Edited
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
+  name: Invalidated
+  nameWithType: SourceOperator.Invalidated
+  fullName: Beutl.Operation.SourceOperator.Invalidated
 - uid: Beutl.Hierarchical.HierarchicalParentProperty
   commentId: F:Beutl.Hierarchical.HierarchicalParentProperty
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_HierarchicalParentProperty
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: HierarchicalParentProperty
   nameWithType: Hierarchical.HierarchicalParentProperty
   fullName: Beutl.Hierarchical.HierarchicalParentProperty
@@ -719,7 +695,7 @@ references:
   commentId: P:Beutl.Hierarchical.HierarchicalParent
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_HierarchicalParent
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: HierarchicalParent
   nameWithType: Hierarchical.HierarchicalParent
   fullName: Beutl.Hierarchical.HierarchicalParent
@@ -727,7 +703,7 @@ references:
   commentId: E:Beutl.Hierarchical.AttachedToHierarchy
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_AttachedToHierarchy
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: AttachedToHierarchy
   nameWithType: Hierarchical.AttachedToHierarchy
   fullName: Beutl.Hierarchical.AttachedToHierarchy
@@ -735,7 +711,7 @@ references:
   commentId: E:Beutl.Hierarchical.DetachedFromHierarchy
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_DetachedFromHierarchy
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: DetachedFromHierarchy
   nameWithType: Hierarchical.DetachedFromHierarchy
   fullName: Beutl.Hierarchical.DetachedFromHierarchy
@@ -743,7 +719,7 @@ references:
   commentId: F:Beutl.CoreObject.IdProperty
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: IdProperty
   nameWithType: CoreObject.IdProperty
   fullName: Beutl.CoreObject.IdProperty
@@ -751,7 +727,7 @@ references:
   commentId: F:Beutl.CoreObject.NameProperty
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: NameProperty
   nameWithType: CoreObject.NameProperty
   fullName: Beutl.CoreObject.NameProperty
@@ -759,7 +735,7 @@ references:
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.String)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(string)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(string)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(string)
@@ -770,7 +746,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.String)
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -787,7 +763,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.String)
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -806,7 +782,7 @@ references:
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(System.Linq.Expressions.Expression<System.Func<TOwner, T>>)
@@ -817,7 +793,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -846,7 +822,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -881,7 +857,7 @@ references:
   commentId: M:Beutl.CoreObject.GetErrors(System.String)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetErrors(string)
   nameWithType: CoreObject.GetErrors(string)
   fullName: Beutl.CoreObject.GetErrors(string)
@@ -892,7 +868,7 @@ references:
   - uid: Beutl.CoreObject.GetErrors(System.String)
     name: GetErrors
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: System.String
     name: string
@@ -903,7 +879,7 @@ references:
   - uid: Beutl.CoreObject.GetErrors(System.String)
     name: GetErrors
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: System.String
     name: String
@@ -914,7 +890,7 @@ references:
   commentId: M:Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.GetValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.GetValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -925,7 +901,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -933,7 +909,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -942,7 +918,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -952,7 +928,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -963,7 +939,7 @@ references:
   commentId: M:Beutl.CoreObject.GetValue(Beutl.CoreProperty)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue(CoreProperty)
   nameWithType: CoreObject.GetValue(CoreProperty)
   fullName: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
@@ -971,29 +947,29 @@ references:
   - uid: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
   spec.vb:
   - uid: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
 - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{{TValue}},{TValue})
   commentId: M:Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue<TValue>(CoreProperty<TValue>, TValue)
   nameWithType: CoreObject.SetValue<TValue>(CoreProperty<TValue>, TValue)
   fullName: Beutl.CoreObject.SetValue<TValue>(Beutl.CoreProperty<TValue>, TValue)
@@ -1004,7 +980,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1012,7 +988,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1024,7 +1000,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1034,7 +1010,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1048,7 +1024,7 @@ references:
   commentId: M:Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue(CoreProperty, object)
   nameWithType: CoreObject.SetValue(CoreProperty, object)
   fullName: Beutl.CoreObject.SetValue(Beutl.CoreProperty, object)
@@ -1059,12 +1035,12 @@ references:
   - uid: Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: ','
   - name: " "
   - uid: System.Object
@@ -1076,12 +1052,12 @@ references:
   - uid: Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: ','
   - name: " "
   - uid: System.Object
@@ -1093,7 +1069,7 @@ references:
   commentId: M:Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.ClearValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.ClearValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -1104,7 +1080,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1112,7 +1088,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1121,7 +1097,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1131,7 +1107,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1142,7 +1118,7 @@ references:
   commentId: M:Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue(CoreProperty)
   nameWithType: CoreObject.ClearValue(CoreProperty)
   fullName: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
@@ -1150,29 +1126,29 @@ references:
   - uid: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
   spec.vb:
   - uid: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
 - uid: Beutl.CoreObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
   commentId: M:Beutl.CoreObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
   parent: Beutl.CoreObject
   isExternal: true
-  href: Beutl.CoreObject.html#Beutl_CoreObject_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: Serialize(ICoreSerializationContext)
   nameWithType: CoreObject.Serialize(ICoreSerializationContext)
   fullName: Beutl.CoreObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
@@ -1180,29 +1156,29 @@ references:
   - uid: Beutl.CoreObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
     name: Serialize
     isExternal: true
-    href: Beutl.CoreObject.html#Beutl_CoreObject_Serialize_Beutl_Serialization_ICoreSerializationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: Beutl.Serialization.ICoreSerializationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.CoreObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
     name: Serialize
     isExternal: true
-    href: Beutl.CoreObject.html#Beutl_CoreObject_Serialize_Beutl_Serialization_ICoreSerializationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: Beutl.Serialization.ICoreSerializationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
 - uid: Beutl.CoreObject.Id
   commentId: P:Beutl.CoreObject.Id
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: Id
   nameWithType: CoreObject.Id
   fullName: Beutl.CoreObject.Id
@@ -1210,23 +1186,15 @@ references:
   commentId: P:Beutl.CoreObject.Name
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: Name
   nameWithType: CoreObject.Name
   fullName: Beutl.CoreObject.Name
-- uid: Beutl.CoreObject.Uri
-  commentId: P:Beutl.CoreObject.Uri
-  parent: Beutl.CoreObject
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
-  name: Uri
-  nameWithType: CoreObject.Uri
-  fullName: Beutl.CoreObject.Uri
 - uid: Beutl.CoreObject.HasErrors
   commentId: P:Beutl.CoreObject.HasErrors
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: HasErrors
   nameWithType: CoreObject.HasErrors
   fullName: Beutl.CoreObject.HasErrors
@@ -1234,7 +1202,7 @@ references:
   commentId: E:Beutl.CoreObject.PropertyChanged
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: PropertyChanged
   nameWithType: CoreObject.PropertyChanged
   fullName: Beutl.CoreObject.PropertyChanged
@@ -1242,7 +1210,7 @@ references:
   commentId: E:Beutl.CoreObject.ErrorsChanged
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ErrorsChanged
   nameWithType: CoreObject.ErrorsChanged
   fullName: Beutl.CoreObject.ErrorsChanged
@@ -1485,7 +1453,7 @@ references:
 - uid: Beutl.Operation.PublishOperator`1
   commentId: T:Beutl.Operation.PublishOperator`1
   isExternal: true
-  href: Beutl.Operation.PublishOperator-1.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: PublishOperator<T>
   nameWithType: PublishOperator<T>
   fullName: Beutl.Operation.PublishOperator<T>
@@ -1496,7 +1464,7 @@ references:
   - uid: Beutl.Operation.PublishOperator`1
     name: PublishOperator
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: <
   - name: T
   - name: '>'
@@ -1504,7 +1472,7 @@ references:
   - uid: Beutl.Operation.PublishOperator`1
     name: PublishOperator
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: Of
   - name: " "
@@ -1564,10 +1532,37 @@ references:
     name: Serialization
     isExternal: true
     href: Beutl.Serialization.html
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
 - uid: Beutl.Operation.PublishOperator`1.ValueProperty
   commentId: F:Beutl.Operation.PublishOperator`1.ValueProperty
   isExternal: true
-  href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_ValueProperty
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: ValueProperty
   nameWithType: PublishOperator<T>.ValueProperty
   fullName: Beutl.Operation.PublishOperator<T>.ValueProperty
@@ -1576,7 +1571,7 @@ references:
 - uid: Beutl.Operation.PublishOperator`1.GetEvaluationTarget
   commentId: M:Beutl.Operation.PublishOperator`1.GetEvaluationTarget
   isExternal: true
-  href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_GetEvaluationTarget
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: GetEvaluationTarget()
   nameWithType: PublishOperator<T>.GetEvaluationTarget()
   fullName: Beutl.Operation.PublishOperator<T>.GetEvaluationTarget()
@@ -1586,20 +1581,20 @@ references:
   - uid: Beutl.Operation.PublishOperator`1.GetEvaluationTarget
     name: GetEvaluationTarget
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_GetEvaluationTarget
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator`1.GetEvaluationTarget
     name: GetEvaluationTarget
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_GetEvaluationTarget
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: )
 - uid: Beutl.Operation.PublishOperator`1.Evaluate(Beutl.Operation.OperatorEvaluationContext)
   commentId: M:Beutl.Operation.PublishOperator`1.Evaluate(Beutl.Operation.OperatorEvaluationContext)
   isExternal: true
-  href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_Evaluate_Beutl_Operation_OperatorEvaluationContext_
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: Evaluate(OperatorEvaluationContext)
   nameWithType: PublishOperator<T>.Evaluate(OperatorEvaluationContext)
   fullName: Beutl.Operation.PublishOperator<T>.Evaluate(Beutl.Operation.OperatorEvaluationContext)
@@ -1609,28 +1604,28 @@ references:
   - uid: Beutl.Operation.PublishOperator`1.Evaluate(Beutl.Operation.OperatorEvaluationContext)
     name: Evaluate
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_Evaluate_Beutl_Operation_OperatorEvaluationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: Beutl.Operation.OperatorEvaluationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator`1.Evaluate(Beutl.Operation.OperatorEvaluationContext)
     name: Evaluate
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_Evaluate_Beutl_Operation_OperatorEvaluationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     isExternal: true
-    href: Beutl.Operation.OperatorEvaluationContext.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/OperatorEvaluationContext.cs
   - name: )
 - uid: Beutl.Operation.PublishOperator`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
   commentId: M:Beutl.Operation.PublishOperator`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
   isExternal: true
-  href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: Deserialize(ICoreSerializationContext)
   nameWithType: PublishOperator<T>.Deserialize(ICoreSerializationContext)
   fullName: Beutl.Operation.PublishOperator<T>.Deserialize(Beutl.Serialization.ICoreSerializationContext)
@@ -1640,28 +1635,28 @@ references:
   - uid: Beutl.Operation.PublishOperator`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
     name: Deserialize
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator`1.Deserialize(Beutl.Serialization.ICoreSerializationContext)
     name: Deserialize
     isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
 - uid: Beutl.Operation.PublishOperator`1.Value
   commentId: P:Beutl.Operation.PublishOperator`1.Value
   isExternal: true
-  href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_Value
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: Value
   nameWithType: PublishOperator<T>.Value
   fullName: Beutl.Operation.PublishOperator<T>.Value
@@ -1670,7 +1665,7 @@ references:
 - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(System.Linq.Expressions.Expression<System.Func<TOwner, T>>)
@@ -1681,7 +1676,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -1710,7 +1705,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1744,7 +1739,7 @@ references:
 - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   commentId: M:Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.GetValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.GetValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -1755,7 +1750,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1763,7 +1758,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1772,7 +1767,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1782,7 +1777,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1792,7 +1787,7 @@ references:
 - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   commentId: M:Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue<TValue>(CoreProperty<TValue>, TValue)
   nameWithType: CoreObject.SetValue<TValue>(CoreProperty<TValue>, TValue)
   fullName: Beutl.CoreObject.SetValue<TValue>(Beutl.CoreProperty<TValue>, TValue)
@@ -1803,7 +1798,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1811,7 +1806,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1823,7 +1818,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1833,7 +1828,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1846,7 +1841,7 @@ references:
 - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   commentId: M:Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.ClearValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.ClearValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -1857,7 +1852,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1865,7 +1860,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1874,7 +1869,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1884,72 +1879,28 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
   - name: TValue
   - name: )
   - name: )
-- uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.FillProperties
-  commentId: M:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.FillProperties
-  parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
-  definition: Beutl.Operation.PublishOperator`1.FillProperties
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
-  name: FillProperties()
-  nameWithType: PublishOperator<SourceVideo>.FillProperties()
-  fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.FillProperties()
-  nameWithType.vb: PublishOperator(Of SourceVideo).FillProperties()
-  fullName.vb: Beutl.Operation.PublishOperator(Of Beutl.Graphics.SourceVideo).FillProperties()
-  spec.csharp:
-  - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.FillProperties
-    name: FillProperties
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.FillProperties
-    name: FillProperties
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
-  - name: (
-  - name: )
-- uid: Beutl.Operators.Source.SourceVideoOperator.FillProperties*
-  commentId: Overload:Beutl.Operators.Source.SourceVideoOperator.FillProperties
+- uid: Beutl.Operators.Source.SourceVideoOperator.#ctor*
+  commentId: Overload:Beutl.Operators.Source.SourceVideoOperator.#ctor
   isExternal: true
-  href: Beutl.Operators.Source.SourceVideoOperator.html#Beutl_Operators_Source_SourceVideoOperator_FillProperties
-  name: FillProperties
-  nameWithType: SourceVideoOperator.FillProperties
-  fullName: Beutl.Operators.Source.SourceVideoOperator.FillProperties
-- uid: Beutl.Operation.PublishOperator`1.FillProperties
-  commentId: M:Beutl.Operation.PublishOperator`1.FillProperties
-  isExternal: true
-  href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_FillProperties
-  name: FillProperties()
-  nameWithType: PublishOperator<T>.FillProperties()
-  fullName: Beutl.Operation.PublishOperator<T>.FillProperties()
-  nameWithType.vb: PublishOperator(Of T).FillProperties()
-  fullName.vb: Beutl.Operation.PublishOperator(Of T).FillProperties()
-  spec.csharp:
-  - uid: Beutl.Operation.PublishOperator`1.FillProperties
-    name: FillProperties
-    isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_FillProperties
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: Beutl.Operation.PublishOperator`1.FillProperties
-    name: FillProperties
-    isExternal: true
-    href: Beutl.Operation.PublishOperator-1.html#Beutl_Operation_PublishOperator_1_FillProperties
-  - name: (
-  - name: )
+  href: Beutl.Operators.Source.SourceVideoOperator.html#Beutl_Operators_Source_SourceVideoOperator__ctor
+  name: SourceVideoOperator
+  nameWithType: SourceVideoOperator.SourceVideoOperator
+  fullName: Beutl.Operators.Source.SourceVideoOperator.SourceVideoOperator
+  nameWithType.vb: SourceVideoOperator.New
+  fullName.vb: Beutl.Operators.Source.SourceVideoOperator.New
+  name.vb: New
 - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   commentId: M:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   definition: Beutl.Operation.PublishOperator`1.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: OnDetachedFromHierarchy(in HierarchyAttachmentEventArgs)
   nameWithType: PublishOperator<SourceVideo>.OnDetachedFromHierarchy(in HierarchyAttachmentEventArgs)
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.OnDetachedFromHierarchy(in Beutl.HierarchyAttachmentEventArgs)
@@ -1960,25 +1911,25 @@ references:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnDetachedFromHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: in
   - name: " "
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnDetachedFromHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
 - uid: Beutl.Operators.Source.SourceVideoOperator.OnDetachedFromHierarchy*
   commentId: Overload:Beutl.Operators.Source.SourceVideoOperator.OnDetachedFromHierarchy
@@ -1991,14 +1942,14 @@ references:
   commentId: T:Beutl.HierarchyAttachmentEventArgs
   parent: Beutl
   isExternal: true
-  href: Beutl.HierarchyAttachmentEventArgs.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   name: HierarchyAttachmentEventArgs
   nameWithType: HierarchyAttachmentEventArgs
   fullName: Beutl.HierarchyAttachmentEventArgs
 - uid: Beutl.Operation.PublishOperator`1.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   commentId: M:Beutl.Operation.PublishOperator`1.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: OnDetachedFromHierarchy(in HierarchyAttachmentEventArgs)
   nameWithType: PublishOperator<T>.OnDetachedFromHierarchy(in HierarchyAttachmentEventArgs)
   fullName: Beutl.Operation.PublishOperator<T>.OnDetachedFromHierarchy(in Beutl.HierarchyAttachmentEventArgs)
@@ -2009,31 +1960,31 @@ references:
   - uid: Beutl.Operation.PublishOperator`1.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnDetachedFromHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: in
   - name: " "
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator`1.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnDetachedFromHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
 - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   commentId: M:Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   parent: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}
   definition: Beutl.Operation.PublishOperator`1.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: OnAttachedToHierarchy(in HierarchyAttachmentEventArgs)
   nameWithType: PublishOperator<SourceVideo>.OnAttachedToHierarchy(in HierarchyAttachmentEventArgs)
   fullName: Beutl.Operation.PublishOperator<Beutl.Graphics.SourceVideo>.OnAttachedToHierarchy(in Beutl.HierarchyAttachmentEventArgs)
@@ -2044,25 +1995,25 @@ references:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnAttachedToHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: in
   - name: " "
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator{Beutl.Graphics.SourceVideo}.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnAttachedToHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
 - uid: Beutl.Operators.Source.SourceVideoOperator.OnAttachedToHierarchy*
   commentId: Overload:Beutl.Operators.Source.SourceVideoOperator.OnAttachedToHierarchy
@@ -2074,7 +2025,7 @@ references:
 - uid: Beutl.Operation.PublishOperator`1.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   commentId: M:Beutl.Operation.PublishOperator`1.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   name: OnAttachedToHierarchy(in HierarchyAttachmentEventArgs)
   nameWithType: PublishOperator<T>.OnAttachedToHierarchy(in HierarchyAttachmentEventArgs)
   fullName: Beutl.Operation.PublishOperator<T>.OnAttachedToHierarchy(in Beutl.HierarchyAttachmentEventArgs)
@@ -2085,31 +2036,31 @@ references:
   - uid: Beutl.Operation.PublishOperator`1.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnAttachedToHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - name: in
   - name: " "
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
   spec.vb:
   - uid: Beutl.Operation.PublishOperator`1.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
     name: OnAttachedToHierarchy
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
   - name: (
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
 - uid: Beutl.Operation.SourceOperator.HasOriginalLength
   commentId: M:Beutl.Operation.SourceOperator.HasOriginalLength
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_HasOriginalLength
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: HasOriginalLength()
   nameWithType: SourceOperator.HasOriginalLength()
   fullName: Beutl.Operation.SourceOperator.HasOriginalLength()
@@ -2117,14 +2068,14 @@ references:
   - uid: Beutl.Operation.SourceOperator.HasOriginalLength
     name: HasOriginalLength
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_HasOriginalLength
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Beutl.Operation.SourceOperator.HasOriginalLength
     name: HasOriginalLength
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_HasOriginalLength
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - name: )
 - uid: Beutl.Operators.Source.SourceVideoOperator.HasOriginalLength*
@@ -2149,7 +2100,7 @@ references:
   commentId: M:Beutl.Operation.SourceOperator.TryGetOriginalLength(System.TimeSpan@)
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_TryGetOriginalLength_System_TimeSpan__
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: TryGetOriginalLength(out TimeSpan)
   nameWithType: SourceOperator.TryGetOriginalLength(out TimeSpan)
   fullName: Beutl.Operation.SourceOperator.TryGetOriginalLength(out System.TimeSpan)
@@ -2160,7 +2111,7 @@ references:
   - uid: Beutl.Operation.SourceOperator.TryGetOriginalLength(System.TimeSpan@)
     name: TryGetOriginalLength
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_TryGetOriginalLength_System_TimeSpan__
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - name: out
   - name: " "
@@ -2173,7 +2124,7 @@ references:
   - uid: Beutl.Operation.SourceOperator.TryGetOriginalLength(System.TimeSpan@)
     name: TryGetOriginalLength
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_TryGetOriginalLength_System_TimeSpan__
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - uid: System.TimeSpan
     name: TimeSpan
@@ -2199,7 +2150,7 @@ references:
   commentId: M:Beutl.Operation.SourceOperator.OnSplit(System.Boolean,System.TimeSpan,System.TimeSpan)
   parent: Beutl.Operation.SourceOperator
   isExternal: true
-  href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_OnSplit_System_Boolean_System_TimeSpan_System_TimeSpan_
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   name: OnSplit(bool, TimeSpan, TimeSpan)
   nameWithType: SourceOperator.OnSplit(bool, TimeSpan, TimeSpan)
   fullName: Beutl.Operation.SourceOperator.OnSplit(bool, System.TimeSpan, System.TimeSpan)
@@ -2210,7 +2161,7 @@ references:
   - uid: Beutl.Operation.SourceOperator.OnSplit(System.Boolean,System.TimeSpan,System.TimeSpan)
     name: OnSplit
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_OnSplit_System_Boolean_System_TimeSpan_System_TimeSpan_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - uid: System.Boolean
     name: bool
@@ -2233,7 +2184,7 @@ references:
   - uid: Beutl.Operation.SourceOperator.OnSplit(System.Boolean,System.TimeSpan,System.TimeSpan)
     name: OnSplit
     isExternal: true
-    href: Beutl.Operation.SourceOperator.html#Beutl_Operation_SourceOperator_OnSplit_System_Boolean_System_TimeSpan_System_TimeSpan_
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   - name: (
   - uid: System.Boolean
     name: Boolean
@@ -2263,17 +2214,7 @@ references:
   commentId: T:Beutl.IRecordableCommand
   parent: Beutl
   isExternal: true
-  href: Beutl.IRecordableCommand.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   name: IRecordableCommand
   nameWithType: IRecordableCommand
   fullName: Beutl.IRecordableCommand
-- uid: Beutl.Operators.Source.SourceVideoOperator.#ctor*
-  commentId: Overload:Beutl.Operators.Source.SourceVideoOperator.#ctor
-  isExternal: true
-  href: Beutl.Operators.Source.SourceVideoOperator.html#Beutl_Operators_Source_SourceVideoOperator__ctor
-  name: SourceVideoOperator
-  nameWithType: SourceVideoOperator.SourceVideoOperator
-  fullName: Beutl.Operators.Source.SourceVideoOperator.SourceVideoOperator
-  nameWithType.vb: SourceVideoOperator.New
-  fullName.vb: Beutl.Operators.Source.SourceVideoOperator.New
-  name.vb: New

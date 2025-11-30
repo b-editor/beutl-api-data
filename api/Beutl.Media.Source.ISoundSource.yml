@@ -21,7 +21,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -29,17 +29,15 @@ items:
     content: >-
       [JsonConverter(typeof(SoundSourceJsonConverter))]
 
-      public interface ISoundSource : IMediaSource, IDisposable, IFileSource
+      public interface ISoundSource : IMediaSource, IDisposable
     content.vb: >-
       <JsonConverter(GetType(SoundSourceJsonConverter))>
 
-      Public Interface ISoundSource Inherits IMediaSource, IDisposable, IFileSource
+      Public Interface ISoundSource Inherits IMediaSource, IDisposable
   inheritedMembers:
   - Beutl.Media.Source.IMediaSource.IsDisposed
   - Beutl.Media.Source.IMediaSource.Name
   - System.IDisposable.Dispose
-  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  - Beutl.IO.IFileSource.Uri
   attributes:
   - type: System.Text.Json.Serialization.JsonConverterAttribute
     ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
@@ -58,7 +56,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.Read(int, int, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -96,7 +94,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan, System.TimeSpan, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -134,7 +132,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.Read(System.TimeSpan, int, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -172,7 +170,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.Read(int, System.TimeSpan, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -210,7 +208,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -232,7 +230,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.Duration
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -255,7 +253,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.SampleRate
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -278,7 +276,7 @@ items:
   fullName: Beutl.Media.Source.ISoundSource.NumChannels
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ISoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ISoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -365,42 +363,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
   - name: (
   - name: )
-- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  name: ReadFrom(Uri)
-  nameWithType: IFileSource.ReadFrom(Uri)
-  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  spec.csharp:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-- uid: Beutl.IO.IFileSource.Uri
-  commentId: P:Beutl.IO.IFileSource.Uri
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
-  name: Uri
-  nameWithType: IFileSource.Uri
-  fullName: Beutl.IO.IFileSource.Uri
 - uid: Beutl.Media.Source.IMediaSource
   commentId: T:Beutl.Media.Source.IMediaSource
   parent: Beutl.Media.Source
@@ -417,14 +379,6 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
 - uid: System
   commentId: N:System
   isExternal: true
@@ -432,33 +386,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
 - uid: Beutl.Media.Source.ISoundSource.Read*
   commentId: Overload:Beutl.Media.Source.ISoundSource.Read
   isExternal: true

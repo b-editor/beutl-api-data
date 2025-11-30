@@ -6,9 +6,11 @@ items:
   parent: Beutl.Graphics.Effects
   children:
   - Beutl.Graphics.Effects.FilterEffectContext.#ctor(Beutl.Graphics.Rect)
-  - Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)
+  - Beutl.Graphics.Effects.FilterEffectContext.Apply(Beutl.Graphics.Effects.FilterEffect)
   - Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.Color,Beutl.Graphics.BlendMode)
+  - Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.IBrush,Beutl.Graphics.BlendMode)
   - Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Size)
+  - Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Vector)
   - Beutl.Graphics.Effects.FilterEffectContext.Bounds
   - Beutl.Graphics.Effects.FilterEffectContext.Brightness(System.Single)
   - Beutl.Graphics.Effects.FilterEffectContext.Clone
@@ -18,15 +20,20 @@ items:
   - Beutl.Graphics.Effects.FilterEffectContext.CreateChildContext
   - Beutl.Graphics.Effects.FilterEffectContext.CustomEffect``1(``0,System.Action{``0,Beutl.Graphics.Effects.CustomFilterEffectContext})
   - Beutl.Graphics.Effects.FilterEffectContext.CustomEffect``1(``0,System.Action{``0,Beutl.Graphics.Effects.CustomFilterEffectContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
+  - Beutl.Graphics.Effects.FilterEffectContext.Custom``1(``0,System.Action{``0,Beutl.Graphics.Effects.FilterEffectCustomOperationContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
   - Beutl.Graphics.Effects.FilterEffectContext.Dilate(System.Single,System.Single)
   - Beutl.Graphics.Effects.FilterEffectContext.Dispose
   - Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
+  - Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
   - Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
+  - Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
   - Beutl.Graphics.Effects.FilterEffectContext.Erode(System.Single,System.Single)
   - Beutl.Graphics.Effects.FilterEffectContext.HighContrast(System.Boolean,Beutl.Graphics.Effects.HighContrastInvertStyle,System.Single)
   - Beutl.Graphics.Effects.FilterEffectContext.HueRotate(System.Single)
   - Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
+  - Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
   - Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
+  - Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
   - Beutl.Graphics.Effects.FilterEffectContext.Lighting(Beutl.Media.Color,Beutl.Media.Color)
   - Beutl.Graphics.Effects.FilterEffectContext.LookupTable``1(``0,System.Single,System.Action{``0,System.Byte[]})
   - Beutl.Graphics.Effects.FilterEffectContext.LookupTable``1(``0,System.Single,System.Action{``0,System.ValueTuple{System.Byte[],System.Byte[],System.Byte[],System.Byte[]}})
@@ -44,7 +51,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -74,7 +81,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.FilterEffectContext(Beutl.Graphics.Rect)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -100,7 +107,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -122,7 +129,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.CreateChildContext()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -144,7 +151,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly(Beutl.Graphics.Point, Beutl.Graphics.Size, Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -159,6 +166,45 @@ items:
       type: Beutl.Media.Color
     content.vb: Public Sub DropShadowOnly(position As Point, sigma As Size, color As Color)
   overload: Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly*
+- uid: Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  id: DropShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  parent: Beutl.Graphics.Effects.FilterEffectContext
+  langs:
+  - csharp
+  - vb
+  name: DropShadowOnly(Point, Vector, Color)
+  nameWithType: FilterEffectContext.DropShadowOnly(Point, Vector, Color)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly(Beutl.Graphics.Point, Beutl.Graphics.Vector, Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: >-
+      [Obsolete("Use DropShadowOnly(Point, Size, Color)")]
+
+      public void DropShadowOnly(Point position, Vector sigma, Color color)
+    parameters:
+    - id: position
+      type: Beutl.Graphics.Point
+    - id: sigma
+      type: Beutl.Graphics.Vector
+    - id: color
+      type: Beutl.Media.Color
+    content.vb: >-
+      <Obsolete("Use DropShadowOnly(Point, Size, Color)")>
+
+      Public Sub DropShadowOnly(position As Point, sigma As Vector, color As Color)
+  overload: Beutl.Graphics.Effects.FilterEffectContext.DropShadowOnly*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use DropShadowOnly(Point, Size, Color)
 - uid: Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
   commentId: M:Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
   id: DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
@@ -171,7 +217,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point, Beutl.Graphics.Size, Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -186,6 +232,45 @@ items:
       type: Beutl.Media.Color
     content.vb: Public Sub DropShadow(position As Point, sigma As Size, color As Color)
   overload: Beutl.Graphics.Effects.FilterEffectContext.DropShadow*
+- uid: Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  id: DropShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  parent: Beutl.Graphics.Effects.FilterEffectContext
+  langs:
+  - csharp
+  - vb
+  name: DropShadow(Point, Vector, Color)
+  nameWithType: FilterEffectContext.DropShadow(Point, Vector, Color)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.DropShadow(Beutl.Graphics.Point, Beutl.Graphics.Vector, Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: >-
+      [Obsolete("Use DropShadow(Point, Size, Color)")]
+
+      public void DropShadow(Point position, Vector sigma, Color color)
+    parameters:
+    - id: position
+      type: Beutl.Graphics.Point
+    - id: sigma
+      type: Beutl.Graphics.Vector
+    - id: color
+      type: Beutl.Media.Color
+    content.vb: >-
+      <Obsolete("Use DropShadow(Point, Size, Color)")>
+
+      Public Sub DropShadow(position As Point, sigma As Vector, color As Color)
+  overload: Beutl.Graphics.Effects.FilterEffectContext.DropShadow*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use DropShadow(Point, Size, Color)
 - uid: Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Size)
   commentId: M:Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Size)
   id: Blur(Beutl.Graphics.Size)
@@ -198,7 +283,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Size)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -209,6 +294,41 @@ items:
       type: Beutl.Graphics.Size
     content.vb: Public Sub Blur(sigma As Size)
   overload: Beutl.Graphics.Effects.FilterEffectContext.Blur*
+- uid: Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Vector)
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Vector)
+  id: Blur(Beutl.Graphics.Vector)
+  parent: Beutl.Graphics.Effects.FilterEffectContext
+  langs:
+  - csharp
+  - vb
+  name: Blur(Vector)
+  nameWithType: FilterEffectContext.Blur(Vector)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.Blur(Beutl.Graphics.Vector)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: >-
+      [Obsolete("Use Blur(Size)")]
+
+      public void Blur(Vector sigma)
+    parameters:
+    - id: sigma
+      type: Beutl.Graphics.Vector
+    content.vb: >-
+      <Obsolete("Use Blur(Size)")>
+
+      Public Sub Blur(sigma As Vector)
+  overload: Beutl.Graphics.Effects.FilterEffectContext.Blur*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use Blur(Size)
 - uid: Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
   commentId: M:Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
   id: InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
@@ -221,7 +341,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point, Beutl.Graphics.Size, Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -236,6 +356,45 @@ items:
       type: Beutl.Media.Color
     content.vb: Public Sub InnerShadow(position As Point, sigma As Size, color As Color)
   overload: Beutl.Graphics.Effects.FilterEffectContext.InnerShadow*
+- uid: Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  id: InnerShadow(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  parent: Beutl.Graphics.Effects.FilterEffectContext
+  langs:
+  - csharp
+  - vb
+  name: InnerShadow(Point, Vector, Color)
+  nameWithType: FilterEffectContext.InnerShadow(Point, Vector, Color)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.InnerShadow(Beutl.Graphics.Point, Beutl.Graphics.Vector, Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: >-
+      [Obsolete("Use InnerShadow(Point, Size, Color)")]
+
+      public void InnerShadow(Point position, Vector sigma, Color color)
+    parameters:
+    - id: position
+      type: Beutl.Graphics.Point
+    - id: sigma
+      type: Beutl.Graphics.Vector
+    - id: color
+      type: Beutl.Media.Color
+    content.vb: >-
+      <Obsolete("Use InnerShadow(Point, Size, Color)")>
+
+      Public Sub InnerShadow(position As Point, sigma As Vector, color As Color)
+  overload: Beutl.Graphics.Effects.FilterEffectContext.InnerShadow*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use InnerShadow(Point, Size, Color)
 - uid: Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
   commentId: M:Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
   id: InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Size,Beutl.Media.Color)
@@ -248,7 +407,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point, Beutl.Graphics.Size, Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -263,6 +422,45 @@ items:
       type: Beutl.Media.Color
     content.vb: Public Sub InnerShadowOnly(position As Point, sigma As Size, color As Color)
   overload: Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly*
+- uid: Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  id: InnerShadowOnly(Beutl.Graphics.Point,Beutl.Graphics.Vector,Beutl.Media.Color)
+  parent: Beutl.Graphics.Effects.FilterEffectContext
+  langs:
+  - csharp
+  - vb
+  name: InnerShadowOnly(Point, Vector, Color)
+  nameWithType: FilterEffectContext.InnerShadowOnly(Point, Vector, Color)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly(Beutl.Graphics.Point, Beutl.Graphics.Vector, Beutl.Media.Color)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: >-
+      [Obsolete("Use InnerShadowOnly(Point, Size, Color)")]
+
+      public void InnerShadowOnly(Point position, Vector sigma, Color color)
+    parameters:
+    - id: position
+      type: Beutl.Graphics.Point
+    - id: sigma
+      type: Beutl.Graphics.Vector
+    - id: color
+      type: Beutl.Media.Color
+    content.vb: >-
+      <Obsolete("Use InnerShadowOnly(Point, Size, Color)")>
+
+      Public Sub InnerShadowOnly(position As Point, sigma As Vector, color As Color)
+  overload: Beutl.Graphics.Effects.FilterEffectContext.InnerShadowOnly*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use InnerShadowOnly(Point, Size, Color)
 - uid: Beutl.Graphics.Effects.FilterEffectContext.Transform(Beutl.Graphics.Matrix,Beutl.Media.BitmapInterpolationMode)
   commentId: M:Beutl.Graphics.Effects.FilterEffectContext.Transform(Beutl.Graphics.Matrix,Beutl.Media.BitmapInterpolationMode)
   id: Transform(Beutl.Graphics.Matrix,Beutl.Media.BitmapInterpolationMode)
@@ -275,7 +473,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Transform(Beutl.Graphics.Matrix, Beutl.Media.BitmapInterpolationMode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -300,7 +498,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.MatrixConvolution(Beutl.Media.PixelSize, float[], float, float, Beutl.Media.PixelPoint, Beutl.Media.GradientSpreadMethod, bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -338,7 +536,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Erode(float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -366,7 +564,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Dilate(float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -394,7 +592,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.ColorMatrix(in Beutl.Graphics.ColorMatrix)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -420,7 +618,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.ColorMatrix<T>(T, System.Func<T, Beutl.Graphics.ColorMatrix>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -450,7 +648,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Saturate(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -476,7 +674,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.HueRotate(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -502,7 +700,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.LuminanceToAlpha()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -522,7 +720,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Brightness(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -548,7 +746,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.HighContrast(bool, Beutl.Graphics.Effects.HighContrastInvertStyle, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -578,7 +776,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Lighting(Beutl.Media.Color, Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -603,7 +801,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.LumaColor()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -623,7 +821,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.LookupTable<T>(T, float, System.Action<T, (byte[] A, byte[] R, byte[] G, byte[] B)>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -655,7 +853,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.LookupTable<T>(T, float, System.Action<T, byte[]>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -687,7 +885,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.Color, Beutl.Graphics.BlendMode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -700,34 +898,78 @@ items:
       type: Beutl.Graphics.BlendMode
     content.vb: Public Sub BlendMode(color As Color, blendMode As BlendMode)
   overload: Beutl.Graphics.Effects.FilterEffectContext.BlendMode*
-- uid: Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)
-  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)
-  id: BlendMode(Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)
+- uid: Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.IBrush,Beutl.Graphics.BlendMode)
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.IBrush,Beutl.Graphics.BlendMode)
+  id: BlendMode(Beutl.Media.IBrush,Beutl.Graphics.BlendMode)
   parent: Beutl.Graphics.Effects.FilterEffectContext
   langs:
   - csharp
   - vb
-  name: BlendMode(Resource?, BlendMode)
-  nameWithType: FilterEffectContext.BlendMode(Brush.Resource?, BlendMode)
-  fullName: Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.Brush.Resource?, Beutl.Graphics.BlendMode)
+  name: BlendMode(IBrush?, BlendMode)
+  nameWithType: FilterEffectContext.BlendMode(IBrush?, BlendMode)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.IBrush?, Beutl.Graphics.BlendMode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
   syntax:
-    content: public void BlendMode(Brush.Resource? brush, BlendMode blendMode)
+    content: public void BlendMode(IBrush? brush, BlendMode blendMode)
     parameters:
     - id: brush
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: blendMode
       type: Beutl.Graphics.BlendMode
-    content.vb: Public Sub BlendMode(brush As Brush.Resource, blendMode As BlendMode)
+    content.vb: Public Sub BlendMode(brush As IBrush, blendMode As BlendMode)
   overload: Beutl.Graphics.Effects.FilterEffectContext.BlendMode*
-  nameWithType.vb: FilterEffectContext.BlendMode(Brush.Resource, BlendMode)
-  fullName.vb: Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.Brush.Resource, Beutl.Graphics.BlendMode)
-  name.vb: BlendMode(Resource, BlendMode)
+  nameWithType.vb: FilterEffectContext.BlendMode(IBrush, BlendMode)
+  fullName.vb: Beutl.Graphics.Effects.FilterEffectContext.BlendMode(Beutl.Media.IBrush, Beutl.Graphics.BlendMode)
+  name.vb: BlendMode(IBrush, BlendMode)
+- uid: Beutl.Graphics.Effects.FilterEffectContext.Custom``1(``0,System.Action{``0,Beutl.Graphics.Effects.FilterEffectCustomOperationContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.Custom``1(``0,System.Action{``0,Beutl.Graphics.Effects.FilterEffectCustomOperationContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
+  id: Custom``1(``0,System.Action{``0,Beutl.Graphics.Effects.FilterEffectCustomOperationContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
+  parent: Beutl.Graphics.Effects.FilterEffectContext
+  langs:
+  - csharp
+  - vb
+  name: Custom<T>(T, Action<T, FilterEffectCustomOperationContext>, Func<T, Rect, Rect>)
+  nameWithType: FilterEffectContext.Custom<T>(T, Action<T, FilterEffectCustomOperationContext>, Func<T, Rect, Rect>)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.Custom<T>(T, System.Action<T, Beutl.Graphics.Effects.FilterEffectCustomOperationContext>, System.Func<T, Beutl.Graphics.Rect, Beutl.Graphics.Rect>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: >-
+      [Obsolete("Use CustomEffect")]
+
+      public void Custom<T>(T data, Action<T, FilterEffectCustomOperationContext> action, Func<T, Rect, Rect> transformBounds) where T : IEquatable<T>
+    parameters:
+    - id: data
+      type: '{T}'
+    - id: action
+      type: System.Action{{T},Beutl.Graphics.Effects.FilterEffectCustomOperationContext}
+    - id: transformBounds
+      type: System.Func{{T},Beutl.Graphics.Rect,Beutl.Graphics.Rect}
+    typeParameters:
+    - id: T
+    content.vb: >-
+      <Obsolete("Use CustomEffect")>
+
+      Public Sub Custom(Of T As IEquatable(Of T))(data As T, action As Action(Of T, FilterEffectCustomOperationContext), transformBounds As Func(Of T, Rect, Rect))
+  overload: Beutl.Graphics.Effects.FilterEffectContext.Custom*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use CustomEffect
+  nameWithType.vb: FilterEffectContext.Custom(Of T)(T, Action(Of T, FilterEffectCustomOperationContext), Func(Of T, Rect, Rect))
+  fullName.vb: Beutl.Graphics.Effects.FilterEffectContext.Custom(Of T)(T, System.Action(Of T, Beutl.Graphics.Effects.FilterEffectCustomOperationContext), System.Func(Of T, Beutl.Graphics.Rect, Beutl.Graphics.Rect))
+  name.vb: Custom(Of T)(T, Action(Of T, FilterEffectCustomOperationContext), Func(Of T, Rect, Rect))
 - uid: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect``1(``0,System.Action{``0,Beutl.Graphics.Effects.CustomFilterEffectContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
   commentId: M:Beutl.Graphics.Effects.FilterEffectContext.CustomEffect``1(``0,System.Action{``0,Beutl.Graphics.Effects.CustomFilterEffectContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
   id: CustomEffect``1(``0,System.Action{``0,Beutl.Graphics.Effects.CustomFilterEffectContext},System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect})
@@ -740,7 +982,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect<T>(T, System.Action<T, Beutl.Graphics.Effects.CustomFilterEffectContext>, System.Func<T, Beutl.Graphics.Rect, Beutl.Graphics.Rect>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -772,7 +1014,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect<T>(T, System.Action<T, Beutl.Graphics.Effects.CustomFilterEffectContext>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -790,6 +1032,32 @@ items:
   nameWithType.vb: FilterEffectContext.CustomEffect(Of T)(T, Action(Of T, CustomFilterEffectContext))
   fullName.vb: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect(Of T)(T, System.Action(Of T, Beutl.Graphics.Effects.CustomFilterEffectContext))
   name.vb: CustomEffect(Of T)(T, Action(Of T, CustomFilterEffectContext))
+- uid: Beutl.Graphics.Effects.FilterEffectContext.Apply(Beutl.Graphics.Effects.FilterEffect)
+  commentId: M:Beutl.Graphics.Effects.FilterEffectContext.Apply(Beutl.Graphics.Effects.FilterEffect)
+  id: Apply(Beutl.Graphics.Effects.FilterEffect)
+  parent: Beutl.Graphics.Effects.FilterEffectContext
+  langs:
+  - csharp
+  - vb
+  name: Apply(FilterEffect?)
+  nameWithType: FilterEffectContext.Apply(FilterEffect?)
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.Apply(Beutl.Graphics.Effects.FilterEffect?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: public void Apply(FilterEffect? filterEffect)
+    parameters:
+    - id: filterEffect
+      type: Beutl.Graphics.Effects.FilterEffect
+    content.vb: Public Sub Apply(filterEffect As FilterEffect)
+  overload: Beutl.Graphics.Effects.FilterEffectContext.Apply*
+  nameWithType.vb: FilterEffectContext.Apply(FilterEffect)
+  fullName.vb: Beutl.Graphics.Effects.FilterEffectContext.Apply(Beutl.Graphics.Effects.FilterEffect)
+  name.vb: Apply(FilterEffect)
 - uid: Beutl.Graphics.Effects.FilterEffectContext.CountItems
   commentId: M:Beutl.Graphics.Effects.FilterEffectContext.CountItems
   id: CountItems
@@ -802,7 +1070,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.CountItems()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -824,7 +1092,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -847,7 +1115,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.Bounds
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -870,7 +1138,7 @@ items:
   fullName: Beutl.Graphics.Effects.FilterEffectContext.OriginalBounds
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/FilterEffectContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -1265,6 +1533,14 @@ references:
     name: Media
     isExternal: true
     href: Beutl.Media.html
+- uid: Beutl.Graphics.Vector
+  commentId: T:Beutl.Graphics.Vector
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: Beutl.Graphics.Vector
 - uid: Beutl.Graphics.Effects.FilterEffectContext.DropShadow*
   commentId: Overload:Beutl.Graphics.Effects.FilterEffectContext.DropShadow
   isExternal: true
@@ -1809,52 +2085,32 @@ references:
   name: BlendMode
   nameWithType: BlendMode
   fullName: Beutl.Graphics.BlendMode
-- uid: Beutl.Media.Brush.Resource
-  commentId: T:Beutl.Media.Brush.Resource
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Brush.html
-  name: Brush.Resource
-  nameWithType: Brush.Resource
-  fullName: Beutl.Media.Brush.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-- uid: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect*
-  commentId: Overload:Beutl.Graphics.Effects.FilterEffectContext.CustomEffect
+  href: Beutl.Media.IBrush.html
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
+- uid: Beutl.Graphics.Effects.FilterEffectContext.Custom*
+  commentId: Overload:Beutl.Graphics.Effects.FilterEffectContext.Custom
   isExternal: true
-  href: Beutl.Graphics.Effects.FilterEffectContext.html#Beutl_Graphics_Effects_FilterEffectContext_CustomEffect__1___0_System_Action___0_Beutl_Graphics_Effects_CustomFilterEffectContext__System_Func___0_Beutl_Graphics_Rect_Beutl_Graphics_Rect__
-  name: CustomEffect
-  nameWithType: FilterEffectContext.CustomEffect
-  fullName: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect
-- uid: System.Action{{T},Beutl.Graphics.Effects.CustomFilterEffectContext}
-  commentId: T:System.Action{``0,Beutl.Graphics.Effects.CustomFilterEffectContext}
+  href: Beutl.Graphics.Effects.FilterEffectContext.html#Beutl_Graphics_Effects_FilterEffectContext_Custom__1___0_System_Action___0_Beutl_Graphics_Effects_FilterEffectCustomOperationContext__System_Func___0_Beutl_Graphics_Rect_Beutl_Graphics_Rect__
+  name: Custom
+  nameWithType: FilterEffectContext.Custom
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.Custom
+- uid: System.Action{{T},Beutl.Graphics.Effects.FilterEffectCustomOperationContext}
+  commentId: T:System.Action{``0,Beutl.Graphics.Effects.FilterEffectCustomOperationContext}
   parent: System
   definition: System.Action`2
   href: https://learn.microsoft.com/dotnet/api/system.action-2
-  name: Action<T, CustomFilterEffectContext>
-  nameWithType: Action<T, CustomFilterEffectContext>
-  fullName: System.Action<T, Beutl.Graphics.Effects.CustomFilterEffectContext>
-  nameWithType.vb: Action(Of T, CustomFilterEffectContext)
-  fullName.vb: System.Action(Of T, Beutl.Graphics.Effects.CustomFilterEffectContext)
-  name.vb: Action(Of T, CustomFilterEffectContext)
+  name: Action<T, FilterEffectCustomOperationContext>
+  nameWithType: Action<T, FilterEffectCustomOperationContext>
+  fullName: System.Action<T, Beutl.Graphics.Effects.FilterEffectCustomOperationContext>
+  nameWithType.vb: Action(Of T, FilterEffectCustomOperationContext)
+  fullName.vb: System.Action(Of T, Beutl.Graphics.Effects.FilterEffectCustomOperationContext)
+  name.vb: Action(Of T, FilterEffectCustomOperationContext)
   spec.csharp:
   - uid: System.Action`2
     name: Action
@@ -1864,10 +2120,10 @@ references:
   - name: T
   - name: ','
   - name: " "
-  - uid: Beutl.Graphics.Effects.CustomFilterEffectContext
-    name: CustomFilterEffectContext
+  - uid: Beutl.Graphics.Effects.FilterEffectCustomOperationContext
+    name: FilterEffectCustomOperationContext
     isExternal: true
-    href: Beutl.Graphics.Effects.CustomFilterEffectContext.html
+    href: Beutl.Graphics.Effects.FilterEffectCustomOperationContext.html
   - name: '>'
   spec.vb:
   - uid: System.Action`2
@@ -1880,10 +2136,10 @@ references:
   - name: T
   - name: ','
   - name: " "
-  - uid: Beutl.Graphics.Effects.CustomFilterEffectContext
-    name: CustomFilterEffectContext
+  - uid: Beutl.Graphics.Effects.FilterEffectCustomOperationContext
+    name: FilterEffectCustomOperationContext
     isExternal: true
-    href: Beutl.Graphics.Effects.CustomFilterEffectContext.html
+    href: Beutl.Graphics.Effects.FilterEffectCustomOperationContext.html
   - name: )
 - uid: System.Func{{T},Beutl.Graphics.Rect,Beutl.Graphics.Rect}
   commentId: T:System.Func{``0,Beutl.Graphics.Rect,Beutl.Graphics.Rect}
@@ -1978,6 +2234,69 @@ references:
   - name: " "
   - name: TResult
   - name: )
+- uid: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect*
+  commentId: Overload:Beutl.Graphics.Effects.FilterEffectContext.CustomEffect
+  isExternal: true
+  href: Beutl.Graphics.Effects.FilterEffectContext.html#Beutl_Graphics_Effects_FilterEffectContext_CustomEffect__1___0_System_Action___0_Beutl_Graphics_Effects_CustomFilterEffectContext__System_Func___0_Beutl_Graphics_Rect_Beutl_Graphics_Rect__
+  name: CustomEffect
+  nameWithType: FilterEffectContext.CustomEffect
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.CustomEffect
+- uid: System.Action{{T},Beutl.Graphics.Effects.CustomFilterEffectContext}
+  commentId: T:System.Action{``0,Beutl.Graphics.Effects.CustomFilterEffectContext}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T, CustomFilterEffectContext>
+  nameWithType: Action<T, CustomFilterEffectContext>
+  fullName: System.Action<T, Beutl.Graphics.Effects.CustomFilterEffectContext>
+  nameWithType.vb: Action(Of T, CustomFilterEffectContext)
+  fullName.vb: System.Action(Of T, Beutl.Graphics.Effects.CustomFilterEffectContext)
+  name.vb: Action(Of T, CustomFilterEffectContext)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Effects.CustomFilterEffectContext
+    name: CustomFilterEffectContext
+    isExternal: true
+    href: Beutl.Graphics.Effects.CustomFilterEffectContext.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Beutl.Graphics.Effects.CustomFilterEffectContext
+    name: CustomFilterEffectContext
+    isExternal: true
+    href: Beutl.Graphics.Effects.CustomFilterEffectContext.html
+  - name: )
+- uid: Beutl.Graphics.Effects.FilterEffectContext.Apply*
+  commentId: Overload:Beutl.Graphics.Effects.FilterEffectContext.Apply
+  isExternal: true
+  href: Beutl.Graphics.Effects.FilterEffectContext.html#Beutl_Graphics_Effects_FilterEffectContext_Apply_Beutl_Graphics_Effects_FilterEffect_
+  name: Apply
+  nameWithType: FilterEffectContext.Apply
+  fullName: Beutl.Graphics.Effects.FilterEffectContext.Apply
+- uid: Beutl.Graphics.Effects.FilterEffect
+  commentId: T:Beutl.Graphics.Effects.FilterEffect
+  parent: Beutl.Graphics.Effects
+  isExternal: true
+  href: Beutl.Graphics.Effects.FilterEffect.html
+  name: FilterEffect
+  nameWithType: FilterEffect
+  fullName: Beutl.Graphics.Effects.FilterEffect
 - uid: Beutl.Graphics.Effects.FilterEffectContext.CountItems*
   commentId: Overload:Beutl.Graphics.Effects.FilterEffectContext.CountItems
   isExternal: true

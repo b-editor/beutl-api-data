@@ -12,11 +12,10 @@ items:
   - Beutl.Media.Source.ImageSource.FrameSize
   - Beutl.Media.Source.ImageSource.IsDisposed
   - Beutl.Media.Source.ImageSource.IsGenerated
+  - Beutl.Media.Source.ImageSource.Name
   - Beutl.Media.Source.ImageSource.OnDispose(System.Boolean)
   - Beutl.Media.Source.ImageSource.Read(Beutl.Media.IBitmap@)
-  - Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
   - Beutl.Media.Source.ImageSource.TryGetRef(Beutl.Media.Source.Ref{Beutl.Media.IBitmap}@)
-  - Beutl.Media.Source.ImageSource.Uri
   langs:
   - csharp
   - vb
@@ -25,13 +24,13 @@ items:
   fullName: Beutl.Media.Source.ImageSource
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: 'public abstract class ImageSource : IImageSource, IMediaSource, IDisposable, IFileSource'
-    content.vb: Public MustInherit Class ImageSource Implements IImageSource, IMediaSource, IDisposable, IFileSource
+    content: 'public abstract class ImageSource : IImageSource, IMediaSource, IDisposable'
+    content.vb: Public MustInherit Class ImageSource Implements IImageSource, IMediaSource, IDisposable
   inheritance:
   - System.Object
   derivedClasses:
@@ -40,7 +39,6 @@ items:
   - Beutl.Media.Source.IImageSource
   - Beutl.Media.Source.IMediaSource
   - System.IDisposable
-  - Beutl.IO.IFileSource
   inheritedMembers:
   - System.Object.GetType
   - System.Object.MemberwiseClone
@@ -61,7 +59,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.~ImageSource()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -84,7 +82,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -109,7 +107,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.Read(out Beutl.Media.IBitmap?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -146,7 +144,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.TryGetRef(out Beutl.Media.Source.Ref<Beutl.Media.IBitmap>?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -171,32 +169,6 @@ items:
   nameWithType.vb: ImageSource.TryGetRef(Ref(Of IBitmap))
   fullName.vb: Beutl.Media.Source.ImageSource.TryGetRef(Beutl.Media.Source.Ref(Of Beutl.Media.IBitmap))
   name.vb: TryGetRef(Ref(Of IBitmap))
-- uid: Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-  id: ReadFrom(System.Uri)
-  parent: Beutl.Media.Source.ImageSource
-  langs:
-  - csharp
-  - vb
-  name: ReadFrom(Uri)
-  nameWithType: ImageSource.ReadFrom(Uri)
-  fullName: Beutl.Media.Source.ImageSource.ReadFrom(System.Uri)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  example: []
-  syntax:
-    content: public abstract void ReadFrom(Uri uri)
-    parameters:
-    - id: uri
-      type: System.Uri
-    content.vb: Public MustOverride Sub ReadFrom(uri As Uri)
-  overload: Beutl.Media.Source.ImageSource.ReadFrom*
-  implements:
-  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
 - uid: Beutl.Media.Source.ImageSource.OnDispose(System.Boolean)
   commentId: M:Beutl.Media.Source.ImageSource.OnDispose(System.Boolean)
   id: OnDispose(System.Boolean)
@@ -209,7 +181,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -235,7 +207,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -258,7 +230,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.ImageSource()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -281,7 +253,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.FrameSize
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -307,7 +279,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.IsGenerated
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -318,32 +290,32 @@ items:
       type: System.Boolean
     content.vb: Public MustOverride ReadOnly Property IsGenerated As Boolean
   overload: Beutl.Media.Source.ImageSource.IsGenerated*
-- uid: Beutl.Media.Source.ImageSource.Uri
-  commentId: P:Beutl.Media.Source.ImageSource.Uri
-  id: Uri
+- uid: Beutl.Media.Source.ImageSource.Name
+  commentId: P:Beutl.Media.Source.ImageSource.Name
+  id: Name
   parent: Beutl.Media.Source.ImageSource
   langs:
   - csharp
   - vb
-  name: Uri
-  nameWithType: ImageSource.Uri
-  fullName: Beutl.Media.Source.ImageSource.Uri
+  name: Name
+  nameWithType: ImageSource.Name
+  fullName: Beutl.Media.Source.ImageSource.Name
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   example: []
   syntax:
-    content: public abstract Uri Uri { get; }
+    content: public abstract string Name { get; }
     parameters: []
     return:
-      type: System.Uri
-    content.vb: Public MustOverride ReadOnly Property Uri As Uri
-  overload: Beutl.Media.Source.ImageSource.Uri*
+      type: System.String
+    content.vb: Public MustOverride ReadOnly Property Name As String
+  overload: Beutl.Media.Source.ImageSource.Name*
   implements:
-  - Beutl.IO.IFileSource.Uri
+  - Beutl.Media.Source.IMediaSource.Name
 - uid: Beutl.Media.Source.ImageSource.IsDisposed
   commentId: P:Beutl.Media.Source.ImageSource.IsDisposed
   id: IsDisposed
@@ -356,7 +328,7 @@ items:
   fullName: Beutl.Media.Source.ImageSource.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/ImageSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/ImageSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -443,14 +415,6 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -677,33 +641,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
 - uid: Beutl.Media.Source.ImageSource.Finalize*
   commentId: Overload:Beutl.Media.Source.ImageSource.Finalize
   isExternal: true
@@ -954,48 +891,6 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Media.Source.ImageSource.ReadFrom*
-  commentId: Overload:Beutl.Media.Source.ImageSource.ReadFrom
-  isExternal: true
-  href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_ReadFrom_System_Uri_
-  name: ReadFrom
-  nameWithType: ImageSource.ReadFrom
-  fullName: Beutl.Media.Source.ImageSource.ReadFrom
-- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  name: ReadFrom(Uri)
-  nameWithType: IFileSource.ReadFrom(Uri)
-  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  spec.csharp:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: System.Uri
 - uid: Beutl.Media.Source.ImageSource.OnDispose*
   commentId: Overload:Beutl.Media.Source.ImageSource.OnDispose
   isExternal: true
@@ -1072,21 +967,32 @@ references:
   name: IsGenerated
   nameWithType: ImageSource.IsGenerated
   fullName: Beutl.Media.Source.ImageSource.IsGenerated
-- uid: Beutl.Media.Source.ImageSource.Uri*
-  commentId: Overload:Beutl.Media.Source.ImageSource.Uri
+- uid: Beutl.Media.Source.ImageSource.Name*
+  commentId: Overload:Beutl.Media.Source.ImageSource.Name
   isExternal: true
-  href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_Uri
-  name: Uri
-  nameWithType: ImageSource.Uri
-  fullName: Beutl.Media.Source.ImageSource.Uri
-- uid: Beutl.IO.IFileSource.Uri
-  commentId: P:Beutl.IO.IFileSource.Uri
-  parent: Beutl.IO.IFileSource
+  href: Beutl.Media.Source.ImageSource.html#Beutl_Media_Source_ImageSource_Name
+  name: Name
+  nameWithType: ImageSource.Name
+  fullName: Beutl.Media.Source.ImageSource.Name
+- uid: Beutl.Media.Source.IMediaSource.Name
+  commentId: P:Beutl.Media.Source.IMediaSource.Name
+  parent: Beutl.Media.Source.IMediaSource
   isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
-  name: Uri
-  nameWithType: IFileSource.Uri
-  fullName: Beutl.IO.IFileSource.Uri
+  href: Beutl.Media.Source.IMediaSource.html#Beutl_Media_Source_IMediaSource_Name
+  name: Name
+  nameWithType: IMediaSource.Name
+  fullName: Beutl.Media.Source.IMediaSource.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Beutl.Media.Source.ImageSource.IsDisposed*
   commentId: Overload:Beutl.Media.Source.ImageSource.IsDisposed
   isExternal: true

@@ -17,21 +17,25 @@ items:
   fullName: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode<T>
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree.Nodes.Brushes
   syntax:
-    content: 'public class GradientBrushNode<T> : BrushNode<T>, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical where T : GradientBrush.Resource, new()'
+    content: 'public class GradientBrushNode<T> : BrushNode<T>, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical where T : GradientBrush, new()'
     typeParameters:
     - id: T
-    content.vb: Public Class GradientBrushNode(Of T As {GradientBrush.Resource, New}) Inherits BrushNode(Of T) Implements ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical
+    content.vb: Public Class GradientBrushNode(Of T As {GradientBrush, New}) Inherits BrushNode(Of T) Implements ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical
   inheritance:
   - System.Object
   - Beutl.CoreObject
   - Beutl.Hierarchical
   - Beutl.NodeTree.Node
   - Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}
+  derivedClasses:
+  - Beutl.NodeTree.Nodes.Brushes.ConicGradientBrushNode
+  - Beutl.NodeTree.Nodes.Brushes.LinearGradientBrushNode
+  - Beutl.NodeTree.Nodes.Brushes.RadialGradientBrushNode
   implements:
   - Beutl.ICoreObject
   - System.ComponentModel.INotifyPropertyChanged
@@ -40,8 +44,6 @@ items:
   - Beutl.IModifiableHierarchical
   - Beutl.IHierarchical
   inheritedMembers:
-  - Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  - Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
   - Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.OutputSocket
   - Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.OpacitySocket
   - Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.TransformSocket
@@ -49,20 +51,34 @@ items:
   - Beutl.NodeTree.Node.IsExpandedProperty
   - Beutl.NodeTree.Node.PositionProperty
   - Beutl.NodeTree.Node.InvalidateNodeTree
-  - Beutl.NodeTree.Node.RaiseInvalidated(System.EventArgs)
+  - Beutl.NodeTree.Node.RaiseInvalidated(Beutl.Media.RenderInvalidatedEventArgs)
+  - Beutl.NodeTree.Node.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+  - Beutl.NodeTree.Node.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
   - Beutl.NodeTree.Node.PreEvaluate(Beutl.NodeTree.NodeEvaluationContext)
   - Beutl.NodeTree.Node.PostEvaluate(Beutl.NodeTree.NodeEvaluationContext)
+  - Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{{T}},System.Int32)
+  - Beutl.NodeTree.Node.AsInput(Beutl.CoreProperty,System.Int32)
+  - Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{{T}},System.Int32)
+  - Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{{T}},{T},System.Int32)
+  - Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{{T}},{T},System.Int32)
   - Beutl.NodeTree.Node.AsInput``1(System.String,System.Int32)
   - Beutl.NodeTree.Node.AsInput(System.String,System.Type,System.Int32)
   - Beutl.NodeTree.Node.AsOutput``1(System.String,{T},System.Int32)
   - Beutl.NodeTree.Node.AsOutput``1(System.String,System.Int32)
-  - Beutl.NodeTree.Node.AsProperty``1(System.String,System.Int32)
+  - Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{{T}},System.Int32)
+  - Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{{T}},{T},System.Int32)
+  - Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{{T}},System.Int32)
+  - Beutl.NodeTree.Node.CreateInput(Beutl.CoreProperty,System.Int32)
+  - Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{{T}},System.Int32)
+  - Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{{T}},{T},System.Int32)
+  - Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{{T}},{T},System.Int32)
   - Beutl.NodeTree.Node.CreateInput``1(System.String,System.Int32)
   - Beutl.NodeTree.Node.CreateInput(System.String,System.Type,System.Int32)
   - Beutl.NodeTree.Node.CreateOutput``1(System.String,{T},System.Int32)
   - Beutl.NodeTree.Node.CreateOutput``1(System.String,System.Int32)
   - Beutl.NodeTree.Node.CreateOutput(System.String,System.Type,System.Int32)
-  - Beutl.NodeTree.Node.CreateProperty``1(System.String,System.Int32)
+  - Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{{T}},System.Int32)
+  - Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{{T}},{T},System.Int32)
   - Beutl.NodeTree.Node.Deserialize(Beutl.Serialization.ICoreSerializationContext)
   - Beutl.NodeTree.Node.Serialize(Beutl.Serialization.ICoreSerializationContext)
   - Beutl.NodeTree.Node.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
@@ -72,7 +88,7 @@ items:
   - Beutl.NodeTree.Node.Position
   - Beutl.NodeTree.Node.NextLocalId
   - Beutl.NodeTree.Node.NodeTreeInvalidated
-  - Beutl.NodeTree.Node.Edited
+  - Beutl.NodeTree.Node.Invalidated
   - Beutl.Hierarchical.HierarchicalParentProperty
   - Beutl.Hierarchical.Hierarchy``1(Beutl.CoreProperty[])
   - Beutl.Hierarchical.HierarchicalChildrenCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
@@ -95,7 +111,6 @@ items:
   - Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{{T}},{T}@,{T})
   - Beutl.CoreObject.Id
   - Beutl.CoreObject.Name
-  - Beutl.CoreObject.Uri
   - Beutl.CoreObject.HasErrors
   - Beutl.CoreObject.PropertyChanged
   - Beutl.CoreObject.ErrorsChanged
@@ -121,7 +136,7 @@ items:
   fullName: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode<T>.GradientBrushNode()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree.Nodes.Brushes
@@ -144,7 +159,7 @@ items:
   fullName: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode<T>.Evaluate(Beutl.NodeTree.NodeEvaluationContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree.Nodes.Brushes
@@ -171,7 +186,7 @@ items:
   fullName: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode<T>.SpreadMethod
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree.Nodes.Brushes
@@ -196,16 +211,16 @@ items:
   fullName: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode<T>.GradientStops
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/Nodes/Brushes/GradientBrushNode.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree.Nodes.Brushes
   syntax:
-    content: protected InputSocket<List<GradientStop.Resource>> GradientStops { get; }
+    content: protected InputSocket<GradientStops> GradientStops { get; }
     parameters: []
     return:
-      type: Beutl.NodeTree.InputSocket{System.Collections.Generic.List{Beutl.Media.GradientStop.Resource}}
-    content.vb: Protected ReadOnly Property GradientStops As InputSocket(Of List(Of GradientStop.Resource))
+      type: Beutl.NodeTree.InputSocket{Beutl.Media.GradientStops}
+    content.vb: Protected ReadOnly Property GradientStops As InputSocket(Of GradientStops)
   overload: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode`1.GradientStops*
   nameWithType.vb: GradientBrushNode(Of T).GradientStops
   fullName.vb: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode(Of T).GradientStops
@@ -272,7 +287,7 @@ references:
   commentId: T:Beutl.CoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: CoreObject
   nameWithType: CoreObject
   fullName: Beutl.CoreObject
@@ -280,7 +295,7 @@ references:
   commentId: T:Beutl.Hierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.Hierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: Hierarchical
   nameWithType: Hierarchical
   fullName: Beutl.Hierarchical
@@ -325,7 +340,7 @@ references:
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject
@@ -349,7 +364,7 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -357,7 +372,7 @@ references:
   commentId: T:Beutl.IModifiableHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IModifiableHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
   name: IModifiableHierarchical
   nameWithType: IModifiableHierarchical
   fullName: Beutl.IModifiableHierarchical
@@ -365,74 +380,10 @@ references:
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
-- uid: Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  commentId: M:Beutl.NodeTree.Nodes.Brushes.BrushNode{`0}.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  parent: Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}
-  definition: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  name: InitializeForContext(NodeEvaluationContext)
-  nameWithType: BrushNode<T>.InitializeForContext(NodeEvaluationContext)
-  fullName: Beutl.NodeTree.Nodes.Brushes.BrushNode<T>.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  nameWithType.vb: BrushNode(Of T).InitializeForContext(NodeEvaluationContext)
-  fullName.vb: Beutl.NodeTree.Nodes.Brushes.BrushNode(Of T).InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  spec.csharp:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode{`0}.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: InitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
-  spec.vb:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode{`0}.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: InitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
-- uid: Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  commentId: M:Beutl.NodeTree.Nodes.Brushes.BrushNode{`0}.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  parent: Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}
-  definition: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  name: UninitializeForContext(NodeEvaluationContext)
-  nameWithType: BrushNode<T>.UninitializeForContext(NodeEvaluationContext)
-  fullName: Beutl.NodeTree.Nodes.Brushes.BrushNode<T>.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  nameWithType.vb: BrushNode(Of T).UninitializeForContext(NodeEvaluationContext)
-  fullName.vb: Beutl.NodeTree.Nodes.Brushes.BrushNode(Of T).UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  spec.csharp:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode{`0}.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: UninitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
-  spec.vb:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode{`0}.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: UninitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
 - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}.OutputSocket
   commentId: P:Beutl.NodeTree.Nodes.Brushes.BrushNode{`0}.OutputSocket
   parent: Beutl.NodeTree.Nodes.Brushes.BrushNode{{T}}
@@ -511,35 +462,95 @@ references:
     href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_InvalidateNodeTree
   - name: (
   - name: )
-- uid: Beutl.NodeTree.Node.RaiseInvalidated(System.EventArgs)
-  commentId: M:Beutl.NodeTree.Node.RaiseInvalidated(System.EventArgs)
+- uid: Beutl.NodeTree.Node.RaiseInvalidated(Beutl.Media.RenderInvalidatedEventArgs)
+  commentId: M:Beutl.NodeTree.Node.RaiseInvalidated(Beutl.Media.RenderInvalidatedEventArgs)
   parent: Beutl.NodeTree.Node
   isExternal: true
-  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_RaiseInvalidated_System_EventArgs_
-  name: RaiseInvalidated(EventArgs)
-  nameWithType: Node.RaiseInvalidated(EventArgs)
-  fullName: Beutl.NodeTree.Node.RaiseInvalidated(System.EventArgs)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_RaiseInvalidated_Beutl_Media_RenderInvalidatedEventArgs_
+  name: RaiseInvalidated(RenderInvalidatedEventArgs)
+  nameWithType: Node.RaiseInvalidated(RenderInvalidatedEventArgs)
+  fullName: Beutl.NodeTree.Node.RaiseInvalidated(Beutl.Media.RenderInvalidatedEventArgs)
   spec.csharp:
-  - uid: Beutl.NodeTree.Node.RaiseInvalidated(System.EventArgs)
+  - uid: Beutl.NodeTree.Node.RaiseInvalidated(Beutl.Media.RenderInvalidatedEventArgs)
     name: RaiseInvalidated
     isExternal: true
-    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_RaiseInvalidated_System_EventArgs_
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_RaiseInvalidated_Beutl_Media_RenderInvalidatedEventArgs_
   - name: (
-  - uid: System.EventArgs
-    name: EventArgs
+  - uid: Beutl.Media.RenderInvalidatedEventArgs
+    name: RenderInvalidatedEventArgs
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventargs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/RenderInvalidatedEventArgs.cs
   - name: )
   spec.vb:
-  - uid: Beutl.NodeTree.Node.RaiseInvalidated(System.EventArgs)
+  - uid: Beutl.NodeTree.Node.RaiseInvalidated(Beutl.Media.RenderInvalidatedEventArgs)
     name: RaiseInvalidated
     isExternal: true
-    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_RaiseInvalidated_System_EventArgs_
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_RaiseInvalidated_Beutl_Media_RenderInvalidatedEventArgs_
   - name: (
-  - uid: System.EventArgs
-    name: EventArgs
+  - uid: Beutl.Media.RenderInvalidatedEventArgs
+    name: RenderInvalidatedEventArgs
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventargs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/RenderInvalidatedEventArgs.cs
+  - name: )
+- uid: Beutl.NodeTree.Node.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+  commentId: M:Beutl.NodeTree.Node.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+  parent: Beutl.NodeTree.Node
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
+  name: InitializeForContext(NodeEvaluationContext)
+  nameWithType: Node.InitializeForContext(NodeEvaluationContext)
+  fullName: Beutl.NodeTree.Node.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+    name: InitializeForContext
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
+  - name: (
+  - uid: Beutl.NodeTree.NodeEvaluationContext
+    name: NodeEvaluationContext
+    isExternal: true
+    href: Beutl.NodeTree.NodeEvaluationContext.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+    name: InitializeForContext
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
+  - name: (
+  - uid: Beutl.NodeTree.NodeEvaluationContext
+    name: NodeEvaluationContext
+    isExternal: true
+    href: Beutl.NodeTree.NodeEvaluationContext.html
+  - name: )
+- uid: Beutl.NodeTree.Node.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+  commentId: M:Beutl.NodeTree.Node.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+  parent: Beutl.NodeTree.Node
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
+  name: UninitializeForContext(NodeEvaluationContext)
+  nameWithType: Node.UninitializeForContext(NodeEvaluationContext)
+  fullName: Beutl.NodeTree.Node.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+    name: UninitializeForContext
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
+  - name: (
+  - uid: Beutl.NodeTree.NodeEvaluationContext
+    name: NodeEvaluationContext
+    isExternal: true
+    href: Beutl.NodeTree.NodeEvaluationContext.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
+    name: UninitializeForContext
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
+  - name: (
+  - uid: Beutl.NodeTree.NodeEvaluationContext
+    name: NodeEvaluationContext
+    isExternal: true
+    href: Beutl.NodeTree.NodeEvaluationContext.html
   - name: )
 - uid: Beutl.NodeTree.Node.PreEvaluate(Beutl.NodeTree.NodeEvaluationContext)
   commentId: M:Beutl.NodeTree.Node.PreEvaluate(Beutl.NodeTree.NodeEvaluationContext)
@@ -600,6 +611,319 @@ references:
     name: NodeEvaluationContext
     isExternal: true
     href: Beutl.NodeTree.NodeEvaluationContext.html
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{{T}},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0__System_Int32_
+  name: AsInput<T>(CoreProperty<T>, int)
+  nameWithType: Node.AsInput<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.AsInput(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: AsInput(Of T)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput(Beutl.CoreProperty,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput(Beutl.CoreProperty,System.Int32)
+  parent: Beutl.NodeTree.Node
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput_Beutl_CoreProperty_System_Int32_
+  name: AsInput(CoreProperty, int)
+  nameWithType: Node.AsInput(CoreProperty, int)
+  fullName: Beutl.NodeTree.Node.AsInput(Beutl.CoreProperty, int)
+  nameWithType.vb: Node.AsInput(CoreProperty, Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Beutl.CoreProperty, Integer)
+  name.vb: AsInput(CoreProperty, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput(Beutl.CoreProperty,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput_Beutl_CoreProperty_System_Int32_
+  - name: (
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput(Beutl.CoreProperty,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput_Beutl_CoreProperty_System_Int32_
+  - name: (
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{{T}},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0__System_Int32_
+  name: AsInput<T, TOwner>(CoreProperty<T>, int)
+  nameWithType: Node.AsInput<T, TOwner>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T, TOwner>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.AsInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T, TOwner)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: AsInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{{T}},{T},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: AsInput<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.AsInput<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.AsInput(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: AsInput(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{{T}},{T},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  name: AsInput<T, TOwner>(CoreProperty<T>, T, int)
+  nameWithType: Node.AsInput<T, TOwner>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T, TOwner>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.AsInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T, TOwner)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: AsInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
 - uid: Beutl.NodeTree.Node.AsInput``1(System.String,System.Int32)
   commentId: M:Beutl.NodeTree.Node.AsInput``1(System.String,System.Int32)
@@ -823,30 +1147,33 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: Beutl.NodeTree.Node.AsProperty``1(System.String,System.Int32)
-  commentId: M:Beutl.NodeTree.Node.AsProperty``1(System.String,System.Int32)
+- uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{{T}},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
   parent: Beutl.NodeTree.Node
-  isExternal: true
-  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_System_String_System_Int32_
-  name: AsProperty<T>(string, int)
-  nameWithType: Node.AsProperty<T>(string, int)
-  fullName: Beutl.NodeTree.Node.AsProperty<T>(string, int)
-  nameWithType.vb: Node.AsProperty(Of T)(String, Integer)
-  fullName.vb: Beutl.NodeTree.Node.AsProperty(Of T)(String, Integer)
-  name.vb: AsProperty(Of T)(String, Integer)
+  definition: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0__System_Int32_
+  name: AsProperty<T>(CoreProperty<T>, int)
+  nameWithType: Node.AsProperty<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.AsProperty<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.AsProperty(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsProperty(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: AsProperty(Of T)(CoreProperty(Of T), Integer)
   spec.csharp:
-  - uid: Beutl.NodeTree.Node.AsProperty``1(System.String,System.Int32)
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
     name: AsProperty
     isExternal: true
-    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_System_String_System_Int32_
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0__System_Int32_
   - name: <
   - name: T
   - name: '>'
   - name: (
-  - uid: System.String
-    name: string
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
   - name: ','
   - name: " "
   - uid: System.Int32
@@ -855,20 +1182,405 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: Beutl.NodeTree.Node.AsProperty``1(System.String,System.Int32)
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
     name: AsProperty
     isExternal: true
-    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_System_String_System_Int32_
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0__System_Int32_
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
   - name: (
-  - uid: System.String
-    name: String
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{{T}},{T},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: AsProperty<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.AsProperty<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.AsProperty<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.AsProperty(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsProperty(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: AsProperty(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{{T}},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0__System_Int32_
+  name: CreateInput<T>(CoreProperty<T>, int)
+  nameWithType: Node.CreateInput<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.CreateInput(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: CreateInput(Of T)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput(Beutl.CoreProperty,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput(Beutl.CoreProperty,System.Int32)
+  parent: Beutl.NodeTree.Node
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput_Beutl_CoreProperty_System_Int32_
+  name: CreateInput(CoreProperty, int)
+  nameWithType: Node.CreateInput(CoreProperty, int)
+  fullName: Beutl.NodeTree.Node.CreateInput(Beutl.CoreProperty, int)
+  nameWithType.vb: Node.CreateInput(CoreProperty, Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Beutl.CoreProperty, Integer)
+  name.vb: CreateInput(CoreProperty, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput(Beutl.CoreProperty,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput_Beutl_CoreProperty_System_Int32_
+  - name: (
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput(Beutl.CoreProperty,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput_Beutl_CoreProperty_System_Int32_
+  - name: (
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{{T}},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0__System_Int32_
+  name: CreateInput<T, TOwner>(CoreProperty<T>, int)
+  nameWithType: Node.CreateInput<T, TOwner>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T, TOwner>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.CreateInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T, TOwner)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: CreateInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{{T}},{T},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: CreateInput<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.CreateInput<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.CreateInput(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: CreateInput(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{{T}},{T},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  name: CreateInput<T, TOwner>(CoreProperty<T>, T, int)
+  nameWithType: Node.CreateInput<T, TOwner>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T, TOwner>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.CreateInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T, TOwner)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: CreateInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
   - name: ','
   - name: " "
   - uid: System.Int32
@@ -1155,30 +1867,33 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: Beutl.NodeTree.Node.CreateProperty``1(System.String,System.Int32)
-  commentId: M:Beutl.NodeTree.Node.CreateProperty``1(System.String,System.Int32)
+- uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{{T}},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
   parent: Beutl.NodeTree.Node
-  isExternal: true
-  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_System_String_System_Int32_
-  name: CreateProperty<T>(string, int)
-  nameWithType: Node.CreateProperty<T>(string, int)
-  fullName: Beutl.NodeTree.Node.CreateProperty<T>(string, int)
-  nameWithType.vb: Node.CreateProperty(Of T)(String, Integer)
-  fullName.vb: Beutl.NodeTree.Node.CreateProperty(Of T)(String, Integer)
-  name.vb: CreateProperty(Of T)(String, Integer)
+  definition: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0__System_Int32_
+  name: CreateProperty<T>(CoreProperty<T>, int)
+  nameWithType: Node.CreateProperty<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.CreateProperty<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.CreateProperty(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateProperty(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: CreateProperty(Of T)(CoreProperty(Of T), Integer)
   spec.csharp:
-  - uid: Beutl.NodeTree.Node.CreateProperty``1(System.String,System.Int32)
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
     name: CreateProperty
     isExternal: true
-    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_System_String_System_Int32_
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0__System_Int32_
   - name: <
   - name: T
   - name: '>'
   - name: (
-  - uid: System.String
-    name: string
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
   - name: ','
   - name: " "
   - uid: System.Int32
@@ -1187,20 +1902,92 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: Beutl.NodeTree.Node.CreateProperty``1(System.String,System.Int32)
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
     name: CreateProperty
     isExternal: true
-    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_System_String_System_Int32_
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0__System_Int32_
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
   - name: (
-  - uid: System.String
-    name: String
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{{T}},{T},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  parent: Beutl.NodeTree.Node
+  definition: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: CreateProperty<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.CreateProperty<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.CreateProperty<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.CreateProperty(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateProperty(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: CreateProperty(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
   - name: ','
   - name: " "
   - uid: System.Int32
@@ -1225,7 +2012,7 @@ references:
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.NodeTree.Node.Deserialize(Beutl.Serialization.ICoreSerializationContext)
@@ -1236,7 +2023,7 @@ references:
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
 - uid: Beutl.NodeTree.Node.Serialize(Beutl.Serialization.ICoreSerializationContext)
   commentId: M:Beutl.NodeTree.Node.Serialize(Beutl.Serialization.ICoreSerializationContext)
@@ -1255,7 +2042,7 @@ references:
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
   spec.vb:
   - uid: Beutl.NodeTree.Node.Serialize(Beutl.Serialization.ICoreSerializationContext)
@@ -1266,7 +2053,7 @@ references:
   - uid: Beutl.Serialization.ICoreSerializationContext
     name: ICoreSerializationContext
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
 - uid: Beutl.NodeTree.Node.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   commentId: M:Beutl.NodeTree.Node.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
@@ -1290,7 +2077,7 @@ references:
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
   spec.vb:
   - uid: Beutl.NodeTree.Node.OnAttachedToHierarchy(Beutl.HierarchyAttachmentEventArgs@)
@@ -1301,7 +2088,7 @@ references:
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
 - uid: Beutl.NodeTree.Node.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
   commentId: M:Beutl.NodeTree.Node.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
@@ -1325,7 +2112,7 @@ references:
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
   spec.vb:
   - uid: Beutl.NodeTree.Node.OnDetachedFromHierarchy(Beutl.HierarchyAttachmentEventArgs@)
@@ -1336,7 +2123,7 @@ references:
   - uid: Beutl.HierarchyAttachmentEventArgs
     name: HierarchyAttachmentEventArgs
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/HierarchyAttachmentEventArgs.cs
   - name: )
 - uid: Beutl.NodeTree.Node.Items
   commentId: P:Beutl.NodeTree.Node.Items
@@ -1378,19 +2165,19 @@ references:
   name: NodeTreeInvalidated
   nameWithType: Node.NodeTreeInvalidated
   fullName: Beutl.NodeTree.Node.NodeTreeInvalidated
-- uid: Beutl.NodeTree.Node.Edited
-  commentId: E:Beutl.NodeTree.Node.Edited
+- uid: Beutl.NodeTree.Node.Invalidated
+  commentId: E:Beutl.NodeTree.Node.Invalidated
   parent: Beutl.NodeTree.Node
   isExternal: true
-  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_Edited
-  name: Edited
-  nameWithType: Node.Edited
-  fullName: Beutl.NodeTree.Node.Edited
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_Invalidated
+  name: Invalidated
+  nameWithType: Node.Invalidated
+  fullName: Beutl.NodeTree.Node.Invalidated
 - uid: Beutl.Hierarchical.HierarchicalParentProperty
   commentId: F:Beutl.Hierarchical.HierarchicalParentProperty
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_HierarchicalParentProperty
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: HierarchicalParentProperty
   nameWithType: Hierarchical.HierarchicalParentProperty
   fullName: Beutl.Hierarchical.HierarchicalParentProperty
@@ -1492,7 +2279,7 @@ references:
   commentId: P:Beutl.Hierarchical.HierarchicalParent
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_HierarchicalParent
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: HierarchicalParent
   nameWithType: Hierarchical.HierarchicalParent
   fullName: Beutl.Hierarchical.HierarchicalParent
@@ -1508,7 +2295,7 @@ references:
   commentId: E:Beutl.Hierarchical.AttachedToHierarchy
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_AttachedToHierarchy
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: AttachedToHierarchy
   nameWithType: Hierarchical.AttachedToHierarchy
   fullName: Beutl.Hierarchical.AttachedToHierarchy
@@ -1516,7 +2303,7 @@ references:
   commentId: E:Beutl.Hierarchical.DetachedFromHierarchy
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_DetachedFromHierarchy
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: DetachedFromHierarchy
   nameWithType: Hierarchical.DetachedFromHierarchy
   fullName: Beutl.Hierarchical.DetachedFromHierarchy
@@ -1524,7 +2311,7 @@ references:
   commentId: F:Beutl.CoreObject.IdProperty
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: IdProperty
   nameWithType: CoreObject.IdProperty
   fullName: Beutl.CoreObject.IdProperty
@@ -1532,7 +2319,7 @@ references:
   commentId: F:Beutl.CoreObject.NameProperty
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: NameProperty
   nameWithType: CoreObject.NameProperty
   fullName: Beutl.CoreObject.NameProperty
@@ -1540,7 +2327,7 @@ references:
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.String)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(string)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(string)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(string)
@@ -1551,7 +2338,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.String)
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -1568,7 +2355,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.String)
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1587,7 +2374,7 @@ references:
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(System.Linq.Expressions.Expression<System.Func<TOwner, T>>)
@@ -1598,7 +2385,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -1627,7 +2414,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1662,7 +2449,7 @@ references:
   commentId: M:Beutl.CoreObject.GetErrors(System.String)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetErrors(string)
   nameWithType: CoreObject.GetErrors(string)
   fullName: Beutl.CoreObject.GetErrors(string)
@@ -1673,7 +2460,7 @@ references:
   - uid: Beutl.CoreObject.GetErrors(System.String)
     name: GetErrors
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: System.String
     name: string
@@ -1684,7 +2471,7 @@ references:
   - uid: Beutl.CoreObject.GetErrors(System.String)
     name: GetErrors
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: System.String
     name: String
@@ -1695,7 +2482,7 @@ references:
   commentId: M:Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.GetValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.GetValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -1706,7 +2493,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1714,7 +2501,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1723,7 +2510,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1733,7 +2520,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1744,7 +2531,7 @@ references:
   commentId: M:Beutl.CoreObject.GetValue(Beutl.CoreProperty)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue(CoreProperty)
   nameWithType: CoreObject.GetValue(CoreProperty)
   fullName: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
@@ -1752,29 +2539,29 @@ references:
   - uid: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
   spec.vb:
   - uid: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
 - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{{TValue}},{TValue})
   commentId: M:Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue<TValue>(CoreProperty<TValue>, TValue)
   nameWithType: CoreObject.SetValue<TValue>(CoreProperty<TValue>, TValue)
   fullName: Beutl.CoreObject.SetValue<TValue>(Beutl.CoreProperty<TValue>, TValue)
@@ -1785,7 +2572,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1793,7 +2580,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1805,7 +2592,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1815,7 +2602,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1829,7 +2616,7 @@ references:
   commentId: M:Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue(CoreProperty, object)
   nameWithType: CoreObject.SetValue(CoreProperty, object)
   fullName: Beutl.CoreObject.SetValue(Beutl.CoreProperty, object)
@@ -1840,12 +2627,12 @@ references:
   - uid: Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: ','
   - name: " "
   - uid: System.Object
@@ -1857,12 +2644,12 @@ references:
   - uid: Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: ','
   - name: " "
   - uid: System.Object
@@ -1874,7 +2661,7 @@ references:
   commentId: M:Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.ClearValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.ClearValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -1885,7 +2672,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1893,7 +2680,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1902,7 +2689,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1912,7 +2699,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1923,7 +2710,7 @@ references:
   commentId: M:Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue(CoreProperty)
   nameWithType: CoreObject.ClearValue(CoreProperty)
   fullName: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
@@ -1931,29 +2718,29 @@ references:
   - uid: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
   spec.vb:
   - uid: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
 - uid: Beutl.CoreObject.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
   commentId: M:Beutl.CoreObject.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: Beutl.CoreObject.html#Beutl_CoreObject_OnPropertyChanged_System_ComponentModel_PropertyChangedEventArgs_
   name: OnPropertyChanged(PropertyChangedEventArgs)
   nameWithType: CoreObject.OnPropertyChanged(PropertyChangedEventArgs)
   fullName: Beutl.CoreObject.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
@@ -1961,7 +2748,7 @@ references:
   - uid: Beutl.CoreObject.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
     name: OnPropertyChanged
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: Beutl.CoreObject.html#Beutl_CoreObject_OnPropertyChanged_System_ComponentModel_PropertyChangedEventArgs_
   - name: (
   - uid: System.ComponentModel.PropertyChangedEventArgs
     name: PropertyChangedEventArgs
@@ -1972,7 +2759,7 @@ references:
   - uid: Beutl.CoreObject.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
     name: OnPropertyChanged
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: Beutl.CoreObject.html#Beutl_CoreObject_OnPropertyChanged_System_ComponentModel_PropertyChangedEventArgs_
   - name: (
   - uid: System.ComponentModel.PropertyChangedEventArgs
     name: PropertyChangedEventArgs
@@ -1983,7 +2770,7 @@ references:
   commentId: M:Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: Beutl.CoreObject.html#Beutl_CoreObject_SetAndRaise__1_Beutl_CoreProperty___0____0____0_
   name: SetAndRaise<T>(CoreProperty<T>, ref T, T)
   nameWithType: CoreObject.SetAndRaise<T>(CoreProperty<T>, ref T, T)
   fullName: Beutl.CoreObject.SetAndRaise<T>(Beutl.CoreProperty<T>, ref T, T)
@@ -1994,7 +2781,7 @@ references:
   - uid: Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
     name: SetAndRaise
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: Beutl.CoreObject.html#Beutl_CoreObject_SetAndRaise__1_Beutl_CoreProperty___0____0____0_
   - name: <
   - name: T
   - name: '>'
@@ -2002,7 +2789,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
@@ -2019,7 +2806,7 @@ references:
   - uid: Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
     name: SetAndRaise
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: Beutl.CoreObject.html#Beutl_CoreObject_SetAndRaise__1_Beutl_CoreProperty___0____0____0_
   - name: (
   - name: Of
   - name: " "
@@ -2029,7 +2816,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
@@ -2046,7 +2833,7 @@ references:
   commentId: P:Beutl.CoreObject.Id
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: Id
   nameWithType: CoreObject.Id
   fullName: Beutl.CoreObject.Id
@@ -2054,23 +2841,15 @@ references:
   commentId: P:Beutl.CoreObject.Name
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: Name
   nameWithType: CoreObject.Name
   fullName: Beutl.CoreObject.Name
-- uid: Beutl.CoreObject.Uri
-  commentId: P:Beutl.CoreObject.Uri
-  parent: Beutl.CoreObject
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
-  name: Uri
-  nameWithType: CoreObject.Uri
-  fullName: Beutl.CoreObject.Uri
 - uid: Beutl.CoreObject.HasErrors
   commentId: P:Beutl.CoreObject.HasErrors
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: HasErrors
   nameWithType: CoreObject.HasErrors
   fullName: Beutl.CoreObject.HasErrors
@@ -2078,7 +2857,7 @@ references:
   commentId: E:Beutl.CoreObject.PropertyChanged
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: PropertyChanged
   nameWithType: CoreObject.PropertyChanged
   fullName: Beutl.CoreObject.PropertyChanged
@@ -2086,7 +2865,7 @@ references:
   commentId: E:Beutl.CoreObject.ErrorsChanged
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ErrorsChanged
   nameWithType: CoreObject.ErrorsChanged
   fullName: Beutl.CoreObject.ErrorsChanged
@@ -2432,68 +3211,6 @@ references:
     name: Serialization
     isExternal: true
     href: Beutl.Serialization.html
-- uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  commentId: M:Beutl.NodeTree.Nodes.Brushes.BrushNode`1.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  isExternal: true
-  href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  name: InitializeForContext(NodeEvaluationContext)
-  nameWithType: BrushNode<T>.InitializeForContext(NodeEvaluationContext)
-  fullName: Beutl.NodeTree.Nodes.Brushes.BrushNode<T>.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  nameWithType.vb: BrushNode(Of T).InitializeForContext(NodeEvaluationContext)
-  fullName.vb: Beutl.NodeTree.Nodes.Brushes.BrushNode(Of T).InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  spec.csharp:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: InitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
-  spec.vb:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.InitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: InitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_InitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
-- uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  commentId: M:Beutl.NodeTree.Nodes.Brushes.BrushNode`1.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  isExternal: true
-  href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  name: UninitializeForContext(NodeEvaluationContext)
-  nameWithType: BrushNode<T>.UninitializeForContext(NodeEvaluationContext)
-  fullName: Beutl.NodeTree.Nodes.Brushes.BrushNode<T>.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  nameWithType.vb: BrushNode(Of T).UninitializeForContext(NodeEvaluationContext)
-  fullName.vb: Beutl.NodeTree.Nodes.Brushes.BrushNode(Of T).UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-  spec.csharp:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: UninitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
-  spec.vb:
-  - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.UninitializeForContext(Beutl.NodeTree.NodeEvaluationContext)
-    name: UninitializeForContext
-    isExternal: true
-    href: Beutl.NodeTree.Nodes.Brushes.BrushNode-1.html#Beutl_NodeTree_Nodes_Brushes_BrushNode_1_UninitializeForContext_Beutl_NodeTree_NodeEvaluationContext_
-  - name: (
-  - uid: Beutl.NodeTree.NodeEvaluationContext
-    name: NodeEvaluationContext
-    isExternal: true
-    href: Beutl.NodeTree.NodeEvaluationContext.html
-  - name: )
 - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1.OutputSocket
   commentId: P:Beutl.NodeTree.Nodes.Brushes.BrushNode`1.OutputSocket
   isExternal: true
@@ -2530,6 +3247,270 @@ references:
   fullName: Beutl.NodeTree.Nodes.Brushes.BrushNode<T>.TransformOriginSocket
   nameWithType.vb: BrushNode(Of T).TransformOriginSocket
   fullName.vb: Beutl.NodeTree.Nodes.Brushes.BrushNode(Of T).TransformOriginSocket
+- uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0__System_Int32_
+  name: AsInput<T>(CoreProperty<T>, int)
+  nameWithType: Node.AsInput<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.AsInput(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: AsInput(Of T)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0__System_Int32_
+  name: AsInput<T, TOwner>(CoreProperty<T>, int)
+  nameWithType: Node.AsInput<T, TOwner>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T, TOwner>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.AsInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T, TOwner)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: AsInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: AsInput<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.AsInput<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.AsInput(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: AsInput(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  name: AsInput<T, TOwner>(CoreProperty<T>, T, int)
+  nameWithType: Node.AsInput<T, TOwner>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.AsInput<T, TOwner>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.AsInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsInput(Of T, TOwner)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: AsInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
 - uid: Beutl.NodeTree.Node.AsOutput``1(System.String,``0,System.Int32)
   commentId: M:Beutl.NodeTree.Node.AsOutput``1(System.String,``0,System.Int32)
   isExternal: true
@@ -2578,6 +3559,396 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0__System_Int32_
+  name: AsProperty<T>(CoreProperty<T>, int)
+  nameWithType: Node.AsProperty<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.AsProperty<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.AsProperty(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsProperty(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: AsProperty(Of T)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
+    name: AsProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},System.Int32)
+    name: AsProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: AsProperty<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.AsProperty<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.AsProperty<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.AsProperty(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.AsProperty(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: AsProperty(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.AsProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: AsProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_AsProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0__System_Int32_
+  name: CreateInput<T>(CoreProperty<T>, int)
+  nameWithType: Node.CreateInput<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.CreateInput(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: CreateInput(Of T)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0__System_Int32_
+  name: CreateInput<T, TOwner>(CoreProperty<T>, int)
+  nameWithType: Node.CreateInput<T, TOwner>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T, TOwner>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.CreateInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T, TOwner)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: CreateInput(Of T, TOwner)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: CreateInput<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.CreateInput<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.CreateInput(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: CreateInput(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  name: CreateInput<T, TOwner>(CoreProperty<T>, T, int)
+  nameWithType: Node.CreateInput<T, TOwner>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.CreateInput<T, TOwner>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.CreateInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateInput(Of T, TOwner)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: CreateInput(Of T, TOwner)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateInput``2(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateInput
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateInput__2_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TOwner
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
   - name: ','
   - name: " "
   - name: T
@@ -2646,10 +4017,136 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+- uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0__System_Int32_
+  name: CreateProperty<T>(CoreProperty<T>, int)
+  nameWithType: Node.CreateProperty<T>(CoreProperty<T>, int)
+  fullName: Beutl.NodeTree.Node.CreateProperty<T>(Beutl.CoreProperty<T>, int)
+  nameWithType.vb: Node.CreateProperty(Of T)(CoreProperty(Of T), Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateProperty(Of T)(Beutl.CoreProperty(Of T), Integer)
+  name.vb: CreateProperty(Of T)(CoreProperty(Of T), Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0__System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},System.Int32)
+    name: CreateProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0__System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  commentId: M:Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+  isExternal: true
+  href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  name: CreateProperty<T>(CoreProperty<T>, T, int)
+  nameWithType: Node.CreateProperty<T>(CoreProperty<T>, T, int)
+  fullName: Beutl.NodeTree.Node.CreateProperty<T>(Beutl.CoreProperty<T>, T, int)
+  nameWithType.vb: Node.CreateProperty(Of T)(CoreProperty(Of T), T, Integer)
+  fullName.vb: Beutl.NodeTree.Node.CreateProperty(Of T)(Beutl.CoreProperty(Of T), T, Integer)
+  name.vb: CreateProperty(Of T)(CoreProperty(Of T), T, Integer)
+  spec.csharp:
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Beutl.NodeTree.Node.CreateProperty``1(Beutl.CoreProperty{``0},``0,System.Int32)
+    name: CreateProperty
+    isExternal: true
+    href: Beutl.NodeTree.Node.html#Beutl_NodeTree_Node_CreateProperty__1_Beutl_CoreProperty___0____0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
 - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(System.Linq.Expressions.Expression<System.Func<TOwner, T>>)
@@ -2660,7 +4157,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -2689,7 +4186,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -2723,7 +4220,7 @@ references:
 - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   commentId: M:Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.GetValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.GetValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -2734,7 +4231,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -2742,7 +4239,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -2751,7 +4248,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -2761,7 +4258,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -2771,7 +4268,7 @@ references:
 - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   commentId: M:Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue<TValue>(CoreProperty<TValue>, TValue)
   nameWithType: CoreObject.SetValue<TValue>(CoreProperty<TValue>, TValue)
   fullName: Beutl.CoreObject.SetValue<TValue>(Beutl.CoreProperty<TValue>, TValue)
@@ -2782,7 +4279,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -2790,7 +4287,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -2802,7 +4299,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -2812,7 +4309,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -2825,7 +4322,7 @@ references:
 - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   commentId: M:Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.ClearValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.ClearValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -2836,7 +4333,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -2844,7 +4341,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -2853,7 +4350,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -2863,7 +4360,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -2873,7 +4370,7 @@ references:
 - uid: Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
   commentId: M:Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: Beutl.CoreObject.html#Beutl_CoreObject_SetAndRaise__1_Beutl_CoreProperty___0____0____0_
   name: SetAndRaise<T>(CoreProperty<T>, ref T, T)
   nameWithType: CoreObject.SetAndRaise<T>(CoreProperty<T>, ref T, T)
   fullName: Beutl.CoreObject.SetAndRaise<T>(Beutl.CoreProperty<T>, ref T, T)
@@ -2884,7 +4381,7 @@ references:
   - uid: Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
     name: SetAndRaise
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: Beutl.CoreObject.html#Beutl_CoreObject_SetAndRaise__1_Beutl_CoreProperty___0____0____0_
   - name: <
   - name: T
   - name: '>'
@@ -2892,7 +4389,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
@@ -2909,7 +4406,7 @@ references:
   - uid: Beutl.CoreObject.SetAndRaise``1(Beutl.CoreProperty{``0},``0@,``0)
     name: SetAndRaise
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: Beutl.CoreObject.html#Beutl_CoreObject_SetAndRaise__1_Beutl_CoreProperty___0____0____0_
   - name: (
   - name: Of
   - name: " "
@@ -2919,7 +4416,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
@@ -3051,7 +4548,7 @@ references:
   - uid: Beutl.Media.GradientSpreadMethod
     name: GradientSpreadMethod
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Brushes/GradientSpreadMethod.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/GradientSpreadMethod.cs
   - name: '>'
   spec.vb:
   - uid: Beutl.NodeTree.InputSocket`1
@@ -3064,7 +4561,7 @@ references:
   - uid: Beutl.Media.GradientSpreadMethod
     name: GradientSpreadMethod
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Brushes/GradientSpreadMethod.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/GradientSpreadMethod.cs
   - name: )
 - uid: Beutl.NodeTree.InputSocket`1
   commentId: T:Beutl.NodeTree.InputSocket`1
@@ -3103,38 +4600,27 @@ references:
   fullName: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode<T>.GradientStops
   nameWithType.vb: GradientBrushNode(Of T).GradientStops
   fullName.vb: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode(Of T).GradientStops
-- uid: Beutl.NodeTree.InputSocket{System.Collections.Generic.List{Beutl.Media.GradientStop.Resource}}
-  commentId: T:Beutl.NodeTree.InputSocket{System.Collections.Generic.List{Beutl.Media.GradientStop.Resource}}
+- uid: Beutl.NodeTree.InputSocket{Beutl.Media.GradientStops}
+  commentId: T:Beutl.NodeTree.InputSocket{Beutl.Media.GradientStops}
   parent: Beutl.NodeTree
   definition: Beutl.NodeTree.InputSocket`1
   href: Beutl.NodeTree.InputSocket-1.html
-  name: InputSocket<List<GradientStop.Resource>>
-  nameWithType: InputSocket<List<GradientStop.Resource>>
-  fullName: Beutl.NodeTree.InputSocket<System.Collections.Generic.List<Beutl.Media.GradientStop.Resource>>
-  nameWithType.vb: InputSocket(Of List(Of GradientStop.Resource))
-  fullName.vb: Beutl.NodeTree.InputSocket(Of System.Collections.Generic.List(Of Beutl.Media.GradientStop.Resource))
-  name.vb: InputSocket(Of List(Of GradientStop.Resource))
+  name: InputSocket<GradientStops>
+  nameWithType: InputSocket<GradientStops>
+  fullName: Beutl.NodeTree.InputSocket<Beutl.Media.GradientStops>
+  nameWithType.vb: InputSocket(Of GradientStops)
+  fullName.vb: Beutl.NodeTree.InputSocket(Of Beutl.Media.GradientStops)
+  name.vb: InputSocket(Of GradientStops)
   spec.csharp:
   - uid: Beutl.NodeTree.InputSocket`1
     name: InputSocket
     isExternal: true
     href: Beutl.NodeTree.InputSocket-1.html
   - name: <
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: Beutl.Media.GradientStops
+    name: GradientStops
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: Beutl.Media.GradientStop
-    name: GradientStop
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Brushes/GradientStop.cs
-  - name: .
-  - uid: Beutl.Media.GradientStop.Resource
-    name: Resource
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Brushes/GradientStop.cs
-  - name: '>'
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/GradientStops.cs
   - name: '>'
   spec.vb:
   - uid: Beutl.NodeTree.InputSocket`1
@@ -3144,21 +4630,8 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: Beutl.Media.GradientStops
+    name: GradientStops
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Beutl.Media.GradientStop
-    name: GradientStop
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Brushes/GradientStop.cs
-  - name: .
-  - uid: Beutl.Media.GradientStop.Resource
-    name: Resource
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Brushes/GradientStop.cs
-  - name: )
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/GradientStops.cs
   - name: )

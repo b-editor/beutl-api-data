@@ -1,0 +1,257 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
+  id: IBrush
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.IBrush.Opacity
+  - Beutl.Media.IBrush.Transform
+  - Beutl.Media.IBrush.TransformOrigin
+  langs:
+  - csharp
+  - vb
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/IBrush.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(BrushJsonConverter))]
+
+      [DummyType(typeof(DummyBrush))]
+
+      public interface IBrush
+    content.vb: >-
+      <JsonConverter(GetType(BrushJsonConverter))>
+
+      <DummyType(GetType(DummyBrush))>
+
+      Public Interface IBrush
+  attributes:
+  - type: Beutl.Serialization.DummyTypeAttribute
+    ctor: Beutl.Serialization.DummyTypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Beutl.Media.DummyBrush
+- uid: Beutl.Media.IBrush.Opacity
+  commentId: P:Beutl.Media.IBrush.Opacity
+  id: Opacity
+  parent: Beutl.Media.IBrush
+  langs:
+  - csharp
+  - vb
+  name: Opacity
+  nameWithType: IBrush.Opacity
+  fullName: Beutl.Media.IBrush.Opacity
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/IBrush.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: float Opacity { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly Property Opacity As Single
+  overload: Beutl.Media.IBrush.Opacity*
+- uid: Beutl.Media.IBrush.Transform
+  commentId: P:Beutl.Media.IBrush.Transform
+  id: Transform
+  parent: Beutl.Media.IBrush
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: IBrush.Transform
+  fullName: Beutl.Media.IBrush.Transform
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/IBrush.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: ITransform? Transform { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.Transformation.ITransform
+    content.vb: ReadOnly Property Transform As ITransform
+  overload: Beutl.Media.IBrush.Transform*
+- uid: Beutl.Media.IBrush.TransformOrigin
+  commentId: P:Beutl.Media.IBrush.TransformOrigin
+  id: TransformOrigin
+  parent: Beutl.Media.IBrush
+  langs:
+  - csharp
+  - vb
+  name: TransformOrigin
+  nameWithType: IBrush.TransformOrigin
+  fullName: Beutl.Media.IBrush.TransformOrigin
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Brushes/IBrush.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: RelativePoint TransformOrigin { get; }
+    parameters: []
+    return:
+      type: Beutl.Graphics.RelativePoint
+    content.vb: ReadOnly Property TransformOrigin As RelativePoint
+  overload: Beutl.Media.IBrush.TransformOrigin*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.Media.IBrush.Opacity*
+  commentId: Overload:Beutl.Media.IBrush.Opacity
+  isExternal: true
+  href: Beutl.Media.IBrush.html#Beutl_Media_IBrush_Opacity
+  name: Opacity
+  nameWithType: IBrush.Opacity
+  fullName: Beutl.Media.IBrush.Opacity
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Media.IBrush.Transform*
+  commentId: Overload:Beutl.Media.IBrush.Transform
+  isExternal: true
+  href: Beutl.Media.IBrush.html#Beutl_Media_IBrush_Transform
+  name: Transform
+  nameWithType: IBrush.Transform
+  fullName: Beutl.Media.IBrush.Transform
+- uid: Beutl.Graphics.Transformation.ITransform
+  commentId: T:Beutl.Graphics.Transformation.ITransform
+  parent: Beutl.Graphics.Transformation
+  isExternal: true
+  href: Beutl.Graphics.Transformation.ITransform.html
+  name: ITransform
+  nameWithType: ITransform
+  fullName: Beutl.Graphics.Transformation.ITransform
+- uid: Beutl.Graphics.Transformation
+  commentId: N:Beutl.Graphics.Transformation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics.Transformation
+  nameWithType: Beutl.Graphics.Transformation
+  fullName: Beutl.Graphics.Transformation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Transformation
+    name: Transformation
+    isExternal: true
+    href: Beutl.Graphics.Transformation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Transformation
+    name: Transformation
+    isExternal: true
+    href: Beutl.Graphics.Transformation.html
+- uid: Beutl.Media.IBrush.TransformOrigin*
+  commentId: Overload:Beutl.Media.IBrush.TransformOrigin
+  isExternal: true
+  href: Beutl.Media.IBrush.html#Beutl_Media_IBrush_TransformOrigin
+  name: TransformOrigin
+  nameWithType: IBrush.TransformOrigin
+  fullName: Beutl.Media.IBrush.TransformOrigin
+- uid: Beutl.Graphics.RelativePoint
+  commentId: T:Beutl.Graphics.RelativePoint
+  parent: Beutl.Graphics
+  isExternal: true
+  href: Beutl.Graphics.RelativePoint.html
+  name: RelativePoint
+  nameWithType: RelativePoint
+  fullName: Beutl.Graphics.RelativePoint
+- uid: Beutl.Graphics
+  commentId: N:Beutl.Graphics
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics
+  nameWithType: Beutl.Graphics
+  fullName: Beutl.Graphics
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html

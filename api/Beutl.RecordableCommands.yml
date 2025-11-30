@@ -7,14 +7,14 @@ items:
   children:
   - Beutl.RecordableCommands.Append(Beutl.IRecordableCommand,Beutl.IRecordableCommand)
   - Beutl.RecordableCommands.Create
-  - Beutl.RecordableCommands.Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Action)
-  - Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
+  - Beutl.RecordableCommands.Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Action)
+  - Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
   - Beutl.RecordableCommands.DoAndRecord(Beutl.IRecordableCommand,Beutl.CommandRecorder)
   - Beutl.RecordableCommands.Edit``1(Beutl.ICoreObject,Beutl.CoreProperty{``0},``0,Beutl.Optional{``0})
   - Beutl.RecordableCommands.PushTo(Beutl.IRecordableCommand,Beutl.CommandRecorder)
   - Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[])
-  - Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
-  - Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Boolean)
+  - Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
+  - Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Boolean)
   langs:
   - csharp
   - vb
@@ -23,7 +23,7 @@ items:
   fullName: Beutl.RecordableCommands
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IRecordableCommand.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -53,7 +53,7 @@ items:
   fullName: Beutl.RecordableCommands.DoAndRecord(Beutl.IRecordableCommand, Beutl.CommandRecorder)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IRecordableCommand.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -79,7 +79,7 @@ items:
   fullName: Beutl.RecordableCommands.PushTo(Beutl.IRecordableCommand, Beutl.CommandRecorder)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IRecordableCommand.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -105,7 +105,7 @@ items:
   fullName: Beutl.RecordableCommands.Append(Beutl.IRecordableCommand?, Beutl.IRecordableCommand?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IRecordableCommand.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -136,7 +136,7 @@ items:
   fullName: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[])
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IRecordableCommand.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -152,132 +152,132 @@ items:
   nameWithType.vb: RecordableCommands.ToCommand(IRecordableCommand())
   fullName.vb: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand())
   name.vb: ToCommand(IRecordableCommand())
-- uid: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
-  commentId: M:Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
-  id: ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
+- uid: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
+  commentId: M:Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
+  id: ToCommand(Beutl.IRecordableCommand[],System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
   isExtensionMethod: true
   parent: Beutl.RecordableCommands
   langs:
   - csharp
   - vb
-  name: ToCommand(IRecordableCommand[], ImmutableArray<CoreObject?>)
-  nameWithType: RecordableCommands.ToCommand(IRecordableCommand[], ImmutableArray<CoreObject?>)
-  fullName: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[], System.Collections.Immutable.ImmutableArray<Beutl.CoreObject?>)
+  name: ToCommand(IRecordableCommand[], ImmutableArray<IStorable?>)
+  nameWithType: RecordableCommands.ToCommand(IRecordableCommand[], ImmutableArray<IStorable?>)
+  fullName: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand[], System.Collections.Immutable.ImmutableArray<Beutl.IStorable?>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IRecordableCommand.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
   syntax:
-    content: public static IRecordableCommand ToCommand(this IRecordableCommand[] commands, ImmutableArray<CoreObject?> storables)
+    content: public static IRecordableCommand ToCommand(this IRecordableCommand[] commands, ImmutableArray<IStorable?> storables)
     parameters:
     - id: commands
       type: Beutl.IRecordableCommand[]
     - id: storables
-      type: System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
+      type: System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
     return:
       type: Beutl.IRecordableCommand
-    content.vb: Public Shared Function ToCommand(commands As IRecordableCommand(), storables As ImmutableArray(Of CoreObject)) As IRecordableCommand
+    content.vb: Public Shared Function ToCommand(commands As IRecordableCommand(), storables As ImmutableArray(Of IStorable)) As IRecordableCommand
   overload: Beutl.RecordableCommands.ToCommand*
-  nameWithType.vb: RecordableCommands.ToCommand(IRecordableCommand(), ImmutableArray(Of CoreObject))
-  fullName.vb: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand(), System.Collections.Immutable.ImmutableArray(Of Beutl.CoreObject))
-  name.vb: ToCommand(IRecordableCommand(), ImmutableArray(Of CoreObject))
-- uid: Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Boolean)
-  commentId: M:Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Boolean)
-  id: WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Boolean)
+  nameWithType.vb: RecordableCommands.ToCommand(IRecordableCommand(), ImmutableArray(Of IStorable))
+  fullName.vb: Beutl.RecordableCommands.ToCommand(Beutl.IRecordableCommand(), System.Collections.Immutable.ImmutableArray(Of Beutl.IStorable))
+  name.vb: ToCommand(IRecordableCommand(), ImmutableArray(Of IStorable))
+- uid: Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Boolean)
+  commentId: M:Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Boolean)
+  id: WithStoables(Beutl.IRecordableCommand,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Boolean)
   isExtensionMethod: true
   parent: Beutl.RecordableCommands
   langs:
   - csharp
   - vb
-  name: WithStoables(IRecordableCommand, ImmutableArray<CoreObject?>, bool)
-  nameWithType: RecordableCommands.WithStoables(IRecordableCommand, ImmutableArray<CoreObject?>, bool)
-  fullName: Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand, System.Collections.Immutable.ImmutableArray<Beutl.CoreObject?>, bool)
+  name: WithStoables(IRecordableCommand, ImmutableArray<IStorable?>, bool)
+  nameWithType: RecordableCommands.WithStoables(IRecordableCommand, ImmutableArray<IStorable?>, bool)
+  fullName: Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand, System.Collections.Immutable.ImmutableArray<Beutl.IStorable?>, bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IRecordableCommand.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
   syntax:
-    content: public static IRecordableCommand WithStoables(this IRecordableCommand command, ImmutableArray<CoreObject?> storables, bool overwrite = false)
+    content: public static IRecordableCommand WithStoables(this IRecordableCommand command, ImmutableArray<IStorable?> storables, bool overwrite = false)
     parameters:
     - id: command
       type: Beutl.IRecordableCommand
     - id: storables
-      type: System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
+      type: System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
     - id: overwrite
       type: System.Boolean
     return:
       type: Beutl.IRecordableCommand
-    content.vb: Public Shared Function WithStoables(command As IRecordableCommand, storables As ImmutableArray(Of CoreObject), overwrite As Boolean = False) As IRecordableCommand
+    content.vb: Public Shared Function WithStoables(command As IRecordableCommand, storables As ImmutableArray(Of IStorable), overwrite As Boolean = False) As IRecordableCommand
   overload: Beutl.RecordableCommands.WithStoables*
-  nameWithType.vb: RecordableCommands.WithStoables(IRecordableCommand, ImmutableArray(Of CoreObject), Boolean)
-  fullName.vb: Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand, System.Collections.Immutable.ImmutableArray(Of Beutl.CoreObject), Boolean)
-  name.vb: WithStoables(IRecordableCommand, ImmutableArray(Of CoreObject), Boolean)
-- uid: Beutl.RecordableCommands.Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Action)
-  commentId: M:Beutl.RecordableCommands.Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Action)
-  id: Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.CoreObject},System.Action)
+  nameWithType.vb: RecordableCommands.WithStoables(IRecordableCommand, ImmutableArray(Of IStorable), Boolean)
+  fullName.vb: Beutl.RecordableCommands.WithStoables(Beutl.IRecordableCommand, System.Collections.Immutable.ImmutableArray(Of Beutl.IStorable), Boolean)
+  name.vb: WithStoables(IRecordableCommand, ImmutableArray(Of IStorable), Boolean)
+- uid: Beutl.RecordableCommands.Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Action)
+  commentId: M:Beutl.RecordableCommands.Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Action)
+  id: Create(System.Action,System.Action,System.Collections.Immutable.ImmutableArray{Beutl.IStorable},System.Action)
   parent: Beutl.RecordableCommands
   langs:
   - csharp
   - vb
-  name: Create(Action, Action, ImmutableArray<CoreObject?>, Action?)
-  nameWithType: RecordableCommands.Create(Action, Action, ImmutableArray<CoreObject?>, Action?)
-  fullName: Beutl.RecordableCommands.Create(System.Action, System.Action, System.Collections.Immutable.ImmutableArray<Beutl.CoreObject?>, System.Action?)
+  name: Create(Action, Action, ImmutableArray<IStorable?>, Action?)
+  nameWithType: RecordableCommands.Create(Action, Action, ImmutableArray<IStorable?>, Action?)
+  fullName: Beutl.RecordableCommands.Create(System.Action, System.Action, System.Collections.Immutable.ImmutableArray<Beutl.IStorable?>, System.Action?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/RecordableCommands.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/RecordableCommands.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
   syntax:
-    content: public static IRecordableCommand Create(Action action, Action undo, ImmutableArray<CoreObject?> storables, Action? redo = null)
+    content: public static IRecordableCommand Create(Action action, Action undo, ImmutableArray<IStorable?> storables, Action? redo = null)
     parameters:
     - id: action
       type: System.Action
     - id: undo
       type: System.Action
     - id: storables
-      type: System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
+      type: System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
     - id: redo
       type: System.Action
     return:
       type: Beutl.IRecordableCommand
-    content.vb: Public Shared Function Create(action As Action, undo As Action, storables As ImmutableArray(Of CoreObject), redo As Action = Nothing) As IRecordableCommand
+    content.vb: Public Shared Function Create(action As Action, undo As Action, storables As ImmutableArray(Of IStorable), redo As Action = Nothing) As IRecordableCommand
   overload: Beutl.RecordableCommands.Create*
-  nameWithType.vb: RecordableCommands.Create(Action, Action, ImmutableArray(Of CoreObject), Action)
-  fullName.vb: Beutl.RecordableCommands.Create(System.Action, System.Action, System.Collections.Immutable.ImmutableArray(Of Beutl.CoreObject), System.Action)
-  name.vb: Create(Action, Action, ImmutableArray(Of CoreObject), Action)
-- uid: Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
-  commentId: M:Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
-  id: Create(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
+  nameWithType.vb: RecordableCommands.Create(Action, Action, ImmutableArray(Of IStorable), Action)
+  fullName.vb: Beutl.RecordableCommands.Create(System.Action, System.Action, System.Collections.Immutable.ImmutableArray(Of Beutl.IStorable), System.Action)
+  name.vb: Create(Action, Action, ImmutableArray(Of IStorable), Action)
+- uid: Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
+  commentId: M:Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
+  id: Create(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
   parent: Beutl.RecordableCommands
   langs:
   - csharp
   - vb
-  name: Create(ImmutableArray<CoreObject?>)
-  nameWithType: RecordableCommands.Create(ImmutableArray<CoreObject?>)
-  fullName: Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray<Beutl.CoreObject?>)
+  name: Create(ImmutableArray<IStorable?>)
+  nameWithType: RecordableCommands.Create(ImmutableArray<IStorable?>)
+  fullName: Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray<Beutl.IStorable?>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/RecordableCommands.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/RecordableCommands.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
   syntax:
-    content: public static RecordableCommandBuilder Create(ImmutableArray<CoreObject?> storables)
+    content: public static RecordableCommandBuilder Create(ImmutableArray<IStorable?> storables)
     parameters:
     - id: storables
-      type: System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
+      type: System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
     return:
       type: Beutl.RecordableCommandBuilder
-    content.vb: Public Shared Function Create(storables As ImmutableArray(Of CoreObject)) As RecordableCommandBuilder
+    content.vb: Public Shared Function Create(storables As ImmutableArray(Of IStorable)) As RecordableCommandBuilder
   overload: Beutl.RecordableCommands.Create*
-  nameWithType.vb: RecordableCommands.Create(ImmutableArray(Of CoreObject))
-  fullName.vb: Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray(Of Beutl.CoreObject))
-  name.vb: Create(ImmutableArray(Of CoreObject))
+  nameWithType.vb: RecordableCommands.Create(ImmutableArray(Of IStorable))
+  fullName.vb: Beutl.RecordableCommands.Create(System.Collections.Immutable.ImmutableArray(Of Beutl.IStorable))
+  name.vb: Create(ImmutableArray(Of IStorable))
 - uid: Beutl.RecordableCommands.Create
   commentId: M:Beutl.RecordableCommands.Create
   id: Create
@@ -290,7 +290,7 @@ items:
   fullName: Beutl.RecordableCommands.Create()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/RecordableCommands.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/RecordableCommands.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -312,7 +312,7 @@ items:
   fullName: Beutl.RecordableCommands.Edit<T>(Beutl.ICoreObject, Beutl.CoreProperty<T>, T?, Beutl.Optional<T?>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/RecordableCommands.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/RecordableCommands.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -592,7 +592,7 @@ references:
   commentId: T:Beutl.IRecordableCommand
   parent: Beutl
   isExternal: true
-  href: Beutl.IRecordableCommand.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   name: IRecordableCommand
   nameWithType: IRecordableCommand
   fullName: Beutl.IRecordableCommand
@@ -648,27 +648,27 @@ references:
     href: Beutl.IRecordableCommand.html
   - name: (
   - name: )
-- uid: System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
-  commentId: T:System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
+- uid: System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
+  commentId: T:System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
   parent: System.Collections.Immutable
   definition: System.Collections.Immutable.ImmutableArray`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
-  name: ImmutableArray<CoreObject>
-  nameWithType: ImmutableArray<CoreObject>
-  fullName: System.Collections.Immutable.ImmutableArray<Beutl.CoreObject>
-  nameWithType.vb: ImmutableArray(Of CoreObject)
-  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Beutl.CoreObject)
-  name.vb: ImmutableArray(Of CoreObject)
+  name: ImmutableArray<IStorable>
+  nameWithType: ImmutableArray<IStorable>
+  fullName: System.Collections.Immutable.ImmutableArray<Beutl.IStorable>
+  nameWithType.vb: ImmutableArray(Of IStorable)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Beutl.IStorable)
+  name.vb: ImmutableArray(Of IStorable)
   spec.csharp:
   - uid: System.Collections.Immutable.ImmutableArray`1
     name: ImmutableArray
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
   - name: <
-  - uid: Beutl.CoreObject
-    name: CoreObject
+  - uid: Beutl.IStorable
+    name: IStorable
     isExternal: true
-    href: Beutl.CoreObject.html
+    href: Beutl.IStorable.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Immutable.ImmutableArray`1
@@ -678,10 +678,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Beutl.CoreObject
-    name: CoreObject
+  - uid: Beutl.IStorable
+    name: IStorable
     isExternal: true
-    href: Beutl.CoreObject.html
+    href: Beutl.IStorable.html
   - name: )
 - uid: System.Collections.Immutable.ImmutableArray`1
   commentId: T:System.Collections.Immutable.ImmutableArray`1
@@ -751,7 +751,7 @@ references:
 - uid: Beutl.RecordableCommands.WithStoables*
   commentId: Overload:Beutl.RecordableCommands.WithStoables
   isExternal: true
-  href: Beutl.RecordableCommands.html#Beutl_RecordableCommands_WithStoables_Beutl_IRecordableCommand_System_Collections_Immutable_ImmutableArray_Beutl_CoreObject__System_Boolean_
+  href: Beutl.RecordableCommands.html#Beutl_RecordableCommands_WithStoables_Beutl_IRecordableCommand_System_Collections_Immutable_ImmutableArray_Beutl_IStorable__System_Boolean_
   name: WithStoables
   nameWithType: RecordableCommands.WithStoables
   fullName: Beutl.RecordableCommands.WithStoables
@@ -769,7 +769,7 @@ references:
 - uid: Beutl.RecordableCommands.Create*
   commentId: Overload:Beutl.RecordableCommands.Create
   isExternal: true
-  href: Beutl.RecordableCommands.html#Beutl_RecordableCommands_Create_System_Action_System_Action_System_Collections_Immutable_ImmutableArray_Beutl_CoreObject__System_Action_
+  href: Beutl.RecordableCommands.html#Beutl_RecordableCommands_Create_System_Action_System_Action_System_Collections_Immutable_ImmutableArray_Beutl_IStorable__System_Action_
   name: Create
   nameWithType: RecordableCommands.Create
   fullName: Beutl.RecordableCommands.Create
@@ -800,7 +800,7 @@ references:
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject

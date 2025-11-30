@@ -7,9 +7,10 @@ items:
   children:
   - Beutl.Graphics.Effects.Lighting.#ctor
   - Beutl.Graphics.Effects.Lighting.Add
-  - Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
+  - Beutl.Graphics.Effects.Lighting.AddProperty
+  - Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
   - Beutl.Graphics.Effects.Lighting.Multiply
-  - Beutl.Graphics.Effects.Lighting.ToResource(Beutl.Graphics.Rendering.RenderContext)
+  - Beutl.Graphics.Effects.Lighting.MultiplyProperty
   langs:
   - csharp
   - vb
@@ -18,18 +19,18 @@ items:
   fullName: Beutl.Graphics.Effects.Lighting
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
   syntax:
-    content: 'public sealed class Lighting : FilterEffect, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, INotifyEdited'
-    content.vb: Public NotInheritable Class Lighting Inherits FilterEffect Implements ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, INotifyEdited
+    content: 'public sealed class Lighting : FilterEffect, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, IAnimatable, IAffectsRender'
+    content.vb: Public NotInheritable Class Lighting Inherits FilterEffect Implements ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IModifiableHierarchical, IHierarchical, IAnimatable, IAffectsRender
   inheritance:
   - System.Object
   - Beutl.CoreObject
   - Beutl.Hierarchical
-  - Beutl.Engine.EngineObject
+  - Beutl.Animation.Animatable
   - Beutl.Graphics.Effects.FilterEffect
   implements:
   - Beutl.ICoreObject
@@ -38,20 +39,20 @@ items:
   - Beutl.Serialization.ICoreSerializable
   - Beutl.IModifiableHierarchical
   - Beutl.IHierarchical
-  - Beutl.INotifyEdited
+  - Beutl.Animation.IAnimatable
+  - Beutl.Media.IAffectsRender
   inheritedMembers:
-  - Beutl.Engine.EngineObject.IsTimeAnchorProperty
-  - Beutl.Engine.EngineObject.IsEnabledProperty
-  - Beutl.Engine.EngineObject.ZIndexProperty
-  - Beutl.Engine.EngineObject.TimeRangeProperty
-  - Beutl.Engine.EngineObject.Deserialize(Beutl.Serialization.ICoreSerializationContext)
-  - Beutl.Engine.EngineObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
-  - Beutl.Engine.EngineObject.Properties
-  - Beutl.Engine.EngineObject.IsTimeAnchor
-  - Beutl.Engine.EngineObject.IsEnabled
-  - Beutl.Engine.EngineObject.ZIndex
-  - Beutl.Engine.EngineObject.TimeRange
-  - Beutl.Engine.EngineObject.Edited
+  - Beutl.Graphics.Effects.FilterEffect.IsEnabledProperty
+  - Beutl.Graphics.Effects.FilterEffect.TransformBounds(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Effects.FilterEffect.CreateDelegatedInstance
+  - Beutl.Graphics.Effects.FilterEffect.IsEnabled
+  - Beutl.Graphics.Effects.FilterEffect.Invalidated
+  - Beutl.Animation.Animatable.AnimationsProperty
+  - Beutl.Animation.Animatable.ApplyAnimations(Beutl.Animation.IClock)
+  - Beutl.Animation.Animatable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  - Beutl.Animation.Animatable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  - Beutl.Animation.Animatable.Animations
+  - Beutl.Animation.Animatable.AnimationInvalidated
   - Beutl.Hierarchical.HierarchicalParentProperty
   - Beutl.Hierarchical.HierarchicalParent
   - Beutl.Hierarchical.AttachedToHierarchy
@@ -69,7 +70,6 @@ items:
   - Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
   - Beutl.CoreObject.Id
   - Beutl.CoreObject.Name
-  - Beutl.CoreObject.Uri
   - Beutl.CoreObject.HasErrors
   - Beutl.CoreObject.PropertyChanged
   - Beutl.CoreObject.ErrorsChanged
@@ -79,6 +79,73 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+- uid: Beutl.Graphics.Effects.Lighting.MultiplyProperty
+  commentId: F:Beutl.Graphics.Effects.Lighting.MultiplyProperty
+  id: MultiplyProperty
+  parent: Beutl.Graphics.Effects.Lighting
+  langs:
+  - csharp
+  - vb
+  name: MultiplyProperty
+  nameWithType: Lighting.MultiplyProperty
+  fullName: Beutl.Graphics.Effects.Lighting.MultiplyProperty
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: public static readonly CoreProperty<Color> MultiplyProperty
+    return:
+      type: Beutl.CoreProperty{Beutl.Media.Color}
+    content.vb: Public Shared ReadOnly MultiplyProperty As CoreProperty(Of Color)
+- uid: Beutl.Graphics.Effects.Lighting.AddProperty
+  commentId: F:Beutl.Graphics.Effects.Lighting.AddProperty
+  id: AddProperty
+  parent: Beutl.Graphics.Effects.Lighting
+  langs:
+  - csharp
+  - vb
+  name: AddProperty
+  nameWithType: Lighting.AddProperty
+  fullName: Beutl.Graphics.Effects.Lighting.AddProperty
+  type: Field
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  syntax:
+    content: public static readonly CoreProperty<Color> AddProperty
+    return:
+      type: Beutl.CoreProperty{Beutl.Media.Color}
+    content.vb: Public Shared ReadOnly AddProperty As CoreProperty(Of Color)
+- uid: Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
+  commentId: M:Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
+  id: ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
+  parent: Beutl.Graphics.Effects.Lighting
+  langs:
+  - csharp
+  - vb
+  name: ApplyTo(FilterEffectContext)
+  nameWithType: Lighting.ApplyTo(FilterEffectContext)
+  fullName: Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Effects
+  example: []
+  syntax:
+    content: public override void ApplyTo(FilterEffectContext context)
+    parameters:
+    - id: context
+      type: Beutl.Graphics.Effects.FilterEffectContext
+    content.vb: Public Overrides Sub ApplyTo(context As FilterEffectContext)
+  overridden: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
+  overload: Beutl.Graphics.Effects.Lighting.ApplyTo*
 - uid: Beutl.Graphics.Effects.Lighting.#ctor
   commentId: M:Beutl.Graphics.Effects.Lighting.#ctor
   id: '#ctor'
@@ -91,7 +158,7 @@ items:
   fullName: Beutl.Graphics.Effects.Lighting.Lighting()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -102,60 +169,6 @@ items:
   nameWithType.vb: Lighting.New()
   fullName.vb: Beutl.Graphics.Effects.Lighting.New()
   name.vb: New()
-- uid: Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
-  commentId: M:Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
-  id: ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
-  parent: Beutl.Graphics.Effects.Lighting
-  langs:
-  - csharp
-  - vb
-  name: ApplyTo(FilterEffectContext, Resource)
-  nameWithType: Lighting.ApplyTo(FilterEffectContext, FilterEffect.Resource)
-  fullName: Beutl.Graphics.Effects.Lighting.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext, Beutl.Graphics.Effects.FilterEffect.Resource)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Graphics.Effects
-  example: []
-  syntax:
-    content: public override void ApplyTo(FilterEffectContext context, FilterEffect.Resource resource)
-    parameters:
-    - id: context
-      type: Beutl.Graphics.Effects.FilterEffectContext
-    - id: resource
-      type: Beutl.Graphics.Effects.FilterEffect.Resource
-    content.vb: Public Overrides Sub ApplyTo(context As FilterEffectContext, resource As FilterEffect.Resource)
-  overridden: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
-  overload: Beutl.Graphics.Effects.Lighting.ApplyTo*
-- uid: Beutl.Graphics.Effects.Lighting.ToResource(Beutl.Graphics.Rendering.RenderContext)
-  commentId: M:Beutl.Graphics.Effects.Lighting.ToResource(Beutl.Graphics.Rendering.RenderContext)
-  id: ToResource(Beutl.Graphics.Rendering.RenderContext)
-  parent: Beutl.Graphics.Effects.Lighting
-  langs:
-  - csharp
-  - vb
-  name: ToResource(RenderContext)
-  nameWithType: Lighting.ToResource(RenderContext)
-  fullName: Beutl.Graphics.Effects.Lighting.ToResource(Beutl.Graphics.Rendering.RenderContext)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/obj/Release/net10.0/Beutl.Engine.SourceGenerators/Beutl.Engine.SourceGenerators.EngineObjectResourceGenerator/Beutl_Graphics_Effects_Lighting_Resource.g.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Graphics.Effects
-  example: []
-  syntax:
-    content: public override Lighting.Resource ToResource(RenderContext context)
-    parameters:
-    - id: context
-      type: Beutl.Graphics.Rendering.RenderContext
-    return:
-      type: Beutl.Graphics.Effects.Lighting.Resource
-    content.vb: Public Overrides Function ToResource(context As RenderContext) As Lighting.Resource
-  overridden: Beutl.Graphics.Effects.FilterEffect.ToResource(Beutl.Graphics.Rendering.RenderContext)
-  overload: Beutl.Graphics.Effects.Lighting.ToResource*
 - uid: Beutl.Graphics.Effects.Lighting.Multiply
   commentId: P:Beutl.Graphics.Effects.Lighting.Multiply
   id: Multiply
@@ -168,7 +181,7 @@ items:
   fullName: Beutl.Graphics.Effects.Lighting.Multiply
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -176,14 +189,14 @@ items:
     content: >-
       [Display(Name = "Multiplication", ResourceType = typeof(Strings))]
 
-      public IProperty<Color> Multiply { get; }
+      public Color Multiply { get; set; }
     parameters: []
     return:
-      type: Beutl.Engine.IProperty{Beutl.Media.Color}
+      type: Beutl.Media.Color
     content.vb: >-
       <Display(Name:="Multiplication", ResourceType:=GetType(Strings))>
 
-      Public ReadOnly Property Multiply As IProperty(Of Color)
+      Public Property Multiply As Color
   overload: Beutl.Graphics.Effects.Lighting.Multiply*
   attributes:
   - type: System.ComponentModel.DataAnnotations.DisplayAttribute
@@ -208,7 +221,7 @@ items:
   fullName: Beutl.Graphics.Effects.Lighting.Add
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/FilterEffects/Lighting.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Effects
@@ -216,14 +229,14 @@ items:
     content: >-
       [Display(Name = "Addition", ResourceType = typeof(Strings))]
 
-      public IProperty<Color> Add { get; }
+      public Color Add { get; set; }
     parameters: []
     return:
-      type: Beutl.Engine.IProperty{Beutl.Media.Color}
+      type: Beutl.Media.Color
     content.vb: >-
       <Display(Name:="Addition", ResourceType:=GetType(Strings))>
 
-      Public ReadOnly Property Add As IProperty(Of Color)
+      Public Property Add As Color
   overload: Beutl.Graphics.Effects.Lighting.Add*
   attributes:
   - type: System.ComponentModel.DataAnnotations.DisplayAttribute
@@ -289,7 +302,7 @@ references:
   commentId: T:Beutl.CoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: CoreObject
   nameWithType: CoreObject
   fullName: Beutl.CoreObject
@@ -297,18 +310,18 @@ references:
   commentId: T:Beutl.Hierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.Hierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: Hierarchical
   nameWithType: Hierarchical
   fullName: Beutl.Hierarchical
-- uid: Beutl.Engine.EngineObject
-  commentId: T:Beutl.Engine.EngineObject
-  parent: Beutl.Engine
+- uid: Beutl.Animation.Animatable
+  commentId: T:Beutl.Animation.Animatable
+  parent: Beutl.Animation
   isExternal: true
-  href: Beutl.Engine.EngineObject.html
-  name: EngineObject
-  nameWithType: EngineObject
-  fullName: Beutl.Engine.EngineObject
+  href: Beutl.Animation.Animatable.html
+  name: Animatable
+  nameWithType: Animatable
+  fullName: Beutl.Animation.Animatable
 - uid: Beutl.Graphics.Effects.FilterEffect
   commentId: T:Beutl.Graphics.Effects.FilterEffect
   parent: Beutl.Graphics.Effects
@@ -321,7 +334,7 @@ references:
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject
@@ -345,7 +358,7 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -353,7 +366,7 @@ references:
   commentId: T:Beutl.IModifiableHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IModifiableHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IModifiableHierarchical.cs
   name: IModifiableHierarchical
   nameWithType: IModifiableHierarchical
   fullName: Beutl.IModifiableHierarchical
@@ -361,163 +374,221 @@ references:
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
+- uid: Beutl.Animation.IAnimatable
+  commentId: T:Beutl.Animation.IAnimatable
+  parent: Beutl.Animation
   isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
-- uid: Beutl.Engine.EngineObject.IsTimeAnchorProperty
-  commentId: F:Beutl.Engine.EngineObject.IsTimeAnchorProperty
-  parent: Beutl.Engine.EngineObject
+  href: Beutl.Animation.IAnimatable.html
+  name: IAnimatable
+  nameWithType: IAnimatable
+  fullName: Beutl.Animation.IAnimatable
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_IsTimeAnchorProperty
-  name: IsTimeAnchorProperty
-  nameWithType: EngineObject.IsTimeAnchorProperty
-  fullName: Beutl.Engine.EngineObject.IsTimeAnchorProperty
-- uid: Beutl.Engine.EngineObject.IsEnabledProperty
-  commentId: F:Beutl.Engine.EngineObject.IsEnabledProperty
-  parent: Beutl.Engine.EngineObject
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
+- uid: Beutl.Graphics.Effects.FilterEffect.IsEnabledProperty
+  commentId: F:Beutl.Graphics.Effects.FilterEffect.IsEnabledProperty
+  parent: Beutl.Graphics.Effects.FilterEffect
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_IsEnabledProperty
+  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_IsEnabledProperty
   name: IsEnabledProperty
-  nameWithType: EngineObject.IsEnabledProperty
-  fullName: Beutl.Engine.EngineObject.IsEnabledProperty
-- uid: Beutl.Engine.EngineObject.ZIndexProperty
-  commentId: F:Beutl.Engine.EngineObject.ZIndexProperty
-  parent: Beutl.Engine.EngineObject
+  nameWithType: FilterEffect.IsEnabledProperty
+  fullName: Beutl.Graphics.Effects.FilterEffect.IsEnabledProperty
+- uid: Beutl.Graphics.Effects.FilterEffect.TransformBounds(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Effects.FilterEffect.TransformBounds(Beutl.Graphics.Rect)
+  parent: Beutl.Graphics.Effects.FilterEffect
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_ZIndexProperty
-  name: ZIndexProperty
-  nameWithType: EngineObject.ZIndexProperty
-  fullName: Beutl.Engine.EngineObject.ZIndexProperty
-- uid: Beutl.Engine.EngineObject.TimeRangeProperty
-  commentId: F:Beutl.Engine.EngineObject.TimeRangeProperty
-  parent: Beutl.Engine.EngineObject
-  isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_TimeRangeProperty
-  name: TimeRangeProperty
-  nameWithType: EngineObject.TimeRangeProperty
-  fullName: Beutl.Engine.EngineObject.TimeRangeProperty
-- uid: Beutl.Engine.EngineObject.Deserialize(Beutl.Serialization.ICoreSerializationContext)
-  commentId: M:Beutl.Engine.EngineObject.Deserialize(Beutl.Serialization.ICoreSerializationContext)
-  parent: Beutl.Engine.EngineObject
-  isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Deserialize_Beutl_Serialization_ICoreSerializationContext_
-  name: Deserialize(ICoreSerializationContext)
-  nameWithType: EngineObject.Deserialize(ICoreSerializationContext)
-  fullName: Beutl.Engine.EngineObject.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_TransformBounds_Beutl_Graphics_Rect_
+  name: TransformBounds(Rect)
+  nameWithType: FilterEffect.TransformBounds(Rect)
+  fullName: Beutl.Graphics.Effects.FilterEffect.TransformBounds(Beutl.Graphics.Rect)
   spec.csharp:
-  - uid: Beutl.Engine.EngineObject.Deserialize(Beutl.Serialization.ICoreSerializationContext)
-    name: Deserialize
+  - uid: Beutl.Graphics.Effects.FilterEffect.TransformBounds(Beutl.Graphics.Rect)
+    name: TransformBounds
     isExternal: true
-    href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_TransformBounds_Beutl_Graphics_Rect_
   - name: (
-  - uid: Beutl.Serialization.ICoreSerializationContext
-    name: ICoreSerializationContext
+  - uid: Beutl.Graphics.Rect
+    name: Rect
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: Beutl.Graphics.Rect.html
   - name: )
   spec.vb:
-  - uid: Beutl.Engine.EngineObject.Deserialize(Beutl.Serialization.ICoreSerializationContext)
-    name: Deserialize
+  - uid: Beutl.Graphics.Effects.FilterEffect.TransformBounds(Beutl.Graphics.Rect)
+    name: TransformBounds
     isExternal: true
-    href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_TransformBounds_Beutl_Graphics_Rect_
   - name: (
-  - uid: Beutl.Serialization.ICoreSerializationContext
-    name: ICoreSerializationContext
+  - uid: Beutl.Graphics.Rect
+    name: Rect
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+    href: Beutl.Graphics.Rect.html
   - name: )
-- uid: Beutl.Engine.EngineObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
-  commentId: M:Beutl.Engine.EngineObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
-  parent: Beutl.Engine.EngineObject
+- uid: Beutl.Graphics.Effects.FilterEffect.CreateDelegatedInstance
+  commentId: M:Beutl.Graphics.Effects.FilterEffect.CreateDelegatedInstance
+  parent: Beutl.Graphics.Effects.FilterEffect
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Serialize_Beutl_Serialization_ICoreSerializationContext_
-  name: Serialize(ICoreSerializationContext)
-  nameWithType: EngineObject.Serialize(ICoreSerializationContext)
-  fullName: Beutl.Engine.EngineObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_CreateDelegatedInstance
+  name: CreateDelegatedInstance()
+  nameWithType: FilterEffect.CreateDelegatedInstance()
+  fullName: Beutl.Graphics.Effects.FilterEffect.CreateDelegatedInstance()
   spec.csharp:
-  - uid: Beutl.Engine.EngineObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
-    name: Serialize
+  - uid: Beutl.Graphics.Effects.FilterEffect.CreateDelegatedInstance
+    name: CreateDelegatedInstance
     isExternal: true
-    href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Serialize_Beutl_Serialization_ICoreSerializationContext_
+    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_CreateDelegatedInstance
   - name: (
-  - uid: Beutl.Serialization.ICoreSerializationContext
-    name: ICoreSerializationContext
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
   spec.vb:
-  - uid: Beutl.Engine.EngineObject.Serialize(Beutl.Serialization.ICoreSerializationContext)
-    name: Serialize
+  - uid: Beutl.Graphics.Effects.FilterEffect.CreateDelegatedInstance
+    name: CreateDelegatedInstance
     isExternal: true
-    href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Serialize_Beutl_Serialization_ICoreSerializationContext_
+    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_CreateDelegatedInstance
   - name: (
-  - uid: Beutl.Serialization.ICoreSerializationContext
-    name: ICoreSerializationContext
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
   - name: )
-- uid: Beutl.Engine.EngineObject.Properties
-  commentId: P:Beutl.Engine.EngineObject.Properties
-  parent: Beutl.Engine.EngineObject
+- uid: Beutl.Graphics.Effects.FilterEffect.IsEnabled
+  commentId: P:Beutl.Graphics.Effects.FilterEffect.IsEnabled
+  parent: Beutl.Graphics.Effects.FilterEffect
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Properties
-  name: Properties
-  nameWithType: EngineObject.Properties
-  fullName: Beutl.Engine.EngineObject.Properties
-- uid: Beutl.Engine.EngineObject.IsTimeAnchor
-  commentId: P:Beutl.Engine.EngineObject.IsTimeAnchor
-  parent: Beutl.Engine.EngineObject
-  isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_IsTimeAnchor
-  name: IsTimeAnchor
-  nameWithType: EngineObject.IsTimeAnchor
-  fullName: Beutl.Engine.EngineObject.IsTimeAnchor
-- uid: Beutl.Engine.EngineObject.IsEnabled
-  commentId: P:Beutl.Engine.EngineObject.IsEnabled
-  parent: Beutl.Engine.EngineObject
-  isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_IsEnabled
+  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_IsEnabled
   name: IsEnabled
-  nameWithType: EngineObject.IsEnabled
-  fullName: Beutl.Engine.EngineObject.IsEnabled
-- uid: Beutl.Engine.EngineObject.ZIndex
-  commentId: P:Beutl.Engine.EngineObject.ZIndex
-  parent: Beutl.Engine.EngineObject
+  nameWithType: FilterEffect.IsEnabled
+  fullName: Beutl.Graphics.Effects.FilterEffect.IsEnabled
+- uid: Beutl.Graphics.Effects.FilterEffect.Invalidated
+  commentId: E:Beutl.Graphics.Effects.FilterEffect.Invalidated
+  parent: Beutl.Graphics.Effects.FilterEffect
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_ZIndex
-  name: ZIndex
-  nameWithType: EngineObject.ZIndex
-  fullName: Beutl.Engine.EngineObject.ZIndex
-- uid: Beutl.Engine.EngineObject.TimeRange
-  commentId: P:Beutl.Engine.EngineObject.TimeRange
-  parent: Beutl.Engine.EngineObject
+  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_Invalidated
+  name: Invalidated
+  nameWithType: FilterEffect.Invalidated
+  fullName: Beutl.Graphics.Effects.FilterEffect.Invalidated
+- uid: Beutl.Animation.Animatable.AnimationsProperty
+  commentId: F:Beutl.Animation.Animatable.AnimationsProperty
+  parent: Beutl.Animation.Animatable
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_TimeRange
-  name: TimeRange
-  nameWithType: EngineObject.TimeRange
-  fullName: Beutl.Engine.EngineObject.TimeRange
-- uid: Beutl.Engine.EngineObject.Edited
-  commentId: E:Beutl.Engine.EngineObject.Edited
-  parent: Beutl.Engine.EngineObject
+  href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_AnimationsProperty
+  name: AnimationsProperty
+  nameWithType: Animatable.AnimationsProperty
+  fullName: Beutl.Animation.Animatable.AnimationsProperty
+- uid: Beutl.Animation.Animatable.ApplyAnimations(Beutl.Animation.IClock)
+  commentId: M:Beutl.Animation.Animatable.ApplyAnimations(Beutl.Animation.IClock)
+  parent: Beutl.Animation.Animatable
   isExternal: true
-  href: Beutl.Engine.EngineObject.html#Beutl_Engine_EngineObject_Edited
-  name: Edited
-  nameWithType: EngineObject.Edited
-  fullName: Beutl.Engine.EngineObject.Edited
+  href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_ApplyAnimations_Beutl_Animation_IClock_
+  name: ApplyAnimations(IClock)
+  nameWithType: Animatable.ApplyAnimations(IClock)
+  fullName: Beutl.Animation.Animatable.ApplyAnimations(Beutl.Animation.IClock)
+  spec.csharp:
+  - uid: Beutl.Animation.Animatable.ApplyAnimations(Beutl.Animation.IClock)
+    name: ApplyAnimations
+    isExternal: true
+    href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_ApplyAnimations_Beutl_Animation_IClock_
+  - name: (
+  - uid: Beutl.Animation.IClock
+    name: IClock
+    isExternal: true
+    href: Beutl.Animation.IClock.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Animation.Animatable.ApplyAnimations(Beutl.Animation.IClock)
+    name: ApplyAnimations
+    isExternal: true
+    href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_ApplyAnimations_Beutl_Animation_IClock_
+  - name: (
+  - uid: Beutl.Animation.IClock
+    name: IClock
+    isExternal: true
+    href: Beutl.Animation.IClock.html
+  - name: )
+- uid: Beutl.Animation.Animatable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.Animation.Animatable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.Animation.Animatable
+  isExternal: true
+  href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  name: Serialize(ICoreSerializationContext)
+  nameWithType: Animatable.Serialize(ICoreSerializationContext)
+  fullName: Beutl.Animation.Animatable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+  spec.csharp:
+  - uid: Beutl.Animation.Animatable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Serialize
+    isExternal: true
+    href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+  - name: )
+  spec.vb:
+  - uid: Beutl.Animation.Animatable.Serialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Serialize
+    isExternal: true
+    href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_Serialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+  - name: )
+- uid: Beutl.Animation.Animatable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  commentId: M:Beutl.Animation.Animatable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  parent: Beutl.Animation.Animatable
+  isExternal: true
+  href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  name: Deserialize(ICoreSerializationContext)
+  nameWithType: Animatable.Deserialize(ICoreSerializationContext)
+  fullName: Beutl.Animation.Animatable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+  spec.csharp:
+  - uid: Beutl.Animation.Animatable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Deserialize
+    isExternal: true
+    href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+  - name: )
+  spec.vb:
+  - uid: Beutl.Animation.Animatable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
+    name: Deserialize
+    isExternal: true
+    href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_Deserialize_Beutl_Serialization_ICoreSerializationContext_
+  - name: (
+  - uid: Beutl.Serialization.ICoreSerializationContext
+    name: ICoreSerializationContext
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializationContext.cs
+  - name: )
+- uid: Beutl.Animation.Animatable.Animations
+  commentId: P:Beutl.Animation.Animatable.Animations
+  parent: Beutl.Animation.Animatable
+  isExternal: true
+  href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_Animations
+  name: Animations
+  nameWithType: Animatable.Animations
+  fullName: Beutl.Animation.Animatable.Animations
+- uid: Beutl.Animation.Animatable.AnimationInvalidated
+  commentId: E:Beutl.Animation.Animatable.AnimationInvalidated
+  parent: Beutl.Animation.Animatable
+  isExternal: true
+  href: Beutl.Animation.Animatable.html#Beutl_Animation_Animatable_AnimationInvalidated
+  name: AnimationInvalidated
+  nameWithType: Animatable.AnimationInvalidated
+  fullName: Beutl.Animation.Animatable.AnimationInvalidated
 - uid: Beutl.Hierarchical.HierarchicalParentProperty
   commentId: F:Beutl.Hierarchical.HierarchicalParentProperty
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_HierarchicalParentProperty
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: HierarchicalParentProperty
   nameWithType: Hierarchical.HierarchicalParentProperty
   fullName: Beutl.Hierarchical.HierarchicalParentProperty
@@ -525,7 +596,7 @@ references:
   commentId: P:Beutl.Hierarchical.HierarchicalParent
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_HierarchicalParent
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: HierarchicalParent
   nameWithType: Hierarchical.HierarchicalParent
   fullName: Beutl.Hierarchical.HierarchicalParent
@@ -533,7 +604,7 @@ references:
   commentId: E:Beutl.Hierarchical.AttachedToHierarchy
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_AttachedToHierarchy
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: AttachedToHierarchy
   nameWithType: Hierarchical.AttachedToHierarchy
   fullName: Beutl.Hierarchical.AttachedToHierarchy
@@ -541,7 +612,7 @@ references:
   commentId: E:Beutl.Hierarchical.DetachedFromHierarchy
   parent: Beutl.Hierarchical
   isExternal: true
-  href: Beutl.Hierarchical.html#Beutl_Hierarchical_DetachedFromHierarchy
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/Hierarchical.cs
   name: DetachedFromHierarchy
   nameWithType: Hierarchical.DetachedFromHierarchy
   fullName: Beutl.Hierarchical.DetachedFromHierarchy
@@ -549,7 +620,7 @@ references:
   commentId: F:Beutl.CoreObject.IdProperty
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: IdProperty
   nameWithType: CoreObject.IdProperty
   fullName: Beutl.CoreObject.IdProperty
@@ -557,7 +628,7 @@ references:
   commentId: F:Beutl.CoreObject.NameProperty
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: NameProperty
   nameWithType: CoreObject.NameProperty
   fullName: Beutl.CoreObject.NameProperty
@@ -565,7 +636,7 @@ references:
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.String)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(string)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(string)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(string)
@@ -576,7 +647,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.String)
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -593,7 +664,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.String)
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -612,7 +683,7 @@ references:
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(System.Linq.Expressions.Expression<System.Func<TOwner, T>>)
@@ -623,7 +694,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -652,7 +723,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -687,7 +758,7 @@ references:
   commentId: M:Beutl.CoreObject.GetErrors(System.String)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetErrors(string)
   nameWithType: CoreObject.GetErrors(string)
   fullName: Beutl.CoreObject.GetErrors(string)
@@ -698,7 +769,7 @@ references:
   - uid: Beutl.CoreObject.GetErrors(System.String)
     name: GetErrors
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: System.String
     name: string
@@ -709,7 +780,7 @@ references:
   - uid: Beutl.CoreObject.GetErrors(System.String)
     name: GetErrors
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: System.String
     name: String
@@ -720,7 +791,7 @@ references:
   commentId: M:Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.GetValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.GetValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -731,7 +802,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -739,7 +810,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -748,7 +819,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -758,7 +829,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -769,7 +840,7 @@ references:
   commentId: M:Beutl.CoreObject.GetValue(Beutl.CoreProperty)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue(CoreProperty)
   nameWithType: CoreObject.GetValue(CoreProperty)
   fullName: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
@@ -777,29 +848,29 @@ references:
   - uid: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
   spec.vb:
   - uid: Beutl.CoreObject.GetValue(Beutl.CoreProperty)
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
 - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{{TValue}},{TValue})
   commentId: M:Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue<TValue>(CoreProperty<TValue>, TValue)
   nameWithType: CoreObject.SetValue<TValue>(CoreProperty<TValue>, TValue)
   fullName: Beutl.CoreObject.SetValue<TValue>(Beutl.CoreProperty<TValue>, TValue)
@@ -810,7 +881,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -818,7 +889,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -830,7 +901,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -840,7 +911,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -854,7 +925,7 @@ references:
   commentId: M:Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue(CoreProperty, object)
   nameWithType: CoreObject.SetValue(CoreProperty, object)
   fullName: Beutl.CoreObject.SetValue(Beutl.CoreProperty, object)
@@ -865,12 +936,12 @@ references:
   - uid: Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: ','
   - name: " "
   - uid: System.Object
@@ -882,12 +953,12 @@ references:
   - uid: Beutl.CoreObject.SetValue(Beutl.CoreProperty,System.Object)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: ','
   - name: " "
   - uid: System.Object
@@ -899,7 +970,7 @@ references:
   commentId: M:Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   parent: Beutl.CoreObject
   definition: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.ClearValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.ClearValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -910,7 +981,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -918,7 +989,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -927,7 +998,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -937,7 +1008,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -948,7 +1019,7 @@ references:
   commentId: M:Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue(CoreProperty)
   nameWithType: CoreObject.ClearValue(CoreProperty)
   fullName: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
@@ -956,29 +1027,29 @@ references:
   - uid: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
   spec.vb:
   - uid: Beutl.CoreObject.ClearValue(Beutl.CoreProperty)
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - uid: Beutl.CoreProperty
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: )
 - uid: Beutl.CoreObject.Id
   commentId: P:Beutl.CoreObject.Id
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: Id
   nameWithType: CoreObject.Id
   fullName: Beutl.CoreObject.Id
@@ -986,23 +1057,15 @@ references:
   commentId: P:Beutl.CoreObject.Name
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: Name
   nameWithType: CoreObject.Name
   fullName: Beutl.CoreObject.Name
-- uid: Beutl.CoreObject.Uri
-  commentId: P:Beutl.CoreObject.Uri
-  parent: Beutl.CoreObject
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
-  name: Uri
-  nameWithType: CoreObject.Uri
-  fullName: Beutl.CoreObject.Uri
 - uid: Beutl.CoreObject.HasErrors
   commentId: P:Beutl.CoreObject.HasErrors
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: HasErrors
   nameWithType: CoreObject.HasErrors
   fullName: Beutl.CoreObject.HasErrors
@@ -1010,7 +1073,7 @@ references:
   commentId: E:Beutl.CoreObject.PropertyChanged
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: PropertyChanged
   nameWithType: CoreObject.PropertyChanged
   fullName: Beutl.CoreObject.PropertyChanged
@@ -1018,7 +1081,7 @@ references:
   commentId: E:Beutl.CoreObject.ErrorsChanged
   parent: Beutl.CoreObject
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ErrorsChanged
   nameWithType: CoreObject.ErrorsChanged
   fullName: Beutl.CoreObject.ErrorsChanged
@@ -1231,33 +1294,33 @@ references:
   name: Beutl
   nameWithType: Beutl
   fullName: Beutl
-- uid: Beutl.Engine
-  commentId: N:Beutl.Engine
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
   isExternal: true
   href: Beutl.html
-  name: Beutl.Engine
-  nameWithType: Beutl.Engine
-  fullName: Beutl.Engine
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
   spec.csharp:
   - uid: Beutl
     name: Beutl
     isExternal: true
     href: Beutl.html
   - name: .
-  - uid: Beutl.Engine
-    name: Engine
+  - uid: Beutl.Animation
+    name: Animation
     isExternal: true
-    href: Beutl.Engine.html
+    href: Beutl.Animation.html
   spec.vb:
   - uid: Beutl
     name: Beutl
     isExternal: true
     href: Beutl.html
   - name: .
-  - uid: Beutl.Engine
-    name: Engine
+  - uid: Beutl.Animation
+    name: Animation
     isExternal: true
-    href: Beutl.Engine.html
+    href: Beutl.Animation.html
 - uid: System.ComponentModel
   commentId: N:System.ComponentModel
   isExternal: true
@@ -1312,10 +1375,37 @@ references:
     name: Serialization
     isExternal: true
     href: Beutl.Serialization.html
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
 - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   commentId: M:Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   nameWithType: CoreObject.ConfigureProperty<T, TOwner>(Expression<Func<TOwner, T>>)
   fullName: Beutl.CoreObject.ConfigureProperty<T, TOwner>(System.Linq.Expressions.Expression<System.Func<TOwner, T>>)
@@ -1326,7 +1416,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: T
   - name: ','
@@ -1355,7 +1445,7 @@ references:
   - uid: Beutl.CoreObject.ConfigureProperty``2(System.Linq.Expressions.Expression{System.Func{``1,``0}})
     name: ConfigureProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1389,7 +1479,7 @@ references:
 - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   commentId: M:Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: GetValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.GetValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.GetValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -1400,7 +1490,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1408,7 +1498,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1417,7 +1507,7 @@ references:
   - uid: Beutl.CoreObject.GetValue``1(Beutl.CoreProperty{``0})
     name: GetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1427,7 +1517,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1437,7 +1527,7 @@ references:
 - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   commentId: M:Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: SetValue<TValue>(CoreProperty<TValue>, TValue)
   nameWithType: CoreObject.SetValue<TValue>(CoreProperty<TValue>, TValue)
   fullName: Beutl.CoreObject.SetValue<TValue>(Beutl.CoreProperty<TValue>, TValue)
@@ -1448,7 +1538,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1456,7 +1546,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1468,7 +1558,7 @@ references:
   - uid: Beutl.CoreObject.SetValue``1(Beutl.CoreProperty{``0},``0)
     name: SetValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1478,7 +1568,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1491,7 +1581,7 @@ references:
 - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   commentId: M:Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ClearValue<TValue>(CoreProperty<TValue>)
   nameWithType: CoreObject.ClearValue<TValue>(CoreProperty<TValue>)
   fullName: Beutl.CoreObject.ClearValue<TValue>(Beutl.CoreProperty<TValue>)
@@ -1502,7 +1592,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1510,7 +1600,7 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - name: TValue
   - name: '>'
@@ -1519,7 +1609,7 @@ references:
   - uid: Beutl.CoreObject.ClearValue``1(Beutl.CoreProperty{``0})
     name: ClearValue
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   - name: (
   - name: Of
   - name: " "
@@ -1529,69 +1619,110 @@ references:
   - uid: Beutl.CoreProperty`1
     name: CoreProperty
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreProperty.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
   - name: TValue
   - name: )
   - name: )
-- uid: Beutl.Graphics.Effects.Lighting.#ctor*
-  commentId: Overload:Beutl.Graphics.Effects.Lighting.#ctor
+- uid: Beutl.CoreProperty{Beutl.Media.Color}
+  commentId: T:Beutl.CoreProperty{Beutl.Media.Color}
+  parent: Beutl
+  definition: Beutl.CoreProperty`1
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  name: CoreProperty<Color>
+  nameWithType: CoreProperty<Color>
+  fullName: Beutl.CoreProperty<Beutl.Media.Color>
+  nameWithType.vb: CoreProperty(Of Color)
+  fullName.vb: Beutl.CoreProperty(Of Beutl.Media.Color)
+  name.vb: CoreProperty(Of Color)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: <
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Color
+    name: Color
+    isExternal: true
+    href: Beutl.Media.Color.html
+  - name: )
+- uid: Beutl.CoreProperty`1
+  commentId: T:Beutl.CoreProperty`1
   isExternal: true
-  href: Beutl.Graphics.Effects.Lighting.html#Beutl_Graphics_Effects_Lighting__ctor
-  name: Lighting
-  nameWithType: Lighting.Lighting
-  fullName: Beutl.Graphics.Effects.Lighting.Lighting
-  nameWithType.vb: Lighting.New
-  fullName.vb: Beutl.Graphics.Effects.Lighting.New
-  name.vb: New
-- uid: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
-  commentId: M:Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
+  commentId: M:Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
   parent: Beutl.Graphics.Effects.FilterEffect
   isExternal: true
-  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_Beutl_Graphics_Effects_FilterEffect_Resource_
-  name: ApplyTo(FilterEffectContext, Resource)
-  nameWithType: FilterEffect.ApplyTo(FilterEffectContext, FilterEffect.Resource)
-  fullName: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext, Beutl.Graphics.Effects.FilterEffect.Resource)
+  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_
+  name: ApplyTo(FilterEffectContext)
+  nameWithType: FilterEffect.ApplyTo(FilterEffectContext)
+  fullName: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
   spec.csharp:
-  - uid: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
+  - uid: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
     name: ApplyTo
     isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_Beutl_Graphics_Effects_FilterEffect_Resource_
+    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_
   - name: (
   - uid: Beutl.Graphics.Effects.FilterEffectContext
     name: FilterEffectContext
     isExternal: true
     href: Beutl.Graphics.Effects.FilterEffectContext.html
-  - name: ','
-  - name: " "
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
   - name: )
   spec.vb:
-  - uid: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext,Beutl.Graphics.Effects.FilterEffect.Resource)
+  - uid: Beutl.Graphics.Effects.FilterEffect.ApplyTo(Beutl.Graphics.Effects.FilterEffectContext)
     name: ApplyTo
     isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_Beutl_Graphics_Effects_FilterEffect_Resource_
+    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_
   - name: (
   - uid: Beutl.Graphics.Effects.FilterEffectContext
     name: FilterEffectContext
     isExternal: true
     href: Beutl.Graphics.Effects.FilterEffectContext.html
-  - name: ','
-  - name: " "
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
   - name: )
 - uid: Beutl.Graphics.Effects.Lighting.ApplyTo*
   commentId: Overload:Beutl.Graphics.Effects.Lighting.ApplyTo
   isExternal: true
-  href: Beutl.Graphics.Effects.Lighting.html#Beutl_Graphics_Effects_Lighting_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_Beutl_Graphics_Effects_FilterEffect_Resource_
+  href: Beutl.Graphics.Effects.Lighting.html#Beutl_Graphics_Effects_Lighting_ApplyTo_Beutl_Graphics_Effects_FilterEffectContext_
   name: ApplyTo
   nameWithType: Lighting.ApplyTo
   fullName: Beutl.Graphics.Effects.Lighting.ApplyTo
@@ -1603,144 +1734,16 @@ references:
   name: FilterEffectContext
   nameWithType: FilterEffectContext
   fullName: Beutl.Graphics.Effects.FilterEffectContext
-- uid: Beutl.Graphics.Effects.FilterEffect.Resource
-  commentId: T:Beutl.Graphics.Effects.FilterEffect.Resource
-  parent: Beutl.Graphics.Effects
+- uid: Beutl.Graphics.Effects.Lighting.#ctor*
+  commentId: Overload:Beutl.Graphics.Effects.Lighting.#ctor
   isExternal: true
-  href: Beutl.Graphics.Effects.FilterEffect.html
-  name: FilterEffect.Resource
-  nameWithType: FilterEffect.Resource
-  fullName: Beutl.Graphics.Effects.FilterEffect.Resource
-  spec.csharp:
-  - uid: Beutl.Graphics.Effects.FilterEffect
-    name: FilterEffect
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
-  spec.vb:
-  - uid: Beutl.Graphics.Effects.FilterEffect
-    name: FilterEffect
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
-- uid: Beutl.Graphics.Effects.FilterEffect.ToResource(Beutl.Graphics.Rendering.RenderContext)
-  commentId: M:Beutl.Graphics.Effects.FilterEffect.ToResource(Beutl.Graphics.Rendering.RenderContext)
-  parent: Beutl.Graphics.Effects.FilterEffect
-  isExternal: true
-  href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ToResource_Beutl_Graphics_Rendering_RenderContext_
-  name: ToResource(RenderContext)
-  nameWithType: FilterEffect.ToResource(RenderContext)
-  fullName: Beutl.Graphics.Effects.FilterEffect.ToResource(Beutl.Graphics.Rendering.RenderContext)
-  spec.csharp:
-  - uid: Beutl.Graphics.Effects.FilterEffect.ToResource(Beutl.Graphics.Rendering.RenderContext)
-    name: ToResource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ToResource_Beutl_Graphics_Rendering_RenderContext_
-  - name: (
-  - uid: Beutl.Graphics.Rendering.RenderContext
-    name: RenderContext
-    isExternal: true
-    href: Beutl.Graphics.Rendering.RenderContext.html
-  - name: )
-  spec.vb:
-  - uid: Beutl.Graphics.Effects.FilterEffect.ToResource(Beutl.Graphics.Rendering.RenderContext)
-    name: ToResource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html#Beutl_Graphics_Effects_FilterEffect_ToResource_Beutl_Graphics_Rendering_RenderContext_
-  - name: (
-  - uid: Beutl.Graphics.Rendering.RenderContext
-    name: RenderContext
-    isExternal: true
-    href: Beutl.Graphics.Rendering.RenderContext.html
-  - name: )
-- uid: Beutl.Graphics.Effects.Lighting.ToResource*
-  commentId: Overload:Beutl.Graphics.Effects.Lighting.ToResource
-  isExternal: true
-  href: Beutl.Graphics.Effects.Lighting.html#Beutl_Graphics_Effects_Lighting_ToResource_Beutl_Graphics_Rendering_RenderContext_
-  name: ToResource
-  nameWithType: Lighting.ToResource
-  fullName: Beutl.Graphics.Effects.Lighting.ToResource
-- uid: Beutl.Graphics.Rendering.RenderContext
-  commentId: T:Beutl.Graphics.Rendering.RenderContext
-  parent: Beutl.Graphics.Rendering
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderContext.html
-  name: RenderContext
-  nameWithType: RenderContext
-  fullName: Beutl.Graphics.Rendering.RenderContext
-- uid: Beutl.Graphics.Effects.Lighting.Resource
-  commentId: T:Beutl.Graphics.Effects.Lighting.Resource
-  parent: Beutl.Graphics.Effects
-  isExternal: true
-  href: Beutl.Graphics.Effects.Lighting.html
-  name: Lighting.Resource
-  nameWithType: Lighting.Resource
-  fullName: Beutl.Graphics.Effects.Lighting.Resource
-  spec.csharp:
-  - uid: Beutl.Graphics.Effects.Lighting
-    name: Lighting
-    isExternal: true
-    href: Beutl.Graphics.Effects.Lighting.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.Lighting.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.Lighting.Resource.html
-  spec.vb:
-  - uid: Beutl.Graphics.Effects.Lighting
-    name: Lighting
-    isExternal: true
-    href: Beutl.Graphics.Effects.Lighting.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.Lighting.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.Lighting.Resource.html
-- uid: Beutl.Graphics.Rendering
-  commentId: N:Beutl.Graphics.Rendering
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.Graphics.Rendering
-  nameWithType: Beutl.Graphics.Rendering
-  fullName: Beutl.Graphics.Rendering
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Graphics
-    name: Graphics
-    isExternal: true
-    href: Beutl.Graphics.html
-  - name: .
-  - uid: Beutl.Graphics.Rendering
-    name: Rendering
-    isExternal: true
-    href: Beutl.Graphics.Rendering.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Graphics
-    name: Graphics
-    isExternal: true
-    href: Beutl.Graphics.html
-  - name: .
-  - uid: Beutl.Graphics.Rendering
-    name: Rendering
-    isExternal: true
-    href: Beutl.Graphics.Rendering.html
+  href: Beutl.Graphics.Effects.Lighting.html#Beutl_Graphics_Effects_Lighting__ctor
+  name: Lighting
+  nameWithType: Lighting.Lighting
+  fullName: Beutl.Graphics.Effects.Lighting.Lighting
+  nameWithType.vb: Lighting.New
+  fullName.vb: Beutl.Graphics.Effects.Lighting.New
+  name.vb: New
 - uid: Beutl.Graphics.Effects.Lighting.Multiply*
   commentId: Overload:Beutl.Graphics.Effects.Lighting.Multiply
   isExternal: true
@@ -1748,69 +1751,14 @@ references:
   name: Multiply
   nameWithType: Lighting.Multiply
   fullName: Beutl.Graphics.Effects.Lighting.Multiply
-- uid: Beutl.Engine.IProperty{Beutl.Media.Color}
-  commentId: T:Beutl.Engine.IProperty{Beutl.Media.Color}
-  parent: Beutl.Engine
-  definition: Beutl.Engine.IProperty`1
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<Color>
-  nameWithType: IProperty<Color>
-  fullName: Beutl.Engine.IProperty<Beutl.Media.Color>
-  nameWithType.vb: IProperty(Of Color)
-  fullName.vb: Beutl.Engine.IProperty(Of Beutl.Media.Color)
-  name.vb: IProperty(Of Color)
-  spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
-    isExternal: true
-    href: Beutl.Engine.IProperty-1.html
-  - name: <
-  - uid: Beutl.Media.Color
-    name: Color
-    isExternal: true
-    href: Beutl.Media.Color.html
-  - name: '>'
-  spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
-    isExternal: true
-    href: Beutl.Engine.IProperty-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Beutl.Media.Color
-    name: Color
-    isExternal: true
-    href: Beutl.Media.Color.html
-  - name: )
-- uid: Beutl.Engine.IProperty`1
-  commentId: T:Beutl.Engine.IProperty`1
+- uid: Beutl.Media.Color
+  commentId: T:Beutl.Media.Color
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<T>
-  nameWithType: IProperty<T>
-  fullName: Beutl.Engine.IProperty<T>
-  nameWithType.vb: IProperty(Of T)
-  fullName.vb: Beutl.Engine.IProperty(Of T)
-  name.vb: IProperty(Of T)
-  spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
-    isExternal: true
-    href: Beutl.Engine.IProperty-1.html
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
-    isExternal: true
-    href: Beutl.Engine.IProperty-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+  href: Beutl.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: Beutl.Media.Color
 - uid: Beutl.Graphics.Effects.Lighting.Add*
   commentId: Overload:Beutl.Graphics.Effects.Lighting.Add
   isExternal: true

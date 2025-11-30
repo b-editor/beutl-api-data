@@ -5,10 +5,10 @@ items:
   id: FilterEffectRenderNode
   parent: Beutl.Graphics.Rendering
   children:
-  - Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor(Beutl.Graphics.Effects.FilterEffect.Resource)
+  - Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor(Beutl.Graphics.Effects.FilterEffect)
+  - Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals(Beutl.Graphics.Effects.FilterEffect)
   - Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect
   - Beutl.Graphics.Rendering.FilterEffectRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
-  - Beutl.Graphics.Rendering.FilterEffectRenderNode.Update(Beutl.Graphics.Effects.FilterEffect.Resource)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -40,7 +40,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -48,60 +47,32 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor(Beutl.Graphics.Effects.FilterEffect.Resource)
-  commentId: M:Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor(Beutl.Graphics.Effects.FilterEffect.Resource)
-  id: '#ctor(Beutl.Graphics.Effects.FilterEffect.Resource)'
+- uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor(Beutl.Graphics.Effects.FilterEffect)
+  commentId: M:Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor(Beutl.Graphics.Effects.FilterEffect)
+  id: '#ctor(Beutl.Graphics.Effects.FilterEffect)'
   parent: Beutl.Graphics.Rendering.FilterEffectRenderNode
   langs:
   - csharp
   - vb
-  name: FilterEffectRenderNode(Resource)
-  nameWithType: FilterEffectRenderNode.FilterEffectRenderNode(FilterEffect.Resource)
-  fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffectRenderNode(Beutl.Graphics.Effects.FilterEffect.Resource)
+  name: FilterEffectRenderNode(FilterEffect)
+  nameWithType: FilterEffectRenderNode.FilterEffectRenderNode(FilterEffect)
+  fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffectRenderNode(Beutl.Graphics.Effects.FilterEffect)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public FilterEffectRenderNode(FilterEffect.Resource filterEffect)
+    content: public FilterEffectRenderNode(FilterEffect filterEffect)
     parameters:
     - id: filterEffect
-      type: Beutl.Graphics.Effects.FilterEffect.Resource
-    content.vb: Public Sub New(filterEffect As FilterEffect.Resource)
+      type: Beutl.Graphics.Effects.FilterEffect
+    content.vb: Public Sub New(filterEffect As FilterEffect)
   overload: Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor*
-  nameWithType.vb: FilterEffectRenderNode.New(FilterEffect.Resource)
-  fullName.vb: Beutl.Graphics.Rendering.FilterEffectRenderNode.New(Beutl.Graphics.Effects.FilterEffect.Resource)
-  name.vb: New(Resource)
-- uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.Update(Beutl.Graphics.Effects.FilterEffect.Resource)
-  commentId: M:Beutl.Graphics.Rendering.FilterEffectRenderNode.Update(Beutl.Graphics.Effects.FilterEffect.Resource)
-  id: Update(Beutl.Graphics.Effects.FilterEffect.Resource)
-  parent: Beutl.Graphics.Rendering.FilterEffectRenderNode
-  langs:
-  - csharp
-  - vb
-  name: Update(Resource?)
-  nameWithType: FilterEffectRenderNode.Update(FilterEffect.Resource?)
-  fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.Update(Beutl.Graphics.Effects.FilterEffect.Resource?)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Graphics.Rendering
-  syntax:
-    content: public bool Update(FilterEffect.Resource? fe)
-    parameters:
-    - id: fe
-      type: Beutl.Graphics.Effects.FilterEffect.Resource
-    return:
-      type: System.Boolean
-    content.vb: Public Function Update(fe As FilterEffect.Resource) As Boolean
-  overload: Beutl.Graphics.Rendering.FilterEffectRenderNode.Update*
-  nameWithType.vb: FilterEffectRenderNode.Update(FilterEffect.Resource)
-  fullName.vb: Beutl.Graphics.Rendering.FilterEffectRenderNode.Update(Beutl.Graphics.Effects.FilterEffect.Resource)
-  name.vb: Update(Resource)
+  nameWithType.vb: FilterEffectRenderNode.New(FilterEffect)
+  fullName.vb: Beutl.Graphics.Rendering.FilterEffectRenderNode.New(Beutl.Graphics.Effects.FilterEffect)
+  name.vb: New(FilterEffect)
 - uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.FilterEffectRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -114,7 +85,7 @@ items:
   fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -129,6 +100,31 @@ items:
     content.vb: Public Overrides Function Process(context As RenderNodeContext) As RenderNodeOperation()
   overridden: Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   overload: Beutl.Graphics.Rendering.FilterEffectRenderNode.Process*
+- uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals(Beutl.Graphics.Effects.FilterEffect)
+  commentId: M:Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals(Beutl.Graphics.Effects.FilterEffect)
+  id: Equals(Beutl.Graphics.Effects.FilterEffect)
+  parent: Beutl.Graphics.Rendering.FilterEffectRenderNode
+  langs:
+  - csharp
+  - vb
+  name: Equals(FilterEffect)
+  nameWithType: FilterEffectRenderNode.Equals(FilterEffect)
+  fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals(Beutl.Graphics.Effects.FilterEffect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: public bool Equals(FilterEffect filterEffect)
+    parameters:
+    - id: filterEffect
+      type: Beutl.Graphics.Effects.FilterEffect
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(filterEffect As FilterEffect) As Boolean
+  overload: Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals*
 - uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect
   commentId: P:Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect
   id: FilterEffect
@@ -141,16 +137,16 @@ items:
   fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/FilterEffectRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public (FilterEffect.Resource Resource, int Version)? FilterEffect { get; }
+    content: public FilterEffect FilterEffect { get; }
     parameters: []
     return:
-      type: System.Nullable{System.ValueTuple{Beutl.Graphics.Effects.FilterEffect.Resource,System.Int32}}
-    content.vb: Public ReadOnly Property FilterEffect As (Resource As FilterEffect.Resource, Version As Integer)?
+      type: Beutl.Graphics.Effects.FilterEffect
+    content.vb: Public ReadOnly Property FilterEffect As FilterEffect
   overload: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect*
 references:
 - uid: Beutl.Graphics.Rendering
@@ -451,14 +447,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -672,41 +660,21 @@ references:
 - uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor*
   commentId: Overload:Beutl.Graphics.Rendering.FilterEffectRenderNode.#ctor
   isExternal: true
-  href: Beutl.Graphics.Rendering.FilterEffectRenderNode.html#Beutl_Graphics_Rendering_FilterEffectRenderNode__ctor_Beutl_Graphics_Effects_FilterEffect_Resource_
+  href: Beutl.Graphics.Rendering.FilterEffectRenderNode.html#Beutl_Graphics_Rendering_FilterEffectRenderNode__ctor_Beutl_Graphics_Effects_FilterEffect_
   name: FilterEffectRenderNode
   nameWithType: FilterEffectRenderNode.FilterEffectRenderNode
   fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffectRenderNode
   nameWithType.vb: FilterEffectRenderNode.New
   fullName.vb: Beutl.Graphics.Rendering.FilterEffectRenderNode.New
   name.vb: New
-- uid: Beutl.Graphics.Effects.FilterEffect.Resource
-  commentId: T:Beutl.Graphics.Effects.FilterEffect.Resource
+- uid: Beutl.Graphics.Effects.FilterEffect
+  commentId: T:Beutl.Graphics.Effects.FilterEffect
   parent: Beutl.Graphics.Effects
   isExternal: true
   href: Beutl.Graphics.Effects.FilterEffect.html
-  name: FilterEffect.Resource
-  nameWithType: FilterEffect.Resource
-  fullName: Beutl.Graphics.Effects.FilterEffect.Resource
-  spec.csharp:
-  - uid: Beutl.Graphics.Effects.FilterEffect
-    name: FilterEffect
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
-  spec.vb:
-  - uid: Beutl.Graphics.Effects.FilterEffect
-    name: FilterEffect
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
+  name: FilterEffect
+  nameWithType: FilterEffect
+  fullName: Beutl.Graphics.Effects.FilterEffect
 - uid: Beutl.Graphics.Effects
   commentId: N:Beutl.Graphics.Effects
   isExternal: true
@@ -744,24 +712,6 @@ references:
     name: Effects
     isExternal: true
     href: Beutl.Graphics.Effects.html
-- uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.FilterEffectRenderNode.Update
-  isExternal: true
-  href: Beutl.Graphics.Rendering.FilterEffectRenderNode.html#Beutl_Graphics_Rendering_FilterEffectRenderNode_Update_Beutl_Graphics_Effects_FilterEffect_Resource_
-  name: Update
-  nameWithType: FilterEffectRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.Update
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   parent: Beutl.Graphics.Rendering.ContainerRenderNode
@@ -830,6 +780,24 @@ references:
     href: Beutl.Graphics.Rendering.RenderNodeOperation.html
   - name: (
   - name: )
+- uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals
+  isExternal: true
+  href: Beutl.Graphics.Rendering.FilterEffectRenderNode.html#Beutl_Graphics_Rendering_FilterEffectRenderNode_Equals_Beutl_Graphics_Effects_FilterEffect_
+  name: Equals
+  nameWithType: FilterEffectRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect*
   commentId: Overload:Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect
   isExternal: true
@@ -837,104 +805,3 @@ references:
   name: FilterEffect
   nameWithType: FilterEffectRenderNode.FilterEffect
   fullName: Beutl.Graphics.Rendering.FilterEffectRenderNode.FilterEffect
-- uid: System.Nullable{System.ValueTuple{Beutl.Graphics.Effects.FilterEffect.Resource,System.Int32}}
-  commentId: T:System.Nullable{System.ValueTuple{Beutl.Graphics.Effects.FilterEffect.Resource,System.Int32}}
-  parent: System
-  definition: System.Nullable`1
-  href: Beutl.Graphics.Effects.FilterEffect.html
-  name: (FilterEffect.Resource Resource, int Version)?
-  nameWithType: (FilterEffect.Resource Resource, int Version)?
-  fullName: (Beutl.Graphics.Effects.FilterEffect.Resource Resource, int Version)?
-  nameWithType.vb: (Resource As FilterEffect.Resource, Version As Integer)?
-  fullName.vb: (Resource As Beutl.Graphics.Effects.FilterEffect.Resource, Version As Integer)?
-  name.vb: (Resource As FilterEffect.Resource, Version As Integer)?
-  spec.csharp:
-  - name: (
-  - uid: Beutl.Graphics.Effects.FilterEffect
-    name: FilterEffect
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Graphics.Effects.FilterEffect.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.effects.filtereffect.resource,system.int32-.resource
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Graphics.Effects.FilterEffect.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.effects.filtereffect.resource,system.int32-.version
-  - name: )
-  - name: '?'
-  spec.vb:
-  - name: (
-  - uid: System.ValueTuple{Beutl.Graphics.Effects.FilterEffect.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.effects.filtereffect.resource,system.int32-.resource
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: Beutl.Graphics.Effects.FilterEffect
-    name: FilterEffect
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.html
-  - name: .
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Effects.FilterEffect.Resource.html
-  - name: ','
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Graphics.Effects.FilterEffect.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.effects.filtereffect.resource,system.int32-.version
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )

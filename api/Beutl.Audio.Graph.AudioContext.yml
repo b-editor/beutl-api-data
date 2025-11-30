@@ -15,13 +15,13 @@ items:
   - Beutl.Audio.Graph.AudioContext.Connect(Beutl.Audio.Graph.AudioNode,Beutl.Audio.Graph.AudioNode)
   - Beutl.Audio.Graph.AudioContext.ConnectTo``1(``0)
   - Beutl.Audio.Graph.AudioContext.CreateClipNode(System.TimeSpan,System.TimeSpan)
-  - Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.AudioEffect)
-  - Beutl.Audio.Graph.AudioContext.CreateGainNode(Beutl.Engine.IProperty{System.Single})
+  - Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.IAudioEffect)
+  - Beutl.Audio.Graph.AudioContext.CreateGainNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
   - Beutl.Audio.Graph.AudioContext.CreateMixerNode
   - Beutl.Audio.Graph.AudioContext.CreateResampleNode(System.Int32)
   - Beutl.Audio.Graph.AudioContext.CreateShiftNode(System.TimeSpan)
   - Beutl.Audio.Graph.AudioContext.CreateSourceNode(Beutl.Media.Source.ISoundSource)
-  - Beutl.Audio.Graph.AudioContext.CreateSpeedNode(Beutl.Engine.IProperty{System.Single})
+  - Beutl.Audio.Graph.AudioContext.CreateSpeedNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
   - Beutl.Audio.Graph.AudioContext.Dispose
   - Beutl.Audio.Graph.AudioContext.EndUpdate
   - Beutl.Audio.Graph.AudioContext.GetOutputNodes
@@ -39,7 +39,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -69,7 +69,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.AudioContext(int, int)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -97,7 +97,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.AudioContext(int, int, System.Collections.Generic.IEnumerable<Beutl.Audio.Graph.AudioNode>)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -127,7 +127,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.AddNode<T>(T)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -157,7 +157,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.CreateSourceNode(Beutl.Media.Source.ISoundSource)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -170,34 +170,38 @@ items:
       type: Beutl.Audio.Graph.Nodes.SourceNode
     content.vb: Public Function CreateSourceNode(source As ISoundSource) As SourceNode
   overload: Beutl.Audio.Graph.AudioContext.CreateSourceNode*
-- uid: Beutl.Audio.Graph.AudioContext.CreateGainNode(Beutl.Engine.IProperty{System.Single})
-  commentId: M:Beutl.Audio.Graph.AudioContext.CreateGainNode(Beutl.Engine.IProperty{System.Single})
-  id: CreateGainNode(Beutl.Engine.IProperty{System.Single})
+- uid: Beutl.Audio.Graph.AudioContext.CreateGainNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
+  commentId: M:Beutl.Audio.Graph.AudioContext.CreateGainNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
+  id: CreateGainNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
   parent: Beutl.Audio.Graph.AudioContext
   langs:
   - csharp
   - vb
-  name: CreateGainNode(IProperty<float>)
-  nameWithType: AudioContext.CreateGainNode(IProperty<float>)
-  fullName: Beutl.Audio.Graph.AudioContext.CreateGainNode(Beutl.Engine.IProperty<float>)
+  name: CreateGainNode(float, IAnimatable?, CoreProperty<float>?)
+  nameWithType: AudioContext.CreateGainNode(float, IAnimatable?, CoreProperty<float>?)
+  fullName: Beutl.Audio.Graph.AudioContext.CreateGainNode(float, Beutl.Animation.IAnimatable?, Beutl.CoreProperty<float>?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
   syntax:
-    content: public GainNode CreateGainNode(IProperty<float> gain)
+    content: public GainNode CreateGainNode(float gain = 1, IAnimatable? target = null, CoreProperty<float>? gainProperty = null)
     parameters:
     - id: gain
-      type: Beutl.Engine.IProperty{System.Single}
+      type: System.Single
+    - id: target
+      type: Beutl.Animation.IAnimatable
+    - id: gainProperty
+      type: Beutl.CoreProperty{System.Single}
     return:
       type: Beutl.Audio.Graph.Nodes.GainNode
-    content.vb: Public Function CreateGainNode(gain As IProperty(Of Single)) As GainNode
+    content.vb: Public Function CreateGainNode(gain As Single = 1, target As IAnimatable = Nothing, gainProperty As CoreProperty(Of Single) = Nothing) As GainNode
   overload: Beutl.Audio.Graph.AudioContext.CreateGainNode*
-  nameWithType.vb: AudioContext.CreateGainNode(IProperty(Of Single))
-  fullName.vb: Beutl.Audio.Graph.AudioContext.CreateGainNode(Beutl.Engine.IProperty(Of Single))
-  name.vb: CreateGainNode(IProperty(Of Single))
+  nameWithType.vb: AudioContext.CreateGainNode(Single, IAnimatable, CoreProperty(Of Single))
+  fullName.vb: Beutl.Audio.Graph.AudioContext.CreateGainNode(Single, Beutl.Animation.IAnimatable, Beutl.CoreProperty(Of Single))
+  name.vb: CreateGainNode(Single, IAnimatable, CoreProperty(Of Single))
 - uid: Beutl.Audio.Graph.AudioContext.CreateShiftNode(System.TimeSpan)
   commentId: M:Beutl.Audio.Graph.AudioContext.CreateShiftNode(System.TimeSpan)
   id: CreateShiftNode(System.TimeSpan)
@@ -210,7 +214,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.CreateShiftNode(System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -235,7 +239,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.CreateClipNode(System.TimeSpan, System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -262,7 +266,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.CreateMixerNode()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -272,30 +276,30 @@ items:
       type: Beutl.Audio.Graph.Nodes.MixerNode
     content.vb: Public Function CreateMixerNode() As MixerNode
   overload: Beutl.Audio.Graph.AudioContext.CreateMixerNode*
-- uid: Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.AudioEffect)
-  commentId: M:Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.AudioEffect)
-  id: CreateEffectNode(Beutl.Audio.Effects.AudioEffect)
+- uid: Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.IAudioEffect)
+  commentId: M:Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.IAudioEffect)
+  id: CreateEffectNode(Beutl.Audio.Effects.IAudioEffect)
   parent: Beutl.Audio.Graph.AudioContext
   langs:
   - csharp
   - vb
-  name: CreateEffectNode(AudioEffect)
-  nameWithType: AudioContext.CreateEffectNode(AudioEffect)
-  fullName: Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.AudioEffect)
+  name: CreateEffectNode(IAudioEffect)
+  nameWithType: AudioContext.CreateEffectNode(IAudioEffect)
+  fullName: Beutl.Audio.Graph.AudioContext.CreateEffectNode(Beutl.Audio.Effects.IAudioEffect)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
   syntax:
-    content: public EffectNode CreateEffectNode(AudioEffect effect)
+    content: public EffectNode CreateEffectNode(IAudioEffect effect)
     parameters:
     - id: effect
-      type: Beutl.Audio.Effects.AudioEffect
+      type: Beutl.Audio.Effects.IAudioEffect
     return:
       type: Beutl.Audio.Graph.Nodes.EffectNode
-    content.vb: Public Function CreateEffectNode(effect As AudioEffect) As EffectNode
+    content.vb: Public Function CreateEffectNode(effect As IAudioEffect) As EffectNode
   overload: Beutl.Audio.Graph.AudioContext.CreateEffectNode*
 - uid: Beutl.Audio.Graph.AudioContext.CreateResampleNode(System.Int32)
   commentId: M:Beutl.Audio.Graph.AudioContext.CreateResampleNode(System.Int32)
@@ -309,7 +313,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.CreateResampleNode(int)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -325,34 +329,38 @@ items:
   nameWithType.vb: AudioContext.CreateResampleNode(Integer)
   fullName.vb: Beutl.Audio.Graph.AudioContext.CreateResampleNode(Integer)
   name.vb: CreateResampleNode(Integer)
-- uid: Beutl.Audio.Graph.AudioContext.CreateSpeedNode(Beutl.Engine.IProperty{System.Single})
-  commentId: M:Beutl.Audio.Graph.AudioContext.CreateSpeedNode(Beutl.Engine.IProperty{System.Single})
-  id: CreateSpeedNode(Beutl.Engine.IProperty{System.Single})
+- uid: Beutl.Audio.Graph.AudioContext.CreateSpeedNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
+  commentId: M:Beutl.Audio.Graph.AudioContext.CreateSpeedNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
+  id: CreateSpeedNode(System.Single,Beutl.Animation.IAnimatable,Beutl.CoreProperty{System.Single})
   parent: Beutl.Audio.Graph.AudioContext
   langs:
   - csharp
   - vb
-  name: CreateSpeedNode(IProperty<float>)
-  nameWithType: AudioContext.CreateSpeedNode(IProperty<float>)
-  fullName: Beutl.Audio.Graph.AudioContext.CreateSpeedNode(Beutl.Engine.IProperty<float>)
+  name: CreateSpeedNode(float, IAnimatable?, CoreProperty<float>?)
+  nameWithType: AudioContext.CreateSpeedNode(float, IAnimatable?, CoreProperty<float>?)
+  fullName: Beutl.Audio.Graph.AudioContext.CreateSpeedNode(float, Beutl.Animation.IAnimatable?, Beutl.CoreProperty<float>?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
   syntax:
-    content: public SpeedNode CreateSpeedNode(IProperty<float> speed)
+    content: public SpeedNode CreateSpeedNode(float speed = 1, IAnimatable? target = null, CoreProperty<float>? speedProperty = null)
     parameters:
     - id: speed
-      type: Beutl.Engine.IProperty{System.Single}
+      type: System.Single
+    - id: target
+      type: Beutl.Animation.IAnimatable
+    - id: speedProperty
+      type: Beutl.CoreProperty{System.Single}
     return:
       type: Beutl.Audio.Graph.Nodes.SpeedNode
-    content.vb: Public Function CreateSpeedNode(speed As IProperty(Of Single)) As SpeedNode
+    content.vb: Public Function CreateSpeedNode(speed As Single = 1, target As IAnimatable = Nothing, speedProperty As CoreProperty(Of Single) = Nothing) As SpeedNode
   overload: Beutl.Audio.Graph.AudioContext.CreateSpeedNode*
-  nameWithType.vb: AudioContext.CreateSpeedNode(IProperty(Of Single))
-  fullName.vb: Beutl.Audio.Graph.AudioContext.CreateSpeedNode(Beutl.Engine.IProperty(Of Single))
-  name.vb: CreateSpeedNode(IProperty(Of Single))
+  nameWithType.vb: AudioContext.CreateSpeedNode(Single, IAnimatable, CoreProperty(Of Single))
+  fullName.vb: Beutl.Audio.Graph.AudioContext.CreateSpeedNode(Single, Beutl.Animation.IAnimatable, Beutl.CoreProperty(Of Single))
+  name.vb: CreateSpeedNode(Single, IAnimatable, CoreProperty(Of Single))
 - uid: Beutl.Audio.Graph.AudioContext.ConnectTo``1(``0)
   commentId: M:Beutl.Audio.Graph.AudioContext.ConnectTo``1(``0)
   id: ConnectTo``1(``0)
@@ -365,7 +373,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.ConnectTo<T>(T)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -395,7 +403,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.Connect(Beutl.Audio.Graph.AudioNode, Beutl.Audio.Graph.AudioNode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -420,7 +428,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.MarkAsOutput(Beutl.Audio.Graph.AudioNode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -443,7 +451,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.SetCurrent<T>(T)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -473,7 +481,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.GetOutputNodes()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -495,7 +503,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.Clear()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -515,7 +523,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.ClearConnections()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -535,7 +543,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.RemoveNode(Beutl.Audio.Graph.AudioNode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -558,7 +566,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.BeginUpdate(System.Collections.Generic.IEnumerable<Beutl.Audio.Graph.AudioNode>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -584,7 +592,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.EndUpdate()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -604,7 +612,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -627,7 +635,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.SampleRate
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -650,7 +658,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.ChannelCount
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -673,7 +681,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -696,7 +704,7 @@ items:
   fullName: Beutl.Audio.Graph.AudioContext.Nodes
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/AudioContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/AudioContext.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph
@@ -1214,26 +1222,45 @@ references:
 - uid: Beutl.Audio.Graph.AudioContext.CreateGainNode*
   commentId: Overload:Beutl.Audio.Graph.AudioContext.CreateGainNode
   isExternal: true
-  href: Beutl.Audio.Graph.AudioContext.html#Beutl_Audio_Graph_AudioContext_CreateGainNode_Beutl_Engine_IProperty_System_Single__
+  href: Beutl.Audio.Graph.AudioContext.html#Beutl_Audio_Graph_AudioContext_CreateGainNode_System_Single_Beutl_Animation_IAnimatable_Beutl_CoreProperty_System_Single__
   name: CreateGainNode
   nameWithType: AudioContext.CreateGainNode
   fullName: Beutl.Audio.Graph.AudioContext.CreateGainNode
-- uid: Beutl.Engine.IProperty{System.Single}
-  commentId: T:Beutl.Engine.IProperty{System.Single}
-  parent: Beutl.Engine
-  definition: Beutl.Engine.IProperty`1
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<float>
-  nameWithType: IProperty<float>
-  fullName: Beutl.Engine.IProperty<float>
-  nameWithType.vb: IProperty(Of Single)
-  fullName.vb: Beutl.Engine.IProperty(Of Single)
-  name.vb: IProperty(Of Single)
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Beutl.Animation.IAnimatable
+  commentId: T:Beutl.Animation.IAnimatable
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.IAnimatable.html
+  name: IAnimatable
+  nameWithType: IAnimatable
+  fullName: Beutl.Animation.IAnimatable
+- uid: Beutl.CoreProperty{System.Single}
+  commentId: T:Beutl.CoreProperty{System.Single}
+  parent: Beutl
+  definition: Beutl.CoreProperty`1
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  name: CoreProperty<float>
+  nameWithType: CoreProperty<float>
+  fullName: Beutl.CoreProperty<float>
+  nameWithType.vb: CoreProperty(Of Single)
+  fullName.vb: Beutl.CoreProperty(Of Single)
+  name.vb: CoreProperty(Of Single)
   spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - uid: System.Single
     name: float
@@ -1241,10 +1268,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.single
   - name: '>'
   spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -1261,61 +1288,68 @@ references:
   name: GainNode
   nameWithType: GainNode
   fullName: Beutl.Audio.Graph.Nodes.GainNode
-- uid: Beutl.Engine.IProperty`1
-  commentId: T:Beutl.Engine.IProperty`1
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
   isExternal: true
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<T>
-  nameWithType: IProperty<T>
-  fullName: Beutl.Engine.IProperty<T>
-  nameWithType.vb: IProperty(Of T)
-  fullName.vb: Beutl.Engine.IProperty(Of T)
-  name.vb: IProperty(Of T)
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
   spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl
+    name: Beutl
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+- uid: Beutl.CoreProperty`1
+  commentId: T:Beutl.CoreProperty`1
+  isExternal: true
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Engine
-  commentId: N:Beutl.Engine
+- uid: Beutl
+  commentId: N:Beutl
   isExternal: true
   href: Beutl.html
-  name: Beutl.Engine
-  nameWithType: Beutl.Engine
-  fullName: Beutl.Engine
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
 - uid: Beutl.Audio.Graph.AudioContext.CreateShiftNode*
   commentId: Overload:Beutl.Audio.Graph.AudioContext.CreateShiftNode
   isExternal: true
@@ -1372,18 +1406,18 @@ references:
 - uid: Beutl.Audio.Graph.AudioContext.CreateEffectNode*
   commentId: Overload:Beutl.Audio.Graph.AudioContext.CreateEffectNode
   isExternal: true
-  href: Beutl.Audio.Graph.AudioContext.html#Beutl_Audio_Graph_AudioContext_CreateEffectNode_Beutl_Audio_Effects_AudioEffect_
+  href: Beutl.Audio.Graph.AudioContext.html#Beutl_Audio_Graph_AudioContext_CreateEffectNode_Beutl_Audio_Effects_IAudioEffect_
   name: CreateEffectNode
   nameWithType: AudioContext.CreateEffectNode
   fullName: Beutl.Audio.Graph.AudioContext.CreateEffectNode
-- uid: Beutl.Audio.Effects.AudioEffect
-  commentId: T:Beutl.Audio.Effects.AudioEffect
+- uid: Beutl.Audio.Effects.IAudioEffect
+  commentId: T:Beutl.Audio.Effects.IAudioEffect
   parent: Beutl.Audio.Effects
   isExternal: true
-  href: Beutl.Audio.Effects.AudioEffect.html
-  name: AudioEffect
-  nameWithType: AudioEffect
-  fullName: Beutl.Audio.Effects.AudioEffect
+  href: Beutl.Audio.Effects.IAudioEffect.html
+  name: IAudioEffect
+  nameWithType: IAudioEffect
+  fullName: Beutl.Audio.Effects.IAudioEffect
 - uid: Beutl.Audio.Graph.Nodes.EffectNode
   commentId: T:Beutl.Audio.Graph.Nodes.EffectNode
   parent: Beutl.Audio.Graph.Nodes
@@ -1447,7 +1481,7 @@ references:
 - uid: Beutl.Audio.Graph.AudioContext.CreateSpeedNode*
   commentId: Overload:Beutl.Audio.Graph.AudioContext.CreateSpeedNode
   isExternal: true
-  href: Beutl.Audio.Graph.AudioContext.html#Beutl_Audio_Graph_AudioContext_CreateSpeedNode_Beutl_Engine_IProperty_System_Single__
+  href: Beutl.Audio.Graph.AudioContext.html#Beutl_Audio_Graph_AudioContext_CreateSpeedNode_System_Single_Beutl_Animation_IAnimatable_Beutl_CoreProperty_System_Single__
   name: CreateSpeedNode
   nameWithType: AudioContext.CreateSpeedNode
   fullName: Beutl.Audio.Graph.AudioContext.CreateSpeedNode

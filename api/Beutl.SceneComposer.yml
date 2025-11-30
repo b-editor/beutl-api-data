@@ -6,7 +6,7 @@ items:
   parent: Beutl
   children:
   - Beutl.SceneComposer.#ctor(Beutl.ProjectSystem.Scene,Beutl.Graphics.Rendering.IRenderer)
-  - Beutl.SceneComposer.ComposeCore(Beutl.Media.TimeRange)
+  - Beutl.SceneComposer.ComposeCore
   - Beutl.SceneComposer.OnDispose(System.Boolean)
   langs:
   - csharp
@@ -16,7 +16,7 @@ items:
   fullName: Beutl.SceneComposer
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/SceneComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/SceneComposer.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -33,6 +33,7 @@ items:
   - Beutl.Audio.Composing.Composer.Dispose
   - Beutl.Audio.Composing.Composer.Compose(Beutl.Media.TimeRange)
   - Beutl.Audio.Composing.Composer.InvalidateCache
+  - Beutl.Audio.Composing.Composer.Clock
   - Beutl.Audio.Composing.Composer.SampleRate
   - Beutl.Audio.Composing.Composer.IsDisposed
   - Beutl.Audio.Composing.Composer.IsAudioRendering
@@ -54,7 +55,7 @@ items:
   fullName: Beutl.SceneComposer.SceneComposer(Beutl.ProjectSystem.Scene, Beutl.Graphics.Rendering.IRenderer)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/SceneComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/SceneComposer.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -70,30 +71,27 @@ items:
   nameWithType.vb: SceneComposer.New(Scene, IRenderer)
   fullName.vb: Beutl.SceneComposer.New(Beutl.ProjectSystem.Scene, Beutl.Graphics.Rendering.IRenderer)
   name.vb: New(Scene, IRenderer)
-- uid: Beutl.SceneComposer.ComposeCore(Beutl.Media.TimeRange)
-  commentId: M:Beutl.SceneComposer.ComposeCore(Beutl.Media.TimeRange)
-  id: ComposeCore(Beutl.Media.TimeRange)
+- uid: Beutl.SceneComposer.ComposeCore
+  commentId: M:Beutl.SceneComposer.ComposeCore
+  id: ComposeCore
   parent: Beutl.SceneComposer
   langs:
   - csharp
   - vb
-  name: ComposeCore(TimeRange)
-  nameWithType: SceneComposer.ComposeCore(TimeRange)
-  fullName: Beutl.SceneComposer.ComposeCore(Beutl.Media.TimeRange)
+  name: ComposeCore()
+  nameWithType: SceneComposer.ComposeCore()
+  fullName: Beutl.SceneComposer.ComposeCore()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/SceneComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/SceneComposer.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
   example: []
   syntax:
-    content: protected override void ComposeCore(TimeRange timeRange)
-    parameters:
-    - id: timeRange
-      type: Beutl.Media.TimeRange
-    content.vb: Protected Overrides Sub ComposeCore(timeRange As TimeRange)
-  overridden: Beutl.Audio.Composing.Composer.ComposeCore(Beutl.Media.TimeRange)
+    content: protected override void ComposeCore()
+    content.vb: Protected Overrides Sub ComposeCore()
+  overridden: Beutl.Audio.Composing.Composer.ComposeCore
   overload: Beutl.SceneComposer.ComposeCore*
 - uid: Beutl.SceneComposer.OnDispose(System.Boolean)
   commentId: M:Beutl.SceneComposer.OnDispose(System.Boolean)
@@ -107,7 +105,7 @@ items:
   fullName: Beutl.SceneComposer.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/SceneComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/SceneComposer.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -170,7 +168,7 @@ references:
   commentId: M:Beutl.Audio.Composing.Composer.Dispose
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   name: Dispose()
   nameWithType: Composer.Dispose()
   fullName: Beutl.Audio.Composing.Composer.Dispose()
@@ -178,21 +176,21 @@ references:
   - uid: Beutl.Audio.Composing.Composer.Dispose
     name: Dispose
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Beutl.Audio.Composing.Composer.Dispose
     name: Dispose
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - name: )
 - uid: Beutl.Audio.Composing.Composer.Compose(Beutl.Media.TimeRange)
   commentId: M:Beutl.Audio.Composing.Composer.Compose(Beutl.Media.TimeRange)
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   name: Compose(TimeRange)
   nameWithType: Composer.Compose(TimeRange)
   fullName: Beutl.Audio.Composing.Composer.Compose(Beutl.Media.TimeRange)
@@ -200,29 +198,29 @@ references:
   - uid: Beutl.Audio.Composing.Composer.Compose(Beutl.Media.TimeRange)
     name: Compose
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - uid: Beutl.Media.TimeRange
     name: TimeRange
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TimeRange.cs
   - name: )
   spec.vb:
   - uid: Beutl.Audio.Composing.Composer.Compose(Beutl.Media.TimeRange)
     name: Compose
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - uid: Beutl.Media.TimeRange
     name: TimeRange
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TimeRange.cs
   - name: )
 - uid: Beutl.Audio.Composing.Composer.InvalidateCache
   commentId: M:Beutl.Audio.Composing.Composer.InvalidateCache
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   name: InvalidateCache()
   nameWithType: Composer.InvalidateCache()
   fullName: Beutl.Audio.Composing.Composer.InvalidateCache()
@@ -230,21 +228,29 @@ references:
   - uid: Beutl.Audio.Composing.Composer.InvalidateCache
     name: InvalidateCache
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Beutl.Audio.Composing.Composer.InvalidateCache
     name: InvalidateCache
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - name: )
+- uid: Beutl.Audio.Composing.Composer.Clock
+  commentId: P:Beutl.Audio.Composing.Composer.Clock
+  parent: Beutl.Audio.Composing.Composer
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
+  name: Clock
+  nameWithType: Composer.Clock
+  fullName: Beutl.Audio.Composing.Composer.Clock
 - uid: Beutl.Audio.Composing.Composer.SampleRate
   commentId: P:Beutl.Audio.Composing.Composer.SampleRate
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   name: SampleRate
   nameWithType: Composer.SampleRate
   fullName: Beutl.Audio.Composing.Composer.SampleRate
@@ -252,7 +258,7 @@ references:
   commentId: P:Beutl.Audio.Composing.Composer.IsDisposed
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   name: IsDisposed
   nameWithType: Composer.IsDisposed
   fullName: Beutl.Audio.Composing.Composer.IsDisposed
@@ -260,7 +266,7 @@ references:
   commentId: P:Beutl.Audio.Composing.Composer.IsAudioRendering
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   name: IsAudioRendering
   nameWithType: Composer.IsAudioRendering
   fullName: Beutl.Audio.Composing.Composer.IsAudioRendering
@@ -593,83 +599,40 @@ references:
     name: Rendering
     isExternal: true
     href: Beutl.Graphics.Rendering.html
-- uid: Beutl.Audio.Composing.Composer.ComposeCore(Beutl.Media.TimeRange)
-  commentId: M:Beutl.Audio.Composing.Composer.ComposeCore(Beutl.Media.TimeRange)
+- uid: Beutl.Audio.Composing.Composer.ComposeCore
+  commentId: M:Beutl.Audio.Composing.Composer.ComposeCore
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
-  name: ComposeCore(TimeRange)
-  nameWithType: Composer.ComposeCore(TimeRange)
-  fullName: Beutl.Audio.Composing.Composer.ComposeCore(Beutl.Media.TimeRange)
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
+  name: ComposeCore()
+  nameWithType: Composer.ComposeCore()
+  fullName: Beutl.Audio.Composing.Composer.ComposeCore()
   spec.csharp:
-  - uid: Beutl.Audio.Composing.Composer.ComposeCore(Beutl.Media.TimeRange)
+  - uid: Beutl.Audio.Composing.Composer.ComposeCore
     name: ComposeCore
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
-  - uid: Beutl.Media.TimeRange
-    name: TimeRange
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
   - name: )
   spec.vb:
-  - uid: Beutl.Audio.Composing.Composer.ComposeCore(Beutl.Media.TimeRange)
+  - uid: Beutl.Audio.Composing.Composer.ComposeCore
     name: ComposeCore
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
-  - uid: Beutl.Media.TimeRange
-    name: TimeRange
-    isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TimeRange.cs
   - name: )
 - uid: Beutl.SceneComposer.ComposeCore*
   commentId: Overload:Beutl.SceneComposer.ComposeCore
   isExternal: true
-  href: Beutl.SceneComposer.html#Beutl_SceneComposer_ComposeCore_Beutl_Media_TimeRange_
+  href: Beutl.SceneComposer.html#Beutl_SceneComposer_ComposeCore
   name: ComposeCore
   nameWithType: SceneComposer.ComposeCore
   fullName: Beutl.SceneComposer.ComposeCore
-- uid: Beutl.Media.TimeRange
-  commentId: T:Beutl.Media.TimeRange
-  parent: Beutl.Media
-  isExternal: true
-  href: Beutl.Media.TimeRange.html
-  name: TimeRange
-  nameWithType: TimeRange
-  fullName: Beutl.Media.TimeRange
-- uid: Beutl.Media
-  commentId: N:Beutl.Media
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.Media
-  nameWithType: Beutl.Media
-  fullName: Beutl.Media
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Media
-    name: Media
-    isExternal: true
-    href: Beutl.Media.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Media
-    name: Media
-    isExternal: true
-    href: Beutl.Media.html
 - uid: Beutl.Audio.Composing.Composer.OnDispose(System.Boolean)
   commentId: M:Beutl.Audio.Composing.Composer.OnDispose(System.Boolean)
   parent: Beutl.Audio.Composing.Composer
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   name: OnDispose(bool)
   nameWithType: Composer.OnDispose(bool)
   fullName: Beutl.Audio.Composing.Composer.OnDispose(bool)
@@ -680,7 +643,7 @@ references:
   - uid: Beutl.Audio.Composing.Composer.OnDispose(System.Boolean)
     name: OnDispose
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - uid: System.Boolean
     name: bool
@@ -691,7 +654,7 @@ references:
   - uid: Beutl.Audio.Composing.Composer.OnDispose(System.Boolean)
     name: OnDispose
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/Composer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/Composer.cs
   - name: (
   - uid: System.Boolean
     name: Boolean

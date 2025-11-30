@@ -15,15 +15,15 @@ items:
   fullName: Beutl.Operation.ISourceOperator
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.Operation
   syntax:
-    content: 'public interface ISourceOperator : INotifyEdited'
-    content.vb: Public Interface ISourceOperator Inherits INotifyEdited
+    content: 'public interface ISourceOperator : IAffectsRender'
+    content.vb: Public Interface ISourceOperator Inherits IAffectsRender
   inheritedMembers:
-  - Beutl.INotifyEdited.Edited
+  - Beutl.Media.IAffectsRender.Invalidated
 - uid: Beutl.Operation.ISourceOperator.IsEnabled
   commentId: P:Beutl.Operation.ISourceOperator.IsEnabled
   id: IsEnabled
@@ -36,7 +36,7 @@ items:
   fullName: Beutl.Operation.ISourceOperator.IsEnabled
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.Operation
@@ -59,7 +59,7 @@ items:
   fullName: Beutl.Operation.ISourceOperator.Properties
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/SourceOperator.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.Operation
@@ -98,29 +98,49 @@ references:
     name: Operation
     isExternal: true
     href: Beutl.Operation.html
-- uid: Beutl.INotifyEdited.Edited
-  commentId: E:Beutl.INotifyEdited.Edited
-  parent: Beutl.INotifyEdited
+- uid: Beutl.Media.IAffectsRender.Invalidated
+  commentId: E:Beutl.Media.IAffectsRender.Invalidated
+  parent: Beutl.Media.IAffectsRender
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/INotifyEdited.cs
-  name: Edited
-  nameWithType: INotifyEdited.Edited
-  fullName: Beutl.INotifyEdited.Edited
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
+  href: Beutl.Media.IAffectsRender.html#Beutl_Media_IAffectsRender_Invalidated
+  name: Invalidated
+  nameWithType: IAffectsRender.Invalidated
+  fullName: Beutl.Media.IAffectsRender.Invalidated
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
-- uid: Beutl
-  commentId: N:Beutl
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
   isExternal: true
   href: Beutl.html
-  name: Beutl
-  nameWithType: Beutl
-  fullName: Beutl
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
 - uid: Beutl.Operation.ISourceOperator.IsEnabled*
   commentId: Overload:Beutl.Operation.ISourceOperator.IsEnabled
   isExternal: true
@@ -157,7 +177,7 @@ references:
   commentId: T:Beutl.Collections.ICoreList{Beutl.Extensibility.IPropertyAdapter}
   parent: Beutl.Collections
   definition: Beutl.Collections.ICoreList`1
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/ICoreList.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Collections/ICoreList.cs
   name: ICoreList<IPropertyAdapter>
   nameWithType: ICoreList<IPropertyAdapter>
   fullName: Beutl.Collections.ICoreList<Beutl.Extensibility.IPropertyAdapter>
@@ -168,25 +188,25 @@ references:
   - uid: Beutl.Collections.ICoreList`1
     name: ICoreList
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/ICoreList.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Collections/ICoreList.cs
   - name: <
   - uid: Beutl.Extensibility.IPropertyAdapter
     name: IPropertyAdapter
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IPropertyAdapter.cs
   - name: '>'
   spec.vb:
   - uid: Beutl.Collections.ICoreList`1
     name: ICoreList
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Collections/ICoreList.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Collections/ICoreList.cs
   - name: (
   - name: Of
   - name: " "
   - uid: Beutl.Extensibility.IPropertyAdapter
     name: IPropertyAdapter
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IPropertyAdapter.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IPropertyAdapter.cs
   - name: )
 - uid: Beutl.Collections.ICoreList`1
   commentId: T:Beutl.Collections.ICoreList`1

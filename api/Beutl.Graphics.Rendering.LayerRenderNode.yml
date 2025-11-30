@@ -6,9 +6,9 @@ items:
   parent: Beutl.Graphics.Rendering
   children:
   - Beutl.Graphics.Rendering.LayerRenderNode.#ctor(Beutl.Graphics.Rect)
+  - Beutl.Graphics.Rendering.LayerRenderNode.Equals(Beutl.Graphics.Rect)
   - Beutl.Graphics.Rendering.LayerRenderNode.Limit
   - Beutl.Graphics.Rendering.LayerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
-  - Beutl.Graphics.Rendering.LayerRenderNode.Update(Beutl.Graphics.Rect)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   fullName: Beutl.Graphics.Rendering.LayerRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -41,7 +41,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.MemberwiseClone
@@ -62,7 +61,7 @@ items:
   fullName: Beutl.Graphics.Rendering.LayerRenderNode.LayerRenderNode(Beutl.Graphics.Rect)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -76,31 +75,31 @@ items:
   nameWithType.vb: LayerRenderNode.New(Rect)
   fullName.vb: Beutl.Graphics.Rendering.LayerRenderNode.New(Beutl.Graphics.Rect)
   name.vb: New(Rect)
-- uid: Beutl.Graphics.Rendering.LayerRenderNode.Update(Beutl.Graphics.Rect)
-  commentId: M:Beutl.Graphics.Rendering.LayerRenderNode.Update(Beutl.Graphics.Rect)
-  id: Update(Beutl.Graphics.Rect)
+- uid: Beutl.Graphics.Rendering.LayerRenderNode.Equals(Beutl.Graphics.Rect)
+  commentId: M:Beutl.Graphics.Rendering.LayerRenderNode.Equals(Beutl.Graphics.Rect)
+  id: Equals(Beutl.Graphics.Rect)
   parent: Beutl.Graphics.Rendering.LayerRenderNode
   langs:
   - csharp
   - vb
-  name: Update(Rect)
-  nameWithType: LayerRenderNode.Update(Rect)
-  fullName: Beutl.Graphics.Rendering.LayerRenderNode.Update(Beutl.Graphics.Rect)
+  name: Equals(Rect)
+  nameWithType: LayerRenderNode.Equals(Rect)
+  fullName: Beutl.Graphics.Rendering.LayerRenderNode.Equals(Beutl.Graphics.Rect)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Update(Rect limit)
+    content: public bool Equals(Rect limit)
     parameters:
     - id: limit
       type: Beutl.Graphics.Rect
     return:
       type: System.Boolean
-    content.vb: Public Function Update(limit As Rect) As Boolean
-  overload: Beutl.Graphics.Rendering.LayerRenderNode.Update*
+    content.vb: Public Function Equals(limit As Rect) As Boolean
+  overload: Beutl.Graphics.Rendering.LayerRenderNode.Equals*
 - uid: Beutl.Graphics.Rendering.LayerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.LayerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -113,7 +112,7 @@ items:
   fullName: Beutl.Graphics.Rendering.LayerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -140,7 +139,7 @@ items:
   fullName: Beutl.Graphics.Rendering.LayerRenderNode.Limit
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/LayerRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -483,14 +482,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -770,13 +761,13 @@ references:
     name: Graphics
     isExternal: true
     href: Beutl.Graphics.html
-- uid: Beutl.Graphics.Rendering.LayerRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.LayerRenderNode.Update
+- uid: Beutl.Graphics.Rendering.LayerRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.LayerRenderNode.Equals
   isExternal: true
-  href: Beutl.Graphics.Rendering.LayerRenderNode.html#Beutl_Graphics_Rendering_LayerRenderNode_Update_Beutl_Graphics_Rect_
-  name: Update
-  nameWithType: LayerRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.LayerRenderNode.Update
+  href: Beutl.Graphics.Rendering.LayerRenderNode.html#Beutl_Graphics_Rendering_LayerRenderNode_Equals_Beutl_Graphics_Rect_
+  name: Equals
+  nameWithType: LayerRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.LayerRenderNode.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

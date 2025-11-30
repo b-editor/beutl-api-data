@@ -17,7 +17,7 @@ items:
   fullName: Beutl.Serialization.IJsonSerializationContext
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -31,8 +31,8 @@ items:
   - Beutl.Serialization.ICoreSerializationContext.Populate(System.String,Beutl.Serialization.ICoreSerializable)
   - Beutl.Serialization.ICoreSerializationContext.Resolve(System.Guid,System.Action{Beutl.Serialization.ICoreSerializable})
   - Beutl.Serialization.ICoreSerializationContext.Mode
-  - Beutl.Serialization.ICoreSerializationContext.BaseUri
   - Beutl.Serialization.ICoreSerializationContext.OwnerType
+  - Beutl.Serialization.ICoreSerializationContext.ErrorNotifier
 - uid: Beutl.Serialization.IJsonSerializationContext.GetJsonObject
   commentId: M:Beutl.Serialization.IJsonSerializationContext.GetJsonObject
   id: GetJsonObject
@@ -45,7 +45,7 @@ items:
   fullName: Beutl.Serialization.IJsonSerializationContext.GetJsonObject()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -67,7 +67,7 @@ items:
   fullName: Beutl.Serialization.IJsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -90,7 +90,7 @@ items:
   fullName: Beutl.Serialization.IJsonSerializationContext.GetNode(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -118,7 +118,7 @@ items:
   fullName: Beutl.Serialization.IJsonSerializationContext.SetNode(string, System.Type, System.Type, System.Text.Json.Nodes.JsonNode?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/IJsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -399,14 +399,6 @@ references:
   name: Mode
   nameWithType: ICoreSerializationContext.Mode
   fullName: Beutl.Serialization.ICoreSerializationContext.Mode
-- uid: Beutl.Serialization.ICoreSerializationContext.BaseUri
-  commentId: P:Beutl.Serialization.ICoreSerializationContext.BaseUri
-  parent: Beutl.Serialization.ICoreSerializationContext
-  isExternal: true
-  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_BaseUri
-  name: BaseUri
-  nameWithType: ICoreSerializationContext.BaseUri
-  fullName: Beutl.Serialization.ICoreSerializationContext.BaseUri
 - uid: Beutl.Serialization.ICoreSerializationContext.OwnerType
   commentId: P:Beutl.Serialization.ICoreSerializationContext.OwnerType
   parent: Beutl.Serialization.ICoreSerializationContext
@@ -415,6 +407,14 @@ references:
   name: OwnerType
   nameWithType: ICoreSerializationContext.OwnerType
   fullName: Beutl.Serialization.ICoreSerializationContext.OwnerType
+- uid: Beutl.Serialization.ICoreSerializationContext.ErrorNotifier
+  commentId: P:Beutl.Serialization.ICoreSerializationContext.ErrorNotifier
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_ErrorNotifier
+  name: ErrorNotifier
+  nameWithType: ICoreSerializationContext.ErrorNotifier
+  fullName: Beutl.Serialization.ICoreSerializationContext.ErrorNotifier
 - uid: Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
   commentId: M:Beutl.Serialization.ICoreSerializationContext.SetValue``1(System.String,``0)
   isExternal: true

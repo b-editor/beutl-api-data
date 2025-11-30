@@ -5,13 +5,12 @@ items:
   id: JsonSerializationContext
   parent: Beutl.Serialization
   children:
-  - Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)
+  - Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ISerializationErrorNotifier,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject)
   - Beutl.Serialization.JsonSerializationContext.AfterDeserialized(Beutl.Serialization.ICoreSerializable)
-  - Beutl.Serialization.JsonSerializationContext.BaseUri
   - Beutl.Serialization.JsonSerializationContext.Contains(System.String)
+  - Beutl.Serialization.JsonSerializationContext.ErrorNotifier
   - Beutl.Serialization.JsonSerializationContext.GetJsonObject
   - Beutl.Serialization.JsonSerializationContext.GetNode(System.String)
-  - Beutl.Serialization.JsonSerializationContext.GetValue(System.String,System.Type)
   - Beutl.Serialization.JsonSerializationContext.GetValue``1(System.String)
   - Beutl.Serialization.JsonSerializationContext.IsRoot
   - Beutl.Serialization.JsonSerializationContext.Mode
@@ -22,7 +21,6 @@ items:
   - Beutl.Serialization.JsonSerializationContext.Root
   - Beutl.Serialization.JsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
   - Beutl.Serialization.JsonSerializationContext.SetNode(System.String,System.Type,System.Type,System.Text.Json.Nodes.JsonNode)
-  - Beutl.Serialization.JsonSerializationContext.SetValue(System.String,System.Object,System.Type)
   - Beutl.Serialization.JsonSerializationContext.SetValue``1(System.String,``0)
   - Beutl.Serialization.JsonSerializationContext._knownTypes
   langs:
@@ -33,7 +31,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -65,7 +63,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext._knownTypes
   type: Field
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -74,38 +72,38 @@ items:
     return:
       type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Type,System.Type}}
     content.vb: Public ReadOnly _knownTypes As Dictionary(Of String, (DefinedType As Type, ActualType As Type))
-- uid: Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)
-  commentId: M:Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)
-  id: '#ctor(System.Type,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject,Beutl.Serialization.CoreSerializerOptions)'
+- uid: Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ISerializationErrorNotifier,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject)
+  commentId: M:Beutl.Serialization.JsonSerializationContext.#ctor(System.Type,Beutl.Serialization.ISerializationErrorNotifier,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject)
+  id: '#ctor(System.Type,Beutl.Serialization.ISerializationErrorNotifier,Beutl.Serialization.ICoreSerializationContext,System.Text.Json.Nodes.JsonObject)'
   parent: Beutl.Serialization.JsonSerializationContext
   langs:
   - csharp
   - vb
-  name: JsonSerializationContext(Type, ICoreSerializationContext?, JsonObject?, CoreSerializerOptions?)
-  nameWithType: JsonSerializationContext.JsonSerializationContext(Type, ICoreSerializationContext?, JsonObject?, CoreSerializerOptions?)
-  fullName: Beutl.Serialization.JsonSerializationContext.JsonSerializationContext(System.Type, Beutl.Serialization.ICoreSerializationContext?, System.Text.Json.Nodes.JsonObject?, Beutl.Serialization.CoreSerializerOptions?)
+  name: JsonSerializationContext(Type, ISerializationErrorNotifier, ICoreSerializationContext?, JsonObject?)
+  nameWithType: JsonSerializationContext.JsonSerializationContext(Type, ISerializationErrorNotifier, ICoreSerializationContext?, JsonObject?)
+  fullName: Beutl.Serialization.JsonSerializationContext.JsonSerializationContext(System.Type, Beutl.Serialization.ISerializationErrorNotifier, Beutl.Serialization.ICoreSerializationContext?, System.Text.Json.Nodes.JsonObject?)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
   syntax:
-    content: public JsonSerializationContext(Type ownerType, ICoreSerializationContext? parent = null, JsonObject? json = null, CoreSerializerOptions? options = null)
+    content: public JsonSerializationContext(Type ownerType, ISerializationErrorNotifier errorNotifier, ICoreSerializationContext? parent = null, JsonObject? json = null)
     parameters:
     - id: ownerType
       type: System.Type
+    - id: errorNotifier
+      type: Beutl.Serialization.ISerializationErrorNotifier
     - id: parent
       type: Beutl.Serialization.ICoreSerializationContext
     - id: json
       type: System.Text.Json.Nodes.JsonObject
-    - id: options
-      type: Beutl.Serialization.CoreSerializerOptions
-    content.vb: Public Sub New(ownerType As Type, parent As ICoreSerializationContext = Nothing, json As JsonObject = Nothing, options As CoreSerializerOptions = Nothing)
+    content.vb: Public Sub New(ownerType As Type, errorNotifier As ISerializationErrorNotifier, parent As ICoreSerializationContext = Nothing, json As JsonObject = Nothing)
   overload: Beutl.Serialization.JsonSerializationContext.#ctor*
-  nameWithType.vb: JsonSerializationContext.New(Type, ICoreSerializationContext, JsonObject, CoreSerializerOptions)
-  fullName.vb: Beutl.Serialization.JsonSerializationContext.New(System.Type, Beutl.Serialization.ICoreSerializationContext, System.Text.Json.Nodes.JsonObject, Beutl.Serialization.CoreSerializerOptions)
-  name.vb: New(Type, ICoreSerializationContext, JsonObject, CoreSerializerOptions)
+  nameWithType.vb: JsonSerializationContext.New(Type, ISerializationErrorNotifier, ICoreSerializationContext, JsonObject)
+  fullName.vb: Beutl.Serialization.JsonSerializationContext.New(System.Type, Beutl.Serialization.ISerializationErrorNotifier, Beutl.Serialization.ICoreSerializationContext, System.Text.Json.Nodes.JsonObject)
+  name.vb: New(Type, ISerializationErrorNotifier, ICoreSerializationContext, JsonObject)
 - uid: Beutl.Serialization.JsonSerializationContext.GetJsonObject
   commentId: M:Beutl.Serialization.JsonSerializationContext.GetJsonObject
   id: GetJsonObject
@@ -118,7 +116,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.GetJsonObject()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -143,7 +141,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.SetJsonObject(System.Text.Json.Nodes.JsonObject)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -169,7 +167,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.GetNode(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -200,7 +198,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.SetNode(string, System.Type, System.Type, System.Text.Json.Nodes.JsonNode?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -235,7 +233,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.Populate(string, Beutl.Serialization.ICoreSerializable)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -266,7 +264,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.AfterDeserialized(Beutl.Serialization.ICoreSerializable)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -289,7 +287,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.Resolve(System.Guid, System.Action<Beutl.Serialization.ICoreSerializable>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -320,7 +318,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.Contains(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -351,7 +349,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.GetValue<T>(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -372,36 +370,6 @@ items:
   nameWithType.vb: JsonSerializationContext.GetValue(Of T)(String)
   fullName.vb: Beutl.Serialization.JsonSerializationContext.GetValue(Of T)(String)
   name.vb: GetValue(Of T)(String)
-- uid: Beutl.Serialization.JsonSerializationContext.GetValue(System.String,System.Type)
-  commentId: M:Beutl.Serialization.JsonSerializationContext.GetValue(System.String,System.Type)
-  id: GetValue(System.String,System.Type)
-  parent: Beutl.Serialization.JsonSerializationContext
-  langs:
-  - csharp
-  - vb
-  name: GetValue(string, Type)
-  nameWithType: JsonSerializationContext.GetValue(string, Type)
-  fullName: Beutl.Serialization.JsonSerializationContext.GetValue(string, System.Type)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Deserialize.cs
-  assemblies:
-  - Beutl.Core
-  namespace: Beutl.Serialization
-  syntax:
-    content: public object? GetValue(string name, Type type)
-    parameters:
-    - id: name
-      type: System.String
-    - id: type
-      type: System.Type
-    return:
-      type: System.Object
-    content.vb: Public Function GetValue(name As String, type As Type) As Object
-  overload: Beutl.Serialization.JsonSerializationContext.GetValue*
-  nameWithType.vb: JsonSerializationContext.GetValue(String, Type)
-  fullName.vb: Beutl.Serialization.JsonSerializationContext.GetValue(String, System.Type)
-  name.vb: GetValue(String, Type)
 - uid: Beutl.Serialization.JsonSerializationContext.SetValue``1(System.String,``0)
   commentId: M:Beutl.Serialization.JsonSerializationContext.SetValue``1(System.String,``0)
   id: SetValue``1(System.String,``0)
@@ -414,7 +382,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.SetValue<T>(string, T?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Serialize.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.Serialize.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -435,36 +403,6 @@ items:
   nameWithType.vb: JsonSerializationContext.SetValue(Of T)(String, T)
   fullName.vb: Beutl.Serialization.JsonSerializationContext.SetValue(Of T)(String, T)
   name.vb: SetValue(Of T)(String, T)
-- uid: Beutl.Serialization.JsonSerializationContext.SetValue(System.String,System.Object,System.Type)
-  commentId: M:Beutl.Serialization.JsonSerializationContext.SetValue(System.String,System.Object,System.Type)
-  id: SetValue(System.String,System.Object,System.Type)
-  parent: Beutl.Serialization.JsonSerializationContext
-  langs:
-  - csharp
-  - vb
-  name: SetValue(string, object?, Type)
-  nameWithType: JsonSerializationContext.SetValue(string, object?, Type)
-  fullName: Beutl.Serialization.JsonSerializationContext.SetValue(string, object?, System.Type)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.Serialize.cs
-  assemblies:
-  - Beutl.Core
-  namespace: Beutl.Serialization
-  syntax:
-    content: public void SetValue(string name, object? value, Type type)
-    parameters:
-    - id: name
-      type: System.String
-    - id: value
-      type: System.Object
-    - id: type
-      type: System.Type
-    content.vb: Public Sub SetValue(name As String, value As Object, type As Type)
-  overload: Beutl.Serialization.JsonSerializationContext.SetValue*
-  nameWithType.vb: JsonSerializationContext.SetValue(String, Object, Type)
-  fullName.vb: Beutl.Serialization.JsonSerializationContext.SetValue(String, Object, System.Type)
-  name.vb: SetValue(String, Object, Type)
 - uid: Beutl.Serialization.JsonSerializationContext.Parent
   commentId: P:Beutl.Serialization.JsonSerializationContext.Parent
   id: Parent
@@ -477,7 +415,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.Parent
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -500,7 +438,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.Root
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -523,7 +461,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.Mode
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -537,32 +475,6 @@ items:
   overload: Beutl.Serialization.JsonSerializationContext.Mode*
   implements:
   - Beutl.Serialization.ICoreSerializationContext.Mode
-- uid: Beutl.Serialization.JsonSerializationContext.BaseUri
-  commentId: P:Beutl.Serialization.JsonSerializationContext.BaseUri
-  id: BaseUri
-  parent: Beutl.Serialization.JsonSerializationContext
-  langs:
-  - csharp
-  - vb
-  name: BaseUri
-  nameWithType: JsonSerializationContext.BaseUri
-  fullName: Beutl.Serialization.JsonSerializationContext.BaseUri
-  type: Property
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
-  assemblies:
-  - Beutl.Core
-  namespace: Beutl.Serialization
-  example: []
-  syntax:
-    content: public Uri? BaseUri { get; }
-    parameters: []
-    return:
-      type: System.Uri
-    content.vb: Public ReadOnly Property BaseUri As Uri
-  overload: Beutl.Serialization.JsonSerializationContext.BaseUri*
-  implements:
-  - Beutl.Serialization.ICoreSerializationContext.BaseUri
 - uid: Beutl.Serialization.JsonSerializationContext.OwnerType
   commentId: P:Beutl.Serialization.JsonSerializationContext.OwnerType
   id: OwnerType
@@ -575,7 +487,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.OwnerType
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -601,7 +513,7 @@ items:
   fullName: Beutl.Serialization.JsonSerializationContext.IsRoot
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl.Serialization
@@ -626,6 +538,32 @@ items:
       value: false
     - type: System.String
       value: Parent
+- uid: Beutl.Serialization.JsonSerializationContext.ErrorNotifier
+  commentId: P:Beutl.Serialization.JsonSerializationContext.ErrorNotifier
+  id: ErrorNotifier
+  parent: Beutl.Serialization.JsonSerializationContext
+  langs:
+  - csharp
+  - vb
+  name: ErrorNotifier
+  nameWithType: JsonSerializationContext.ErrorNotifier
+  fullName: Beutl.Serialization.JsonSerializationContext.ErrorNotifier
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/JsonSerializationContext.cs
+  assemblies:
+  - Beutl.Core
+  namespace: Beutl.Serialization
+  example: []
+  syntax:
+    content: public ISerializationErrorNotifier ErrorNotifier { get; }
+    parameters: []
+    return:
+      type: Beutl.Serialization.ISerializationErrorNotifier
+    content.vb: Public ReadOnly Property ErrorNotifier As ISerializationErrorNotifier
+  overload: Beutl.Serialization.JsonSerializationContext.ErrorNotifier*
+  implements:
+  - Beutl.Serialization.ICoreSerializationContext.ErrorNotifier
 references:
 - uid: Beutl.Serialization
   commentId: N:Beutl.Serialization
@@ -1068,7 +1006,7 @@ references:
 - uid: Beutl.Serialization.JsonSerializationContext.#ctor*
   commentId: Overload:Beutl.Serialization.JsonSerializationContext.#ctor
   isExternal: true
-  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext__ctor_System_Type_Beutl_Serialization_ICoreSerializationContext_System_Text_Json_Nodes_JsonObject_Beutl_Serialization_CoreSerializerOptions_
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext__ctor_System_Type_Beutl_Serialization_ISerializationErrorNotifier_Beutl_Serialization_ICoreSerializationContext_System_Text_Json_Nodes_JsonObject_
   name: JsonSerializationContext
   nameWithType: JsonSerializationContext.JsonSerializationContext
   fullName: Beutl.Serialization.JsonSerializationContext.JsonSerializationContext
@@ -1083,6 +1021,14 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
+- uid: Beutl.Serialization.ISerializationErrorNotifier
+  commentId: T:Beutl.Serialization.ISerializationErrorNotifier
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.ISerializationErrorNotifier.html
+  name: ISerializationErrorNotifier
+  nameWithType: ISerializationErrorNotifier
+  fullName: Beutl.Serialization.ISerializationErrorNotifier
 - uid: System.Text.Json.Nodes.JsonObject
   commentId: T:System.Text.Json.Nodes.JsonObject
   parent: System.Text.Json.Nodes
@@ -1091,14 +1037,6 @@ references:
   name: JsonObject
   nameWithType: JsonObject
   fullName: System.Text.Json.Nodes.JsonObject
-- uid: Beutl.Serialization.CoreSerializerOptions
-  commentId: T:Beutl.Serialization.CoreSerializerOptions
-  parent: Beutl.Serialization
-  isExternal: true
-  href: Beutl.Serialization.CoreSerializerOptions.html
-  name: CoreSerializerOptions
-  nameWithType: CoreSerializerOptions
-  fullName: Beutl.Serialization.CoreSerializerOptions
 - uid: System.Text.Json.Nodes
   commentId: N:System.Text.Json.Nodes
   isExternal: true
@@ -1403,7 +1341,7 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -1805,28 +1743,6 @@ references:
   name: CoreSerializationMode
   nameWithType: CoreSerializationMode
   fullName: Beutl.Serialization.CoreSerializationMode
-- uid: Beutl.Serialization.JsonSerializationContext.BaseUri*
-  commentId: Overload:Beutl.Serialization.JsonSerializationContext.BaseUri
-  isExternal: true
-  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_BaseUri
-  name: BaseUri
-  nameWithType: JsonSerializationContext.BaseUri
-  fullName: Beutl.Serialization.JsonSerializationContext.BaseUri
-- uid: Beutl.Serialization.ICoreSerializationContext.BaseUri
-  commentId: P:Beutl.Serialization.ICoreSerializationContext.BaseUri
-  parent: Beutl.Serialization.ICoreSerializationContext
-  isExternal: true
-  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_BaseUri
-  name: BaseUri
-  nameWithType: ICoreSerializationContext.BaseUri
-  fullName: Beutl.Serialization.ICoreSerializationContext.BaseUri
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: System.Uri
 - uid: Beutl.Serialization.JsonSerializationContext.OwnerType*
   commentId: Overload:Beutl.Serialization.JsonSerializationContext.OwnerType
   isExternal: true
@@ -1849,3 +1765,18 @@ references:
   name: IsRoot
   nameWithType: JsonSerializationContext.IsRoot
   fullName: Beutl.Serialization.JsonSerializationContext.IsRoot
+- uid: Beutl.Serialization.JsonSerializationContext.ErrorNotifier*
+  commentId: Overload:Beutl.Serialization.JsonSerializationContext.ErrorNotifier
+  isExternal: true
+  href: Beutl.Serialization.JsonSerializationContext.html#Beutl_Serialization_JsonSerializationContext_ErrorNotifier
+  name: ErrorNotifier
+  nameWithType: JsonSerializationContext.ErrorNotifier
+  fullName: Beutl.Serialization.JsonSerializationContext.ErrorNotifier
+- uid: Beutl.Serialization.ICoreSerializationContext.ErrorNotifier
+  commentId: P:Beutl.Serialization.ICoreSerializationContext.ErrorNotifier
+  parent: Beutl.Serialization.ICoreSerializationContext
+  isExternal: true
+  href: Beutl.Serialization.ICoreSerializationContext.html#Beutl_Serialization_ICoreSerializationContext_ErrorNotifier
+  name: ErrorNotifier
+  nameWithType: ICoreSerializationContext.ErrorNotifier
+  fullName: Beutl.Serialization.ICoreSerializationContext.ErrorNotifier

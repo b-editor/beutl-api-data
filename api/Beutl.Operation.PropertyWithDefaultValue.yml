@@ -1,0 +1,1172 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Operation.PropertyWithDefaultValue
+  commentId: T:Beutl.Operation.PropertyWithDefaultValue
+  id: PropertyWithDefaultValue
+  parent: Beutl.Operation
+  children:
+  - Beutl.Operation.PropertyWithDefaultValue.#ctor(Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}})
+  - Beutl.Operation.PropertyWithDefaultValue.Deconstruct(Beutl.CoreProperty@,System.Func{Beutl.Optional{System.Object}}@)
+  - Beutl.Operation.PropertyWithDefaultValue.Equals(Beutl.Operation.PropertyWithDefaultValue)
+  - Beutl.Operation.PropertyWithDefaultValue.Equals(System.Object)
+  - Beutl.Operation.PropertyWithDefaultValue.Factory
+  - Beutl.Operation.PropertyWithDefaultValue.GetHashCode
+  - Beutl.Operation.PropertyWithDefaultValue.Property
+  - Beutl.Operation.PropertyWithDefaultValue.ToString
+  - Beutl.Operation.PropertyWithDefaultValue.op_Equality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  - Beutl.Operation.PropertyWithDefaultValue.op_Implicit(Beutl.CoreProperty)~Beutl.Operation.PropertyWithDefaultValue
+  - Beutl.Operation.PropertyWithDefaultValue.op_Implicit(System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}})~Beutl.Operation.PropertyWithDefaultValue
+  - Beutl.Operation.PropertyWithDefaultValue.op_Implicit(System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}})~Beutl.Operation.PropertyWithDefaultValue
+  - Beutl.Operation.PropertyWithDefaultValue.op_Inequality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  langs:
+  - csharp
+  - vb
+  name: PropertyWithDefaultValue
+  nameWithType: PropertyWithDefaultValue
+  fullName: Beutl.Operation.PropertyWithDefaultValue
+  type: Struct
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: 'public struct PropertyWithDefaultValue : IEquatable<PropertyWithDefaultValue>'
+    content.vb: Public Structure PropertyWithDefaultValue Implements IEquatable(Of PropertyWithDefaultValue)
+  implements:
+  - System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Beutl.Operation.PropertyWithDefaultValue.#ctor(Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}})
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.#ctor(Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}})
+  id: '#ctor(Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}})'
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: PropertyWithDefaultValue(CoreProperty, Func<Optional<object?>>)
+  nameWithType: PropertyWithDefaultValue.PropertyWithDefaultValue(CoreProperty, Func<Optional<object?>>)
+  fullName: Beutl.Operation.PropertyWithDefaultValue.PropertyWithDefaultValue(Beutl.CoreProperty, System.Func<Beutl.Optional<object?>>)
+  type: Constructor
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public PropertyWithDefaultValue(CoreProperty Property, Func<Optional<object?>> Factory)
+    parameters:
+    - id: Property
+      type: Beutl.CoreProperty
+    - id: Factory
+      type: System.Func{Beutl.Optional{System.Object}}
+    content.vb: Public Sub New([Property] As CoreProperty, Factory As Func(Of [Optional](Of Object)))
+  overload: Beutl.Operation.PropertyWithDefaultValue.#ctor*
+  nameWithType.vb: PropertyWithDefaultValue.New(CoreProperty, Func(Of Optional(Of Object)))
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.New(Beutl.CoreProperty, System.Func(Of Beutl.Optional(Of Object)))
+  name.vb: New(CoreProperty, Func(Of Optional(Of Object)))
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Implicit(System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}})~Beutl.Operation.PropertyWithDefaultValue
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.op_Implicit(System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}})~Beutl.Operation.PropertyWithDefaultValue
+  id: op_Implicit(System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}})~Beutl.Operation.PropertyWithDefaultValue
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator PropertyWithDefaultValue((CoreProperty Property, Optional<object?> DefaultValue))
+  nameWithType: PropertyWithDefaultValue.implicit operator PropertyWithDefaultValue((CoreProperty Property, Optional<object?> DefaultValue))
+  fullName: Beutl.Operation.PropertyWithDefaultValue.implicit operator Beutl.Operation.PropertyWithDefaultValue((Beutl.CoreProperty Property, Beutl.Optional<object?> DefaultValue))
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public static implicit operator PropertyWithDefaultValue((CoreProperty Property, Optional<object?> DefaultValue) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}}
+    return:
+      type: Beutl.Operation.PropertyWithDefaultValue
+    content.vb: Public Shared Widening Operator CType(tuple As ([Property] As CoreProperty, DefaultValue As [Optional](Of Object))) As PropertyWithDefaultValue
+  overload: Beutl.Operation.PropertyWithDefaultValue.op_Implicit*
+  nameWithType.vb: PropertyWithDefaultValue.CType((Property As CoreProperty, DefaultValue As Optional(Of Object)))
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.CType((Property As Beutl.CoreProperty, DefaultValue As Beutl.Optional(Of Object)))
+  name.vb: CType((Property As CoreProperty, DefaultValue As Optional(Of Object)))
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Implicit(System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}})~Beutl.Operation.PropertyWithDefaultValue
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.op_Implicit(System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}})~Beutl.Operation.PropertyWithDefaultValue
+  id: op_Implicit(System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}})~Beutl.Operation.PropertyWithDefaultValue
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator PropertyWithDefaultValue((CoreProperty Property, Func<Optional<object?>> Factory))
+  nameWithType: PropertyWithDefaultValue.implicit operator PropertyWithDefaultValue((CoreProperty Property, Func<Optional<object?>> Factory))
+  fullName: Beutl.Operation.PropertyWithDefaultValue.implicit operator Beutl.Operation.PropertyWithDefaultValue((Beutl.CoreProperty Property, System.Func<Beutl.Optional<object?>> Factory))
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public static implicit operator PropertyWithDefaultValue((CoreProperty Property, Func<Optional<object?>> Factory) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}}
+    return:
+      type: Beutl.Operation.PropertyWithDefaultValue
+    content.vb: Public Shared Widening Operator CType(tuple As ([Property] As CoreProperty, Factory As Func(Of [Optional](Of Object)))) As PropertyWithDefaultValue
+  overload: Beutl.Operation.PropertyWithDefaultValue.op_Implicit*
+  nameWithType.vb: PropertyWithDefaultValue.CType((Property As CoreProperty, Factory As Func(Of Optional(Of Object))))
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.CType((Property As Beutl.CoreProperty, Factory As System.Func(Of Beutl.Optional(Of Object))))
+  name.vb: CType((Property As CoreProperty, Factory As Func(Of Optional(Of Object))))
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Implicit(Beutl.CoreProperty)~Beutl.Operation.PropertyWithDefaultValue
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.op_Implicit(Beutl.CoreProperty)~Beutl.Operation.PropertyWithDefaultValue
+  id: op_Implicit(Beutl.CoreProperty)~Beutl.Operation.PropertyWithDefaultValue
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator PropertyWithDefaultValue(CoreProperty)
+  nameWithType: PropertyWithDefaultValue.implicit operator PropertyWithDefaultValue(CoreProperty)
+  fullName: Beutl.Operation.PropertyWithDefaultValue.implicit operator Beutl.Operation.PropertyWithDefaultValue(Beutl.CoreProperty)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public static implicit operator PropertyWithDefaultValue(CoreProperty property)
+    parameters:
+    - id: property
+      type: Beutl.CoreProperty
+    return:
+      type: Beutl.Operation.PropertyWithDefaultValue
+    content.vb: Public Shared Widening Operator CType([property] As CoreProperty) As PropertyWithDefaultValue
+  overload: Beutl.Operation.PropertyWithDefaultValue.op_Implicit*
+  nameWithType.vb: PropertyWithDefaultValue.CType(CoreProperty)
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.CType(Beutl.CoreProperty)
+  name.vb: CType(CoreProperty)
+- uid: Beutl.Operation.PropertyWithDefaultValue.ToString
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.ToString
+  id: ToString
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PropertyWithDefaultValue.ToString()
+  fullName: Beutl.Operation.PropertyWithDefaultValue.ToString()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  example: []
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Beutl.Operation.PropertyWithDefaultValue.ToString*
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Inequality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.op_Inequality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  id: op_Inequality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: operator !=(PropertyWithDefaultValue, PropertyWithDefaultValue)
+  nameWithType: PropertyWithDefaultValue.operator !=(PropertyWithDefaultValue, PropertyWithDefaultValue)
+  fullName: Beutl.Operation.PropertyWithDefaultValue.operator !=(Beutl.Operation.PropertyWithDefaultValue, Beutl.Operation.PropertyWithDefaultValue)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public static bool operator !=(PropertyWithDefaultValue left, PropertyWithDefaultValue right)
+    parameters:
+    - id: left
+      type: Beutl.Operation.PropertyWithDefaultValue
+    - id: right
+      type: Beutl.Operation.PropertyWithDefaultValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As PropertyWithDefaultValue, right As PropertyWithDefaultValue) As Boolean
+  overload: Beutl.Operation.PropertyWithDefaultValue.op_Inequality*
+  nameWithType.vb: PropertyWithDefaultValue.<>(PropertyWithDefaultValue, PropertyWithDefaultValue)
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.<>(Beutl.Operation.PropertyWithDefaultValue, Beutl.Operation.PropertyWithDefaultValue)
+  name.vb: <>(PropertyWithDefaultValue, PropertyWithDefaultValue)
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Equality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.op_Equality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  id: op_Equality(Beutl.Operation.PropertyWithDefaultValue,Beutl.Operation.PropertyWithDefaultValue)
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: operator ==(PropertyWithDefaultValue, PropertyWithDefaultValue)
+  nameWithType: PropertyWithDefaultValue.operator ==(PropertyWithDefaultValue, PropertyWithDefaultValue)
+  fullName: Beutl.Operation.PropertyWithDefaultValue.operator ==(Beutl.Operation.PropertyWithDefaultValue, Beutl.Operation.PropertyWithDefaultValue)
+  type: Operator
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public static bool operator ==(PropertyWithDefaultValue left, PropertyWithDefaultValue right)
+    parameters:
+    - id: left
+      type: Beutl.Operation.PropertyWithDefaultValue
+    - id: right
+      type: Beutl.Operation.PropertyWithDefaultValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As PropertyWithDefaultValue, right As PropertyWithDefaultValue) As Boolean
+  overload: Beutl.Operation.PropertyWithDefaultValue.op_Equality*
+  nameWithType.vb: PropertyWithDefaultValue.=(PropertyWithDefaultValue, PropertyWithDefaultValue)
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.=(Beutl.Operation.PropertyWithDefaultValue, Beutl.Operation.PropertyWithDefaultValue)
+  name.vb: =(PropertyWithDefaultValue, PropertyWithDefaultValue)
+- uid: Beutl.Operation.PropertyWithDefaultValue.GetHashCode
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.GetHashCode
+  id: GetHashCode
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: PropertyWithDefaultValue.GetHashCode()
+  fullName: Beutl.Operation.PropertyWithDefaultValue.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  example: []
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Beutl.Operation.PropertyWithDefaultValue.GetHashCode*
+- uid: Beutl.Operation.PropertyWithDefaultValue.Equals(System.Object)
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: PropertyWithDefaultValue.Equals(object)
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Equals(object)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  example: []
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Beutl.Operation.PropertyWithDefaultValue.Equals*
+  nameWithType.vb: PropertyWithDefaultValue.Equals(Object)
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Beutl.Operation.PropertyWithDefaultValue.Equals(Beutl.Operation.PropertyWithDefaultValue)
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.Equals(Beutl.Operation.PropertyWithDefaultValue)
+  id: Equals(Beutl.Operation.PropertyWithDefaultValue)
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: Equals(PropertyWithDefaultValue)
+  nameWithType: PropertyWithDefaultValue.Equals(PropertyWithDefaultValue)
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Equals(Beutl.Operation.PropertyWithDefaultValue)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  example: []
+  syntax:
+    content: public readonly bool Equals(PropertyWithDefaultValue other)
+    parameters:
+    - id: other
+      type: Beutl.Operation.PropertyWithDefaultValue
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As PropertyWithDefaultValue) As Boolean
+  overload: Beutl.Operation.PropertyWithDefaultValue.Equals*
+  implements:
+  - System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}.Equals(Beutl.Operation.PropertyWithDefaultValue)
+- uid: Beutl.Operation.PropertyWithDefaultValue.Deconstruct(Beutl.CoreProperty@,System.Func{Beutl.Optional{System.Object}}@)
+  commentId: M:Beutl.Operation.PropertyWithDefaultValue.Deconstruct(Beutl.CoreProperty@,System.Func{Beutl.Optional{System.Object}}@)
+  id: Deconstruct(Beutl.CoreProperty@,System.Func{Beutl.Optional{System.Object}}@)
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out CoreProperty, out Func<Optional<object?>>)
+  nameWithType: PropertyWithDefaultValue.Deconstruct(out CoreProperty, out Func<Optional<object?>>)
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Deconstruct(out Beutl.CoreProperty, out System.Func<Beutl.Optional<object?>>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public readonly void Deconstruct(out CoreProperty Property, out Func<Optional<object?>> Factory)
+    parameters:
+    - id: Property
+      type: Beutl.CoreProperty
+    - id: Factory
+      type: System.Func{Beutl.Optional{System.Object}}
+    content.vb: Public Sub Deconstruct([Property] As CoreProperty, Factory As Func(Of [Optional](Of Object)))
+  overload: Beutl.Operation.PropertyWithDefaultValue.Deconstruct*
+  nameWithType.vb: PropertyWithDefaultValue.Deconstruct(CoreProperty, Func(Of Optional(Of Object)))
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.Deconstruct(Beutl.CoreProperty, System.Func(Of Beutl.Optional(Of Object)))
+  name.vb: Deconstruct(CoreProperty, Func(Of Optional(Of Object)))
+- uid: Beutl.Operation.PropertyWithDefaultValue.Property
+  commentId: P:Beutl.Operation.PropertyWithDefaultValue.Property
+  id: Property
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: Property
+  nameWithType: PropertyWithDefaultValue.Property
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Property
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public CoreProperty Property { readonly get; set; }
+    parameters: []
+    return:
+      type: Beutl.CoreProperty
+    content.vb: Public Property [Property] As CoreProperty
+  overload: Beutl.Operation.PropertyWithDefaultValue.Property*
+- uid: Beutl.Operation.PropertyWithDefaultValue.Factory
+  commentId: P:Beutl.Operation.PropertyWithDefaultValue.Factory
+  id: Factory
+  parent: Beutl.Operation.PropertyWithDefaultValue
+  langs:
+  - csharp
+  - vb
+  name: Factory
+  nameWithType: PropertyWithDefaultValue.Factory
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Factory
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/PublishOperator.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl.Operation
+  syntax:
+    content: public Func<Optional<object?>> Factory { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Func{Beutl.Optional{System.Object}}
+    content.vb: Public Property Factory As Func(Of [Optional](Of Object))
+  overload: Beutl.Operation.PropertyWithDefaultValue.Factory*
+references:
+- uid: Beutl.Operation
+  commentId: N:Beutl.Operation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Operation
+  nameWithType: Beutl.Operation
+  fullName: Beutl.Operation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Operation
+    name: Operation
+    isExternal: true
+    href: Beutl.Operation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Operation
+    name: Operation
+    isExternal: true
+    href: Beutl.Operation.html
+- uid: System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}
+  commentId: T:System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<PropertyWithDefaultValue>
+  nameWithType: IEquatable<PropertyWithDefaultValue>
+  fullName: System.IEquatable<Beutl.Operation.PropertyWithDefaultValue>
+  nameWithType.vb: IEquatable(Of PropertyWithDefaultValue)
+  fullName.vb: System.IEquatable(Of Beutl.Operation.PropertyWithDefaultValue)
+  name.vb: IEquatable(Of PropertyWithDefaultValue)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Beutl.Operation.PropertyWithDefaultValue
+    name: PropertyWithDefaultValue
+    isExternal: true
+    href: Beutl.Operation.PropertyWithDefaultValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Operation.PropertyWithDefaultValue
+    name: PropertyWithDefaultValue
+    isExternal: true
+    href: Beutl.Operation.PropertyWithDefaultValue.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Beutl.Operation.PropertyWithDefaultValue.#ctor*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.#ctor
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue__ctor_Beutl_CoreProperty_System_Func_Beutl_Optional_System_Object___
+  name: PropertyWithDefaultValue
+  nameWithType: PropertyWithDefaultValue.PropertyWithDefaultValue
+  fullName: Beutl.Operation.PropertyWithDefaultValue.PropertyWithDefaultValue
+  nameWithType.vb: PropertyWithDefaultValue.New
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.New
+  name.vb: New
+- uid: Beutl.CoreProperty
+  commentId: T:Beutl.CoreProperty
+  parent: Beutl
+  isExternal: true
+  href: Beutl.CoreProperty.html
+  name: CoreProperty
+  nameWithType: CoreProperty
+  fullName: Beutl.CoreProperty
+- uid: System.Func{Beutl.Optional{System.Object}}
+  commentId: T:System.Func{Beutl.Optional{System.Object}}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<Optional<object>>
+  nameWithType: Func<Optional<object>>
+  fullName: System.Func<Beutl.Optional<object>>
+  nameWithType.vb: Func(Of Optional(Of Object))
+  fullName.vb: System.Func(Of Beutl.Optional(Of Object))
+  name.vb: Func(Of Optional(Of Object))
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: Beutl.Optional`1
+    name: Optional
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Optional.cs
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Optional`1
+    name: Optional
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Optional.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Implicit*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.op_Implicit
+  name: implicit operator
+  nameWithType: PropertyWithDefaultValue.implicit operator
+  fullName: Beutl.Operation.PropertyWithDefaultValue.implicit operator
+  nameWithType.vb: PropertyWithDefaultValue.CType
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}}
+  commentId: T:System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  name: (CoreProperty Property, Optional<object> DefaultValue)
+  nameWithType: (CoreProperty Property, Optional<object> DefaultValue)
+  fullName: (Beutl.CoreProperty Property, Beutl.Optional<object> DefaultValue)
+  nameWithType.vb: (Property As CoreProperty, DefaultValue As Optional(Of Object))
+  fullName.vb: (Property As Beutl.CoreProperty, DefaultValue As Beutl.Optional(Of Object))
+  name.vb: (Property As CoreProperty, DefaultValue As Optional(Of Object))
+  spec.csharp:
+  - name: (
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: " "
+  - uid: System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}}.Property
+    name: Property
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,beutl.optional-system.object--.property
+  - name: ','
+  - name: " "
+  - uid: Beutl.Optional`1
+    name: Optional
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Optional.cs
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}}.DefaultValue
+    name: DefaultValue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,beutl.optional-system.object--.defaultvalue
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}}.Property
+    name: Property
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,beutl.optional-system.object--.property
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{Beutl.CoreProperty,Beutl.Optional{System.Object}}.DefaultValue
+    name: DefaultValue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,beutl.optional-system.object--.defaultvalue
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Beutl.Optional`1
+    name: Optional
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Optional.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Beutl.Operation.PropertyWithDefaultValue
+  commentId: T:Beutl.Operation.PropertyWithDefaultValue
+  parent: Beutl.Operation
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html
+  name: PropertyWithDefaultValue
+  nameWithType: PropertyWithDefaultValue
+  fullName: Beutl.Operation.PropertyWithDefaultValue
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}}
+  commentId: T:System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  name: (CoreProperty Property, Func<Optional<object>> Factory)
+  nameWithType: (CoreProperty Property, Func<Optional<object>> Factory)
+  fullName: (Beutl.CoreProperty Property, System.Func<Beutl.Optional<object>> Factory)
+  nameWithType.vb: (Property As CoreProperty, Factory As Func(Of Optional(Of Object)))
+  fullName.vb: (Property As Beutl.CoreProperty, Factory As System.Func(Of Beutl.Optional(Of Object)))
+  name.vb: (Property As CoreProperty, Factory As Func(Of Optional(Of Object)))
+  spec.csharp:
+  - name: (
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: " "
+  - uid: System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}}.Property
+    name: Property
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,system.func-beutl.optional-system.object---.property
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: Beutl.Optional`1
+    name: Optional
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Optional.cs
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}}.Factory
+    name: Factory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,system.func-beutl.optional-system.object---.factory
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}}.Property
+    name: Property
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,system.func-beutl.optional-system.object---.property
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Beutl.CoreProperty
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{Beutl.CoreProperty,System.Func{Beutl.Optional{System.Object}}}.Factory
+    name: Factory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.coreproperty,system.func-beutl.optional-system.object---.factory
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Optional`1
+    name: Optional
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Optional.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Beutl.Operation.PropertyWithDefaultValue.ToString*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.ToString
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_ToString
+  name: ToString
+  nameWithType: PropertyWithDefaultValue.ToString
+  fullName: Beutl.Operation.PropertyWithDefaultValue.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Inequality*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.op_Inequality
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_op_Inequality_Beutl_Operation_PropertyWithDefaultValue_Beutl_Operation_PropertyWithDefaultValue_
+  name: operator !=
+  nameWithType: PropertyWithDefaultValue.operator !=
+  fullName: Beutl.Operation.PropertyWithDefaultValue.operator !=
+  nameWithType.vb: PropertyWithDefaultValue.<>
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Operation.PropertyWithDefaultValue.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_op_Inequality_Beutl_Operation_PropertyWithDefaultValue_Beutl_Operation_PropertyWithDefaultValue_
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Beutl.Operation.PropertyWithDefaultValue.op_Equality*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.op_Equality
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_op_Equality_Beutl_Operation_PropertyWithDefaultValue_Beutl_Operation_PropertyWithDefaultValue_
+  name: operator ==
+  nameWithType: PropertyWithDefaultValue.operator ==
+  fullName: Beutl.Operation.PropertyWithDefaultValue.operator ==
+  nameWithType.vb: PropertyWithDefaultValue.=
+  fullName.vb: Beutl.Operation.PropertyWithDefaultValue.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Beutl.Operation.PropertyWithDefaultValue.op_Equality*
+    name: ==
+    isExternal: true
+    href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_op_Equality_Beutl_Operation_PropertyWithDefaultValue_Beutl_Operation_PropertyWithDefaultValue_
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Beutl.Operation.PropertyWithDefaultValue.GetHashCode*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.GetHashCode
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_GetHashCode
+  name: GetHashCode
+  nameWithType: PropertyWithDefaultValue.GetHashCode
+  fullName: Beutl.Operation.PropertyWithDefaultValue.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Beutl.Operation.PropertyWithDefaultValue.Equals*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.Equals
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_Equals_System_Object_
+  name: Equals
+  nameWithType: PropertyWithDefaultValue.Equals
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Equals
+- uid: System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}.Equals(Beutl.Operation.PropertyWithDefaultValue)
+  commentId: M:System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}.Equals(Beutl.Operation.PropertyWithDefaultValue)
+  parent: System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(PropertyWithDefaultValue)
+  nameWithType: IEquatable<PropertyWithDefaultValue>.Equals(PropertyWithDefaultValue)
+  fullName: System.IEquatable<Beutl.Operation.PropertyWithDefaultValue>.Equals(Beutl.Operation.PropertyWithDefaultValue)
+  nameWithType.vb: IEquatable(Of PropertyWithDefaultValue).Equals(PropertyWithDefaultValue)
+  fullName.vb: System.IEquatable(Of Beutl.Operation.PropertyWithDefaultValue).Equals(Beutl.Operation.PropertyWithDefaultValue)
+  spec.csharp:
+  - uid: System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}.Equals(Beutl.Operation.PropertyWithDefaultValue)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Operation.PropertyWithDefaultValue
+    name: PropertyWithDefaultValue
+    isExternal: true
+    href: Beutl.Operation.PropertyWithDefaultValue.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Beutl.Operation.PropertyWithDefaultValue}.Equals(Beutl.Operation.PropertyWithDefaultValue)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Beutl.Operation.PropertyWithDefaultValue
+    name: PropertyWithDefaultValue
+    isExternal: true
+    href: Beutl.Operation.PropertyWithDefaultValue.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: Beutl.Operation.PropertyWithDefaultValue.Deconstruct*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.Deconstruct
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_Deconstruct_Beutl_CoreProperty__System_Func_Beutl_Optional_System_Object____
+  name: Deconstruct
+  nameWithType: PropertyWithDefaultValue.Deconstruct
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Deconstruct
+- uid: Beutl.Operation.PropertyWithDefaultValue.Property*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.Property
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_Property
+  name: Property
+  nameWithType: PropertyWithDefaultValue.Property
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Property
+- uid: Beutl.Operation.PropertyWithDefaultValue.Factory*
+  commentId: Overload:Beutl.Operation.PropertyWithDefaultValue.Factory
+  isExternal: true
+  href: Beutl.Operation.PropertyWithDefaultValue.html#Beutl_Operation_PropertyWithDefaultValue_Factory
+  name: Factory
+  nameWithType: PropertyWithDefaultValue.Factory
+  fullName: Beutl.Operation.PropertyWithDefaultValue.Factory

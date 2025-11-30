@@ -6,7 +6,9 @@ items:
   parent: Beutl.Animation
   children:
   - Beutl.Animation.AnimationSampler.#ctor
-  - Beutl.Animation.AnimationSampler.SampleBuffer``1(Beutl.Engine.IProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
+  - Beutl.Animation.AnimationSampler.IsAnimated(Beutl.Animation.IAnimatable,Beutl.CoreProperty)
+  - Beutl.Animation.AnimationSampler.SampleBuffer``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
+  - Beutl.Animation.AnimationSampler.Sample``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},System.TimeSpan,System.Int32)
   langs:
   - csharp
   - vb
@@ -15,7 +17,7 @@ items:
   fullName: Beutl.Animation.AnimationSampler
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/AnimationSampler.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/AnimationSampler.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -31,27 +33,65 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Animation.AnimationSampler.SampleBuffer``1(Beutl.Engine.IProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
-  commentId: M:Beutl.Animation.AnimationSampler.SampleBuffer``1(Beutl.Engine.IProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
-  id: SampleBuffer``1(Beutl.Engine.IProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
+- uid: Beutl.Animation.AnimationSampler.Sample``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},System.TimeSpan,System.Int32)
+  commentId: M:Beutl.Animation.AnimationSampler.Sample``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},System.TimeSpan,System.Int32)
+  id: Sample``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},System.TimeSpan,System.Int32)
   parent: Beutl.Animation.AnimationSampler
   langs:
   - csharp
   - vb
-  name: SampleBuffer<T>(IProperty<T>, TimeRange, int, Span<T>)
-  nameWithType: AnimationSampler.SampleBuffer<T>(IProperty<T>, TimeRange, int, Span<T>)
-  fullName: Beutl.Animation.AnimationSampler.SampleBuffer<T>(Beutl.Engine.IProperty<T>, Beutl.Media.TimeRange, int, System.Span<T>)
+  name: Sample<T>(IAnimatable, CoreProperty<T>, TimeSpan, int)
+  nameWithType: AnimationSampler.Sample<T>(IAnimatable, CoreProperty<T>, TimeSpan, int)
+  fullName: Beutl.Animation.AnimationSampler.Sample<T>(Beutl.Animation.IAnimatable, Beutl.CoreProperty<T>, System.TimeSpan, int)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/AnimationSampler.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/AnimationSampler.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
   syntax:
-    content: 'public void SampleBuffer<T>(IProperty<T> property, TimeRange range, int sampleRate, Span<T> output) where T : struct'
+    content: 'public T Sample<T>(IAnimatable target, CoreProperty<T> property, TimeSpan time, int sampleRate) where T : notnull'
     parameters:
+    - id: target
+      type: Beutl.Animation.IAnimatable
     - id: property
-      type: Beutl.Engine.IProperty{{T}}
+      type: Beutl.CoreProperty{{T}}
+    - id: time
+      type: System.TimeSpan
+    - id: sampleRate
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Sample(Of T)(target As IAnimatable, [property] As CoreProperty(Of T), time As TimeSpan, sampleRate As Integer) As T
+  overload: Beutl.Animation.AnimationSampler.Sample*
+  nameWithType.vb: AnimationSampler.Sample(Of T)(IAnimatable, CoreProperty(Of T), TimeSpan, Integer)
+  fullName.vb: Beutl.Animation.AnimationSampler.Sample(Of T)(Beutl.Animation.IAnimatable, Beutl.CoreProperty(Of T), System.TimeSpan, Integer)
+  name.vb: Sample(Of T)(IAnimatable, CoreProperty(Of T), TimeSpan, Integer)
+- uid: Beutl.Animation.AnimationSampler.SampleBuffer``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
+  commentId: M:Beutl.Animation.AnimationSampler.SampleBuffer``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
+  id: SampleBuffer``1(Beutl.Animation.IAnimatable,Beutl.CoreProperty{``0},Beutl.Media.TimeRange,System.Int32,System.Span{``0})
+  parent: Beutl.Animation.AnimationSampler
+  langs:
+  - csharp
+  - vb
+  name: SampleBuffer<T>(IAnimatable, CoreProperty<T>, TimeRange, int, Span<T>)
+  nameWithType: AnimationSampler.SampleBuffer<T>(IAnimatable, CoreProperty<T>, TimeRange, int, Span<T>)
+  fullName: Beutl.Animation.AnimationSampler.SampleBuffer<T>(Beutl.Animation.IAnimatable, Beutl.CoreProperty<T>, Beutl.Media.TimeRange, int, System.Span<T>)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/AnimationSampler.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Animation
+  syntax:
+    content: 'public void SampleBuffer<T>(IAnimatable target, CoreProperty<T> property, TimeRange range, int sampleRate, Span<T> output) where T : struct'
+    parameters:
+    - id: target
+      type: Beutl.Animation.IAnimatable
+    - id: property
+      type: Beutl.CoreProperty{{T}}
     - id: range
       type: Beutl.Media.TimeRange
     - id: sampleRate
@@ -60,11 +100,41 @@ items:
       type: System.Span{{T}}
     typeParameters:
     - id: T
-    content.vb: Public Sub SampleBuffer(Of T As Structure)([property] As IProperty(Of T), range As TimeRange, sampleRate As Integer, output As Span(Of T))
+    content.vb: Public Sub SampleBuffer(Of T As Structure)(target As IAnimatable, [property] As CoreProperty(Of T), range As TimeRange, sampleRate As Integer, output As Span(Of T))
   overload: Beutl.Animation.AnimationSampler.SampleBuffer*
-  nameWithType.vb: AnimationSampler.SampleBuffer(Of T)(IProperty(Of T), TimeRange, Integer, Span(Of T))
-  fullName.vb: Beutl.Animation.AnimationSampler.SampleBuffer(Of T)(Beutl.Engine.IProperty(Of T), Beutl.Media.TimeRange, Integer, System.Span(Of T))
-  name.vb: SampleBuffer(Of T)(IProperty(Of T), TimeRange, Integer, Span(Of T))
+  nameWithType.vb: AnimationSampler.SampleBuffer(Of T)(IAnimatable, CoreProperty(Of T), TimeRange, Integer, Span(Of T))
+  fullName.vb: Beutl.Animation.AnimationSampler.SampleBuffer(Of T)(Beutl.Animation.IAnimatable, Beutl.CoreProperty(Of T), Beutl.Media.TimeRange, Integer, System.Span(Of T))
+  name.vb: SampleBuffer(Of T)(IAnimatable, CoreProperty(Of T), TimeRange, Integer, Span(Of T))
+- uid: Beutl.Animation.AnimationSampler.IsAnimated(Beutl.Animation.IAnimatable,Beutl.CoreProperty)
+  commentId: M:Beutl.Animation.AnimationSampler.IsAnimated(Beutl.Animation.IAnimatable,Beutl.CoreProperty)
+  id: IsAnimated(Beutl.Animation.IAnimatable,Beutl.CoreProperty)
+  parent: Beutl.Animation.AnimationSampler
+  langs:
+  - csharp
+  - vb
+  name: IsAnimated(IAnimatable?, CoreProperty?)
+  nameWithType: AnimationSampler.IsAnimated(IAnimatable?, CoreProperty?)
+  fullName: Beutl.Animation.AnimationSampler.IsAnimated(Beutl.Animation.IAnimatable?, Beutl.CoreProperty?)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/AnimationSampler.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Animation
+  syntax:
+    content: public bool IsAnimated(IAnimatable? target, CoreProperty? property)
+    parameters:
+    - id: target
+      type: Beutl.Animation.IAnimatable
+    - id: property
+      type: Beutl.CoreProperty
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsAnimated(target As IAnimatable, [property] As CoreProperty) As Boolean
+  overload: Beutl.Animation.AnimationSampler.IsAnimated*
+  nameWithType.vb: AnimationSampler.IsAnimated(IAnimatable, CoreProperty)
+  fullName.vb: Beutl.Animation.AnimationSampler.IsAnimated(Beutl.Animation.IAnimatable, Beutl.CoreProperty)
+  name.vb: IsAnimated(IAnimatable, CoreProperty)
 - uid: Beutl.Animation.AnimationSampler.#ctor
   commentId: M:Beutl.Animation.AnimationSampler.#ctor
   id: '#ctor'
@@ -77,7 +147,7 @@ items:
   fullName: Beutl.Animation.AnimationSampler.AnimationSampler()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/AnimationSampler.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/AnimationSampler.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -329,50 +399,58 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.Animation.AnimationSampler.SampleBuffer*
-  commentId: Overload:Beutl.Animation.AnimationSampler.SampleBuffer
+- uid: Beutl.Animation.AnimationSampler.Sample*
+  commentId: Overload:Beutl.Animation.AnimationSampler.Sample
   isExternal: true
-  href: Beutl.Animation.AnimationSampler.html#Beutl_Animation_AnimationSampler_SampleBuffer__1_Beutl_Engine_IProperty___0__Beutl_Media_TimeRange_System_Int32_System_Span___0__
-  name: SampleBuffer
-  nameWithType: AnimationSampler.SampleBuffer
-  fullName: Beutl.Animation.AnimationSampler.SampleBuffer
-- uid: Beutl.Engine.IProperty{{T}}
-  commentId: T:Beutl.Engine.IProperty{``0}
-  parent: Beutl.Engine
-  definition: Beutl.Engine.IProperty`1
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<T>
-  nameWithType: IProperty<T>
-  fullName: Beutl.Engine.IProperty<T>
-  nameWithType.vb: IProperty(Of T)
-  fullName.vb: Beutl.Engine.IProperty(Of T)
-  name.vb: IProperty(Of T)
+  href: Beutl.Animation.AnimationSampler.html#Beutl_Animation_AnimationSampler_Sample__1_Beutl_Animation_IAnimatable_Beutl_CoreProperty___0__System_TimeSpan_System_Int32_
+  name: Sample
+  nameWithType: AnimationSampler.Sample
+  fullName: Beutl.Animation.AnimationSampler.Sample
+- uid: Beutl.Animation.IAnimatable
+  commentId: T:Beutl.Animation.IAnimatable
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.IAnimatable.html
+  name: IAnimatable
+  nameWithType: IAnimatable
+  fullName: Beutl.Animation.IAnimatable
+- uid: Beutl.CoreProperty{{T}}
+  commentId: T:Beutl.CoreProperty{``0}
+  parent: Beutl
+  definition: Beutl.CoreProperty`1
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
   spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Media.TimeRange
-  commentId: T:Beutl.Media.TimeRange
-  parent: Beutl.Media
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
   isExternal: true
-  href: Beutl.Media.TimeRange.html
-  name: TimeRange
-  nameWithType: TimeRange
-  fullName: Beutl.Media.TimeRange
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -384,8 +462,68 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.CoreProperty`1
+  commentId: T:Beutl.CoreProperty`1
+  isExternal: true
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: Beutl.CoreProperty-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Beutl.Animation.AnimationSampler.SampleBuffer*
+  commentId: Overload:Beutl.Animation.AnimationSampler.SampleBuffer
+  isExternal: true
+  href: Beutl.Animation.AnimationSampler.html#Beutl_Animation_AnimationSampler_SampleBuffer__1_Beutl_Animation_IAnimatable_Beutl_CoreProperty___0__Beutl_Media_TimeRange_System_Int32_System_Span___0__
+  name: SampleBuffer
+  nameWithType: AnimationSampler.SampleBuffer
+  fullName: Beutl.Animation.AnimationSampler.SampleBuffer
+- uid: Beutl.Media.TimeRange
+  commentId: T:Beutl.Media.TimeRange
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.TimeRange.html
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: Beutl.Media.TimeRange
 - uid: System.Span{{T}}
-  commentId: T:System.Span{`0}
+  commentId: T:System.Span{`1}
   parent: System
   definition: System.Span`1
   href: https://learn.microsoft.com/dotnet/api/system.span-1
@@ -413,61 +551,6 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Engine.IProperty`1
-  commentId: T:Beutl.Engine.IProperty`1
-  isExternal: true
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<T>
-  nameWithType: IProperty<T>
-  fullName: Beutl.Engine.IProperty<T>
-  nameWithType.vb: IProperty(Of T)
-  fullName.vb: Beutl.Engine.IProperty(Of T)
-  name.vb: IProperty(Of T)
-  spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
-    isExternal: true
-    href: Beutl.Engine.IProperty-1.html
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
-    isExternal: true
-    href: Beutl.Engine.IProperty-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: Beutl.Engine
-  commentId: N:Beutl.Engine
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.Engine
-  nameWithType: Beutl.Engine
-  fullName: Beutl.Engine
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
 - uid: Beutl.Media
   commentId: N:Beutl.Media
   isExternal: true
@@ -523,6 +606,32 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Beutl.Animation.AnimationSampler.IsAnimated*
+  commentId: Overload:Beutl.Animation.AnimationSampler.IsAnimated
+  isExternal: true
+  href: Beutl.Animation.AnimationSampler.html#Beutl_Animation_AnimationSampler_IsAnimated_Beutl_Animation_IAnimatable_Beutl_CoreProperty_
+  name: IsAnimated
+  nameWithType: AnimationSampler.IsAnimated
+  fullName: Beutl.Animation.AnimationSampler.IsAnimated
+- uid: Beutl.CoreProperty
+  commentId: T:Beutl.CoreProperty
+  parent: Beutl
+  isExternal: true
+  href: Beutl.CoreProperty.html
+  name: CoreProperty
+  nameWithType: CoreProperty
+  fullName: Beutl.CoreProperty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Beutl.Animation.AnimationSampler.#ctor*
   commentId: Overload:Beutl.Animation.AnimationSampler.#ctor
   isExternal: true

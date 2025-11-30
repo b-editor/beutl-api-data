@@ -10,9 +10,9 @@ items:
   - Beutl.Extensibility.IOutputContext.IsEncoding
   - Beutl.Extensibility.IOutputContext.IsIndeterminate
   - Beutl.Extensibility.IOutputContext.Name
-  - Beutl.Extensibility.IOutputContext.Object
   - Beutl.Extensibility.IOutputContext.Progress
   - Beutl.Extensibility.IOutputContext.Started
+  - Beutl.Extensibility.IOutputContext.TargetFile
   langs:
   - csharp
   - vb
@@ -21,7 +21,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -44,7 +44,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext.Extension
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -55,29 +55,29 @@ items:
       type: Beutl.Extensibility.OutputExtension
     content.vb: ReadOnly Property Extension As OutputExtension
   overload: Beutl.Extensibility.IOutputContext.Extension*
-- uid: Beutl.Extensibility.IOutputContext.Object
-  commentId: P:Beutl.Extensibility.IOutputContext.Object
-  id: Object
+- uid: Beutl.Extensibility.IOutputContext.TargetFile
+  commentId: P:Beutl.Extensibility.IOutputContext.TargetFile
+  id: TargetFile
   parent: Beutl.Extensibility.IOutputContext
   langs:
   - csharp
   - vb
-  name: Object
-  nameWithType: IOutputContext.Object
-  fullName: Beutl.Extensibility.IOutputContext.Object
+  name: TargetFile
+  nameWithType: IOutputContext.TargetFile
+  fullName: Beutl.Extensibility.IOutputContext.TargetFile
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
   syntax:
-    content: CoreObject Object { get; }
+    content: string TargetFile { get; }
     parameters: []
     return:
-      type: Beutl.CoreObject
-    content.vb: ReadOnly Property [Object] As CoreObject
-  overload: Beutl.Extensibility.IOutputContext.Object*
+      type: System.String
+    content.vb: ReadOnly Property TargetFile As String
+  overload: Beutl.Extensibility.IOutputContext.TargetFile*
 - uid: Beutl.Extensibility.IOutputContext.Name
   commentId: P:Beutl.Extensibility.IOutputContext.Name
   id: Name
@@ -90,7 +90,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext.Name
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -113,7 +113,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext.IsIndeterminate
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -136,7 +136,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext.IsEncoding
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -159,7 +159,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext.Progress
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -182,7 +182,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext.Started
   type: Event
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -203,7 +203,7 @@ items:
   fullName: Beutl.Extensibility.IOutputContext.Finished
   type: Event
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -266,7 +266,7 @@ references:
   commentId: M:Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
   parent: Beutl.IJsonSerializable
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IJsonSerializable.cs
   name: WriteToJson(JsonObject)
   nameWithType: IJsonSerializable.WriteToJson(JsonObject)
   fullName: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
@@ -274,7 +274,7 @@ references:
   - uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
     name: WriteToJson
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IJsonSerializable.cs
   - name: (
   - uid: System.Text.Json.Nodes.JsonObject
     name: JsonObject
@@ -285,7 +285,7 @@ references:
   - uid: Beutl.IJsonSerializable.WriteToJson(System.Text.Json.Nodes.JsonObject)
     name: WriteToJson
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IJsonSerializable.cs
   - name: (
   - uid: System.Text.Json.Nodes.JsonObject
     name: JsonObject
@@ -296,7 +296,7 @@ references:
   commentId: M:Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
   parent: Beutl.IJsonSerializable
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IJsonSerializable.cs
   name: ReadFromJson(JsonObject)
   nameWithType: IJsonSerializable.ReadFromJson(JsonObject)
   fullName: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
@@ -304,7 +304,7 @@ references:
   - uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
     name: ReadFromJson
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IJsonSerializable.cs
   - name: (
   - uid: System.Text.Json.Nodes.JsonObject
     name: JsonObject
@@ -315,7 +315,7 @@ references:
   - uid: Beutl.IJsonSerializable.ReadFromJson(System.Text.Json.Nodes.JsonObject)
     name: ReadFromJson
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IJsonSerializable.cs
   - name: (
   - uid: System.Text.Json.Nodes.JsonObject
     name: JsonObject
@@ -334,7 +334,7 @@ references:
   commentId: T:Beutl.IJsonSerializable
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/IJsonSerializable.cs
+  href: Beutl.IJsonSerializable.html
   name: IJsonSerializable
   nameWithType: IJsonSerializable
   fullName: Beutl.IJsonSerializable
@@ -367,21 +367,24 @@ references:
   name: OutputExtension
   nameWithType: OutputExtension
   fullName: Beutl.Extensibility.OutputExtension
-- uid: Beutl.Extensibility.IOutputContext.Object*
-  commentId: Overload:Beutl.Extensibility.IOutputContext.Object
+- uid: Beutl.Extensibility.IOutputContext.TargetFile*
+  commentId: Overload:Beutl.Extensibility.IOutputContext.TargetFile
   isExternal: true
-  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_Object
-  name: Object
-  nameWithType: IOutputContext.Object
-  fullName: Beutl.Extensibility.IOutputContext.Object
-- uid: Beutl.CoreObject
-  commentId: T:Beutl.CoreObject
-  parent: Beutl
+  href: Beutl.Extensibility.IOutputContext.html#Beutl_Extensibility_IOutputContext_TargetFile
+  name: TargetFile
+  nameWithType: IOutputContext.TargetFile
+  fullName: Beutl.Extensibility.IOutputContext.TargetFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
-  name: CoreObject
-  nameWithType: CoreObject
-  fullName: Beutl.CoreObject
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Beutl.Extensibility.IOutputContext.Name*
   commentId: Overload:Beutl.Extensibility.IOutputContext.Name
   isExternal: true

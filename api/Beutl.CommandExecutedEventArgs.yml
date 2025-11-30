@@ -5,7 +5,7 @@ items:
   id: CommandExecutedEventArgs
   parent: Beutl
   children:
-  - Beutl.CommandExecutedEventArgs.#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject})
+  - Beutl.CommandExecutedEventArgs.#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable})
   - Beutl.CommandExecutedEventArgs.Command
   - Beutl.CommandExecutedEventArgs.Storables
   - Beutl.CommandExecutedEventArgs.Type
@@ -17,7 +17,7 @@ items:
   fullName: Beutl.CommandExecutedEventArgs
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CommandExecutedEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CommandExecutedEventArgs.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -36,36 +36,36 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.CommandExecutedEventArgs.#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject})
-  commentId: M:Beutl.CommandExecutedEventArgs.#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject})
-  id: '#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject})'
+- uid: Beutl.CommandExecutedEventArgs.#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable})
+  commentId: M:Beutl.CommandExecutedEventArgs.#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable})
+  id: '#ctor(Beutl.IRecordableCommand,Beutl.CommandType,System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable})'
   parent: Beutl.CommandExecutedEventArgs
   langs:
   - csharp
   - vb
-  name: CommandExecutedEventArgs(IRecordableCommand, CommandType, ImmutableHashSet<CoreObject>)
-  nameWithType: CommandExecutedEventArgs.CommandExecutedEventArgs(IRecordableCommand, CommandType, ImmutableHashSet<CoreObject>)
-  fullName: Beutl.CommandExecutedEventArgs.CommandExecutedEventArgs(Beutl.IRecordableCommand, Beutl.CommandType, System.Collections.Immutable.ImmutableHashSet<Beutl.CoreObject>)
+  name: CommandExecutedEventArgs(IRecordableCommand, CommandType, ImmutableHashSet<IStorable>)
+  nameWithType: CommandExecutedEventArgs.CommandExecutedEventArgs(IRecordableCommand, CommandType, ImmutableHashSet<IStorable>)
+  fullName: Beutl.CommandExecutedEventArgs.CommandExecutedEventArgs(Beutl.IRecordableCommand, Beutl.CommandType, System.Collections.Immutable.ImmutableHashSet<Beutl.IStorable>)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CommandExecutedEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CommandExecutedEventArgs.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
   syntax:
-    content: public CommandExecutedEventArgs(IRecordableCommand command, CommandType type, ImmutableHashSet<CoreObject> storables)
+    content: public CommandExecutedEventArgs(IRecordableCommand command, CommandType type, ImmutableHashSet<IStorable> storables)
     parameters:
     - id: command
       type: Beutl.IRecordableCommand
     - id: type
       type: Beutl.CommandType
     - id: storables
-      type: System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject}
-    content.vb: Public Sub New(command As IRecordableCommand, type As CommandType, storables As ImmutableHashSet(Of CoreObject))
+      type: System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable}
+    content.vb: Public Sub New(command As IRecordableCommand, type As CommandType, storables As ImmutableHashSet(Of IStorable))
   overload: Beutl.CommandExecutedEventArgs.#ctor*
-  nameWithType.vb: CommandExecutedEventArgs.New(IRecordableCommand, CommandType, ImmutableHashSet(Of CoreObject))
-  fullName.vb: Beutl.CommandExecutedEventArgs.New(Beutl.IRecordableCommand, Beutl.CommandType, System.Collections.Immutable.ImmutableHashSet(Of Beutl.CoreObject))
-  name.vb: New(IRecordableCommand, CommandType, ImmutableHashSet(Of CoreObject))
+  nameWithType.vb: CommandExecutedEventArgs.New(IRecordableCommand, CommandType, ImmutableHashSet(Of IStorable))
+  fullName.vb: Beutl.CommandExecutedEventArgs.New(Beutl.IRecordableCommand, Beutl.CommandType, System.Collections.Immutable.ImmutableHashSet(Of Beutl.IStorable))
+  name.vb: New(IRecordableCommand, CommandType, ImmutableHashSet(Of IStorable))
 - uid: Beutl.CommandExecutedEventArgs.Command
   commentId: P:Beutl.CommandExecutedEventArgs.Command
   id: Command
@@ -78,7 +78,7 @@ items:
   fullName: Beutl.CommandExecutedEventArgs.Command
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CommandExecutedEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CommandExecutedEventArgs.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -101,7 +101,7 @@ items:
   fullName: Beutl.CommandExecutedEventArgs.Type
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CommandExecutedEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CommandExecutedEventArgs.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -124,16 +124,16 @@ items:
   fullName: Beutl.CommandExecutedEventArgs.Storables
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CommandExecutedEventArgs.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CommandExecutedEventArgs.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
   syntax:
-    content: public ImmutableHashSet<CoreObject> Storables { get; }
+    content: public ImmutableHashSet<IStorable> Storables { get; }
     parameters: []
     return:
-      type: System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject}
-    content.vb: Public ReadOnly Property Storables As ImmutableHashSet(Of CoreObject)
+      type: System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable}
+    content.vb: Public ReadOnly Property Storables As ImmutableHashSet(Of IStorable)
   overload: Beutl.CommandExecutedEventArgs.Storables*
 references:
 - uid: Beutl
@@ -399,7 +399,7 @@ references:
 - uid: Beutl.CommandExecutedEventArgs.#ctor*
   commentId: Overload:Beutl.CommandExecutedEventArgs.#ctor
   isExternal: true
-  href: Beutl.CommandExecutedEventArgs.html#Beutl_CommandExecutedEventArgs__ctor_Beutl_IRecordableCommand_Beutl_CommandType_System_Collections_Immutable_ImmutableHashSet_Beutl_CoreObject__
+  href: Beutl.CommandExecutedEventArgs.html#Beutl_CommandExecutedEventArgs__ctor_Beutl_IRecordableCommand_Beutl_CommandType_System_Collections_Immutable_ImmutableHashSet_Beutl_IStorable__
   name: CommandExecutedEventArgs
   nameWithType: CommandExecutedEventArgs.CommandExecutedEventArgs
   fullName: Beutl.CommandExecutedEventArgs.CommandExecutedEventArgs
@@ -410,7 +410,7 @@ references:
   commentId: T:Beutl.IRecordableCommand
   parent: Beutl
   isExternal: true
-  href: Beutl.IRecordableCommand.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   name: IRecordableCommand
   nameWithType: IRecordableCommand
   fullName: Beutl.IRecordableCommand
@@ -422,27 +422,27 @@ references:
   name: CommandType
   nameWithType: CommandType
   fullName: Beutl.CommandType
-- uid: System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject}
-  commentId: T:System.Collections.Immutable.ImmutableHashSet{Beutl.CoreObject}
+- uid: System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable}
+  commentId: T:System.Collections.Immutable.ImmutableHashSet{Beutl.IStorable}
   parent: System.Collections.Immutable
   definition: System.Collections.Immutable.ImmutableHashSet`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablehashset-1
-  name: ImmutableHashSet<CoreObject>
-  nameWithType: ImmutableHashSet<CoreObject>
-  fullName: System.Collections.Immutable.ImmutableHashSet<Beutl.CoreObject>
-  nameWithType.vb: ImmutableHashSet(Of CoreObject)
-  fullName.vb: System.Collections.Immutable.ImmutableHashSet(Of Beutl.CoreObject)
-  name.vb: ImmutableHashSet(Of CoreObject)
+  name: ImmutableHashSet<IStorable>
+  nameWithType: ImmutableHashSet<IStorable>
+  fullName: System.Collections.Immutable.ImmutableHashSet<Beutl.IStorable>
+  nameWithType.vb: ImmutableHashSet(Of IStorable)
+  fullName.vb: System.Collections.Immutable.ImmutableHashSet(Of Beutl.IStorable)
+  name.vb: ImmutableHashSet(Of IStorable)
   spec.csharp:
   - uid: System.Collections.Immutable.ImmutableHashSet`1
     name: ImmutableHashSet
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablehashset-1
   - name: <
-  - uid: Beutl.CoreObject
-    name: CoreObject
+  - uid: Beutl.IStorable
+    name: IStorable
     isExternal: true
-    href: Beutl.CoreObject.html
+    href: Beutl.IStorable.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Immutable.ImmutableHashSet`1
@@ -452,10 +452,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Beutl.CoreObject
-    name: CoreObject
+  - uid: Beutl.IStorable
+    name: IStorable
     isExternal: true
-    href: Beutl.CoreObject.html
+    href: Beutl.IStorable.html
   - name: )
 - uid: System.Collections.Immutable.ImmutableHashSet`1
   commentId: T:System.Collections.Immutable.ImmutableHashSet`1

@@ -5,12 +5,12 @@ items:
   id: GeometryClipRenderNode
   parent: Beutl.Graphics.Rendering
   children:
-  - Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  - Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
   - Beutl.Graphics.Rendering.GeometryClipRenderNode.Clip
+  - Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
   - Beutl.Graphics.Rendering.GeometryClipRenderNode.OnDispose(System.Boolean)
   - Beutl.Graphics.Rendering.GeometryClipRenderNode.Operation
   - Beutl.Graphics.Rendering.GeometryClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
-  - Beutl.Graphics.Rendering.GeometryClipRenderNode.Update(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -42,7 +42,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -50,61 +49,61 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
-  commentId: M:Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
-  id: '#ctor(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)'
+- uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
+  id: '#ctor(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)'
   parent: Beutl.Graphics.Rendering.GeometryClipRenderNode
   langs:
   - csharp
   - vb
-  name: GeometryClipRenderNode(Resource, ClipOperation)
-  nameWithType: GeometryClipRenderNode.GeometryClipRenderNode(Geometry.Resource, ClipOperation)
-  fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.GeometryClipRenderNode(Beutl.Media.Geometry.Resource, Beutl.Graphics.ClipOperation)
+  name: GeometryClipRenderNode(Geometry, ClipOperation)
+  nameWithType: GeometryClipRenderNode.GeometryClipRenderNode(Geometry, ClipOperation)
+  fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.GeometryClipRenderNode(Beutl.Media.Geometry, Beutl.Graphics.ClipOperation)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public GeometryClipRenderNode(Geometry.Resource clip, ClipOperation operation)
+    content: public GeometryClipRenderNode(Geometry clip, ClipOperation operation)
     parameters:
     - id: clip
-      type: Beutl.Media.Geometry.Resource
+      type: Beutl.Media.Geometry
     - id: operation
       type: Beutl.Graphics.ClipOperation
-    content.vb: Public Sub New(clip As Geometry.Resource, operation As ClipOperation)
+    content.vb: Public Sub New(clip As Geometry, operation As ClipOperation)
   overload: Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor*
-  nameWithType.vb: GeometryClipRenderNode.New(Geometry.Resource, ClipOperation)
-  fullName.vb: Beutl.Graphics.Rendering.GeometryClipRenderNode.New(Beutl.Media.Geometry.Resource, Beutl.Graphics.ClipOperation)
-  name.vb: New(Resource, ClipOperation)
-- uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.Update(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
-  commentId: M:Beutl.Graphics.Rendering.GeometryClipRenderNode.Update(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
-  id: Update(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  nameWithType.vb: GeometryClipRenderNode.New(Geometry, ClipOperation)
+  fullName.vb: Beutl.Graphics.Rendering.GeometryClipRenderNode.New(Beutl.Media.Geometry, Beutl.Graphics.ClipOperation)
+  name.vb: New(Geometry, ClipOperation)
+- uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
+  id: Equals(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
   parent: Beutl.Graphics.Rendering.GeometryClipRenderNode
   langs:
   - csharp
   - vb
-  name: Update(Resource, ClipOperation)
-  nameWithType: GeometryClipRenderNode.Update(Geometry.Resource, ClipOperation)
-  fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Update(Beutl.Media.Geometry.Resource, Beutl.Graphics.ClipOperation)
+  name: Equals(Geometry, ClipOperation)
+  nameWithType: GeometryClipRenderNode.Equals(Geometry, ClipOperation)
+  fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals(Beutl.Media.Geometry, Beutl.Graphics.ClipOperation)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Update(Geometry.Resource clip, ClipOperation operation)
+    content: public bool Equals(Geometry clip, ClipOperation operation)
     parameters:
     - id: clip
-      type: Beutl.Media.Geometry.Resource
+      type: Beutl.Media.Geometry
     - id: operation
       type: Beutl.Graphics.ClipOperation
     return:
       type: System.Boolean
-    content.vb: Public Function Update(clip As Geometry.Resource, operation As ClipOperation) As Boolean
-  overload: Beutl.Graphics.Rendering.GeometryClipRenderNode.Update*
+    content.vb: Public Function Equals(clip As Geometry, operation As ClipOperation) As Boolean
+  overload: Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals*
 - uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.GeometryClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -117,7 +116,7 @@ items:
   fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -144,7 +143,7 @@ items:
   fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -172,16 +171,16 @@ items:
   fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Clip
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public (Geometry.Resource Resource, int Version)? Clip { get; }
+    content: public Geometry Clip { get; }
     parameters: []
     return:
-      type: System.Nullable{System.ValueTuple{Beutl.Media.Geometry.Resource,System.Int32}}
-    content.vb: Public ReadOnly Property Clip As (Resource As Geometry.Resource, Version As Integer)?
+      type: Beutl.Media.Geometry
+    content.vb: Public ReadOnly Property Clip As Geometry
   overload: Beutl.Graphics.Rendering.GeometryClipRenderNode.Clip*
 - uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.Operation
   commentId: P:Beutl.Graphics.Rendering.GeometryClipRenderNode.Operation
@@ -195,7 +194,7 @@ items:
   fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Operation
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/GeometryClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -505,14 +504,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -726,41 +717,21 @@ references:
 - uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor*
   commentId: Overload:Beutl.Graphics.Rendering.GeometryClipRenderNode.#ctor
   isExternal: true
-  href: Beutl.Graphics.Rendering.GeometryClipRenderNode.html#Beutl_Graphics_Rendering_GeometryClipRenderNode__ctor_Beutl_Media_Geometry_Resource_Beutl_Graphics_ClipOperation_
+  href: Beutl.Graphics.Rendering.GeometryClipRenderNode.html#Beutl_Graphics_Rendering_GeometryClipRenderNode__ctor_Beutl_Media_Geometry_Beutl_Graphics_ClipOperation_
   name: GeometryClipRenderNode
   nameWithType: GeometryClipRenderNode.GeometryClipRenderNode
   fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.GeometryClipRenderNode
   nameWithType.vb: GeometryClipRenderNode.New
   fullName.vb: Beutl.Graphics.Rendering.GeometryClipRenderNode.New
   name.vb: New
-- uid: Beutl.Media.Geometry.Resource
-  commentId: T:Beutl.Media.Geometry.Resource
+- uid: Beutl.Media.Geometry
+  commentId: T:Beutl.Media.Geometry
   parent: Beutl.Media
   isExternal: true
   href: Beutl.Media.Geometry.html
-  name: Geometry.Resource
-  nameWithType: Geometry.Resource
-  fullName: Beutl.Media.Geometry.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Geometry
-    name: Geometry
-    isExternal: true
-    href: Beutl.Media.Geometry.html
-  - name: .
-  - uid: Beutl.Media.Geometry.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Geometry.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Geometry
-    name: Geometry
-    isExternal: true
-    href: Beutl.Media.Geometry.html
-  - name: .
-  - uid: Beutl.Media.Geometry.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Geometry.Resource.html
+  name: Geometry
+  nameWithType: Geometry
+  fullName: Beutl.Media.Geometry
 - uid: Beutl.Graphics.ClipOperation
   commentId: T:Beutl.Graphics.ClipOperation
   parent: Beutl.Graphics
@@ -823,13 +794,13 @@ references:
     name: Graphics
     isExternal: true
     href: Beutl.Graphics.html
-- uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.GeometryClipRenderNode.Update
+- uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals
   isExternal: true
-  href: Beutl.Graphics.Rendering.GeometryClipRenderNode.html#Beutl_Graphics_Rendering_GeometryClipRenderNode_Update_Beutl_Media_Geometry_Resource_Beutl_Graphics_ClipOperation_
-  name: Update
-  nameWithType: GeometryClipRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Update
+  href: Beutl.Graphics.Rendering.GeometryClipRenderNode.html#Beutl_Graphics_Rendering_GeometryClipRenderNode_Equals_Beutl_Media_Geometry_Beutl_Graphics_ClipOperation_
+  name: Equals
+  nameWithType: GeometryClipRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -956,107 +927,6 @@ references:
   name: Clip
   nameWithType: GeometryClipRenderNode.Clip
   fullName: Beutl.Graphics.Rendering.GeometryClipRenderNode.Clip
-- uid: System.Nullable{System.ValueTuple{Beutl.Media.Geometry.Resource,System.Int32}}
-  commentId: T:System.Nullable{System.ValueTuple{Beutl.Media.Geometry.Resource,System.Int32}}
-  parent: System
-  definition: System.Nullable`1
-  href: Beutl.Media.Geometry.html
-  name: (Geometry.Resource Resource, int Version)?
-  nameWithType: (Geometry.Resource Resource, int Version)?
-  fullName: (Beutl.Media.Geometry.Resource Resource, int Version)?
-  nameWithType.vb: (Resource As Geometry.Resource, Version As Integer)?
-  fullName.vb: (Resource As Beutl.Media.Geometry.Resource, Version As Integer)?
-  name.vb: (Resource As Geometry.Resource, Version As Integer)?
-  spec.csharp:
-  - name: (
-  - uid: Beutl.Media.Geometry
-    name: Geometry
-    isExternal: true
-    href: Beutl.Media.Geometry.html
-  - name: .
-  - uid: Beutl.Media.Geometry.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Geometry.Resource.html
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Geometry.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.geometry.resource,system.int32-.resource
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Geometry.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.geometry.resource,system.int32-.version
-  - name: )
-  - name: '?'
-  spec.vb:
-  - name: (
-  - uid: System.ValueTuple{Beutl.Media.Geometry.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.geometry.resource,system.int32-.resource
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: Beutl.Media.Geometry
-    name: Geometry
-    isExternal: true
-    href: Beutl.Media.Geometry.html
-  - name: .
-  - uid: Beutl.Media.Geometry.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Geometry.Resource.html
-  - name: ','
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Geometry.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.geometry.resource,system.int32-.version
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: Beutl.Graphics.Rendering.GeometryClipRenderNode.Operation*
   commentId: Overload:Beutl.Graphics.Rendering.GeometryClipRenderNode.Operation
   isExternal: true

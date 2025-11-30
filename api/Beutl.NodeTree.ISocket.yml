@@ -16,13 +16,13 @@ items:
   fullName: Beutl.NodeTree.ISocket
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
   syntax:
-    content: 'public interface ISocket : INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, INotifyEdited'
-    content.vb: Public Interface ISocket Inherits INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, INotifyEdited
+    content: 'public interface ISocket : INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, IAffectsRender'
+    content.vb: Public Interface ISocket Inherits INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, IAffectsRender
   inheritedMembers:
   - Beutl.NodeTree.INodeItem.PreEvaluate(Beutl.EvaluationContext)
   - Beutl.NodeTree.INodeItem.Evaluate(Beutl.EvaluationContext)
@@ -53,7 +53,7 @@ items:
   - Beutl.IHierarchical.HierarchicalChildren
   - Beutl.IHierarchical.AttachedToHierarchy
   - Beutl.IHierarchical.DetachedFromHierarchy
-  - Beutl.INotifyEdited.Edited
+  - Beutl.Media.IAffectsRender.Invalidated
 - uid: Beutl.NodeTree.ISocket.Color
   commentId: P:Beutl.NodeTree.ISocket.Color
   id: Color
@@ -66,7 +66,7 @@ items:
   fullName: Beutl.NodeTree.ISocket.Color
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -89,7 +89,7 @@ items:
   fullName: Beutl.NodeTree.ISocket.Connected
   type: Event
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -110,7 +110,7 @@ items:
   fullName: Beutl.NodeTree.ISocket.Disconnected
   type: Event
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/ISocket.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -768,14 +768,14 @@ references:
   name: DetachedFromHierarchy
   nameWithType: IHierarchical.DetachedFromHierarchy
   fullName: Beutl.IHierarchical.DetachedFromHierarchy
-- uid: Beutl.INotifyEdited.Edited
-  commentId: E:Beutl.INotifyEdited.Edited
-  parent: Beutl.INotifyEdited
+- uid: Beutl.Media.IAffectsRender.Invalidated
+  commentId: E:Beutl.Media.IAffectsRender.Invalidated
+  parent: Beutl.Media.IAffectsRender
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/INotifyEdited.cs
-  name: Edited
-  nameWithType: INotifyEdited.Edited
-  fullName: Beutl.INotifyEdited.Edited
+  href: Beutl.Media.IAffectsRender.html#Beutl_Media_IAffectsRender_Invalidated
+  name: Invalidated
+  nameWithType: IAffectsRender.Invalidated
+  fullName: Beutl.Media.IAffectsRender.Invalidated
 - uid: Beutl.NodeTree.INodeItem
   commentId: T:Beutl.NodeTree.INodeItem
   parent: Beutl.NodeTree
@@ -836,7 +836,7 @@ references:
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject
@@ -962,7 +962,7 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -970,18 +970,18 @@ references:
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
 - uid: Beutl
   commentId: N:Beutl
   isExternal: true
@@ -1043,21 +1043,6 @@ references:
     name: Serialization
     isExternal: true
     href: Beutl.Serialization.html
-- uid: Beutl.NodeTree.ISocket.Color*
-  commentId: Overload:Beutl.NodeTree.ISocket.Color
-  isExternal: true
-  href: Beutl.NodeTree.ISocket.html#Beutl_NodeTree_ISocket_Color
-  name: Color
-  nameWithType: ISocket.Color
-  fullName: Beutl.NodeTree.ISocket.Color
-- uid: Beutl.Media.Color
-  commentId: T:Beutl.Media.Color
-  parent: Beutl.Media
-  isExternal: true
-  href: Beutl.Media.Color.html
-  name: Color
-  nameWithType: Color
-  fullName: Beutl.Media.Color
 - uid: Beutl.Media
   commentId: N:Beutl.Media
   isExternal: true
@@ -1085,6 +1070,21 @@ references:
     name: Media
     isExternal: true
     href: Beutl.Media.html
+- uid: Beutl.NodeTree.ISocket.Color*
+  commentId: Overload:Beutl.NodeTree.ISocket.Color
+  isExternal: true
+  href: Beutl.NodeTree.ISocket.html#Beutl_NodeTree_ISocket_Color
+  name: Color
+  nameWithType: ISocket.Color
+  fullName: Beutl.NodeTree.ISocket.Color
+- uid: Beutl.Media.Color
+  commentId: T:Beutl.Media.Color
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: Beutl.Media.Color
 - uid: System.EventHandler{Beutl.NodeTree.SocketConnectionChangedEventArgs}
   commentId: T:System.EventHandler{Beutl.NodeTree.SocketConnectionChangedEventArgs}
   parent: System

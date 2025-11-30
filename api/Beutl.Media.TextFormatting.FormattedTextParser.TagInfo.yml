@@ -18,7 +18,7 @@ items:
   - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFontStyle(Beutl.Media.FontStyle@)
   - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFontWeight(Beutl.Media.FontWeight@)
   - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetSize(System.Single@)
-  - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.Pen.Resource@)
+  - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.IPen@)
   - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Type
   - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Value
   - Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.op_Equality(Beutl.Media.TextFormatting.FormattedTextParser.TagInfo,Beutl.Media.TextFormatting.FormattedTextParser.TagInfo)
@@ -31,7 +31,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo
   type: Struct
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -56,7 +56,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Invalid
   type: Field
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -77,7 +77,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TagInfo(Beutl.Media.TextFormatting.StringSpan, Beutl.Media.TextFormatting.FormattedTextParser.TagType)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -105,7 +105,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetColor(out Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -121,27 +121,27 @@ items:
   nameWithType.vb: FormattedTextParser.TagInfo.TryGetColor(Color)
   fullName.vb: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetColor(Beutl.Media.Color)
   name.vb: TryGetColor(Color)
-- uid: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.Pen.Resource@)
-  commentId: M:Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.Pen.Resource@)
-  id: TryGetStroke(Beutl.Media.Pen.Resource@)
+- uid: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.IPen@)
+  commentId: M:Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.IPen@)
+  id: TryGetStroke(Beutl.Media.IPen@)
   parent: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo
   langs:
   - csharp
   - vb
-  name: TryGetStroke(out Resource?)
-  nameWithType: FormattedTextParser.TagInfo.TryGetStroke(out Pen.Resource?)
-  fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(out Beutl.Media.Pen.Resource?)
+  name: TryGetStroke(out IPen?)
+  nameWithType: FormattedTextParser.TagInfo.TryGetStroke(out IPen?)
+  fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(out Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
   syntax:
-    content: public bool TryGetStroke(out Pen.Resource? pen)
+    content: public bool TryGetStroke(out IPen? pen)
     parameters:
     - id: pen
-      type: Beutl.Media.Pen.Resource
+      type: Beutl.Media.IPen
       attributes:
       - type: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
         ctor: System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
@@ -150,11 +150,11 @@ items:
           value: true
     return:
       type: System.Boolean
-    content.vb: Public Function TryGetStroke(pen As Pen.Resource) As Boolean
+    content.vb: Public Function TryGetStroke(pen As IPen) As Boolean
   overload: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke*
-  nameWithType.vb: FormattedTextParser.TagInfo.TryGetStroke(Pen.Resource)
-  fullName.vb: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.Pen.Resource)
-  name.vb: TryGetStroke(Resource)
+  nameWithType.vb: FormattedTextParser.TagInfo.TryGetStroke(IPen)
+  fullName.vb: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke(Beutl.Media.IPen)
+  name.vb: TryGetStroke(IPen)
 - uid: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFont(Beutl.Media.FontFamily@)
   commentId: M:Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFont(Beutl.Media.FontFamily@)
   id: TryGetFont(Beutl.Media.FontFamily@)
@@ -167,7 +167,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFont(out Beutl.Media.FontFamily?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -195,7 +195,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetSize(out float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -223,7 +223,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetCharSpace(out float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -251,7 +251,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFontWeight(out Beutl.Media.FontWeight)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -279,7 +279,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFontStyle(out Beutl.Media.FontStyle)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -307,7 +307,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.ToString()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -331,7 +331,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.operator !=(Beutl.Media.TextFormatting.FormattedTextParser.TagInfo, Beutl.Media.TextFormatting.FormattedTextParser.TagInfo)
   type: Operator
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -361,7 +361,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.operator ==(Beutl.Media.TextFormatting.FormattedTextParser.TagInfo, Beutl.Media.TextFormatting.FormattedTextParser.TagInfo)
   type: Operator
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -391,7 +391,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.GetHashCode()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -415,7 +415,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Equals(object)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -445,7 +445,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Equals(Beutl.Media.TextFormatting.FormattedTextParser.TagInfo)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -473,7 +473,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Deconstruct(out Beutl.Media.TextFormatting.StringSpan, out Beutl.Media.TextFormatting.FormattedTextParser.TagType)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -501,7 +501,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Value
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -524,7 +524,7 @@ items:
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.Type
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/TextFormatting/FormattedTextParser.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.TextFormatting
@@ -908,38 +908,18 @@ references:
 - uid: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke*
   commentId: Overload:Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke
   isExternal: true
-  href: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.html#Beutl_Media_TextFormatting_FormattedTextParser_TagInfo_TryGetStroke_Beutl_Media_Pen_Resource__
+  href: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.html#Beutl_Media_TextFormatting_FormattedTextParser_TagInfo_TryGetStroke_Beutl_Media_IPen__
   name: TryGetStroke
   nameWithType: FormattedTextParser.TagInfo.TryGetStroke
   fullName: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetStroke
-- uid: Beutl.Media.Pen.Resource
-  commentId: T:Beutl.Media.Pen.Resource
+- uid: Beutl.Media.IPen
+  commentId: T:Beutl.Media.IPen
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Pen.html
-  name: Pen.Resource
-  nameWithType: Pen.Resource
-  fullName: Beutl.Media.Pen.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
+  href: Beutl.Media.IPen.html
+  name: IPen
+  nameWithType: IPen
+  fullName: Beutl.Media.IPen
 - uid: Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFont*
   commentId: Overload:Beutl.Media.TextFormatting.FormattedTextParser.TagInfo.TryGetFont
   isExternal: true

@@ -11,7 +11,7 @@ items:
   - Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.Move(System.Int32,System.Int32)
   - Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.Remove(`0)
   - Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.RemoveAt(System.Int32)
-  - Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
+  - Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -44,7 +44,7 @@ items:
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.Add(T)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -71,7 +71,7 @@ items:
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.Insert(int, T)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -101,7 +101,7 @@ items:
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.Move(int, int)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -131,7 +131,7 @@ items:
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.Remove(T)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -158,7 +158,7 @@ items:
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.RemoveAt(int)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -186,7 +186,7 @@ items:
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.Clear()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
@@ -198,34 +198,34 @@ items:
   overload: Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.Clear*
   nameWithType.vb: CollectionBatchExtension.ICollectionBatchChanges(Of T).Clear()
   fullName.vb: Beutl.CollectionBatchExtension.ICollectionBatchChanges(Of T).Clear()
-- uid: Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
-  commentId: M:Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
-  id: ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.CoreObject})
+- uid: Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
+  commentId: M:Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
+  id: ToCommand(System.Collections.Immutable.ImmutableArray{Beutl.IStorable})
   parent: Beutl.CollectionBatchExtension.ICollectionBatchChanges`1
   langs:
   - csharp
   - vb
-  name: ToCommand(ImmutableArray<CoreObject?>)
-  nameWithType: CollectionBatchExtension.ICollectionBatchChanges<T>.ToCommand(ImmutableArray<CoreObject?>)
-  fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.ToCommand(System.Collections.Immutable.ImmutableArray<Beutl.CoreObject?>)
+  name: ToCommand(ImmutableArray<IStorable?>)
+  nameWithType: CollectionBatchExtension.ICollectionBatchChanges<T>.ToCommand(ImmutableArray<IStorable?>)
+  fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.ToCommand(System.Collections.Immutable.ImmutableArray<Beutl.IStorable?>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CollectionBatchExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CollectionBatchExtension.cs
   assemblies:
   - Beutl.Core
   namespace: Beutl
   syntax:
-    content: IRecordableCommand ToCommand(ImmutableArray<CoreObject?> storables)
+    content: IRecordableCommand ToCommand(ImmutableArray<IStorable?> storables)
     parameters:
     - id: storables
-      type: System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
+      type: System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
     return:
       type: Beutl.IRecordableCommand
-    content.vb: Function ToCommand(storables As ImmutableArray(Of CoreObject)) As IRecordableCommand
+    content.vb: Function ToCommand(storables As ImmutableArray(Of IStorable)) As IRecordableCommand
   overload: Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand*
-  nameWithType.vb: CollectionBatchExtension.ICollectionBatchChanges(Of T).ToCommand(ImmutableArray(Of CoreObject))
-  fullName.vb: Beutl.CollectionBatchExtension.ICollectionBatchChanges(Of T).ToCommand(System.Collections.Immutable.ImmutableArray(Of Beutl.CoreObject))
-  name.vb: ToCommand(ImmutableArray(Of CoreObject))
+  nameWithType.vb: CollectionBatchExtension.ICollectionBatchChanges(Of T).ToCommand(ImmutableArray(Of IStorable))
+  fullName.vb: Beutl.CollectionBatchExtension.ICollectionBatchChanges(Of T).ToCommand(System.Collections.Immutable.ImmutableArray(Of Beutl.IStorable))
+  name.vb: ToCommand(ImmutableArray(Of IStorable))
 references:
 - uid: Beutl
   commentId: N:Beutl
@@ -358,33 +358,33 @@ references:
 - uid: Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand*
   commentId: Overload:Beutl.CollectionBatchExtension.ICollectionBatchChanges`1.ToCommand
   isExternal: true
-  href: Beutl.CollectionBatchExtension.ICollectionBatchChanges-1.html#Beutl_CollectionBatchExtension_ICollectionBatchChanges_1_ToCommand_System_Collections_Immutable_ImmutableArray_Beutl_CoreObject__
+  href: Beutl.CollectionBatchExtension.ICollectionBatchChanges-1.html#Beutl_CollectionBatchExtension_ICollectionBatchChanges_1_ToCommand_System_Collections_Immutable_ImmutableArray_Beutl_IStorable__
   name: ToCommand
   nameWithType: CollectionBatchExtension.ICollectionBatchChanges<T>.ToCommand
   fullName: Beutl.CollectionBatchExtension.ICollectionBatchChanges<T>.ToCommand
   nameWithType.vb: CollectionBatchExtension.ICollectionBatchChanges(Of T).ToCommand
   fullName.vb: Beutl.CollectionBatchExtension.ICollectionBatchChanges(Of T).ToCommand
-- uid: System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
-  commentId: T:System.Collections.Immutable.ImmutableArray{Beutl.CoreObject}
+- uid: System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
+  commentId: T:System.Collections.Immutable.ImmutableArray{Beutl.IStorable}
   parent: System.Collections.Immutable
   definition: System.Collections.Immutable.ImmutableArray`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
-  name: ImmutableArray<CoreObject>
-  nameWithType: ImmutableArray<CoreObject>
-  fullName: System.Collections.Immutable.ImmutableArray<Beutl.CoreObject>
-  nameWithType.vb: ImmutableArray(Of CoreObject)
-  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Beutl.CoreObject)
-  name.vb: ImmutableArray(Of CoreObject)
+  name: ImmutableArray<IStorable>
+  nameWithType: ImmutableArray<IStorable>
+  fullName: System.Collections.Immutable.ImmutableArray<Beutl.IStorable>
+  nameWithType.vb: ImmutableArray(Of IStorable)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Beutl.IStorable)
+  name.vb: ImmutableArray(Of IStorable)
   spec.csharp:
   - uid: System.Collections.Immutable.ImmutableArray`1
     name: ImmutableArray
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
   - name: <
-  - uid: Beutl.CoreObject
-    name: CoreObject
+  - uid: Beutl.IStorable
+    name: IStorable
     isExternal: true
-    href: Beutl.CoreObject.html
+    href: Beutl.IStorable.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Immutable.ImmutableArray`1
@@ -394,16 +394,16 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Beutl.CoreObject
-    name: CoreObject
+  - uid: Beutl.IStorable
+    name: IStorable
     isExternal: true
-    href: Beutl.CoreObject.html
+    href: Beutl.IStorable.html
   - name: )
 - uid: Beutl.IRecordableCommand
   commentId: T:Beutl.IRecordableCommand
   parent: Beutl
   isExternal: true
-  href: Beutl.IRecordableCommand.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/IRecordableCommand.cs
   name: IRecordableCommand
   nameWithType: IRecordableCommand
   fullName: Beutl.IRecordableCommand

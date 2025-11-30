@@ -16,17 +16,15 @@ items:
   fullName: Beutl.Media.Source.IMediaSource
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IMediaSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IMediaSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: 'public interface IMediaSource : IDisposable, IFileSource'
-    content.vb: Public Interface IMediaSource Inherits IDisposable, IFileSource
+    content: 'public interface IMediaSource : IDisposable'
+    content.vb: Public Interface IMediaSource Inherits IDisposable
   inheritedMembers:
   - System.IDisposable.Dispose
-  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  - Beutl.IO.IFileSource.Uri
 - uid: Beutl.Media.Source.IMediaSource.Clone
   commentId: M:Beutl.Media.Source.IMediaSource.Clone
   id: Clone
@@ -39,7 +37,7 @@ items:
   fullName: Beutl.Media.Source.IMediaSource.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IMediaSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IMediaSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -61,7 +59,7 @@ items:
   fullName: Beutl.Media.Source.IMediaSource.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IMediaSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IMediaSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -84,29 +82,17 @@ items:
   fullName: Beutl.Media.Source.IMediaSource.Name
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IMediaSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IMediaSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: >-
-      [Obsolete("Use Uri property.")]
-
-      string Name { get; }
+    content: string Name { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: >-
-      <Obsolete("Use Uri property.")>
-
-      ReadOnly Property Name As String
+    content.vb: ReadOnly Property Name As String
   overload: Beutl.Media.Source.IMediaSource.Name*
-  attributes:
-  - type: System.ObsoleteAttribute
-    ctor: System.ObsoleteAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Use Uri property.
 references:
 - uid: Beutl.Media.Source
   commentId: N:Beutl.Media.Source
@@ -167,42 +153,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
   - name: (
   - name: )
-- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  name: ReadFrom(Uri)
-  nameWithType: IFileSource.ReadFrom(Uri)
-  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  spec.csharp:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-- uid: Beutl.IO.IFileSource.Uri
-  commentId: P:Beutl.IO.IFileSource.Uri
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
-  name: Uri
-  nameWithType: IFileSource.Uri
-  fullName: Beutl.IO.IFileSource.Uri
 - uid: System.IDisposable
   commentId: T:System.IDisposable
   parent: System
@@ -211,14 +161,6 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
 - uid: System
   commentId: N:System
   isExternal: true
@@ -226,33 +168,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
 - uid: Beutl.Media.Source.IMediaSource.Clone*
   commentId: Overload:Beutl.Media.Source.IMediaSource.Clone
   isExternal: true

@@ -32,6 +32,8 @@ items:
   - Beutl.Utilities.MathUtilities.LessThanOrClose(System.Single,System.Single)
   - Beutl.Utilities.MathUtilities.Rad2Deg(System.Single)
   - Beutl.Utilities.MathUtilities.Rad2Grad(System.Single)
+  - Beutl.Utilities.MathUtilities.ToDegrees(System.Single)
+  - Beutl.Utilities.MathUtilities.ToRadians(System.Single)
   - Beutl.Utilities.MathUtilities.Turn2Rad(System.Single)
   langs:
   - csharp
@@ -41,7 +43,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -70,7 +72,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.DoubleEpsilon
   type: Field
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -91,7 +93,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.FloatEpsilon
   type: Field
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -100,6 +102,62 @@ items:
     return:
       type: System.Single
     content.vb: Public Const FloatEpsilon As Single = 1.1920929E-07
+- uid: Beutl.Utilities.MathUtilities.ToRadians(System.Single)
+  commentId: M:Beutl.Utilities.MathUtilities.ToRadians(System.Single)
+  id: ToRadians(System.Single)
+  parent: Beutl.Utilities.MathUtilities
+  langs:
+  - csharp
+  - vb
+  name: ToRadians(float)
+  nameWithType: MathUtilities.ToRadians(float)
+  fullName: Beutl.Utilities.MathUtilities.ToRadians(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public static float ToRadians(float degrees)
+    parameters:
+    - id: degrees
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function ToRadians(degrees As Single) As Single
+  overload: Beutl.Utilities.MathUtilities.ToRadians*
+  nameWithType.vb: MathUtilities.ToRadians(Single)
+  fullName.vb: Beutl.Utilities.MathUtilities.ToRadians(Single)
+  name.vb: ToRadians(Single)
+- uid: Beutl.Utilities.MathUtilities.ToDegrees(System.Single)
+  commentId: M:Beutl.Utilities.MathUtilities.ToDegrees(System.Single)
+  id: ToDegrees(System.Single)
+  parent: Beutl.Utilities.MathUtilities
+  langs:
+  - csharp
+  - vb
+  name: ToDegrees(float)
+  nameWithType: MathUtilities.ToDegrees(float)
+  fullName: Beutl.Utilities.MathUtilities.ToDegrees(float)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
+  assemblies:
+  - Beutl.Utilities
+  namespace: Beutl.Utilities
+  syntax:
+    content: public static float ToDegrees(float radians)
+    parameters:
+    - id: radians
+      type: System.Single
+    return:
+      type: System.Single
+    content.vb: Public Shared Function ToDegrees(radians As Single) As Single
+  overload: Beutl.Utilities.MathUtilities.ToDegrees*
+  nameWithType.vb: MathUtilities.ToDegrees(Single)
+  fullName.vb: Beutl.Utilities.MathUtilities.ToDegrees(Single)
+  name.vb: ToDegrees(Single)
 - uid: Beutl.Utilities.MathUtilities.GreatestCommonDivisor(System.Int64,System.Int64)
   commentId: M:Beutl.Utilities.MathUtilities.GreatestCommonDivisor(System.Int64,System.Int64)
   id: GreatestCommonDivisor(System.Int64,System.Int64)
@@ -112,7 +170,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.GreatestCommonDivisor(long, long)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -142,7 +200,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.LeastCommonDenominator(long, long)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -172,7 +230,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.AreClose(double, double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -202,7 +260,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.AreClose(double, double, double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -234,7 +292,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.AreClose(float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -264,7 +322,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.LessThan(double, double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -294,7 +352,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.LessThan(float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -324,7 +382,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.GreaterThan(double, double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -354,7 +412,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.GreaterThan(float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -384,7 +442,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.LessThanOrClose(double, double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -414,7 +472,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.LessThanOrClose(float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -444,7 +502,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.GreaterThanOrClose(double, double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -474,7 +532,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.GreaterThanOrClose(float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -504,7 +562,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.IsOne(double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -532,7 +590,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.IsOne(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -560,7 +618,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.IsZero(double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -588,7 +646,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.IsZero(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -616,7 +674,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Clamp(float, float, float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -648,7 +706,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Clamp(double, double, double)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -680,7 +738,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Clamp(decimal, decimal, decimal)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -712,7 +770,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Clamp(int, int, int)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -744,7 +802,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Rad2Deg(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -772,7 +830,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Rad2Grad(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -800,7 +858,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Deg2Rad(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -828,7 +886,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Grad2Rad(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -856,7 +914,7 @@ items:
   fullName: Beutl.Utilities.MathUtilities.Turn2Rad(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Utilities/MathUtilities.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Utilities/MathUtilities.cs
   assemblies:
   - Beutl.Utilities
   namespace: Beutl.Utilities
@@ -1159,6 +1217,20 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
+- uid: Beutl.Utilities.MathUtilities.ToRadians*
+  commentId: Overload:Beutl.Utilities.MathUtilities.ToRadians
+  isExternal: true
+  href: Beutl.Utilities.MathUtilities.html#Beutl_Utilities_MathUtilities_ToRadians_System_Single_
+  name: ToRadians
+  nameWithType: MathUtilities.ToRadians
+  fullName: Beutl.Utilities.MathUtilities.ToRadians
+- uid: Beutl.Utilities.MathUtilities.ToDegrees*
+  commentId: Overload:Beutl.Utilities.MathUtilities.ToDegrees
+  isExternal: true
+  href: Beutl.Utilities.MathUtilities.html#Beutl_Utilities_MathUtilities_ToDegrees_System_Single_
+  name: ToDegrees
+  nameWithType: MathUtilities.ToDegrees
+  fullName: Beutl.Utilities.MathUtilities.ToDegrees
 - uid: Beutl.Utilities.MathUtilities.GreatestCommonDivisor*
   commentId: Overload:Beutl.Utilities.MathUtilities.GreatestCommonDivisor
   isExternal: true

@@ -7,8 +7,8 @@ items:
   children:
   - Beutl.Graphics.Rendering.ClearRenderNode.#ctor(Beutl.Media.Color)
   - Beutl.Graphics.Rendering.ClearRenderNode.Color
+  - Beutl.Graphics.Rendering.ClearRenderNode.Equals(Beutl.Media.Color)
   - Beutl.Graphics.Rendering.ClearRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
-  - Beutl.Graphics.Rendering.ClearRenderNode.Update(Beutl.Media.Color)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   fullName: Beutl.Graphics.Rendering.ClearRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -33,7 +33,6 @@ items:
   inheritedMembers:
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -53,7 +52,7 @@ items:
   fullName: Beutl.Graphics.Rendering.ClearRenderNode.ClearRenderNode(Beutl.Media.Color)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -67,31 +66,31 @@ items:
   nameWithType.vb: ClearRenderNode.New(Color)
   fullName.vb: Beutl.Graphics.Rendering.ClearRenderNode.New(Beutl.Media.Color)
   name.vb: New(Color)
-- uid: Beutl.Graphics.Rendering.ClearRenderNode.Update(Beutl.Media.Color)
-  commentId: M:Beutl.Graphics.Rendering.ClearRenderNode.Update(Beutl.Media.Color)
-  id: Update(Beutl.Media.Color)
+- uid: Beutl.Graphics.Rendering.ClearRenderNode.Equals(Beutl.Media.Color)
+  commentId: M:Beutl.Graphics.Rendering.ClearRenderNode.Equals(Beutl.Media.Color)
+  id: Equals(Beutl.Media.Color)
   parent: Beutl.Graphics.Rendering.ClearRenderNode
   langs:
   - csharp
   - vb
-  name: Update(Color)
-  nameWithType: ClearRenderNode.Update(Color)
-  fullName: Beutl.Graphics.Rendering.ClearRenderNode.Update(Beutl.Media.Color)
+  name: Equals(Color)
+  nameWithType: ClearRenderNode.Equals(Color)
+  fullName: Beutl.Graphics.Rendering.ClearRenderNode.Equals(Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Update(Color color)
+    content: public bool Equals(Color color)
     parameters:
     - id: color
       type: Beutl.Media.Color
     return:
       type: System.Boolean
-    content.vb: Public Function Update(color As Color) As Boolean
-  overload: Beutl.Graphics.Rendering.ClearRenderNode.Update*
+    content.vb: Public Function Equals(color As Color) As Boolean
+  overload: Beutl.Graphics.Rendering.ClearRenderNode.Equals*
 - uid: Beutl.Graphics.Rendering.ClearRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.ClearRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -104,7 +103,7 @@ items:
   fullName: Beutl.Graphics.Rendering.ClearRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -131,7 +130,7 @@ items:
   fullName: Beutl.Graphics.Rendering.ClearRenderNode.Color
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/ClearRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -245,14 +244,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -508,13 +499,13 @@ references:
     name: Media
     isExternal: true
     href: Beutl.Media.html
-- uid: Beutl.Graphics.Rendering.ClearRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.ClearRenderNode.Update
+- uid: Beutl.Graphics.Rendering.ClearRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.ClearRenderNode.Equals
   isExternal: true
-  href: Beutl.Graphics.Rendering.ClearRenderNode.html#Beutl_Graphics_Rendering_ClearRenderNode_Update_Beutl_Media_Color_
-  name: Update
-  nameWithType: ClearRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.ClearRenderNode.Update
+  href: Beutl.Graphics.Rendering.ClearRenderNode.html#Beutl_Graphics_Rendering_ClearRenderNode_Equals_Beutl_Media_Color_
+  name: Equals
+  nameWithType: ClearRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.ClearRenderNode.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

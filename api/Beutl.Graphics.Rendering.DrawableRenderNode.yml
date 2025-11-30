@@ -5,10 +5,9 @@ items:
   id: DrawableRenderNode
   parent: Beutl.Graphics.Rendering
   children:
-  - Beutl.Graphics.Rendering.DrawableRenderNode.#ctor(Beutl.Graphics.Drawable.Resource)
+  - Beutl.Graphics.Rendering.DrawableRenderNode.#ctor(Beutl.Graphics.Drawable)
   - Beutl.Graphics.Rendering.DrawableRenderNode.Drawable
   - Beutl.Graphics.Rendering.DrawableRenderNode.OnDispose(System.Boolean)
-  - Beutl.Graphics.Rendering.DrawableRenderNode.Update(Beutl.Graphics.Drawable.Resource)
   langs:
   - csharp
   - vb
@@ -17,7 +16,7 @@ items:
   fullName: Beutl.Graphics.Rendering.DrawableRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -41,7 +40,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.MemberwiseClone
@@ -50,57 +48,32 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Graphics.Rendering.DrawableRenderNode.#ctor(Beutl.Graphics.Drawable.Resource)
-  commentId: M:Beutl.Graphics.Rendering.DrawableRenderNode.#ctor(Beutl.Graphics.Drawable.Resource)
-  id: '#ctor(Beutl.Graphics.Drawable.Resource)'
+- uid: Beutl.Graphics.Rendering.DrawableRenderNode.#ctor(Beutl.Graphics.Drawable)
+  commentId: M:Beutl.Graphics.Rendering.DrawableRenderNode.#ctor(Beutl.Graphics.Drawable)
+  id: '#ctor(Beutl.Graphics.Drawable)'
   parent: Beutl.Graphics.Rendering.DrawableRenderNode
   langs:
   - csharp
   - vb
-  name: DrawableRenderNode(Resource)
-  nameWithType: DrawableRenderNode.DrawableRenderNode(Drawable.Resource)
-  fullName: Beutl.Graphics.Rendering.DrawableRenderNode.DrawableRenderNode(Beutl.Graphics.Drawable.Resource)
+  name: DrawableRenderNode(Drawable)
+  nameWithType: DrawableRenderNode.DrawableRenderNode(Drawable)
+  fullName: Beutl.Graphics.Rendering.DrawableRenderNode.DrawableRenderNode(Beutl.Graphics.Drawable)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public DrawableRenderNode(Drawable.Resource drawable)
+    content: public DrawableRenderNode(Drawable drawable)
     parameters:
     - id: drawable
-      type: Beutl.Graphics.Drawable.Resource
-    content.vb: Public Sub New(drawable As Drawable.Resource)
+      type: Beutl.Graphics.Drawable
+    content.vb: Public Sub New(drawable As Drawable)
   overload: Beutl.Graphics.Rendering.DrawableRenderNode.#ctor*
-  nameWithType.vb: DrawableRenderNode.New(Drawable.Resource)
-  fullName.vb: Beutl.Graphics.Rendering.DrawableRenderNode.New(Beutl.Graphics.Drawable.Resource)
-  name.vb: New(Resource)
-- uid: Beutl.Graphics.Rendering.DrawableRenderNode.Update(Beutl.Graphics.Drawable.Resource)
-  commentId: M:Beutl.Graphics.Rendering.DrawableRenderNode.Update(Beutl.Graphics.Drawable.Resource)
-  id: Update(Beutl.Graphics.Drawable.Resource)
-  parent: Beutl.Graphics.Rendering.DrawableRenderNode
-  langs:
-  - csharp
-  - vb
-  name: Update(Resource)
-  nameWithType: DrawableRenderNode.Update(Drawable.Resource)
-  fullName: Beutl.Graphics.Rendering.DrawableRenderNode.Update(Beutl.Graphics.Drawable.Resource)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Graphics.Rendering
-  syntax:
-    content: public bool Update(Drawable.Resource drawable)
-    parameters:
-    - id: drawable
-      type: Beutl.Graphics.Drawable.Resource
-    return:
-      type: System.Boolean
-    content.vb: Public Function Update(drawable As Drawable.Resource) As Boolean
-  overload: Beutl.Graphics.Rendering.DrawableRenderNode.Update*
+  nameWithType.vb: DrawableRenderNode.New(Drawable)
+  fullName.vb: Beutl.Graphics.Rendering.DrawableRenderNode.New(Beutl.Graphics.Drawable)
+  name.vb: New(Drawable)
 - uid: Beutl.Graphics.Rendering.DrawableRenderNode.OnDispose(System.Boolean)
   commentId: M:Beutl.Graphics.Rendering.DrawableRenderNode.OnDispose(System.Boolean)
   id: OnDispose(System.Boolean)
@@ -113,7 +86,7 @@ items:
   fullName: Beutl.Graphics.Rendering.DrawableRenderNode.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -141,16 +114,16 @@ items:
   fullName: Beutl.Graphics.Rendering.DrawableRenderNode.Drawable
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/DrawableRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public (Drawable.Resource Resource, int Version)? Drawable { get; }
+    content: public Drawable Drawable { get; }
     parameters: []
     return:
-      type: System.Nullable{System.ValueTuple{Beutl.Graphics.Drawable.Resource,System.Int32}}
-    content.vb: Public ReadOnly Property Drawable As (Resource As Drawable.Resource, Version As Integer)?
+      type: Beutl.Graphics.Drawable
+    content.vb: Public ReadOnly Property Drawable As Drawable
   overload: Beutl.Graphics.Rendering.DrawableRenderNode.Drawable*
 references:
 - uid: Beutl.Graphics.Rendering
@@ -481,14 +454,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -726,41 +691,21 @@ references:
 - uid: Beutl.Graphics.Rendering.DrawableRenderNode.#ctor*
   commentId: Overload:Beutl.Graphics.Rendering.DrawableRenderNode.#ctor
   isExternal: true
-  href: Beutl.Graphics.Rendering.DrawableRenderNode.html#Beutl_Graphics_Rendering_DrawableRenderNode__ctor_Beutl_Graphics_Drawable_Resource_
+  href: Beutl.Graphics.Rendering.DrawableRenderNode.html#Beutl_Graphics_Rendering_DrawableRenderNode__ctor_Beutl_Graphics_Drawable_
   name: DrawableRenderNode
   nameWithType: DrawableRenderNode.DrawableRenderNode
   fullName: Beutl.Graphics.Rendering.DrawableRenderNode.DrawableRenderNode
   nameWithType.vb: DrawableRenderNode.New
   fullName.vb: Beutl.Graphics.Rendering.DrawableRenderNode.New
   name.vb: New
-- uid: Beutl.Graphics.Drawable.Resource
-  commentId: T:Beutl.Graphics.Drawable.Resource
+- uid: Beutl.Graphics.Drawable
+  commentId: T:Beutl.Graphics.Drawable
   parent: Beutl.Graphics
   isExternal: true
   href: Beutl.Graphics.Drawable.html
-  name: Drawable.Resource
-  nameWithType: Drawable.Resource
-  fullName: Beutl.Graphics.Drawable.Resource
-  spec.csharp:
-  - uid: Beutl.Graphics.Drawable
-    name: Drawable
-    isExternal: true
-    href: Beutl.Graphics.Drawable.html
-  - name: .
-  - uid: Beutl.Graphics.Drawable.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Drawable.Resource.html
-  spec.vb:
-  - uid: Beutl.Graphics.Drawable
-    name: Drawable
-    isExternal: true
-    href: Beutl.Graphics.Drawable.html
-  - name: .
-  - uid: Beutl.Graphics.Drawable.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Drawable.Resource.html
+  name: Drawable
+  nameWithType: Drawable
+  fullName: Beutl.Graphics.Drawable
 - uid: Beutl.Graphics
   commentId: N:Beutl.Graphics
   isExternal: true
@@ -788,24 +733,6 @@ references:
     name: Graphics
     isExternal: true
     href: Beutl.Graphics.html
-- uid: Beutl.Graphics.Rendering.DrawableRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.DrawableRenderNode.Update
-  isExternal: true
-  href: Beutl.Graphics.Rendering.DrawableRenderNode.html#Beutl_Graphics_Rendering_DrawableRenderNode_Update_Beutl_Graphics_Drawable_Resource_
-  name: Update
-  nameWithType: DrawableRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.DrawableRenderNode.Update
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: Beutl.Graphics.Rendering.ContainerRenderNode.OnDispose(System.Boolean)
   commentId: M:Beutl.Graphics.Rendering.ContainerRenderNode.OnDispose(System.Boolean)
   parent: Beutl.Graphics.Rendering.ContainerRenderNode
@@ -846,6 +773,17 @@ references:
   name: OnDispose
   nameWithType: DrawableRenderNode.OnDispose
   fullName: Beutl.Graphics.Rendering.DrawableRenderNode.OnDispose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Beutl.Graphics.Rendering.DrawableRenderNode.Drawable*
   commentId: Overload:Beutl.Graphics.Rendering.DrawableRenderNode.Drawable
   isExternal: true
@@ -853,104 +791,3 @@ references:
   name: Drawable
   nameWithType: DrawableRenderNode.Drawable
   fullName: Beutl.Graphics.Rendering.DrawableRenderNode.Drawable
-- uid: System.Nullable{System.ValueTuple{Beutl.Graphics.Drawable.Resource,System.Int32}}
-  commentId: T:System.Nullable{System.ValueTuple{Beutl.Graphics.Drawable.Resource,System.Int32}}
-  parent: System
-  definition: System.Nullable`1
-  href: Beutl.Graphics.Drawable.html
-  name: (Drawable.Resource Resource, int Version)?
-  nameWithType: (Drawable.Resource Resource, int Version)?
-  fullName: (Beutl.Graphics.Drawable.Resource Resource, int Version)?
-  nameWithType.vb: (Resource As Drawable.Resource, Version As Integer)?
-  fullName.vb: (Resource As Beutl.Graphics.Drawable.Resource, Version As Integer)?
-  name.vb: (Resource As Drawable.Resource, Version As Integer)?
-  spec.csharp:
-  - name: (
-  - uid: Beutl.Graphics.Drawable
-    name: Drawable
-    isExternal: true
-    href: Beutl.Graphics.Drawable.html
-  - name: .
-  - uid: Beutl.Graphics.Drawable.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Drawable.Resource.html
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Graphics.Drawable.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.drawable.resource,system.int32-.resource
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Graphics.Drawable.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.drawable.resource,system.int32-.version
-  - name: )
-  - name: '?'
-  spec.vb:
-  - name: (
-  - uid: System.ValueTuple{Beutl.Graphics.Drawable.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.drawable.resource,system.int32-.resource
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: Beutl.Graphics.Drawable
-    name: Drawable
-    isExternal: true
-    href: Beutl.Graphics.Drawable.html
-  - name: .
-  - uid: Beutl.Graphics.Drawable.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Drawable.Resource.html
-  - name: ','
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Graphics.Drawable.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.graphics.drawable.resource,system.int32-.version
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
