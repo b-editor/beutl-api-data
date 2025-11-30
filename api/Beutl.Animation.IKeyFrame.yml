@@ -19,7 +19,7 @@ items:
   fullName: Beutl.Animation.IKeyFrame
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IKeyFrame.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IKeyFrame.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -27,11 +27,11 @@ items:
     content: >-
       [JsonConverter(typeof(KeyFrameJsonConverter))]
 
-      public interface IKeyFrame : ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, INotifyEdited, IHierarchical
+      public interface IKeyFrame : ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IAffectsRender, IHierarchical
     content.vb: >-
       <JsonConverter(GetType(KeyFrameJsonConverter))>
 
-      Public Interface IKeyFrame Inherits ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, INotifyEdited, IHierarchical
+      Public Interface IKeyFrame Inherits ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IAffectsRender, IHierarchical
   inheritedMembers:
   - Beutl.ICoreObject.ClearValue``1(Beutl.CoreProperty{{TValue}})
   - Beutl.ICoreObject.ClearValue(Beutl.CoreProperty)
@@ -47,7 +47,7 @@ items:
   - System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
   - Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
   - Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
-  - Beutl.INotifyEdited.Edited
+  - Beutl.Media.IAffectsRender.Invalidated
   - Beutl.IHierarchical.HierarchicalParent
   - Beutl.IHierarchical.HierarchicalRoot
   - Beutl.IHierarchical.HierarchicalChildren
@@ -65,7 +65,7 @@ items:
   fullName: Beutl.Animation.IKeyFrame.SetParent(Beutl.Animation.IKeyFrameAnimation?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IKeyFrame.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IKeyFrame.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -91,7 +91,7 @@ items:
   fullName: Beutl.Animation.IKeyFrame.GetParent()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IKeyFrame.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IKeyFrame.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -113,7 +113,7 @@ items:
   fullName: Beutl.Animation.IKeyFrame.KeyTime
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IKeyFrame.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IKeyFrame.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -136,7 +136,7 @@ items:
   fullName: Beutl.Animation.IKeyFrame.Value
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IKeyFrame.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IKeyFrame.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -159,7 +159,7 @@ items:
   fullName: Beutl.Animation.IKeyFrame.Easing
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IKeyFrame.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IKeyFrame.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -182,7 +182,7 @@ items:
   fullName: Beutl.Animation.IKeyFrame.KeyTimeChanged
   type: Event
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IKeyFrame.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IKeyFrame.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -610,14 +610,14 @@ references:
     isExternal: true
     href: Beutl.Serialization.ICoreSerializationContext.html
   - name: )
-- uid: Beutl.INotifyEdited.Edited
-  commentId: E:Beutl.INotifyEdited.Edited
-  parent: Beutl.INotifyEdited
+- uid: Beutl.Media.IAffectsRender.Invalidated
+  commentId: E:Beutl.Media.IAffectsRender.Invalidated
+  parent: Beutl.Media.IAffectsRender
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/INotifyEdited.cs
-  name: Edited
-  nameWithType: INotifyEdited.Edited
-  fullName: Beutl.INotifyEdited.Edited
+  href: Beutl.Media.IAffectsRender.html#Beutl_Media_IAffectsRender_Invalidated
+  name: Invalidated
+  nameWithType: IAffectsRender.Invalidated
+  fullName: Beutl.Media.IAffectsRender.Invalidated
 - uid: Beutl.IHierarchical.HierarchicalParent
   commentId: P:Beutl.IHierarchical.HierarchicalParent
   parent: Beutl.IHierarchical
@@ -710,7 +710,7 @@ references:
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject
@@ -836,23 +836,23 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
 - uid: Beutl.IHierarchical
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
@@ -917,6 +917,33 @@ references:
     name: Serialization
     isExternal: true
     href: Beutl.Serialization.html
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
 - uid: Beutl.Animation.IKeyFrame.SetParent*
   commentId: Overload:Beutl.Animation.IKeyFrame.SetParent
   isExternal: true

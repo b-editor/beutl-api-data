@@ -8,7 +8,8 @@ items:
   - Beutl.Extensibility.OutputExtension.#ctor
   - Beutl.Extensibility.OutputExtension.GetFilePickerFileType
   - Beutl.Extensibility.OutputExtension.GetIcon
-  - Beutl.Extensibility.OutputExtension.IsSupported(System.Type)
+  - Beutl.Extensibility.OutputExtension.IsSupported(System.String)
+  - Beutl.Extensibility.OutputExtension.MatchFileExtension(System.String)
   - Beutl.Extensibility.OutputExtension.TryCreateContext(Beutl.Extensibility.IEditorContext,Beutl.Extensibility.IOutputContext@)
   - Beutl.Extensibility.OutputExtension.TryCreateControl(Beutl.Extensibility.IEditorContext,Avalonia.Controls.Control@)
   langs:
@@ -19,7 +20,7 @@ items:
   fullName: Beutl.Extensibility.OutputExtension
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -53,7 +54,7 @@ items:
   fullName: Beutl.Extensibility.OutputExtension.GetFilePickerFileType()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -75,7 +76,7 @@ items:
   fullName: Beutl.Extensibility.OutputExtension.GetIcon()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -97,7 +98,7 @@ items:
   fullName: Beutl.Extensibility.OutputExtension.TryCreateControl(Beutl.Extensibility.IEditorContext, out Avalonia.Controls.Control?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -133,7 +134,7 @@ items:
   fullName: Beutl.Extensibility.OutputExtension.TryCreateContext(Beutl.Extensibility.IEditorContext, out Beutl.Extensibility.IOutputContext?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -157,31 +158,62 @@ items:
   nameWithType.vb: OutputExtension.TryCreateContext(IEditorContext, IOutputContext)
   fullName.vb: Beutl.Extensibility.OutputExtension.TryCreateContext(Beutl.Extensibility.IEditorContext, Beutl.Extensibility.IOutputContext)
   name.vb: TryCreateContext(IEditorContext, IOutputContext)
-- uid: Beutl.Extensibility.OutputExtension.IsSupported(System.Type)
-  commentId: M:Beutl.Extensibility.OutputExtension.IsSupported(System.Type)
-  id: IsSupported(System.Type)
+- uid: Beutl.Extensibility.OutputExtension.IsSupported(System.String)
+  commentId: M:Beutl.Extensibility.OutputExtension.IsSupported(System.String)
+  id: IsSupported(System.String)
   parent: Beutl.Extensibility.OutputExtension
   langs:
   - csharp
   - vb
-  name: IsSupported(Type)
-  nameWithType: OutputExtension.IsSupported(Type)
-  fullName: Beutl.Extensibility.OutputExtension.IsSupported(System.Type)
+  name: IsSupported(string)
+  nameWithType: OutputExtension.IsSupported(string)
+  fullName: Beutl.Extensibility.OutputExtension.IsSupported(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
   syntax:
-    content: public abstract bool IsSupported(Type type)
+    content: public virtual bool IsSupported(string file)
     parameters:
-    - id: type
-      type: System.Type
+    - id: file
+      type: System.String
     return:
       type: System.Boolean
-    content.vb: Public MustOverride Function IsSupported(type As Type) As Boolean
+    content.vb: Public Overridable Function IsSupported(file As String) As Boolean
   overload: Beutl.Extensibility.OutputExtension.IsSupported*
+  nameWithType.vb: OutputExtension.IsSupported(String)
+  fullName.vb: Beutl.Extensibility.OutputExtension.IsSupported(String)
+  name.vb: IsSupported(String)
+- uid: Beutl.Extensibility.OutputExtension.MatchFileExtension(System.String)
+  commentId: M:Beutl.Extensibility.OutputExtension.MatchFileExtension(System.String)
+  id: MatchFileExtension(System.String)
+  parent: Beutl.Extensibility.OutputExtension
+  langs:
+  - csharp
+  - vb
+  name: MatchFileExtension(string)
+  nameWithType: OutputExtension.MatchFileExtension(string)
+  fullName: Beutl.Extensibility.OutputExtension.MatchFileExtension(string)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: public abstract bool MatchFileExtension(string ext)
+    parameters:
+    - id: ext
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride Function MatchFileExtension(ext As String) As Boolean
+  overload: Beutl.Extensibility.OutputExtension.MatchFileExtension*
+  nameWithType.vb: OutputExtension.MatchFileExtension(String)
+  fullName.vb: Beutl.Extensibility.OutputExtension.MatchFileExtension(String)
+  name.vb: MatchFileExtension(String)
 - uid: Beutl.Extensibility.OutputExtension.#ctor
   commentId: M:Beutl.Extensibility.OutputExtension.#ctor
   id: '#ctor'
@@ -194,7 +226,7 @@ items:
   fullName: Beutl.Extensibility.OutputExtension.OutputExtension()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/OutputExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/OutputExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -579,6 +611,7 @@ references:
   commentId: T:FluentAvalonia.UI.Controls.IconSource
   parent: FluentAvalonia.UI.Controls
   isExternal: true
+  href: https://github.com/amwx/FluentAvalonia/blob/main/src/FluentAvalonia/UI/Controls/IconElement/IconSource.cs
   name: IconSource
   nameWithType: IconSource
   fullName: FluentAvalonia.UI.Controls.IconSource
@@ -685,18 +718,28 @@ references:
 - uid: Beutl.Extensibility.OutputExtension.IsSupported*
   commentId: Overload:Beutl.Extensibility.OutputExtension.IsSupported
   isExternal: true
-  href: Beutl.Extensibility.OutputExtension.html#Beutl_Extensibility_OutputExtension_IsSupported_System_Type_
+  href: Beutl.Extensibility.OutputExtension.html#Beutl_Extensibility_OutputExtension_IsSupported_System_String_
   name: IsSupported
   nameWithType: OutputExtension.IsSupported
   fullName: Beutl.Extensibility.OutputExtension.IsSupported
-- uid: System.Type
-  commentId: T:System.Type
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
-  name: Type
-  nameWithType: Type
-  fullName: System.Type
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Extensibility.OutputExtension.MatchFileExtension*
+  commentId: Overload:Beutl.Extensibility.OutputExtension.MatchFileExtension
+  isExternal: true
+  href: Beutl.Extensibility.OutputExtension.html#Beutl_Extensibility_OutputExtension_MatchFileExtension_System_String_
+  name: MatchFileExtension
+  nameWithType: OutputExtension.MatchFileExtension
+  fullName: Beutl.Extensibility.OutputExtension.MatchFileExtension
 - uid: Beutl.Extensibility.OutputExtension.#ctor*
   commentId: Overload:Beutl.Extensibility.OutputExtension.#ctor
   isExternal: true

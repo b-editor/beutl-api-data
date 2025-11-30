@@ -5,13 +5,13 @@ items:
   id: VideoSourceRenderNode
   parent: Beutl.Graphics.Rendering
   children:
-  - Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
   - Beutl.Graphics.Rendering.VideoSourceRenderNode.Bounds
+  - Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
   - Beutl.Graphics.Rendering.VideoSourceRenderNode.Frame
   - Beutl.Graphics.Rendering.VideoSourceRenderNode.OnDispose(System.Boolean)
   - Beutl.Graphics.Rendering.VideoSourceRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   - Beutl.Graphics.Rendering.VideoSourceRenderNode.Source
-  - Beutl.Graphics.Rendering.VideoSourceRenderNode.Update(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
   fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -39,7 +39,6 @@ items:
   - Beutl.Graphics.Rendering.BrushRenderNode.Pen
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -47,72 +46,72 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: '#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)'
+- uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: '#ctor(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)'
   parent: Beutl.Graphics.Rendering.VideoSourceRenderNode
   langs:
   - csharp
   - vb
-  name: VideoSourceRenderNode(IVideoSource, int, Resource?, Resource?)
-  nameWithType: VideoSourceRenderNode.VideoSourceRenderNode(IVideoSource, int, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.VideoSourceRenderNode(Beutl.Media.Source.IVideoSource, int, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: VideoSourceRenderNode(IVideoSource, int, IBrush?, IPen?)
+  nameWithType: VideoSourceRenderNode.VideoSourceRenderNode(IVideoSource, int, IBrush?, IPen?)
+  fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.VideoSourceRenderNode(Beutl.Media.Source.IVideoSource, int, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public VideoSourceRenderNode(IVideoSource source, int frame, Brush.Resource? fill, Pen.Resource? pen)
+    content: public VideoSourceRenderNode(IVideoSource source, int frame, IBrush? fill, IPen? pen)
     parameters:
     - id: source
       type: Beutl.Media.Source.IVideoSource
     - id: frame
       type: System.Int32
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Public Sub New(source As IVideoSource, frame As Integer, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Public Sub New(source As IVideoSource, frame As Integer, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor*
-  nameWithType.vb: VideoSourceRenderNode.New(IVideoSource, Integer, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.Rendering.VideoSourceRenderNode.New(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: New(IVideoSource, Integer, Resource, Resource)
-- uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.Update(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.Rendering.VideoSourceRenderNode.Update(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: Update(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: VideoSourceRenderNode.New(IVideoSource, Integer, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.Rendering.VideoSourceRenderNode.New(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: New(IVideoSource, Integer, IBrush, IPen)
+- uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: Equals(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.Rendering.VideoSourceRenderNode
   langs:
   - csharp
   - vb
-  name: Update(IVideoSource, int, Resource?, Resource?)
-  nameWithType: VideoSourceRenderNode.Update(IVideoSource, int, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Update(Beutl.Media.Source.IVideoSource, int, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: Equals(IVideoSource, int, IBrush?, IPen?)
+  nameWithType: VideoSourceRenderNode.Equals(IVideoSource, int, IBrush?, IPen?)
+  fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals(Beutl.Media.Source.IVideoSource, int, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Update(IVideoSource source, int frame, Brush.Resource? fill, Pen.Resource? pen)
+    content: public bool Equals(IVideoSource source, int frame, IBrush? fill, IPen? pen)
     parameters:
     - id: source
       type: Beutl.Media.Source.IVideoSource
     - id: frame
       type: System.Int32
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
+      type: Beutl.Media.IPen
     return:
       type: System.Boolean
-    content.vb: Public Function Update(source As IVideoSource, frame As Integer, fill As Brush.Resource, pen As Pen.Resource) As Boolean
-  overload: Beutl.Graphics.Rendering.VideoSourceRenderNode.Update*
-  nameWithType.vb: VideoSourceRenderNode.Update(IVideoSource, Integer, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.Rendering.VideoSourceRenderNode.Update(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: Update(IVideoSource, Integer, Resource, Resource)
+    content.vb: Public Function Equals(source As IVideoSource, frame As Integer, fill As IBrush, pen As IPen) As Boolean
+  overload: Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals*
+  nameWithType.vb: VideoSourceRenderNode.Equals(IVideoSource, Integer, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: Equals(IVideoSource, Integer, IBrush, IPen)
 - uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.VideoSourceRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -125,7 +124,7 @@ items:
   fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -152,7 +151,7 @@ items:
   fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -163,7 +162,7 @@ items:
     - id: disposing
       type: System.Boolean
     content.vb: Protected Overrides Sub OnDispose(disposing As Boolean)
-  overridden: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+  overridden: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
   overload: Beutl.Graphics.Rendering.VideoSourceRenderNode.OnDispose*
   nameWithType.vb: VideoSourceRenderNode.OnDispose(Boolean)
   fullName.vb: Beutl.Graphics.Rendering.VideoSourceRenderNode.OnDispose(Boolean)
@@ -180,7 +179,7 @@ items:
   fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Source
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -203,7 +202,7 @@ items:
   fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Frame
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -226,7 +225,7 @@ items:
   fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Bounds
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/VideoSourceRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -364,14 +363,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -585,7 +576,7 @@ references:
 - uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor*
   commentId: Overload:Beutl.Graphics.Rendering.VideoSourceRenderNode.#ctor
   isExternal: true
-  href: Beutl.Graphics.Rendering.VideoSourceRenderNode.html#Beutl_Graphics_Rendering_VideoSourceRenderNode__ctor_Beutl_Media_Source_IVideoSource_System_Int32_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.Rendering.VideoSourceRenderNode.html#Beutl_Graphics_Rendering_VideoSourceRenderNode__ctor_Beutl_Media_Source_IVideoSource_System_Int32_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: VideoSourceRenderNode
   nameWithType: VideoSourceRenderNode.VideoSourceRenderNode
   fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.VideoSourceRenderNode
@@ -611,62 +602,22 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: Beutl.Media.Brush.Resource
-  commentId: T:Beutl.Media.Brush.Resource
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Brush.html
-  name: Brush.Resource
-  nameWithType: Brush.Resource
-  fullName: Beutl.Media.Brush.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-- uid: Beutl.Media.Pen.Resource
-  commentId: T:Beutl.Media.Pen.Resource
+  href: Beutl.Media.IBrush.html
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
+- uid: Beutl.Media.IPen
+  commentId: T:Beutl.Media.IPen
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Pen.html
-  name: Pen.Resource
-  nameWithType: Pen.Resource
-  fullName: Beutl.Media.Pen.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
+  href: Beutl.Media.IPen.html
+  name: IPen
+  nameWithType: IPen
+  fullName: Beutl.Media.IPen
 - uid: Beutl.Media.Source
   commentId: N:Beutl.Media.Source
   isExternal: true
@@ -731,13 +682,13 @@ references:
     name: Media
     isExternal: true
     href: Beutl.Media.html
-- uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.VideoSourceRenderNode.Update
+- uid: Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals
   isExternal: true
-  href: Beutl.Graphics.Rendering.VideoSourceRenderNode.html#Beutl_Graphics_Rendering_VideoSourceRenderNode_Update_Beutl_Media_Source_IVideoSource_System_Int32_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
-  name: Update
-  nameWithType: VideoSourceRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Update
+  href: Beutl.Graphics.Rendering.VideoSourceRenderNode.html#Beutl_Graphics_Rendering_VideoSourceRenderNode_Equals_Beutl_Media_Source_IVideoSource_System_Int32_Beutl_Media_IBrush_Beutl_Media_IPen_
+  name: Equals
+  nameWithType: VideoSourceRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.VideoSourceRenderNode.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -817,22 +768,22 @@ references:
     href: Beutl.Graphics.Rendering.RenderNodeOperation.html
   - name: (
   - name: )
-- uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
-  commentId: M:Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
-  parent: Beutl.Graphics.Rendering.RenderNode
+- uid: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
+  commentId: M:Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
+  parent: Beutl.Graphics.Rendering.BrushRenderNode
   isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
+  href: Beutl.Graphics.Rendering.BrushRenderNode.html#Beutl_Graphics_Rendering_BrushRenderNode_OnDispose_System_Boolean_
   name: OnDispose(bool)
-  nameWithType: RenderNode.OnDispose(bool)
-  fullName: Beutl.Graphics.Rendering.RenderNode.OnDispose(bool)
-  nameWithType.vb: RenderNode.OnDispose(Boolean)
-  fullName.vb: Beutl.Graphics.Rendering.RenderNode.OnDispose(Boolean)
+  nameWithType: BrushRenderNode.OnDispose(bool)
+  fullName: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(bool)
+  nameWithType.vb: BrushRenderNode.OnDispose(Boolean)
+  fullName.vb: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(Boolean)
   name.vb: OnDispose(Boolean)
   spec.csharp:
-  - uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+  - uid: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
     name: OnDispose
     isExternal: true
-    href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
+    href: Beutl.Graphics.Rendering.BrushRenderNode.html#Beutl_Graphics_Rendering_BrushRenderNode_OnDispose_System_Boolean_
   - name: (
   - uid: System.Boolean
     name: bool
@@ -840,10 +791,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
   spec.vb:
-  - uid: Beutl.Graphics.Rendering.RenderNode.OnDispose(System.Boolean)
+  - uid: Beutl.Graphics.Rendering.BrushRenderNode.OnDispose(System.Boolean)
     name: OnDispose
     isExternal: true
-    href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_OnDispose_System_Boolean_
+    href: Beutl.Graphics.Rendering.BrushRenderNode.html#Beutl_Graphics_Rendering_BrushRenderNode_OnDispose_System_Boolean_
   - name: (
   - uid: System.Boolean
     name: Boolean

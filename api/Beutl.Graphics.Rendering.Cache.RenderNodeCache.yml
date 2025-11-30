@@ -8,6 +8,8 @@ items:
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.#ctor(Beutl.Graphics.Rendering.RenderNode)
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.CacheCount
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache
+  - Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren
+  - Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.Count
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.Dispose
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.Finalize
@@ -17,6 +19,7 @@ items:
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.IsDisposed
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.LastAccessedTime
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.ReportRenderCount(System.Int32)
+  - Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.StoreCache(Beutl.Graphics.Rendering.RenderTarget,Beutl.Graphics.Rect)
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.StoreCache(System.ReadOnlySpan{System.ValueTuple{Beutl.Graphics.Rendering.RenderTarget,Beutl.Graphics.Rect}})
   - Beutl.Graphics.Rendering.Cache.RenderNodeCache.UseCache
@@ -29,7 +32,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -59,7 +62,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Count
   type: Field
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -80,7 +83,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.RenderNodeCache(Beutl.Graphics.Rendering.RenderNode)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -106,7 +109,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.~RenderNodeCache()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -129,7 +132,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.ReportRenderCount(int)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -155,7 +158,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.IncrementRenderCount()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -163,6 +166,48 @@ items:
     content: public void IncrementRenderCount()
     content.vb: Public Sub IncrementRenderCount()
   overload: Beutl.Graphics.Rendering.Cache.RenderNodeCache.IncrementRenderCount*
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren
+  commentId: M:Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren
+  id: CaptureChildren
+  parent: Beutl.Graphics.Rendering.Cache.RenderNodeCache
+  langs:
+  - csharp
+  - vb
+  name: CaptureChildren()
+  nameWithType: RenderNodeCache.CaptureChildren()
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering.Cache
+  syntax:
+    content: public void CaptureChildren()
+    content.vb: Public Sub CaptureChildren()
+  overload: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren*
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren
+  commentId: M:Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren
+  id: SameChildren
+  parent: Beutl.Graphics.Rendering.Cache.RenderNodeCache
+  langs:
+  - csharp
+  - vb
+  name: SameChildren()
+  nameWithType: RenderNodeCache.SameChildren()
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren()
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering.Cache
+  syntax:
+    content: public bool SameChildren()
+    return:
+      type: System.Boolean
+    content.vb: Public Function SameChildren() As Boolean
+  overload: Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren*
 - uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache
   commentId: M:Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache
   id: CanCache
@@ -175,7 +220,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -197,7 +242,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Invalidate()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -217,7 +262,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -240,7 +285,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.UseCache(out Beutl.Graphics.Rect)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -268,7 +313,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.StoreCache(Beutl.Graphics.Rendering.RenderTarget, Beutl.Graphics.Rect)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -293,7 +338,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.UseCache()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -315,7 +360,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.StoreCache(System.ReadOnlySpan<(Beutl.Graphics.Rendering.RenderTarget RenderTarget, Beutl.Graphics.Rect Bounds)>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -341,7 +386,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.IsCached
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -364,7 +409,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CacheCount
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -387,7 +432,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.LastAccessedTime
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -410,7 +455,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering.Cache
@@ -421,6 +466,29 @@ items:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsDisposed As Boolean
   overload: Beutl.Graphics.Rendering.Cache.RenderNodeCache.IsDisposed*
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children
+  commentId: P:Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children
+  id: Children
+  parent: Beutl.Graphics.Rendering.Cache.RenderNodeCache
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: RenderNodeCache.Children
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Cache/RenderNodeCache.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering.Cache
+  syntax:
+    content: public List<WeakReference<RenderNode>>? Children { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.WeakReference{Beutl.Graphics.Rendering.RenderNode}}
+    content.vb: Public ReadOnly Property Children As List(Of WeakReference(Of RenderNode))
+  overload: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children*
 references:
 - uid: Beutl.Graphics.Rendering.Cache
   commentId: N:Beutl.Graphics.Rendering.Cache
@@ -783,13 +851,20 @@ references:
   name: IncrementRenderCount
   nameWithType: RenderNodeCache.IncrementRenderCount
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.IncrementRenderCount
-- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache*
-  commentId: Overload:Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren*
+  commentId: Overload:Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren
   isExternal: true
-  href: Beutl.Graphics.Rendering.Cache.RenderNodeCache.html#Beutl_Graphics_Rendering_Cache_RenderNodeCache_CanCache
-  name: CanCache
-  nameWithType: RenderNodeCache.CanCache
-  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache
+  href: Beutl.Graphics.Rendering.Cache.RenderNodeCache.html#Beutl_Graphics_Rendering_Cache_RenderNodeCache_CaptureChildren
+  name: CaptureChildren
+  nameWithType: RenderNodeCache.CaptureChildren
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CaptureChildren
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren*
+  commentId: Overload:Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Cache.RenderNodeCache.html#Beutl_Graphics_Rendering_Cache_RenderNodeCache_SameChildren
+  name: SameChildren
+  nameWithType: RenderNodeCache.SameChildren
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.SameChildren
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -801,6 +876,13 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache*
+  commentId: Overload:Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Cache.RenderNodeCache.html#Beutl_Graphics_Rendering_Cache_RenderNodeCache_CanCache
+  name: CanCache
+  nameWithType: RenderNodeCache.CanCache
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.CanCache
 - uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Invalidate*
   commentId: Overload:Beutl.Graphics.Rendering.Cache.RenderNodeCache.Invalidate
   isExternal: true
@@ -1176,3 +1258,87 @@ references:
   name: IsDisposed
   nameWithType: RenderNodeCache.IsDisposed
   fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.IsDisposed
+- uid: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children*
+  commentId: Overload:Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Cache.RenderNodeCache.html#Beutl_Graphics_Rendering_Cache_RenderNodeCache_Children
+  name: Children
+  nameWithType: RenderNodeCache.Children
+  fullName: Beutl.Graphics.Rendering.Cache.RenderNodeCache.Children
+- uid: System.Collections.Generic.List{System.WeakReference{Beutl.Graphics.Rendering.RenderNode}}
+  commentId: T:System.Collections.Generic.List{System.WeakReference{Beutl.Graphics.Rendering.RenderNode}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<WeakReference<RenderNode>>
+  nameWithType: List<WeakReference<RenderNode>>
+  fullName: System.Collections.Generic.List<System.WeakReference<Beutl.Graphics.Rendering.RenderNode>>
+  nameWithType.vb: List(Of WeakReference(Of RenderNode))
+  fullName.vb: System.Collections.Generic.List(Of System.WeakReference(Of Beutl.Graphics.Rendering.RenderNode))
+  name.vb: List(Of WeakReference(Of RenderNode))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.WeakReference`1
+    name: WeakReference
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  - name: <
+  - uid: Beutl.Graphics.Rendering.RenderNode
+    name: RenderNode
+    isExternal: true
+    href: Beutl.Graphics.Rendering.RenderNode.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.WeakReference`1
+    name: WeakReference
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Graphics.Rendering.RenderNode
+    name: RenderNode
+    isExternal: true
+    href: Beutl.Graphics.Rendering.RenderNode.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

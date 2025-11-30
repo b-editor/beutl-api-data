@@ -6,7 +6,7 @@ items:
   parent: Beutl.Media
   children:
   - Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
-  - Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  - Beutl.Media.ColorExtensions.ToImmutableBrush(Beutl.Media.Color)
   langs:
   - csharp
   - vb
@@ -15,7 +15,7 @@ items:
   fullName: Beutl.Media.ColorExtensions
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/ColorExtensions.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/ColorExtensions.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media
@@ -45,45 +45,45 @@ items:
   fullName: Beutl.Media.ColorExtensions.ToBrush(Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/ColorExtensions.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/ColorExtensions.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media
   syntax:
-    content: public static SolidColorBrush ToBrush(this Color color)
+    content: public static ISolidColorBrush ToBrush(this Color color)
     parameters:
     - id: color
       type: Beutl.Media.Color
     return:
-      type: Beutl.Media.SolidColorBrush
-    content.vb: Public Shared Function ToBrush(color As Color) As SolidColorBrush
+      type: Beutl.Media.ISolidColorBrush
+    content.vb: Public Shared Function ToBrush(color As Color) As ISolidColorBrush
   overload: Beutl.Media.ColorExtensions.ToBrush*
-- uid: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
-  commentId: M:Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
-  id: ToBrushResource(Beutl.Media.Color)
+- uid: Beutl.Media.ColorExtensions.ToImmutableBrush(Beutl.Media.Color)
+  commentId: M:Beutl.Media.ColorExtensions.ToImmutableBrush(Beutl.Media.Color)
+  id: ToImmutableBrush(Beutl.Media.Color)
   isExtensionMethod: true
   parent: Beutl.Media.ColorExtensions
   langs:
   - csharp
   - vb
-  name: ToBrushResource(Color)
-  nameWithType: ColorExtensions.ToBrushResource(Color)
-  fullName: Beutl.Media.ColorExtensions.ToBrushResource(Beutl.Media.Color)
+  name: ToImmutableBrush(Color)
+  nameWithType: ColorExtensions.ToImmutableBrush(Color)
+  fullName: Beutl.Media.ColorExtensions.ToImmutableBrush(Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/ColorExtensions.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/ColorExtensions.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media
   syntax:
-    content: public static SolidColorBrush.Resource ToBrushResource(this Color color)
+    content: public static ISolidColorBrush ToImmutableBrush(this Color color)
     parameters:
     - id: color
       type: Beutl.Media.Color
     return:
-      type: Beutl.Media.SolidColorBrush.Resource
-    content.vb: Public Shared Function ToBrushResource(color As Color) As SolidColorBrush.Resource
-  overload: Beutl.Media.ColorExtensions.ToBrushResource*
+      type: Beutl.Media.ISolidColorBrush
+    content.vb: Public Shared Function ToImmutableBrush(color As Color) As ISolidColorBrush
+  overload: Beutl.Media.ColorExtensions.ToImmutableBrush*
 references:
 - uid: Beutl.Media
   commentId: N:Beutl.Media
@@ -364,46 +364,18 @@ references:
   name: Color
   nameWithType: Color
   fullName: Beutl.Media.Color
-- uid: Beutl.Media.SolidColorBrush
-  commentId: T:Beutl.Media.SolidColorBrush
+- uid: Beutl.Media.ISolidColorBrush
+  commentId: T:Beutl.Media.ISolidColorBrush
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.SolidColorBrush.html
-  name: SolidColorBrush
-  nameWithType: SolidColorBrush
-  fullName: Beutl.Media.SolidColorBrush
-- uid: Beutl.Media.ColorExtensions.ToBrushResource*
-  commentId: Overload:Beutl.Media.ColorExtensions.ToBrushResource
+  href: Beutl.Media.ISolidColorBrush.html
+  name: ISolidColorBrush
+  nameWithType: ISolidColorBrush
+  fullName: Beutl.Media.ISolidColorBrush
+- uid: Beutl.Media.ColorExtensions.ToImmutableBrush*
+  commentId: Overload:Beutl.Media.ColorExtensions.ToImmutableBrush
   isExternal: true
-  href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToBrushResource_Beutl_Media_Color_
-  name: ToBrushResource
-  nameWithType: ColorExtensions.ToBrushResource
-  fullName: Beutl.Media.ColorExtensions.ToBrushResource
-- uid: Beutl.Media.SolidColorBrush.Resource
-  commentId: T:Beutl.Media.SolidColorBrush.Resource
-  parent: Beutl.Media
-  isExternal: true
-  href: Beutl.Media.SolidColorBrush.html
-  name: SolidColorBrush.Resource
-  nameWithType: SolidColorBrush.Resource
-  fullName: Beutl.Media.SolidColorBrush.Resource
-  spec.csharp:
-  - uid: Beutl.Media.SolidColorBrush
-    name: SolidColorBrush
-    isExternal: true
-    href: Beutl.Media.SolidColorBrush.html
-  - name: .
-  - uid: Beutl.Media.SolidColorBrush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.SolidColorBrush.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.SolidColorBrush
-    name: SolidColorBrush
-    isExternal: true
-    href: Beutl.Media.SolidColorBrush.html
-  - name: .
-  - uid: Beutl.Media.SolidColorBrush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.SolidColorBrush.Resource.html
+  href: Beutl.Media.ColorExtensions.html#Beutl_Media_ColorExtensions_ToImmutableBrush_Beutl_Media_Color_
+  name: ToImmutableBrush
+  nameWithType: ColorExtensions.ToImmutableBrush
+  fullName: Beutl.Media.ColorExtensions.ToImmutableBrush

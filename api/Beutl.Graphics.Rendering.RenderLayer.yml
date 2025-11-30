@@ -6,14 +6,14 @@ items:
   parent: Beutl.Graphics.Rendering
   children:
   - Beutl.Graphics.Rendering.RenderLayer.#ctor(Beutl.Graphics.Rendering.RenderScene)
-  - Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable,System.TimeSpan)
+  - Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable)
   - Beutl.Graphics.Rendering.RenderLayer.Clear
   - Beutl.Graphics.Rendering.RenderLayer.ClearAllNodeCache
   - Beutl.Graphics.Rendering.RenderLayer.Dispose
   - Beutl.Graphics.Rendering.RenderLayer.GetBoundaries
   - Beutl.Graphics.Rendering.RenderLayer.HitTest(Beutl.Graphics.Point)
   - Beutl.Graphics.Rendering.RenderLayer.Render(Beutl.Graphics.ImmediateCanvas)
-  - Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable},System.TimeSpan)
+  - Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable})
   langs:
   - csharp
   - vb
@@ -22,7 +22,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -52,7 +52,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer.RenderLayer(Beutl.Graphics.Rendering.RenderScene)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -78,7 +78,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer.Clear()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -86,59 +86,55 @@ items:
     content: public void Clear()
     content.vb: Public Sub Clear()
   overload: Beutl.Graphics.Rendering.RenderLayer.Clear*
-- uid: Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable,System.TimeSpan)
-  commentId: M:Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable,System.TimeSpan)
-  id: Add(Beutl.Graphics.Drawable,System.TimeSpan)
+- uid: Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable)
+  commentId: M:Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable)
+  id: Add(Beutl.Graphics.Drawable)
   parent: Beutl.Graphics.Rendering.RenderLayer
   langs:
   - csharp
   - vb
-  name: Add(Drawable, TimeSpan)
-  nameWithType: RenderLayer.Add(Drawable, TimeSpan)
-  fullName: Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable, System.TimeSpan)
+  name: Add(Drawable)
+  nameWithType: RenderLayer.Add(Drawable)
+  fullName: Beutl.Graphics.Rendering.RenderLayer.Add(Beutl.Graphics.Drawable)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public void Add(Drawable drawable, TimeSpan time)
+    content: public void Add(Drawable drawable)
     parameters:
     - id: drawable
       type: Beutl.Graphics.Drawable
-    - id: time
-      type: System.TimeSpan
-    content.vb: Public Sub Add(drawable As Drawable, time As TimeSpan)
+    content.vb: Public Sub Add(drawable As Drawable)
   overload: Beutl.Graphics.Rendering.RenderLayer.Add*
-- uid: Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable},System.TimeSpan)
-  commentId: M:Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable},System.TimeSpan)
-  id: UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable},System.TimeSpan)
+- uid: Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable})
+  commentId: M:Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable})
+  id: UpdateAll(System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable})
   parent: Beutl.Graphics.Rendering.RenderLayer
   langs:
   - csharp
   - vb
-  name: UpdateAll(IReadOnlyList<Drawable>, TimeSpan)
-  nameWithType: RenderLayer.UpdateAll(IReadOnlyList<Drawable>, TimeSpan)
-  fullName: Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList<Beutl.Graphics.Drawable>, System.TimeSpan)
+  name: UpdateAll(IReadOnlyList<Drawable>)
+  nameWithType: RenderLayer.UpdateAll(IReadOnlyList<Drawable>)
+  fullName: Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList<Beutl.Graphics.Drawable>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public void UpdateAll(IReadOnlyList<Drawable> elements, TimeSpan time)
+    content: public void UpdateAll(IReadOnlyList<Drawable> elements)
     parameters:
     - id: elements
       type: System.Collections.Generic.IReadOnlyList{Beutl.Graphics.Drawable}
-    - id: time
-      type: System.TimeSpan
-    content.vb: Public Sub UpdateAll(elements As IReadOnlyList(Of Drawable), time As TimeSpan)
+    content.vb: Public Sub UpdateAll(elements As IReadOnlyList(Of Drawable))
   overload: Beutl.Graphics.Rendering.RenderLayer.UpdateAll*
-  nameWithType.vb: RenderLayer.UpdateAll(IReadOnlyList(Of Drawable), TimeSpan)
-  fullName.vb: Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList(Of Beutl.Graphics.Drawable), System.TimeSpan)
-  name.vb: UpdateAll(IReadOnlyList(Of Drawable), TimeSpan)
+  nameWithType.vb: RenderLayer.UpdateAll(IReadOnlyList(Of Drawable))
+  fullName.vb: Beutl.Graphics.Rendering.RenderLayer.UpdateAll(System.Collections.Generic.IReadOnlyList(Of Beutl.Graphics.Drawable))
+  name.vb: UpdateAll(IReadOnlyList(Of Drawable))
 - uid: Beutl.Graphics.Rendering.RenderLayer.ClearAllNodeCache
   commentId: M:Beutl.Graphics.Rendering.RenderLayer.ClearAllNodeCache
   id: ClearAllNodeCache
@@ -151,7 +147,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer.ClearAllNodeCache()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -171,7 +167,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer.Render(Beutl.Graphics.ImmediateCanvas)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -194,7 +190,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -217,7 +213,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer.HitTest(Beutl.Graphics.Point)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -242,7 +238,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RenderLayer.GetBoundaries()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RenderLayer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -539,7 +535,7 @@ references:
 - uid: Beutl.Graphics.Rendering.RenderLayer.Add*
   commentId: Overload:Beutl.Graphics.Rendering.RenderLayer.Add
   isExternal: true
-  href: Beutl.Graphics.Rendering.RenderLayer.html#Beutl_Graphics_Rendering_RenderLayer_Add_Beutl_Graphics_Drawable_System_TimeSpan_
+  href: Beutl.Graphics.Rendering.RenderLayer.html#Beutl_Graphics_Rendering_RenderLayer_Add_Beutl_Graphics_Drawable_
   name: Add
   nameWithType: RenderLayer.Add
   fullName: Beutl.Graphics.Rendering.RenderLayer.Add
@@ -551,14 +547,6 @@ references:
   name: Drawable
   nameWithType: Drawable
   fullName: Beutl.Graphics.Drawable
-- uid: System.TimeSpan
-  commentId: T:System.TimeSpan
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.timespan
-  name: TimeSpan
-  nameWithType: TimeSpan
-  fullName: System.TimeSpan
 - uid: Beutl.Graphics
   commentId: N:Beutl.Graphics
   isExternal: true
@@ -589,7 +577,7 @@ references:
 - uid: Beutl.Graphics.Rendering.RenderLayer.UpdateAll*
   commentId: Overload:Beutl.Graphics.Rendering.RenderLayer.UpdateAll
   isExternal: true
-  href: Beutl.Graphics.Rendering.RenderLayer.html#Beutl_Graphics_Rendering_RenderLayer_UpdateAll_System_Collections_Generic_IReadOnlyList_Beutl_Graphics_Drawable__System_TimeSpan_
+  href: Beutl.Graphics.Rendering.RenderLayer.html#Beutl_Graphics_Rendering_RenderLayer_UpdateAll_System_Collections_Generic_IReadOnlyList_Beutl_Graphics_Drawable__
   name: UpdateAll
   nameWithType: RenderLayer.UpdateAll
   fullName: Beutl.Graphics.Rendering.RenderLayer.UpdateAll

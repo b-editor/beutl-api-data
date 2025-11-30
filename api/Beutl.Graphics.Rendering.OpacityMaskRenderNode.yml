@@ -5,13 +5,13 @@ items:
   id: OpacityMaskRenderNode
   parent: Beutl.Graphics.Rendering
   children:
-  - Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  - Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
+  - Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
   - Beutl.Graphics.Rendering.OpacityMaskRenderNode.Invert
   - Beutl.Graphics.Rendering.OpacityMaskRenderNode.Mask
   - Beutl.Graphics.Rendering.OpacityMaskRenderNode.MaskBounds
   - Beutl.Graphics.Rendering.OpacityMaskRenderNode.OnDispose(System.Boolean)
   - Beutl.Graphics.Rendering.OpacityMaskRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
-  - Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -43,7 +43,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -51,68 +50,68 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
-  commentId: M:Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
-  id: '#ctor(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)'
+- uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
+  commentId: M:Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
+  id: '#ctor(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)'
   parent: Beutl.Graphics.Rendering.OpacityMaskRenderNode
   langs:
   - csharp
   - vb
-  name: OpacityMaskRenderNode(Resource, Rect, bool)
-  nameWithType: OpacityMaskRenderNode.OpacityMaskRenderNode(Brush.Resource, Rect, bool)
-  fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.OpacityMaskRenderNode(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, bool)
+  name: OpacityMaskRenderNode(IBrush, Rect, bool)
+  nameWithType: OpacityMaskRenderNode.OpacityMaskRenderNode(IBrush, Rect, bool)
+  fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.OpacityMaskRenderNode(Beutl.Media.IBrush, Beutl.Graphics.Rect, bool)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public OpacityMaskRenderNode(Brush.Resource mask, Rect maskBounds, bool invert)
+    content: public OpacityMaskRenderNode(IBrush mask, Rect maskBounds, bool invert)
     parameters:
     - id: mask
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: maskBounds
       type: Beutl.Graphics.Rect
     - id: invert
       type: System.Boolean
-    content.vb: Public Sub New(mask As Brush.Resource, maskBounds As Rect, invert As Boolean)
+    content.vb: Public Sub New(mask As IBrush, maskBounds As Rect, invert As Boolean)
   overload: Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor*
-  nameWithType.vb: OpacityMaskRenderNode.New(Brush.Resource, Rect, Boolean)
-  fullName.vb: Beutl.Graphics.Rendering.OpacityMaskRenderNode.New(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, Boolean)
-  name.vb: New(Resource, Rect, Boolean)
-- uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
-  commentId: M:Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
-  id: Update(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  nameWithType.vb: OpacityMaskRenderNode.New(IBrush, Rect, Boolean)
+  fullName.vb: Beutl.Graphics.Rendering.OpacityMaskRenderNode.New(Beutl.Media.IBrush, Beutl.Graphics.Rect, Boolean)
+  name.vb: New(IBrush, Rect, Boolean)
+- uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
+  commentId: M:Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
+  id: Equals(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
   parent: Beutl.Graphics.Rendering.OpacityMaskRenderNode
   langs:
   - csharp
   - vb
-  name: Update(Resource?, Rect, bool)
-  nameWithType: OpacityMaskRenderNode.Update(Brush.Resource?, Rect, bool)
-  fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update(Beutl.Media.Brush.Resource?, Beutl.Graphics.Rect, bool)
+  name: Equals(IBrush?, Rect, bool)
+  nameWithType: OpacityMaskRenderNode.Equals(IBrush?, Rect, bool)
+  fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals(Beutl.Media.IBrush?, Beutl.Graphics.Rect, bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Update(Brush.Resource? mask, Rect maskBounds, bool invert)
+    content: public bool Equals(IBrush? mask, Rect maskBounds, bool invert)
     parameters:
     - id: mask
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: maskBounds
       type: Beutl.Graphics.Rect
     - id: invert
       type: System.Boolean
     return:
       type: System.Boolean
-    content.vb: Public Function Update(mask As Brush.Resource, maskBounds As Rect, invert As Boolean) As Boolean
-  overload: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update*
-  nameWithType.vb: OpacityMaskRenderNode.Update(Brush.Resource, Rect, Boolean)
-  fullName.vb: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, Boolean)
-  name.vb: Update(Resource, Rect, Boolean)
+    content.vb: Public Function Equals(mask As IBrush, maskBounds As Rect, invert As Boolean) As Boolean
+  overload: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals*
+  nameWithType.vb: OpacityMaskRenderNode.Equals(IBrush, Rect, Boolean)
+  fullName.vb: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals(Beutl.Media.IBrush, Beutl.Graphics.Rect, Boolean)
+  name.vb: Equals(IBrush, Rect, Boolean)
 - uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.OpacityMaskRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -125,7 +124,7 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -152,7 +151,7 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -180,16 +179,16 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Mask
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public (Brush.Resource Resource, int Version)? Mask { get; set; }
+    content: public IBrush Mask { get; }
     parameters: []
     return:
-      type: System.Nullable{System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}}
-    content.vb: Public Property Mask As (Resource As Brush.Resource, Version As Integer)?
+      type: Beutl.Media.IBrush
+    content.vb: Public ReadOnly Property Mask As IBrush
   overload: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Mask*
 - uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.MaskBounds
   commentId: P:Beutl.Graphics.Rendering.OpacityMaskRenderNode.MaskBounds
@@ -203,16 +202,16 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.MaskBounds
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public Rect MaskBounds { get; set; }
+    content: public Rect MaskBounds { get; }
     parameters: []
     return:
       type: Beutl.Graphics.Rect
-    content.vb: Public Property MaskBounds As Rect
+    content.vb: Public ReadOnly Property MaskBounds As Rect
   overload: Beutl.Graphics.Rendering.OpacityMaskRenderNode.MaskBounds*
 - uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Invert
   commentId: P:Beutl.Graphics.Rendering.OpacityMaskRenderNode.Invert
@@ -226,16 +225,16 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Invert
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityMaskRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Invert { get; set; }
+    content: public bool Invert { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property Invert As Boolean
+    content.vb: Public ReadOnly Property Invert As Boolean
   overload: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Invert*
 references:
 - uid: Beutl.Graphics.Rendering
@@ -536,14 +535,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -757,41 +748,21 @@ references:
 - uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor*
   commentId: Overload:Beutl.Graphics.Rendering.OpacityMaskRenderNode.#ctor
   isExternal: true
-  href: Beutl.Graphics.Rendering.OpacityMaskRenderNode.html#Beutl_Graphics_Rendering_OpacityMaskRenderNode__ctor_Beutl_Media_Brush_Resource_Beutl_Graphics_Rect_System_Boolean_
+  href: Beutl.Graphics.Rendering.OpacityMaskRenderNode.html#Beutl_Graphics_Rendering_OpacityMaskRenderNode__ctor_Beutl_Media_IBrush_Beutl_Graphics_Rect_System_Boolean_
   name: OpacityMaskRenderNode
   nameWithType: OpacityMaskRenderNode.OpacityMaskRenderNode
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.OpacityMaskRenderNode
   nameWithType.vb: OpacityMaskRenderNode.New
   fullName.vb: Beutl.Graphics.Rendering.OpacityMaskRenderNode.New
   name.vb: New
-- uid: Beutl.Media.Brush.Resource
-  commentId: T:Beutl.Media.Brush.Resource
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Brush.html
-  name: Brush.Resource
-  nameWithType: Brush.Resource
-  fullName: Beutl.Media.Brush.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
+  href: Beutl.Media.IBrush.html
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
 - uid: Beutl.Graphics.Rect
   commentId: T:Beutl.Graphics.Rect
   parent: Beutl.Graphics
@@ -865,13 +836,13 @@ references:
     name: Graphics
     isExternal: true
     href: Beutl.Graphics.html
-- uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update
+- uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals
   isExternal: true
-  href: Beutl.Graphics.Rendering.OpacityMaskRenderNode.html#Beutl_Graphics_Rendering_OpacityMaskRenderNode_Update_Beutl_Media_Brush_Resource_Beutl_Graphics_Rect_System_Boolean_
-  name: Update
-  nameWithType: OpacityMaskRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Update
+  href: Beutl.Graphics.Rendering.OpacityMaskRenderNode.html#Beutl_Graphics_Rendering_OpacityMaskRenderNode_Equals_Beutl_Media_IBrush_Beutl_Graphics_Rect_System_Boolean_
+  name: Equals
+  nameWithType: OpacityMaskRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Equals
 - uid: Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   parent: Beutl.Graphics.Rendering.ContainerRenderNode
@@ -987,107 +958,6 @@ references:
   name: Mask
   nameWithType: OpacityMaskRenderNode.Mask
   fullName: Beutl.Graphics.Rendering.OpacityMaskRenderNode.Mask
-- uid: System.Nullable{System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}}
-  commentId: T:System.Nullable{System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}}
-  parent: System
-  definition: System.Nullable`1
-  href: Beutl.Media.Brush.html
-  name: (Brush.Resource Resource, int Version)?
-  nameWithType: (Brush.Resource Resource, int Version)?
-  fullName: (Beutl.Media.Brush.Resource Resource, int Version)?
-  nameWithType.vb: (Resource As Brush.Resource, Version As Integer)?
-  fullName.vb: (Resource As Beutl.Media.Brush.Resource, Version As Integer)?
-  name.vb: (Resource As Brush.Resource, Version As Integer)?
-  spec.csharp:
-  - name: (
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.resource
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.version
-  - name: )
-  - name: '?'
-  spec.vb:
-  - name: (
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Resource
-    name: Resource
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.resource
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  - name: ','
-  - name: " "
-  - uid: System.ValueTuple{Beutl.Media.Brush.Resource,System.Int32}.Version
-    name: Version
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-beutl.media.brush.resource,system.int32-.version
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode.MaskBounds*
   commentId: Overload:Beutl.Graphics.Rendering.OpacityMaskRenderNode.MaskBounds
   isExternal: true

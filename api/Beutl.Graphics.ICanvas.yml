@@ -8,23 +8,24 @@ items:
   - Beutl.Graphics.ICanvas.Clear
   - Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
   - Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
-  - Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
-  - Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  - Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  - Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable)
+  - Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
+  - Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry,Beutl.Media.IBrush,Beutl.Media.IPen)
+  - Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.IBrush,Beutl.Media.IPen)
   - Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
-  - Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  - Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  - Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  - Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  - Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
+  - Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.IBrush,Beutl.Media.IPen)
+  - Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
+  - Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.IBrush,Beutl.Media.IPen)
   - Beutl.Graphics.ICanvas.IsDisposed
   - Beutl.Graphics.ICanvas.Push
   - Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
   - Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
-  - Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+  - Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
+  - Beutl.Graphics.ICanvas.PushFilterEffect(Beutl.Graphics.Effects.FilterEffect)
   - Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
   - Beutl.Graphics.ICanvas.PushOpacity(System.Single)
-  - Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+  - Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
   - Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
   - Beutl.Graphics.ICanvas.Size
   - Beutl.Graphics.ICanvas.Snapshot
@@ -36,7 +37,7 @@ items:
   fullName: Beutl.Graphics.ICanvas
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -58,7 +59,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.Clear()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -78,7 +79,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.Clear(Beutl.Media.Color)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -89,242 +90,242 @@ items:
       type: Beutl.Media.Color
     content.vb: Sub Clear(color As Color)
   overload: Beutl.Graphics.ICanvas.Clear*
-- uid: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+- uid: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: DrawImageSource(Beutl.Media.Source.IImageSource,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawImageSource(IImageSource, Resource?, Resource?)
-  nameWithType: ICanvas.DrawImageSource(IImageSource, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: DrawImageSource(IImageSource, IBrush?, IPen?)
+  nameWithType: ICanvas.DrawImageSource(IImageSource, IBrush?, IPen?)
+  fullName: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawImageSource(IImageSource source, Brush.Resource? fill, Pen.Resource? pen)
+    content: void DrawImageSource(IImageSource source, IBrush? fill, IPen? pen)
     parameters:
     - id: source
       type: Beutl.Media.Source.IImageSource
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Sub DrawImageSource(source As IImageSource, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Sub DrawImageSource(source As IImageSource, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.ICanvas.DrawImageSource*
-  nameWithType.vb: ICanvas.DrawImageSource(IImageSource, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: DrawImageSource(IImageSource, Resource, Resource)
-- uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ICanvas.DrawImageSource(IImageSource, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawImageSource(Beutl.Media.Source.IImageSource, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: DrawImageSource(IImageSource, IBrush, IPen)
+- uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: DrawVideoSource(Beutl.Media.Source.IVideoSource,System.TimeSpan,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawVideoSource(IVideoSource, TimeSpan, Resource?, Resource?)
-  nameWithType: ICanvas.DrawVideoSource(IVideoSource, TimeSpan, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, System.TimeSpan, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: DrawVideoSource(IVideoSource, TimeSpan, IBrush?, IPen?)
+  nameWithType: ICanvas.DrawVideoSource(IVideoSource, TimeSpan, IBrush?, IPen?)
+  fullName: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, System.TimeSpan, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawVideoSource(IVideoSource source, TimeSpan frame, Brush.Resource? fill, Pen.Resource? pen)
+    content: void DrawVideoSource(IVideoSource source, TimeSpan frame, IBrush? fill, IPen? pen)
     parameters:
     - id: source
       type: Beutl.Media.Source.IVideoSource
     - id: frame
       type: System.TimeSpan
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Sub DrawVideoSource(source As IVideoSource, frame As TimeSpan, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Sub DrawVideoSource(source As IVideoSource, frame As TimeSpan, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.ICanvas.DrawVideoSource*
-  nameWithType.vb: ICanvas.DrawVideoSource(IVideoSource, TimeSpan, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, System.TimeSpan, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: DrawVideoSource(IVideoSource, TimeSpan, Resource, Resource)
-- uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ICanvas.DrawVideoSource(IVideoSource, TimeSpan, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, System.TimeSpan, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: DrawVideoSource(IVideoSource, TimeSpan, IBrush, IPen)
+- uid: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: DrawVideoSource(Beutl.Media.Source.IVideoSource,System.Int32,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawVideoSource(IVideoSource, int, Resource?, Resource?)
-  nameWithType: ICanvas.DrawVideoSource(IVideoSource, int, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, int, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: DrawVideoSource(IVideoSource, int, IBrush?, IPen?)
+  nameWithType: ICanvas.DrawVideoSource(IVideoSource, int, IBrush?, IPen?)
+  fullName: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, int, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawVideoSource(IVideoSource source, int frame, Brush.Resource? fill, Pen.Resource? pen)
+    content: void DrawVideoSource(IVideoSource source, int frame, IBrush? fill, IPen? pen)
     parameters:
     - id: source
       type: Beutl.Media.Source.IVideoSource
     - id: frame
       type: System.Int32
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Sub DrawVideoSource(source As IVideoSource, frame As Integer, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Sub DrawVideoSource(source As IVideoSource, frame As Integer, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.ICanvas.DrawVideoSource*
-  nameWithType.vb: ICanvas.DrawVideoSource(IVideoSource, Integer, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: DrawVideoSource(IVideoSource, Integer, Resource, Resource)
-- uid: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ICanvas.DrawVideoSource(IVideoSource, Integer, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawVideoSource(Beutl.Media.Source.IVideoSource, Integer, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: DrawVideoSource(IVideoSource, Integer, IBrush, IPen)
+- uid: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: DrawEllipse(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawEllipse(Rect, Resource?, Resource?)
-  nameWithType: ICanvas.DrawEllipse(Rect, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: DrawEllipse(Rect, IBrush?, IPen?)
+  nameWithType: ICanvas.DrawEllipse(Rect, IBrush?, IPen?)
+  fullName: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawEllipse(Rect rect, Brush.Resource? fill, Pen.Resource? pen)
+    content: void DrawEllipse(Rect rect, IBrush? fill, IPen? pen)
     parameters:
     - id: rect
       type: Beutl.Graphics.Rect
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Sub DrawEllipse(rect As Rect, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Sub DrawEllipse(rect As Rect, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.ICanvas.DrawEllipse*
-  nameWithType.vb: ICanvas.DrawEllipse(Rect, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: DrawEllipse(Rect, Resource, Resource)
-- uid: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ICanvas.DrawEllipse(Rect, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawEllipse(Beutl.Graphics.Rect, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: DrawEllipse(Rect, IBrush, IPen)
+- uid: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: DrawRectangle(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawRectangle(Rect, Resource?, Resource?)
-  nameWithType: ICanvas.DrawRectangle(Rect, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: DrawRectangle(Rect, IBrush?, IPen?)
+  nameWithType: ICanvas.DrawRectangle(Rect, IBrush?, IPen?)
+  fullName: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawRectangle(Rect rect, Brush.Resource? fill, Pen.Resource? pen)
+    content: void DrawRectangle(Rect rect, IBrush? fill, IPen? pen)
     parameters:
     - id: rect
       type: Beutl.Graphics.Rect
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Sub DrawRectangle(rect As Rect, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Sub DrawRectangle(rect As Rect, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.ICanvas.DrawRectangle*
-  nameWithType.vb: ICanvas.DrawRectangle(Rect, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: DrawRectangle(Rect, Resource, Resource)
-- uid: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: DrawGeometry(Beutl.Media.Geometry.Resource,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ICanvas.DrawRectangle(Rect, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawRectangle(Beutl.Graphics.Rect, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: DrawRectangle(Rect, IBrush, IPen)
+- uid: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: DrawGeometry(Beutl.Media.Geometry,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawGeometry(Resource, Resource?, Resource?)
-  nameWithType: ICanvas.DrawGeometry(Geometry.Resource, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: DrawGeometry(Geometry, IBrush?, IPen?)
+  nameWithType: ICanvas.DrawGeometry(Geometry, IBrush?, IPen?)
+  fullName: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawGeometry(Geometry.Resource geometry, Brush.Resource? fill, Pen.Resource? pen)
+    content: void DrawGeometry(Geometry geometry, IBrush? fill, IPen? pen)
     parameters:
     - id: geometry
-      type: Beutl.Media.Geometry.Resource
+      type: Beutl.Media.Geometry
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Sub DrawGeometry(geometry As Geometry.Resource, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Sub DrawGeometry(geometry As Geometry, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.ICanvas.DrawGeometry*
-  nameWithType.vb: ICanvas.DrawGeometry(Geometry.Resource, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry.Resource, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: DrawGeometry(Resource, Resource, Resource)
-- uid: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
-  id: DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.Brush.Resource,Beutl.Media.Pen.Resource)
+  nameWithType.vb: ICanvas.DrawGeometry(Geometry, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawGeometry(Beutl.Media.Geometry, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: DrawGeometry(Geometry, IBrush, IPen)
+- uid: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.IBrush,Beutl.Media.IPen)
+  commentId: M:Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.IBrush,Beutl.Media.IPen)
+  id: DrawText(Beutl.Media.TextFormatting.FormattedText,Beutl.Media.IBrush,Beutl.Media.IPen)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawText(FormattedText, Resource?, Resource?)
-  nameWithType: ICanvas.DrawText(FormattedText, Brush.Resource?, Pen.Resource?)
-  fullName: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText, Beutl.Media.Brush.Resource?, Beutl.Media.Pen.Resource?)
+  name: DrawText(FormattedText, IBrush?, IPen?)
+  nameWithType: ICanvas.DrawText(FormattedText, IBrush?, IPen?)
+  fullName: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText, Beutl.Media.IBrush?, Beutl.Media.IPen?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawText(FormattedText text, Brush.Resource? fill, Pen.Resource? pen)
+    content: void DrawText(FormattedText text, IBrush? fill, IPen? pen)
     parameters:
     - id: text
       type: Beutl.Media.TextFormatting.FormattedText
     - id: fill
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: pen
-      type: Beutl.Media.Pen.Resource
-    content.vb: Sub DrawText(text As FormattedText, fill As Brush.Resource, pen As Pen.Resource)
+      type: Beutl.Media.IPen
+    content.vb: Sub DrawText(text As FormattedText, fill As IBrush, pen As IPen)
   overload: Beutl.Graphics.ICanvas.DrawText*
-  nameWithType.vb: ICanvas.DrawText(FormattedText, Brush.Resource, Pen.Resource)
-  fullName.vb: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText, Beutl.Media.Brush.Resource, Beutl.Media.Pen.Resource)
-  name.vb: DrawText(FormattedText, Resource, Resource)
-- uid: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
-  commentId: M:Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
-  id: DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  nameWithType.vb: ICanvas.DrawText(FormattedText, IBrush, IPen)
+  fullName.vb: Beutl.Graphics.ICanvas.DrawText(Beutl.Media.TextFormatting.FormattedText, Beutl.Media.IBrush, Beutl.Media.IPen)
+  name.vb: DrawText(FormattedText, IBrush, IPen)
+- uid: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable)
+  commentId: M:Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable)
+  id: DrawDrawable(Beutl.Graphics.Drawable)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: DrawDrawable(Resource)
-  nameWithType: ICanvas.DrawDrawable(Drawable.Resource)
-  fullName: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable.Resource)
+  name: DrawDrawable(Drawable)
+  nameWithType: ICanvas.DrawDrawable(Drawable)
+  fullName: Beutl.Graphics.ICanvas.DrawDrawable(Beutl.Graphics.Drawable)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: void DrawDrawable(Drawable.Resource drawable)
+    content: void DrawDrawable(Drawable drawable)
     parameters:
     - id: drawable
-      type: Beutl.Graphics.Drawable.Resource
-    content.vb: Sub DrawDrawable(drawable As Drawable.Resource)
+      type: Beutl.Graphics.Drawable
+    content.vb: Sub DrawDrawable(drawable As Drawable)
   overload: Beutl.Graphics.ICanvas.DrawDrawable*
 - uid: Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
   commentId: M:Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
@@ -338,7 +339,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.DrawNode(Beutl.Graphics.Rendering.RenderNode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -361,7 +362,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.DrawBackdrop(Beutl.Graphics.IBackdrop)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -384,7 +385,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.Snapshot()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -406,7 +407,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.Push()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -428,7 +429,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.PushLayer(Beutl.Graphics.Rect)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -453,7 +454,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.PushClip(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -468,32 +469,32 @@ items:
       type: Beutl.Graphics.PushedState
     content.vb: Function PushClip(clip As Rect, operation As ClipOperation = ClipOperation.Intersect) As PushedState
   overload: Beutl.Graphics.ICanvas.PushClip*
-- uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
-  commentId: M:Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
-  id: PushClip(Beutl.Media.Geometry.Resource,Beutl.Graphics.ClipOperation)
+- uid: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
+  id: PushClip(Beutl.Media.Geometry,Beutl.Graphics.ClipOperation)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: PushClip(Resource, ClipOperation)
-  nameWithType: ICanvas.PushClip(Geometry.Resource, ClipOperation)
-  fullName: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry.Resource, Beutl.Graphics.ClipOperation)
+  name: PushClip(Geometry, ClipOperation)
+  nameWithType: ICanvas.PushClip(Geometry, ClipOperation)
+  fullName: Beutl.Graphics.ICanvas.PushClip(Beutl.Media.Geometry, Beutl.Graphics.ClipOperation)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: PushedState PushClip(Geometry.Resource geometry, ClipOperation operation = ClipOperation.Intersect)
+    content: PushedState PushClip(Geometry geometry, ClipOperation operation = ClipOperation.Intersect)
     parameters:
     - id: geometry
-      type: Beutl.Media.Geometry.Resource
+      type: Beutl.Media.Geometry
     - id: operation
       type: Beutl.Graphics.ClipOperation
     return:
       type: Beutl.Graphics.PushedState
-    content.vb: Function PushClip(geometry As Geometry.Resource, operation As ClipOperation = ClipOperation.Intersect) As PushedState
+    content.vb: Function PushClip(geometry As Geometry, operation As ClipOperation = ClipOperation.Intersect) As PushedState
   overload: Beutl.Graphics.ICanvas.PushClip*
 - uid: Beutl.Graphics.ICanvas.PushOpacity(System.Single)
   commentId: M:Beutl.Graphics.ICanvas.PushOpacity(System.Single)
@@ -507,7 +508,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.PushOpacity(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -523,38 +524,63 @@ items:
   nameWithType.vb: ICanvas.PushOpacity(Single)
   fullName.vb: Beutl.Graphics.ICanvas.PushOpacity(Single)
   name.vb: PushOpacity(Single)
-- uid: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
-  commentId: M:Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
-  id: PushOpacityMask(Beutl.Media.Brush.Resource,Beutl.Graphics.Rect,System.Boolean)
+- uid: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
+  commentId: M:Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
+  id: PushOpacityMask(Beutl.Media.IBrush,Beutl.Graphics.Rect,System.Boolean)
   parent: Beutl.Graphics.ICanvas
   langs:
   - csharp
   - vb
-  name: PushOpacityMask(Resource, Rect, bool)
-  nameWithType: ICanvas.PushOpacityMask(Brush.Resource, Rect, bool)
-  fullName: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, bool)
+  name: PushOpacityMask(IBrush, Rect, bool)
+  nameWithType: ICanvas.PushOpacityMask(IBrush, Rect, bool)
+  fullName: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.IBrush, Beutl.Graphics.Rect, bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: PushedState PushOpacityMask(Brush.Resource mask, Rect bounds, bool invert = false)
+    content: PushedState PushOpacityMask(IBrush mask, Rect bounds, bool invert = false)
     parameters:
     - id: mask
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: bounds
       type: Beutl.Graphics.Rect
     - id: invert
       type: System.Boolean
     return:
       type: Beutl.Graphics.PushedState
-    content.vb: Function PushOpacityMask(mask As Brush.Resource, bounds As Rect, invert As Boolean = False) As PushedState
+    content.vb: Function PushOpacityMask(mask As IBrush, bounds As Rect, invert As Boolean = False) As PushedState
   overload: Beutl.Graphics.ICanvas.PushOpacityMask*
-  nameWithType.vb: ICanvas.PushOpacityMask(Brush.Resource, Rect, Boolean)
-  fullName.vb: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.Brush.Resource, Beutl.Graphics.Rect, Boolean)
-  name.vb: PushOpacityMask(Resource, Rect, Boolean)
+  nameWithType.vb: ICanvas.PushOpacityMask(IBrush, Rect, Boolean)
+  fullName.vb: Beutl.Graphics.ICanvas.PushOpacityMask(Beutl.Media.IBrush, Beutl.Graphics.Rect, Boolean)
+  name.vb: PushOpacityMask(IBrush, Rect, Boolean)
+- uid: Beutl.Graphics.ICanvas.PushFilterEffect(Beutl.Graphics.Effects.FilterEffect)
+  commentId: M:Beutl.Graphics.ICanvas.PushFilterEffect(Beutl.Graphics.Effects.FilterEffect)
+  id: PushFilterEffect(Beutl.Graphics.Effects.FilterEffect)
+  parent: Beutl.Graphics.ICanvas
+  langs:
+  - csharp
+  - vb
+  name: PushFilterEffect(FilterEffect)
+  nameWithType: ICanvas.PushFilterEffect(FilterEffect)
+  fullName: Beutl.Graphics.ICanvas.PushFilterEffect(Beutl.Graphics.Effects.FilterEffect)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics
+  syntax:
+    content: PushedState PushFilterEffect(FilterEffect effect)
+    parameters:
+    - id: effect
+      type: Beutl.Graphics.Effects.FilterEffect
+    return:
+      type: Beutl.Graphics.PushedState
+    content.vb: Function PushFilterEffect(effect As FilterEffect) As PushedState
+  overload: Beutl.Graphics.ICanvas.PushFilterEffect*
 - uid: Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
   commentId: M:Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
   id: PushBlendMode(Beutl.Graphics.BlendMode)
@@ -567,7 +593,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.PushBlendMode(Beutl.Graphics.BlendMode)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -592,7 +618,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.PushTransform(Beutl.Graphics.Matrix, Beutl.Graphics.TransformOperator)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -619,7 +645,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.Size
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -642,7 +668,7 @@ items:
   fullName: Beutl.Graphics.ICanvas.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/ICanvas.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/ICanvas.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -804,7 +830,7 @@ references:
 - uid: Beutl.Graphics.ICanvas.DrawImageSource*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawImageSource
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawImageSource_Beutl_Media_Source_IImageSource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawImageSource_Beutl_Media_Source_IImageSource_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: DrawImageSource
   nameWithType: ICanvas.DrawImageSource
   fullName: Beutl.Graphics.ICanvas.DrawImageSource
@@ -816,62 +842,22 @@ references:
   name: IImageSource
   nameWithType: IImageSource
   fullName: Beutl.Media.Source.IImageSource
-- uid: Beutl.Media.Brush.Resource
-  commentId: T:Beutl.Media.Brush.Resource
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Brush.html
-  name: Brush.Resource
-  nameWithType: Brush.Resource
-  fullName: Beutl.Media.Brush.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-- uid: Beutl.Media.Pen.Resource
-  commentId: T:Beutl.Media.Pen.Resource
+  href: Beutl.Media.IBrush.html
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
+- uid: Beutl.Media.IPen
+  commentId: T:Beutl.Media.IPen
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Pen.html
-  name: Pen.Resource
-  nameWithType: Pen.Resource
-  fullName: Beutl.Media.Pen.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Pen
-    name: Pen
-    isExternal: true
-    href: Beutl.Media.Pen.html
-  - name: .
-  - uid: Beutl.Media.Pen.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Pen.Resource.html
+  href: Beutl.Media.IPen.html
+  name: IPen
+  nameWithType: IPen
+  fullName: Beutl.Media.IPen
 - uid: Beutl.Media.Source
   commentId: N:Beutl.Media.Source
   isExternal: true
@@ -912,7 +898,7 @@ references:
 - uid: Beutl.Graphics.ICanvas.DrawVideoSource*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawVideoSource
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_TimeSpan_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawVideoSource_Beutl_Media_Source_IVideoSource_System_TimeSpan_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: DrawVideoSource
   nameWithType: ICanvas.DrawVideoSource
   fullName: Beutl.Graphics.ICanvas.DrawVideoSource
@@ -946,7 +932,7 @@ references:
 - uid: Beutl.Graphics.ICanvas.DrawEllipse*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawEllipse
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawEllipse_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawEllipse_Beutl_Graphics_Rect_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: DrawEllipse
   nameWithType: ICanvas.DrawEllipse
   fullName: Beutl.Graphics.ICanvas.DrawEllipse
@@ -961,49 +947,29 @@ references:
 - uid: Beutl.Graphics.ICanvas.DrawRectangle*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawRectangle
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawRectangle_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawRectangle_Beutl_Graphics_Rect_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: DrawRectangle
   nameWithType: ICanvas.DrawRectangle
   fullName: Beutl.Graphics.ICanvas.DrawRectangle
 - uid: Beutl.Graphics.ICanvas.DrawGeometry*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawGeometry
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawGeometry_Beutl_Media_Geometry_Resource_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawGeometry_Beutl_Media_Geometry_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: DrawGeometry
   nameWithType: ICanvas.DrawGeometry
   fullName: Beutl.Graphics.ICanvas.DrawGeometry
-- uid: Beutl.Media.Geometry.Resource
-  commentId: T:Beutl.Media.Geometry.Resource
+- uid: Beutl.Media.Geometry
+  commentId: T:Beutl.Media.Geometry
   parent: Beutl.Media
   isExternal: true
   href: Beutl.Media.Geometry.html
-  name: Geometry.Resource
-  nameWithType: Geometry.Resource
-  fullName: Beutl.Media.Geometry.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Geometry
-    name: Geometry
-    isExternal: true
-    href: Beutl.Media.Geometry.html
-  - name: .
-  - uid: Beutl.Media.Geometry.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Geometry.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Geometry
-    name: Geometry
-    isExternal: true
-    href: Beutl.Media.Geometry.html
-  - name: .
-  - uid: Beutl.Media.Geometry.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Geometry.Resource.html
+  name: Geometry
+  nameWithType: Geometry
+  fullName: Beutl.Media.Geometry
 - uid: Beutl.Graphics.ICanvas.DrawText*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawText
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawText_Beutl_Media_TextFormatting_FormattedText_Beutl_Media_Brush_Resource_Beutl_Media_Pen_Resource_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawText_Beutl_Media_TextFormatting_FormattedText_Beutl_Media_IBrush_Beutl_Media_IPen_
   name: DrawText
   nameWithType: ICanvas.DrawText
   fullName: Beutl.Graphics.ICanvas.DrawText
@@ -1055,38 +1021,18 @@ references:
 - uid: Beutl.Graphics.ICanvas.DrawDrawable*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawDrawable
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawDrawable_Beutl_Graphics_Drawable_Resource_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_DrawDrawable_Beutl_Graphics_Drawable_
   name: DrawDrawable
   nameWithType: ICanvas.DrawDrawable
   fullName: Beutl.Graphics.ICanvas.DrawDrawable
-- uid: Beutl.Graphics.Drawable.Resource
-  commentId: T:Beutl.Graphics.Drawable.Resource
+- uid: Beutl.Graphics.Drawable
+  commentId: T:Beutl.Graphics.Drawable
   parent: Beutl.Graphics
   isExternal: true
   href: Beutl.Graphics.Drawable.html
-  name: Drawable.Resource
-  nameWithType: Drawable.Resource
-  fullName: Beutl.Graphics.Drawable.Resource
-  spec.csharp:
-  - uid: Beutl.Graphics.Drawable
-    name: Drawable
-    isExternal: true
-    href: Beutl.Graphics.Drawable.html
-  - name: .
-  - uid: Beutl.Graphics.Drawable.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Drawable.Resource.html
-  spec.vb:
-  - uid: Beutl.Graphics.Drawable
-    name: Drawable
-    isExternal: true
-    href: Beutl.Graphics.Drawable.html
-  - name: .
-  - uid: Beutl.Graphics.Drawable.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Graphics.Drawable.Resource.html
+  name: Drawable
+  nameWithType: Drawable
+  fullName: Beutl.Graphics.Drawable
 - uid: Beutl.Graphics.ICanvas.DrawNode*
   commentId: Overload:Beutl.Graphics.ICanvas.DrawNode
   isExternal: true
@@ -1219,7 +1165,7 @@ references:
 - uid: Beutl.Graphics.ICanvas.PushOpacityMask*
   commentId: Overload:Beutl.Graphics.ICanvas.PushOpacityMask
   isExternal: true
-  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacityMask_Beutl_Media_Brush_Resource_Beutl_Graphics_Rect_System_Boolean_
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushOpacityMask_Beutl_Media_IBrush_Beutl_Graphics_Rect_System_Boolean_
   name: PushOpacityMask
   nameWithType: ICanvas.PushOpacityMask
   fullName: Beutl.Graphics.ICanvas.PushOpacityMask
@@ -1234,6 +1180,58 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: Beutl.Graphics.ICanvas.PushFilterEffect*
+  commentId: Overload:Beutl.Graphics.ICanvas.PushFilterEffect
+  isExternal: true
+  href: Beutl.Graphics.ICanvas.html#Beutl_Graphics_ICanvas_PushFilterEffect_Beutl_Graphics_Effects_FilterEffect_
+  name: PushFilterEffect
+  nameWithType: ICanvas.PushFilterEffect
+  fullName: Beutl.Graphics.ICanvas.PushFilterEffect
+- uid: Beutl.Graphics.Effects.FilterEffect
+  commentId: T:Beutl.Graphics.Effects.FilterEffect
+  parent: Beutl.Graphics.Effects
+  isExternal: true
+  href: Beutl.Graphics.Effects.FilterEffect.html
+  name: FilterEffect
+  nameWithType: FilterEffect
+  fullName: Beutl.Graphics.Effects.FilterEffect
+- uid: Beutl.Graphics.Effects
+  commentId: N:Beutl.Graphics.Effects
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Graphics.Effects
+  nameWithType: Beutl.Graphics.Effects
+  fullName: Beutl.Graphics.Effects
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Effects
+    name: Effects
+    isExternal: true
+    href: Beutl.Graphics.Effects.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Graphics
+    name: Graphics
+    isExternal: true
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Effects
+    name: Effects
+    isExternal: true
+    href: Beutl.Graphics.Effects.html
 - uid: Beutl.Graphics.ICanvas.PushBlendMode*
   commentId: Overload:Beutl.Graphics.ICanvas.PushBlendMode
   isExternal: true

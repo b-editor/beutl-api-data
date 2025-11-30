@@ -5,7 +5,7 @@ items:
   id: BrushConstructor
   parent: Beutl.Graphics
   children:
-  - Beutl.Graphics.BrushConstructor.#ctor(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)
+  - Beutl.Graphics.BrushConstructor.#ctor(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Graphics.BlendMode)
   - Beutl.Graphics.BrushConstructor.BlendMode
   - Beutl.Graphics.BrushConstructor.Bounds
   - Beutl.Graphics.BrushConstructor.Brush
@@ -19,7 +19,7 @@ items:
   fullName: Beutl.Graphics.BrushConstructor
   type: Struct
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/BrushConstructor.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/BrushConstructor.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -33,36 +33,36 @@ items:
   - System.Object.GetType
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: Beutl.Graphics.BrushConstructor.#ctor(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)
-  commentId: M:Beutl.Graphics.BrushConstructor.#ctor(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)
-  id: '#ctor(Beutl.Graphics.Rect,Beutl.Media.Brush.Resource,Beutl.Graphics.BlendMode)'
+- uid: Beutl.Graphics.BrushConstructor.#ctor(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Graphics.BlendMode)
+  commentId: M:Beutl.Graphics.BrushConstructor.#ctor(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Graphics.BlendMode)
+  id: '#ctor(Beutl.Graphics.Rect,Beutl.Media.IBrush,Beutl.Graphics.BlendMode)'
   parent: Beutl.Graphics.BrushConstructor
   langs:
   - csharp
   - vb
-  name: BrushConstructor(Rect, Resource?, BlendMode)
-  nameWithType: BrushConstructor.BrushConstructor(Rect, Brush.Resource?, BlendMode)
-  fullName: Beutl.Graphics.BrushConstructor.BrushConstructor(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource?, Beutl.Graphics.BlendMode)
+  name: BrushConstructor(Rect, IBrush?, BlendMode)
+  nameWithType: BrushConstructor.BrushConstructor(Rect, IBrush?, BlendMode)
+  fullName: Beutl.Graphics.BrushConstructor.BrushConstructor(Beutl.Graphics.Rect, Beutl.Media.IBrush?, Beutl.Graphics.BlendMode)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/BrushConstructor.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/BrushConstructor.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: public BrushConstructor(Rect bounds, Brush.Resource? brush, BlendMode blendMode)
+    content: public BrushConstructor(Rect bounds, IBrush? brush, BlendMode blendMode)
     parameters:
     - id: bounds
       type: Beutl.Graphics.Rect
     - id: brush
-      type: Beutl.Media.Brush.Resource
+      type: Beutl.Media.IBrush
     - id: blendMode
       type: Beutl.Graphics.BlendMode
-    content.vb: Public Sub New(bounds As Rect, brush As Brush.Resource, blendMode As BlendMode)
+    content.vb: Public Sub New(bounds As Rect, brush As IBrush, blendMode As BlendMode)
   overload: Beutl.Graphics.BrushConstructor.#ctor*
-  nameWithType.vb: BrushConstructor.New(Rect, Brush.Resource, BlendMode)
-  fullName.vb: Beutl.Graphics.BrushConstructor.New(Beutl.Graphics.Rect, Beutl.Media.Brush.Resource, Beutl.Graphics.BlendMode)
-  name.vb: New(Rect, Resource, BlendMode)
+  nameWithType.vb: BrushConstructor.New(Rect, IBrush, BlendMode)
+  fullName.vb: Beutl.Graphics.BrushConstructor.New(Beutl.Graphics.Rect, Beutl.Media.IBrush, Beutl.Graphics.BlendMode)
+  name.vb: New(Rect, IBrush, BlendMode)
 - uid: Beutl.Graphics.BrushConstructor.ConfigurePaint(SkiaSharp.SKPaint)
   commentId: M:Beutl.Graphics.BrushConstructor.ConfigurePaint(SkiaSharp.SKPaint)
   id: ConfigurePaint(SkiaSharp.SKPaint)
@@ -75,7 +75,7 @@ items:
   fullName: Beutl.Graphics.BrushConstructor.ConfigurePaint(SkiaSharp.SKPaint)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/BrushConstructor.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/BrushConstructor.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -98,7 +98,7 @@ items:
   fullName: Beutl.Graphics.BrushConstructor.CreateShader()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/BrushConstructor.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/BrushConstructor.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -120,7 +120,7 @@ items:
   fullName: Beutl.Graphics.BrushConstructor.Bounds
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/BrushConstructor.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/BrushConstructor.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -143,16 +143,16 @@ items:
   fullName: Beutl.Graphics.BrushConstructor.Brush
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/BrushConstructor.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/BrushConstructor.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
   syntax:
-    content: public Brush.Resource? Brush { get; }
+    content: public IBrush? Brush { get; }
     parameters: []
     return:
-      type: Beutl.Media.Brush.Resource
-    content.vb: Public ReadOnly Property Brush As Brush.Resource
+      type: Beutl.Media.IBrush
+    content.vb: Public ReadOnly Property Brush As IBrush
   overload: Beutl.Graphics.BrushConstructor.Brush*
 - uid: Beutl.Graphics.BrushConstructor.BlendMode
   commentId: P:Beutl.Graphics.BrushConstructor.BlendMode
@@ -166,7 +166,7 @@ items:
   fullName: Beutl.Graphics.BrushConstructor.BlendMode
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/BrushConstructor.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/BrushConstructor.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics
@@ -425,7 +425,7 @@ references:
 - uid: Beutl.Graphics.BrushConstructor.#ctor*
   commentId: Overload:Beutl.Graphics.BrushConstructor.#ctor
   isExternal: true
-  href: Beutl.Graphics.BrushConstructor.html#Beutl_Graphics_BrushConstructor__ctor_Beutl_Graphics_Rect_Beutl_Media_Brush_Resource_Beutl_Graphics_BlendMode_
+  href: Beutl.Graphics.BrushConstructor.html#Beutl_Graphics_BrushConstructor__ctor_Beutl_Graphics_Rect_Beutl_Media_IBrush_Beutl_Graphics_BlendMode_
   name: BrushConstructor
   nameWithType: BrushConstructor.BrushConstructor
   fullName: Beutl.Graphics.BrushConstructor.BrushConstructor
@@ -440,34 +440,14 @@ references:
   name: Rect
   nameWithType: Rect
   fullName: Beutl.Graphics.Rect
-- uid: Beutl.Media.Brush.Resource
-  commentId: T:Beutl.Media.Brush.Resource
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
   parent: Beutl.Media
   isExternal: true
-  href: Beutl.Media.Brush.html
-  name: Brush.Resource
-  nameWithType: Brush.Resource
-  fullName: Beutl.Media.Brush.Resource
-  spec.csharp:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
-  spec.vb:
-  - uid: Beutl.Media.Brush
-    name: Brush
-    isExternal: true
-    href: Beutl.Media.Brush.html
-  - name: .
-  - uid: Beutl.Media.Brush.Resource
-    name: Resource
-    isExternal: true
-    href: Beutl.Media.Brush.Resource.html
+  href: Beutl.Media.IBrush.html
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
 - uid: Beutl.Graphics.BlendMode
   commentId: T:Beutl.Graphics.BlendMode
   parent: Beutl.Graphics

@@ -7,7 +7,8 @@ items:
   children:
   - Beutl.EvaluationContext.#ctor
   - Beutl.EvaluationContext.#ctor(Beutl.EvaluationContext)
-  - Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
+  - Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
+  - Beutl.EvaluationContext.Clock
   - Beutl.EvaluationContext.List
   - Beutl.EvaluationContext.Renderer
   - Beutl.EvaluationContext.Target
@@ -19,7 +20,7 @@ items:
   fullName: Beutl.EvaluationContext
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/EvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -51,7 +52,7 @@ items:
   fullName: Beutl.EvaluationContext.EvaluationContext(Beutl.EvaluationContext)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/EvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -77,7 +78,7 @@ items:
   fullName: Beutl.EvaluationContext.EvaluationContext()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/EvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -88,29 +89,52 @@ items:
   nameWithType.vb: EvaluationContext.New()
   fullName.vb: Beutl.EvaluationContext.New()
   name.vb: New()
-- uid: Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
-  commentId: M:Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
-  id: AddRenderable(Beutl.Engine.EngineObject)
+- uid: Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
+  commentId: M:Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
+  id: AddRenderable(Beutl.Graphics.Rendering.Renderable)
   parent: Beutl.EvaluationContext
   langs:
   - csharp
   - vb
-  name: AddRenderable(EngineObject)
-  nameWithType: EvaluationContext.AddRenderable(EngineObject)
-  fullName: Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
+  name: AddRenderable(Renderable)
+  nameWithType: EvaluationContext.AddRenderable(Renderable)
+  fullName: Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/EvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
   syntax:
-    content: public void AddRenderable(EngineObject renderable)
+    content: public void AddRenderable(Renderable renderable)
     parameters:
     - id: renderable
-      type: Beutl.Engine.EngineObject
-    content.vb: Public Sub AddRenderable(renderable As EngineObject)
+      type: Beutl.Graphics.Rendering.Renderable
+    content.vb: Public Sub AddRenderable(renderable As Renderable)
   overload: Beutl.EvaluationContext.AddRenderable*
+- uid: Beutl.EvaluationContext.Clock
+  commentId: P:Beutl.EvaluationContext.Clock
+  id: Clock
+  parent: Beutl.EvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: Clock
+  nameWithType: EvaluationContext.Clock
+  fullName: Beutl.EvaluationContext.Clock
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
+  assemblies:
+  - Beutl.ProjectSystem
+  namespace: Beutl
+  syntax:
+    content: public IClock Clock { get; }
+    parameters: []
+    return:
+      type: Beutl.Animation.IClock
+    content.vb: Public ReadOnly Property Clock As IClock
+  overload: Beutl.EvaluationContext.Clock*
 - uid: Beutl.EvaluationContext.Renderer
   commentId: P:Beutl.EvaluationContext.Renderer
   id: Renderer
@@ -123,7 +147,7 @@ items:
   fullName: Beutl.EvaluationContext.Renderer
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/EvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -146,7 +170,7 @@ items:
   fullName: Beutl.EvaluationContext.List
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/EvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -169,7 +193,7 @@ items:
   fullName: Beutl.EvaluationContext.Target
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/EvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/EvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl
@@ -446,60 +470,18 @@ references:
 - uid: Beutl.EvaluationContext.AddRenderable*
   commentId: Overload:Beutl.EvaluationContext.AddRenderable
   isExternal: true
-  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Engine_EngineObject_
+  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Graphics_Rendering_Renderable_
   name: AddRenderable
   nameWithType: EvaluationContext.AddRenderable
   fullName: Beutl.EvaluationContext.AddRenderable
-- uid: Beutl.Engine.EngineObject
-  commentId: T:Beutl.Engine.EngineObject
-  parent: Beutl.Engine
-  isExternal: true
-  href: Beutl.Engine.EngineObject.html
-  name: EngineObject
-  nameWithType: EngineObject
-  fullName: Beutl.Engine.EngineObject
-- uid: Beutl.Engine
-  commentId: N:Beutl.Engine
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.Engine
-  nameWithType: Beutl.Engine
-  fullName: Beutl.Engine
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
-- uid: Beutl.EvaluationContext.Renderer*
-  commentId: Overload:Beutl.EvaluationContext.Renderer
-  isExternal: true
-  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_Renderer
-  name: Renderer
-  nameWithType: EvaluationContext.Renderer
-  fullName: Beutl.EvaluationContext.Renderer
-- uid: Beutl.Graphics.Rendering.IRenderer
-  commentId: T:Beutl.Graphics.Rendering.IRenderer
+- uid: Beutl.Graphics.Rendering.Renderable
+  commentId: T:Beutl.Graphics.Rendering.Renderable
   parent: Beutl.Graphics.Rendering
   isExternal: true
-  href: Beutl.Graphics.Rendering.IRenderer.html
-  name: IRenderer
-  nameWithType: IRenderer
-  fullName: Beutl.Graphics.Rendering.IRenderer
+  href: Beutl.Graphics.Rendering.Renderable.html
+  name: Renderable
+  nameWithType: Renderable
+  fullName: Beutl.Graphics.Rendering.Renderable
 - uid: Beutl.Graphics.Rendering
   commentId: N:Beutl.Graphics.Rendering
   isExternal: true
@@ -537,6 +519,63 @@ references:
     name: Rendering
     isExternal: true
     href: Beutl.Graphics.Rendering.html
+- uid: Beutl.EvaluationContext.Clock*
+  commentId: Overload:Beutl.EvaluationContext.Clock
+  isExternal: true
+  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_Clock
+  name: Clock
+  nameWithType: EvaluationContext.Clock
+  fullName: Beutl.EvaluationContext.Clock
+- uid: Beutl.Animation.IClock
+  commentId: T:Beutl.Animation.IClock
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: Beutl.Animation.IClock
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+- uid: Beutl.EvaluationContext.Renderer*
+  commentId: Overload:Beutl.EvaluationContext.Renderer
+  isExternal: true
+  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_Renderer
+  name: Renderer
+  nameWithType: EvaluationContext.Renderer
+  fullName: Beutl.EvaluationContext.Renderer
+- uid: Beutl.Graphics.Rendering.IRenderer
+  commentId: T:Beutl.Graphics.Rendering.IRenderer
+  parent: Beutl.Graphics.Rendering
+  isExternal: true
+  href: Beutl.Graphics.Rendering.IRenderer.html
+  name: IRenderer
+  nameWithType: IRenderer
+  fullName: Beutl.Graphics.Rendering.IRenderer
 - uid: Beutl.EvaluationContext.List*
   commentId: Overload:Beutl.EvaluationContext.List
   isExternal: true

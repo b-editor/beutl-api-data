@@ -8,7 +8,9 @@ items:
   - Beutl.Audio.Graph.Nodes.SpeedNode.#ctor
   - Beutl.Audio.Graph.Nodes.SpeedNode.Dispose(System.Boolean)
   - Beutl.Audio.Graph.Nodes.SpeedNode.Process(Beutl.Audio.Graph.AudioProcessContext)
-  - Beutl.Audio.Graph.Nodes.SpeedNode.Speed
+  - Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty
+  - Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed
+  - Beutl.Audio.Graph.Nodes.SpeedNode.Target
   langs:
   - csharp
   - vb
@@ -17,7 +19,7 @@ items:
   fullName: Beutl.Audio.Graph.Nodes.SpeedNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
@@ -53,7 +55,7 @@ items:
   fullName: Beutl.Audio.Graph.Nodes.SpeedNode.Process(Beutl.Audio.Graph.AudioProcessContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
@@ -80,7 +82,7 @@ items:
   fullName: Beutl.Audio.Graph.Nodes.SpeedNode.Dispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
@@ -108,7 +110,7 @@ items:
   fullName: Beutl.Audio.Graph.Nodes.SpeedNode.SpeedNode()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
@@ -119,29 +121,75 @@ items:
   nameWithType.vb: SpeedNode.New()
   fullName.vb: Beutl.Audio.Graph.Nodes.SpeedNode.New()
   name.vb: New()
-- uid: Beutl.Audio.Graph.Nodes.SpeedNode.Speed
-  commentId: P:Beutl.Audio.Graph.Nodes.SpeedNode.Speed
-  id: Speed
+- uid: Beutl.Audio.Graph.Nodes.SpeedNode.Target
+  commentId: P:Beutl.Audio.Graph.Nodes.SpeedNode.Target
+  id: Target
   parent: Beutl.Audio.Graph.Nodes.SpeedNode
   langs:
   - csharp
   - vb
-  name: Speed
-  nameWithType: SpeedNode.Speed
-  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.Speed
+  name: Target
+  nameWithType: SpeedNode.Target
+  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.Target
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
   syntax:
-    content: public IProperty<float>? Speed { get; set; }
+    content: public IAnimatable? Target { get; set; }
     parameters: []
     return:
-      type: Beutl.Engine.IProperty{System.Single}
-    content.vb: Public Property Speed As IProperty(Of Single)
-  overload: Beutl.Audio.Graph.Nodes.SpeedNode.Speed*
+      type: Beutl.Animation.IAnimatable
+    content.vb: Public Property Target As IAnimatable
+  overload: Beutl.Audio.Graph.Nodes.SpeedNode.Target*
+- uid: Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty
+  commentId: P:Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty
+  id: SpeedProperty
+  parent: Beutl.Audio.Graph.Nodes.SpeedNode
+  langs:
+  - csharp
+  - vb
+  name: SpeedProperty
+  nameWithType: SpeedNode.SpeedProperty
+  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph.Nodes
+  syntax:
+    content: public CoreProperty<float>? SpeedProperty { get; set; }
+    parameters: []
+    return:
+      type: Beutl.CoreProperty{System.Single}
+    content.vb: Public Property SpeedProperty As CoreProperty(Of Single)
+  overload: Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty*
+- uid: Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed
+  commentId: P:Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed
+  id: StaticSpeed
+  parent: Beutl.Audio.Graph.Nodes.SpeedNode
+  langs:
+  - csharp
+  - vb
+  name: StaticSpeed
+  nameWithType: SpeedNode.StaticSpeed
+  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/SpeedNode.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph.Nodes
+  syntax:
+    content: public float StaticSpeed { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property StaticSpeed As Single
+  overload: Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed*
 references:
 - uid: Beutl.Audio.Graph.Nodes
   commentId: N:Beutl.Audio.Graph.Nodes
@@ -709,29 +757,71 @@ references:
   nameWithType.vb: SpeedNode.New
   fullName.vb: Beutl.Audio.Graph.Nodes.SpeedNode.New
   name.vb: New
-- uid: Beutl.Audio.Graph.Nodes.SpeedNode.Speed*
-  commentId: Overload:Beutl.Audio.Graph.Nodes.SpeedNode.Speed
+- uid: Beutl.Audio.Graph.Nodes.SpeedNode.Target*
+  commentId: Overload:Beutl.Audio.Graph.Nodes.SpeedNode.Target
   isExternal: true
-  href: Beutl.Audio.Graph.Nodes.SpeedNode.html#Beutl_Audio_Graph_Nodes_SpeedNode_Speed
-  name: Speed
-  nameWithType: SpeedNode.Speed
-  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.Speed
-- uid: Beutl.Engine.IProperty{System.Single}
-  commentId: T:Beutl.Engine.IProperty{System.Single}
-  parent: Beutl.Engine
-  definition: Beutl.Engine.IProperty`1
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<float>
-  nameWithType: IProperty<float>
-  fullName: Beutl.Engine.IProperty<float>
-  nameWithType.vb: IProperty(Of Single)
-  fullName.vb: Beutl.Engine.IProperty(Of Single)
-  name.vb: IProperty(Of Single)
+  href: Beutl.Audio.Graph.Nodes.SpeedNode.html#Beutl_Audio_Graph_Nodes_SpeedNode_Target
+  name: Target
+  nameWithType: SpeedNode.Target
+  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.Target
+- uid: Beutl.Animation.IAnimatable
+  commentId: T:Beutl.Animation.IAnimatable
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.IAnimatable.html
+  name: IAnimatable
+  nameWithType: IAnimatable
+  fullName: Beutl.Animation.IAnimatable
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
   spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl
+    name: Beutl
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+- uid: Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty*
+  commentId: Overload:Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty
+  isExternal: true
+  href: Beutl.Audio.Graph.Nodes.SpeedNode.html#Beutl_Audio_Graph_Nodes_SpeedNode_SpeedProperty
+  name: SpeedProperty
+  nameWithType: SpeedNode.SpeedProperty
+  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.SpeedProperty
+- uid: Beutl.CoreProperty{System.Single}
+  commentId: T:Beutl.CoreProperty{System.Single}
+  parent: Beutl
+  definition: Beutl.CoreProperty`1
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  name: CoreProperty<float>
+  nameWithType: CoreProperty<float>
+  fullName: Beutl.CoreProperty<float>
+  nameWithType.vb: CoreProperty(Of Single)
+  fullName.vb: Beutl.CoreProperty(Of Single)
+  name.vb: CoreProperty(Of Single)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - uid: System.Single
     name: float
@@ -739,10 +829,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.single
   - name: '>'
   spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -751,58 +841,56 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
   - name: )
-- uid: Beutl.Engine.IProperty`1
-  commentId: T:Beutl.Engine.IProperty`1
+- uid: Beutl.CoreProperty`1
+  commentId: T:Beutl.CoreProperty`1
   isExternal: true
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<T>
-  nameWithType: IProperty<T>
-  fullName: Beutl.Engine.IProperty<T>
-  nameWithType.vb: IProperty(Of T)
-  fullName.vb: Beutl.Engine.IProperty(Of T)
-  name.vb: IProperty(Of T)
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
   spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Engine
-  commentId: N:Beutl.Engine
+- uid: Beutl
+  commentId: N:Beutl
   isExternal: true
   href: Beutl.html
-  name: Beutl.Engine
-  nameWithType: Beutl.Engine
-  fullName: Beutl.Engine
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed*
+  commentId: Overload:Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed
+  isExternal: true
+  href: Beutl.Audio.Graph.Nodes.SpeedNode.html#Beutl_Audio_Graph_Nodes_SpeedNode_StaticSpeed
+  name: StaticSpeed
+  nameWithType: SpeedNode.StaticSpeed
+  fullName: Beutl.Audio.Graph.Nodes.SpeedNode.StaticSpeed
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

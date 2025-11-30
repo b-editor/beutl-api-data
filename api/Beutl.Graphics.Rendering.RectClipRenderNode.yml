@@ -7,9 +7,9 @@ items:
   children:
   - Beutl.Graphics.Rendering.RectClipRenderNode.#ctor(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
   - Beutl.Graphics.Rendering.RectClipRenderNode.Clip
+  - Beutl.Graphics.Rendering.RectClipRenderNode.Equals(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
   - Beutl.Graphics.Rendering.RectClipRenderNode.Operation
   - Beutl.Graphics.Rendering.RectClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
-  - Beutl.Graphics.Rendering.RectClipRenderNode.Update(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RectClipRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -41,7 +41,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -61,7 +60,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RectClipRenderNode.RectClipRenderNode(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -77,24 +76,24 @@ items:
   nameWithType.vb: RectClipRenderNode.New(Rect, ClipOperation)
   fullName.vb: Beutl.Graphics.Rendering.RectClipRenderNode.New(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
   name.vb: New(Rect, ClipOperation)
-- uid: Beutl.Graphics.Rendering.RectClipRenderNode.Update(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
-  commentId: M:Beutl.Graphics.Rendering.RectClipRenderNode.Update(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
-  id: Update(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+- uid: Beutl.Graphics.Rendering.RectClipRenderNode.Equals(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  commentId: M:Beutl.Graphics.Rendering.RectClipRenderNode.Equals(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
+  id: Equals(Beutl.Graphics.Rect,Beutl.Graphics.ClipOperation)
   parent: Beutl.Graphics.Rendering.RectClipRenderNode
   langs:
   - csharp
   - vb
-  name: Update(Rect, ClipOperation)
-  nameWithType: RectClipRenderNode.Update(Rect, ClipOperation)
-  fullName: Beutl.Graphics.Rendering.RectClipRenderNode.Update(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
+  name: Equals(Rect, ClipOperation)
+  nameWithType: RectClipRenderNode.Equals(Rect, ClipOperation)
+  fullName: Beutl.Graphics.Rendering.RectClipRenderNode.Equals(Beutl.Graphics.Rect, Beutl.Graphics.ClipOperation)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Update(Rect clip, ClipOperation operation)
+    content: public bool Equals(Rect clip, ClipOperation operation)
     parameters:
     - id: clip
       type: Beutl.Graphics.Rect
@@ -102,8 +101,8 @@ items:
       type: Beutl.Graphics.ClipOperation
     return:
       type: System.Boolean
-    content.vb: Public Function Update(clip As Rect, operation As ClipOperation) As Boolean
-  overload: Beutl.Graphics.Rendering.RectClipRenderNode.Update*
+    content.vb: Public Function Equals(clip As Rect, operation As ClipOperation) As Boolean
+  overload: Beutl.Graphics.Rendering.RectClipRenderNode.Equals*
 - uid: Beutl.Graphics.Rendering.RectClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.RectClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -116,7 +115,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RectClipRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -143,7 +142,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RectClipRenderNode.Clip
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -166,7 +165,7 @@ items:
   fullName: Beutl.Graphics.Rendering.RectClipRenderNode.Operation
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/RectClipRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -476,14 +475,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -747,13 +738,13 @@ references:
     name: Graphics
     isExternal: true
     href: Beutl.Graphics.html
-- uid: Beutl.Graphics.Rendering.RectClipRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.RectClipRenderNode.Update
+- uid: Beutl.Graphics.Rendering.RectClipRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.RectClipRenderNode.Equals
   isExternal: true
-  href: Beutl.Graphics.Rendering.RectClipRenderNode.html#Beutl_Graphics_Rendering_RectClipRenderNode_Update_Beutl_Graphics_Rect_Beutl_Graphics_ClipOperation_
-  name: Update
-  nameWithType: RectClipRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.RectClipRenderNode.Update
+  href: Beutl.Graphics.Rendering.RectClipRenderNode.html#Beutl_Graphics_Rendering_RectClipRenderNode_Equals_Beutl_Graphics_Rect_Beutl_Graphics_ClipOperation_
+  name: Equals
+  nameWithType: RectClipRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.RectClipRenderNode.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

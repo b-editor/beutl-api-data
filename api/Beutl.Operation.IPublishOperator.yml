@@ -14,7 +14,7 @@ items:
   fullName: Beutl.Operation.IPublishOperator
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/IPublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/IPublishOperator.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.Operation
@@ -33,16 +33,16 @@ items:
   fullName: Beutl.Operation.IPublishOperator.Value
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/Operation/IPublishOperator.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/Operation/IPublishOperator.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.Operation
   syntax:
-    content: EngineObject Value { get; }
+    content: Renderable Value { get; }
     parameters: []
     return:
-      type: Beutl.Engine.EngineObject
-    content.vb: ReadOnly Property Value As EngineObject
+      type: Beutl.Graphics.Rendering.Renderable
+    content.vb: ReadOnly Property Value As Renderable
   overload: Beutl.Operation.IPublishOperator.Value*
 references:
 - uid: Beutl.Operation
@@ -79,38 +79,48 @@ references:
   name: Value
   nameWithType: IPublishOperator.Value
   fullName: Beutl.Operation.IPublishOperator.Value
-- uid: Beutl.Engine.EngineObject
-  commentId: T:Beutl.Engine.EngineObject
-  parent: Beutl.Engine
+- uid: Beutl.Graphics.Rendering.Renderable
+  commentId: T:Beutl.Graphics.Rendering.Renderable
+  parent: Beutl.Graphics.Rendering
   isExternal: true
-  href: Beutl.Engine.EngineObject.html
-  name: EngineObject
-  nameWithType: EngineObject
-  fullName: Beutl.Engine.EngineObject
-- uid: Beutl.Engine
-  commentId: N:Beutl.Engine
+  href: Beutl.Graphics.Rendering.Renderable.html
+  name: Renderable
+  nameWithType: Renderable
+  fullName: Beutl.Graphics.Rendering.Renderable
+- uid: Beutl.Graphics.Rendering
+  commentId: N:Beutl.Graphics.Rendering
   isExternal: true
   href: Beutl.html
-  name: Beutl.Engine
-  nameWithType: Beutl.Engine
-  fullName: Beutl.Engine
+  name: Beutl.Graphics.Rendering
+  nameWithType: Beutl.Graphics.Rendering
+  fullName: Beutl.Graphics.Rendering
   spec.csharp:
   - uid: Beutl
     name: Beutl
     isExternal: true
     href: Beutl.html
   - name: .
-  - uid: Beutl.Engine
-    name: Engine
+  - uid: Beutl.Graphics
+    name: Graphics
     isExternal: true
-    href: Beutl.Engine.html
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html
   spec.vb:
   - uid: Beutl
     name: Beutl
     isExternal: true
     href: Beutl.html
   - name: .
-  - uid: Beutl.Engine
-    name: Engine
+  - uid: Beutl.Graphics
+    name: Graphics
     isExternal: true
-    href: Beutl.Engine.html
+    href: Beutl.Graphics.html
+  - name: .
+  - uid: Beutl.Graphics.Rendering
+    name: Rendering
+    isExternal: true
+    href: Beutl.Graphics.Rendering.html

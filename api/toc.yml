@@ -64,9 +64,6 @@ items:
   - uid: Beutl.CultureNameValidation
     name: CultureNameValidation
     type: Class
-  - uid: Beutl.ElementEditedEventArgs
-    name: ElementEditedEventArgs
-    type: Class
   - uid: Beutl.EnumExtensions
     name: EnumExtensions
     type: Class
@@ -115,9 +112,6 @@ items:
   - uid: Beutl.IModifiableHierarchical
     name: IModifiableHierarchical
     type: Interface
-  - uid: Beutl.INotifyEdited
-    name: INotifyEdited
-    type: Interface
   - uid: Beutl.IOptional
     name: IOptional
     type: Interface
@@ -132,6 +126,9 @@ items:
     type: Interface
   - uid: Beutl.IStaticProperty
     name: IStaticProperty
+    type: Interface
+  - uid: Beutl.IStorable
+    name: IStorable
     type: Interface
   - uid: Beutl.ITupleConvertible`2
     name: ITupleConvertible<TSelf, T>
@@ -159,6 +156,9 @@ items:
     type: Class
   - uid: Beutl.ProjectItem
     name: ProjectItem
+    type: Class
+  - uid: Beutl.ProjectItemContainer
+    name: ProjectItemContainer
     type: Class
   - uid: Beutl.ProjectVariableKeys
     name: ProjectVariableKeys
@@ -196,12 +196,24 @@ items:
   - uid: Beutl.TimeSpanExtensions
     name: TimeSpanExtensions
     type: Class
+  - uid: Beutl.TimelineInvalidatedEventArgs
+    name: TimelineInvalidatedEventArgs
+    type: Class
 - uid: Beutl.Animation
   name: Beutl.Animation
   type: Namespace
   items:
+  - uid: Beutl.Animation.Animatable
+    name: Animatable
+    type: Class
+  - uid: Beutl.Animation.AnimationExtensions
+    name: AnimationExtensions
+    type: Class
   - uid: Beutl.Animation.AnimationSampler
     name: AnimationSampler
+    type: Class
+  - uid: Beutl.Animation.Animations
+    name: Animations
     type: Class
   - uid: Beutl.Animation.Animator
     name: Animator
@@ -212,11 +224,17 @@ items:
   - uid: Beutl.Animation.Animator`1
     name: Animator<T>
     type: Class
+  - uid: Beutl.Animation.IAnimatable
+    name: IAnimatable
+    type: Interface
   - uid: Beutl.Animation.IAnimation
     name: IAnimation
     type: Interface
   - uid: Beutl.Animation.IAnimation`1
     name: IAnimation<T>
+    type: Interface
+  - uid: Beutl.Animation.IClock
+    name: IClock
     type: Interface
   - uid: Beutl.Animation.IKeyFrame
     name: IKeyFrame
@@ -224,6 +242,9 @@ items:
   - uid: Beutl.Animation.IKeyFrameAnimation
     name: IKeyFrameAnimation
     type: Interface
+  - uid: Beutl.Animation.InstanceClock
+    name: InstanceClock
+    type: Class
   - uid: Beutl.Animation.KeyFrame
     name: KeyFrame
     type: Class
@@ -472,14 +493,11 @@ items:
   - uid: Beutl.Audio.Effects.AudioEffect
     name: AudioEffect
     type: Class
-  - uid: Beutl.Audio.Effects.AudioEffect.Resource
-    name: AudioEffect.Resource
-    type: Class
   - uid: Beutl.Audio.Effects.AudioEffectGroup
     name: AudioEffectGroup
     type: Class
-  - uid: Beutl.Audio.Effects.AudioEffectGroup.Resource
-    name: AudioEffectGroup.Resource
+  - uid: Beutl.Audio.Effects.AudioEffects
+    name: AudioEffects
     type: Class
   - uid: Beutl.Audio.Effects.CircularBuffer`1
     name: CircularBuffer<T>
@@ -487,11 +505,14 @@ items:
   - uid: Beutl.Audio.Effects.DelayEffect
     name: DelayEffect
     type: Class
-  - uid: Beutl.Audio.Effects.DelayEffect.Resource
-    name: DelayEffect.Resource
-    type: Class
+  - uid: Beutl.Audio.Effects.IAudioEffect
+    name: IAudioEffect
+    type: Interface
   - uid: Beutl.Audio.Effects.IAudioEffectProcessor
     name: IAudioEffectProcessor
+    type: Interface
+  - uid: Beutl.Audio.Effects.IMutableAudioEffect
+    name: IMutableAudioEffect
     type: Interface
 - uid: Beutl.Audio.Graph
   name: Beutl.Audio.Graph
@@ -723,52 +744,6 @@ items:
   - uid: Beutl.Converters.VectorConverter
     name: VectorConverter
     type: Class
-- uid: Beutl.Engine
-  name: Beutl.Engine
-  type: Namespace
-  items:
-  - uid: Beutl.Engine.AnimatableProperty`1
-    name: AnimatableProperty<T>
-    type: Class
-  - uid: Beutl.Engine.EngineObject
-    name: EngineObject
-    type: Class
-  - uid: Beutl.Engine.EngineObject.Resource
-    name: EngineObject.Resource
-    type: Class
-  - uid: Beutl.Engine.IListProperty
-    name: IListProperty
-    type: Interface
-  - uid: Beutl.Engine.IListProperty`1
-    name: IListProperty<T>
-    type: Interface
-  - uid: Beutl.Engine.IProperty
-    name: IProperty
-    type: Interface
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty<T>
-    type: Interface
-  - uid: Beutl.Engine.ListProperty`1
-    name: ListProperty<T>
-    type: Class
-  - uid: Beutl.Engine.Property
-    name: Property
-    type: Class
-  - uid: Beutl.Engine.PropertyValueChangedEventArgs`1
-    name: PropertyValueChangedEventArgs<T>
-    type: Class
-  - uid: Beutl.Engine.ResourceExtension
-    name: ResourceExtension
-    type: Class
-  - uid: Beutl.Engine.SimplePropertyExtensions
-    name: SimplePropertyExtensions
-    type: Class
-  - uid: Beutl.Engine.SimpleProperty`1
-    name: SimpleProperty<T>
-    type: Class
-  - uid: Beutl.Engine.SuppressResourceClassGenerationAttribute
-    name: SuppressResourceClassGenerationAttribute
-    type: Class
 - uid: Beutl.Extensibility
   name: Beutl.Extensibility
   type: Namespace
@@ -912,26 +887,17 @@ items:
   - uid: Beutl.Graphics.Drawable
     name: Drawable
     type: Class
-  - uid: Beutl.Graphics.Drawable.Resource
-    name: Drawable.Resource
-    type: Class
   - uid: Beutl.Graphics.DrawableDecorator
     name: DrawableDecorator
-    type: Class
-  - uid: Beutl.Graphics.DrawableDecorator.Resource
-    name: DrawableDecorator.Resource
     type: Class
   - uid: Beutl.Graphics.DrawableGroup
     name: DrawableGroup
     type: Class
-  - uid: Beutl.Graphics.DrawableGroup.Resource
-    name: DrawableGroup.Resource
+  - uid: Beutl.Graphics.Drawables
+    name: Drawables
     type: Class
   - uid: Beutl.Graphics.DummyDrawable
     name: DummyDrawable
-    type: Class
-  - uid: Beutl.Graphics.DummyDrawable.Resource
-    name: DummyDrawable.Resource
     type: Class
   - uid: Beutl.Graphics.EncodedImageFormat
     name: EncodedImageFormat
@@ -987,20 +953,11 @@ items:
   - uid: Beutl.Graphics.SourceBackdrop
     name: SourceBackdrop
     type: Class
-  - uid: Beutl.Graphics.SourceBackdrop.Resource
-    name: SourceBackdrop.Resource
-    type: Class
   - uid: Beutl.Graphics.SourceImage
     name: SourceImage
     type: Class
-  - uid: Beutl.Graphics.SourceImage.Resource
-    name: SourceImage.Resource
-    type: Class
   - uid: Beutl.Graphics.SourceVideo
     name: SourceVideo
-    type: Class
-  - uid: Beutl.Graphics.SourceVideo.Resource
-    name: SourceVideo.Resource
     type: Class
   - uid: Beutl.Graphics.Thickness
     name: Thickness
@@ -1018,44 +975,35 @@ items:
   - uid: Beutl.Graphics.Effects.BlendEffect
     name: BlendEffect
     type: Class
-  - uid: Beutl.Graphics.Effects.BlendEffect.Resource
-    name: BlendEffect.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.Blur
     name: Blur
     type: Class
-  - uid: Beutl.Graphics.Effects.Blur.Resource
-    name: Blur.Resource
+  - uid: Beutl.Graphics.Effects.Border
+    name: Border
     type: Class
+  - uid: Beutl.Graphics.Effects.Border.BorderStyles
+    name: Border.BorderStyles
+    type: Enum
+  - uid: Beutl.Graphics.Effects.Border.MaskTypes
+    name: Border.MaskTypes
+    type: Enum
   - uid: Beutl.Graphics.Effects.Brightness
     name: Brightness
-    type: Class
-  - uid: Beutl.Graphics.Effects.Brightness.Resource
-    name: Brightness.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.ChromaKey
     name: ChromaKey
     type: Class
-  - uid: Beutl.Graphics.Effects.ChromaKey.Resource
-    name: ChromaKey.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.Clipping
     name: Clipping
-    type: Class
-  - uid: Beutl.Graphics.Effects.Clipping.Resource
-    name: Clipping.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.ColorKey
     name: ColorKey
     type: Class
-  - uid: Beutl.Graphics.Effects.ColorKey.Resource
-    name: ColorKey.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.ColorShift
     name: ColorShift
     type: Class
-  - uid: Beutl.Graphics.Effects.ColorShift.Resource
-    name: ColorShift.Resource
+  - uid: Beutl.Graphics.Effects.CombinedFilterEffect
+    name: CombinedFilterEffect
     type: Class
   - uid: Beutl.Graphics.Effects.CustomFilterEffectContext
     name: CustomFilterEffectContext
@@ -1063,50 +1011,26 @@ items:
   - uid: Beutl.Graphics.Effects.Dilate
     name: Dilate
     type: Class
-  - uid: Beutl.Graphics.Effects.Dilate.Resource
-    name: Dilate.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.DisplacementMapEffect
     name: DisplacementMapEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.DisplacementMapEffect.Resource
-    name: DisplacementMapEffect.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.DisplacementMapRotationTransform
     name: DisplacementMapRotationTransform
     type: Class
-  - uid: Beutl.Graphics.Effects.DisplacementMapRotationTransform.Resource
-    name: DisplacementMapRotationTransform.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.DisplacementMapScaleTransform
     name: DisplacementMapScaleTransform
-    type: Class
-  - uid: Beutl.Graphics.Effects.DisplacementMapScaleTransform.Resource
-    name: DisplacementMapScaleTransform.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.DisplacementMapTransform
     name: DisplacementMapTransform
     type: Class
-  - uid: Beutl.Graphics.Effects.DisplacementMapTransform.Resource
-    name: DisplacementMapTransform.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.DisplacementMapTranslateTransform
     name: DisplacementMapTranslateTransform
-    type: Class
-  - uid: Beutl.Graphics.Effects.DisplacementMapTranslateTransform.Resource
-    name: DisplacementMapTranslateTransform.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.DropShadow
     name: DropShadow
     type: Class
-  - uid: Beutl.Graphics.Effects.DropShadow.Resource
-    name: DropShadow.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.DummyFilterEffect
     name: DummyFilterEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.DummyFilterEffect.Resource
-    name: DummyFilterEffect.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.EffectTarget
     name: EffectTarget
@@ -1117,14 +1041,8 @@ items:
   - uid: Beutl.Graphics.Effects.Erode
     name: Erode
     type: Class
-  - uid: Beutl.Graphics.Effects.Erode.Resource
-    name: Erode.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.FilterEffect
     name: FilterEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.FilterEffect.Resource
-    name: FilterEffect.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.FilterEffectActivator
     name: FilterEffectActivator
@@ -1132,29 +1050,23 @@ items:
   - uid: Beutl.Graphics.Effects.FilterEffectContext
     name: FilterEffectContext
     type: Class
+  - uid: Beutl.Graphics.Effects.FilterEffectCustomOperationContext
+    name: FilterEffectCustomOperationContext
+    type: Class
   - uid: Beutl.Graphics.Effects.FilterEffectGroup
     name: FilterEffectGroup
     type: Class
-  - uid: Beutl.Graphics.Effects.FilterEffectGroup.Resource
-    name: FilterEffectGroup.Resource
+  - uid: Beutl.Graphics.Effects.FilterEffects
+    name: FilterEffects
     type: Class
   - uid: Beutl.Graphics.Effects.FlatShadow
     name: FlatShadow
     type: Class
-  - uid: Beutl.Graphics.Effects.FlatShadow.Resource
-    name: FlatShadow.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.Gamma
     name: Gamma
     type: Class
-  - uid: Beutl.Graphics.Effects.Gamma.Resource
-    name: Gamma.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.HighContrast
     name: HighContrast
-    type: Class
-  - uid: Beutl.Graphics.Effects.HighContrast.Resource
-    name: HighContrast.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.HighContrastInvertStyle
     name: HighContrastInvertStyle
@@ -1162,62 +1074,32 @@ items:
   - uid: Beutl.Graphics.Effects.HueRotate
     name: HueRotate
     type: Class
-  - uid: Beutl.Graphics.Effects.HueRotate.Resource
-    name: HueRotate.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.InnerShadow
     name: InnerShadow
-    type: Class
-  - uid: Beutl.Graphics.Effects.InnerShadow.Resource
-    name: InnerShadow.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.Invert
     name: Invert
     type: Class
-  - uid: Beutl.Graphics.Effects.Invert.Resource
-    name: Invert.Resource
-    type: Class
-  - uid: Beutl.Graphics.Effects.LayerEffect
-    name: LayerEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.LayerEffect.Resource
-    name: LayerEffect.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.Lighting
     name: Lighting
-    type: Class
-  - uid: Beutl.Graphics.Effects.Lighting.Resource
-    name: Lighting.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.LumaColor
     name: LumaColor
     type: Class
-  - uid: Beutl.Graphics.Effects.LumaColor.Resource
-    name: LumaColor.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.LutEffect
     name: LutEffect
     type: Class
-  - uid: Beutl.Graphics.Effects.LutEffect.Resource
-    name: LutEffect.Resource
+  - uid: Beutl.Graphics.Effects.Mosaic
+    name: Mosaic
     type: Class
   - uid: Beutl.Graphics.Effects.MosaicEffect
     name: MosaicEffect
     type: Class
-  - uid: Beutl.Graphics.Effects.MosaicEffect.Resource
-    name: MosaicEffect.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.Negaposi
     name: Negaposi
     type: Class
-  - uid: Beutl.Graphics.Effects.Negaposi.Resource
-    name: Negaposi.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.PartsSplitEffect
     name: PartsSplitEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.PartsSplitEffect.Resource
-    name: PartsSplitEffect.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.PerlinNoise
     name: PerlinNoise
@@ -1228,26 +1110,14 @@ items:
   - uid: Beutl.Graphics.Effects.Saturate
     name: Saturate
     type: Class
-  - uid: Beutl.Graphics.Effects.Saturate.Resource
-    name: Saturate.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.ShakeEffect
     name: ShakeEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.ShakeEffect.Resource
-    name: ShakeEffect.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.SplitEffect
     name: SplitEffect
     type: Class
-  - uid: Beutl.Graphics.Effects.SplitEffect.Resource
-    name: SplitEffect.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.StrokeEffect
     name: StrokeEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.StrokeEffect.Resource
-    name: StrokeEffect.Resource
     type: Class
   - uid: Beutl.Graphics.Effects.StrokeEffect.StrokeStyles
     name: StrokeEffect.StrokeStyles
@@ -1255,14 +1125,8 @@ items:
   - uid: Beutl.Graphics.Effects.Threshold
     name: Threshold
     type: Class
-  - uid: Beutl.Graphics.Effects.Threshold.Resource
-    name: Threshold.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.TransformEffect
     name: TransformEffect
-    type: Class
-  - uid: Beutl.Graphics.Effects.TransformEffect.Resource
-    name: TransformEffect.Resource
     type: Class
 - uid: Beutl.Graphics.Effects.OpenCv
   name: Beutl.Graphics.Effects.OpenCv
@@ -1271,20 +1135,11 @@ items:
   - uid: Beutl.Graphics.Effects.OpenCv.Blur
     name: Blur
     type: Class
-  - uid: Beutl.Graphics.Effects.OpenCv.Blur.Resource
-    name: Blur.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.OpenCv.GaussianBlur
     name: GaussianBlur
     type: Class
-  - uid: Beutl.Graphics.Effects.OpenCv.GaussianBlur.Resource
-    name: GaussianBlur.Resource
-    type: Class
   - uid: Beutl.Graphics.Effects.OpenCv.MedianBlur
     name: MedianBlur
-    type: Class
-  - uid: Beutl.Graphics.Effects.OpenCv.MedianBlur.Resource
-    name: MedianBlur.Resource
     type: Class
 - uid: Beutl.Graphics.Operations
   name: Beutl.Graphics.Operations
@@ -1351,9 +1206,6 @@ items:
   - uid: Beutl.Graphics.Rendering.LayerRenderNode
     name: LayerRenderNode
     type: Class
-  - uid: Beutl.Graphics.Rendering.MemoryNode`1
-    name: MemoryNode<T>
-    type: Class
   - uid: Beutl.Graphics.Rendering.OpacityMaskRenderNode
     name: OpacityMaskRenderNode
     type: Class
@@ -1368,9 +1220,6 @@ items:
     type: Class
   - uid: Beutl.Graphics.Rendering.RectangleRenderNode
     name: RectangleRenderNode
-    type: Class
-  - uid: Beutl.Graphics.Rendering.RenderContext
-    name: RenderContext
     type: Class
   - uid: Beutl.Graphics.Rendering.RenderLayer
     name: RenderLayer
@@ -1395,6 +1244,9 @@ items:
     type: Class
   - uid: Beutl.Graphics.Rendering.RenderThread
     name: RenderThread
+    type: Class
+  - uid: Beutl.Graphics.Rendering.Renderable
+    name: Renderable
     type: Class
   - uid: Beutl.Graphics.Rendering.Renderer
     name: Renderer
@@ -1440,38 +1292,20 @@ items:
   - uid: Beutl.Graphics.Shapes.EllipseShape
     name: EllipseShape
     type: Class
-  - uid: Beutl.Graphics.Shapes.EllipseShape.Resource
-    name: EllipseShape.Resource
-    type: Class
   - uid: Beutl.Graphics.Shapes.GeometryShape
     name: GeometryShape
-    type: Class
-  - uid: Beutl.Graphics.Shapes.GeometryShape.Resource
-    name: GeometryShape.Resource
     type: Class
   - uid: Beutl.Graphics.Shapes.RectShape
     name: RectShape
     type: Class
-  - uid: Beutl.Graphics.Shapes.RectShape.Resource
-    name: RectShape.Resource
-    type: Class
   - uid: Beutl.Graphics.Shapes.RoundedRectShape
     name: RoundedRectShape
-    type: Class
-  - uid: Beutl.Graphics.Shapes.RoundedRectShape.Resource
-    name: RoundedRectShape.Resource
     type: Class
   - uid: Beutl.Graphics.Shapes.Shape
     name: Shape
     type: Class
-  - uid: Beutl.Graphics.Shapes.Shape.Resource
-    name: Shape.Resource
-    type: Class
   - uid: Beutl.Graphics.Shapes.TextBlock
     name: TextBlock
-    type: Class
-  - uid: Beutl.Graphics.Shapes.TextBlock.Resource
-    name: TextBlock.Resource
     type: Class
   - uid: Beutl.Graphics.Shapes.TextElement
     name: TextElement
@@ -1495,8 +1329,17 @@ items:
   name: Beutl.Graphics.Transformation
   type: Namespace
   items:
+  - uid: Beutl.Graphics.Transformation.IMutableTransform
+    name: IMutableTransform
+    type: Interface
+  - uid: Beutl.Graphics.Transformation.ITransform
+    name: ITransform
+    type: Interface
   - uid: Beutl.Graphics.Transformation.MatrixTransform
     name: MatrixTransform
+    type: Class
+  - uid: Beutl.Graphics.Transformation.MultiTransform
+    name: MultiTransform
     type: Class
   - uid: Beutl.Graphics.Transformation.Rotation3DTransform
     name: Rotation3DTransform
@@ -1513,28 +1356,15 @@ items:
   - uid: Beutl.Graphics.Transformation.Transform
     name: Transform
     type: Class
-  - uid: Beutl.Graphics.Transformation.Transform.Resource
-    name: Transform.Resource
-    type: Class
   - uid: Beutl.Graphics.Transformation.TransformGroup
     name: TransformGroup
+    type: Class
+  - uid: Beutl.Graphics.Transformation.Transforms
+    name: Transforms
     type: Class
   - uid: Beutl.Graphics.Transformation.TranslateTransform
     name: TranslateTransform
     type: Class
-- uid: Beutl.IO
-  name: Beutl.IO
-  type: Namespace
-  items:
-  - uid: Beutl.IO.BlobFileSource
-    name: BlobFileSource
-    type: Class
-  - uid: Beutl.IO.FileSourceJsonConverter
-    name: FileSourceJsonConverter
-    type: Class
-  - uid: Beutl.IO.IFileSource
-    name: IFileSource
-    type: Interface
 - uid: Beutl.Logging
   name: Beutl.Logging
   type: Namespace
@@ -1546,6 +1376,9 @@ items:
   name: Beutl.Media
   type: Namespace
   items:
+  - uid: Beutl.Media.AffectsRenders`1
+    name: AffectsRenders<T>
+    type: Class
   - uid: Beutl.Media.AlignmentX
     name: AlignmentX
     type: Enum
@@ -1554,9 +1387,6 @@ items:
     type: Enum
   - uid: Beutl.Media.ArcSegment
     name: ArcSegment
-    type: Class
-  - uid: Beutl.Media.ArcSegment.Resource
-    name: ArcSegment.Resource
     type: Class
   - uid: Beutl.Media.BitmapInfo
     name: BitmapInfo
@@ -1570,14 +1400,11 @@ items:
   - uid: Beutl.Media.Brush
     name: Brush
     type: Class
-  - uid: Beutl.Media.Brush.Resource
-    name: Brush.Resource
-    type: Class
   - uid: Beutl.Media.Brushes
     name: Brushes
     type: Class
-  - uid: Beutl.Media.Brushes.Resource
-    name: Brushes.Resource
+  - uid: Beutl.Media.CloseOperation
+    name: CloseOperation
     type: Class
   - uid: Beutl.Media.Cmyk
     name: Cmyk
@@ -1594,14 +1421,8 @@ items:
   - uid: Beutl.Media.ConicGradientBrush
     name: ConicGradientBrush
     type: Class
-  - uid: Beutl.Media.ConicGradientBrush.Resource
-    name: ConicGradientBrush.Resource
-    type: Class
   - uid: Beutl.Media.ConicSegment
     name: ConicSegment
-    type: Class
-  - uid: Beutl.Media.ConicSegment.Resource
-    name: ConicSegment.Resource
     type: Class
   - uid: Beutl.Media.CornerRadius
     name: CornerRadius
@@ -1609,26 +1430,14 @@ items:
   - uid: Beutl.Media.CubicBezierSegment
     name: CubicBezierSegment
     type: Class
-  - uid: Beutl.Media.CubicBezierSegment.Resource
-    name: CubicBezierSegment.Resource
-    type: Class
   - uid: Beutl.Media.DrawableBrush
     name: DrawableBrush
-    type: Class
-  - uid: Beutl.Media.DrawableBrush.Resource
-    name: DrawableBrush.Resource
     type: Class
   - uid: Beutl.Media.DummyBrush
     name: DummyBrush
     type: Class
-  - uid: Beutl.Media.DummyBrush.Resource
-    name: DummyBrush.Resource
-    type: Class
   - uid: Beutl.Media.EllipseGeometry
     name: EllipseGeometry
-    type: Class
-  - uid: Beutl.Media.EllipseGeometry.Resource
-    name: EllipseGeometry.Resource
     type: Class
   - uid: Beutl.Media.FontFamily
     name: FontFamily
@@ -1648,17 +1457,11 @@ items:
   - uid: Beutl.Media.Geometry
     name: Geometry
     type: Class
-  - uid: Beutl.Media.Geometry.Resource
-    name: Geometry.Resource
-    type: Class
   - uid: Beutl.Media.GeometryContext
     name: GeometryContext
     type: Class
   - uid: Beutl.Media.GradientBrush
     name: GradientBrush
-    type: Class
-  - uid: Beutl.Media.GradientBrush.Resource
-    name: GradientBrush.Resource
     type: Class
   - uid: Beutl.Media.GradientSpreadMethod
     name: GradientSpreadMethod
@@ -1666,44 +1469,83 @@ items:
   - uid: Beutl.Media.GradientStop
     name: GradientStop
     type: Class
-  - uid: Beutl.Media.GradientStop.Resource
-    name: GradientStop.Resource
+  - uid: Beutl.Media.GradientStops
+    name: GradientStops
     type: Class
   - uid: Beutl.Media.Hsv
     name: Hsv
     type: Struct
+  - uid: Beutl.Media.IAffectsRender
+    name: IAffectsRender
+    type: Interface
   - uid: Beutl.Media.IBitmap
     name: IBitmap
+    type: Interface
+  - uid: Beutl.Media.IBrush
+    name: IBrush
+    type: Interface
+  - uid: Beutl.Media.IConicGradientBrush
+    name: IConicGradientBrush
+    type: Interface
+  - uid: Beutl.Media.IDrawableBrush
+    name: IDrawableBrush
     type: Interface
   - uid: Beutl.Media.IGeometryContext
     name: IGeometryContext
     type: Interface
+  - uid: Beutl.Media.IGradientBrush
+    name: IGradientBrush
+    type: Interface
+  - uid: Beutl.Media.IGradientStop
+    name: IGradientStop
+    type: Interface
+  - uid: Beutl.Media.IImageBrush
+    name: IImageBrush
+    type: Interface
+  - uid: Beutl.Media.ILinearGradientBrush
+    name: ILinearGradientBrush
+    type: Interface
+  - uid: Beutl.Media.IMutableBrush
+    name: IMutableBrush
+    type: Interface
+  - uid: Beutl.Media.IMutablePen
+    name: IMutablePen
+    type: Interface
+  - uid: Beutl.Media.IPen
+    name: IPen
+    type: Interface
+  - uid: Beutl.Media.IPerlinNoiseBrush
+    name: IPerlinNoiseBrush
+    type: Interface
+  - uid: Beutl.Media.IRadialGradientBrush
+    name: IRadialGradientBrush
+    type: Interface
+  - uid: Beutl.Media.ISolidColorBrush
+    name: ISolidColorBrush
+    type: Interface
+  - uid: Beutl.Media.ITileBrush
+    name: ITileBrush
+    type: Interface
   - uid: Beutl.Media.ImageBrush
     name: ImageBrush
-    type: Class
-  - uid: Beutl.Media.ImageBrush.Resource
-    name: ImageBrush.Resource
     type: Class
   - uid: Beutl.Media.LineSegment
     name: LineSegment
     type: Class
-  - uid: Beutl.Media.LineSegment.Resource
-    name: LineSegment.Resource
-    type: Class
   - uid: Beutl.Media.LinearGradientBrush
     name: LinearGradientBrush
-    type: Class
-  - uid: Beutl.Media.LinearGradientBrush.Resource
-    name: LinearGradientBrush.Resource
     type: Class
   - uid: Beutl.Media.MediaExtensions
     name: MediaExtensions
     type: Class
+  - uid: Beutl.Media.MoveOperation
+    name: MoveOperation
+    type: Class
   - uid: Beutl.Media.PathFigure
     name: PathFigure
     type: Class
-  - uid: Beutl.Media.PathFigure.Resource
-    name: PathFigure.Resource
+  - uid: Beutl.Media.PathFigures
+    name: PathFigures
     type: Class
   - uid: Beutl.Media.PathFillType
     name: PathFillType
@@ -1711,26 +1553,17 @@ items:
   - uid: Beutl.Media.PathGeometry
     name: PathGeometry
     type: Class
-  - uid: Beutl.Media.PathGeometry.Resource
-    name: PathGeometry.Resource
-    type: Class
   - uid: Beutl.Media.PathSegment
     name: PathSegment
     type: Class
-  - uid: Beutl.Media.PathSegment.Resource
-    name: PathSegment.Resource
+  - uid: Beutl.Media.PathSegments
+    name: PathSegments
     type: Class
   - uid: Beutl.Media.Pen
     name: Pen
     type: Class
-  - uid: Beutl.Media.Pen.Resource
-    name: Pen.Resource
-    type: Class
   - uid: Beutl.Media.PerlinNoiseBrush
     name: PerlinNoiseBrush
-    type: Class
-  - uid: Beutl.Media.PerlinNoiseBrush.Resource
-    name: PerlinNoiseBrush.Resource
     type: Class
   - uid: Beutl.Media.PerlinNoiseType
     name: PerlinNoiseType
@@ -1747,20 +1580,11 @@ items:
   - uid: Beutl.Media.QuadraticBezierSegment
     name: QuadraticBezierSegment
     type: Class
-  - uid: Beutl.Media.QuadraticBezierSegment.Resource
-    name: QuadraticBezierSegment.Resource
-    type: Class
   - uid: Beutl.Media.RadialGradientBrush
     name: RadialGradientBrush
     type: Class
-  - uid: Beutl.Media.RadialGradientBrush.Resource
-    name: RadialGradientBrush.Resource
-    type: Class
   - uid: Beutl.Media.RectGeometry
     name: RectGeometry
-    type: Class
-  - uid: Beutl.Media.RectGeometry.Resource
-    name: RectGeometry.Resource
     type: Class
   - uid: Beutl.Media.RenderInvalidatedEventArgs
     name: RenderInvalidatedEventArgs
@@ -1771,14 +1595,8 @@ items:
   - uid: Beutl.Media.RoundedRectGeometry
     name: RoundedRectGeometry
     type: Class
-  - uid: Beutl.Media.RoundedRectGeometry.Resource
-    name: RoundedRectGeometry.Resource
-    type: Class
   - uid: Beutl.Media.SolidColorBrush
     name: SolidColorBrush
-    type: Class
-  - uid: Beutl.Media.SolidColorBrush.Resource
-    name: SolidColorBrush.Resource
     type: Class
   - uid: Beutl.Media.Stretch
     name: Stretch
@@ -1797,9 +1615,6 @@ items:
     type: Enum
   - uid: Beutl.Media.TileBrush
     name: TileBrush
-    type: Class
-  - uid: Beutl.Media.TileBrush.Resource
-    name: TileBrush.Resource
     type: Class
   - uid: Beutl.Media.TileMode
     name: TileMode
@@ -1915,6 +1730,46 @@ items:
     type: Class
   - uid: Beutl.Media.Encoding.VideoEncoderSettings
     name: VideoEncoderSettings
+    type: Class
+- uid: Beutl.Media.Immutable
+  name: Beutl.Media.Immutable
+  type: Namespace
+  items:
+  - uid: Beutl.Media.Immutable.ImmutableConicGradientBrush
+    name: ImmutableConicGradientBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableDrawableBrush
+    name: ImmutableDrawableBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableGradientBrush
+    name: ImmutableGradientBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableGradientStop
+    name: ImmutableGradientStop
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableImageBrush
+    name: ImmutableImageBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableLinearGradientBrush
+    name: ImmutableLinearGradientBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutablePen
+    name: ImmutablePen
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutablePerlinNoiseBrush
+    name: ImmutablePerlinNoiseBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableRadialGradientBrush
+    name: ImmutableRadialGradientBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableSolidColorBrush
+    name: ImmutableSolidColorBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableTileBrush
+    name: ImmutableTileBrush
+    type: Class
+  - uid: Beutl.Media.Immutable.ImmutableTransform
+    name: ImmutableTransform
     type: Class
 - uid: Beutl.Media.Music
   name: Beutl.Media.Music
@@ -2158,6 +2013,9 @@ items:
   - uid: Beutl.NodeTree.Nodes.ConfigureNode
     name: ConfigureNode
     type: Class
+  - uid: Beutl.NodeTree.Nodes.ConfigureNodeEvaluationState
+    name: ConfigureNodeEvaluationState
+    type: Class
   - uid: Beutl.NodeTree.Nodes.GeometryShapeNode
     name: GeometryShapeNode
     type: Class
@@ -2170,14 +2028,14 @@ items:
   - uid: Beutl.NodeTree.Nodes.LayerInputNode.LayerInputSocket`1
     name: LayerInputNode.LayerInputSocket<T>
     type: Class
+  - uid: Beutl.NodeTree.Nodes.LayerOutputNode
+    name: LayerOutputNode
+    type: Class
   - uid: Beutl.NodeTree.Nodes.NodesRegistrar
     name: NodesRegistrar
     type: Class
   - uid: Beutl.NodeTree.Nodes.OutputNode
     name: OutputNode
-    type: Class
-  - uid: Beutl.NodeTree.Nodes.TransformNode
-    name: TransformNode
     type: Class
 - uid: Beutl.NodeTree.Nodes.Brushes
   name: Beutl.NodeTree.Nodes.Brushes
@@ -2186,11 +2044,29 @@ items:
   - uid: Beutl.NodeTree.Nodes.Brushes.BrushNode`1
     name: BrushNode<T>
     type: Class
+  - uid: Beutl.NodeTree.Nodes.Brushes.ConicGradientBrushNode
+    name: ConicGradientBrushNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Brushes.DrawableBrushNode
+    name: DrawableBrushNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Brushes.FillNode
+    name: FillNode
+    type: Class
   - uid: Beutl.NodeTree.Nodes.Brushes.GradientBrushNode`1
     name: GradientBrushNode<T>
     type: Class
+  - uid: Beutl.NodeTree.Nodes.Brushes.LinearGradientBrushNode
+    name: LinearGradientBrushNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Brushes.RadialGradientBrushNode
+    name: RadialGradientBrushNode
+    type: Class
   - uid: Beutl.NodeTree.Nodes.Brushes.SolidColorBrushNode
     name: SolidColorBrushNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Brushes.TileBrushNode`1
+    name: TileBrushNode<T>
     type: Class
 - uid: Beutl.NodeTree.Nodes.Effects
   name: Beutl.NodeTree.Nodes.Effects
@@ -2199,8 +2075,11 @@ items:
   - uid: Beutl.NodeTree.Nodes.Effects.DropShadowNode
     name: DropShadowNode
     type: Class
-  - uid: Beutl.NodeTree.Nodes.Effects.FilterEffectNode`1
-    name: FilterEffectNode<T>
+  - uid: Beutl.NodeTree.Nodes.Effects.FilterEffectNode
+    name: FilterEffectNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Effects.FilterEffectNodeEvaluationState
+    name: FilterEffectNodeEvaluationState
     type: Class
 - uid: Beutl.NodeTree.Nodes.Geometry
   name: Beutl.NodeTree.Nodes.Geometry
@@ -2208,9 +2087,6 @@ items:
   items:
   - uid: Beutl.NodeTree.Nodes.Geometry.EllipseGeometryNode
     name: EllipseGeometryNode
-    type: Class
-  - uid: Beutl.NodeTree.Nodes.Geometry.GeometryNode`2
-    name: GeometryNode<T, TResource>
     type: Class
   - uid: Beutl.NodeTree.Nodes.Geometry.RectGeometryNode
     name: RectGeometryNode
@@ -2240,6 +2116,34 @@ items:
   - uid: Beutl.NodeTree.Nodes.Group.IGroupSocket
     name: IGroupSocket
     type: Interface
+- uid: Beutl.NodeTree.Nodes.Transform
+  name: Beutl.NodeTree.Nodes.Transform
+  type: Namespace
+  items:
+  - uid: Beutl.NodeTree.Nodes.Transform.MatrixTransformNode
+    name: MatrixTransformNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Transform.Rotation3DTransformNode
+    name: Rotation3DTransformNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Transform.RotationTransformNode
+    name: RotationTransformNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Transform.ScaleTransformNode
+    name: ScaleTransformNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Transform.SkewTransformNode
+    name: SkewTransformNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Transform.TransformNode
+    name: TransformNode
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Transform.TransformNodeEvaluationState
+    name: TransformNodeEvaluationState
+    type: Class
+  - uid: Beutl.NodeTree.Nodes.Transform.TranslateTransformNode
+    name: TranslateTransformNode
+    type: Class
 - uid: Beutl.NodeTree.Nodes.Utilities
   name: Beutl.NodeTree.Nodes.Utilities
   type: Namespace
@@ -2250,6 +2154,9 @@ items:
   - uid: Beutl.NodeTree.Nodes.Utilities.MeasureNode
     name: MeasureNode
     type: Class
+  - uid: Beutl.NodeTree.Nodes.Utilities.MultiplicationOperator
+    name: MultiplicationOperator
+    type: Enum
   - uid: Beutl.NodeTree.Nodes.Utilities.RandomDoubleNode
     name: RandomDoubleNode
     type: Class
@@ -2321,9 +2228,6 @@ items:
   - uid: Beutl.Operation.DummySourceOperator
     name: DummySourceOperator
     type: Class
-  - uid: Beutl.Operation.EnginePropertyAdapter`1
-    name: EnginePropertyAdapter<T>
-    type: Class
   - uid: Beutl.Operation.GroupOperator
     name: GroupOperator
     type: Class
@@ -2336,6 +2240,9 @@ items:
   - uid: Beutl.Operation.OperatorEvaluationContext
     name: OperatorEvaluationContext
     type: Class
+  - uid: Beutl.Operation.PropertyWithDefaultValue
+    name: PropertyWithDefaultValue
+    type: Struct
   - uid: Beutl.Operation.PublishOperator`1
     name: PublishOperator<T>
     type: Class
@@ -2428,12 +2335,6 @@ items:
   - uid: Beutl.Serialization.CoreSerializationMode
     name: CoreSerializationMode
     type: Enum
-  - uid: Beutl.Serialization.CoreSerializer
-    name: CoreSerializer
-    type: Class
-  - uid: Beutl.Serialization.CoreSerializerOptions
-    name: CoreSerializerOptions
-    type: Class
   - uid: Beutl.Serialization.DummyTypeAttribute
     name: DummyTypeAttribute
     type: Class
@@ -2449,11 +2350,23 @@ items:
   - uid: Beutl.Serialization.IJsonSerializationContext
     name: IJsonSerializationContext
     type: Interface
+  - uid: Beutl.Serialization.ISerializationErrorNotifier
+    name: ISerializationErrorNotifier
+    type: Interface
   - uid: Beutl.Serialization.JsonSerializationContext
     name: JsonSerializationContext
     type: Class
+  - uid: Beutl.Serialization.NullSerializationErrorNotifier
+    name: NullSerializationErrorNotifier
+    type: Class
+  - uid: Beutl.Serialization.RelaySerializationErrorNotifier
+    name: RelaySerializationErrorNotifier
+    type: Class
   - uid: Beutl.Serialization.SerializationError
     name: SerializationError
+    type: Class
+  - uid: Beutl.Serialization.SerializationErrorCollector
+    name: SerializationErrorCollector
     type: Class
   - uid: Beutl.Serialization.ThreadLocalSerializationContext
     name: ThreadLocalSerializationContext

@@ -7,11 +7,11 @@ items:
   children:
   - Beutl.Extensibility.IEditorContext.CloseToolTab(Beutl.Extensibility.IToolContext)
   - Beutl.Extensibility.IEditorContext.Commands
+  - Beutl.Extensibility.IEditorContext.EdittingFile
   - Beutl.Extensibility.IEditorContext.Extension
   - Beutl.Extensibility.IEditorContext.FindToolTab``1
   - Beutl.Extensibility.IEditorContext.FindToolTab``1(System.Func{``0,System.Boolean})
   - Beutl.Extensibility.IEditorContext.IsEnabled
-  - Beutl.Extensibility.IEditorContext.Object
   - Beutl.Extensibility.IEditorContext.OpenToolTab(Beutl.Extensibility.IToolContext)
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -44,7 +44,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext.FindToolTab<T>(System.Func<T, bool>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -74,7 +74,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext.FindToolTab<T>()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -101,7 +101,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext.OpenToolTab(Beutl.Extensibility.IToolContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -126,7 +126,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext.CloseToolTab(Beutl.Extensibility.IToolContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -137,29 +137,6 @@ items:
       type: Beutl.Extensibility.IToolContext
     content.vb: Sub CloseToolTab(item As IToolContext)
   overload: Beutl.Extensibility.IEditorContext.CloseToolTab*
-- uid: Beutl.Extensibility.IEditorContext.Object
-  commentId: P:Beutl.Extensibility.IEditorContext.Object
-  id: Object
-  parent: Beutl.Extensibility.IEditorContext
-  langs:
-  - csharp
-  - vb
-  name: Object
-  nameWithType: IEditorContext.Object
-  fullName: Beutl.Extensibility.IEditorContext.Object
-  type: Property
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
-  assemblies:
-  - Beutl.Extensibility
-  namespace: Beutl.Extensibility
-  syntax:
-    content: CoreObject Object { get; }
-    parameters: []
-    return:
-      type: Beutl.CoreObject
-    content.vb: ReadOnly Property [Object] As CoreObject
-  overload: Beutl.Extensibility.IEditorContext.Object*
 - uid: Beutl.Extensibility.IEditorContext.Extension
   commentId: P:Beutl.Extensibility.IEditorContext.Extension
   id: Extension
@@ -172,7 +149,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext.Extension
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -183,6 +160,29 @@ items:
       type: Beutl.Extensibility.EditorExtension
     content.vb: ReadOnly Property Extension As EditorExtension
   overload: Beutl.Extensibility.IEditorContext.Extension*
+- uid: Beutl.Extensibility.IEditorContext.EdittingFile
+  commentId: P:Beutl.Extensibility.IEditorContext.EdittingFile
+  id: EdittingFile
+  parent: Beutl.Extensibility.IEditorContext
+  langs:
+  - csharp
+  - vb
+  name: EdittingFile
+  nameWithType: IEditorContext.EdittingFile
+  fullName: Beutl.Extensibility.IEditorContext.EdittingFile
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
+  assemblies:
+  - Beutl.Extensibility
+  namespace: Beutl.Extensibility
+  syntax:
+    content: string EdittingFile { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property EdittingFile As String
+  overload: Beutl.Extensibility.IEditorContext.EdittingFile*
 - uid: Beutl.Extensibility.IEditorContext.IsEnabled
   commentId: P:Beutl.Extensibility.IEditorContext.IsEnabled
   id: IsEnabled
@@ -195,7 +195,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext.IsEnabled
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -218,7 +218,7 @@ items:
   fullName: Beutl.Extensibility.IEditorContext.Commands
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/IEditorContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/IEditorContext.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -370,7 +370,7 @@ references:
   nameWithType: IEditorContext.FindToolTab
   fullName: Beutl.Extensibility.IEditorContext.FindToolTab
 - uid: System.Func{{T},System.Boolean}
-  commentId: T:System.Func{``0,System.Boolean}
+  commentId: T:System.Func{`0,System.Boolean}
   parent: System
   definition: System.Func`2
   href: https://learn.microsoft.com/dotnet/api/system.func-2
@@ -487,28 +487,6 @@ references:
   name: CloseToolTab
   nameWithType: IEditorContext.CloseToolTab
   fullName: Beutl.Extensibility.IEditorContext.CloseToolTab
-- uid: Beutl.Extensibility.IEditorContext.Object*
-  commentId: Overload:Beutl.Extensibility.IEditorContext.Object
-  isExternal: true
-  href: Beutl.Extensibility.IEditorContext.html#Beutl_Extensibility_IEditorContext_Object
-  name: Object
-  nameWithType: IEditorContext.Object
-  fullName: Beutl.Extensibility.IEditorContext.Object
-- uid: Beutl.CoreObject
-  commentId: T:Beutl.CoreObject
-  parent: Beutl
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
-  name: CoreObject
-  nameWithType: CoreObject
-  fullName: Beutl.CoreObject
-- uid: Beutl
-  commentId: N:Beutl
-  isExternal: true
-  href: Beutl.html
-  name: Beutl
-  nameWithType: Beutl
-  fullName: Beutl
 - uid: Beutl.Extensibility.IEditorContext.Extension*
   commentId: Overload:Beutl.Extensibility.IEditorContext.Extension
   isExternal: true
@@ -524,6 +502,24 @@ references:
   name: EditorExtension
   nameWithType: EditorExtension
   fullName: Beutl.Extensibility.EditorExtension
+- uid: Beutl.Extensibility.IEditorContext.EdittingFile*
+  commentId: Overload:Beutl.Extensibility.IEditorContext.EdittingFile
+  isExternal: true
+  href: Beutl.Extensibility.IEditorContext.html#Beutl_Extensibility_IEditorContext_EdittingFile
+  name: EdittingFile
+  nameWithType: IEditorContext.EdittingFile
+  fullName: Beutl.Extensibility.IEditorContext.EdittingFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Beutl.Extensibility.IEditorContext.IsEnabled*
   commentId: Overload:Beutl.Extensibility.IEditorContext.IsEnabled
   isExternal: true

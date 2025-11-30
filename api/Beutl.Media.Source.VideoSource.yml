@@ -5,7 +5,7 @@ items:
   id: VideoSource
   parent: Beutl.Media.Source
   children:
-  - Beutl.Media.Source.VideoSource.#ctor
+  - Beutl.Media.Source.VideoSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)
   - Beutl.Media.Source.VideoSource.Clone
   - Beutl.Media.Source.VideoSource.Dispose
   - Beutl.Media.Source.VideoSource.Duration
@@ -15,14 +15,11 @@ items:
   - Beutl.Media.Source.VideoSource.FrameSize
   - Beutl.Media.Source.VideoSource.GetHashCode
   - Beutl.Media.Source.VideoSource.IsDisposed
+  - Beutl.Media.Source.VideoSource.Name
   - Beutl.Media.Source.VideoSource.Open(System.String)
-  - Beutl.Media.Source.VideoSource.Open(System.Uri)
   - Beutl.Media.Source.VideoSource.Read(System.Int32,Beutl.Media.IBitmap@)
   - Beutl.Media.Source.VideoSource.Read(System.TimeSpan,Beutl.Media.IBitmap@)
-  - Beutl.Media.Source.VideoSource.ReadFrom(System.Uri)
   - Beutl.Media.Source.VideoSource.TryOpen(System.String,Beutl.Media.Source.VideoSource@)
-  - Beutl.Media.Source.VideoSource.TryOpen(System.Uri,Beutl.Media.Source.VideoSource@)
-  - Beutl.Media.Source.VideoSource.Uri
   langs:
   - csharp
   - vb
@@ -31,48 +28,52 @@ items:
   fullName: Beutl.Media.Source.VideoSource
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: 'public sealed class VideoSource : IVideoSource, IMediaSource, IDisposable, IFileSource'
-    content.vb: Public NotInheritable Class VideoSource Implements IVideoSource, IMediaSource, IDisposable, IFileSource
+    content: 'public sealed class VideoSource : IVideoSource, IMediaSource, IDisposable'
+    content.vb: Public NotInheritable Class VideoSource Implements IVideoSource, IMediaSource, IDisposable
   inheritance:
   - System.Object
   implements:
   - Beutl.Media.Source.IVideoSource
   - Beutl.Media.Source.IMediaSource
   - System.IDisposable
-  - Beutl.IO.IFileSource
   inheritedMembers:
   - System.Object.GetType
   - System.Object.ToString
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: Beutl.Media.Source.VideoSource.#ctor
-  commentId: M:Beutl.Media.Source.VideoSource.#ctor
-  id: '#ctor'
+- uid: Beutl.Media.Source.VideoSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)
+  commentId: M:Beutl.Media.Source.VideoSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)
+  id: '#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)'
   parent: Beutl.Media.Source.VideoSource
   langs:
   - csharp
   - vb
-  name: VideoSource()
-  nameWithType: VideoSource.VideoSource()
-  fullName: Beutl.Media.Source.VideoSource.VideoSource()
+  name: VideoSource(Ref<MediaReader>, string)
+  nameWithType: VideoSource.VideoSource(Ref<MediaReader>, string)
+  fullName: Beutl.Media.Source.VideoSource.VideoSource(Beutl.Media.Source.Ref<Beutl.Media.Decoding.MediaReader>, string)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: public VideoSource()
-    content.vb: Public Sub New()
+    content: public VideoSource(Ref<MediaReader> mediaReader, string fileName)
+    parameters:
+    - id: mediaReader
+      type: Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader}
+    - id: fileName
+      type: System.String
+    content.vb: Public Sub New(mediaReader As Ref(Of MediaReader), fileName As String)
   overload: Beutl.Media.Source.VideoSource.#ctor*
-  nameWithType.vb: VideoSource.New()
-  fullName.vb: Beutl.Media.Source.VideoSource.New()
-  name.vb: New()
+  nameWithType.vb: VideoSource.New(Ref(Of MediaReader), String)
+  fullName.vb: Beutl.Media.Source.VideoSource.New(Beutl.Media.Source.Ref(Of Beutl.Media.Decoding.MediaReader), String)
+  name.vb: New(Ref(Of MediaReader), String)
 - uid: Beutl.Media.Source.VideoSource.Finalize
   commentId: M:Beutl.Media.Source.VideoSource.Finalize
   id: Finalize
@@ -85,7 +86,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.~VideoSource()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -108,7 +109,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.Open(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -136,7 +137,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.TryOpen(string, out Beutl.Media.Source.VideoSource?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -154,87 +155,6 @@ items:
   nameWithType.vb: VideoSource.TryOpen(String, VideoSource)
   fullName.vb: Beutl.Media.Source.VideoSource.TryOpen(String, Beutl.Media.Source.VideoSource)
   name.vb: TryOpen(String, VideoSource)
-- uid: Beutl.Media.Source.VideoSource.Open(System.Uri)
-  commentId: M:Beutl.Media.Source.VideoSource.Open(System.Uri)
-  id: Open(System.Uri)
-  parent: Beutl.Media.Source.VideoSource
-  langs:
-  - csharp
-  - vb
-  name: Open(Uri)
-  nameWithType: VideoSource.Open(Uri)
-  fullName: Beutl.Media.Source.VideoSource.Open(System.Uri)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  syntax:
-    content: public static VideoSource Open(Uri uri)
-    parameters:
-    - id: uri
-      type: System.Uri
-    return:
-      type: Beutl.Media.Source.VideoSource
-    content.vb: Public Shared Function Open(uri As Uri) As VideoSource
-  overload: Beutl.Media.Source.VideoSource.Open*
-- uid: Beutl.Media.Source.VideoSource.TryOpen(System.Uri,Beutl.Media.Source.VideoSource@)
-  commentId: M:Beutl.Media.Source.VideoSource.TryOpen(System.Uri,Beutl.Media.Source.VideoSource@)
-  id: TryOpen(System.Uri,Beutl.Media.Source.VideoSource@)
-  parent: Beutl.Media.Source.VideoSource
-  langs:
-  - csharp
-  - vb
-  name: TryOpen(Uri, out VideoSource?)
-  nameWithType: VideoSource.TryOpen(Uri, out VideoSource?)
-  fullName: Beutl.Media.Source.VideoSource.TryOpen(System.Uri, out Beutl.Media.Source.VideoSource?)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  syntax:
-    content: public static bool TryOpen(Uri uri, out VideoSource? result)
-    parameters:
-    - id: uri
-      type: System.Uri
-    - id: result
-      type: Beutl.Media.Source.VideoSource
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Function TryOpen(uri As Uri, result As VideoSource) As Boolean
-  overload: Beutl.Media.Source.VideoSource.TryOpen*
-  nameWithType.vb: VideoSource.TryOpen(Uri, VideoSource)
-  fullName.vb: Beutl.Media.Source.VideoSource.TryOpen(System.Uri, Beutl.Media.Source.VideoSource)
-  name.vb: TryOpen(Uri, VideoSource)
-- uid: Beutl.Media.Source.VideoSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.Media.Source.VideoSource.ReadFrom(System.Uri)
-  id: ReadFrom(System.Uri)
-  parent: Beutl.Media.Source.VideoSource
-  langs:
-  - csharp
-  - vb
-  name: ReadFrom(Uri)
-  nameWithType: VideoSource.ReadFrom(Uri)
-  fullName: Beutl.Media.Source.VideoSource.ReadFrom(System.Uri)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  example: []
-  syntax:
-    content: public void ReadFrom(Uri uri)
-    parameters:
-    - id: uri
-      type: System.Uri
-    content.vb: Public Sub ReadFrom(uri As Uri)
-  overload: Beutl.Media.Source.VideoSource.ReadFrom*
-  implements:
-  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
 - uid: Beutl.Media.Source.VideoSource.Dispose
   commentId: M:Beutl.Media.Source.VideoSource.Dispose
   id: Dispose
@@ -247,7 +167,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -270,7 +190,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -292,7 +212,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.Read(System.TimeSpan, out Beutl.Media.IBitmap?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -331,7 +251,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.Read(int, out Beutl.Media.IBitmap?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -370,7 +290,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.Equals(object?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -400,7 +320,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.GetHashCode()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -424,7 +344,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.Duration
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -450,7 +370,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.FrameRate
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -476,7 +396,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.FrameSize
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -502,7 +422,7 @@ items:
   fullName: Beutl.Media.Source.VideoSource.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -516,32 +436,32 @@ items:
   overload: Beutl.Media.Source.VideoSource.IsDisposed*
   implements:
   - Beutl.Media.Source.IMediaSource.IsDisposed
-- uid: Beutl.Media.Source.VideoSource.Uri
-  commentId: P:Beutl.Media.Source.VideoSource.Uri
-  id: Uri
+- uid: Beutl.Media.Source.VideoSource.Name
+  commentId: P:Beutl.Media.Source.VideoSource.Name
+  id: Name
   parent: Beutl.Media.Source.VideoSource
   langs:
   - csharp
   - vb
-  name: Uri
-  nameWithType: VideoSource.Uri
-  fullName: Beutl.Media.Source.VideoSource.Uri
+  name: Name
+  nameWithType: VideoSource.Name
+  fullName: Beutl.Media.Source.VideoSource.Name
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/VideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/VideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   example: []
   syntax:
-    content: public Uri Uri { get; }
+    content: public string Name { get; }
     parameters: []
     return:
-      type: System.Uri
-    content.vb: Public ReadOnly Property Uri As Uri
-  overload: Beutl.Media.Source.VideoSource.Uri*
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Beutl.Media.Source.VideoSource.Name*
   implements:
-  - Beutl.IO.IFileSource.Uri
+  - Beutl.Media.Source.IMediaSource.Name
 references:
 - uid: Beutl.Media.Source
   commentId: N:Beutl.Media.Source
@@ -615,14 +535,6 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -768,43 +680,91 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
 - uid: Beutl.Media.Source.VideoSource.#ctor*
   commentId: Overload:Beutl.Media.Source.VideoSource.#ctor
   isExternal: true
-  href: Beutl.Media.Source.VideoSource.html#Beutl_Media_Source_VideoSource__ctor
+  href: Beutl.Media.Source.VideoSource.html#Beutl_Media_Source_VideoSource__ctor_Beutl_Media_Source_Ref_Beutl_Media_Decoding_MediaReader__System_String_
   name: VideoSource
   nameWithType: VideoSource.VideoSource
   fullName: Beutl.Media.Source.VideoSource.VideoSource
   nameWithType.vb: VideoSource.New
   fullName.vb: Beutl.Media.Source.VideoSource.New
   name.vb: New
+- uid: Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader}
+  commentId: T:Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader}
+  parent: Beutl.Media.Source
+  definition: Beutl.Media.Source.Ref`1
+  href: Beutl.Media.Source.Ref-1.html
+  name: Ref<MediaReader>
+  nameWithType: Ref<MediaReader>
+  fullName: Beutl.Media.Source.Ref<Beutl.Media.Decoding.MediaReader>
+  nameWithType.vb: Ref(Of MediaReader)
+  fullName.vb: Beutl.Media.Source.Ref(Of Beutl.Media.Decoding.MediaReader)
+  name.vb: Ref(Of MediaReader)
+  spec.csharp:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: <
+  - uid: Beutl.Media.Decoding.MediaReader
+    name: MediaReader
+    isExternal: true
+    href: Beutl.Media.Decoding.MediaReader.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Decoding.MediaReader
+    name: MediaReader
+    isExternal: true
+    href: Beutl.Media.Decoding.MediaReader.html
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Media.Source.Ref`1
+  commentId: T:Beutl.Media.Source.Ref`1
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.Ref-1.html
+  name: Ref<T>
+  nameWithType: Ref<T>
+  fullName: Beutl.Media.Source.Ref<T>
+  nameWithType.vb: Ref(Of T)
+  fullName.vb: Beutl.Media.Source.Ref(Of T)
+  name.vb: Ref(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Beutl.Media.Source.VideoSource.Finalize*
   commentId: Overload:Beutl.Media.Source.VideoSource.Finalize
   isExternal: true
@@ -825,17 +785,6 @@ references:
   name: Open
   nameWithType: VideoSource.Open
   fullName: Beutl.Media.Source.VideoSource.Open
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: Beutl.Media.Source.VideoSource
   commentId: T:Beutl.Media.Source.VideoSource
   parent: Beutl.Media.Source
@@ -862,48 +811,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: System.Uri
-- uid: Beutl.Media.Source.VideoSource.ReadFrom*
-  commentId: Overload:Beutl.Media.Source.VideoSource.ReadFrom
-  isExternal: true
-  href: Beutl.Media.Source.VideoSource.html#Beutl_Media_Source_VideoSource_ReadFrom_System_Uri_
-  name: ReadFrom
-  nameWithType: VideoSource.ReadFrom
-  fullName: Beutl.Media.Source.VideoSource.ReadFrom
-- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  name: ReadFrom(Uri)
-  nameWithType: IFileSource.ReadFrom(Uri)
-  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  spec.csharp:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
 - uid: Beutl.Media.Source.VideoSource.Dispose*
   commentId: Overload:Beutl.Media.Source.VideoSource.Dispose
   isExternal: true
@@ -1200,7 +1107,7 @@ references:
   commentId: T:Beutl.Rational
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Rational.Number.cs
+  href: Beutl.Rational.html
   name: Rational
   nameWithType: Rational
   fullName: Beutl.Rational
@@ -1249,18 +1156,18 @@ references:
   name: IsDisposed
   nameWithType: IMediaSource.IsDisposed
   fullName: Beutl.Media.Source.IMediaSource.IsDisposed
-- uid: Beutl.Media.Source.VideoSource.Uri*
-  commentId: Overload:Beutl.Media.Source.VideoSource.Uri
+- uid: Beutl.Media.Source.VideoSource.Name*
+  commentId: Overload:Beutl.Media.Source.VideoSource.Name
   isExternal: true
-  href: Beutl.Media.Source.VideoSource.html#Beutl_Media_Source_VideoSource_Uri
-  name: Uri
-  nameWithType: VideoSource.Uri
-  fullName: Beutl.Media.Source.VideoSource.Uri
-- uid: Beutl.IO.IFileSource.Uri
-  commentId: P:Beutl.IO.IFileSource.Uri
-  parent: Beutl.IO.IFileSource
+  href: Beutl.Media.Source.VideoSource.html#Beutl_Media_Source_VideoSource_Name
+  name: Name
+  nameWithType: VideoSource.Name
+  fullName: Beutl.Media.Source.VideoSource.Name
+- uid: Beutl.Media.Source.IMediaSource.Name
+  commentId: P:Beutl.Media.Source.IMediaSource.Name
+  parent: Beutl.Media.Source.IMediaSource
   isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
-  name: Uri
-  nameWithType: IFileSource.Uri
-  fullName: Beutl.IO.IFileSource.Uri
+  href: Beutl.Media.Source.IMediaSource.html#Beutl_Media_Source_IMediaSource_Name
+  name: Name
+  nameWithType: IMediaSource.Name
+  fullName: Beutl.Media.Source.IMediaSource.Name

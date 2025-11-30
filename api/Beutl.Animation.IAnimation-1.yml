@@ -5,9 +5,9 @@ items:
   id: IAnimation`1
   parent: Beutl.Animation
   children:
-  - Beutl.Animation.IAnimation`1.GetAnimatedValue(System.TimeSpan)
+  - Beutl.Animation.IAnimation`1.GetAnimatedValue(Beutl.Animation.IClock)
   - Beutl.Animation.IAnimation`1.Interpolate(System.TimeSpan)
-  - Beutl.Animation.IAnimation`1.Validator
+  - Beutl.Animation.IAnimation`1.Property
   langs:
   - csharp
   - vb
@@ -16,20 +16,20 @@ items:
   fullName: Beutl.Animation.IAnimation<T>
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IAnimation.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
   syntax:
-    content: 'public interface IAnimation<T> : IAnimation, INotifyEdited, ICoreSerializable, IHierarchical'
+    content: 'public interface IAnimation<T> : IAnimation, IAffectsRender, ICoreSerializable, IHierarchical'
     typeParameters:
     - id: T
-    content.vb: Public Interface IAnimation(Of T) Inherits IAnimation, INotifyEdited, ICoreSerializable, IHierarchical
+    content.vb: Public Interface IAnimation(Of T) Inherits IAnimation, IAffectsRender, ICoreSerializable, IHierarchical
   inheritedMembers:
+  - Beutl.Animation.IAnimation.ApplyAnimation(Beutl.Animation.Animatable,Beutl.Animation.IClock)
   - Beutl.Animation.IAnimation.Duration
   - Beutl.Animation.IAnimation.UseGlobalClock
-  - Beutl.Animation.IAnimation.ValueType
-  - Beutl.INotifyEdited.Edited
+  - Beutl.Media.IAffectsRender.Invalidated
   - Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
   - Beutl.Serialization.ICoreSerializable.Deserialize(Beutl.Serialization.ICoreSerializationContext)
   - Beutl.IHierarchical.HierarchicalParent
@@ -37,36 +37,38 @@ items:
   - Beutl.IHierarchical.HierarchicalChildren
   - Beutl.IHierarchical.AttachedToHierarchy
   - Beutl.IHierarchical.DetachedFromHierarchy
+  extensionMethods:
+  - Beutl.Animation.IAnimation.Beutl.Animation.AnimationExtensions.CalculateDuration
   nameWithType.vb: IAnimation(Of T)
   fullName.vb: Beutl.Animation.IAnimation(Of T)
   name.vb: IAnimation(Of T)
-- uid: Beutl.Animation.IAnimation`1.GetAnimatedValue(System.TimeSpan)
-  commentId: M:Beutl.Animation.IAnimation`1.GetAnimatedValue(System.TimeSpan)
-  id: GetAnimatedValue(System.TimeSpan)
+- uid: Beutl.Animation.IAnimation`1.GetAnimatedValue(Beutl.Animation.IClock)
+  commentId: M:Beutl.Animation.IAnimation`1.GetAnimatedValue(Beutl.Animation.IClock)
+  id: GetAnimatedValue(Beutl.Animation.IClock)
   parent: Beutl.Animation.IAnimation`1
   langs:
   - csharp
   - vb
-  name: GetAnimatedValue(TimeSpan)
-  nameWithType: IAnimation<T>.GetAnimatedValue(TimeSpan)
-  fullName: Beutl.Animation.IAnimation<T>.GetAnimatedValue(System.TimeSpan)
+  name: GetAnimatedValue(IClock)
+  nameWithType: IAnimation<T>.GetAnimatedValue(IClock)
+  fullName: Beutl.Animation.IAnimation<T>.GetAnimatedValue(Beutl.Animation.IClock)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IAnimation.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
   syntax:
-    content: T? GetAnimatedValue(TimeSpan time)
+    content: T? GetAnimatedValue(IClock clock)
     parameters:
-    - id: time
-      type: System.TimeSpan
+    - id: clock
+      type: Beutl.Animation.IClock
     return:
       type: '{T}'
-    content.vb: Function GetAnimatedValue(time As TimeSpan) As T
+    content.vb: Function GetAnimatedValue(clock As IClock) As T
   overload: Beutl.Animation.IAnimation`1.GetAnimatedValue*
-  nameWithType.vb: IAnimation(Of T).GetAnimatedValue(TimeSpan)
-  fullName.vb: Beutl.Animation.IAnimation(Of T).GetAnimatedValue(System.TimeSpan)
+  nameWithType.vb: IAnimation(Of T).GetAnimatedValue(IClock)
+  fullName.vb: Beutl.Animation.IAnimation(Of T).GetAnimatedValue(Beutl.Animation.IClock)
 - uid: Beutl.Animation.IAnimation`1.Interpolate(System.TimeSpan)
   commentId: M:Beutl.Animation.IAnimation`1.Interpolate(System.TimeSpan)
   id: Interpolate(System.TimeSpan)
@@ -79,7 +81,7 @@ items:
   fullName: Beutl.Animation.IAnimation<T>.Interpolate(System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IAnimation.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
@@ -94,31 +96,31 @@ items:
   overload: Beutl.Animation.IAnimation`1.Interpolate*
   nameWithType.vb: IAnimation(Of T).Interpolate(TimeSpan)
   fullName.vb: Beutl.Animation.IAnimation(Of T).Interpolate(System.TimeSpan)
-- uid: Beutl.Animation.IAnimation`1.Validator
-  commentId: P:Beutl.Animation.IAnimation`1.Validator
-  id: Validator
+- uid: Beutl.Animation.IAnimation`1.Property
+  commentId: P:Beutl.Animation.IAnimation`1.Property
+  id: Property
   parent: Beutl.Animation.IAnimation`1
   langs:
   - csharp
   - vb
-  name: Validator
-  nameWithType: IAnimation<T>.Validator
-  fullName: Beutl.Animation.IAnimation<T>.Validator
+  name: Property
+  nameWithType: IAnimation<T>.Property
+  fullName: Beutl.Animation.IAnimation<T>.Property
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Animation/IAnimation.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Animation
   syntax:
-    content: IValidator<T>? Validator { get; set; }
+    content: CoreProperty<T> Property { get; }
     parameters: []
     return:
-      type: Beutl.Validation.IValidator{{T}}
-    content.vb: Property Validator As IValidator(Of T)
-  overload: Beutl.Animation.IAnimation`1.Validator*
-  nameWithType.vb: IAnimation(Of T).Validator
-  fullName.vb: Beutl.Animation.IAnimation(Of T).Validator
+      type: Beutl.CoreProperty{{T}}
+    content.vb: ReadOnly Property [Property] As CoreProperty(Of T)
+  overload: Beutl.Animation.IAnimation`1.Property*
+  nameWithType.vb: IAnimation(Of T).Property
+  fullName.vb: Beutl.Animation.IAnimation(Of T).Property
 references:
 - uid: Beutl.Animation
   commentId: N:Beutl.Animation
@@ -147,6 +149,48 @@ references:
     name: Animation
     isExternal: true
     href: Beutl.Animation.html
+- uid: Beutl.Animation.IAnimation.ApplyAnimation(Beutl.Animation.Animatable,Beutl.Animation.IClock)
+  commentId: M:Beutl.Animation.IAnimation.ApplyAnimation(Beutl.Animation.Animatable,Beutl.Animation.IClock)
+  parent: Beutl.Animation.IAnimation
+  isExternal: true
+  href: Beutl.Animation.IAnimation.html#Beutl_Animation_IAnimation_ApplyAnimation_Beutl_Animation_Animatable_Beutl_Animation_IClock_
+  name: ApplyAnimation(Animatable, IClock)
+  nameWithType: IAnimation.ApplyAnimation(Animatable, IClock)
+  fullName: Beutl.Animation.IAnimation.ApplyAnimation(Beutl.Animation.Animatable, Beutl.Animation.IClock)
+  spec.csharp:
+  - uid: Beutl.Animation.IAnimation.ApplyAnimation(Beutl.Animation.Animatable,Beutl.Animation.IClock)
+    name: ApplyAnimation
+    isExternal: true
+    href: Beutl.Animation.IAnimation.html#Beutl_Animation_IAnimation_ApplyAnimation_Beutl_Animation_Animatable_Beutl_Animation_IClock_
+  - name: (
+  - uid: Beutl.Animation.Animatable
+    name: Animatable
+    isExternal: true
+    href: Beutl.Animation.Animatable.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Animation.IClock
+    name: IClock
+    isExternal: true
+    href: Beutl.Animation.IClock.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Animation.IAnimation.ApplyAnimation(Beutl.Animation.Animatable,Beutl.Animation.IClock)
+    name: ApplyAnimation
+    isExternal: true
+    href: Beutl.Animation.IAnimation.html#Beutl_Animation_IAnimation_ApplyAnimation_Beutl_Animation_Animatable_Beutl_Animation_IClock_
+  - name: (
+  - uid: Beutl.Animation.Animatable
+    name: Animatable
+    isExternal: true
+    href: Beutl.Animation.Animatable.html
+  - name: ','
+  - name: " "
+  - uid: Beutl.Animation.IClock
+    name: IClock
+    isExternal: true
+    href: Beutl.Animation.IClock.html
+  - name: )
 - uid: Beutl.Animation.IAnimation.Duration
   commentId: P:Beutl.Animation.IAnimation.Duration
   parent: Beutl.Animation.IAnimation
@@ -163,22 +207,14 @@ references:
   name: UseGlobalClock
   nameWithType: IAnimation.UseGlobalClock
   fullName: Beutl.Animation.IAnimation.UseGlobalClock
-- uid: Beutl.Animation.IAnimation.ValueType
-  commentId: P:Beutl.Animation.IAnimation.ValueType
-  parent: Beutl.Animation.IAnimation
+- uid: Beutl.Media.IAffectsRender.Invalidated
+  commentId: E:Beutl.Media.IAffectsRender.Invalidated
+  parent: Beutl.Media.IAffectsRender
   isExternal: true
-  href: Beutl.Animation.IAnimation.html#Beutl_Animation_IAnimation_ValueType
-  name: ValueType
-  nameWithType: IAnimation.ValueType
-  fullName: Beutl.Animation.IAnimation.ValueType
-- uid: Beutl.INotifyEdited.Edited
-  commentId: E:Beutl.INotifyEdited.Edited
-  parent: Beutl.INotifyEdited
-  isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/INotifyEdited.cs
-  name: Edited
-  nameWithType: INotifyEdited.Edited
-  fullName: Beutl.INotifyEdited.Edited
+  href: Beutl.Media.IAffectsRender.html#Beutl_Media_IAffectsRender_Invalidated
+  name: Invalidated
+  nameWithType: IAffectsRender.Invalidated
+  fullName: Beutl.Media.IAffectsRender.Invalidated
 - uid: Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
   commentId: M:Beutl.Serialization.ICoreSerializable.Serialize(Beutl.Serialization.ICoreSerializationContext)
   parent: Beutl.Serialization.ICoreSerializable
@@ -279,27 +315,57 @@ references:
   name: DetachedFromHierarchy
   nameWithType: IHierarchical.DetachedFromHierarchy
   fullName: Beutl.IHierarchical.DetachedFromHierarchy
+- uid: Beutl.Animation.IAnimation.Beutl.Animation.AnimationExtensions.CalculateDuration
+  commentId: M:Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+  parent: Beutl.Animation.AnimationExtensions
+  definition: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+  href: Beutl.Animation.AnimationExtensions.html#Beutl_Animation_AnimationExtensions_CalculateDuration_Beutl_Animation_IAnimation_
+  name: CalculateDuration(IAnimation)
+  nameWithType: AnimationExtensions.CalculateDuration(IAnimation)
+  fullName: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+  spec.csharp:
+  - uid: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+    name: CalculateDuration
+    isExternal: true
+    href: Beutl.Animation.AnimationExtensions.html#Beutl_Animation_AnimationExtensions_CalculateDuration_Beutl_Animation_IAnimation_
+  - name: (
+  - uid: Beutl.Animation.IAnimation
+    name: IAnimation
+    isExternal: true
+    href: Beutl.Animation.IAnimation.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+    name: CalculateDuration
+    isExternal: true
+    href: Beutl.Animation.AnimationExtensions.html#Beutl_Animation_AnimationExtensions_CalculateDuration_Beutl_Animation_IAnimation_
+  - name: (
+  - uid: Beutl.Animation.IAnimation
+    name: IAnimation
+    isExternal: true
+    href: Beutl.Animation.IAnimation.html
+  - name: )
 - uid: Beutl.Animation.IAnimation
   commentId: T:Beutl.Animation.IAnimation
   parent: Beutl.Animation
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Animation/IAnimation.cs
+  href: Beutl.Animation.IAnimation.html
   name: IAnimation
   nameWithType: IAnimation
   fullName: Beutl.Animation.IAnimation
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
 - uid: Beutl.Serialization.ICoreSerializable
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -307,17 +373,74 @@ references:
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
-- uid: Beutl
-  commentId: N:Beutl
+- uid: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+  commentId: M:Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+  isExternal: true
+  href: Beutl.Animation.AnimationExtensions.html#Beutl_Animation_AnimationExtensions_CalculateDuration_Beutl_Animation_IAnimation_
+  name: CalculateDuration(IAnimation)
+  nameWithType: AnimationExtensions.CalculateDuration(IAnimation)
+  fullName: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+  spec.csharp:
+  - uid: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+    name: CalculateDuration
+    isExternal: true
+    href: Beutl.Animation.AnimationExtensions.html#Beutl_Animation_AnimationExtensions_CalculateDuration_Beutl_Animation_IAnimation_
+  - name: (
+  - uid: Beutl.Animation.IAnimation
+    name: IAnimation
+    isExternal: true
+    href: Beutl.Animation.IAnimation.html
+  - name: )
+  spec.vb:
+  - uid: Beutl.Animation.AnimationExtensions.CalculateDuration(Beutl.Animation.IAnimation)
+    name: CalculateDuration
+    isExternal: true
+    href: Beutl.Animation.AnimationExtensions.html#Beutl_Animation_AnimationExtensions_CalculateDuration_Beutl_Animation_IAnimation_
+  - name: (
+  - uid: Beutl.Animation.IAnimation
+    name: IAnimation
+    isExternal: true
+    href: Beutl.Animation.IAnimation.html
+  - name: )
+- uid: Beutl.Animation.AnimationExtensions
+  commentId: T:Beutl.Animation.AnimationExtensions
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.AnimationExtensions.html
+  name: AnimationExtensions
+  nameWithType: AnimationExtensions
+  fullName: Beutl.Animation.AnimationExtensions
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
   isExternal: true
   href: Beutl.html
-  name: Beutl
-  nameWithType: Beutl
-  fullName: Beutl
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
 - uid: Beutl.Serialization
   commentId: N:Beutl.Serialization
   isExternal: true
@@ -345,36 +468,36 @@ references:
     name: Serialization
     isExternal: true
     href: Beutl.Serialization.html
+- uid: Beutl
+  commentId: N:Beutl
+  isExternal: true
+  href: Beutl.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
 - uid: Beutl.Animation.IAnimation`1.GetAnimatedValue*
   commentId: Overload:Beutl.Animation.IAnimation`1.GetAnimatedValue
   isExternal: true
-  href: Beutl.Animation.IAnimation-1.html#Beutl_Animation_IAnimation_1_GetAnimatedValue_System_TimeSpan_
+  href: Beutl.Animation.IAnimation-1.html#Beutl_Animation_IAnimation_1_GetAnimatedValue_Beutl_Animation_IClock_
   name: GetAnimatedValue
   nameWithType: IAnimation<T>.GetAnimatedValue
   fullName: Beutl.Animation.IAnimation<T>.GetAnimatedValue
   nameWithType.vb: IAnimation(Of T).GetAnimatedValue
   fullName.vb: Beutl.Animation.IAnimation(Of T).GetAnimatedValue
-- uid: System.TimeSpan
-  commentId: T:System.TimeSpan
-  parent: System
+- uid: Beutl.Animation.IClock
+  commentId: T:Beutl.Animation.IClock
+  parent: Beutl.Animation
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.timespan
-  name: TimeSpan
-  nameWithType: TimeSpan
-  fullName: System.TimeSpan
+  href: Beutl.Animation.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: Beutl.Animation.IClock
 - uid: '{T}'
   commentId: '!:T'
   definition: T
   name: T
   nameWithType: T
   fullName: T
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: T
   name: T
   nameWithType: T
@@ -388,96 +511,84 @@ references:
   fullName: Beutl.Animation.IAnimation<T>.Interpolate
   nameWithType.vb: IAnimation(Of T).Interpolate
   fullName.vb: Beutl.Animation.IAnimation(Of T).Interpolate
-- uid: Beutl.Animation.IAnimation`1.Validator*
-  commentId: Overload:Beutl.Animation.IAnimation`1.Validator
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
   isExternal: true
-  href: Beutl.Animation.IAnimation-1.html#Beutl_Animation_IAnimation_1_Validator
-  name: Validator
-  nameWithType: IAnimation<T>.Validator
-  fullName: Beutl.Animation.IAnimation<T>.Validator
-  nameWithType.vb: IAnimation(Of T).Validator
-  fullName.vb: Beutl.Animation.IAnimation(Of T).Validator
-- uid: Beutl.Validation.IValidator{{T}}
-  commentId: T:Beutl.Validation.IValidator{`0}
-  parent: Beutl.Validation
-  definition: Beutl.Validation.IValidator`1
-  href: Beutl.Validation.IValidator-1.html
-  name: IValidator<T>
-  nameWithType: IValidator<T>
-  fullName: Beutl.Validation.IValidator<T>
-  nameWithType.vb: IValidator(Of T)
-  fullName.vb: Beutl.Validation.IValidator(Of T)
-  name.vb: IValidator(Of T)
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Animation.IAnimation`1.Property*
+  commentId: Overload:Beutl.Animation.IAnimation`1.Property
+  isExternal: true
+  href: Beutl.Animation.IAnimation-1.html#Beutl_Animation_IAnimation_1_Property
+  name: Property
+  nameWithType: IAnimation<T>.Property
+  fullName: Beutl.Animation.IAnimation<T>.Property
+  nameWithType.vb: IAnimation(Of T).Property
+  fullName.vb: Beutl.Animation.IAnimation(Of T).Property
+- uid: Beutl.CoreProperty{{T}}
+  commentId: T:Beutl.CoreProperty{``0}
+  parent: Beutl
+  definition: Beutl.CoreProperty`1
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
   spec.csharp:
-  - uid: Beutl.Validation.IValidator`1
-    name: IValidator
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Validation.IValidator-1.html
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Beutl.Validation.IValidator`1
-    name: IValidator
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Validation.IValidator-1.html
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Validation.IValidator`1
-  commentId: T:Beutl.Validation.IValidator`1
+- uid: Beutl.CoreProperty`1
+  commentId: T:Beutl.CoreProperty`1
   isExternal: true
-  href: Beutl.Validation.IValidator-1.html
-  name: IValidator<T>
-  nameWithType: IValidator<T>
-  fullName: Beutl.Validation.IValidator<T>
-  nameWithType.vb: IValidator(Of T)
-  fullName.vb: Beutl.Validation.IValidator(Of T)
-  name.vb: IValidator(Of T)
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
   spec.csharp:
-  - uid: Beutl.Validation.IValidator`1
-    name: IValidator
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Validation.IValidator-1.html
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Beutl.Validation.IValidator`1
-    name: IValidator
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Validation.IValidator-1.html
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Validation
-  commentId: N:Beutl.Validation
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.Validation
-  nameWithType: Beutl.Validation
-  fullName: Beutl.Validation
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Validation
-    name: Validation
-    isExternal: true
-    href: Beutl.Validation.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Validation
-    name: Validation
-    isExternal: true
-    href: Beutl.Validation.html

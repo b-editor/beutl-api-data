@@ -5,6 +5,7 @@ items:
   id: IComposer
   parent: Beutl.Audio.Composing
   children:
+  - Beutl.Audio.Composing.IComposer.Clock
   - Beutl.Audio.Composing.IComposer.Compose(Beutl.Media.TimeRange)
   - Beutl.Audio.Composing.IComposer.IsAudioRendering
   - Beutl.Audio.Composing.IComposer.IsDisposed
@@ -17,7 +18,7 @@ items:
   fullName: Beutl.Audio.Composing.IComposer
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/IComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/IComposer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Composing
@@ -38,7 +39,7 @@ items:
   fullName: Beutl.Audio.Composing.IComposer.Compose(Beutl.Media.TimeRange)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/IComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/IComposer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Composing
@@ -51,6 +52,29 @@ items:
       type: Beutl.Audio.AudioBuffer
     content.vb: Function Compose(range As TimeRange) As AudioBuffer
   overload: Beutl.Audio.Composing.IComposer.Compose*
+- uid: Beutl.Audio.Composing.IComposer.Clock
+  commentId: P:Beutl.Audio.Composing.IComposer.Clock
+  id: Clock
+  parent: Beutl.Audio.Composing.IComposer
+  langs:
+  - csharp
+  - vb
+  name: Clock
+  nameWithType: IComposer.Clock
+  fullName: Beutl.Audio.Composing.IComposer.Clock
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/IComposer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Composing
+  syntax:
+    content: IClock Clock { get; }
+    parameters: []
+    return:
+      type: Beutl.Animation.IClock
+    content.vb: ReadOnly Property Clock As IClock
+  overload: Beutl.Audio.Composing.IComposer.Clock*
 - uid: Beutl.Audio.Composing.IComposer.IsAudioRendering
   commentId: P:Beutl.Audio.Composing.IComposer.IsAudioRendering
   id: IsAudioRendering
@@ -63,7 +87,7 @@ items:
   fullName: Beutl.Audio.Composing.IComposer.IsAudioRendering
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/IComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/IComposer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Composing
@@ -86,7 +110,7 @@ items:
   fullName: Beutl.Audio.Composing.IComposer.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/IComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/IComposer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Composing
@@ -109,7 +133,7 @@ items:
   fullName: Beutl.Audio.Composing.IComposer.SampleRate
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Composing/IComposer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Composing/IComposer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Composing
@@ -272,6 +296,48 @@ references:
     name: Audio
     isExternal: true
     href: Beutl.Audio.html
+- uid: Beutl.Audio.Composing.IComposer.Clock*
+  commentId: Overload:Beutl.Audio.Composing.IComposer.Clock
+  isExternal: true
+  href: Beutl.Audio.Composing.IComposer.html#Beutl_Audio_Composing_IComposer_Clock
+  name: Clock
+  nameWithType: IComposer.Clock
+  fullName: Beutl.Audio.Composing.IComposer.Clock
+- uid: Beutl.Animation.IClock
+  commentId: T:Beutl.Animation.IClock
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: Beutl.Animation.IClock
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
 - uid: Beutl.Audio.Composing.IComposer.IsAudioRendering*
   commentId: Overload:Beutl.Audio.Composing.IComposer.IsAudioRendering
   isExternal: true

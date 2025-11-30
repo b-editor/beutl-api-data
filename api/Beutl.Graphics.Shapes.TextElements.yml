@@ -8,6 +8,7 @@ items:
   - Beutl.Graphics.Shapes.TextElements.#ctor(System.Collections.Generic.IEnumerable{Beutl.Graphics.Shapes.TextElement})
   - Beutl.Graphics.Shapes.TextElements.Count
   - Beutl.Graphics.Shapes.TextElements.GetEnumerator
+  - Beutl.Graphics.Shapes.TextElements.Invalidated
   - Beutl.Graphics.Shapes.TextElements.Item(System.Int32)
   - Beutl.Graphics.Shapes.TextElements.Lines
   langs:
@@ -18,13 +19,13 @@ items:
   fullName: Beutl.Graphics.Shapes.TextElements
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Shapes
   syntax:
-    content: 'public class TextElements : IReadOnlyList<TextElement>, IReadOnlyCollection<TextElement>, IEnumerable<TextElement>, IEnumerable'
-    content.vb: Public Class TextElements Implements IReadOnlyList(Of TextElement), IReadOnlyCollection(Of TextElement), IEnumerable(Of TextElement), IEnumerable
+    content: 'public class TextElements : IReadOnlyList<TextElement>, IReadOnlyCollection<TextElement>, IEnumerable<TextElement>, IEnumerable, IAffectsRender'
+    content.vb: Public Class TextElements Implements IReadOnlyList(Of TextElement), IReadOnlyCollection(Of TextElement), IEnumerable(Of TextElement), IEnumerable, IAffectsRender
   inheritance:
   - System.Object
   implements:
@@ -32,6 +33,7 @@ items:
   - System.Collections.Generic.IReadOnlyCollection{Beutl.Graphics.Shapes.TextElement}
   - System.Collections.Generic.IEnumerable{Beutl.Graphics.Shapes.TextElement}
   - System.Collections.IEnumerable
+  - Beutl.Media.IAffectsRender
   inheritedMembers:
   - System.Object.GetType
   - System.Object.MemberwiseClone
@@ -52,7 +54,7 @@ items:
   fullName: Beutl.Graphics.Shapes.TextElements.TextElements(System.Collections.Generic.IEnumerable<Beutl.Graphics.Shapes.TextElement>)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Shapes
@@ -78,7 +80,7 @@ items:
   fullName: Beutl.Graphics.Shapes.TextElements.GetEnumerator()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Shapes
@@ -103,7 +105,7 @@ items:
   fullName: Beutl.Graphics.Shapes.TextElements.this[int]
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Shapes
@@ -134,7 +136,7 @@ items:
   fullName: Beutl.Graphics.Shapes.TextElements.Count
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Shapes
@@ -160,7 +162,7 @@ items:
   fullName: Beutl.Graphics.Shapes.TextElements.Lines
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Shapes
@@ -171,6 +173,30 @@ items:
       type: Beutl.Graphics.Shapes.TextElements.LineEnumerable
     content.vb: Public ReadOnly Property Lines As TextElements.LineEnumerable
   overload: Beutl.Graphics.Shapes.TextElements.Lines*
+- uid: Beutl.Graphics.Shapes.TextElements.Invalidated
+  commentId: E:Beutl.Graphics.Shapes.TextElements.Invalidated
+  id: Invalidated
+  parent: Beutl.Graphics.Shapes.TextElements
+  langs:
+  - csharp
+  - vb
+  name: Invalidated
+  nameWithType: TextElements.Invalidated
+  fullName: Beutl.Graphics.Shapes.TextElements.Invalidated
+  type: Event
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Shapes/TextElements.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Shapes
+  example: []
+  syntax:
+    content: public event EventHandler<RenderInvalidatedEventArgs>? Invalidated
+    return:
+      type: System.EventHandler{Beutl.Media.RenderInvalidatedEventArgs}
+    content.vb: Public Event Invalidated As EventHandler(Of RenderInvalidatedEventArgs)
+  implements:
+  - Beutl.Media.IAffectsRender.Invalidated
 references:
 - uid: Beutl.Graphics.Shapes
   commentId: N:Beutl.Graphics.Shapes
@@ -333,6 +359,14 @@ references:
   name: IEnumerable
   nameWithType: IEnumerable
   fullName: System.Collections.IEnumerable
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
+  isExternal: true
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -707,6 +741,33 @@ references:
     name: Collections
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
 - uid: Beutl.Graphics.Shapes.TextElements.#ctor*
   commentId: Overload:Beutl.Graphics.Shapes.TextElements.#ctor
   isExternal: true
@@ -983,3 +1044,74 @@ references:
     name: LineEnumerable
     isExternal: true
     href: Beutl.Graphics.Shapes.TextElements.LineEnumerable.html
+- uid: Beutl.Media.IAffectsRender.Invalidated
+  commentId: E:Beutl.Media.IAffectsRender.Invalidated
+  parent: Beutl.Media.IAffectsRender
+  isExternal: true
+  href: Beutl.Media.IAffectsRender.html#Beutl_Media_IAffectsRender_Invalidated
+  name: Invalidated
+  nameWithType: IAffectsRender.Invalidated
+  fullName: Beutl.Media.IAffectsRender.Invalidated
+- uid: System.EventHandler{Beutl.Media.RenderInvalidatedEventArgs}
+  commentId: T:System.EventHandler{Beutl.Media.RenderInvalidatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<RenderInvalidatedEventArgs>
+  nameWithType: EventHandler<RenderInvalidatedEventArgs>
+  fullName: System.EventHandler<Beutl.Media.RenderInvalidatedEventArgs>
+  nameWithType.vb: EventHandler(Of RenderInvalidatedEventArgs)
+  fullName.vb: System.EventHandler(Of Beutl.Media.RenderInvalidatedEventArgs)
+  name.vb: EventHandler(Of RenderInvalidatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: Beutl.Media.RenderInvalidatedEventArgs
+    name: RenderInvalidatedEventArgs
+    isExternal: true
+    href: Beutl.Media.RenderInvalidatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.RenderInvalidatedEventArgs
+    name: RenderInvalidatedEventArgs
+    isExternal: true
+    href: Beutl.Media.RenderInvalidatedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )

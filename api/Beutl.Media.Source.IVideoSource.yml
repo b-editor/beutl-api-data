@@ -19,7 +19,7 @@ items:
   fullName: Beutl.Media.Source.IVideoSource
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IVideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -27,17 +27,15 @@ items:
     content: >-
       [JsonConverter(typeof(VideoSourceJsonConverter))]
 
-      public interface IVideoSource : IMediaSource, IDisposable, IFileSource
+      public interface IVideoSource : IMediaSource, IDisposable
     content.vb: >-
       <JsonConverter(GetType(VideoSourceJsonConverter))>
 
-      Public Interface IVideoSource Inherits IMediaSource, IDisposable, IFileSource
+      Public Interface IVideoSource Inherits IMediaSource, IDisposable
   inheritedMembers:
   - Beutl.Media.Source.IMediaSource.IsDisposed
   - Beutl.Media.Source.IMediaSource.Name
   - System.IDisposable.Dispose
-  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  - Beutl.IO.IFileSource.Uri
   attributes:
   - type: System.Text.Json.Serialization.JsonConverterAttribute
     ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
@@ -56,7 +54,7 @@ items:
   fullName: Beutl.Media.Source.IVideoSource.Read(System.TimeSpan, out Beutl.Media.IBitmap?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IVideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -92,7 +90,7 @@ items:
   fullName: Beutl.Media.Source.IVideoSource.Read(int, out Beutl.Media.IBitmap?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IVideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -128,7 +126,7 @@ items:
   fullName: Beutl.Media.Source.IVideoSource.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IVideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -150,7 +148,7 @@ items:
   fullName: Beutl.Media.Source.IVideoSource.Duration
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IVideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -173,7 +171,7 @@ items:
   fullName: Beutl.Media.Source.IVideoSource.FrameRate
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IVideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -196,7 +194,7 @@ items:
   fullName: Beutl.Media.Source.IVideoSource.FrameSize
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/IVideoSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/IVideoSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -283,42 +281,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
   - name: (
   - name: )
-- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  name: ReadFrom(Uri)
-  nameWithType: IFileSource.ReadFrom(Uri)
-  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  spec.csharp:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-- uid: Beutl.IO.IFileSource.Uri
-  commentId: P:Beutl.IO.IFileSource.Uri
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
-  name: Uri
-  nameWithType: IFileSource.Uri
-  fullName: Beutl.IO.IFileSource.Uri
 - uid: Beutl.Media.Source.IMediaSource
   commentId: T:Beutl.Media.Source.IMediaSource
   parent: Beutl.Media.Source
@@ -335,14 +297,6 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
 - uid: System
   commentId: N:System
   isExternal: true
@@ -350,33 +304,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
 - uid: Beutl.Media.Source.IVideoSource.Read*
   commentId: Overload:Beutl.Media.Source.IVideoSource.Read
   isExternal: true
@@ -482,7 +409,7 @@ references:
   commentId: T:Beutl.Rational
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Rational.Number.cs
+  href: Beutl.Rational.html
   name: Rational
   nameWithType: Rational
   fullName: Beutl.Rational

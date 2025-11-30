@@ -6,9 +6,9 @@ items:
   parent: Beutl.Graphics.Rendering
   children:
   - Beutl.Graphics.Rendering.OpacityRenderNode.#ctor(System.Single)
+  - Beutl.Graphics.Rendering.OpacityRenderNode.Equals(System.Single)
   - Beutl.Graphics.Rendering.OpacityRenderNode.Opacity
   - Beutl.Graphics.Rendering.OpacityRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
-  - Beutl.Graphics.Rendering.OpacityRenderNode.Update(System.Single)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -40,7 +40,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -60,7 +59,7 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityRenderNode.OpacityRenderNode(float)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -74,34 +73,34 @@ items:
   nameWithType.vb: OpacityRenderNode.New(Single)
   fullName.vb: Beutl.Graphics.Rendering.OpacityRenderNode.New(Single)
   name.vb: New(Single)
-- uid: Beutl.Graphics.Rendering.OpacityRenderNode.Update(System.Single)
-  commentId: M:Beutl.Graphics.Rendering.OpacityRenderNode.Update(System.Single)
-  id: Update(System.Single)
+- uid: Beutl.Graphics.Rendering.OpacityRenderNode.Equals(System.Single)
+  commentId: M:Beutl.Graphics.Rendering.OpacityRenderNode.Equals(System.Single)
+  id: Equals(System.Single)
   parent: Beutl.Graphics.Rendering.OpacityRenderNode
   langs:
   - csharp
   - vb
-  name: Update(float)
-  nameWithType: OpacityRenderNode.Update(float)
-  fullName: Beutl.Graphics.Rendering.OpacityRenderNode.Update(float)
+  name: Equals(float)
+  nameWithType: OpacityRenderNode.Equals(float)
+  fullName: Beutl.Graphics.Rendering.OpacityRenderNode.Equals(float)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   syntax:
-    content: public bool Update(float opacity)
+    content: public bool Equals(float opacity)
     parameters:
     - id: opacity
       type: System.Single
     return:
       type: System.Boolean
-    content.vb: Public Function Update(opacity As Single) As Boolean
-  overload: Beutl.Graphics.Rendering.OpacityRenderNode.Update*
-  nameWithType.vb: OpacityRenderNode.Update(Single)
-  fullName.vb: Beutl.Graphics.Rendering.OpacityRenderNode.Update(Single)
-  name.vb: Update(Single)
+    content.vb: Public Function Equals(opacity As Single) As Boolean
+  overload: Beutl.Graphics.Rendering.OpacityRenderNode.Equals*
+  nameWithType.vb: OpacityRenderNode.Equals(Single)
+  fullName.vb: Beutl.Graphics.Rendering.OpacityRenderNode.Equals(Single)
+  name.vb: Equals(Single)
 - uid: Beutl.Graphics.Rendering.OpacityRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.OpacityRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -114,7 +113,7 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -141,7 +140,7 @@ items:
   fullName: Beutl.Graphics.Rendering.OpacityRenderNode.Opacity
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/OpacityRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -451,14 +450,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -690,13 +681,13 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
-- uid: Beutl.Graphics.Rendering.OpacityRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.OpacityRenderNode.Update
+- uid: Beutl.Graphics.Rendering.OpacityRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.OpacityRenderNode.Equals
   isExternal: true
-  href: Beutl.Graphics.Rendering.OpacityRenderNode.html#Beutl_Graphics_Rendering_OpacityRenderNode_Update_System_Single_
-  name: Update
-  nameWithType: OpacityRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.OpacityRenderNode.Update
+  href: Beutl.Graphics.Rendering.OpacityRenderNode.html#Beutl_Graphics_Rendering_OpacityRenderNode_Equals_System_Single_
+  name: Equals
+  nameWithType: OpacityRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.OpacityRenderNode.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

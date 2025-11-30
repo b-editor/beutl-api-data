@@ -20,7 +20,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -31,7 +31,8 @@ items:
   - System.Object
   - Beutl.EvaluationContext
   inheritedMembers:
-  - Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
+  - Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
+  - Beutl.EvaluationContext.Clock
   - Beutl.EvaluationContext.Renderer
   - Beutl.EvaluationContext.List
   - Beutl.EvaluationContext.Target
@@ -53,7 +54,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext.NodeEvaluationContext(Beutl.NodeTree.Node, Beutl.EvaluationContext)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -81,7 +82,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext.NodeEvaluationContext(Beutl.NodeTree.Node)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -107,7 +108,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext.GetOrSetStateWithFactory<T>(System.Func<T>)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -137,7 +138,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext.GetOrSetState<T>()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -164,7 +165,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext.GetOrDefaultState<T>()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -191,7 +192,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext.Node
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -214,7 +215,7 @@ items:
   fullName: Beutl.NodeTree.NodeEvaluationContext.State
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/NodeEvaluationContext.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree
@@ -272,36 +273,44 @@ references:
   name: EvaluationContext
   nameWithType: EvaluationContext
   fullName: Beutl.EvaluationContext
-- uid: Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
-  commentId: M:Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
+- uid: Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
+  commentId: M:Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
   parent: Beutl.EvaluationContext
   isExternal: true
-  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Engine_EngineObject_
-  name: AddRenderable(EngineObject)
-  nameWithType: EvaluationContext.AddRenderable(EngineObject)
-  fullName: Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
+  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Graphics_Rendering_Renderable_
+  name: AddRenderable(Renderable)
+  nameWithType: EvaluationContext.AddRenderable(Renderable)
+  fullName: Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
   spec.csharp:
-  - uid: Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
+  - uid: Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
     name: AddRenderable
     isExternal: true
-    href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Engine_EngineObject_
+    href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Graphics_Rendering_Renderable_
   - name: (
-  - uid: Beutl.Engine.EngineObject
-    name: EngineObject
+  - uid: Beutl.Graphics.Rendering.Renderable
+    name: Renderable
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/EngineObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderable.cs
   - name: )
   spec.vb:
-  - uid: Beutl.EvaluationContext.AddRenderable(Beutl.Engine.EngineObject)
+  - uid: Beutl.EvaluationContext.AddRenderable(Beutl.Graphics.Rendering.Renderable)
     name: AddRenderable
     isExternal: true
-    href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Engine_EngineObject_
+    href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_AddRenderable_Beutl_Graphics_Rendering_Renderable_
   - name: (
-  - uid: Beutl.Engine.EngineObject
-    name: EngineObject
+  - uid: Beutl.Graphics.Rendering.Renderable
+    name: Renderable
     isExternal: true
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Engine/EngineObject.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderable.cs
   - name: )
+- uid: Beutl.EvaluationContext.Clock
+  commentId: P:Beutl.EvaluationContext.Clock
+  parent: Beutl.EvaluationContext
+  isExternal: true
+  href: Beutl.EvaluationContext.html#Beutl_EvaluationContext_Clock
+  name: Clock
+  nameWithType: EvaluationContext.Clock
+  fullName: Beutl.EvaluationContext.Clock
 - uid: Beutl.EvaluationContext.Renderer
   commentId: P:Beutl.EvaluationContext.Renderer
   parent: Beutl.EvaluationContext

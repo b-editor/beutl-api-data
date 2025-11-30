@@ -6,8 +6,10 @@ items:
   parent: Beutl.Audio.Graph.Nodes
   children:
   - Beutl.Audio.Graph.Nodes.GainNode.#ctor
-  - Beutl.Audio.Graph.Nodes.GainNode.Gain
+  - Beutl.Audio.Graph.Nodes.GainNode.GainProperty
   - Beutl.Audio.Graph.Nodes.GainNode.Process(Beutl.Audio.Graph.AudioProcessContext)
+  - Beutl.Audio.Graph.Nodes.GainNode.StaticGain
+  - Beutl.Audio.Graph.Nodes.GainNode.Target
   langs:
   - csharp
   - vb
@@ -16,7 +18,7 @@ items:
   fullName: Beutl.Audio.Graph.Nodes.GainNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
@@ -52,7 +54,7 @@ items:
   fullName: Beutl.Audio.Graph.Nodes.GainNode.Process(Beutl.Audio.Graph.AudioProcessContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
@@ -79,7 +81,7 @@ items:
   fullName: Beutl.Audio.Graph.Nodes.GainNode.GainNode()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
@@ -90,29 +92,75 @@ items:
   nameWithType.vb: GainNode.New()
   fullName.vb: Beutl.Audio.Graph.Nodes.GainNode.New()
   name.vb: New()
-- uid: Beutl.Audio.Graph.Nodes.GainNode.Gain
-  commentId: P:Beutl.Audio.Graph.Nodes.GainNode.Gain
-  id: Gain
+- uid: Beutl.Audio.Graph.Nodes.GainNode.Target
+  commentId: P:Beutl.Audio.Graph.Nodes.GainNode.Target
+  id: Target
   parent: Beutl.Audio.Graph.Nodes.GainNode
   langs:
   - csharp
   - vb
-  name: Gain
-  nameWithType: GainNode.Gain
-  fullName: Beutl.Audio.Graph.Nodes.GainNode.Gain
+  name: Target
+  nameWithType: GainNode.Target
+  fullName: Beutl.Audio.Graph.Nodes.GainNode.Target
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Audio.Graph.Nodes
   syntax:
-    content: public IProperty<float>? Gain { get; set; }
+    content: public IAnimatable? Target { get; set; }
     parameters: []
     return:
-      type: Beutl.Engine.IProperty{System.Single}
-    content.vb: Public Property Gain As IProperty(Of Single)
-  overload: Beutl.Audio.Graph.Nodes.GainNode.Gain*
+      type: Beutl.Animation.IAnimatable
+    content.vb: Public Property Target As IAnimatable
+  overload: Beutl.Audio.Graph.Nodes.GainNode.Target*
+- uid: Beutl.Audio.Graph.Nodes.GainNode.GainProperty
+  commentId: P:Beutl.Audio.Graph.Nodes.GainNode.GainProperty
+  id: GainProperty
+  parent: Beutl.Audio.Graph.Nodes.GainNode
+  langs:
+  - csharp
+  - vb
+  name: GainProperty
+  nameWithType: GainNode.GainProperty
+  fullName: Beutl.Audio.Graph.Nodes.GainNode.GainProperty
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph.Nodes
+  syntax:
+    content: public CoreProperty<float>? GainProperty { get; set; }
+    parameters: []
+    return:
+      type: Beutl.CoreProperty{System.Single}
+    content.vb: Public Property GainProperty As CoreProperty(Of Single)
+  overload: Beutl.Audio.Graph.Nodes.GainNode.GainProperty*
+- uid: Beutl.Audio.Graph.Nodes.GainNode.StaticGain
+  commentId: P:Beutl.Audio.Graph.Nodes.GainNode.StaticGain
+  id: StaticGain
+  parent: Beutl.Audio.Graph.Nodes.GainNode
+  langs:
+  - csharp
+  - vb
+  name: StaticGain
+  nameWithType: GainNode.StaticGain
+  fullName: Beutl.Audio.Graph.Nodes.GainNode.StaticGain
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Audio/Graph/Nodes/GainNode.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Audio.Graph.Nodes
+  syntax:
+    content: public float StaticGain { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property StaticGain As Single
+  overload: Beutl.Audio.Graph.Nodes.GainNode.StaticGain*
 references:
 - uid: Beutl.Audio.Graph.Nodes
   commentId: N:Beutl.Audio.Graph.Nodes
@@ -629,29 +677,71 @@ references:
   nameWithType.vb: GainNode.New
   fullName.vb: Beutl.Audio.Graph.Nodes.GainNode.New
   name.vb: New
-- uid: Beutl.Audio.Graph.Nodes.GainNode.Gain*
-  commentId: Overload:Beutl.Audio.Graph.Nodes.GainNode.Gain
+- uid: Beutl.Audio.Graph.Nodes.GainNode.Target*
+  commentId: Overload:Beutl.Audio.Graph.Nodes.GainNode.Target
   isExternal: true
-  href: Beutl.Audio.Graph.Nodes.GainNode.html#Beutl_Audio_Graph_Nodes_GainNode_Gain
-  name: Gain
-  nameWithType: GainNode.Gain
-  fullName: Beutl.Audio.Graph.Nodes.GainNode.Gain
-- uid: Beutl.Engine.IProperty{System.Single}
-  commentId: T:Beutl.Engine.IProperty{System.Single}
-  parent: Beutl.Engine
-  definition: Beutl.Engine.IProperty`1
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<float>
-  nameWithType: IProperty<float>
-  fullName: Beutl.Engine.IProperty<float>
-  nameWithType.vb: IProperty(Of Single)
-  fullName.vb: Beutl.Engine.IProperty(Of Single)
-  name.vb: IProperty(Of Single)
+  href: Beutl.Audio.Graph.Nodes.GainNode.html#Beutl_Audio_Graph_Nodes_GainNode_Target
+  name: Target
+  nameWithType: GainNode.Target
+  fullName: Beutl.Audio.Graph.Nodes.GainNode.Target
+- uid: Beutl.Animation.IAnimatable
+  commentId: T:Beutl.Animation.IAnimatable
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.IAnimatable.html
+  name: IAnimatable
+  nameWithType: IAnimatable
+  fullName: Beutl.Animation.IAnimatable
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
   spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl
+    name: Beutl
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+- uid: Beutl.Audio.Graph.Nodes.GainNode.GainProperty*
+  commentId: Overload:Beutl.Audio.Graph.Nodes.GainNode.GainProperty
+  isExternal: true
+  href: Beutl.Audio.Graph.Nodes.GainNode.html#Beutl_Audio_Graph_Nodes_GainNode_GainProperty
+  name: GainProperty
+  nameWithType: GainNode.GainProperty
+  fullName: Beutl.Audio.Graph.Nodes.GainNode.GainProperty
+- uid: Beutl.CoreProperty{System.Single}
+  commentId: T:Beutl.CoreProperty{System.Single}
+  parent: Beutl
+  definition: Beutl.CoreProperty`1
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
+  name: CoreProperty<float>
+  nameWithType: CoreProperty<float>
+  fullName: Beutl.CoreProperty<float>
+  nameWithType.vb: CoreProperty(Of Single)
+  fullName.vb: Beutl.CoreProperty(Of Single)
+  name.vb: CoreProperty(Of Single)
+  spec.csharp:
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
+    isExternal: true
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: <
   - uid: System.Single
     name: float
@@ -659,10 +749,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.single
   - name: '>'
   spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreProperty.cs
   - name: (
   - name: Of
   - name: " "
@@ -671,58 +761,56 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
   - name: )
-- uid: Beutl.Engine.IProperty`1
-  commentId: T:Beutl.Engine.IProperty`1
+- uid: Beutl.CoreProperty`1
+  commentId: T:Beutl.CoreProperty`1
   isExternal: true
-  href: Beutl.Engine.IProperty-1.html
-  name: IProperty<T>
-  nameWithType: IProperty<T>
-  fullName: Beutl.Engine.IProperty<T>
-  nameWithType.vb: IProperty(Of T)
-  fullName.vb: Beutl.Engine.IProperty(Of T)
-  name.vb: IProperty(Of T)
+  href: Beutl.CoreProperty-1.html
+  name: CoreProperty<T>
+  nameWithType: CoreProperty<T>
+  fullName: Beutl.CoreProperty<T>
+  nameWithType.vb: CoreProperty(Of T)
+  fullName.vb: Beutl.CoreProperty(Of T)
+  name.vb: CoreProperty(Of T)
   spec.csharp:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.CoreProperty-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Beutl.Engine.IProperty`1
-    name: IProperty
+  - uid: Beutl.CoreProperty`1
+    name: CoreProperty
     isExternal: true
-    href: Beutl.Engine.IProperty-1.html
+    href: Beutl.CoreProperty-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
-- uid: Beutl.Engine
-  commentId: N:Beutl.Engine
+- uid: Beutl
+  commentId: N:Beutl
   isExternal: true
   href: Beutl.html
-  name: Beutl.Engine
-  nameWithType: Beutl.Engine
-  fullName: Beutl.Engine
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.Engine
-    name: Engine
-    isExternal: true
-    href: Beutl.Engine.html
+  name: Beutl
+  nameWithType: Beutl
+  fullName: Beutl
+- uid: Beutl.Audio.Graph.Nodes.GainNode.StaticGain*
+  commentId: Overload:Beutl.Audio.Graph.Nodes.GainNode.StaticGain
+  isExternal: true
+  href: Beutl.Audio.Graph.Nodes.GainNode.html#Beutl_Audio_Graph_Nodes_GainNode_StaticGain
+  name: StaticGain
+  nameWithType: GainNode.StaticGain
+  fullName: Beutl.Audio.Graph.Nodes.GainNode.StaticGain
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

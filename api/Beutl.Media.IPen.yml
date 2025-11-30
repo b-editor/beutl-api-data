@@ -1,0 +1,454 @@
+### YamlMime:ManagedReference
+items:
+- uid: Beutl.Media.IPen
+  commentId: T:Beutl.Media.IPen
+  id: IPen
+  parent: Beutl.Media
+  children:
+  - Beutl.Media.IPen.Brush
+  - Beutl.Media.IPen.DashArray
+  - Beutl.Media.IPen.DashOffset
+  - Beutl.Media.IPen.MiterLimit
+  - Beutl.Media.IPen.StrokeAlignment
+  - Beutl.Media.IPen.StrokeCap
+  - Beutl.Media.IPen.StrokeJoin
+  - Beutl.Media.IPen.Thickness
+  langs:
+  - csharp
+  - vb
+  name: IPen
+  nameWithType: IPen
+  fullName: Beutl.Media.IPen
+  type: Interface
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: >-
+      [JsonConverter(typeof(PenJsonConverter))]
+
+      public interface IPen
+    content.vb: >-
+      <JsonConverter(GetType(PenJsonConverter))>
+
+      Public Interface IPen
+- uid: Beutl.Media.IPen.Brush
+  commentId: P:Beutl.Media.IPen.Brush
+  id: Brush
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: Brush
+  nameWithType: IPen.Brush
+  fullName: Beutl.Media.IPen.Brush
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: IBrush? Brush { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.IBrush
+    content.vb: ReadOnly Property Brush As IBrush
+  overload: Beutl.Media.IPen.Brush*
+- uid: Beutl.Media.IPen.DashArray
+  commentId: P:Beutl.Media.IPen.DashArray
+  id: DashArray
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: DashArray
+  nameWithType: IPen.DashArray
+  fullName: Beutl.Media.IPen.DashArray
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: IReadOnlyList<float>? DashArray { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.Single}
+    content.vb: ReadOnly Property DashArray As IReadOnlyList(Of Single)
+  overload: Beutl.Media.IPen.DashArray*
+- uid: Beutl.Media.IPen.DashOffset
+  commentId: P:Beutl.Media.IPen.DashOffset
+  id: DashOffset
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: DashOffset
+  nameWithType: IPen.DashOffset
+  fullName: Beutl.Media.IPen.DashOffset
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: float DashOffset { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly Property DashOffset As Single
+  overload: Beutl.Media.IPen.DashOffset*
+- uid: Beutl.Media.IPen.Thickness
+  commentId: P:Beutl.Media.IPen.Thickness
+  id: Thickness
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: Thickness
+  nameWithType: IPen.Thickness
+  fullName: Beutl.Media.IPen.Thickness
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: float Thickness { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly Property Thickness As Single
+  overload: Beutl.Media.IPen.Thickness*
+- uid: Beutl.Media.IPen.MiterLimit
+  commentId: P:Beutl.Media.IPen.MiterLimit
+  id: MiterLimit
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: MiterLimit
+  nameWithType: IPen.MiterLimit
+  fullName: Beutl.Media.IPen.MiterLimit
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: float MiterLimit { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly Property MiterLimit As Single
+  overload: Beutl.Media.IPen.MiterLimit*
+- uid: Beutl.Media.IPen.StrokeCap
+  commentId: P:Beutl.Media.IPen.StrokeCap
+  id: StrokeCap
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: StrokeCap
+  nameWithType: IPen.StrokeCap
+  fullName: Beutl.Media.IPen.StrokeCap
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: StrokeCap StrokeCap { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.StrokeCap
+    content.vb: ReadOnly Property StrokeCap As StrokeCap
+  overload: Beutl.Media.IPen.StrokeCap*
+- uid: Beutl.Media.IPen.StrokeJoin
+  commentId: P:Beutl.Media.IPen.StrokeJoin
+  id: StrokeJoin
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: StrokeJoin
+  nameWithType: IPen.StrokeJoin
+  fullName: Beutl.Media.IPen.StrokeJoin
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: StrokeJoin StrokeJoin { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.StrokeJoin
+    content.vb: ReadOnly Property StrokeJoin As StrokeJoin
+  overload: Beutl.Media.IPen.StrokeJoin*
+- uid: Beutl.Media.IPen.StrokeAlignment
+  commentId: P:Beutl.Media.IPen.StrokeAlignment
+  id: StrokeAlignment
+  parent: Beutl.Media.IPen
+  langs:
+  - csharp
+  - vb
+  name: StrokeAlignment
+  nameWithType: IPen.StrokeAlignment
+  fullName: Beutl.Media.IPen.StrokeAlignment
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IPen.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Media
+  syntax:
+    content: StrokeAlignment StrokeAlignment { get; }
+    parameters: []
+    return:
+      type: Beutl.Media.StrokeAlignment
+    content.vb: ReadOnly Property StrokeAlignment As StrokeAlignment
+  overload: Beutl.Media.IPen.StrokeAlignment*
+references:
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.Media.IPen.Brush*
+  commentId: Overload:Beutl.Media.IPen.Brush
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_Brush
+  name: Brush
+  nameWithType: IPen.Brush
+  fullName: Beutl.Media.IPen.Brush
+- uid: Beutl.Media.IBrush
+  commentId: T:Beutl.Media.IBrush
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.IBrush.html
+  name: IBrush
+  nameWithType: IBrush
+  fullName: Beutl.Media.IBrush
+- uid: Beutl.Media.IPen.DashArray*
+  commentId: Overload:Beutl.Media.IPen.DashArray
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_DashArray
+  name: DashArray
+  nameWithType: IPen.DashArray
+  fullName: Beutl.Media.IPen.DashArray
+- uid: System.Collections.Generic.IReadOnlyList{System.Single}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<float>
+  nameWithType: IReadOnlyList<float>
+  fullName: System.Collections.Generic.IReadOnlyList<float>
+  nameWithType.vb: IReadOnlyList(Of Single)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Single)
+  name.vb: IReadOnlyList(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Beutl.Media.IPen.DashOffset*
+  commentId: Overload:Beutl.Media.IPen.DashOffset
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_DashOffset
+  name: DashOffset
+  nameWithType: IPen.DashOffset
+  fullName: Beutl.Media.IPen.DashOffset
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Beutl.Media.IPen.Thickness*
+  commentId: Overload:Beutl.Media.IPen.Thickness
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_Thickness
+  name: Thickness
+  nameWithType: IPen.Thickness
+  fullName: Beutl.Media.IPen.Thickness
+- uid: Beutl.Media.IPen.MiterLimit*
+  commentId: Overload:Beutl.Media.IPen.MiterLimit
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_MiterLimit
+  name: MiterLimit
+  nameWithType: IPen.MiterLimit
+  fullName: Beutl.Media.IPen.MiterLimit
+- uid: Beutl.Media.IPen.StrokeCap*
+  commentId: Overload:Beutl.Media.IPen.StrokeCap
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_StrokeCap
+  name: StrokeCap
+  nameWithType: IPen.StrokeCap
+  fullName: Beutl.Media.IPen.StrokeCap
+- uid: Beutl.Media.StrokeCap
+  commentId: T:Beutl.Media.StrokeCap
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.StrokeCap.html
+  name: StrokeCap
+  nameWithType: StrokeCap
+  fullName: Beutl.Media.StrokeCap
+- uid: Beutl.Media.IPen.StrokeJoin*
+  commentId: Overload:Beutl.Media.IPen.StrokeJoin
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_StrokeJoin
+  name: StrokeJoin
+  nameWithType: IPen.StrokeJoin
+  fullName: Beutl.Media.IPen.StrokeJoin
+- uid: Beutl.Media.StrokeJoin
+  commentId: T:Beutl.Media.StrokeJoin
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.StrokeJoin.html
+  name: StrokeJoin
+  nameWithType: StrokeJoin
+  fullName: Beutl.Media.StrokeJoin
+- uid: Beutl.Media.IPen.StrokeAlignment*
+  commentId: Overload:Beutl.Media.IPen.StrokeAlignment
+  isExternal: true
+  href: Beutl.Media.IPen.html#Beutl_Media_IPen_StrokeAlignment
+  name: StrokeAlignment
+  nameWithType: IPen.StrokeAlignment
+  fullName: Beutl.Media.IPen.StrokeAlignment
+- uid: Beutl.Media.StrokeAlignment
+  commentId: T:Beutl.Media.StrokeAlignment
+  parent: Beutl.Media
+  isExternal: true
+  href: Beutl.Media.StrokeAlignment.html
+  name: StrokeAlignment
+  nameWithType: StrokeAlignment
+  fullName: Beutl.Media.StrokeAlignment

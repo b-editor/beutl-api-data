@@ -6,6 +6,7 @@ items:
   parent: Beutl.Graphics.Rendering
   children:
   - Beutl.Graphics.Rendering.Renderer.#ctor(System.Int32,System.Int32)
+  - Beutl.Graphics.Rendering.Renderer.Clock
   - Beutl.Graphics.Rendering.Renderer.Dispose
   - Beutl.Graphics.Rendering.Renderer.DrawFps
   - Beutl.Graphics.Rendering.Renderer.Finalize
@@ -13,6 +14,7 @@ items:
   - Beutl.Graphics.Rendering.Renderer.GetCacheContext
   - Beutl.Graphics.Rendering.Renderer.GetInternalCanvas(Beutl.Graphics.Rendering.Renderer)
   - Beutl.Graphics.Rendering.Renderer.HitTest(Beutl.Graphics.Point)
+  - Beutl.Graphics.Rendering.Renderer.InternalClock
   - Beutl.Graphics.Rendering.Renderer.IsDisposed
   - Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
   - Beutl.Graphics.Rendering.Renderer.OnDispose(System.Boolean)
@@ -20,7 +22,6 @@ items:
   - Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore
   - Beutl.Graphics.Rendering.Renderer.RenderScene
   - Beutl.Graphics.Rendering.Renderer.Snapshot
-  - Beutl.Graphics.Rendering.Renderer.Time
   langs:
   - csharp
   - vb
@@ -29,7 +30,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -63,7 +64,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.Renderer(int, int)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -91,7 +92,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.~Renderer()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -114,7 +115,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -137,7 +138,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.GetCacheContext()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -159,7 +160,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.OnDispose(bool)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -185,7 +186,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.RenderGraphicsCore()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -205,7 +206,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.HitTest(Beutl.Graphics.Point)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -233,19 +234,19 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.Render(System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   example: []
   syntax:
-    content: public bool Render(TimeSpan time)
+    content: public bool Render(TimeSpan timeSpan)
     parameters:
-    - id: time
+    - id: timeSpan
       type: System.TimeSpan
     return:
       type: System.Boolean
-    content.vb: Public Function Render(time As TimeSpan) As Boolean
+    content.vb: Public Function Render(timeSpan As TimeSpan) As Boolean
   overload: Beutl.Graphics.Rendering.Renderer.Render*
   implements:
   - Beutl.Graphics.Rendering.IRenderer.Render(System.TimeSpan)
@@ -261,7 +262,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.Snapshot()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -286,7 +287,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.GetInternalCanvas(Beutl.Graphics.Rendering.Renderer)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -311,7 +312,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -337,7 +338,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.IsGraphicsRendering
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -363,7 +364,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.DrawFps
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -377,32 +378,32 @@ items:
   overload: Beutl.Graphics.Rendering.Renderer.DrawFps*
   implements:
   - Beutl.Graphics.Rendering.IRenderer.DrawFps
-- uid: Beutl.Graphics.Rendering.Renderer.Time
-  commentId: P:Beutl.Graphics.Rendering.Renderer.Time
-  id: Time
+- uid: Beutl.Graphics.Rendering.Renderer.Clock
+  commentId: P:Beutl.Graphics.Rendering.Renderer.Clock
+  id: Clock
   parent: Beutl.Graphics.Rendering.Renderer
   langs:
   - csharp
   - vb
-  name: Time
-  nameWithType: Renderer.Time
-  fullName: Beutl.Graphics.Rendering.Renderer.Time
+  name: Clock
+  nameWithType: Renderer.Clock
+  fullName: Beutl.Graphics.Rendering.Renderer.Clock
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
   example: []
   syntax:
-    content: public TimeSpan Time { get; }
+    content: public IClock Clock { get; }
     parameters: []
     return:
-      type: System.TimeSpan
-    content.vb: Public ReadOnly Property Time As TimeSpan
-  overload: Beutl.Graphics.Rendering.Renderer.Time*
+      type: Beutl.Animation.IClock
+    content.vb: Public ReadOnly Property Clock As IClock
+  overload: Beutl.Graphics.Rendering.Renderer.Clock*
   implements:
-  - Beutl.Graphics.Rendering.IRenderer.Time
+  - Beutl.Graphics.Rendering.IRenderer.Clock
 - uid: Beutl.Graphics.Rendering.Renderer.FrameSize
   commentId: P:Beutl.Graphics.Rendering.Renderer.FrameSize
   id: FrameSize
@@ -415,7 +416,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.FrameSize
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -441,7 +442,7 @@ items:
   fullName: Beutl.Graphics.Rendering.Renderer.RenderScene
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -455,6 +456,29 @@ items:
   overload: Beutl.Graphics.Rendering.Renderer.RenderScene*
   implements:
   - Beutl.Graphics.Rendering.IRenderer.RenderScene
+- uid: Beutl.Graphics.Rendering.Renderer.InternalClock
+  commentId: P:Beutl.Graphics.Rendering.Renderer.InternalClock
+  id: InternalClock
+  parent: Beutl.Graphics.Rendering.Renderer
+  langs:
+  - csharp
+  - vb
+  name: InternalClock
+  nameWithType: Renderer.InternalClock
+  fullName: Beutl.Graphics.Rendering.Renderer.InternalClock
+  type: Property
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/Renderer.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: protected InstanceClock InternalClock { get; }
+    parameters: []
+    return:
+      type: Beutl.Animation.InstanceClock
+    content.vb: Protected ReadOnly Property InternalClock As InstanceClock
+  overload: Beutl.Graphics.Rendering.Renderer.InternalClock*
 references:
 - uid: Beutl.Graphics.Rendering
   commentId: N:Beutl.Graphics.Rendering
@@ -1209,21 +1233,56 @@ references:
   name: DrawFps
   nameWithType: IRenderer.DrawFps
   fullName: Beutl.Graphics.Rendering.IRenderer.DrawFps
-- uid: Beutl.Graphics.Rendering.Renderer.Time*
-  commentId: Overload:Beutl.Graphics.Rendering.Renderer.Time
+- uid: Beutl.Graphics.Rendering.Renderer.Clock*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.Clock
   isExternal: true
-  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Time
-  name: Time
-  nameWithType: Renderer.Time
-  fullName: Beutl.Graphics.Rendering.Renderer.Time
-- uid: Beutl.Graphics.Rendering.IRenderer.Time
-  commentId: P:Beutl.Graphics.Rendering.IRenderer.Time
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_Clock
+  name: Clock
+  nameWithType: Renderer.Clock
+  fullName: Beutl.Graphics.Rendering.Renderer.Clock
+- uid: Beutl.Graphics.Rendering.IRenderer.Clock
+  commentId: P:Beutl.Graphics.Rendering.IRenderer.Clock
   parent: Beutl.Graphics.Rendering.IRenderer
   isExternal: true
-  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Time
-  name: Time
-  nameWithType: IRenderer.Time
-  fullName: Beutl.Graphics.Rendering.IRenderer.Time
+  href: Beutl.Graphics.Rendering.IRenderer.html#Beutl_Graphics_Rendering_IRenderer_Clock
+  name: Clock
+  nameWithType: IRenderer.Clock
+  fullName: Beutl.Graphics.Rendering.IRenderer.Clock
+- uid: Beutl.Animation.IClock
+  commentId: T:Beutl.Animation.IClock
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: Beutl.Animation.IClock
+- uid: Beutl.Animation
+  commentId: N:Beutl.Animation
+  isExternal: true
+  href: Beutl.html
+  name: Beutl.Animation
+  nameWithType: Beutl.Animation
+  fullName: Beutl.Animation
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Animation
+    name: Animation
+    isExternal: true
+    href: Beutl.Animation.html
 - uid: Beutl.Graphics.Rendering.Renderer.FrameSize*
   commentId: Overload:Beutl.Graphics.Rendering.Renderer.FrameSize
   isExternal: true
@@ -1270,3 +1329,18 @@ references:
   name: RenderScene
   nameWithType: RenderScene
   fullName: Beutl.Graphics.Rendering.RenderScene
+- uid: Beutl.Graphics.Rendering.Renderer.InternalClock*
+  commentId: Overload:Beutl.Graphics.Rendering.Renderer.InternalClock
+  isExternal: true
+  href: Beutl.Graphics.Rendering.Renderer.html#Beutl_Graphics_Rendering_Renderer_InternalClock
+  name: InternalClock
+  nameWithType: Renderer.InternalClock
+  fullName: Beutl.Graphics.Rendering.Renderer.InternalClock
+- uid: Beutl.Animation.InstanceClock
+  commentId: T:Beutl.Animation.InstanceClock
+  parent: Beutl.Animation
+  isExternal: true
+  href: Beutl.Animation.InstanceClock.html
+  name: InstanceClock
+  nameWithType: InstanceClock
+  fullName: Beutl.Animation.InstanceClock

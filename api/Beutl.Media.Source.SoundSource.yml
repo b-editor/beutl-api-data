@@ -5,7 +5,7 @@ items:
   id: SoundSource
   parent: Beutl.Media.Source
   children:
-  - Beutl.Media.Source.SoundSource.#ctor
+  - Beutl.Media.Source.SoundSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)
   - Beutl.Media.Source.SoundSource.Clone
   - Beutl.Media.Source.SoundSource.Dispose
   - Beutl.Media.Source.SoundSource.Duration
@@ -13,18 +13,15 @@ items:
   - Beutl.Media.Source.SoundSource.Finalize
   - Beutl.Media.Source.SoundSource.GetHashCode
   - Beutl.Media.Source.SoundSource.IsDisposed
+  - Beutl.Media.Source.SoundSource.Name
   - Beutl.Media.Source.SoundSource.NumChannels
   - Beutl.Media.Source.SoundSource.Open(System.String)
-  - Beutl.Media.Source.SoundSource.Open(System.Uri)
   - Beutl.Media.Source.SoundSource.Read(System.Int32,System.Int32,Beutl.Media.Music.IPcm@)
   - Beutl.Media.Source.SoundSource.Read(System.Int32,System.TimeSpan,Beutl.Media.Music.IPcm@)
   - Beutl.Media.Source.SoundSource.Read(System.TimeSpan,System.Int32,Beutl.Media.Music.IPcm@)
   - Beutl.Media.Source.SoundSource.Read(System.TimeSpan,System.TimeSpan,Beutl.Media.Music.IPcm@)
-  - Beutl.Media.Source.SoundSource.ReadFrom(System.Uri)
   - Beutl.Media.Source.SoundSource.SampleRate
   - Beutl.Media.Source.SoundSource.TryOpen(System.String,Beutl.Media.Source.SoundSource@)
-  - Beutl.Media.Source.SoundSource.TryOpen(System.Uri,Beutl.Media.Source.SoundSource@)
-  - Beutl.Media.Source.SoundSource.Uri
   langs:
   - csharp
   - vb
@@ -33,49 +30,53 @@ items:
   fullName: Beutl.Media.Source.SoundSource
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: 'public class SoundSource : ISoundSource, IMediaSource, IDisposable, IFileSource'
-    content.vb: Public Class SoundSource Implements ISoundSource, IMediaSource, IDisposable, IFileSource
+    content: 'public class SoundSource : ISoundSource, IMediaSource, IDisposable'
+    content.vb: Public Class SoundSource Implements ISoundSource, IMediaSource, IDisposable
   inheritance:
   - System.Object
   implements:
   - Beutl.Media.Source.ISoundSource
   - Beutl.Media.Source.IMediaSource
   - System.IDisposable
-  - Beutl.IO.IFileSource
   inheritedMembers:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: Beutl.Media.Source.SoundSource.#ctor
-  commentId: M:Beutl.Media.Source.SoundSource.#ctor
-  id: '#ctor'
+- uid: Beutl.Media.Source.SoundSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)
+  commentId: M:Beutl.Media.Source.SoundSource.#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)
+  id: '#ctor(Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader},System.String)'
   parent: Beutl.Media.Source.SoundSource
   langs:
   - csharp
   - vb
-  name: SoundSource()
-  nameWithType: SoundSource.SoundSource()
-  fullName: Beutl.Media.Source.SoundSource.SoundSource()
+  name: SoundSource(Ref<MediaReader>, string)
+  nameWithType: SoundSource.SoundSource(Ref<MediaReader>, string)
+  fullName: Beutl.Media.Source.SoundSource.SoundSource(Beutl.Media.Source.Ref<Beutl.Media.Decoding.MediaReader>, string)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   syntax:
-    content: public SoundSource()
-    content.vb: Public Sub New()
+    content: public SoundSource(Ref<MediaReader> mediaReader, string fileName)
+    parameters:
+    - id: mediaReader
+      type: Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader}
+    - id: fileName
+      type: System.String
+    content.vb: Public Sub New(mediaReader As Ref(Of MediaReader), fileName As String)
   overload: Beutl.Media.Source.SoundSource.#ctor*
-  nameWithType.vb: SoundSource.New()
-  fullName.vb: Beutl.Media.Source.SoundSource.New()
-  name.vb: New()
+  nameWithType.vb: SoundSource.New(Ref(Of MediaReader), String)
+  fullName.vb: Beutl.Media.Source.SoundSource.New(Beutl.Media.Source.Ref(Of Beutl.Media.Decoding.MediaReader), String)
+  name.vb: New(Ref(Of MediaReader), String)
 - uid: Beutl.Media.Source.SoundSource.Finalize
   commentId: M:Beutl.Media.Source.SoundSource.Finalize
   id: Finalize
@@ -88,7 +89,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.~SoundSource()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -111,7 +112,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Open(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -139,7 +140,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.TryOpen(string, out Beutl.Media.Source.SoundSource?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -157,87 +158,6 @@ items:
   nameWithType.vb: SoundSource.TryOpen(String, SoundSource)
   fullName.vb: Beutl.Media.Source.SoundSource.TryOpen(String, Beutl.Media.Source.SoundSource)
   name.vb: TryOpen(String, SoundSource)
-- uid: Beutl.Media.Source.SoundSource.Open(System.Uri)
-  commentId: M:Beutl.Media.Source.SoundSource.Open(System.Uri)
-  id: Open(System.Uri)
-  parent: Beutl.Media.Source.SoundSource
-  langs:
-  - csharp
-  - vb
-  name: Open(Uri)
-  nameWithType: SoundSource.Open(Uri)
-  fullName: Beutl.Media.Source.SoundSource.Open(System.Uri)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  syntax:
-    content: public static SoundSource Open(Uri uri)
-    parameters:
-    - id: uri
-      type: System.Uri
-    return:
-      type: Beutl.Media.Source.SoundSource
-    content.vb: Public Shared Function Open(uri As Uri) As SoundSource
-  overload: Beutl.Media.Source.SoundSource.Open*
-- uid: Beutl.Media.Source.SoundSource.TryOpen(System.Uri,Beutl.Media.Source.SoundSource@)
-  commentId: M:Beutl.Media.Source.SoundSource.TryOpen(System.Uri,Beutl.Media.Source.SoundSource@)
-  id: TryOpen(System.Uri,Beutl.Media.Source.SoundSource@)
-  parent: Beutl.Media.Source.SoundSource
-  langs:
-  - csharp
-  - vb
-  name: TryOpen(Uri, out SoundSource?)
-  nameWithType: SoundSource.TryOpen(Uri, out SoundSource?)
-  fullName: Beutl.Media.Source.SoundSource.TryOpen(System.Uri, out Beutl.Media.Source.SoundSource?)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  syntax:
-    content: public static bool TryOpen(Uri uri, out SoundSource? result)
-    parameters:
-    - id: uri
-      type: System.Uri
-    - id: result
-      type: Beutl.Media.Source.SoundSource
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Function TryOpen(uri As Uri, result As SoundSource) As Boolean
-  overload: Beutl.Media.Source.SoundSource.TryOpen*
-  nameWithType.vb: SoundSource.TryOpen(Uri, SoundSource)
-  fullName.vb: Beutl.Media.Source.SoundSource.TryOpen(System.Uri, Beutl.Media.Source.SoundSource)
-  name.vb: TryOpen(Uri, SoundSource)
-- uid: Beutl.Media.Source.SoundSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.Media.Source.SoundSource.ReadFrom(System.Uri)
-  id: ReadFrom(System.Uri)
-  parent: Beutl.Media.Source.SoundSource
-  langs:
-  - csharp
-  - vb
-  name: ReadFrom(Uri)
-  nameWithType: SoundSource.ReadFrom(Uri)
-  fullName: Beutl.Media.Source.SoundSource.ReadFrom(System.Uri)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Media.Source
-  example: []
-  syntax:
-    content: public void ReadFrom(Uri uri)
-    parameters:
-    - id: uri
-      type: System.Uri
-    content.vb: Public Sub ReadFrom(uri As Uri)
-  overload: Beutl.Media.Source.SoundSource.ReadFrom*
-  implements:
-  - Beutl.IO.IFileSource.ReadFrom(System.Uri)
 - uid: Beutl.Media.Source.SoundSource.Dispose
   commentId: M:Beutl.Media.Source.SoundSource.Dispose
   id: Dispose
@@ -250,7 +170,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Dispose()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -273,7 +193,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Clone()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -295,7 +215,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Read(int, int, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -336,7 +256,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Read(System.TimeSpan, System.TimeSpan, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -377,7 +297,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Read(System.TimeSpan, int, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -418,7 +338,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Read(int, System.TimeSpan, out Beutl.Media.Music.IPcm?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -459,7 +379,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Equals(object?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -489,7 +409,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.GetHashCode()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -513,7 +433,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.Duration
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -539,7 +459,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.SampleRate
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -565,7 +485,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.NumChannels
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -591,7 +511,7 @@ items:
   fullName: Beutl.Media.Source.SoundSource.IsDisposed
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
@@ -605,32 +525,32 @@ items:
   overload: Beutl.Media.Source.SoundSource.IsDisposed*
   implements:
   - Beutl.Media.Source.IMediaSource.IsDisposed
-- uid: Beutl.Media.Source.SoundSource.Uri
-  commentId: P:Beutl.Media.Source.SoundSource.Uri
-  id: Uri
+- uid: Beutl.Media.Source.SoundSource.Name
+  commentId: P:Beutl.Media.Source.SoundSource.Name
+  id: Name
   parent: Beutl.Media.Source.SoundSource
   langs:
   - csharp
   - vb
-  name: Uri
-  nameWithType: SoundSource.Uri
-  fullName: Beutl.Media.Source.SoundSource.Uri
+  name: Name
+  nameWithType: SoundSource.Name
+  fullName: Beutl.Media.Source.SoundSource.Name
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Media/Source/SoundSource.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/Source/SoundSource.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Media.Source
   example: []
   syntax:
-    content: public Uri Uri { get; }
+    content: public string Name { get; }
     parameters: []
     return:
-      type: System.Uri
-    content.vb: Public ReadOnly Property Uri As Uri
-  overload: Beutl.Media.Source.SoundSource.Uri*
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Beutl.Media.Source.SoundSource.Name*
   implements:
-  - Beutl.IO.IFileSource.Uri
+  - Beutl.Media.Source.IMediaSource.Name
 references:
 - uid: Beutl.Media.Source
   commentId: N:Beutl.Media.Source
@@ -704,14 +624,6 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: Beutl.IO.IFileSource
-  commentId: T:Beutl.IO.IFileSource
-  parent: Beutl.IO
-  isExternal: true
-  href: Beutl.IO.IFileSource.html
-  name: IFileSource
-  nameWithType: IFileSource
-  fullName: Beutl.IO.IFileSource
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -881,43 +793,91 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Beutl.IO
-  commentId: N:Beutl.IO
-  isExternal: true
-  href: Beutl.html
-  name: Beutl.IO
-  nameWithType: Beutl.IO
-  fullName: Beutl.IO
-  spec.csharp:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
-  spec.vb:
-  - uid: Beutl
-    name: Beutl
-    isExternal: true
-    href: Beutl.html
-  - name: .
-  - uid: Beutl.IO
-    name: IO
-    isExternal: true
-    href: Beutl.IO.html
 - uid: Beutl.Media.Source.SoundSource.#ctor*
   commentId: Overload:Beutl.Media.Source.SoundSource.#ctor
   isExternal: true
-  href: Beutl.Media.Source.SoundSource.html#Beutl_Media_Source_SoundSource__ctor
+  href: Beutl.Media.Source.SoundSource.html#Beutl_Media_Source_SoundSource__ctor_Beutl_Media_Source_Ref_Beutl_Media_Decoding_MediaReader__System_String_
   name: SoundSource
   nameWithType: SoundSource.SoundSource
   fullName: Beutl.Media.Source.SoundSource.SoundSource
   nameWithType.vb: SoundSource.New
   fullName.vb: Beutl.Media.Source.SoundSource.New
   name.vb: New
+- uid: Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader}
+  commentId: T:Beutl.Media.Source.Ref{Beutl.Media.Decoding.MediaReader}
+  parent: Beutl.Media.Source
+  definition: Beutl.Media.Source.Ref`1
+  href: Beutl.Media.Source.Ref-1.html
+  name: Ref<MediaReader>
+  nameWithType: Ref<MediaReader>
+  fullName: Beutl.Media.Source.Ref<Beutl.Media.Decoding.MediaReader>
+  nameWithType.vb: Ref(Of MediaReader)
+  fullName.vb: Beutl.Media.Source.Ref(Of Beutl.Media.Decoding.MediaReader)
+  name.vb: Ref(Of MediaReader)
+  spec.csharp:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: <
+  - uid: Beutl.Media.Decoding.MediaReader
+    name: MediaReader
+    isExternal: true
+    href: Beutl.Media.Decoding.MediaReader.html
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Beutl.Media.Decoding.MediaReader
+    name: MediaReader
+    isExternal: true
+    href: Beutl.Media.Decoding.MediaReader.html
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Beutl.Media.Source.Ref`1
+  commentId: T:Beutl.Media.Source.Ref`1
+  parent: Beutl.Media.Source
+  isExternal: true
+  href: Beutl.Media.Source.Ref-1.html
+  name: Ref<T>
+  nameWithType: Ref<T>
+  fullName: Beutl.Media.Source.Ref<T>
+  nameWithType.vb: Ref(Of T)
+  fullName.vb: Beutl.Media.Source.Ref(Of T)
+  name.vb: Ref(Of T)
+  spec.csharp:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Beutl.Media.Source.Ref`1
+    name: Ref
+    isExternal: true
+    href: Beutl.Media.Source.Ref-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Beutl.Media.Source.SoundSource.Finalize*
   commentId: Overload:Beutl.Media.Source.SoundSource.Finalize
   isExternal: true
@@ -938,17 +898,6 @@ references:
   name: Open
   nameWithType: SoundSource.Open
   fullName: Beutl.Media.Source.SoundSource.Open
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: Beutl.Media.Source.SoundSource
   commentId: T:Beutl.Media.Source.SoundSource
   parent: Beutl.Media.Source
@@ -975,48 +924,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: System.Uri
-- uid: Beutl.Media.Source.SoundSource.ReadFrom*
-  commentId: Overload:Beutl.Media.Source.SoundSource.ReadFrom
-  isExternal: true
-  href: Beutl.Media.Source.SoundSource.html#Beutl_Media_Source_SoundSource_ReadFrom_System_Uri_
-  name: ReadFrom
-  nameWithType: SoundSource.ReadFrom
-  fullName: Beutl.Media.Source.SoundSource.ReadFrom
-- uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  commentId: M:Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  parent: Beutl.IO.IFileSource
-  isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  name: ReadFrom(Uri)
-  nameWithType: IFileSource.ReadFrom(Uri)
-  fullName: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-  spec.csharp:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: Beutl.IO.IFileSource.ReadFrom(System.Uri)
-    name: ReadFrom
-    isExternal: true
-    href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_ReadFrom_System_Uri_
-  - name: (
-  - uid: System.Uri
-    name: Uri
-    isExternal: true
-  - name: )
 - uid: Beutl.Media.Source.SoundSource.Dispose*
   commentId: Overload:Beutl.Media.Source.SoundSource.Dispose
   isExternal: true
@@ -1491,18 +1398,18 @@ references:
   name: IsDisposed
   nameWithType: IMediaSource.IsDisposed
   fullName: Beutl.Media.Source.IMediaSource.IsDisposed
-- uid: Beutl.Media.Source.SoundSource.Uri*
-  commentId: Overload:Beutl.Media.Source.SoundSource.Uri
+- uid: Beutl.Media.Source.SoundSource.Name*
+  commentId: Overload:Beutl.Media.Source.SoundSource.Name
   isExternal: true
-  href: Beutl.Media.Source.SoundSource.html#Beutl_Media_Source_SoundSource_Uri
-  name: Uri
-  nameWithType: SoundSource.Uri
-  fullName: Beutl.Media.Source.SoundSource.Uri
-- uid: Beutl.IO.IFileSource.Uri
-  commentId: P:Beutl.IO.IFileSource.Uri
-  parent: Beutl.IO.IFileSource
+  href: Beutl.Media.Source.SoundSource.html#Beutl_Media_Source_SoundSource_Name
+  name: Name
+  nameWithType: SoundSource.Name
+  fullName: Beutl.Media.Source.SoundSource.Name
+- uid: Beutl.Media.Source.IMediaSource.Name
+  commentId: P:Beutl.Media.Source.IMediaSource.Name
+  parent: Beutl.Media.Source.IMediaSource
   isExternal: true
-  href: Beutl.IO.IFileSource.html#Beutl_IO_IFileSource_Uri
-  name: Uri
-  nameWithType: IFileSource.Uri
-  fullName: Beutl.IO.IFileSource.Uri
+  href: Beutl.Media.Source.IMediaSource.html#Beutl_Media_Source_IMediaSource_Name
+  name: Name
+  nameWithType: IMediaSource.Name
+  fullName: Beutl.Media.Source.IMediaSource.Name

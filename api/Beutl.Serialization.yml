@@ -6,15 +6,17 @@ items:
   children:
   - Beutl.Serialization.CoreSerializableJsonConverter
   - Beutl.Serialization.CoreSerializationMode
-  - Beutl.Serialization.CoreSerializer
-  - Beutl.Serialization.CoreSerializerOptions
   - Beutl.Serialization.DummyTypeAttribute
   - Beutl.Serialization.ICoreSerializable
   - Beutl.Serialization.ICoreSerializationContext
   - Beutl.Serialization.IDummy
   - Beutl.Serialization.IJsonSerializationContext
+  - Beutl.Serialization.ISerializationErrorNotifier
   - Beutl.Serialization.JsonSerializationContext
+  - Beutl.Serialization.NullSerializationErrorNotifier
+  - Beutl.Serialization.RelaySerializationErrorNotifier
   - Beutl.Serialization.SerializationError
+  - Beutl.Serialization.SerializationErrorCollector
   - Beutl.Serialization.ThreadLocalSerializationContext
   langs:
   - csharp
@@ -42,21 +44,6 @@ references:
   name: CoreSerializationMode
   nameWithType: CoreSerializationMode
   fullName: Beutl.Serialization.CoreSerializationMode
-- uid: Beutl.Serialization.CoreSerializerOptions
-  commentId: T:Beutl.Serialization.CoreSerializerOptions
-  parent: Beutl.Serialization
-  isExternal: true
-  href: Beutl.Serialization.CoreSerializerOptions.html
-  name: CoreSerializerOptions
-  nameWithType: CoreSerializerOptions
-  fullName: Beutl.Serialization.CoreSerializerOptions
-- uid: Beutl.Serialization.CoreSerializer
-  commentId: T:Beutl.Serialization.CoreSerializer
-  isExternal: true
-  href: Beutl.Serialization.CoreSerializer.html
-  name: CoreSerializer
-  nameWithType: CoreSerializer
-  fullName: Beutl.Serialization.CoreSerializer
 - uid: Beutl.Serialization.DummyTypeAttribute
   commentId: T:Beutl.Serialization.DummyTypeAttribute
   parent: Beutl.Serialization
@@ -77,7 +64,7 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -97,6 +84,14 @@ references:
   name: IJsonSerializationContext
   nameWithType: IJsonSerializationContext
   fullName: Beutl.Serialization.IJsonSerializationContext
+- uid: Beutl.Serialization.ISerializationErrorNotifier
+  commentId: T:Beutl.Serialization.ISerializationErrorNotifier
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.ISerializationErrorNotifier.html
+  name: ISerializationErrorNotifier
+  nameWithType: ISerializationErrorNotifier
+  fullName: Beutl.Serialization.ISerializationErrorNotifier
 - uid: Beutl.Serialization.JsonSerializationContext
   commentId: T:Beutl.Serialization.JsonSerializationContext
   parent: Beutl.Serialization
@@ -105,6 +100,21 @@ references:
   name: JsonSerializationContext
   nameWithType: JsonSerializationContext
   fullName: Beutl.Serialization.JsonSerializationContext
+- uid: Beutl.Serialization.NullSerializationErrorNotifier
+  commentId: T:Beutl.Serialization.NullSerializationErrorNotifier
+  parent: Beutl.Serialization
+  isExternal: true
+  href: Beutl.Serialization.NullSerializationErrorNotifier.html
+  name: NullSerializationErrorNotifier
+  nameWithType: NullSerializationErrorNotifier
+  fullName: Beutl.Serialization.NullSerializationErrorNotifier
+- uid: Beutl.Serialization.RelaySerializationErrorNotifier
+  commentId: T:Beutl.Serialization.RelaySerializationErrorNotifier
+  isExternal: true
+  href: Beutl.Serialization.RelaySerializationErrorNotifier.html
+  name: RelaySerializationErrorNotifier
+  nameWithType: RelaySerializationErrorNotifier
+  fullName: Beutl.Serialization.RelaySerializationErrorNotifier
 - uid: Beutl.Serialization.SerializationError
   commentId: T:Beutl.Serialization.SerializationError
   parent: Beutl.Serialization
@@ -113,6 +123,13 @@ references:
   name: SerializationError
   nameWithType: SerializationError
   fullName: Beutl.Serialization.SerializationError
+- uid: Beutl.Serialization.SerializationErrorCollector
+  commentId: T:Beutl.Serialization.SerializationErrorCollector
+  isExternal: true
+  href: Beutl.Serialization.SerializationErrorCollector.html
+  name: SerializationErrorCollector
+  nameWithType: SerializationErrorCollector
+  fullName: Beutl.Serialization.SerializationErrorCollector
 - uid: Beutl.Serialization.ThreadLocalSerializationContext
   commentId: T:Beutl.Serialization.ThreadLocalSerializationContext
   isExternal: true

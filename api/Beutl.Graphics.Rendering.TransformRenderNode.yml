@@ -6,10 +6,10 @@ items:
   parent: Beutl.Graphics.Rendering
   children:
   - Beutl.Graphics.Rendering.TransformRenderNode.#ctor(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  - Beutl.Graphics.Rendering.TransformRenderNode.Equals(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
   - Beutl.Graphics.Rendering.TransformRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   - Beutl.Graphics.Rendering.TransformRenderNode.Transform
   - Beutl.Graphics.Rendering.TransformRenderNode.TransformOperator
-  - Beutl.Graphics.Rendering.TransformRenderNode.Update(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   fullName: Beutl.Graphics.Rendering.TransformRenderNode
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -41,7 +41,6 @@ items:
   - Beutl.Graphics.Rendering.ContainerRenderNode.Children
   - Beutl.Graphics.Rendering.RenderNode.Dispose
   - Beutl.Graphics.Rendering.RenderNode.IsDisposed
-  - Beutl.Graphics.Rendering.RenderNode.HasChanges
   - Beutl.Graphics.Rendering.RenderNode.Cache
   - System.Object.GetType
   - System.Object.ToString
@@ -61,7 +60,7 @@ items:
   fullName: Beutl.Graphics.Rendering.TransformRenderNode.TransformRenderNode(Beutl.Graphics.Matrix, Beutl.Graphics.TransformOperator)
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -77,33 +76,6 @@ items:
   nameWithType.vb: TransformRenderNode.New(Matrix, TransformOperator)
   fullName.vb: Beutl.Graphics.Rendering.TransformRenderNode.New(Beutl.Graphics.Matrix, Beutl.Graphics.TransformOperator)
   name.vb: New(Matrix, TransformOperator)
-- uid: Beutl.Graphics.Rendering.TransformRenderNode.Update(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
-  commentId: M:Beutl.Graphics.Rendering.TransformRenderNode.Update(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
-  id: Update(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
-  parent: Beutl.Graphics.Rendering.TransformRenderNode
-  langs:
-  - csharp
-  - vb
-  name: Update(Matrix, TransformOperator)
-  nameWithType: TransformRenderNode.Update(Matrix, TransformOperator)
-  fullName: Beutl.Graphics.Rendering.TransformRenderNode.Update(Beutl.Graphics.Matrix, Beutl.Graphics.TransformOperator)
-  type: Method
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
-  assemblies:
-  - Beutl.Engine
-  namespace: Beutl.Graphics.Rendering
-  syntax:
-    content: public bool Update(Matrix transform, TransformOperator transformOperator)
-    parameters:
-    - id: transform
-      type: Beutl.Graphics.Matrix
-    - id: transformOperator
-      type: Beutl.Graphics.TransformOperator
-    return:
-      type: System.Boolean
-    content.vb: Public Function Update(transform As Matrix, transformOperator As TransformOperator) As Boolean
-  overload: Beutl.Graphics.Rendering.TransformRenderNode.Update*
 - uid: Beutl.Graphics.Rendering.TransformRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.TransformRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   id: Process(Beutl.Graphics.Rendering.RenderNodeContext)
@@ -116,7 +88,7 @@ items:
   fullName: Beutl.Graphics.Rendering.TransformRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -131,6 +103,33 @@ items:
     content.vb: Public Overrides Function Process(context As RenderNodeContext) As RenderNodeOperation()
   overridden: Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   overload: Beutl.Graphics.Rendering.TransformRenderNode.Process*
+- uid: Beutl.Graphics.Rendering.TransformRenderNode.Equals(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  commentId: M:Beutl.Graphics.Rendering.TransformRenderNode.Equals(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  id: Equals(Beutl.Graphics.Matrix,Beutl.Graphics.TransformOperator)
+  parent: Beutl.Graphics.Rendering.TransformRenderNode
+  langs:
+  - csharp
+  - vb
+  name: Equals(Matrix, TransformOperator)
+  nameWithType: TransformRenderNode.Equals(Matrix, TransformOperator)
+  fullName: Beutl.Graphics.Rendering.TransformRenderNode.Equals(Beutl.Graphics.Matrix, Beutl.Graphics.TransformOperator)
+  type: Method
+  source:
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
+  assemblies:
+  - Beutl.Engine
+  namespace: Beutl.Graphics.Rendering
+  syntax:
+    content: public bool Equals(Matrix transform, TransformOperator transformOperator)
+    parameters:
+    - id: transform
+      type: Beutl.Graphics.Matrix
+    - id: transformOperator
+      type: Beutl.Graphics.TransformOperator
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(transform As Matrix, transformOperator As TransformOperator) As Boolean
+  overload: Beutl.Graphics.Rendering.TransformRenderNode.Equals*
 - uid: Beutl.Graphics.Rendering.TransformRenderNode.Transform
   commentId: P:Beutl.Graphics.Rendering.TransformRenderNode.Transform
   id: Transform
@@ -143,7 +142,7 @@ items:
   fullName: Beutl.Graphics.Rendering.TransformRenderNode.Transform
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -166,7 +165,7 @@ items:
   fullName: Beutl.Graphics.Rendering.TransformRenderNode.TransformOperator
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Graphics/Rendering/TransformRenderNode.cs
   assemblies:
   - Beutl.Engine
   namespace: Beutl.Graphics.Rendering
@@ -476,14 +475,6 @@ references:
   name: IsDisposed
   nameWithType: RenderNode.IsDisposed
   fullName: Beutl.Graphics.Rendering.RenderNode.IsDisposed
-- uid: Beutl.Graphics.Rendering.RenderNode.HasChanges
-  commentId: P:Beutl.Graphics.Rendering.RenderNode.HasChanges
-  parent: Beutl.Graphics.Rendering.RenderNode
-  isExternal: true
-  href: Beutl.Graphics.Rendering.RenderNode.html#Beutl_Graphics_Rendering_RenderNode_HasChanges
-  name: HasChanges
-  nameWithType: RenderNode.HasChanges
-  fullName: Beutl.Graphics.Rendering.RenderNode.HasChanges
 - uid: Beutl.Graphics.Rendering.RenderNode.Cache
   commentId: P:Beutl.Graphics.Rendering.RenderNode.Cache
   parent: Beutl.Graphics.Rendering.RenderNode
@@ -747,24 +738,6 @@ references:
     name: Graphics
     isExternal: true
     href: Beutl.Graphics.html
-- uid: Beutl.Graphics.Rendering.TransformRenderNode.Update*
-  commentId: Overload:Beutl.Graphics.Rendering.TransformRenderNode.Update
-  isExternal: true
-  href: Beutl.Graphics.Rendering.TransformRenderNode.html#Beutl_Graphics_Rendering_TransformRenderNode_Update_Beutl_Graphics_Matrix_Beutl_Graphics_TransformOperator_
-  name: Update
-  nameWithType: TransformRenderNode.Update
-  fullName: Beutl.Graphics.Rendering.TransformRenderNode.Update
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   commentId: M:Beutl.Graphics.Rendering.ContainerRenderNode.Process(Beutl.Graphics.Rendering.RenderNodeContext)
   parent: Beutl.Graphics.Rendering.ContainerRenderNode
@@ -833,6 +806,24 @@ references:
     href: Beutl.Graphics.Rendering.RenderNodeOperation.html
   - name: (
   - name: )
+- uid: Beutl.Graphics.Rendering.TransformRenderNode.Equals*
+  commentId: Overload:Beutl.Graphics.Rendering.TransformRenderNode.Equals
+  isExternal: true
+  href: Beutl.Graphics.Rendering.TransformRenderNode.html#Beutl_Graphics_Rendering_TransformRenderNode_Equals_Beutl_Graphics_Matrix_Beutl_Graphics_TransformOperator_
+  name: Equals
+  nameWithType: TransformRenderNode.Equals
+  fullName: Beutl.Graphics.Rendering.TransformRenderNode.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Beutl.Graphics.Rendering.TransformRenderNode.Transform*
   commentId: Overload:Beutl.Graphics.Rendering.TransformRenderNode.Transform
   isExternal: true

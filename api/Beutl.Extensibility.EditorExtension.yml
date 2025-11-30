@@ -10,8 +10,8 @@ items:
   - Beutl.Extensibility.EditorExtension.GetIcon
   - Beutl.Extensibility.EditorExtension.IsSupported(System.String)
   - Beutl.Extensibility.EditorExtension.MatchFileExtension(System.String)
-  - Beutl.Extensibility.EditorExtension.TryCreateContext(Beutl.CoreObject,Beutl.Extensibility.IEditorContext@)
-  - Beutl.Extensibility.EditorExtension.TryCreateEditor(Beutl.CoreObject,Avalonia.Controls.Control@)
+  - Beutl.Extensibility.EditorExtension.TryCreateContext(System.String,Beutl.Extensibility.IEditorContext@)
+  - Beutl.Extensibility.EditorExtension.TryCreateEditor(System.String,Avalonia.Controls.Control@)
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
   fullName: Beutl.Extensibility.EditorExtension
   type: Class
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -56,7 +56,7 @@ items:
   fullName: Beutl.Extensibility.EditorExtension.GetFilePickerFileType()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -78,7 +78,7 @@ items:
   fullName: Beutl.Extensibility.EditorExtension.GetIcon()
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -88,27 +88,27 @@ items:
       type: FluentAvalonia.UI.Controls.IconSource
     content.vb: Public MustOverride Function GetIcon() As IconSource
   overload: Beutl.Extensibility.EditorExtension.GetIcon*
-- uid: Beutl.Extensibility.EditorExtension.TryCreateEditor(Beutl.CoreObject,Avalonia.Controls.Control@)
-  commentId: M:Beutl.Extensibility.EditorExtension.TryCreateEditor(Beutl.CoreObject,Avalonia.Controls.Control@)
-  id: TryCreateEditor(Beutl.CoreObject,Avalonia.Controls.Control@)
+- uid: Beutl.Extensibility.EditorExtension.TryCreateEditor(System.String,Avalonia.Controls.Control@)
+  commentId: M:Beutl.Extensibility.EditorExtension.TryCreateEditor(System.String,Avalonia.Controls.Control@)
+  id: TryCreateEditor(System.String,Avalonia.Controls.Control@)
   parent: Beutl.Extensibility.EditorExtension
   langs:
   - csharp
   - vb
-  name: TryCreateEditor(CoreObject, out Control?)
-  nameWithType: EditorExtension.TryCreateEditor(CoreObject, out Control?)
-  fullName: Beutl.Extensibility.EditorExtension.TryCreateEditor(Beutl.CoreObject, out Avalonia.Controls.Control?)
+  name: TryCreateEditor(string, out Control?)
+  nameWithType: EditorExtension.TryCreateEditor(string, out Control?)
+  fullName: Beutl.Extensibility.EditorExtension.TryCreateEditor(string, out Avalonia.Controls.Control?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
   syntax:
-    content: public abstract bool TryCreateEditor(CoreObject obj, out Control? editor)
+    content: public abstract bool TryCreateEditor(string file, out Control? editor)
     parameters:
-    - id: obj
-      type: Beutl.CoreObject
+    - id: file
+      type: System.String
     - id: editor
       type: Avalonia.Controls.Control
       attributes:
@@ -119,32 +119,32 @@ items:
           value: true
     return:
       type: System.Boolean
-    content.vb: Public MustOverride Function TryCreateEditor(obj As CoreObject, editor As Control) As Boolean
+    content.vb: Public MustOverride Function TryCreateEditor(file As String, editor As Control) As Boolean
   overload: Beutl.Extensibility.EditorExtension.TryCreateEditor*
-  nameWithType.vb: EditorExtension.TryCreateEditor(CoreObject, Control)
-  fullName.vb: Beutl.Extensibility.EditorExtension.TryCreateEditor(Beutl.CoreObject, Avalonia.Controls.Control)
-  name.vb: TryCreateEditor(CoreObject, Control)
-- uid: Beutl.Extensibility.EditorExtension.TryCreateContext(Beutl.CoreObject,Beutl.Extensibility.IEditorContext@)
-  commentId: M:Beutl.Extensibility.EditorExtension.TryCreateContext(Beutl.CoreObject,Beutl.Extensibility.IEditorContext@)
-  id: TryCreateContext(Beutl.CoreObject,Beutl.Extensibility.IEditorContext@)
+  nameWithType.vb: EditorExtension.TryCreateEditor(String, Control)
+  fullName.vb: Beutl.Extensibility.EditorExtension.TryCreateEditor(String, Avalonia.Controls.Control)
+  name.vb: TryCreateEditor(String, Control)
+- uid: Beutl.Extensibility.EditorExtension.TryCreateContext(System.String,Beutl.Extensibility.IEditorContext@)
+  commentId: M:Beutl.Extensibility.EditorExtension.TryCreateContext(System.String,Beutl.Extensibility.IEditorContext@)
+  id: TryCreateContext(System.String,Beutl.Extensibility.IEditorContext@)
   parent: Beutl.Extensibility.EditorExtension
   langs:
   - csharp
   - vb
-  name: TryCreateContext(CoreObject, out IEditorContext?)
-  nameWithType: EditorExtension.TryCreateContext(CoreObject, out IEditorContext?)
-  fullName: Beutl.Extensibility.EditorExtension.TryCreateContext(Beutl.CoreObject, out Beutl.Extensibility.IEditorContext?)
+  name: TryCreateContext(string, out IEditorContext?)
+  nameWithType: EditorExtension.TryCreateContext(string, out IEditorContext?)
+  fullName: Beutl.Extensibility.EditorExtension.TryCreateContext(string, out Beutl.Extensibility.IEditorContext?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
   syntax:
-    content: public abstract bool TryCreateContext(CoreObject obj, out IEditorContext? context)
+    content: public abstract bool TryCreateContext(string file, out IEditorContext? context)
     parameters:
-    - id: obj
-      type: Beutl.CoreObject
+    - id: file
+      type: System.String
     - id: context
       type: Beutl.Extensibility.IEditorContext
       attributes:
@@ -155,11 +155,11 @@ items:
           value: true
     return:
       type: System.Boolean
-    content.vb: Public MustOverride Function TryCreateContext(obj As CoreObject, context As IEditorContext) As Boolean
+    content.vb: Public MustOverride Function TryCreateContext(file As String, context As IEditorContext) As Boolean
   overload: Beutl.Extensibility.EditorExtension.TryCreateContext*
-  nameWithType.vb: EditorExtension.TryCreateContext(CoreObject, IEditorContext)
-  fullName.vb: Beutl.Extensibility.EditorExtension.TryCreateContext(Beutl.CoreObject, Beutl.Extensibility.IEditorContext)
-  name.vb: TryCreateContext(CoreObject, IEditorContext)
+  nameWithType.vb: EditorExtension.TryCreateContext(String, IEditorContext)
+  fullName.vb: Beutl.Extensibility.EditorExtension.TryCreateContext(String, Beutl.Extensibility.IEditorContext)
+  name.vb: TryCreateContext(String, IEditorContext)
 - uid: Beutl.Extensibility.EditorExtension.IsSupported(System.String)
   commentId: M:Beutl.Extensibility.EditorExtension.IsSupported(System.String)
   id: IsSupported(System.String)
@@ -172,7 +172,7 @@ items:
   fullName: Beutl.Extensibility.EditorExtension.IsSupported(string?)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -200,7 +200,7 @@ items:
   fullName: Beutl.Extensibility.EditorExtension.MatchFileExtension(string)
   type: Method
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -228,7 +228,7 @@ items:
   fullName: Beutl.Extensibility.EditorExtension.EditorExtension()
   type: Constructor
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Extensibility/EditorExtension.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Extensibility/EditorExtension.cs
   assemblies:
   - Beutl.Extensibility
   namespace: Beutl.Extensibility
@@ -629,6 +629,7 @@ references:
   commentId: T:FluentAvalonia.UI.Controls.IconSource
   parent: FluentAvalonia.UI.Controls
   isExternal: true
+  href: https://github.com/amwx/FluentAvalonia/blob/main/src/FluentAvalonia/UI/Controls/IconElement/IconSource.cs
   name: IconSource
   nameWithType: IconSource
   fullName: FluentAvalonia.UI.Controls.IconSource
@@ -665,18 +666,21 @@ references:
 - uid: Beutl.Extensibility.EditorExtension.TryCreateEditor*
   commentId: Overload:Beutl.Extensibility.EditorExtension.TryCreateEditor
   isExternal: true
-  href: Beutl.Extensibility.EditorExtension.html#Beutl_Extensibility_EditorExtension_TryCreateEditor_Beutl_CoreObject_Avalonia_Controls_Control__
+  href: Beutl.Extensibility.EditorExtension.html#Beutl_Extensibility_EditorExtension_TryCreateEditor_System_String_Avalonia_Controls_Control__
   name: TryCreateEditor
   nameWithType: EditorExtension.TryCreateEditor
   fullName: Beutl.Extensibility.EditorExtension.TryCreateEditor
-- uid: Beutl.CoreObject
-  commentId: T:Beutl.CoreObject
-  parent: Beutl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
-  name: CoreObject
-  nameWithType: CoreObject
-  fullName: Beutl.CoreObject
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Avalonia.Controls.Control
   commentId: T:Avalonia.Controls.Control
   parent: Avalonia.Controls
@@ -695,13 +699,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: Beutl
-  commentId: N:Beutl
-  isExternal: true
-  href: Beutl.html
-  name: Beutl
-  nameWithType: Beutl
-  fullName: Beutl
 - uid: Avalonia.Controls
   commentId: N:Avalonia.Controls
   isExternal: true
@@ -727,7 +724,7 @@ references:
 - uid: Beutl.Extensibility.EditorExtension.TryCreateContext*
   commentId: Overload:Beutl.Extensibility.EditorExtension.TryCreateContext
   isExternal: true
-  href: Beutl.Extensibility.EditorExtension.html#Beutl_Extensibility_EditorExtension_TryCreateContext_Beutl_CoreObject_Beutl_Extensibility_IEditorContext__
+  href: Beutl.Extensibility.EditorExtension.html#Beutl_Extensibility_EditorExtension_TryCreateContext_System_String_Beutl_Extensibility_IEditorContext__
   name: TryCreateContext
   nameWithType: EditorExtension.TryCreateContext
   fullName: Beutl.Extensibility.EditorExtension.TryCreateContext
@@ -746,17 +743,6 @@ references:
   name: IsSupported
   nameWithType: EditorExtension.IsSupported
   fullName: Beutl.Extensibility.EditorExtension.IsSupported
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: Beutl.Extensibility.EditorExtension.MatchFileExtension*
   commentId: Overload:Beutl.Extensibility.EditorExtension.MatchFileExtension
   isExternal: true

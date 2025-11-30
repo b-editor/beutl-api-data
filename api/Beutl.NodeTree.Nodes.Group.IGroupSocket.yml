@@ -5,8 +5,7 @@ items:
   id: IGroupSocket
   parent: Beutl.NodeTree.Nodes.Group
   children:
-  - Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName
-  - Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType
+  - Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty
   langs:
   - csharp
   - vb
@@ -15,13 +14,13 @@ items:
   fullName: Beutl.NodeTree.Nodes.Group.IGroupSocket
   type: Interface
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Group/IGroupSocket.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/Nodes/Group/IGroupSocket.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree.Nodes.Group
   syntax:
-    content: 'public interface IGroupSocket : ISocket, INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, INotifyEdited'
-    content.vb: Public Interface IGroupSocket Inherits ISocket, INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, INotifyEdited
+    content: 'public interface IGroupSocket : ISocket, INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, IAffectsRender'
+    content.vb: Public Interface IGroupSocket Inherits ISocket, INodeItem, ICoreObject, INotifyPropertyChanged, INotifyDataErrorInfo, ICoreSerializable, IHierarchical, IAffectsRender
   inheritedMembers:
   - Beutl.NodeTree.ISocket.Color
   - Beutl.NodeTree.ISocket.Connected
@@ -55,53 +54,30 @@ items:
   - Beutl.IHierarchical.HierarchicalChildren
   - Beutl.IHierarchical.AttachedToHierarchy
   - Beutl.IHierarchical.DetachedFromHierarchy
-  - Beutl.INotifyEdited.Edited
-- uid: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName
-  commentId: P:Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName
-  id: AssociatedPropertyName
+  - Beutl.Media.IAffectsRender.Invalidated
+- uid: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty
+  commentId: P:Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty
+  id: AssociatedProperty
   parent: Beutl.NodeTree.Nodes.Group.IGroupSocket
   langs:
   - csharp
   - vb
-  name: AssociatedPropertyName
-  nameWithType: IGroupSocket.AssociatedPropertyName
-  fullName: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName
+  name: AssociatedProperty
+  nameWithType: IGroupSocket.AssociatedProperty
+  fullName: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty
   type: Property
   source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Group/IGroupSocket.cs
+    href: https://github.com/b-editor/beutl/blob/main/src/Beutl.ProjectSystem/NodeTree/Nodes/Group/IGroupSocket.cs
   assemblies:
   - Beutl.ProjectSystem
   namespace: Beutl.NodeTree.Nodes.Group
   syntax:
-    content: string? AssociatedPropertyName { get; set; }
+    content: CoreProperty? AssociatedProperty { get; set; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Property AssociatedPropertyName As String
-  overload: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName*
-- uid: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType
-  commentId: P:Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType
-  id: AssociatedPropertyType
-  parent: Beutl.NodeTree.Nodes.Group.IGroupSocket
-  langs:
-  - csharp
-  - vb
-  name: AssociatedPropertyType
-  nameWithType: IGroupSocket.AssociatedPropertyType
-  fullName: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType
-  type: Property
-  source:
-    href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.ProjectSystem/NodeTree/Nodes/Group/IGroupSocket.cs
-  assemblies:
-  - Beutl.ProjectSystem
-  namespace: Beutl.NodeTree.Nodes.Group
-  syntax:
-    content: Type? AssociatedPropertyType { get; set; }
-    parameters: []
-    return:
-      type: System.Type
-    content.vb: Property AssociatedPropertyType As Type
-  overload: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType*
+      type: Beutl.CoreProperty
+    content.vb: Property AssociatedProperty As CoreProperty
+  overload: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty*
 references:
 - uid: Beutl.NodeTree.Nodes.Group
   commentId: N:Beutl.NodeTree.Nodes.Group
@@ -795,14 +771,14 @@ references:
   name: DetachedFromHierarchy
   nameWithType: IHierarchical.DetachedFromHierarchy
   fullName: Beutl.IHierarchical.DetachedFromHierarchy
-- uid: Beutl.INotifyEdited.Edited
-  commentId: E:Beutl.INotifyEdited.Edited
-  parent: Beutl.INotifyEdited
+- uid: Beutl.Media.IAffectsRender.Invalidated
+  commentId: E:Beutl.Media.IAffectsRender.Invalidated
+  parent: Beutl.Media.IAffectsRender
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/INotifyEdited.cs
-  name: Edited
-  nameWithType: INotifyEdited.Edited
-  fullName: Beutl.INotifyEdited.Edited
+  href: Beutl.Media.IAffectsRender.html#Beutl_Media_IAffectsRender_Invalidated
+  name: Invalidated
+  nameWithType: IAffectsRender.Invalidated
+  fullName: Beutl.Media.IAffectsRender.Invalidated
 - uid: Beutl.NodeTree.ISocket
   commentId: T:Beutl.NodeTree.ISocket
   parent: Beutl.NodeTree
@@ -871,7 +847,7 @@ references:
   commentId: T:Beutl.ICoreObject
   parent: Beutl
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/CoreObject.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/CoreObject.cs
   name: ICoreObject
   nameWithType: ICoreObject
   fullName: Beutl.ICoreObject
@@ -997,7 +973,7 @@ references:
   commentId: T:Beutl.Serialization.ICoreSerializable
   parent: Beutl.Serialization
   isExternal: true
-  href: https://github.com/b-editor/beutl/blob/c51d1f13e20b455e75ababfd9893c5cc593443c4/src/Beutl.Core/Serialization/ICoreSerializable.cs
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Serialization/ICoreSerializable.cs
   name: ICoreSerializable
   nameWithType: ICoreSerializable
   fullName: Beutl.Serialization.ICoreSerializable
@@ -1005,18 +981,18 @@ references:
   commentId: T:Beutl.IHierarchical
   parent: Beutl
   isExternal: true
-  href: Beutl.IHierarchical.html
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Core/Hierarchy/IHierarchical.cs
   name: IHierarchical
   nameWithType: IHierarchical
   fullName: Beutl.IHierarchical
-- uid: Beutl.INotifyEdited
-  commentId: T:Beutl.INotifyEdited
-  parent: Beutl
+- uid: Beutl.Media.IAffectsRender
+  commentId: T:Beutl.Media.IAffectsRender
+  parent: Beutl.Media
   isExternal: true
-  href: Beutl.INotifyEdited.html
-  name: INotifyEdited
-  nameWithType: INotifyEdited
-  fullName: Beutl.INotifyEdited
+  href: https://github.com/b-editor/beutl/blob/main/src/Beutl.Engine/Media/IAffectsRender.cs
+  name: IAffectsRender
+  nameWithType: IAffectsRender
+  fullName: Beutl.Media.IAffectsRender
 - uid: Beutl.NodeTree
   commentId: N:Beutl.NodeTree
   isExternal: true
@@ -1105,43 +1081,45 @@ references:
     name: Serialization
     isExternal: true
     href: Beutl.Serialization.html
-- uid: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName*
-  commentId: Overload:Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName
+- uid: Beutl.Media
+  commentId: N:Beutl.Media
   isExternal: true
-  href: Beutl.NodeTree.Nodes.Group.IGroupSocket.html#Beutl_NodeTree_Nodes_Group_IGroupSocket_AssociatedPropertyName
-  name: AssociatedPropertyName
-  nameWithType: IGroupSocket.AssociatedPropertyName
-  fullName: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyName
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+  href: Beutl.html
+  name: Beutl.Media
+  nameWithType: Beutl.Media
+  fullName: Beutl.Media
+  spec.csharp:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+  spec.vb:
+  - uid: Beutl
+    name: Beutl
+    isExternal: true
+    href: Beutl.html
+  - name: .
+  - uid: Beutl.Media
+    name: Media
+    isExternal: true
+    href: Beutl.Media.html
+- uid: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty*
+  commentId: Overload:Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: System
-  commentId: N:System
+  href: Beutl.NodeTree.Nodes.Group.IGroupSocket.html#Beutl_NodeTree_Nodes_Group_IGroupSocket_AssociatedProperty
+  name: AssociatedProperty
+  nameWithType: IGroupSocket.AssociatedProperty
+  fullName: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedProperty
+- uid: Beutl.CoreProperty
+  commentId: T:Beutl.CoreProperty
+  parent: Beutl
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType*
-  commentId: Overload:Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType
-  isExternal: true
-  href: Beutl.NodeTree.Nodes.Group.IGroupSocket.html#Beutl_NodeTree_Nodes_Group_IGroupSocket_AssociatedPropertyType
-  name: AssociatedPropertyType
-  nameWithType: IGroupSocket.AssociatedPropertyType
-  fullName: Beutl.NodeTree.Nodes.Group.IGroupSocket.AssociatedPropertyType
-- uid: System.Type
-  commentId: T:System.Type
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
-  name: Type
-  nameWithType: Type
-  fullName: System.Type
+  href: Beutl.CoreProperty.html
+  name: CoreProperty
+  nameWithType: CoreProperty
+  fullName: Beutl.CoreProperty
